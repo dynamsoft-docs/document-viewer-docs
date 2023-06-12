@@ -12,11 +12,6 @@ description: Documentation Homepage
 - [Introduction]({{ site.introduction }})
 
 - [Programming]({{ site.programming }})
-  - [Android]({{ site.android }})
-  - [iOS]({{ site.ios }})
-  - [C]({{ site.c }})
-  - [C++]({{ site.cpp }})
-  - [Xamarin.Forms]({{ site.xamarin }})
   - [JavaScript]({{ site.javascript }})
 
 - [Parameters]({{ site.parameters }})

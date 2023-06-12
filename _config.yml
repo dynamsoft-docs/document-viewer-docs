@@ -9,33 +9,10 @@ programming: /document-viewer/docs/programming/
 parameters: /document-viewer/docs/parameters/
 license: /document-viewer/docs/license/
 
-c: /document-viewer/docs/programming/c/
-c_api: /document-viewer/docs/programming/c/api-reference/
-c_release_notes: /document-viewer/docs/programming/c/release-notes/
-
-cpp: /document-viewer/docs/programming/cplusplus/
-cpp_api: /document-viewer/docs/programming/cplusplus/api-reference/
-cpp_release_notes: /document-viewer/docs/programming/cplusplus/release-notes/
-
-ios: /document-viewer/docs/programming/ios/
-ios_api: /document-viewer/docs/programming/ios/api-reference/
-ios_release_notes: /document-viewer/docs/programming/ios/release-notes/
-ios_camera_enhancer: /document-viewer/docs/programming/ios/api-reference/camera-enhancer/
-
-android: /document-viewer/docs/programming/android/
-android_api: /document-viewer/docs/programming/android/api-reference/
-android_release_notes: /document-viewer/docs/programming/android/release-notes/
-android_camera_enhancer: /document-viewer/docs/programming/android/api-reference/camera-enhancer/
-
 javascript: /document-viewer/docs/programming/javascript/
 javascript_api: /document-viewer/docs/programming/javascript/api-reference/
 javascript_release_notes: /document-viewer/docs/programming/javascript/release-notes/
 javascript_user_guide: /document-viewer/docs/programming/javascript/user-guide/
-
-xamarin: /document-viewer/docs/programming/xamarin/
-xamarin_api: /document-viewer/docs/programming/xamarin/api-reference/
-xamarin_release_notes: /document-viewer/docs/programming/xamarin/release-notes/
-xamarin_camera_enhancer: /document-viewer/docs/programming/xamarin/api-reference/camera-enhancer/
 
 enumerations: /document-viewer/docs/programming/enumerations/
 parameters_reference: /document-viewer/docs/parameters/reference/
