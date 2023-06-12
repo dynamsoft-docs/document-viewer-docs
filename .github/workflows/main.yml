@@ -27,15 +27,23 @@ jobs:
       #- uses: actions/checkout@v2
 
       # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
+      - name: clear space
+        run: |
+          cd /home/ubuntu 
+          [ -d DDVDoc ] && rm -rf DDVDoc
+          [ -d document-viewer-docs ] && rm -rf document-viewer-docs
+          [ -d Docs-Template-Repo-Preview ] && rm -rf Docs-Template-Repo-Preview
+          cd /home/ubuntu
+
+      - name: Build the site
         run: |
           cd /home/ubuntu
-          [ -d DDVDoc ] && rm -rf DDVDoc
           [ ! -d DDVDoc ] && mkdir -p DDVDoc
-          cd document-viewer-docs && git pull && cd .. && cp -rfp ./document-viewer-docs/* ./DDVDoc/
-          cd Docs-Template-Repo-Preview && git pull && cd .. && cp -rfp ./Docs-Template-Repo-Preview/* ./DDVDoc/
+          [ ! -d document-viewer-docs ] && git clone --depth 1 https://github.com/dynamsoft-docs/document-viewer-docs.git document-viewer-docs          
+          [ ! -d Docs-Template-Repo-Preview ] && git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-Preview
+          cp -rfp ./document-viewer-docs/* ./DDVDoc/
+          cp -rfp ./Docs-Template-Repo-Preview/* ./DDVDoc/
           cd DDVDoc && bundle exec jekyll build
-          #python3 /home/ubuntu/ftp.py /home/ubuntu/DDVDoc/_site/ ./www.dynamsoft.com/document-viewer/docs/ prod
 
       - name: Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
@@ -67,10 +75,10 @@ jobs:
         run: |
           cd /home/ubuntu
           [ ! -d DDVDocPreview ] && mkdir -p DDVDocPreview
-          [ ! -d document-viewer-docs-preview ] && git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/document-viewer-docs.git document-viewer-docs-preview          
+          [ ! -d document-viewer-docs-preview ] && git clone --depth 1 --branch preview https://${{ secrets.GIT_USER }}:${{ secrets.GIT_PAT }}@github.com/dynamsoft-docs/document-viewer-docs.git document-viewer-docs-preview          
           [ ! -d Docs-Template-Repo-Preview ] && git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-Preview
-          cd document-viewer-docs-preview && git pull && cd .. && cp -rfp ./document-viewer-docs-preview/* ./DDVDocPreview/
-          cd Docs-Template-Repo-Preview && git pull && cd .. && cp -rfp ./Docs-Template-Repo-Preview/* ./DDVDocPreview/
+          cp -rfp ./document-viewer-docs-preview/* ./DDVDocPreview/
+          cp -rfp ./Docs-Template-Repo-Preview/* ./DDVDocPreview/
           sed -i -e "1,3s/blob\/master$/blob\/preview/" \
           -e "1,3s/blob\/main$/blob\/preview/" /home/ubuntu/DDVDocPreview/_config.yml
           cd DDVDocPreview && bundle exec jekyll build
