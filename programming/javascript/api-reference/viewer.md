@@ -9,11 +9,8 @@ needGenerateH3Content: true
 noTitleIndex: true
 ---
 
-# Viewer
+# Viewer Class
 
-##
-
----
 
 ## destroy
 
@@ -51,7 +48,7 @@ updateViewConfig(config: ViewerConfig): void;
 
 **Parameters**
 
-`config`: The config object contains one or more properties of [ViewerConfig]().
+`config`: The config object contains one or more properties of [ViewerConfig]({{ site.javascript_api }}viewerconfig.html).
 
 **Return Value**
 
