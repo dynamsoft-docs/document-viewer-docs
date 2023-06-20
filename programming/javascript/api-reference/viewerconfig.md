@@ -96,7 +96,7 @@ export interface ViewerConfig {
  zoomOrigin            | ZoomOrigin       |   
  enableScrollX         | boolean          |   
  enableScrollY         | boolean          |   
- scrollDirection       | [Direction]()        |   
+ scrollDirection       | [Direction]()    |   
  keepZoom              | boolean          |   
  displayMode           | DisplayMode      |   
  toolType              | ToolType         |   
