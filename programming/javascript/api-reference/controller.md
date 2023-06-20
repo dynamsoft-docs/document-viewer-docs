@@ -1,9 +1,9 @@
 ---
 layout: default-layout
-title: Dynamsoft Document Viewer IController
-keywords: Dynamsoft Document Viewer, IController
-breadcrumbText: IController
-description: Dynamsoft Document Viewer IController APIs
+title: Dynamsoft Document Viewer Controller Class
+keywords: Dynamsoft Document Viewer, Controller Class
+breadcrumbText: Controller
+description: Dynamsoft Document Viewer Controller Class
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
