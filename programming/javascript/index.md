@@ -19,4 +19,4 @@ breadcrumbText: JavaScript
 
 ## Release Notes
 
-- [Version 1.x](release-notes/javascript-1.md)
+
