@@ -9,31 +9,9 @@ needGenerateH3Content: true
 noTitleIndex: true
 ---
 
-# IController
+# Controller Class
 
 **Methods**
-
-## destroy
-
-Destroy the Controller instance.
-
-**Syntax**
-
-```typescript
-destroy(): void;
-```
-
-**Parameters**
-
-None。
-
-**Return Value**
-
-None.
-
-**Code Snippet**
-
----
 
 ## openDocument
 
@@ -287,15 +265,10 @@ Remove the specified pages.
 **Syntax**
 
 ```typescript
-removePages(index: number): boolean;
 removePages(indexes: number[]): boolean;
-
-removePages(index: number|indexes: number[]): boolean;
 ```
 
 **Parameters**
-
-`index`: The index of the specified page.
 
 `indexes`: The array of indexes of the specified pages.
 
@@ -346,17 +319,12 @@ Activate the specified tab.
 **Syntax**
 
 ```typescript
-activateTab(tabUid: string): void;
-activateTab(tab: ITab): void;
-
-activateTab(tabUid: string|tab: ITab): void;
+activateTab(tabUid: string): boolean;
 ```
 
 **Parameters**
 
 `tabUid`: The uid of the specified tab.
-
-`tab`: The specified tab. Please refer to [ITab]().
 
 **Return Value**
 
@@ -377,16 +345,11 @@ Close the specified tab.
 
 ```typescript
 closeTab(tabUid: string): void;
-closeTab(tab: ITab): void;
-
-closeTab(tabUid: string|tab: ITab): void;
 ```
 
 **Parameters**
 
 `tabUid`: The uid of the specified tab.
-
-`tab`: The specified tab. Please refer to [ITab]().
 
 **Return Value**
 
@@ -423,7 +386,7 @@ The [ITab]() object of the avtivated tab.
 
 ---
 
-## 
+## getAllTabs
 
 Get [ITab]() objects of all tabs.
 
@@ -444,6 +407,27 @@ The array of the [ITab]() objects of all tabs.
 **Code Snippet**
 
 
+---
+
+## destroy
+
+Destroy the Controller instance.
+
+**Syntax**
+
+```typescript
+destroy(): void;
+```
+
+**Parameters**
+
+None.
+
+**Return Value**
+
+None.
+
+**Code Snippet**
 
 
 
