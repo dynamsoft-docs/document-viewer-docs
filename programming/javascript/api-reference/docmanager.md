@@ -129,8 +129,6 @@ loadSource(sources: DDVSource[], docUid: string, index?: number): Promise<string
 
 `index`: Optional. 
 
-``
-
 **Return Value**
 
 A promise resolving to an array of the page uids for the inserted pages.

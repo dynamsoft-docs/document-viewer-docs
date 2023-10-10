@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-title: Dynamsoft Document Normalizer - Introduction
+title: Dynamsoft Document Viewer - Introduction
 keywords: introduction, documentation
-description: Dynamsoft Document Normalizer - Introduction
+description: Dynamsoft Document Viewer - Introduction
 noTitleIndex: false
 ---
 
