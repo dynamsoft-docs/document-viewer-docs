@@ -73,7 +73,7 @@ export interface ViewerConfig {
 
  Attribute             | Type             | Description 
 -----------------------|------------------|------------------
- viewerStyle           | PageStyle        |             
+ viewerStyle           | [PageStyle]()        |             
  canvasStyle           | CanvasStyle      |             
  pageStyle             | PageStyle        |             
  selectedPageStyle     | PageStyle        |             
@@ -93,7 +93,7 @@ export interface ViewerConfig {
  zoomInDelta           | number           |             
  zoomOutDelta          | number           |             
  wheelZoomDelta        | number           |             
- zoomOrigin            | ZoomOrigin       |   
+ zoomOrigin            | [ZoomOrigin]()       |   
  enableScrollX         | boolean          |   
  enableScrollY         | boolean          |   
  scrollDirection       | [Direction]()    |   

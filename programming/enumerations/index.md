@@ -8,3 +8,4 @@ description: Dynamsoft Document Normalizer - Enumerations
 # Enumeration Reference
 
 
+ 
