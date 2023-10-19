@@ -1,2 +1,2 @@
-# document-normalizer-docs
-Dynamsoft Document Normalizer(DDN) documentation repo.
+# document-viewer-docs
+Dynamsoft Document Viewer(DDV) documentation repo.

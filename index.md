@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Document Normalizer Documentation Homepage
+title: Dynamsoft Document Viewer Documentation Homepage
 keywords: homepage, documentation
 breadcrumbText: HomePage
 description: Documentation Homepage
@@ -12,11 +12,6 @@ description: Documentation Homepage
 - [Introduction]({{ site.introduction }})
 
 - [Programming]({{ site.programming }})
-  - [Android]({{ site.android }})
-  - [iOS]({{ site.ios }})
-  - [C]({{ site.c }})
-  - [C++]({{ site.cpp }})
-  - [Xamarin.Forms]({{ site.xamarin }})
   - [JavaScript]({{ site.javascript }})
 
 - [Parameters]({{ site.parameters }})
