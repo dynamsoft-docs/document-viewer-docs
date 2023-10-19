@@ -11,3 +11,4 @@ noTitleIndex: true
 
 # Consructor
 
+<i class="fa fa-weixin"></i>
