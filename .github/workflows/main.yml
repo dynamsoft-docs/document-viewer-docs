@@ -82,15 +82,18 @@ jobs:
           sed -i -e "1,3s/blob\/master$/blob\/preview/" \
           -e "1,3s/blob\/main$/blob\/preview/" /home/ubuntu/DDVDocPreview/_config.yml
           cd DDVDocPreview && bundle exec jekyll build
+          python3 /home/ubuntu/ftp.py /home/ubuntu/DDVDocPreview/_site/ ./www.dynamsoft.com/document-viewer/docs/ prod
 
-      - name: Sync files
-        uses: SamKirkland/FTP-Deploy-Action@4.3.0
-        with:
-          server: ${{ secrets.FTP_TEST_SITE_SERVER }}
-          username: ${{ secrets.FTP_TEST_SITE_USER }}
-          password: ${{ secrets.FTP_TEST_SITE_PASSWORD }}
-          port: 7500 
-          local-dir: /home/ubuntu/DDVDocPreview/_site/
-          server-dir: /www.dynamsoft.com/document-viewer/docs/
+
+
+      # - name: Sync files
+      #   uses: SamKirkland/FTP-Deploy-Action@4.3.0
+      #   with:
+      #     server: ${{ secrets.FTP_TEST_SITE_SERVER }}
+      #     username: ${{ secrets.FTP_TEST_SITE_USER }}
+      #     password: ${{ secrets.FTP_TEST_SITE_PASSWORD }}
+      #     port: 7500 
+      #     local-dir: /home/ubuntu/DDVDocPreview/_site/
+      #     server-dir: /www.dynamsoft.com/document-viewer/docs/
 
           
