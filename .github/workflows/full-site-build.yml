@@ -1,0 +1,85 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Full-Site-Build
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push events but only for the master branch
+  # push:
+  #   branches: [ preview ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains jobs called "Build-Main" and "Build-Preview"
+  Build-Main:
+    if: ${{ github.ref == 'refs/heads/main' }}
+    # The type of runner that the job will run on
+    runs-on: self-hosted
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      #- uses: actions/checkout@v2
+
+      # Runs a set of commands using the runners shell
+      - name: Build the site
+        run: |
+          cd /home/ubuntu
+          [ -d DDVDoc ] && rm -rf DDVDoc
+          [ ! -d DDVDoc ] && mkdir -p DDVDoc
+          [ ! -d document-viewer-docs ] && git clone --depth 1 https://github.com/dynamsoft-docs/document-viewer-docs.git document-viewer-docs
+          [ ! -d Docs-Template-Repo-Preview ] && git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-Preview
+          cd document-viewer-docs && git pull && cd .. && cp -rfp ./document-viewer-docs/* ./DDVDoc/
+          cd Docs-Template-Repo-Preview && git pull && cd .. && cp -rfp ./Docs-Template-Repo-Preview/* ./DDVDoc/
+          cd DDVDoc && bundle exec jekyll build
+          #python3 /home/ubuntu/ftp.py /home/ubuntu/DDVDoc/_site/ ./www.dynamsoft.com/document-viewer/docs/ prod
+
+      - name: Sync files
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
+        with:
+          server: ${{ secrets.FTP_DYNAMSOFT_LOCAL_SERVER }}
+          username: ${{ secrets.FTP_DYNAMSOFT_LOCAL_USER }}
+          password: ${{ secrets.FTP_DYNAMSOFT_LOCAL_PASSWORD }}
+          port: 21 
+          local-dir: /home/ubuntu/DDVDoc/_site/
+          server-dir: /www.dynamsoft.com/document-viewer/docs/        
+
+
+  Build-Preview:
+    if: ${{ github.ref == 'refs/heads/preview' }}
+    # The type of runner that the job will run on
+    runs-on: self-hosted
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      #- uses: actions/checkout@v2
+        
+        
+      # Runs a set of commands using the runners shell
+      - name: Build the site
+        run: |
+          cd /home/ubuntu
+          [ -d DDVDocPreview ] && rm -rf DDVDocPreview
+          [ -d document-viewer-docs-preview ] && rm -rf document-viewer-docs-preview
+          [ ! -d DDVDocPreview ] && mkdir -p DDVDocPreview
+          [ ! -d document-viewer-docs-preview ] && git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/document-viewer-docs.git document-viewer-docs-preview
+          cd document-viewer-docs-preview && git pull && cd .. && cp -rfp ./document-viewer-docs-preview/* ./DDVDocPreview/
+          cd Docs-Template-Repo-Preview && git pull && cd .. && cp -rfp ./Docs-Template-Repo-Preview/* ./DDVDocPreview/
+          sed -i -e "1,3s/blob\/master$/blob\/preview/" \
+          -e "1,3s/blob\/main$/blob\/preview/" /home/ubuntu/DDVDocPreview/_config.yml
+          cd DDVDocPreview && bundle exec jekyll build
+
+      - name: Sync files
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
+        with:
+          server: ${{ secrets.FTP_TEST_SITE_SERVER }}
+          username: ${{ secrets.FTP_TEST_SITE_USER }}
+          password: ${{ secrets.FTP_TEST_SITE_PASSWORD }}
+          port: 7500 
+          local-dir: /home/ubuntu/DDVDocPreview/_site/
+          server-dir: /www.dynamsoft.com/document-viewer/docs/
+
