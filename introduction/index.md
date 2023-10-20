@@ -1,28 +1,38 @@
 ---
 layout: default-layout
-title: Remote Scan Introduction
-description: This is the main page of Remote Scan Introduction 
-needAutoGenerateSidebar: true
-needGenerateH3Content: true
-noTitleIndex: true
+title: Dynamsoft Document Viewer - Introduction
+keywords: introduction, documentation
+description: Dynamsoft Document Viewer - Introduction
+noTitleIndex: false
 ---
-# What is Remote Scan ？
 
-Remote Scan solution is officially available starting in Dynamic Web TWAIN v18.2, with the help of an additional proxy service called **“Dynamsoft Proxy Service”**.
-Remote Scan allows end users to access scanners of various protocols (TWAIN, SANE, ICA, eSCL, WIA) on the Intranet through any devices and any popular browsers, without any software installed.
+# Introduction to Dynamsoft Document Viewer
 
-**Benefit:**  
+Dynamsoft Document Viewer (DDV) is an SDK designed to capture document images from the camera, detect document boundaries, and then manage and edit document images at document level.
 
-For IT
-* Enable users to discover and use scanners anywhere on your network
-* Connect and share scanners on your network without configuring individual user devices
+DDV powers your software development in the following aspects:
 
-For Users
-* Use any scanner on your network without any configuration
+- Built-in camera capture module for easy camera control.
+- Built-in basic document boundaries detection with perspective included. In addition, supports seamless integration with Dynamsoft Document Normalizer for a better document normalize experience.
+- Various built-in editing functions, such as cropping, rotating, filter, etc.
+- Default User Interface of viewers, such as, capture viewer, crop viewer, edit viewer and category viewer. 
+- Flexible User Interface customization, such as adding or removing default buttons, adding custom function buttons, customizing the default viewer style, etc.
+- 
+
+With DDN, you can efficiently embed the functionality of quadrilateral detection and document normalization in your mobile, desktop and server applications. DDN also provides various image processing features, allowing you to customize DDN and meet your business needs.
+
+## Key Features
 
 
-<img src="../assets/imgs/image1.png" width="100%" height="100%">
 
-<!--See the video introduction <a href="https://www.youtube.com/embed/T9dx2Z_kyoY" target="_blank">here</a>. -->
+## DDN SDK Modules
 
-<iframe width="900" height="500" src="https://www.youtube.com/embed/T9dx2Z_kyoY" title="Remote Document Scanning | Dynamic Web TWAIN" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+
+## Usage Scenarios
+
+
+
+## Programming Languages
+
+
