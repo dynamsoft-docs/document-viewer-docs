@@ -108,10 +108,36 @@
   }
 </style>
 <body>
-    <div class="headWrapper">
-        {%- include page_header.html -%}
+    {% assign url = 'https://www.dynamsoft.com/shared/head/' %}
+    {% remote_include {{ url }} %}
+
+    <div class="subHeadWrapper">
+        <div id="DLRMenu" class="productMenu">
+            <div class="container pcProductMenu">
+                <div class="row">
+                    <div class="col-12">
+                        <ul class="menuList">
+                            <li class="title">
+                                <a class="orangeLink" href="https://www.dynamsoft.com/remote-scan/docs/">Remote Scan</a>
+                            </li>
+                            <li class="item overview">
+                                <a class="textUpperCase" href="https://www.dynamsoft.com/remote-scan/docs/">Documentaion</a>
+                            </li>
+                        </ul> 
+                    </div>
+                </div>
+            </div>
+            <div class="container mobileProductMenu">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="productLogo"><i class="dlt-logo"></i>Remote Scan <i class="icon-orange-angle"></i></div>
+                        <div id="dlrCurrentPage" class="fontOswald fr currentPage">Documentation</div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    {%- include ddvNav.html -%}
+    <div class="sideBarIcon"><i class="fa fa-list" style="margin-right: 5px;"></i> Table of contents</div>
     <div class="container" id="searchContent">
       <div class="row">
           <div class="docContainer col-xs-12" style="border-left: 0;">
@@ -120,7 +146,7 @@
                       <div class="row">
                           <div class="col-xs-12">
                               <h1>Search</h1>                        
-                              <script async src="https://cse.google.com/cse.js?cx=90b37820e9a5e454e"></script>
+                              <script async src="https://cse.google.com/cse.js?cx=53a201f66061dfc84"></script>
                               <div class="gcse-search"></div>
                           </div>
                       </div>
@@ -136,6 +162,26 @@
     <div id="footerWrapper">
         {%- include page_footer.html -%}
     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"
+        integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
+    <script>anchors.add();</script>
+
+    {%- if page.needAutoGenerateSidebar -%}
+    {%- unless page.needGenerateH3Content -%}
+    <script>
+        FullTreeMenuList(true, false);
+    </script>
+    {%- else -%}
+    <script>
+        FullTreeMenuList(true);
+    </script>
+    {%- endunless -%}
+    {%- else -%}
+    <script>
+        FullTreeMenuList(false);
+    </script>
+    {%- endif -%}
 
     <script type="text/javascript">
       $('#sideBarCnt').css({'width': $('.sideBar').width() + 'px'})
@@ -197,9 +243,36 @@
           }
       }
 
+      $('.sideBarIcon').click(function() {
+          $(".sideBar").toggleClass('hide-sm');
+          $(".sideBar").toggleClass('hide-xs');
+          setTimeout(function() {
+              console.log('sidebar' + $('.sideBar').width())
+              $('#sideBarCnt').css({'width': $('.sideBar').width() + 'px'})
+          }, 100)
+      })
+
+      let timeInt = setInterval(function() {
+          var container = $('#sideBarCnt'), scrollTo = $('#sideBarCnt .activeLink');
+          console.log(scrollTo)
+          if (scrollTo.length>0) {
+              container.scrollTop(
+                  scrollTo.offset().top - container.offset().top + container.scrollTop()
+              );
+              clearInterval(timeInt)
+          }
+      }, 500)
+  
+      function onSearchFinish(e) {
+          var evt = window.event || e;
+          if (evt.keyCode == 13) {
+
+          }
+      }
+
       $('#txtSearch').keydown(function(e) { 
           if (e.keyCode == 13) {
-              window.location.href = '/document-normalizer/docs/search.html?q=' + $('#txtSearch').val()
+              window.location.href = '/code-parser/search.html?q=' + $('#txtSearch').val()
           }
       })
 

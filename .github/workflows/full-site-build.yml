@@ -72,6 +72,7 @@ jobs:
           sed -i -e "1,3s/blob\/master$/blob\/preview/" \
           -e "1,3s/blob\/main$/blob\/preview/" /home/ubuntu/DDVDocPreview/_config.yml
           cd DDVDocPreview && bundle exec jekyll build
+          
 
       - name: Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.0

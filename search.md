@@ -1,5 +1,6 @@
 ---
 layout: search-page
-title: Dynamsoft Document Normalizer Documentation Search
-keywords: Dynamsoft Document Normalizer Documentation Search
+title: Remote Scan Documentation Search
+keywords: Remote Scan Documentation Search
+cx: a671e766504a74330
 ---
