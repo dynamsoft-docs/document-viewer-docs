@@ -1,2 +1,3 @@
-# document-viewer-docs
-Dynamsoft Document Viewer(DDV) documentation repo.
+# Dynamic Web TWAIN Remote Scan
+
+This is the repository for maintaining the official documentation of Dynamic Web TWAIN - Remote Scan.

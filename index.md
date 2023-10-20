@@ -1,19 +1,15 @@
 ---
-layout: default-layout
-title: Dynamsoft Document Viewer Documentation Homepage
-keywords: homepage, documentation
-breadcrumbText: HomePage
-description: Documentation Homepage
+layout: home-page
+title: Remote Scan Documentation
+keywords: Dynamic Web TWAIN, Remote Scan, documentation
+description: Dynamic Web TWAIN - Remote Scan Documentation Homepage
 ---
 
+# Remote Scan 
 
-# Documentation HomePage
-
-- [Introduction]({{ site.introduction }})
-
-- [Programming]({{ site.programming }})
-  - [JavaScript]({{ site.javascript }})
-
-- [Parameters]({{ site.parameters }})
-  - [Parameter Organization Structure]({{ site.parameters }}parameter-organization-structure.html)
-  - [Parameter Reference]({{ site.parameters_reference }})
+* [Glossary of Terms]({{site.glossary}})
+* [Introduction]({{site.introduction}}) 
+* [Getting Started]({{site.gettingstarted}}) 
+* [Related APIs]({{site.api}}) 
+* [Security]({{site.security}}) 
+* [References]({{site.references}}) 
