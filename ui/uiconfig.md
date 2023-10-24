@@ -21,7 +21,7 @@ First, we need to know how DDV creates the UI. DDV has an interface named `UiCon
 
 Take the default mobile edit viewer as the example to learn how UiConfig is configured.
 
-![Alt text](image-2.png)
+![Alt text](/assets/imgs/image-2.png)
 <center>Figure 1</center>
 
 
@@ -49,7 +49,7 @@ const mobileEditViewerUiConfig = {
 Next, the specific configuration of headerUiConfig, it can be seen that the icons are arranged from left to right, then
 
 
-![Alt text](image-6.png)
+![Alt text](/assets/imgs/image-6.png)
 
 
 ```typescript
@@ -68,7 +68,7 @@ Next, the specific configuration of headerUiConfig, it can be seen that the icon
 
 Also can know the footerUiConfig is as follows,
 
-![Alt text](image-4.png)
+![Alt text](/assets/imgs/image-4.png)
 
 ```typescript
 {
