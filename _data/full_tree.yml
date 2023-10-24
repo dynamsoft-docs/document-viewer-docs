@@ -47,6 +47,8 @@ tree_list:
         path: /ui/uiconfig.html
       - name: Default elements
         path: /ui/default_elements.html
+      - name: Default user interface
+        path: /ui/default_ui.html
   - name: Security
     path: /security/
   - name: References

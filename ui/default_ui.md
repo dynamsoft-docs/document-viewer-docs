@@ -14,10 +14,12 @@ permalink: /ui/default_ui.html
 It can be seen from Viewers part, DDV provides the default UI design for the edit viewer, capture viewer and perspective viewer. They basically contain the main features of each type of viewer. 
 
 <div class="multi-panel-switching-prefix"></div>
+
 - [Edit viewer](#edit-viewer)
 - [Capture viewer](#capture-viewer)
 - [Perspective viewer](#perspective-viewer)
 - [Browse viewer](#browse-viewer)
+
 <div class="multi-panel-start"></div>
 
 ## Edit viewer
@@ -115,6 +117,7 @@ Default UiConfig:
 ```
 
 <div class="multi-panel-end"></div>
+
 <div class="multi-panel-start"></div>
 
 ## Capture viewer
@@ -198,6 +201,7 @@ Default UiConfig:
 ```
 
 <div class="multi-panel-end"></div>
+
 <div class="multi-panel-start"></div>
 
 ## Perspective viewer
@@ -274,6 +278,7 @@ Default UiConfig:
 ```
 
 <div class="multi-panel-end"></div>
+
 <div class="multi-panel-start"></div>
 
 ## Browse viewer
@@ -290,6 +295,7 @@ Default UiConfig:
 ```
 
 <div class="multi-panel-end"></div>
+
 <div class="multi-panel-switching-end"></div>
 
 
