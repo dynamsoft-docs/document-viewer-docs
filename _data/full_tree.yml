@@ -38,6 +38,13 @@ tree_list:
         path: /api/Interfaces.html
       - name: Error List
         path: /api/ErrorList.html
+      - name: EditViewer
+        path: /api/edit_viewer.html
+    - name: User Interface
+    path: /ui/
+    childList: 
+      - name: UiConfig
+        path: /ui/uiconfig.html
   - name: Security
     path: /security/
   - name: References
