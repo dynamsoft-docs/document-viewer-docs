@@ -40,11 +40,13 @@ tree_list:
         path: /api/ErrorList.html
       - name: EditViewer
         path: /api/edit_viewer.html
-    - name: User Interface
-      path: /ui/
-      childList: 
+  - name: User Interface
+    path: /ui/
+    childList: 
       - name: UiConfig
         path: /ui/uiconfig.html
+      - name: Default elements
+        path: /ui/default_elements.html
   - name: Security
     path: /security/
   - name: References
