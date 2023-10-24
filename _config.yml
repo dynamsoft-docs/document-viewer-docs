@@ -2,7 +2,7 @@ repository: dynamsoft-docs/document-viewer-docs
 repositoryUrl: https://github.com/dynamsoft-docs/document-viewer-docs/blob/main
 docFullPath: https://www.dynamsoft.com/document-viewer/docs
 firstLevelUrl: /document-viewer/docs
-docHomePage: /document-viewer/docs/introduction/
+docHomePage: /document-viewer/docs/
 
 introduction: /document-viewer/docs/introduction/
 programming: /document-viewer/docs/programming/
