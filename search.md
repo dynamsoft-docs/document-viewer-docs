@@ -1,6 +1,6 @@
 ---
 layout: search-page
-title: Remote Scan Documentation Search
-keywords: Remote Scan Documentation Search
+title: Dynamsoft Document Viewer Documentation Search
+keywords: Dynamsoft Document Viewer Documentation Search
 cx: a671e766504a74330
 ---
