@@ -1,11 +1,11 @@
 ---
 layout: home-page
-title: Dynamsoft Document Viewer Documentation
-keywords: Dynamsoft Document Viewer, documentation
-description: Dynamsoft Document Viewer Documentation Homepage
+title: Remote Scan Documentation
+keywords: Dynamic Web TWAIN, Remote Scan, documentation
+description: Dynamic Web TWAIN - Remote Scan Documentation Homepage
 ---
 
-# Dynamsoft Document Viewer 
+# Remote Scan 
 
 * [Glossary of Terms]({{site.glossary}})
 * [Introduction]({{site.introduction}}) 

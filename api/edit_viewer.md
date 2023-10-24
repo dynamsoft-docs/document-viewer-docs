@@ -15,11 +15,9 @@ permalink: /api/edit_viewer.html
 
 ### Create and Destroy Instances
 
-
-
 ## EditViewer()
 
-Default constructor of an `EditViewer` object. 
+Default constructor of a `EditViewer` object. 
 
 **Syntax**
 
