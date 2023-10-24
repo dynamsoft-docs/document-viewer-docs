@@ -8,3 +8,5 @@ breadcrumbText: Default Elements
 description: Dynamsoft Document Viewer Documentation User Interface How to Customize 
 permalink: /ui/customize/index.html
 ---
+
+000
