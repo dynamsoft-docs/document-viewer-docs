@@ -22,7 +22,7 @@ The following are lists of default elements as well as their default icons that 
 
 | Elements                           | ClassName of its default icon                               | More descriptions
 |------------------------------------|-------------------------------------------------------------|-------------------
-| DDV.Elements.Pagination            | ddv-first-page, ddv-prev-page, ddv-next-page, ddv-last-page | 
+| DDV.Elements.Pagination            | ddv-first-page<br>ddv-prev-page<br>ddv-next-page<br>ddv-last-page | 
 | DDV.Elements.RotateLeft            | ddv-rotate-left                                             | 
 | DDV.Elements.RotateRight           | ddv-rotate-right                                            | 
 | DDV.Elements.Delete                | ddv-delete-current                                          | Composite element contains DeleteCurrent and DeleteAll.
@@ -67,7 +67,7 @@ The following are lists of default elements as well as their default icons that 
 
 | Elements                          | ClassName of default icon                                   | More descriptions
 |-----------------------------------|-------------------------------------------------------------|------------------
-| DDV.Elements.Pagination           | ddv-first-page, ddv-prev-page, ddv-next-page, ddv-last-page |
+| DDV.Elements.Pagination           | ddv-first-page<br>ddv-prev-page<br>ddv-next-page<br>ddv-last-page |
 | DDV.Elements.RotateLeft           | ddv-rotate-left                                             | 
 | DDV.Elements.RotateRight          | ddv-rotate-right                                            | 
 | DDV.Elements.Delete               | N/A                                                         | Composite element contains DeleteCurrent and DeleteAll.
