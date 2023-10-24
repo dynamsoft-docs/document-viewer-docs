@@ -6,11 +6,6 @@
 {%- if page.noTitleIndex or page.url contains 'release-notes' -%}
     {%- assign noTitleIndex = "noTitleIndex" -%}
 {%- endif -%}
-<style>
-    .rightSideMenu.hasNote { padding-top: 168px; }
-    .docContainer, .sideBar, .history { visibility: visible; }
-    /* #fullTreeMenuListContainer li.expandListStyle > ul { display: block; } */
-</style>
 
 <body class="dlrDoc">
     {% assign url = 'https://www.dynamsoft.com/shared/head/' %}
@@ -77,9 +72,7 @@
     <script type="text/javascript">
         anchors.add();
         UrlReplace();
-        FullTreeMenuList('{{ page.needAutoGenerateSidebar }}', '{{ page.needGenerateH3Content }}');
-
-        $("#fullTreeMenuListContainer li.expandListStyle > ul").show()
+        FullTreeMenuList('{{page.needAutoGenerateSidebar}}', '{{page.needGenerateH3Content}}', '{{page.pageStartVer}}', '{{site.useVersionTree}}');
     </script>
 
     {%- include livehelp.html -%}
