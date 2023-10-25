@@ -15,81 +15,87 @@ The default UI provided by DDV is basically a top-down layout. Taking the defaul
 
 [screenshot here]
 
-## Based on the default UI
+## Based on the default layout
 
-Without changing the toolbar, only changing the relative position of the toolbar and the main view, you can refer to the following methods:
+Without changing the toolbar, only changing the relative position of the toolbar and the main view, you can refer to the following steps:
 
-- Method one: Configure UI before creating the edit viewer.
-    - Step one: Refer to the default UiConfig which is listed on [Default user interface](#) section and reverse two elements in its children. You will get a new UiConfig as below.
-        ```typescript
-        const newUiConfig = {
-                type: DDV.Elements.Layout,
-                flexDirection: "column",
-                className: "ddv-edit-viewer-desktop",
-                children: [
-                    DDV.Elements.MainView,
-                    {
-                        type: DDV.Elements.Layout,
-                        className: "ddv-edit-viewer-header-desktop",
-                        children: [
-                            {
-                                type: DDV.Elements.Layout,
-                                children: [
-                                    DDV.Elements.ThumbnailSwitch,
-                                    DDV.Elements.Zoom,
-                                    DDV.Elements.FitMode,
-                                    DDV.Elements.DisplayMode,
-                                    DDV.Elements.RotateLeft,
-                                    DDV.Elements.RotateRight,
-                                    DDV.Elements.Crop,
-                                    DDV.Elements.Filter,
-                                    DDV.Elements.Undo,
-                                    DDV.Elements.Redo,
-                                    DDV.Elements.DeleteCurrent,
-                                    DDV.Elements.DeleteAll,
-                                    DDV.Elements.Pan,
-                                ],
-                            },
-                            {
-                                type: DDV.Elements.Layout,
-                                children: [
-                                    {
-                                        type: DDV.Elements.Pagination,
-                                        className: "ddv-edit-viewer-pagination-desktop",
-                                    },
-                                    DDV.Elements.Load,
-                                    DDV.Elements.Download,
-                                    DDV.Elements.Print,
-                                ],
-                            },
-                        ],
-                    },
-                ],
-            };
-        ```
-    - Step two: Configure it when creating the new edit viewer.
-        ```typescript
-        const editViewer = new DDV.EditViewer({
-            containerId: "viewer",
-            uiConfig: newUiConfig,
-        });
-        ```
-- Method two: Update UI dynamically after creating the edit viewer.
-    - Step one: Get current UiConfig by using method [`getUiConfig()`]().
-        ```typescript
-        const editViewer = new DDV.EditViewer({
-            containerId: "viewer",
-        });
-        const uiConfig = editViewer.getUiConfig();
-        ```
-    - Step two: Reverse two elements in its children.
-        ```typescript
-        uiConfig.children.reverse();
-        ```
-    - Step three: Update the revised UiConfig by using method [`updateUiConfig()`]().
-        ```typescript
-        editViewer.updateUiConfig(uiConfig);
-        ```
+- **Step one**: Refer to the default UiConfig which is listed on [Default user interface](#) section and reverse two elements in its children. Can use `getDefaultUiConfig` method,
+    ```typescript
+    const newUiConfig = DDV.getDefaultUiConfig("editViewer");
+    newUiConfig.children.reverse();
+    ```
+
+    Or modify the default object directly.
+    ```typescript
+    const newUiConfig = {
+            type: DDV.Elements.Layout,
+            flexDirection: "column",
+            className: "ddv-edit-viewer-desktop",
+            children: [
+                DDV.Elements.MainView,
+                {
+                    type: DDV.Elements.Layout,
+                    className: "ddv-edit-viewer-header-desktop",
+                    children: [
+                        {
+                            type: DDV.Elements.Layout,
+                            children: [
+                                DDV.Elements.ThumbnailSwitch,
+                                DDV.Elements.Zoom,
+                                DDV.Elements.FitMode,
+                                DDV.Elements.DisplayMode,
+                                DDV.Elements.RotateLeft,
+                                DDV.Elements.RotateRight,
+                                DDV.Elements.Crop,
+                                DDV.Elements.Filter,
+                                DDV.Elements.Undo,
+                                DDV.Elements.Redo,
+                                DDV.Elements.DeleteCurrent,
+                                DDV.Elements.DeleteAll,
+                                DDV.Elements.Pan,
+                            ],
+                        },
+                        {
+                            type: DDV.Elements.Layout,
+                            children: [
+                                {
+                                    type: DDV.Elements.Pagination,
+                                    className: "ddv-edit-viewer-pagination-desktop",
+                                },
+                                DDV.Elements.Load,
+                                DDV.Elements.Download,
+                                DDV.Elements.Print,
+                            ],
+                        },
+                    ],
+                },
+            ],
+        };
+    ```
+- **Step two**: Configure it when creating the new viewer.
+    ```typescript
+    const editViewer = new DDV.EditViewer({
+        containerId: "viewer",
+        uiConfig: newUiConfig,
+    });
+    ```
+<!-- ### Method two: Update UI dynamically after creating the edit viewer.
+
+- **Step one**: Get current UiConfig by using method [`getUiConfig()`]().
+    ```typescript
+    const editViewer = new DDV.EditViewer({
+        containerId: "viewer",
+    });
+    const uiConfig = editViewer.getUiConfig();
+    ```
+- **Step two**: Reverse two elements in its children.
+    ```typescript
+    uiConfig.children.reverse();
+    ```
+- **Step three**: Update the revised UiConfig by using method [`updateUiConfig()`]().
+    ```typescript
+    editViewer.updateUiConfig(uiConfig); 
+    ```-->
 
 ## Customize as you wish
 
@@ -143,3 +149,4 @@ const editViewer = new DDV.EditViewer({
 Then you will get a viewer which is shown as below.
 
 [screenshot image]
+
