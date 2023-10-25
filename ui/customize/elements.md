@@ -150,7 +150,6 @@ If any accompanying display texts are required to add or change of the default e
 
 
 -------
--------
 
 ## Create your own button
 
