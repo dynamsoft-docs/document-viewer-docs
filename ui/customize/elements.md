@@ -16,10 +16,12 @@ permalink: /ui/customize/elements.html
 Although DDV provides many default elements, some customizations are also required, such as, to unify icon style with the original system, to add tooltips and so on.
 
 <div class="multi-panel-switching-prefix"></div>
+
 - [Style & icon](#style-icon)
 - [Event](#event)
 - [Tooltip](#tooltip)
 - [Display text](#display-text)
+
 <div class="multi-panel-start"></div>
 
 To change the style and icon of the default elements, can use the properties `style` and `className` of `UiConfig`, please refer to the example below.
