@@ -6,18 +6,16 @@ title: Dynamsoft Document Viewer API Reference - EditViewer Class
 keywords: Documentation, Dynamsoft Document Viewer, API Reference, EditViewer Class
 breadcrumbText: EditViewer Class
 description: Dynamsoft Document Viewer Documentation API Reference EditViewer Class Page
-permalink: /api/edit_viewer.html
+permalink: /api/class/edit_viewer.html
 ---
 
 # EditViewer Class
 
 ## API Index
 
-### Create and Destroy Instances
+## Create and Destroy Instances
 
-
-
-## EditViewer()
+### EditViewer()
 
 Default constructor of an `EditViewer` object. 
 
@@ -27,11 +25,15 @@ Default constructor of an `EditViewer` object.
 new DDV.EditViewer(options?: EditViewerConstructorOptions);
 ```
 
+**Parameters**
+
+`options`: The constructor options for an `EditViewer` object. Please refer to [`EditViewerConstructorOptions`](#editviewerconstructoroptions).
+
 **Example**
 
 ```typescript
 const editViewer = new DDV.EditViewer({
-    container: document.getElementById("viewer")
+    container: document.getElementById("viewer"),
 });
 ```
 
@@ -53,14 +55,14 @@ const editViewer = new DDV.EditViewer({
 
 **Remark**
 
-A `thumbnail` object will be created at the same time. Please refer to [thumbnail](/thumbnail.md).
+A `thumbnail` object will be created at the same time. Please refer to [`thumbnail`]({{ site.api }}interfaces/thumbnail.html).
 
-**See Also**
+<!-- **See Also**
 
-[EditViewerConstructorOptions](#editviewerconstructoroptions).
+[EditViewerConstructorOptions](#editviewerconstructoroptions). -->
 
 
-## destroy()
+### destroy()
 
 Destroy the `EditViewer` object.
 
