@@ -149,7 +149,8 @@ If any accompanying display texts are required to add or change of the default e
 <div class="multi-panel-switching-end"></div>
 
 
-
+-------
+-------
 
 ## Create your own button
 
