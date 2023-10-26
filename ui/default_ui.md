@@ -26,8 +26,6 @@ It can be seen from Viewers part, DDV provides the default UI design for the edi
 
 ### Mobile
 
-//screenshot of the default viewer
-
 Default UiConfig:
 
 ```typescript
@@ -63,9 +61,9 @@ Default UiConfig:
 };
 ```
 
-### Desktop
+![Default mobile EditViewer UI](/assets/imgs/dmeditui.png)
 
-//screenshot of the default viewer
+### Desktop
 
 Default UiConfig:
 
@@ -116,6 +114,8 @@ Default UiConfig:
 };
 ```
 
+![Default desktop EditViewer UI](/assets/imgs/ddeditui.png)
+
 <div class="multi-panel-end"></div>
 
 <div class="multi-panel-start"></div>
@@ -123,8 +123,6 @@ Default UiConfig:
 ## Capture viewer
 
 ### Mobile
-
-//screenshot of the default viewer
 
 Default UiConfig:
 
@@ -163,9 +161,9 @@ Default UiConfig:
 };
 ```
 
-### Desktop
+![Default mobile CaptureViewer UI](/assets/imgs/dmcaptureui.png)
 
-//screenshot of the default viewer
+### Desktop
 
 Default UiConfig:
 
@@ -200,6 +198,8 @@ Default UiConfig:
 };
 ```
 
+![Default desktop CaptureViewer UI](/assets/imgs/ddcaptureui.png)
+
 <div class="multi-panel-end"></div>
 
 <div class="multi-panel-start"></div>
@@ -207,8 +207,6 @@ Default UiConfig:
 ## Perspective viewer
 
 ### Mobile
-
-//screenshot of the default viewer
 
 Default UiConfig:
 
@@ -242,9 +240,9 @@ Default UiConfig:
 };
 ```
 
-### Desktop
+![Default mobile PerspectiveViewer UI](/assets/imgs/dmperui.png)
 
-//screenshot of the default viewer
+### Desktop
 
 Default UiConfig:
 
@@ -276,6 +274,8 @@ Default UiConfig:
     ],
 };
 ```
+
+![Default desktop PerspectiveViewer UI](/assets/imgs/ddperui.png)
 
 <div class="multi-panel-end"></div>
 
