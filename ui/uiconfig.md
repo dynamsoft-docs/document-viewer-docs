@@ -17,16 +17,26 @@ First, we need to know how DDV creates the UI. DDV has an interface named `UiCon
 
 ## Structure
 
+```typescript
+interface UiConfig {
+	type: string; // DDV.Elements.Layout, DDV.Elements.Button, default elements.
+	flexDirection?: string; //"column", "row", only available when type is DDV.Elements.Layout
+	id?: string; //the id of dom element, default: random
+	className?: string; // className of CSS
+	style?: CSSStyleDeclaration; // can cover the original CSS style 
+	tooltip?: string; //tooltip
+	events?: Record<string, string>;
+	children?: (UiConfig | string)[]; // take effect only when type is DDV.Elements.Layout
+}
+```
+
 ## How to configure
 
 Take the default mobile edit viewer as the example to learn how UiConfig is configured.
 
-![Alt text](/assets/imgs/image-2.png)
-<center>Figure 1</center>
+![EditViewer mobile UiConfig](/assets/imgs/editmuiconfig.png)
 
-
-
-As shown in Figure 1, whole layout can be divided into three parts, header, main view and footer. 
+As shown in the figure above, whole layout can be divided into three parts, header, main view and footer. 
 
 So simply speaking, the overall UiConfig framework is roughly as follows,
 
@@ -49,7 +59,7 @@ const mobileEditViewerUiConfig = {
 Next, the specific configuration of headerUiConfig, it can be seen that the icons are arranged from left to right, then
 
 
-![Alt text](/assets/imgs/image-6.png)
+![EditViewer mobile header UiConfig](/assets/imgs/editmhuiconfig.png)
 
 
 ```typescript
@@ -68,7 +78,7 @@ Next, the specific configuration of headerUiConfig, it can be seen that the icon
 
 Also can know the footerUiConfig is as follows,
 
-![Alt text](/assets/imgs/image-4.png)
+![EditViewer mobile footer UiConfig](/assets/imgs/editmfuiconfig.png)
 
 ```typescript
 {
