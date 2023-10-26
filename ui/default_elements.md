@@ -18,7 +18,15 @@ Specific Elements can only be applied to specific viewers. For example, `DDV.Ele
 
 The following are lists of default elements as well as their default icons that are currently available for different viewer classes.
 
-## EditViewer
+<div class="multi-panel-switching-prefix"></div>
+
+- [Edit viewer](#edit-viewer)
+- [Capture viewer](#capture-viewer)
+- [Perspective viewer](#perspective-viewer)
+- [Browse viewer](#browse-viewer)
+- [Common](#common)
+
+<div class="multi-panel-start"></div>
 
 | Elements                           | ClassName of its default icon                               | More descriptions
 |------------------------------------|-------------------------------------------------------------|-------------------
@@ -50,7 +58,9 @@ The following are lists of default elements as well as their default icons that 
 | DDV.Elements.ContinuousPage        | ddv-continuous-mode                                         |
 | DDV.Elements.Download              | ddv-button-download                                         | Download image file to local.
 
-## CaptureViewer
+<div class="multi-panel-end"></div>
+
+<div class="multi-panel-start"></div>
 
 | Elements                       | ClassName of default icon | More descriptions
 |--------------------------------|---------------------------|--------------------
@@ -62,8 +72,9 @@ The following are lists of default elements as well as their default icons that 
 | DDV.Elements.AutoCapture       | ddv-auto-capture          |
 | DDV.Elements.ImagePreview      | N/A                       |
 
+<div class="multi-panel-end"></div>
 
-## PerspectiveViewer
+<div class="multi-panel-start"></div>
 
 | Elements                          | ClassName of default icon                                   | More descriptions
 |-----------------------------------|-------------------------------------------------------------|------------------
@@ -79,8 +90,9 @@ The following are lists of default elements as well as their default icons that 
 | DDV.Elements.Download             | ddv-button-download                                         | Download image file to local.
 | DDV.Elements.Print                | ddv-print-page                                              |
 
+<div class="multi-panel-end"></div>
 
-## BrowseViewer
+<div class="multi-panel-start"></div>
 
 | Elements                           | ClassName of default icon                                   | More descriptions
 |------------------------------------|-------------------------------------------------------------|-------------------
@@ -94,7 +106,9 @@ The following are lists of default elements as well as their default icons that 
 | DDV.Elements.Load                  | ddv-load-image                                              | Load file from local. If there is no document is opend when you click Load button, a new document (default name: dynamsoft-document-timestamp) will be created and opened automatically.
 | DDV.Elements.Download              | ddv-button-download                                         | Download image file to local.
 
-## Common
+<div class="multi-panel-end"></div>
+
+<div class="multi-panel-start"></div>
 
 The following list shows the common elements which could be used within all viewer classes.
 
@@ -111,3 +125,7 @@ Besides, three designed icons are provided and can be used if you want to add th
 | Close            | ddv-button-close
 | Done             | ddv-button-done
 | Back             | ddv-button-back
+
+<div class="multi-panel-end"></div>
+
+<div class="multi-panel-switching-end"></div>

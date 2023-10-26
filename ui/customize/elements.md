@@ -28,10 +28,16 @@ To change the style and icon of the default elements, can use the properties `st
 
 **Example**
 
-Change backgroud and icon of `DDV.`
+Change style and icon of `DDV.Elements.DeleteCurrent`.
 
 ```typescript
-
+{
+    type: DDV.Elements.DeleteCurrent,
+    className: "ddv-button-done", // can change its icon to your own one
+    style: {
+        background: "blue", // change its background color
+    },
+};
 ```
 
 <div class="multi-panel-end"></div>
@@ -45,19 +51,50 @@ Most of default elements have their own event, you may need to add new event(s) 
 Add an event to `DDV.Elements.Capture`.
 
 ```typescript
+//Replace the original capture element in UiConfig with the object below.
+{
+    type: DDV.Elements.Capture,
+    events: {
+        click: "myClick";
+    },
+};
 
+/*
+const uiConfig = {......};
+*/
+
+//Bind the event in the specified viewer.
+const captureViewer = new DDV.CaptureViewer({
+        containerId: "viewer",
+        uiConfig: uiConfig,
+});
+captureViewer.on("myClick", (e) => {
+            console.log("captured");
+});
 ```
 
 <div class="multi-panel-end"></div>
 
 <div class="multi-panel-start"></div>
 
-DDV does not provide the default tooptips to the default elements, developers can configure it by use `getTooltip()` and `setTooltip()` easily.
+DDV does not provide the default tooptips to the default elements, developers can configure it by use `getTooltip()` and `setTooltip()` easily. 
+
+>It must be set before creating the viewer.
 
 **Example**
 
-```typescript
+Add tooltips to `DDV.Elements.RotateLeft` and `DDV.Elements.RotateRight`.
 
+```typescript
+const newTooltip = DDV.Elements.getTooltip();
+newTooltip.RotateLeft = "Rotate left";
+newTooltip.RotateRight = "Rotate right";
+
+DDV.Elements.setTooltip(newTooltip);
+
+const editViewer = new DDV.EditViewer({
+    containerId: "viewer", 
+});
 ```
 
 <div class="multi-panel-end"></div>
@@ -65,6 +102,8 @@ DDV does not provide the default tooptips to the default elements, developers ca
 <div class="multi-panel-start"></div>
 
 If any accompanying display texts are required to add or change of the default elements, DDV provides the methods `getDisplayTextConfig()` and `setDisplayTextConfig()` for this requirement. 
+
+>It must be set before creating the viewer.
 
 **Example**
 
@@ -83,7 +122,7 @@ If any accompanying display texts are required to add or change of the default e
     });
     ```
 
-- Add display texts to default elements.
+- Add display texts to default elements, take `DDV.Elements.Pan` as an example.
 
     ![Add display text](/assets/imgs/adddistext.png)
 
@@ -97,7 +136,7 @@ If any accompanying display texts are required to add or change of the default e
     });
     ```
 
-- Change the position of the new-added display text relative to the icon. The default position of display text is on the right of the icon.
+- Change the position of the new-added display text relative to the icon. The default position of display text is on the right of the icon. 
 
     ![Change position of display text](/assets/imgs/positiondistext.png)
 
@@ -184,3 +223,5 @@ Besides the default elements, you may need to create your own button to call oth
         }
      );
     ```
+
+![Create custom button](/assets/imgs/custombutton.png)
