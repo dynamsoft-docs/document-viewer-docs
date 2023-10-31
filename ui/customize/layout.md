@@ -4,7 +4,7 @@ needAutoGenerateSidebar: true
 noTitleIndex: true
 title: Dynamsoft Document Viewer User Interface - Customize Layout
 keywords: Documentation, Dynamsoft Document Viewer, User Interface, Customize Layout
-breadcrumbText: Default Elements
+breadcrumbText: Customize Layout
 description: Dynamsoft Document Viewer Documentation User Interface How to Customize Layout 
 permalink: /ui/customize/layout.html
 ---
@@ -13,7 +13,7 @@ permalink: /ui/customize/layout.html
 
 The default UI provided by DDV is basically a top-down layout. Taking the default desktop UI of EditViewer as an example, the header serves as the toolbar, and the main view is located below the toolbar.
 
-[screenshot here]
+![Header & main view](/assets/imgs/cuslayoutbefore.png)
 
 ## Based on the default layout
 
@@ -79,6 +79,8 @@ Without changing the toolbar, only changing the relative position of the toolbar
         uiConfig: newUiConfig,
     });
     ```
+
+![Reverse header and main view](/assets/imgs/cusrevafter.png)
 <!-- ### Method two: Update UI dynamically after creating the edit viewer.
 
 - **Step one**: Get current UiConfig by using method [`getUiConfig()`]().
@@ -148,5 +150,5 @@ const editViewer = new DDV.EditViewer({
 
 Then you will get a viewer which is shown as below.
 
-[screenshot image]
+![Change toolbar to a sidebar](/assets/imgs/cussidebar.png)
 

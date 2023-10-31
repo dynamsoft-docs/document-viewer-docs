@@ -4,7 +4,7 @@ needAutoGenerateSidebar: true
 noTitleIndex: true
 title: Dynamsoft Document Viewer User Interface - Customize
 keywords: Documentation, Dynamsoft Document Viewer, User Interface, Customize 
-breadcrumbText: Default Elements
+breadcrumbText: How to Customize UI
 description: Dynamsoft Document Viewer Documentation User Interface How to Customize 
 permalink: /ui/customize/index.html
 ---

@@ -4,7 +4,7 @@ needAutoGenerateSidebar: true
 noTitleIndex: true
 title: Dynamsoft Document Viewer User Interface - Default Elements
 keywords: Documentation, Dynamsoft Document Viewer, User Interface, Default Elements
-breadcrumbText: Default Elements
+breadcrumbText: Default User Interface
 description: Dynamsoft Document Viewer Documentation User Interface Default Elements part
 permalink: /ui/default_ui.html
 ---
