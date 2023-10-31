@@ -1,6 +1,8 @@
 tree_file_list:
-  - sidelist-apis.html
-  - sidelist-ui.html
-  - sidelist-full-tree.html
-  - sidelist-gettingstarted.html
   - sidelist-introduction.html
+  - sidelist-gettingstarted.html
+  - sidelist-ui.html
+  - sidelist-apis.html
+  - sidelist-full-tree.html
+
+
