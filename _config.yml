@@ -5,8 +5,10 @@ firstLevelUrl: /document-viewer/docs
 docHomePage: /document-viewer/docs/
 
 introduction: /document-viewer/docs/introduction/
+gettingstarted: /document-viewer/docs/gettingstarted/
 ui: /document-viewer/docs/ui/
 api: /document-viewer/docs/api/
+
 license: /document-viewer/docs/license/
 
 javascript: /document-viewer/docs/programming/javascript/
