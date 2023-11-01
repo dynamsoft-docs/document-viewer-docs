@@ -8,13 +8,9 @@ introduction: /document-viewer/docs/introduction/
 gettingstarted: /document-viewer/docs/gettingstarted/
 ui: /document-viewer/docs/ui/
 api: /document-viewer/docs/api/
+viewer: /document-viewer/docs/viewer/
 
 license: /document-viewer/docs/license/
-
-javascript: /document-viewer/docs/programming/javascript/
-javascript_api: /document-viewer/docs/programming/javascript/api-reference/
-javascript_release_notes: /document-viewer/docs/programming/javascript/release-notes/
-javascript_user_guide: /document-viewer/docs/programming/javascript/user-guide/
 
 enumerations: /document-viewer/docs/programming/enumerations/
 parameters_reference: /document-viewer/docs/parameters/reference/
