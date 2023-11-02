@@ -47,7 +47,7 @@ DDV will provide the default viewerConfig for each viewer, developers can custom
 <div class="multi-panel-switching-prefix"></div>
 
 - [Edit viewer](#editviewerconfig)
-- [Thumbnail](#)
+- [Thumbnail](#thumbnailconfig)
 - [Capture viewer](#capture-viewer)
 - [Perspective viewer](#perspective-viewer)
 - [Browse viewer](#browse-viewer)
