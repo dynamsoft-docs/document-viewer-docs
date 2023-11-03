@@ -26,27 +26,27 @@ Although DDV provides many default elements, some customizations are also requir
 
 To change the style and icon of the default elements, can use the properties `style` and `className` of `UiConfig`, please refer to the example below.
 
-**Example**
+**Use case**
 
-Change style and icon of `DDV.Elements.DeleteCurrent`.
+- Change style and icon of `DDV.Elements.DeleteCurrent`.
 
-```typescript
-{
-    type: DDV.Elements.DeleteCurrent,
-    className: "ddv-button-done", // can change its icon to your own one
-    style: {
-        background: "blue", // change its background color
-    },
-};
-```
+    ```typescript
+    {
+        type: DDV.Elements.DeleteCurrent,
+        className: "ddv-button-done", // can change its icon to your own one
+        style: {
+            background: "blue", // change its background color
+        },
+    };
+    ```
 
 <div class="multi-panel-end"></div>
 
 <div class="multi-panel-start"></div>
 
-Most of default elements have their own event, you may need to add new event(s) to them, can refer to below steps.
+Most of default elements have their own event, you may need to add new event(s) to them.
 
-**Example**
+**Use case**
 
 Add an event to `DDV.Elements.Capture`.
 
@@ -81,7 +81,7 @@ DDV does not provide the default tooptips to the default elements, developers ca
 
 >It must be set before creating the viewer.
 
-**Example**
+**Use case**
 
 Add tooltips to `DDV.Elements.RotateLeft` and `DDV.Elements.RotateRight`.
 
@@ -105,7 +105,7 @@ If any accompanying display texts are required to add or change of the default e
 
 >It must be set before creating the viewer.
 
-**Example**
+**Use cases**
 
 - Change display texts which are in `DDV.Elements.DisplayMode`.
 
