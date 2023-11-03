@@ -42,7 +42,7 @@ interface EditViewerConfig {
 
 ## Default viewerConfig
 
-DDV will provide the default viewerConfig for each viewer, developers can customize it to achieve their own requirement. Please refer to How to customize.
+DDV will provide the default viewerConfig for each viewer.
 
 <div class="multi-panel-switching-prefix"></div>
 
@@ -87,8 +87,6 @@ DDV will provide the default viewerConfig for each viewer, developers can custom
     scrollToLatest: false,
 };
 ```
-
-### 
 
 <div class="multi-panel-end"></div>
 
@@ -362,6 +360,8 @@ DDV will provide the default viewerConfig for each viewer, developers can custom
 <div class="multi-panel-end"></div>
 
 <div class="multi-panel-switching-end"></div>
+
+Developers can customize it to achieve their own requirement. Please refer to [How to customize]().
 
 <!-- <div class="multi-panel-switching-prefix"></div>
 
