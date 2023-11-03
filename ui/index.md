@@ -1,7 +1,13 @@
-
-
-
-
+---
+layout: default-layout
+needAutoGenerateSidebar: true
+noTitleIndex: true
+title: Dynamsoft Document Viewer User Interface
+keywords: Documentation, Dynamsoft Document Viewer, User Interface
+breadcrumbText: User Interface
+description: Dynamsoft Document Viewer Documentation User Interface
+permalink: /ui/index.html
+---
 
 
 - [User Interface]({{ site.ui }}index.html)
