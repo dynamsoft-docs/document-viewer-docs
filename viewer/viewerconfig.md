@@ -67,24 +67,24 @@ DDV will provide the default viewerConfig for each viewer, developers can custom
         background: "#fff",
     },
     quadSelectionStyle: {
-        // Style of the selection lines & background
+        // LineStyle
         border: "2px solid #fe8e14",
         background: "rgba(255,255,255,0)",
-        // Style of the selection control points
+        // PointStyle
         ctrlBorderRadius: "50%",
         ctrlBackground: "#fe8e14",
         ctrlBorder: "2px solid #fe8e14",
         ctrlWidth: "10px",
         ctrlHeight: "10px",
-        // Style when selection is invalid
+        // invalidStyle
         invalidCtrlBorderColor: "red",
         invalidBorderColor: "red",
     },
-    enableSlide: true,
-    scrollToLatest: false,
-    scrollDirection: "vertical",
     minZoom: 0.01,
     maxZoom: 128,
+    scrollDirection: "vertical",
+    enableSlide: true,
+    scrollToLatest: false,
 };
 ```
 
@@ -209,7 +209,7 @@ DDV will provide the default viewerConfig for each viewer, developers can custom
         translateX: "-50%",
     },
     checkboxStyle: {
-        visibility: "hidden",
+        visibility: "visible",
         width: "16px",
         height: "16px",
         background: "#fff",
@@ -254,7 +254,6 @@ DDV will provide the default viewerConfig for each viewer, developers can custom
     enableTorch: false,
     maxFrameNumber: 10,
     acceptedPolygonConfidence: 80,
-    captureMode: "multipleDocuments",
 };
 ```
 
@@ -342,7 +341,7 @@ DDV will provide the default viewerConfig for each viewer, developers can custom
         translateX: "-50%",
     },
     checkboxStyle: {
-        visibility: "hidden",
+        visibility: "visible",
         width: "16px",
         height: "16px",
         background: "#fff",
