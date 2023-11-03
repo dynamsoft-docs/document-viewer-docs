@@ -256,8 +256,8 @@ Default UiConfig:
             className: "ddv-perspective-viewer-header-desktop",
             children: [
                 DDV.Elements.ResetQuad,
-                DDV.Elements.RotateRight,
                 DDV.Elements.RotateLeft,
+                DDV.Elements.RotateRight,
                 DDV.Elements.DeleteCurrent,
                 DDV.Elements.DeleteAll,
                 {
