@@ -17,8 +17,78 @@ ViewerConfig contains two parts of configuration, one is the configuration on th
 
 ## Viewer Style
 
-Take edit viewer as example, according to the structure EditViewerConfig, there are three styles which can be configured, `canvasStyle`, `pageStyle` and `quadSelectionStyle`.
+### Customize styles while creating a viewer
 
-If you want to customize `pageStyle` while creating an edit viewer, you can follow the steps below.
+Take the edit viewer as example, according to the structure `EditViewerConfig`, there are three styles which can be configured, `canvasStyle`, `pageStyle` and `quadSelectionStyle`.
 
-Step one 
+**Use case**
+
+Customize `pageStyle` while creating an edit viewer.
+ 
+ - Step one: Create a `BaseStyle` object which meets the page style you want.
+    ```typescript
+    const newPageStyle = {
+        border: "2px dashed red",
+        background: "grey",
+    };
+    ```
+
+ - Step two: Create the customized viewer config.
+    ```typescript
+    const newViewerConfig = {
+        pageStyle: newPageStyle,
+    };
+    ```
+
+ - Step three: Configure the customized viewer config while creating the edti viewer.
+    ```typescript
+    const editViewer = new DDV.EditViewer({
+        containerId: "viewer",
+        viewerConfig: newViewerConfig,
+    });
+    ```
+
+Please notice that only the customized style will be modified, and the remaining styles will remain in their default state.
+
+### Update styles dynamically
+
+Besides customize the initial viewer style, DDV also allows update the styles dynamically after the viewer is created by using `getStyle()` & `updateStyle()`.
+
+**Use case**
+
+Update the `CanvasStyle` after the edit viewer is created.
+
+```typescript
+const editViewer = new DDV.EditViewer({
+    containerId: "viewer",
+});
+
+const newCanvasStyle = editViewer.getStyle("canvasStyle");
+newCanvasStyle.border = "2px dashed green";
+newCanvasStyle.background = "white";
+newCanvasStyle.cursor = "pointer";
+
+editViewer.updateStyle("canvasStyle", newCanvasStyle);
+```
+
+## Viewer properties
+
+Some properties can also customized, for example, the values of `minZoom` and `maxZoom` can be customized for a edit viewer.
+
+**Use case**
+
+Customize the `minZoom` and `maxZoom` while creating an edit viewer.
+
+```typescript
+const newViewerConfig = {
+    minZoom: 0.1, // Set the minimum zoom value to 10%
+    maxZoom: 64,  // Set the maximum zoom value to 6400%
+};
+
+const editViewer = new DDV.EditViewer({
+    containerId: "viewer",
+    viewerConfig: newViewerConfig,
+});
+```
+
+Please notice that only the customized properties will be modified, and the remaining properties will remain in their default state.
