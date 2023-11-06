@@ -1,9 +1,12 @@
 ---
 layout: default-layout
+needAutoGenerateSidebar: true
+noTitleIndex: true
 title: Dynamsoft Document Viewer - Introduction
-keywords: introduction, documentation
-description: Dynamsoft Document Viewer - Introduction
-noTitleIndex: false
+keywords: Documentation, Dynamsoft Document Viewer, Introduction
+breadcrumbText: Introduction
+description: Dynamsoft Document Viewer Documentation Introduction
+permalink: /introduction/index.html
 ---
 
 # Introduction to Dynamsoft Document Viewer
