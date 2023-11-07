@@ -32,7 +32,7 @@ interface UiConfig {
 
 ## How to configure
 
-Take the default mobile edit viewer as the example to learn how UiConfig is configured.
+Take the mobile edit viewer below as the example to learn how UiConfig is configured.
 
 ![EditViewer mobile UiConfig](/assets/imgs/editmuiconfig.png)
 
@@ -100,7 +100,7 @@ Also can know the footerUiConfig is as follows,
 Combining these three parts creates the overall user interface layout.
 
 ```typescript
-const mobileEditViewerUiConfig: UiConfig = {
+const mobileEditViewerUiConfig = {
     type: DDV.Elements.Layout,
     flexDirection: "column",
     className: "ddv-edit-viewer-mobile",
