@@ -279,8 +279,8 @@ DDV will provide the default viewerConfig for each viewer.
         ctrlBorderRadius: "50%",
         ctrlBackground: "#fe8e14",
         ctrlBorder: "2px solid #fe8e14",
-        ctrlWidth: "10px",
-        ctrlHeight: "10px",
+        ctrlWidth: "15px",
+        ctrlHeight: "15px",
         // invalidStyle
         invalidCtrlBorderColor: "red",
         invalidBorderColor: "red",
