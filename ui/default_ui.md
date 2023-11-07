@@ -38,7 +38,7 @@ Default UiConfig:
             type: DDV.Elements.Layout,
             className: "ddv-edit-viewer-header-mobile",
             children: [
-                DDV.Elements.ThumbnailSwitch,
+                DDV.Elements.Blank,
                 DDV.Elements.Pagination,
                 DDV.Elements.Download,
             ],
