@@ -9,6 +9,8 @@ description: Dynamsoft Document Viewer Documentation User Interface
 permalink: /ui/index.html
 ---
 
+# User Interface
+
 
 - [User Interface]({{ site.ui }}index.html)
     - [UiConfig]({{ site.ui }}uiconfig.html)
