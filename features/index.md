@@ -16,7 +16,7 @@ Generally, the features of DDV can be divided to two parts as below.
 - Data management
 - Viewers
 
-# Document Management
+# Data Management
 
 Data management is to manage the data which are imported into DDV. 
 

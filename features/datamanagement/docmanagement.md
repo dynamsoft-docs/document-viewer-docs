@@ -6,7 +6,7 @@ title: Dynamsoft Document Viewer Features - Document Management
 keywords: Documentation, Dynamsoft Document Viewer, Features, Document Management
 breadcrumbText: Document Management
 description: Dynamsoft Document Viewer Documentation Features, Document Management
-permalink: /feature/docmanagement.html
+permalink: /features/datamanagement/docmanagement.html
 ---
 
 # Document Management
