@@ -16,7 +16,7 @@ Generally, the features of DDV can be divided to two parts as below.
 - Data management
 - Viewers
 
-# Data Management
+## Data Management
 
 Data management is to manage the data which are imported into DDV. 
 
@@ -34,7 +34,7 @@ So manage data is to manage documents and pages.
 - Page management
 
 
-# Viewers
+## Viewers
 
 Viewers are used to display the data. According to the different uses of viewers, DDV provides five different viewer types, which are implemented through five viewer classes.
 
