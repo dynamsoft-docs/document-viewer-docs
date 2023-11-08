@@ -9,6 +9,8 @@ description: Dynamsoft Document Viewer Documentation User Interface How to Custo
 permalink: /ui/customize/index.html
 ---
 
+# How to Customize user interface
+
 In actual scenarios, the default UI may not meet all requirements. Developers will want to be able to customize the UI, whether it is based on the default UI or reorganizing the layout and buttons. This chapter will explain in detail how to simply customize the UI in DDV.
 
 - [How to customize UI]({{ site.ui }}customize/index.html)
