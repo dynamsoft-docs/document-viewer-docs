@@ -6,5 +6,5 @@ title: Dynamsoft Document Viewer Features - Page Management
 keywords: Documentation, Dynamsoft Document Viewer, Features, Page Management
 breadcrumbText: Document Management
 description: Dynamsoft Document Viewer Documentation Features, Page Management
-permalink: /feature/pagemanagement.html
+permalink: /features/datamanagement/pagemanagement.html
 ---
