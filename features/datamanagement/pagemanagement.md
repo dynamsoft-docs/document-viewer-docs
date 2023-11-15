@@ -11,7 +11,7 @@ permalink: /features/datamanagement/pagemanagement.html
 
 # Page Management
 
-
+DDV is using `Interface IDocument` to manage the page data. 
 
 
 ## Load pages
@@ -36,7 +36,7 @@ permalink: /features/datamanagement/pagemanagement.html
     await firstDoc.loadSource(blob);
     ```
 
-- Load a image file and insert it into the specified order
+- Load a image file and insert it into the specified order if there are pages in the document.
 
     ```typescript
     var blob = /*Sample image blob*/;
@@ -47,7 +47,12 @@ permalink: /features/datamanagement/pagemanagement.html
 
 - Load multiple files at one time
 
-- Load a PDF file
+    ```typescript
+    var blobs = /*Sample image blob array*/;
+    await firstDoc.loadSource(blobs);
+    ```
+
+- Load a PDF file by using PDFSource
 
 
 
@@ -98,18 +103,40 @@ permalink: /features/datamanagement/pagemanagement.html
 
 - Save page(s) as a PDF file
 
+    ```typescript
+    
+    ```
+
 ## Move or switch pages
 
 **Use case**
 
 - Move pages to the specified order
 
+    ```typescript
+    // Move the second, fourth, sixth pages to the begining of the doc. 
+    // The moved pages are in (original sixth, fourth, second) order.
+    firstDoc.movePages([5,3,1], 0);
+    ```
+
+    ![Move pages-1](/assets/imgs/movepages-1.png)
+
 - Move pages to the end
 
-- Switch the order of the first page and third page 
+    ```typescript
+    // Move the first and second page to the end of the doc.
+    firstDoc.movePages([0,1]);
+    ```
+  ![Move pages-2](/assets/imgs/movepages-2.png)
 
+- Switch the order of two pages
 
-## Update page data
+    ```typescript
+    // Switch the order of the first page and third page 
+    firstDoc.switchPage(0,3);
+    ```
+
+## Get/update page data
 
 ## Set/get custom data to page
 
@@ -119,6 +146,15 @@ permalink: /features/datamanagement/pagemanagement.html
 
 - Delete specified page(s)
 
+    ```typescript
+    // Delete the second and third pages
+    firstDoc.deletePages([1,2]);
+    ```
+
 - Delete all pages
+
+    ```typescript
+    firstDoc.deleteAllPages();
+    ```
 
 

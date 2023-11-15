@@ -11,7 +11,7 @@ permalink: /features/datamanagement/docmanagement.html
 
 # Document Management
 
-DDV manages document data through the DocumentManager class, which can implement functions such as creating, deleting, and merging documents.
+DDV manages document data through the [`DocumentManager`]() class, which can implement functions such as creating, deleting, and merging documents.
 
 The `Dynamsoft.DDV.documentManager` instance will be created automatically as soon as DDV is initialized.
 
@@ -127,3 +127,5 @@ Use `deleteDocuments()` and `deleteAllDocuments()` methods to delete the existin
 
 ## References
 
+- `DocumentManage Class`
+- `Interface IDocument`
