@@ -1,6 +1,7 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 noTitleIndex: true
 title: Dynamsoft Document Viewer Features
 keywords: Documentation, Dynamsoft Document Viewer, Features
