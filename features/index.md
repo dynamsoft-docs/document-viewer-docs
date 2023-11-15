@@ -33,6 +33,7 @@ So manage data is to manage documents and pages.
 - Document management
 - Page management
 
+Actually, if you are using the default UI of DDV, the data management has been done internally.
 
 ## Viewers
 
