@@ -1,6 +1,7 @@
 ---
 layout: default-layout
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 noTitleIndex: true
 title: Dynamsoft Document Viewer User Interface - Default Elements
 keywords: Documentation, Dynamsoft Document Viewer, User Interface, Default Elements
