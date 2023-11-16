@@ -468,7 +468,7 @@ type ToolMode = "pan" | "crop";
 
 `crop`: A mode what allows to draw a rectangle by [`setCropRect()`](#setcroprect).
 
-**Example**
+**Code Snippet**
 
 ```typescript
 editViewer.toolMode = "crop";
@@ -502,7 +502,7 @@ openDocument(docUid: string): void;
 
 `docUid`: The uid of the specified document.
 
-**Example**
+**Code Snippet**
 
 ```typescript
 // Assume there is a document whose id is "lnn0ll9o124".
@@ -542,7 +542,7 @@ closeDocument(): boolean;
 
 `false`: Failed.
 
-**Example**
+**Code Snippet**
 
 ```typescript
 editViewer.closeDocument();
@@ -564,7 +564,7 @@ Return the object of the current document.
 readonly currentDocument: IDocument | null;
 ```
 
-**Example**
+**Code Snippet**
 
 ```typescript
 const currentDoc = editViewer.currentDocument;
@@ -588,7 +588,7 @@ getPageCount(): number;
 
 The page count.
 
-**Example**
+**Code Snippet**
 
 ```typescript
 const pageCount = editViewer.getPageCount();
@@ -618,7 +618,7 @@ goToPage(index: number): number;
 
 The index of the page which navigate to.
 
-**Example**
+**Code Snippet**
 
 ```typescript
 // Navigate to page 4.
@@ -649,7 +649,7 @@ getCurrentPageIndex(): number;
 
 The index of the current page.
 
-**Example**
+**Code Snippet**
 
 ```typescript
 const currentIndex = editViewer.getCurrentPageIndex();
@@ -676,7 +676,7 @@ getCurrentPageUid(): string;
 
 The uid of the current page.
 
-**Example**
+**Code Snippet**
 
 ```typescript
 const curPageUid = editViewer.getCurrentPageUid();
@@ -707,7 +707,7 @@ indexToUid(index: number): string;
 
 The uid of the page.
 
-**Example**
+**Code Snippet**
 
 ```typescript
 // Get the first page's uid
@@ -742,7 +742,7 @@ uidToIndex(pageUid: string): number;
 
 The index of the page.
 
-**Example**
+**Code Snippet**
 
 ```typescript
 const curPageUid = editViewer.getCurrentPageUid();
@@ -759,7 +759,7 @@ editViewer.uidToIndex(curPageUid);
  -80304 | No document opened.                                      | `-1`
  -80305 | There is no image in the current document.               | `-1`
 
-### Display Control
+## Display Control
 
 ### displayMode
 
@@ -781,7 +781,7 @@ type DisplayMode = "single" | "continuous";
 
 `continuous`: The pages in the viewer is displayed continuously.
 
-**Example**
+**Code Snippet**
 
 ```typescript
 editViewer.displayMode = "single";
@@ -818,7 +818,7 @@ setParallelScrollCount(count: number): boolean;
 
 `false`: Failed.
 
-**Example**
+**Code Snippet**
 
 ```typescript
 // Set three pages to scroll in parallel
@@ -862,7 +862,7 @@ type FitMode = "width" | "height" | "window" | "actualSize";
 
 `actualSize`: The page is displayed at its actual size, equal to [`zoom`](#zoom) set to 1.
 
-**Example**
+**Code Snippet**
 
 ```typescript
 editViewer.fitMode = "width";
@@ -890,7 +890,7 @@ Specify or return zoom ratio.
 zoom: number; 
 ```
 
-**Example**
+**Code Snippet**
 
 ```typescript
 //Actual size
@@ -927,7 +927,7 @@ Specify or return the zoom origin of the viewer.
 zoomOrigin: ZoomOrigin;
 ```
 
-**Example**
+**Code Snippet**
 
 ```typescript
 // Set the zoom origin to upper left
@@ -953,6 +953,8 @@ editViewer.zoomOrigin = newZoomOrigin;
 
 [`ZoomOrigin`]({{ site.api }}interface/zoomorigin.html)
 
+## Edit Operations
+
 ### rotate()
 
 Rotate the specified pages.
@@ -972,7 +974,7 @@ rotate(
 
 `indices`: The array of the pages indices which will be rotated. If not set, the current page will be rotated.
 
-**Example**
+**Code Snippet**
 
 ```typescript
 // Rotate the first and second pages 90 degrees clockwise.
@@ -1010,7 +1012,7 @@ crop(
 
 `indices`: Specify the indices of the pages to be cropped. If not set, the current page will be cropped.
 
-**Example**
+**Code Snippet**
 
 ```typescript
 const rect = {
@@ -1051,7 +1053,7 @@ getCropRect(): Rect | null;
 
 The rectangle selection. Please refer to [Rect]({{ site.api }}interface/rect.html).
 
-**Example**
+**Code Snippet**
 
 ```typescript
 editViewer.getCropRect();
@@ -1089,7 +1091,7 @@ setCropRect(rect: Rect): boolean;
 
 `false`: Failed.
 
-**Example**
+**Code Snippet**
 
 ```typescript
 editViewer.toolMode = "crop"; // Set toolMode to "crop"
@@ -1138,7 +1140,7 @@ undo(): boolean;
 
 `false`: Failed.
 
-**Example**
+**Code Snippet**
 
 ```typescript
 editViewer.undo();
@@ -1169,7 +1171,7 @@ redo(): boolean;
 
 `false`: Failed.
 
-**Example**
+**Code Snippet**
 
 ```typescript
 editViewer.redo();
@@ -1200,7 +1202,7 @@ saveOperations(): boolean;
 
 `false`: Failed.
 
-**Example**
+**Code Snippet**
 
 ```typescript
 editViewer.saveOperations();
@@ -1230,7 +1232,7 @@ on(eventName: EventName, listener:(event:EventObject)=>void): void;
 
 `listener`: Specify the listener.
 
-**Example**
+**Code Snippet**
 
 ```typescript
 // Bind a listener to the integrated event.
@@ -1267,7 +1269,7 @@ off(eventName: EventName, listener?:(event:EventObject)=>void): void;
 
 `listener`: Specify the listener. If no listener is specified, unbind all event listeners from the specified event
 
-**Example**
+**Code Snippet**
 
 ```typescript
 const eventFunc = (e)=>{
@@ -1295,11 +1297,11 @@ editViewer.off("resized", eventFunc);
 
 Triggered when the viewer is resized.
 
-***Callback***
+**Callback**
 
  `ResizedEvent`: An EventObject.
 
-***Attributes***
+**Attributes**
 
 `oldWidth`: The old width of the viewer.
 
@@ -1313,11 +1315,11 @@ Triggered when the viewer is resized.
 
 Triggered when a page has been completely rendered. We only render the pages that are visible on the screen, so this event won't get fired for every page in the document at once. This event will get called when the user scrolls up and down the document, or when a page is zoomed or rotated, or anything else that makes it rerender.
 
-***Callback***
+**Callback**
 
  `PageRenderedEvent`: An EventObject.
 
-***Attributes***
+**Attributes**
 
 `index`: The index of the rendered page.
 
@@ -1327,11 +1329,11 @@ Triggered when a page has been completely rendered. We only render the pages tha
 
 Triggered when currentIndex is changed.
 
-***Callback***
+**Callback**
 
  `CurrentindexChangedEvent`: An EventObject.
 
-***Attributes***
+**Attributes**
 
 `oldIndex`: The old current index.
 
@@ -1341,11 +1343,11 @@ Triggered when currentIndex is changed.
 
 Triggered when current page is changed.
 
-***Callback***
+**Callback**
 
  `CurrentPageChangedEvent`: An EventObject.
 
-***Attributes***
+**Attributes**
 
 `oldPageUid`: The uid of the page which is old current index. If the old page is removed, return `''`.
 
@@ -1355,11 +1357,11 @@ Triggered when current page is changed.
 
 Triggered when the display mode is changed.
 
-***Callback***
+**Callback**
 
  `DisplayModeChangedEvent`: An EventObject.
 
-***Attributes***
+**Attributes**
 
 `oldDisplayMode`: The old display mode.
 
@@ -1369,11 +1371,11 @@ Triggered when the display mode is changed.
 
 Triggered when the fit mode has changed.
 
-***Callback***
+**Callback**
 
  `FitModeChangedEvent`: An EventObject.
 
-***Attributes***
+**Attributes**
 
 `oldFitMode`: The old fit mode.
 
@@ -1383,11 +1385,11 @@ Triggered when the fit mode has changed.
 
 Triggered when the zoom ratio has been changed.
 
-***Callback***
+**Callback**
 
  `ZoomChangedEvent`: An EventObject.
 
-***Attributes***
+**Attributes**
 
 `oldZoomRatio`: The old zoom ratio.
 
@@ -1397,11 +1399,11 @@ Triggered when the zoom ratio has been changed.
 
 Triggered when the tool mode has changed.
 
-***Callback***
+**Callback**
 
  `ToolModeChangedEvent`: An EventObject.
 
-***Attributes***
+**Attributes**
 
 `oldToolMode`: The old tool mode.
 
@@ -1411,11 +1413,11 @@ Triggered when the tool mode has changed.
 
 Triggered when a rectangle selection is drawn.
 
-***Callback***
+**Callback**
 
  `CropRectDrawnEvent`: An EventObject.
 
-***Attributes***
+**Attributes**
 
 `rect`: The drawn rectangle.
 
@@ -1423,11 +1425,11 @@ Triggered when a rectangle selection is drawn.
 
 Triggered when the rectangle selection is deleted.
 
-***Callback***
+**Callback**
 
  `CropRectDeletedEvent`: An EventObject.
 
-***Attributes***
+**Attributes**
 
 `rect`: The deleted rectangle.
 
@@ -1435,11 +1437,11 @@ Triggered when the rectangle selection is deleted.
 
 Triggered when the crop rectangle selection is modified.
 
-***Callback***
+**Callback**
 
  `CropRectModifiedEvent`: An EventObject.
 
-***Attributes***
+**Attributes**
 
 `oldRect`: The old rectangle.
 
@@ -1470,11 +1472,11 @@ Triggered on mobile when long tap in the viewer's viewing area. This is the equi
 Long taps are defined as pressing a mouse and holding it down for 500ms before releasing it.
 
 
-***Callback for mouse events***
+**Callback for mouse events**
 
  `VPointerEvent`: An EventObject.
 
-***Attributes***
+**Attributes**
 
 `index`: The page index.
 
