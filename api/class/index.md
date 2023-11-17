@@ -34,28 +34,28 @@ The `Dynamsoft.DDV.documentManager` instance will be created automatically as so
 
 | API Name              | Description                                               |
 | --------------------- | --------------------------------------------------------- |
-| createDocument()      | Create an empty document.                                 |
-| deleteDocuments()     | Delete the specified document(s) by the document uid(s).  |
-| deleteAllDocuments()  | Delete all documents.                                     |
-| getDocument()         | Get the specified document object with the document uid.  |
-| getAllDocuments()     | Get all documents' objects.                               |
-| mergeDocuments()      | Merge specified documents to a new document.              |
-| copyPagesToDocument() | Copy pages from a specified document to another document. |
-| movePagesToDocument() | Move pages from a specified document to another document. |
+| `createDocument()`     | Create an empty document.                                 |
+| `deleteDocuments()`     | Delete the specified document(s) by the document uid(s).  |
+| `deleteAllDocuments()`  | Delete all documents.                                     |
+| `getDocument()`         | Get the specified document object with the document uid.  |
+| `getAllDocuments()`     | Get all documents' objects.                               |
+| `mergeDocuments()`      | Merge specified documents to a new document.              |
+| `copyPagesToDocument()` | Copy pages from a specified document to another document. |
+| `movePagesToDocument()` | Move pages from a specified document to another document. |
 
 ### Events
 
 | API Name | Description                                        |
 | -------- | -------------------------------------------------- |
-| on()     | Bind a listener to the specified event.            |
-| off()    | Unbind event listener(s) from the specified event. |
+| `on()`     | Bind a listener to the specified event.            |
+| `off()`    | Unbind event listener(s) from the specified event. |
 
 | Event Name      | Description                               |
 | --------------- | ----------------------------------------- |
-| documentCreated | Triggered when a new document is created. |
-| documentDeleted | Triggered when a document is deleted.     |
-| pagesAdded      | Triggered when the page(s) are added.     |
-| pagesDeleted    | Triggered when the page(s) are deleted.   |
+| `documentCreated` | Triggered when a new document is created. |
+| `documentDeleted` | Triggered when a document is deleted.     |
+| `pagesAdded`      | Triggered when the page(s) are added.     |
+| `pagesDeleted`    | Triggered when the page(s) are deleted.   |
 
 <div class="multi-panel-end"></div>
 
@@ -67,16 +67,16 @@ The `Dynamsoft.DDV.documentManager` instance will be created automatically as so
 
 | Method       | Description                                   |
 | ------------ | --------------------------------------------- |
-| EditViewer() | Default constructor of a `EditViewer` object. |
+| `EditViewer()` | Default constructor of a `EditViewer` object. |
 
 ### Methods
 
 | API Name              | Description                                                  |
 | --------------------- | ------------------------------------------------------------ |
-| destroy()             | Destroy the `EditViewer` object.                             |
-| bindContainer()       | Bind the viewer to the specified container.                  |
-| unbindContainer()     | Unbind the viewer from the specified container.              |
-| getStyle()            | Get the style object of `EditViewer`.                        |
+| `destroy()`             | Destroy the `EditViewer` object.                             |
+| `bindContainer()`       | Bind the viewer to the specified container.                  |
+| `unbindContainer()`     | Unbind the viewer from the specified container.              |
+| `getStyle()`            | Get the style object of `EditViewer`.                        |
 | updateStyle()         | Update the style object of `EditViewer`.                     |
 | getUiConfig()         | Get current `UiConfig` object.                               |
 | updateUiConfig()      | Update `UiConfig` object.                                    |
@@ -88,8 +88,8 @@ The `Dynamsoft.DDV.documentManager` instance will be created automatically as so
 | goToPage()            | Navigate to the specified page by index.                     |
 | getCurrentPageIndex() | Get the index of current page.                               |
 | getCurrentPageUid()   | Get the uid of the current page.                             |
-| indexToUid()          | Get the uid of the page by the index.                        |
-| uidToIndex()          | Get the index of the page represented by the uid in the activated document. |
+| indexToUid()          | Get the uid of the specified page by its index.                        |
+| uidToIndex()          | Get the index of the specified page by its uid.              |
 | setRowAndColumn()     |                                                              |
 | rotate()              | Rotate the specified pages.                                  |
 | crop()                | Crop the specified page(s) with the specified rectangle.     |

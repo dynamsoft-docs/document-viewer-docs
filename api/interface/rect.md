@@ -10,7 +10,7 @@ description: Dynamsoft Document Viewer Documentation API Reference Interface Rec
 permalink: /api/interface/rect.html
 ---
 
-# `interface` Rect
+# Rect
 
 ## Syntax
 
@@ -23,7 +23,7 @@ interface Rect {
 }
 ```
 
-**Attributes**
+## Attributes
 
 - `left`: The x-coordinate of the upper-left corner of the area.
 
@@ -34,3 +34,9 @@ interface Rect {
 - `height`: The height of the rectangle area. The unit is pixel.
 
 ![Rect](/assets/imgs/rect.png)
+
+## Related APIs
+
+- [`crop()`]({{ site.api }}class/edit_viewer.html#crop)
+- [`getCropRect`]({{ site.api }}class/edit_viewer.html#getcroprect)
+- [`setCropRect`]({{ site.api }}class/edit_viewer.html#setcroprect)

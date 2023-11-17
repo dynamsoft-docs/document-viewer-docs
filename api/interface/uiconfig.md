@@ -10,7 +10,7 @@ description: Dynamsoft Document Viewer Documentation API Reference Interface UiC
 permalink: /api/interface/uiconfig.html
 ---
 
-# `interface` UiConfig
+# UiConfig
 
 ## Syntax
 
@@ -65,3 +65,20 @@ interface UiConfig {
 
 
 ### children
+
+
+## Related APIs
+
+- [`getDefaultUiConfig()`]()
+- `getUiConfig()` in 
+    - EditViewer Class
+    - CaptureViewer Class
+    - PerspectiveViewer Class
+    - BrowseViewer Class
+    - CustomViewer Class
+- `updateUiConfig()` in
+    - EditViewer Class
+    - CaptureViewer Class
+    - PerspectiveViewer Class
+    - BrowseViewer Class
+    - CustomViewer Class
