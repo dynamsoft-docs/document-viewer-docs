@@ -349,7 +349,7 @@ getUiConfig(): UiConfig;
 
 **Return Value**
 
-The [`UiConfig`]() object.
+The [`UiConfig`]({{ site.api }}interface/idocument.html) object.
 
 **Code Snippet**
 
@@ -369,7 +369,7 @@ updateUiConfig(uiConfig: UiConfig): boolean;
 
 **Parameters**
 
-`uiConfig`: The [`UiConfig`]() to update.
+`uiConfig`: The [`UiConfig`]({{ site.api }}interface/uiconfig.html) to update.
 
 **Return Value**
 
@@ -572,7 +572,7 @@ const currentDoc = editViewer.currentDocument;
 
 **See Also**
 
-[IDocument]()
+[IDocument]({{ site.api }}interface/idocument.html)
 
 ### getPageCount()
 

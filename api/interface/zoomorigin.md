@@ -1,0 +1,39 @@
+---
+layout: default-layout
+needAutoGenerateSidebar: true
+needGenerateH3Content: true
+noTitleIndex: true
+title: Dynamsoft Document Viewer API Reference - Interface ZoomOrigin
+keywords: Documentation, Dynamsoft Document Viewer, API Reference, Interface ZoomOrigin
+breadcrumbText: Interface ZoomOrigin
+description: Dynamsoft Document Viewer Documentation API Reference Interface ZoomOrigin Page
+permalink: /api/interface/zoomorigin.html
+---
+
+# `interface` ZoomOrigin
+
+## Syntax
+
+```typescript
+interface ZoomOrigin {
+    x: string; //x-coordinate. Default is "center", values: "start", "center", "end". 
+    y: string; //y-coordinate. Default is "center", values: "start", "center", "end". 
+}
+```
+
+## Attributes
+
+- `x`: Specify the origin of x-coordinate.
+
+    Supported value: `center`, `start`, `end`
+
+    Default value: `center`
+
+- `y`: Specify the origin of y-coordinate.
+
+    Supported value: `center`, `start`, `end`
+    
+    Default value: `center`
+
+
+![Zoom Origin](/assets/imgs/zoomorigin.png)    
