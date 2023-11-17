@@ -157,8 +157,8 @@ The `Dynamsoft.DDV.documentManager` instance will be created automatically as so
 | destroy()              | Destroy the `CaptureViewer` object.                          |
 | bindContainer()        | Bind the viewer to the specified container.                  |
 | unbindContainer()      | Unbind the viewer from the specified container.              |
-| getStyle()             | Get the style object of `EditViewer`.                        |
-| updateStyle()          | Update the style object of `EditViewer`.                     |
+| getStyle()             | Get the style object of `CaptureViewer`.                        |
+| updateStyle()          | Update the style object of `CaptureViewer`.                     |
 | getUiConfig()          | Get current `UiConfig` object.                               |
 | updateUiConfig()       | Update `UiConfig` object.                                    |
 | show()                 | Show the viewer.                                             |
@@ -226,8 +226,8 @@ The `Dynamsoft.DDV.documentManager` instance will be created automatically as so
 | destroy()             | Destroy the `PerspectiveViewer` object.                      |
 | bindContainer()       | Bind the viewer to the specified container.                  |
 | unbindContainer()     | Unbind the viewer from the specified container.              |
-| getStyle()            | Get the style object of `EditViewer`.                        |
-| updateStyle()         | Update the style object of `EditViewer`.                     |
+| getStyle()            | Get the style object of `PerspectiveViewer`.                        |
+| updateStyle()         | Update the style object of `PerspectiveViewer`.                     |
 | getUiConfig()         | Get current `UiConfig` object.                               |
 | updateUiConfig()      | Update `UiConfig` object.                                    |
 | show()                | Show the viewer.                                             |
@@ -294,8 +294,8 @@ The `Dynamsoft.DDV.documentManager` instance will be created automatically as so
 | destroy()                | Destroy the `BrowseViewer` object.                           |
 | bindContainer()          | Bind the viewer to the specified container.                  |
 | unbindContainer()        | Unbind the viewer from the specified container.              |
-| getStyle()               | Get the style object of `EditViewer`.                        |
-| updateStyle()            | Update the style object of `EditViewer`.                     |
+| getStyle()               | Get the style object of `BrowseViewer`.                        |
+| updateStyle()            | Update the style object of `BrowseViewer`.                     |
 | getUiConfig()            | Get current `UiConfig` object.                               |
 | updateUiConfig()         | Update `UiConfig` object.                                    |
 | show()                   | Show the viewer.                                             |

@@ -26,12 +26,12 @@ interface EditViewerConstructorOptions {
 
 ## Attributes
 
-- `container`: The container which is used to show the viewer.
+- `container`: The container which is used to show the viewer. Its `id` or `HTMLElement` is acceppted.
 
-- `viewerConfig`: The configurations of viewer, please refer to [`EditViewerConfig`](). If it is not specified, the [default configuration]({{ site.viewer }}viewerconfig.html#editviewerconfig) will be applied.
+- `viewerConfig`: The configurations of viewer, please refer to [`EditViewerConfig`]({{ site.api }}interface/editviewerconfig.html). If it is not specified, the [default configuration]({{ site.viewer }}viewerconfig.html#editviewerconfig) will be applied.
 
-- `uiConfig`: The UI layout configurations of viewer, please refer to [`UiConfig`](). If it is not specified, the [default UI]({{ site.ui }}default_ui.html#edit-viewer) will be applied.
+- `uiConfig`: The UI layout configurations of viewer, please refer to [`UiConfig`]({{ site.api }}interface/uiconfig.html). If it is not specified, the [default UI]({{ site.ui }}default_ui.html#edit-viewer) will be applied.
 
-- `thumbnailConfig`: The configurations of integrated thumbnail, please refer to [`ThumbnailConfig`](). If it is not specified, the [default configuration]({{ site.viewer }}viewerconfig.html#thumbnailconfig) will be applied.
+- `thumbnailConfig`: The configurations of integrated thumbnail, please refer to [`ThumbnailConfig`]({{ site.api }}interface/thumbnailconfig.html). If it is not specified, the [default configuration]({{ site.viewer }}viewerconfig.html#thumbnailconfig) will be applied.
 
 - `groupUid`: The uid of viewers' group. Please refer to [Data synchronisation between viewers](). If it is not specified, a random groupUid will be generated.
