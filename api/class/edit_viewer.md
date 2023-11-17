@@ -349,7 +349,7 @@ getUiConfig(): UiConfig;
 
 **Return Value**
 
-The [`UiConfig`]() object.
+The [`UiConfig`]({{ site.api }}interface/idocument.html) object.
 
 **Code Snippet**
 
@@ -369,7 +369,7 @@ updateUiConfig(uiConfig: UiConfig): boolean;
 
 **Parameters**
 
-`uiConfig`: The [`UiConfig`]() to update.
+`uiConfig`: The [`UiConfig`]({{ site.api }}interface/uiconfig.html) to update.
 
 **Return Value**
 
@@ -572,7 +572,7 @@ const currentDoc = editViewer.currentDocument;
 
 **See Also**
 
-[IDocument]()
+[IDocument]({{ site.api }}interface/idocument.html)
 
 ### getPageCount()
 
@@ -974,6 +974,12 @@ rotate(
 
 `indices`: The array of the pages indices which will be rotated. If not set, the current page will be rotated.
 
+**Return Value**
+
+`true`: Successfully.
+
+`false`: Failed.
+
 **Code Snippet**
 
 ```typescript
@@ -1011,6 +1017,12 @@ crop(
 `rect`: Specify the rectangle. Please refer to [Rect]({{ site.api }}interface/rect.html).
 
 `indices`: Specify the indices of the pages to be cropped. If not set, the current page will be cropped.
+
+**Return Value**
+
+`true`: Successfully.
+
+`false`: Failed.
 
 **Code Snippet**
 
