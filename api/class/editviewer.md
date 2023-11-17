@@ -117,7 +117,7 @@ new Dynamsoft.DDV.EditViewer(options?: EditViewerConstructorOptions);
 
 **Parameters**
 
-`options`: The constructor options for an `EditViewer` object. Please refer to [`EditViewerConstructorOptions`](#editviewerconstructoroptions).
+`options`: The constructor options for an `EditViewer` object. Please refer to [`EditViewerConstructorOptions`]({{ site.api }}interface/editviewerconstructoroptions.html).
 
 **Code Snippet**
 
@@ -257,7 +257,7 @@ type EditViewerStyleName = "canvasStyle" | "pageStyle" | "quadSelectionStyle";
 
 **Return values**
 
-The style object. Please refer to [Style Interfaces]().
+The style object. Please refer to [Style Interfaces]({{ site.api }}interface/styleinterface/index.html)..
 
 **Code Snippet**
 
@@ -292,7 +292,7 @@ updateStyle(editViewerStyleName: EditViewerStyleName, editViewerStyle: EditViewe
 type EditViewerStyleName = "canvasStyle" | "pageStyle" | "quadSelectionStyle";
 ```
 
-`editViewerStyle`: The style object. Please refer to [Style Interfaces]().
+`editViewerStyle`: The style object. Please refer to [Style Interfaces]({{ site.api }}interface/styleinterface/index.html)..
 
 **Return Value**
 
@@ -436,7 +436,7 @@ hide(): void;
 editViewer.hide();
 ```
 
-## isVisible
+### isVisible
 
 Return whether the viewer is shown or hidden.
 
@@ -1281,7 +1281,7 @@ off(eventName: EventName, listener?:(event:EventObject)=>void): void;
 
 `eventName`: Specify the event name. It can be [an integrated event name](#integrated-events) or a custom event name configured through [`UiConfig`-`events`]({{ site.api }}interface/uiconfig.html#events).
 
-`listener`: Specify the listener. If no listener is specified, unbind all event listeners from the specified event
+`listener`: Specify the listener. If no listener is specified, unbind all event listeners from the specified event.
 
 **Code Snippet**
 
@@ -1313,7 +1313,7 @@ Triggered when the viewer is resized.
 
 **Callback**
 
- `ResizedEvent`: An EventObject.
+`ResizedEvent`: An EventObject.
 
 **Attributes**
 
@@ -1331,7 +1331,7 @@ Triggered when a page has been completely rendered. We only render the pages tha
 
 **Callback**
 
- `PageRenderedEvent`: An EventObject.
+`PageRenderedEvent`: An EventObject.
 
 **Attributes**
 
@@ -1343,9 +1343,9 @@ Triggered when a page has been completely rendered. We only render the pages tha
 
 Triggered when currentIndex is changed.
 
-**Callback**
+**Callback**  
 
- `CurrentindexChangedEvent`: An EventObject.
+`CurrentindexChangedEvent`: An EventObject.
 
 **Attributes**
 
@@ -1359,7 +1359,7 @@ Triggered when current page is changed.
 
 **Callback**
 
- `CurrentPageChangedEvent`: An EventObject.
+`CurrentPageChangedEvent`: An EventObject.
 
 **Attributes**
 
@@ -1373,7 +1373,7 @@ Triggered when the display mode is changed.
 
 **Callback**
 
- `DisplayModeChangedEvent`: An EventObject.
+`DisplayModeChangedEvent`: An EventObject.
 
 **Attributes**
 
@@ -1387,7 +1387,7 @@ Triggered when the fit mode has changed.
 
 **Callback**
 
- `FitModeChangedEvent`: An EventObject.
+`FitModeChangedEvent`: An EventObject.
 
 **Attributes**
 
@@ -1401,7 +1401,7 @@ Triggered when the zoom ratio has been changed.
 
 **Callback**
 
- `ZoomChangedEvent`: An EventObject.
+`ZoomChangedEvent`: An EventObject.
 
 **Attributes**
 
@@ -1415,7 +1415,7 @@ Triggered when the tool mode has changed.
 
 **Callback**
 
- `ToolModeChangedEvent`: An EventObject.
+`ToolModeChangedEvent`: An EventObject.
 
 **Attributes**
 
@@ -1429,7 +1429,7 @@ Triggered when a rectangle selection is drawn.
 
 **Callback**
 
- `CropRectDrawnEvent`: An EventObject.
+`CropRectDrawnEvent`: An EventObject.
 
 **Attributes**
 
@@ -1441,7 +1441,7 @@ Triggered when the rectangle selection is deleted.
 
 **Callback**
 
- `CropRectDeletedEvent`: An EventObject.
+`CropRectDeletedEvent`: An EventObject.
 
 **Attributes**
 
@@ -1453,7 +1453,7 @@ Triggered when the crop rectangle selection is modified.
 
 **Callback**
 
- `CropRectModifiedEvent`: An EventObject.
+`CropRectModifiedEvent`: An EventObject.
 
 **Attributes**
 
@@ -1504,4 +1504,4 @@ Long taps are defined as pressing a mouse and holding it down for 500ms before r
 
 `canvasY`: The relative x-coordinate of the click pointer on the canvas.
 
-`nativeEvent`: [PointerEvent](https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent)
+`nativeEvent`: [`PointerEvent`](https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent)

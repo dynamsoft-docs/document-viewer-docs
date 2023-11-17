@@ -65,7 +65,7 @@ createDocument(createDocumentOptions?: CreateDocumentOptions): IDocument;
 
 The object of the created document. Please refer to [`IDocument`]({{ site.api }}interface/idocument/index.html).
 
-**Example**
+**Code Snippet**
 
 ```typescript
 const firstDoc = DDV.documentManager.createDocument({
@@ -102,7 +102,7 @@ deleteDocuments(docUids: string[]): boolean;
 
 `false`: Failed.
 
-**Example**
+**Code Snippet**
 
 ```typescript
 const firstDoc = DDV.documentManager.createDocument({
@@ -140,7 +140,7 @@ deleteAllDocuments(): boolean;
 
 `false`: Failed.
 
-**Example**
+**Code Snippet**
 
 ```typescript
 DDV.documentManager.deleteAllDocuments();
@@ -164,7 +164,7 @@ getDocument(docUid: string): IDocument;
 
 The object of the specified document. Please refer to [`IDocument`]({{ site.api }}interface/idocument/index.html).
 
-**Example**
+**Code Snippet**
 
 ```typescript
 DDV.documentManager.getDocument("lnn0ll9o124");
@@ -193,7 +193,7 @@ getAllDocuments(): IDocument[];
 
 The array of all documents' objects. Please refer to [`IDocument`]({{ site.api }}interface/idocument/index.html).
 
-**Example**
+**Code Snippet**
 
 ```typescript
 DDV.documentManager.getAllDocuments();
@@ -224,7 +224,7 @@ mergeDocuments(docUids: string[], mergeDocumentOptions?: MergeDocumentOptions): 
 
 The object of the new document. Please refer to [`IDocument`]({{ site.api }}interface/idocument/index.html).
 
-**Example**
+**Code Snippet**
 
 ```typescript
 
@@ -282,7 +282,7 @@ copyPagesToDocument(sourceDocUid: string, targetDocUid: string, transferOptions?
 
 `transferOptions`: The transfer options. Please refer to [`TransferOptions`]({{ site.api }}interface/transferoptions.html).
 
-**Example**
+**Code Snippet**
 
 ```typescript
 // Copy the first and second pages of doc "lnn0ll9o124" to doc "lnn0iai110t" and put them before the first page.
@@ -321,7 +321,7 @@ movePagesToDocument(sourceDocUid: string, targetDocUid: string, transferOptions?
 
 `transferOptions`: The transfer options. Please refer to [`TransferOptions`]({{ site.api }}interface/transferoptions.html).
 
-**Example**
+**Code Snippet**
 
 ```typescript
 // Move the first and second pages of doc "lnn0ll9o124" to doc "lnn0iai110t" and put them before the first page.
