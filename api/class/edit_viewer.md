@@ -1014,7 +1014,7 @@ crop(
 ```
 **Parameters**
 
-`rect`: Specify the rectangle. Please refer to [Rect]({{ site.api }}interface/rect.html).
+`rect`: Specify the rectangle. Please refer to [`Rect`]({{ site.api }}interface/rect.html).
 
 `indices`: Specify the indices of the pages to be cropped. If not set, the current page will be cropped.
 
@@ -1063,7 +1063,7 @@ getCropRect(): Rect | null;
 
 **Return Value**
 
-The rectangle selection. Please refer to [Rect]({{ site.api }}interface/rect.html).
+The rectangle selection. Please refer to [`Rect`]({{ site.api }}interface/rect.html).
 
 **Code Snippet**
 
@@ -1095,7 +1095,7 @@ setCropRect(rect: Rect): boolean;
 
 **Parameters**
 
-`rect`: Specify the rectangle selection. Please refer to [Rect]({{ site.api }}interface/rect.html).
+`rect`: Specify the rectangle selection. Please refer to [`Rect`]({{ site.api }}interface/rect.html).
 
 **Return Value**
 

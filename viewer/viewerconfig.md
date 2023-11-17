@@ -82,7 +82,7 @@ DDV will provide the default viewerConfig for each viewer.
         invalidBorderColor: "red",
     },
     minZoom: 0.01,
-    maxZoom: 128,
+    maxZoom: 64,
     scrollDirection: "vertical",
     enableSlide: true,
     scrollToLatest: false,

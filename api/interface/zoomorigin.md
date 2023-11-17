@@ -10,7 +10,7 @@ description: Dynamsoft Document Viewer Documentation API Reference Interface Zoo
 permalink: /api/interface/zoomorigin.html
 ---
 
-# `interface` ZoomOrigin
+# ZoomOrigin
 
 ## Syntax
 
@@ -37,3 +37,7 @@ interface ZoomOrigin {
 
 
 ![Zoom Origin](/assets/imgs/zoomorigin.png)    
+
+## Related APIs
+
+- [`zoom`]({{ site.api }}class/edit_viewer.html#zoom)
