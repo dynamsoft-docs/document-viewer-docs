@@ -40,4 +40,4 @@ interface ZoomOrigin {
 
 ## Related APIs
 
-- [`zoom`]({{ site.api }}class/edit_viewer.html#zoom)
+- [`zoom`]({{ site.api }}class/editviewer.html#zoom)

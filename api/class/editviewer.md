@@ -7,7 +7,7 @@ title: Dynamsoft Document Viewer API Reference - EditViewer Class
 keywords: Documentation, Dynamsoft Document Viewer, API Reference, EditViewer Class
 breadcrumbText: EditViewer Class
 description: Dynamsoft Document Viewer Documentation API Reference EditViewer Class Page
-permalink: /api/class/edit_viewer.html
+permalink: /api/class/editviewer.html
 ---
 
 # EditViewer Class
@@ -80,6 +80,8 @@ permalink: /api/class/edit_viewer.html
 | -------- | -------------------------------------------------- |
 | [`on()`](#on)     | Bind a listener to the specified event.            |
 | [`off()`](#off)    | Unbind event listener(s) from the specified event. |
+
+***Integrated Events***
 
 | Event Name          | Description                                                  |
 | ------------------- | ------------------------------------------------------------ |
@@ -1240,14 +1242,14 @@ on(eventName: EventName, listener:(event:EventObject)=>void): void;
 
 **Parameters**
 
-`eventName`: Specify the event name. It can be [an integrated event name](#) or a custom event name configured through [`UiConfig`]({{ site.api }}interface/uiconfig.html) - `events`.
+`eventName`: Specify the event name. It can be [an integrated event name](#integrated-events) or a custom event name configured through [`UiConfig`-`events`]({{ site.api }}interface/uiconfig.html#events).
 
 `listener`: Specify the listener.
 
 **Code Snippet**
 
 ```typescript
-// Bind a listener to the integrated event.
+// Bind a listener to the integrated event resized.
 const eventFunc = (e)=>{
     console.log(e);
     console.log(e.oldWidth);
@@ -1277,7 +1279,7 @@ off(eventName: EventName, listener?:(event:EventObject)=>void): void;
 
 **Parameters**
 
-`eventName`: Specify the event name. It can be [an integrated event name](#) or a custom event name configured through [`UiConfig`]({{ site.api }}interface/uiconfig.html) - `events`.
+`eventName`: Specify the event name. It can be [an integrated event name](#integrated-events) or a custom event name configured through [`UiConfig`-`events`]({{ site.api }}interface/uiconfig.html#events).
 
 `listener`: Specify the listener. If no listener is specified, unbind all event listeners from the specified event
 
