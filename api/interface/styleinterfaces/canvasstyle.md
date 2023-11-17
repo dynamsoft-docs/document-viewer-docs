@@ -7,7 +7,7 @@ title: Dynamsoft Document Viewer API Reference - Interface CanvasStyle
 keywords: Documentation, Dynamsoft Document Viewer, API Reference, Interface CanvasStyle
 breadcrumbText: Interface CanvasStyle
 description: Dynamsoft Document Viewer Documentation API Reference Interface CanvasStyle Page
-permalink: /api/interface/styleinterfaces/canvasstyle.html
+permalink: /api/interface/styleinterface/canvasstyle.html
 ---
 
 # CanvasStyle

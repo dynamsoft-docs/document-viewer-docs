@@ -37,6 +37,6 @@ interface Rect {
 
 ## Related APIs
 
-- [`crop()`]({{ site.api }}class/edit_viewer.html#crop)
-- [`getCropRect`]({{ site.api }}class/edit_viewer.html#getcroprect)
-- [`setCropRect`]({{ site.api }}class/edit_viewer.html#setcroprect)
+- [`crop()`]({{ site.api }}class/editviewer.html#crop)
+- [`getCropRect`]({{ site.api }}class/editviewer.html#getcroprect)
+- [`setCropRect`]({{ site.api }}class/editviewer.html#setcroprect)

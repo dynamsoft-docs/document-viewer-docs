@@ -7,7 +7,7 @@ title: Dynamsoft Document Viewer API Reference - Style Interfaces
 keywords: Documentation, Dynamsoft Document Viewer, API Reference, Style Interfaces
 breadcrumbText: Style Interfaces
 description: Dynamsoft Document Viewer Documentation API Reference Style Interfaces Page
-permalink: /api/interface/styleinterfaces/index.html
+permalink: /api/interface/styleinterface/index.html
 ---
 
 # Style Interfaces

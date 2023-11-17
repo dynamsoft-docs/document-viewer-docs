@@ -7,7 +7,7 @@ title: Dynamsoft Document Viewer API Reference - Interface CheckboxStyle
 keywords: Documentation, Dynamsoft Document Viewer, API Reference, Interface CheckboxStyle
 breadcrumbText: Interface CheckboxStyle
 description: Dynamsoft Document Viewer Documentation API Reference Interface CheckboxStyle Page
-permalink: /api/interface/styleinterfaces/checkboxstyle.html
+permalink: /api/interface/styleinterface/checkboxstyle.html
 ---
 
 # CheckboxStyle

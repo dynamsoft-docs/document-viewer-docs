@@ -7,7 +7,7 @@ title: Dynamsoft Document Viewer API Reference - Interface PageNumberStyle
 keywords: Documentation, Dynamsoft Document Viewer, API Reference, Interface PageNumberStyle
 breadcrumbText: Interface PageNumberStyle
 description: Dynamsoft Document Viewer Documentation API Reference Interface PageNumberStyle Page
-permalink: /api/interface/styleinterfaces/pagenumberstyle.html
+permalink: /api/interface/styleinterface/pagenumberstyle.html
 ---
 
 # PageNumberStyle

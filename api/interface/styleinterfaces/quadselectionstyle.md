@@ -7,7 +7,7 @@ title: Dynamsoft Document Viewer API Reference - Interface QuadSelectionStyle
 keywords: Documentation, Dynamsoft Document Viewer, API Reference, Interface QuadSelectionStyle
 breadcrumbText: Interface QuadSelectionStyle
 description: Dynamsoft Document Viewer Documentation API Reference Interface QuadSelectionStyle Page
-permalink: /api/interface/styleinterfaces/quadselectionstyle.html
+permalink: /api/interface/styleinterface/quadselectionstyle.html
 ---
 
 # QuadSelectionStyle
