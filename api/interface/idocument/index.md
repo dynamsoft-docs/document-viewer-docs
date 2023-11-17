@@ -52,7 +52,7 @@ readonly name: string;
 
 **Remark**
 
-- It can be set by using ['CreateDocumentOptions']() while creating the document. If it is not set, return the name which is auto generated.
+- It can be set by using [`CreateDocumentOptions`]() while creating the document. If it is not set, return the name which is auto generated.
 
 ### author
 
@@ -66,7 +66,7 @@ readonly author: string;
 
 **Remark**
 
-It can be set by using ['CreateDocumentOptions']() while creating the document. If it is not set, return `''`.
+It can be set by using [`CreateDocumentOptions`]() while creating the document. If it is not set, return `''`.
 
 ### creationDate
 
@@ -80,7 +80,7 @@ readonly creationDate: string;
 
 **Remark**
 
-It can be set by using ['CreateDocumentOptions']() while creating the document. If it is not set, return the actual creation date of the document.
+It can be set by using [`CreateDocumentOptions`]() while creating the document. If it is not set, return the actual creation date of the document.
 
 ### uid
 
