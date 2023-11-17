@@ -20,30 +20,30 @@ The `Dynamsoft.DDV.documentManager` instance will be created automatically as so
 
 | API Name              | Description                                               |
 | --------------------- | --------------------------------------------------------- |
-| `createDocument()`     | Create an empty document.                                 |
-| `deleteDocuments()`     | Delete the specified document(s) by the document uid(s).  |
-| `deleteAllDocuments()`  | Delete all documents.                                     |
-| `getDocument()`         | Get the specified document object with the document uid.  |
-| `getAllDocuments()`     | Get all documents' objects.                               |
-| `mergeDocuments()`      | Merge specified documents to a new document.              |
-| `copyPagesToDocument()` | Copy pages from a specified document to another document. |
-| `movePagesToDocument()` | Move pages from a specified document to another document. |
+| [`createDocument()`](#createdocument)     | Create an empty document.                                 |
+| [`deleteDocuments()`](#deletedocuments)     | Delete the specified document(s) by the document uid(s).  |
+| [`deleteAllDocuments()`](#deletealldocuments)  | Delete all documents.                                     |
+| [`getDocument()`](#getdocument)         | Get the specified document object with the document uid.  |
+| [`getAllDocuments()`](#getalldocuments)     | Get all documents' objects.                               |
+| [`mergeDocuments()`](#mergedocuments)      | Merge specified documents to a new document.              |
+| [`copyPagesToDocument()`](#copypagestodocument) | Copy pages from a specified document to another document. |
+| [`movePagesToDocument()`](#movepagestodocument) | Move pages from a specified document to another document. |
 
 **Events**
 
 | API Name | Description                                        |
 | -------- | -------------------------------------------------- |
-| `on()`     | Bind a listener to the specified event.            |
-| `off()`    | Unbind event listener(s) from the specified event. |
+| [`on()`](#on)     | Bind a listener to the specified event.            |
+| [`off()`](#off)    | Unbind event listener(s) from the specified event. |
 
 ***Integrated Events***
 
 | Event Name      | Description                               |
 | --------------- | ----------------------------------------- |
-| `documentCreated` | Triggered when a new document is created. |
-| `documentDeleted` | Triggered when a document is deleted.     |
-| `pagesAdded`      | Triggered when the page(s) are added.     |
-| `pagesDeleted`    | Triggered when the page(s) are deleted.   |
+| [`documentCreated`](#documentcreated) | Triggered when a new document is created. |
+| [`documentDeleted`](#documentdeleted) | Triggered when a document is deleted.     |
+| [`pagesAdded`](#pagesadded)      | Triggered when the page(s) are added.     |
+| [`pagesDeleted`](#pagesdeleted)    | Triggered when the page(s) are deleted.   |
 
 ## Methods
 
