@@ -7,7 +7,7 @@ title: Dynamsoft Document Viewer API Reference - Enumeration EnumPdfCompressionT
 keywords: Documentation, Dynamsoft Document Viewer, API Reference, Enumeration EnumPdfCompressionType
 breadcrumbText: Enumeration EnumPdfCompressionType
 description: Dynamsoft Document Viewer Documentation API Reference Enumeration EnumPdfCompressionType Page
-permalink: /api/enumeration/enumpdfcompressiontype.html
+permalink: /api/enumeration-type/enumpdfcompressiontype.html
 ---
 
 # EnumPdfCompressionType

@@ -7,7 +7,7 @@ title: Dynamsoft Document Viewer API Reference - Enumeration EnumPdfPageType
 keywords: Documentation, Dynamsoft Document Viewer, API Reference, Enumeration EnumPdfPageType
 breadcrumbText: Enumeration EnumPdfPageType
 description: Dynamsoft Document Viewer Documentation API Reference Enumeration EnumPdfPageType Page
-permalink: /api/enumeration/enumpdfpagetype.html
+permalink: /api/enumeration-type/enumpdfpagetype.html
 ---
 
 # EnumPdfPageType

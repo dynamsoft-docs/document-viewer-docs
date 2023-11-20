@@ -7,7 +7,7 @@ title: Dynamsoft Document Viewer API Reference - Enumeration EnumTiffCompression
 keywords: Documentation, Dynamsoft Document Viewer, API Reference, Enumeration EnumTiffCompressionType
 breadcrumbText: Enumeration EnumTiffCompressionType
 description: Dynamsoft Document Viewer Documentation API Reference Enumeration EnumTiffCompressionType Page
-permalink: /api/enumeration/enumtiffcompressiontype.html
+permalink: /api/enumeration-type/enumtiffcompressiontype.html
 ---
 
 # EnumTiffCompressionType

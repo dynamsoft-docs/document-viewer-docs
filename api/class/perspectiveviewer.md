@@ -710,7 +710,7 @@ setQuadSelection(quad: Quad): boolean;
 
 **Parameters**
 
-`quad`: A quadrangle. Please refer to [`Quad`]().
+`quad`: A quadrangle. Please refer to [`Quad`]({{ site.api }}enumeration-type/quad.html).
 
 **Example**
 
@@ -752,7 +752,7 @@ getQuadSelection(): Quad | null;
 
 **Return value**
 
-A quadrangle. Please refer to [`Quad`]().
+A quadrangle. Please refer to [`Quad`]({{ site.api }}enumeration-type/quad.html).
 
 **Example**
 
@@ -814,7 +814,7 @@ perspective(quad: Quad): Promise<Blob>;
 
 **Parameters**
 
-`quad`: The quadrangle to be transferred. Please refer to [`Quad`]().
+`quad`: The quadrangle to be transferred. Please refer to [`Quad`]({{ site.api }}enumeration-type/quad.html).
 
 **Return value**
 
