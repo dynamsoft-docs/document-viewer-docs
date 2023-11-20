@@ -18,8 +18,8 @@ permalink: /api/class/perspectiveviewer.html
 
 | API Name       | Description                                   |
 | ------------ | --------------------------------------------- |
-| [`PerspectiveViewer()`](#perspectiveviewer) | Default constructor of an `PerspectiveViewer` object. |
-| [`destroy()`](#destroy)             | Destroy the `PerspectiveViewer` object.                             |
+| [`PerspectiveViewer()`](#perspectiveviewer) | Default constructor of a `PerspectiveViewer` instance. |
+| [`destroy()`](#destroy)             | Destroy the `PerspectiveViewer` instance.                             |
 
 **Viewer Control**
 
@@ -92,7 +92,7 @@ permalink: /api/class/perspectiveviewer.html
 
 ### PerspectiveViewer()
 
-Default constructor of a `PerspectiveViewer` object.
+Default constructor of a `PerspectiveViewer` instance.
 
 **Syntax**
 
@@ -102,7 +102,7 @@ new Dynamsoft.DDV.PerspectiveViewer(options?: PerspectiveViewerConstructorOption
 
 **Parameters**
 
-`options`: The constructor options for a `PerspectiveViewer` object. Please refer to [`PerspectiveViewerConstructorOptions`]({{ site.api }}interface/perspectiveviewerconstructoroptions.html).
+`options`: The constructor options for a `PerspectiveViewer` instance. Please refer to [`PerspectiveViewerConstructorOptions`]({{ site.api }}interface/perspectiveviewerconstructoroptions.html).
 
 **Code Snippet**
 
@@ -127,7 +127,7 @@ const perspectiveViewer = new Dynamsoft.DDV.PerspectiveViewer({
 
 ### destroy()
 
-Destroy the `PerspectiveViewer` object.
+Destroy the `PerspectiveViewer` instance.
 
 **Syntax**
 
@@ -143,7 +143,7 @@ perspectiveViewer.destroy();
 
 **Remark**
 
-- The editing operations (rotating) in pages will be saved to document automatically when destroy the viewer object.
+- The editing operations (rotating) in pages will be saved to document automatically when destroy the viewer instance.
 
 **See Also**
 

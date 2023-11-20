@@ -16,8 +16,8 @@ permalink: /api/class/customviewer.html
 
 | API Name       | Description                                   |
 | ------------ | --------------------------------------------- |
-| [`CustomViewer()`](#customviewer) | Default constructor of an `CustomViewer` object. |
-| [`destroy()`](#destroy)             | Destroy the `CustomViewer` object.                             |
+| [`CustomViewer()`](#customviewer) | Default constructor of a `CustomViewer` instance. |
+| [`destroy()`](#destroy)             | Destroy the `CustomViewer` instance.                             |
 
 **Viewer Control**
 
@@ -41,7 +41,7 @@ permalink: /api/class/customviewer.html
 
 ### CustomViewer()
 
-Default constructor of a `CustomViewer` object.
+Default constructor of a `CustomViewer` instance.
 
 **Syntax**
 
@@ -51,7 +51,7 @@ new Dynamsoft.DDV.CustomViewer(options?: CustomViewerConstructorOptions);
 
 **Parameters**
 
-`options`: The constructor options for a `CustomViewer` object. Please refer to [`CustomViewerConstructorOptions`]({{ site.api }}interface/customviewerconstructoroptions.html).
+`options`: The constructor options for a `CustomViewer` instance. Please refer to [`CustomViewerConstructorOptions`]({{ site.api }}interface/customviewerconstructoroptions.html).
 
 **Code Snippet**
 
@@ -76,7 +76,7 @@ const customViewer = new Dynamsoft.DDV.CustomViewer({
 
 ### destroy()
 
-Destroy the `CustomViewer` object.
+Destroy the `CustomViewer` instance.
 
 **Syntax**
 

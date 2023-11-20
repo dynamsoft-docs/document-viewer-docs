@@ -26,12 +26,22 @@ interface EditViewerConstructorOptions {
 
 ## Attributes
 
-- `container`: The container which is used to show the viewer. Its `id` or `HTMLElement` is acceppted.
+### container
 
-- `viewerConfig`: The configurations of viewer, please refer to [`EditViewerConfig`]({{ site.api }}interface/editviewerconfig.html). If it is not specified, the [default configuration]({{ site.viewer }}viewerconfig.html#editviewerconfig) will be applied.
+The container which is used to show the viewer. Its `id` or `HTMLElement` is acceppted.
 
-- `uiConfig`: The UI layout configurations of viewer, please refer to [`UiConfig`]({{ site.api }}interface/uiconfig.html). If it is not specified, the [default UI]({{ site.ui }}default_ui.html#edit-viewer) will be applied.
+### viewerConfig
 
-- `thumbnailConfig`: The configurations of integrated thumbnail, please refer to [`ThumbnailConfig`]({{ site.api }}interface/thumbnailconfig.html). If it is not specified, the [default configuration]({{ site.viewer }}viewerconfig.html#thumbnailconfig) will be applied.
+The configurations of viewer, please refer to [`EditViewerConfig`]({{ site.api }}interface/editviewerconfig.html). If it is not specified, the [default configuration]({{ site.viewer }}viewerconfig.html#editviewerconfig) will be applied.
 
-- `groupUid`: The uid of viewers' group. Please refer to [Data synchronisation between viewers](). If it is not specified, a random groupUid will be generated.
+### uiConfig
+
+The UI layout configurations of viewer, please refer to [`UiConfig`]({{ site.api }}interface/uiconfig.html). If it is not specified, the [default UI]({{ site.ui }}default_ui.html#edit-viewer) will be applied.
+
+### thumbnailConfig
+
+The configurations of integrated thumbnail, please refer to [`ThumbnailConfig`]({{ site.api }}interface/thumbnailconfig.html). If it is not specified, the [default configuration]({{ site.viewer }}viewerconfig.html#thumbnailconfig) will be applied.
+
+### groupUid
+
+The uid of viewers' group. Please refer to [Data synchronisation between viewers](). If it is not specified, a random groupUid will be generated.

@@ -18,8 +18,8 @@ permalink: /api/class/browseviewer.html
 
 | API Name       | Description                                   |
 | ------------ | --------------------------------------------- |
-| [`BrowseViewer()`](#browseviewer) | Default constructor of an `BrowseViewer` object. |
-| [`destroy()`](#destroy)             | Destroy the `BrowseViewer` object.                             |
+| [`BrowseViewer()`](#browseviewer) | Default constructor of a `BrowseViewer` instance. |
+| [`destroy()`](#destroy)             | Destroy the `BrowseViewer` instance.                             |
 
 **Viewer Control**
 
@@ -96,7 +96,7 @@ permalink: /api/class/browseviewer.html
 
 ### BrowseViewer()
 
-Default constructor of a `BrowseViewer` object.
+Default constructor of a `BrowseViewer` instance.
 
 **Syntax**
 
@@ -106,7 +106,7 @@ new Dynamsoft.DDV.BrowseViewer(options?: BrowseViewerConstructorOptions);
 
 **Parameters**
 
-`options`: The constructor options for a `BrowseViewer` object. Please refer to [`BrowseViewerConstructorOptions`]({{ site.api }}interface/browseviewerconstructoroptions.html).
+`options`: The constructor options for a `BrowseViewer` instance. Please refer to [`BrowseViewerConstructorOptions`]({{ site.api }}interface/browseviewerconstructoroptions.html).
 
 **Code Snippet**
 
@@ -131,7 +131,7 @@ const browseViewer = new Dynamsoft.DDV.BrowseViewer({
 
 ### destroy()
 
-Destroy the `BrowseViewer` object.
+Destroy the `BrowseViewer` instance.
 
 **Syntax**
 
@@ -147,7 +147,7 @@ browseViewer.destroy();
 
 **Remark**
 
-- The editing operations (rotating) in pages will be saved to document automatically when destroy the viewer object.
+- The editing operations (rotating) in pages will be saved to document automatically when destroy the viewer instance.
 
 **See Also**
 
