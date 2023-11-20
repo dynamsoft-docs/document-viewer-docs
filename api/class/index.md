@@ -93,8 +93,8 @@ The `Dynamsoft.DDV.documentManager` instance will be created automatically as so
 | setRowAndColumn()     |                                                              |
 | rotate()              | Rotate the specified pages.                                  |
 | crop()                | Crop the specified page(s) with the specified rectangle.     |
-| setCropRect()         | Set a crop rectangle selection on the current page. *This method is only available when [`toolMode`]() is crop mode.* |
-| getCropRect()         | Get the crop rectangle selection.                            |
+| setCropRect()         | Set a crop rectangular selection on the current page. *This method is only available when [`toolMode`]() is crop mode.* |
+| getCropRect()         | Get the crop rectangular selection.                            |
 | undo()                | Undo the last editing operation.                             |
 | redo()                | Redo the last undo operation.                                |
 | saveOperations()      | Save the edit operations in pages to document.               |
@@ -129,9 +129,9 @@ The `Dynamsoft.DDV.documentManager` instance will be created automatically as so
 | fitModeChanged      | Triggered when the fit mode has changed.                     |
 | zoomChanged         | Triggered when the zoom ratio has been changed.              |
 | toolModeChanged     | Triggered when the tool mode has changed.                    |
-| cropRectDrawn       | Triggered when a rectangle selection is drawn.               |
-| cropRectDeleted     | Triggered when the rectangle selection is deleted.           |
-| cropRectModified    | Triggered when the crop rectangle selection is modified.     |
+| cropRectDrawn       | Triggered when a rectangular selection is drawn.               |
+| cropRectDeleted     | Triggered when the rectangular selection is deleted.           |
+| cropRectModified    | Triggered when the crop rectangular selection is modified.     |
 | click               | Triggered when click in the viewer's viewing area.           |
 | dblclick            | Triggered when double click in the viewer's viewing area.    |
 | rightclick          | Triggered when right click in the viewer's viewing area.     |
@@ -240,9 +240,9 @@ The `Dynamsoft.DDV.documentManager` instance will be created automatically as so
 | getCurrentPageUid()   | Get the uid of the current page.                             |
 | indexToUid()          | Get the uid of the page by the index.                        |
 | uidToIndex()          | Get the index of the page represented by the uid in the activated document. |
-| setQuadSelection()    | Set a quadrangle selection on the current page.              |
-| getQuadSelection()    | Get the quadrangle selection.                                |
-| resetQuadSelection()  | Reset the quadrangle selection to the original one.          |
+| setQuadSelection()    | Set a quadrilateral selection on the current page.              |
+| getQuadSelection()    | Get the quadrilateral selection.                                |
+| resetQuadSelection()  | Reset the quadrilateral selection to the original one.          |
 | perspective()         | Performs a perspective transformation in current page based on the specified quadrangle. |
 | rotate()              | Rotate the specified pages.                                  |
 | saveOperations()      | Save the edit operations in pages to document.               |
@@ -268,7 +268,7 @@ The `Dynamsoft.DDV.documentManager` instance will be created automatically as so
 | pageRendered        | Triggered when a page has been completely rendered.          |
 | currentIndexChanged | Triggered when currentIndex is changed.                      |
 | currentPageChanged  | Triggered when current page is changed.                      |
-| quadModified        | Triggered when the quadrangle selection is modified.         |
+| quadModified        | Triggered when the quadrilateral selection is modified.         |
 | click               | Triggered when click in the viewer's viewing area.           |
 | dblclick            | Triggered when double click in the viewer's viewing area.    |
 | rightclick          | Triggered when right click in the viewer's viewing area.     |
@@ -322,6 +322,7 @@ The `Dynamsoft.DDV.documentManager` instance will be created automatically as so
 | `readonly` isBoundContainer | Return whether the viewer is bound to a container. |
 | `readonly` isVisible        | Return whether the viewer is shown or hidden.      |
 | `readonly` currentDocument  | Return the object of the current document.         |
+| multiselectMode | Specify or return whether to allow multiple pages to be selected at once. |
 
 ### Events
 
