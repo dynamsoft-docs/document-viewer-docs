@@ -805,7 +805,7 @@ captureViewer.enableAutoCapture = true;
 
 **Remark** 
 
-- If it is not specified in [`viewerConfig`]() while creating the viewer additionally, the default value is `false`.
+- If it is not specified in [`viewerConfig`]({{ site.api }}interface/captureviewerconstructoroptions.html#viewerconfig) while creating the viewer additionally, the default value is `false`.
 - If the auto detect is disabled, it will automatically capture a frame every 3 seconds by default.
 - If the auto detect is enabled, automatic capturing will only be performed when the detection result meets expectations. See also [`enableAutoDetect`](#enableautodetect).
 
@@ -834,7 +834,7 @@ captureViewer.enableAutoDetect = true;
 
 **Remark**
 
-- If it is not specified in [`viewerConfig`]() while creating the viewer additionally, the default value is `false`. 
+- If it is not specified in [`viewerConfig`]({{ site.api }}interface/captureviewerconstructoroptions.html#viewerconfig) while creating the viewer additionally, the default value is `false`. 
 - This API only takes effect when [`DocumentDetect`]() is set by [`setProcessingHandler()`]().
 
 ### acceptedPolygonConfidence
@@ -861,7 +861,7 @@ captureViewer.acceptedPolygonConfidence = 60;
 
 **Remark**
 
-- If it is not specified in [`viewerConfig`]() while creating the viewer additionally, the default value is 80. 
+- If it is not specified in [`viewerConfig`]({{ site.api }}interface/captureviewerconstructoroptions.html#viewerconfig) while creating the viewer additionally, the default value is 80. 
 - The range of available values is 0-100 on a percentage scale.
 - The higher the setting, the more accurate the automatic border detection.
 
@@ -889,7 +889,7 @@ captureViewer.maxFrameNumber = 3;
 
 **Remark**
 
-- If it is not specified in [`viewerConfig`]() while creating the viewer additionally, the default value is 10. 
+- If it is not specified in [`viewerConfig`]({{ site.api }}interface/captureviewerconstructoroptions.html#viewerconfig) while creating the viewer additionally, the default value is 10. 
 - The value range is (0,60].
 
 ## Events

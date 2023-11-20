@@ -489,7 +489,7 @@ browseViewer.multiselectMode = true;
 
 **Remark**
 
-If it is not specified in [`viewerConfig`]() while creating the viewer additionally, its default value is `false`.
+If it is not specified in [`viewerConfig`]({{ site.api }}interface/browseviewerconstructoroptions.html#viewerconfig) while creating the viewer additionally, its default value is `false`.
 
 ## Document and Page Control
 
@@ -898,7 +898,7 @@ browseViewer.setRowAndColumn(5,8); // Display the page in five rows and eight co
 
 **Remark**
 
-- If it is not specified in [`viewerConfig`]() while creating the viewer additionally, its default rows is 4 and columns is 6.
+- If it is not specified in [`viewerConfig`]({{ site.api }}interface/browseviewerconstructoroptions.html#viewerconfig) while creating the viewer additionally, its default rows is 4 and columns is 6.
 
 ## Edit Operations
 
