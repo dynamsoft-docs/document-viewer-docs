@@ -18,8 +18,8 @@ permalink: /api/class/captureviewer.html
 
 | API Name       | Description                                   |
 | ------------ | --------------------------------------------- |
-| [`CaptureViewer()`](#captureviewer) | Default constructor of an `CaptureViewer` object. |
-| [`destroy()`](#destroy)             | Destroy the `CaptureViewer` object.                             |
+| [`CaptureViewer()`](#captureviewer) | Default constructor of a `CaptureViewer` instance. |
+| [`destroy()`](#destroy)             | Destroy the `CaptureViewer` instance.                             |
 
 **Viewer Control**
 
@@ -89,7 +89,7 @@ permalink: /api/class/captureviewer.html
 
 ### CaptureViewer()
 
-Default constructor of a `CaptureViewer` object.
+Default constructor of a `CaptureViewer` instance.
 
 **Syntax**
 
@@ -99,7 +99,7 @@ new Dynamsoft.DDV.CaptureViewer(options?: CaptureViewerConstructorOptions);
 
 **Parameters**
 
-`options`: The constructor options for a `CaptureViewer` object. Please refer to [`CaptureViewerConstructorOptions`]({{ site.api }}interface/captureviewerconstructoroptions.html).
+`options`: The constructor options for a `CaptureViewer` instance. Please refer to [`CaptureViewerConstructorOptions`]({{ site.api }}interface/captureviewerconstructoroptions.html).
 
 **Code Snippet**
 
@@ -130,7 +130,7 @@ const captureViewer = new Dynamsoft.DDV.CaptureViewer({
 
 ### destroy()
 
-Destroy the `CaptureViewer` object.
+Destroy the `CaptureViewer` instance.
 
 **Syntax**
 

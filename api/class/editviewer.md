@@ -18,8 +18,8 @@ permalink: /api/class/editviewer.html
 
 | API Name       | Description                                   |
 | ------------ | --------------------------------------------- |
-| [`EditViewer()`](#editviewer) | Default constructor of an `EditViewer` object. |
-| [`destroy()`](#destroy)             | Destroy the `EditViewer` object.                             |
+| [`EditViewer()`](#editviewer) | Default constructor of an `EditViewer` instance. |
+| [`destroy()`](#destroy)             | Destroy the `EditViewer` instance.                             |
 
 **Viewer Control**
 
@@ -107,7 +107,7 @@ permalink: /api/class/editviewer.html
 
 ### EditViewer()
 
-Default constructor of an `EditViewer` object. 
+Default constructor of an `EditViewer` instance. 
 
 **Syntax**
 
@@ -117,7 +117,7 @@ new Dynamsoft.DDV.EditViewer(options?: EditViewerConstructorOptions);
 
 **Parameters**
 
-`options`: The constructor options for an `EditViewer` object. Please refer to [`EditViewerConstructorOptions`]({{ site.api }}interface/editviewerconstructoroptions.html).
+`options`: The constructor options for an `EditViewer` instance. Please refer to [`EditViewerConstructorOptions`]({{ site.api }}interface/editviewerconstructoroptions.html).
 
 **Code Snippet**
 
@@ -125,6 +125,9 @@ new Dynamsoft.DDV.EditViewer(options?: EditViewerConstructorOptions);
 const editViewer = new Dynamsoft.DDV.EditViewer({
     container: document.getElementById("viewer"),
 });
+
+// An IBrowseViewer object will be created at meanwhile. Please refer to Remark part.
+const thumbnailObj = editViewer.thumbnail; 
 ```
 
 **Exception**
@@ -149,12 +152,11 @@ const editViewer = new Dynamsoft.DDV.EditViewer({
 
 **Remark**
 
-*A `thumbnail` object will be created at the same time. Please refer to [`thumbnail`]({{ site.api }}interfaces/thumbnail.html).*
-
+- An `IBrowseViewer` object, `editViewer.thumbnail`, will be created at meanwhile which represents the thumbnail object in edit viewer. Please refer to [`IBrowseViewer`]({{ site.api }}interface/ibrowseviewer.html).
 
 ### destroy()
 
-Destroy the `EditViewer` object.
+Destroy the `EditViewer` instance.
 
 **Syntax**
 
@@ -170,7 +172,7 @@ editViewer.destroy();
 
 **Remark**
 
-- The editing operations (rotating, cropping, filtering) in pages will be saved to document automatically when destroy the viewer object.
+- The editing operations (rotating, cropping, filtering) in pages will be saved to document automatically when destroy the viewer instance.
 
 **See Also**
 

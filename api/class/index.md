@@ -69,8 +69,8 @@ The `Dynamsoft.DDV.documentManager` instance will be created automatically as so
 
 | API Name       | Description                                   |
 | ------------ | --------------------------------------------- |
-| [`EditViewer()`]({{ site.api }}class/editviewer.html#editviewer) | Default constructor of an `EditViewer` object. |
-| [`destroy()`]({{ site.api }}class/editviewer.html#destroy)             | Destroy the `EditViewer` object.                             |
+| [`EditViewer()`]({{ site.api }}class/editviewer.html#editviewer) | Default constructor of an `EditViewer` instance. |
+| [`destroy()`]({{ site.api }}class/editviewer.html#destroy)             | Destroy the `EditViewer` instance.                             |
 
 **Viewer Control**
 
@@ -163,8 +163,8 @@ The `Dynamsoft.DDV.documentManager` instance will be created automatically as so
 
 | API Name       | Description                                   |
 | ------------ | --------------------------------------------- |
-| [`CaptureViewer()`]({{ site.api }}class/captureviewer.html#captureviewer) | Default constructor of an `CaptureViewer` object. |
-| [`destroy()`]({{ site.api }}class/captureviewer.html#destroy)             | Destroy the `CaptureViewer` object.                             |
+| [`CaptureViewer()`]({{ site.api }}class/captureviewer.html#captureviewer) | Default constructor of a `CaptureViewer` instance. |
+| [`destroy()`]({{ site.api }}class/captureviewer.html#destroy)             | Destroy the `CaptureViewer` instance.                             |
 
 **Viewer Control**
 
@@ -239,8 +239,8 @@ The `Dynamsoft.DDV.documentManager` instance will be created automatically as so
 
 | API Name       | Description                                   |
 | ------------ | --------------------------------------------- |
-| [`PerspectiveViewer()`]({{ site.api }}class/perspectiveviewer.html#perspectiveviewer) | Default constructor of an `PerspectiveViewer` object. |
-| [`destroy()`]({{ site.api }}class/perspectiveviewer.html#destroy)             | Destroy the `PerspectiveViewer` object.                             |
+| [`PerspectiveViewer()`]({{ site.api }}class/perspectiveviewer.html#perspectiveviewer) | Default constructor of a `PerspectiveViewer` instance. |
+| [`destroy()`]({{ site.api }}class/perspectiveviewer.html#destroy)             | Destroy the `PerspectiveViewer` instance.                             |
 
 **Viewer Control**
 
@@ -319,8 +319,8 @@ The `Dynamsoft.DDV.documentManager` instance will be created automatically as so
 
 | API Name       | Description                                   |
 | ------------ | --------------------------------------------- |
-| [`BrowseViewer()`]({{ site.api }}class/browseviewer.html#browseviewer) | Default constructor of an `BrowseViewer` object. |
-| [`destroy()`]({{ site.api }}class/browseviewer.html#destroy)             | Destroy the `BrowseViewer` object.                             |
+| [`BrowseViewer()`]({{ site.api }}class/browseviewer.html#browseviewer) | Default constructor of a `BrowseViewer` instance. |
+| [`destroy()`]({{ site.api }}class/browseviewer.html#destroy)             | Destroy the `BrowseViewer` instance.                             |
 
 **Viewer Control**
 
@@ -403,8 +403,8 @@ The `Dynamsoft.DDV.documentManager` instance will be created automatically as so
 
 | API Name       | Description                                   |
 | ------------ | --------------------------------------------- |
-| [`CustomViewer()`]({{ site.api }}class/customviewer.html#customviewer) | Default constructor of an `CustomViewer` object. |
-| [`destroy()`]({{ site.api }}class/customviewer.html#destroy)             | Destroy the `CustomViewer` object.                             |
+| [`CustomViewer()`]({{ site.api }}class/customviewer.html#customviewer) | Default constructor of a `CustomViewer` instance. |
+| [`destroy()`]({{ site.api }}class/customviewer.html#destroy)             | Destroy the `CustomViewer` instance.                             |
 
 **Viewer Control**
 
