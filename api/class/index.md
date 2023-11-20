@@ -26,7 +26,7 @@ Dynamsoft Document Viewer Javascript library comes with six primary classes:
 
 <div class="multi-panel-start"></div>
 
-## DocumentManager Class
+## [DocumentManager Class]({{ site.api }}class/documentmanager.html)
 
 The `Dynamsoft.DDV.documentManager` instance will be created automatically as soon as DDV is initialized.
 
@@ -63,7 +63,7 @@ The `Dynamsoft.DDV.documentManager` instance will be created automatically as so
 
 <div class="multi-panel-start"></div>
 
-## EditViewer Class
+## [EditViewer Class]({{ site.api }}class/editviewer.html)
 
 **Create and Destroy Instances** 
 
@@ -157,7 +157,7 @@ The `Dynamsoft.DDV.documentManager` instance will be created automatically as so
 
 <div class="multi-panel-start"></div>
 
-## CaptureViewer Class
+## [CaptureViewer Class]({{ site.api }}class/captureviewer.html)
 
 **Create and Destroy Instances** 
 
@@ -233,7 +233,7 @@ The `Dynamsoft.DDV.documentManager` instance will be created automatically as so
 
 <div class="multi-panel-start"></div>
 
-## PerspectiveViewer Class
+## [PerspectiveViewer Class]({{ site.api }}class/perspectiveviewer.html)
 
 **Create and Destroy Instances** 
 
@@ -313,7 +313,7 @@ The `Dynamsoft.DDV.documentManager` instance will be created automatically as so
 
 <div class="multi-panel-start"></div>
 
-## BrowseViewer Class
+## [BrowseViewer Class]({{ site.api }}class/browseviewer.html)
 
 **Create and Destroy Instances** 
 
@@ -397,7 +397,7 @@ The `Dynamsoft.DDV.documentManager` instance will be created automatically as so
 
 <div class="multi-panel-start"></div>
 
-## CustomViewer Class
+## [CustomViewer Class]({{ site.api }}class/customviewer.html)
 
 **Create and Destroy Instances** 
 

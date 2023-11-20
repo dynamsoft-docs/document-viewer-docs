@@ -12,6 +12,13 @@ permalink: /api/class/browseviewer.html
 
 # BrowseViewer Class
 
+<div class="multi-panel-switching-prefix"></div>
+
+- [BrowseViewer](#browseviewer)
+- [IBrowseViewer](#ibrowseviewer)
+
+<div class="multi-panel-start"></div>
+
 ## API Index
 
 **Create and Destroy Instances** 
@@ -91,6 +98,56 @@ permalink: /api/class/browseviewer.html
 | [`rightclick`](#rightclick)          | Triggered when right click in the viewer's viewing area.     |
 | [`tap`](#tap)                 | Triggered on mobile when tap in the viewer's viewing area.   |
 | [`longtap`](#longtap)             | Triggered on mobile when long tap in the viewer's viewing area. |
+
+<div class="multi-panel-end"></div>
+
+<div class="multi-panel-start"></div>
+
+**Members**
+
+| API Name            | Description                                                  |
+| ------------------- | ------------------------------------------------------------ |
+| [`getStyle()`](#getstyle)            | Get the style object of `BrowseViewer`.                        |
+| [`updateStyle()`](#updatestyle)        | Update the style object of `BrowseViewer`.                     |
+| [`getUiConfig()`](#getuiconfig)         | Get current `UiConfig` object.                               |
+| [`updateUiConfig()`](#updateuiconfig)     | Update `UiConfig` object.                                    |
+| [`show()`](#show)                | Show the viewer.                                             |
+| [`hide()`](#hide)                | Hide the viewer.                                             |
+| [`isVisible`](#isvisible)        | Return whether the viewer is shown or hidden.      |
+| [`multiselectMode`](#multiselectmode) | Specify or return whether to allow multiple pages to be selected at once. |
+| [`getSelectedPageIndices()`](#getselectedpageindices) | Get indices of selected pages.                               |
+| [`selectPages()`](#selectpages)            | Select pages by specified indices.                           |
+| [`selectAllPages()`](#selectallpages)         | Select all pages.                                            |
+| [`setRowAndColumn()`](#setrowandcolumn)        | Set rows and columns of displayed pages.                     |
+
+**Events**
+
+
+| API Name | Description                                        |
+| -------- | -------------------------------------------------- |
+| [`on()`](#on)     | Bind a listener to the specified event.            |
+| [`off()`](#off)    | Unbind event listener(s) from the specified event. |
+
+***Integrated Events***
+
+| Event Name          | Description                                                  |
+| ------------------- | ------------------------------------------------------------ |
+| [`resized`](#resized)             | Triggered when the viewer is resized.                        |
+| [`pageRendered`](#pagerendered)        | Triggered when a page has been completely rendered.          |
+| [`currentIndexChanged`](#currentindexchanged) | Triggered when currentIndex is changed.                      |
+| [`currentPageChanged`](#currentpagechanged)  | Triggered when current page is changed.                      |
+| [`selectedPagesChanged`](#selectedpageschanged) | Trigeered when the page(s) is selected.                      |
+| [`pagesDragged`](#pagesdragged)         | Triggered when page(s) is dragged.                           |
+| [`pagesDropped`](#pagesdropped)         | Triggered when page(s) is dropped.                           |
+| [`click`](#click)               | Triggered when click in the viewer's viewing area.           |
+| [`dblclick`](#dbclick)            | Triggered when double click in the viewer's viewing area.    |
+| [`rightclick`](#rightclick)          | Triggered when right click in the viewer's viewing area.     |
+| [`tap`](#tap)                 | Triggered on mobile when tap in the viewer's viewing area.   |
+| [`longtap`](#longtap)             | Triggered on mobile when long tap in the viewer's viewing area. |
+
+<div class="multi-panel-end"></div>
+
+<div class="multi-panel-switching-end"></div>
 
 ## Create and Destroy Instances
 
