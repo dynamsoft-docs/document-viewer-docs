@@ -134,7 +134,7 @@ permalink: /api/class/browseviewer.html
 
 
 
-### BrowseViewer()
+## BrowseViewer()
 
 Default constructor of a `BrowseViewer` object.
 
@@ -169,7 +169,7 @@ const browseViewer = new Dynamsoft.DDV.BrowseViewer({
  -80050 | DDV.setConfig has not been set up yet.  
  -80051 | DDV.setConfig has not been completed.   
 
-### destroy()
+## destroy()
 
 Destroy the `BrowseViewer` object.
 
@@ -195,7 +195,7 @@ browseViewer.destroy();
 
 
 
-### bindContainer()
+## bindContainer()
 
 Bind the viewer to the specified container.
 
@@ -228,7 +228,7 @@ browseViewer.bindContainer("viewercontainer");
 
 - A viewer can only be bound to one container at once. If you bind the viewer to another container when it has been bound to a container, the viewer will be bound to the new container and unbound from the old container automatically. 
 
-### unbindContainer()
+## unbindContainer()
 
 Unbind the viewer from the specified container.
 
@@ -244,7 +244,7 @@ unbindContainer(): void;
 browseViewer.unbindContainer();
 ```
 
-### isBoundContainer
+## isBoundContainer
 
 Return whether the viewer is bound to a container.
 
@@ -254,7 +254,7 @@ Return whether the viewer is bound to a container.
 readonly isBoundContainer: boolean;
 ```
 
-### getStyle()
+## getStyle()
 
 Get the style object of `BrowseViewer`.
 
@@ -291,7 +291,7 @@ const pageStyle = browseViewer.getStyle("pageStyle");
  -80102 | XXX(ClassName.API): XXX(Parameter Name) is missing.                     | `null`
  -80103 | XXX(ClassName.API): The value for XXX(Parameter Name) is not supported. | `null`
 
-### updateStyle()
+## updateStyle()
 
 Update the style object of `BrowseViewer`.
 
@@ -356,7 +356,7 @@ type BrowseViewerStyleName = "canvasStyle" | "pageStyle" | "selectedPageStyle" |
 
 - The updates are independent of whether the viewer is displayed and are updated in real time.
 
-### getUiConfig()
+## getUiConfig()
 
 Get current `UiConfig` object.
 
@@ -376,7 +376,7 @@ The [`UiConfig`]({{ site.api }}interface/uiconfig.html) object.
 const viewerUi = browseViewer.getUiConfig();
 ```
 
-### updateUiConfig()
+## updateUiConfig()
 
 Update `UiConfig` object.
 
@@ -455,7 +455,7 @@ browseViewer.updateUiConfig(viewerUi); // Configure a header which includes "Pag
 
 - The updates are independent of whether the viewer is displayed and are updated in real time.
 
-### show()
+## show()
 
 Show the viewer.
 
@@ -475,7 +475,7 @@ browseViewer.show();
 
 - The viewer is shown automatically when it is created.
 
-### hide()
+## hide()
 
 Hide the viewer.
 
@@ -491,7 +491,7 @@ hide(): void;
 browseViewer.hide();
 ```
 
-### isVisible
+## isVisible
 
 Return whether the viewer is shown or hidden.
 
@@ -505,7 +505,7 @@ readonly isVisible: boolean;
 
 - The viewer is shown automatically when it is created which means the default value of `isVisible` is `true`.
 
-### multiselectMode
+## multiselectMode
 
 Specify or return whether to allow multiple pages to be selected at once.
 
@@ -533,7 +533,7 @@ If it is not specified in [`viewerConfig`]({{ site.api }}interface/browseviewerc
 
 
 
-### openDocument()
+## openDocument()
 
 Open the specified document by document uid.
 
@@ -571,7 +571,7 @@ browseViewer.openDocument(docUid);
 
 - If another ducument is opened when there is a document already opened, the opened document will be closed automatically.
 
-### closeDocument()
+## closeDocument()
 
 Close current document.
 
@@ -599,7 +599,7 @@ browseViewer.closeDocument();
 --------|-----------------------------------------------------|--------------------
  -80304 | No document opened.                                 | `false`
 
-### currentDocument
+## currentDocument
 
 Return the object of the current document.
 
@@ -619,7 +619,7 @@ const currentDoc = browseViewer.currentDocument;
 
 [IDocument]({{ site.api }}interface/idocument.html)
 
-### getPageCount()
+## getPageCount()
 
 Get the page count in the viewer.
 
@@ -645,7 +645,7 @@ const pageCount = browseViewer.getPageCount();
 --------|-----------------------------------------------------|--------------------
  -80304 | No document opened.                                 | `-1`
 
-### goToPage()
+## goToPage()
 
 Navigate to the specified page by index.
 
@@ -680,7 +680,7 @@ browseViewer.goToPage(3);
  -80304 | No document opened.                                      | `-1`
  -80305 | There is no image in the current document.               | `-1`
 
-### getCurrentPageIndex()
+## getCurrentPageIndex()
 
 Get the index of the current page.
 
@@ -707,7 +707,7 @@ const currentIndex = browseViewer.getCurrentPageIndex();
  -80304 | No document opened.                                 | `-1`
  -80305 | There is no image in the current document.          | `-1`
 
-### getCurrentPageUid()
+## getCurrentPageUid()
 
 Get the uid of the current page.
 
@@ -734,7 +734,7 @@ const curPageUid = browseViewer.getCurrentPageUid();
  -80304 | No document opened.                                 | `''`
  -80305 | There is no image in the current document.          | `''`
 
-### indexToUid()
+## indexToUid()
 
 Get the uid of the specified page by its index.
 
@@ -769,7 +769,7 @@ const firstPageUid = browseViewer.indexToUid(0);
  -80304 | No document opened.                                      | `''`
  -80305 | There is no image in the current document.               | `''`
 
-### uidToIndex()
+## uidToIndex()
 
 Get the index of the specified page by its uid.
 
@@ -804,7 +804,7 @@ browseViewer.uidToIndex(curPageUid);
  -80304 | No document opened.                                      | `-1`
  -80305 | There is no image in the current document.               | `-1`
 
-### getSelectedPageIndices()
+## getSelectedPageIndices()
 
 Get indices of selected pages.
 
@@ -835,7 +835,7 @@ const selPages = browseViewer.getSelectedPageIndices();
 - If no page is selected in the viewer, returns [].
 - The order of the returned array elements is based on the order in which the pages are selected. For example, if select the pages with the index 6, 5, 2 in order, the returned array will be [6,5,2].
 
-### selectPages()
+## selectPages()
 
 Select pages by specified indices.
 
@@ -868,7 +868,7 @@ browseViewer.selectPages([0,1]);
  -80102 | XXX(ClassName.API): XXX(Parameter Name) is missing. | `[]`
  -80304 | No document opened.                                 | `[]`
 
-### selectAllPages()
+## selectAllPages()
 
 Select all pages.
 
@@ -896,7 +896,7 @@ browseViewer.selectAllPages();
  -80305 | There is no image in the current document.          | `[]`
 
 
-### setRowAndColumn()
+## setRowAndColumn()
 
 Set rows and columns of displayed pages.
 
@@ -938,7 +938,7 @@ browseViewer.setRowAndColumn(5,8); // Display the page in five rows and eight co
 
 - If it is not specified in [`viewerConfig`]({{ site.api }}interface/browseviewerconstructoroptions.html#viewerconfig) while creating the viewer additionally, its default rows is 4 and columns is 6.
 
-### rotate()
+## rotate()
 
 Rotate the specified pages.
 
@@ -983,7 +983,7 @@ browseViewer.rotate(-90);
  -80304 | No document opened.                                                     | `false`
  -80305 | There is no image in the current document.                              | `false`
 
-### saveOperations()
+## saveOperations()
 
 > *This method takes effect only for [rotate](#rotate) operation.*
 
@@ -1014,7 +1014,7 @@ browseViewer.saveOperations();
  -80304 | No document opened.                                 | `false`
 
 
-### on()
+## on()
 
 Bind a listener to the specified event. 
 
@@ -1051,7 +1051,7 @@ browseViewer.on("resized", eventFunc);
  -80102 | XXX(ClassName.API): XXX(Parameter Name) is missing. 
 
 
-### off()
+## off()
 
 Unbind event listener(s) from the specified event. 
 
@@ -1089,9 +1089,9 @@ browseViewer.off("resized", eventFunc);
  -80100 | XXX(ClassName.API): XXX(Parameter Name) is invalid. 
  -80102 | XXX(ClassName.API): XXX(Parameter Name) is missing. 
 
-### Integrated Events
+## Integrated Events
 
-#### resized
+### resized
 
 Triggered when the viewer is resized.
 
@@ -1109,7 +1109,7 @@ Triggered when the viewer is resized.
 
 `newHeight`: The new height of the viewer.
 
-#### pageRendered
+### pageRendered
 
 Triggered when a page has been completely rendered. We only render the pages that are visible on the screen, so this event won't get fired for every page in the document at once. This event will get called when the user scrolls up and down the document, or when a page is rotated, or anything else that makes it rerender.
 
@@ -1123,7 +1123,7 @@ Triggered when a page has been completely rendered. We only render the pages tha
 
 `pageUid`: The pageUid of the rendered page.
 
-#### currentIndexChanged
+### currentIndexChanged
 
 Triggered when currentIndex is changed.
 
@@ -1137,7 +1137,7 @@ Triggered when currentIndex is changed.
 
 `newIndex`: The new current index. If there is no index in the viewer, return `-1`.
 
-#### currentPageChanged
+### currentPageChanged
 
 Triggered when current page is changed.
 
@@ -1151,7 +1151,7 @@ Triggered when current page is changed.
 
 `newPageUid`: The uid of the page which is new current index. If there is no index in the viewer, return `''`.
 
-#### selectedPagesChanged
+### selectedPagesChanged
 
 Trigeered when the page(s) is selected.
 
@@ -1169,7 +1169,7 @@ Trigeered when the page(s) is selected.
 
 `newPageUids[]`: The array of new selected pages uids.
 
-#### pagesDragged
+### pagesDragged
 
 Triggered when page(s) is dragged.
 
@@ -1183,7 +1183,7 @@ Triggered when page(s) is dragged.
 
 `pageUids[]`: The array of the dragged pages uids.
 
-#### pagesDropped
+### pagesDropped
 
 Triggered when page(s) is dropped.
 
@@ -1199,26 +1199,26 @@ Triggered when page(s) is dropped.
 
 `pageUids[]`: The array of the dropped pages uids.
 
-#### Mouse Events
+### Mouse Events
 
-##### click
+#### click
 
 Triggered when click in the viewer's viewing area.
 
-##### dblclick
+#### dblclick
 
 Triggered when double click in the viewer's viewing area.
 
-##### rightclick
+#### rightclick
 
 Triggered when right click in the viewer's viewing area.
 
-##### tap
+#### tap
 
 Triggered on mobile when tap in the viewer's viewing area.
 Taps are defined as a mouse down and up within a short time period and within a short distance.
 
-##### longtap
+#### longtap
 
 Triggered on mobile when long tap in the viewer's viewing area. This is the equivalent of the desktop right click.
 Long taps are defined as pressing a mouse and holding it down for 500ms before releasing it.
