@@ -54,10 +54,10 @@ permalink: /api/class/perspectiveviewer.html
 
 | API Name              | Description                                                  |
 | --------------------- | ------------------------------------------------------------ |
-| [`setQuadSelection()`]()    | Set a quadrilateral selection on the current page.              |
-| [`getQuadSelection()`]()    | Get the quadrilateral selection.                                |
-| [`resetQuadSelection()`]()  | Reset the quadrilateral selection to the original one.          |
-| [`perspective()`]()         | Performs a perspective transformation in current page based on the specified quadrangle. |
+| [`setQuadSelection()`](#setquadselection)    | Set a quadrilateral selection on the current page.              |
+| [`getQuadSelection()`](#getquadselection)    | Get the quadrilateral selection.                                |
+| [`resetQuadSelection()`](#resetquadselection)  | Reset the quadrilateral selection to the original one.          |
+| [`perspective()`](#perspective)         | Performs a perspective transformation in current page based on the specified quadrangle. |
 
 **Edit Operations**
 
