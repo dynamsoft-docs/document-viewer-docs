@@ -25,10 +25,18 @@ interface CaptureViewerConstructorOptions {
 
 ## Attributes
 
-- `container`: The container which is used to show the viewer. Its `id` or `HTMLElement` is acceppted.
+### container
 
-- `viewerConfig`: The configurations of viewer, please refer to [`CaptureViewerConfig`]({{ site.api }}interface/editviewerconfig.html). If it is not specified, the [default configuration]({{ site.viewer }}viewerconfig.html#captureviewerconfig) will be applied.
+The container which is used to show the viewer. Its `id` or `HTMLElement` is acceppted.
 
-- `uiConfig`: The UI layout configurations of viewer, please refer to [`UiConfig`]({{ site.api }}interface/uiconfig.html). If it is not specified, the [default UI]({{ site.ui }}default_ui.html#capture-viewer) will be applied.
+### viewerConfig
 
-- `groupUid`: The uid of viewers' group. Please refer to [Data synchronisation between viewers](). If it is not specified, a random groupUid will be generated.
+The configurations of viewer, please refer to [`CaptureViewerConfig`]({{ site.api }}interface/captureviewerconfig.html). If it is not specified, the [default configuration]({{ site.viewer }}viewerconfig.html#captureviewerconfig) will be applied.
+
+### uiConfig
+
+The UI layout configurations of viewer, please refer to [`UiConfig`]({{ site.api }}interface/uiconfig.html). If it is not specified, the [default UI]({{ site.ui }}default_ui.html#capture-viewer) will be applied.
+
+### groupUid
+
+The uid of viewers' group. Please refer to [Data synchronisation between viewers](). If it is not specified, a random groupUid will be generated.

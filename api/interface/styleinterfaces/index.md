@@ -12,10 +12,10 @@ permalink: /api/interface/styleinterface/index.html
 
 # Style Interfaces
 
-DDV
 
-- BaseStyle
-- CanvasStyle
-- CheckboxStyle
-- PageNumberStyle
-- QuadSelectionStyle
+
+- [`BaseStyle`]({{ site.api }}interface/styleinterface/basestyle.html)
+- [`CanvasStyle`]({{ site.api }}interface/styleinterface/canvasstyle.html)
+- [`CheckboxStyle`]({{ site.api }}interface/styleinterface/checkboxstyle.html)
+- [`PageNumberStyle`]({{ site.api }}interface/styleinterface/pagenumberstyle.html)
+- [`QuadSelectionStyle`]({{ site.api }}interface/styleinterface/quadselectionstyle.html)
