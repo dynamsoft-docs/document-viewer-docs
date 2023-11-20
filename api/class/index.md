@@ -26,363 +26,405 @@ Dynamsoft Document Viewer Javascript library comes with six primary classes:
 
 <div class="multi-panel-start"></div>
 
-## DocumentManager
+## DocumentManager Class
 
 The `Dynamsoft.DDV.documentManager` instance will be created automatically as soon as DDV is initialized.
 
-### Methods
+**Methods**
 
 | API Name              | Description                                               |
 | --------------------- | --------------------------------------------------------- |
-| `createDocument()`     | Create an empty document.                                 |
-| `deleteDocuments()`     | Delete the specified document(s) by the document uid(s).  |
-| `deleteAllDocuments()`  | Delete all documents.                                     |
-| `getDocument()`         | Get the specified document object with the document uid.  |
-| `getAllDocuments()`     | Get all documents' objects.                               |
-| `mergeDocuments()`      | Merge specified documents to a new document.              |
-| `copyPagesToDocument()` | Copy pages from a specified document to another document. |
-| `movePagesToDocument()` | Move pages from a specified document to another document. |
+| [`createDocument()`]({{ site.api }}class/documentmanager.html#createdocument)     | Create an empty document.                                 |
+| [`deleteDocuments()`]({{ site.api }}class/documentmanager.html#deletedocuments)     | Delete the specified document(s) by the document uid(s).  |
+| [`deleteAllDocuments()`]({{ site.api }}class/documentmanager.html#deletealldocuments)  | Delete all documents.                                     |
+| [`getDocument()`]({{ site.api }}class/documentmanager.html#getdocument)         | Get the specified document object with the document uid.  |
+| [`getAllDocuments()`]({{ site.api }}class/documentmanager.html#getalldocuments)     | Get all documents' objects.                               |
+| [`mergeDocuments()`]({{ site.api }}class/documentmanager.html#mergedocuments)      | Merge specified documents to a new document.              |
+| [`copyPagesToDocument()`]({{ site.api }}class/documentmanager.html#copypagestodocument) | Copy pages from a specified document to another document. |
+| [`movePagesToDocument()`]({{ site.api }}class/documentmanager.html#movepagestodocument) | Move pages from a specified document to another document. |
 
-### Events
+**Events**
 
 | API Name | Description                                        |
 | -------- | -------------------------------------------------- |
-| `on()`     | Bind a listener to the specified event.            |
-| `off()`    | Unbind event listener(s) from the specified event. |
+| [`on()`]({{ site.api }}class/documentmanager.html#on)     | Bind a listener to the specified event.            |
+| [`off()`]({{ site.api }}class/documentmanager.html#off)    | Unbind event listener(s) from the specified event. |
+
+***Integrated Events***
 
 | Event Name      | Description                               |
 | --------------- | ----------------------------------------- |
-| `documentCreated` | Triggered when a new document is created. |
-| `documentDeleted` | Triggered when a document is deleted.     |
-| `pagesAdded`      | Triggered when the page(s) are added.     |
-| `pagesDeleted`    | Triggered when the page(s) are deleted.   |
+| [`documentCreated`]({{ site.api }}class/documentmanager.html#documentcreated) | Triggered when a new document is created. |
+| [`documentDeleted`]({{ site.api }}class/documentmanager.html#documentdeleted) | Triggered when a document is deleted.     |
+| [`pagesAdded`]({{ site.api }}class/documentmanager.html#pagesadded)      | Triggered when the page(s) are added.     |
+| [`pagesDeleted`]({{ site.api }}class/documentmanager.html#pagesdeleted)    | Triggered when the page(s) are deleted.   |
 
 <div class="multi-panel-end"></div>
 
 <div class="multi-panel-start"></div>
 
-## EditViewer
+## EditViewer Class
 
-### Constructor 
+**Create and Destroy Instances** 
 
-| Method       | Description                                   |
+| API Name       | Description                                   |
 | ------------ | --------------------------------------------- |
-| `EditViewer()` | Default constructor of a `EditViewer` object. |
+| [`EditViewer()`]({{ site.api }}class/editviewer.html#editviewer) | Default constructor of an `EditViewer` object. |
+| [`destroy()`]({{ site.api }}class/editviewer.html#destroy)             | Destroy the `EditViewer` object.                             |
 
-### Methods
+**Viewer Control**
 
 | API Name              | Description                                                  |
 | --------------------- | ------------------------------------------------------------ |
-| `destroy()`             | Destroy the `EditViewer` object.                             |
-| `bindContainer()`       | Bind the viewer to the specified container.                  |
-| `unbindContainer()`     | Unbind the viewer from the specified container.              |
-| `getStyle()`            | Get the style object of `EditViewer`.                        |
-| updateStyle()         | Update the style object of `EditViewer`.                     |
-| getUiConfig()         | Get current `UiConfig` object.                               |
-| updateUiConfig()      | Update `UiConfig` object.                                    |
-| show()                | Show the viewer.                                             |
-| hide()                | Hide the viewer.                                             |
-| openDocument()        | Open the specified document by document uid.                 |
-| closeDocument()       | Close current document.                                      |
-| getPageCount()        | Get the page count in the viewer.                            |
-| goToPage()            | Navigate to the specified page by index.                     |
-| getCurrentPageIndex() | Get the index of current page.                               |
-| getCurrentPageUid()   | Get the uid of the current page.                             |
-| indexToUid()          | Get the uid of the specified page by its index.                        |
-| uidToIndex()          | Get the index of the specified page by its uid.              |
-| setRowAndColumn()     |                                                              |
-| rotate()              | Rotate the specified pages.                                  |
-| crop()                | Crop the specified page(s) with the specified rectangle.     |
-| setCropRect()         | Set a crop rectangular selection on the current page. *This method is only available when [`toolMode`]() is crop mode.* |
-| getCropRect()         | Get the crop rectangular selection.                            |
-| undo()                | Undo the last editing operation.                             |
-| redo()                | Redo the last undo operation.                                |
-| saveOperations()      | Save the edit operations in pages to document.               |
+| [`bindContainer()`]({{ site.api }}class/editviewer.html#bindcontainer)     | Bind the viewer to the specified container.                  |
+| [`unbindContainer()`]({{ site.api }}class/editviewer.html#unbindcontainer) | Unbind the viewer from the specified container.              |
+| [`isBoundContainer`]({{ site.api }}class/editviewer.html#isboundcontainer) | Return whether the viewer is bound to a container. |
+| [`getStyle()`]({{ site.api }}class/editviewer.html#getstyle)            | Get the style object of `EditViewer`.                        |
+| [`updateStyle()`]({{ site.api }}class/editviewer.html#updatestyle)        | Update the style object of `EditViewer`.                     |
+| [`getUiConfig()`]({{ site.api }}class/editviewer.html#getuiconfig)         | Get current `UiConfig` object.                               |
+| [`updateUiConfig()`]({{ site.api }}class/editviewer.html#updateuiconfig)     | Update `UiConfig` object.                                    |
+| [`show()`]({{ site.api }}class/editviewer.html#show)                | Show the viewer.                                             |
+| [`hide()`]({{ site.api }}class/editviewer.html#hide)                | Hide the viewer.                                             |
+| [`isVisible`]({{ site.api }}class/editviewer.html#isvisible)        | Return whether the viewer is shown or hidden.      |
+| [`toolMode`]({{ site.api }}class/editviewer.html#toolmode)              | Specify or return the tool mode of the viewer.     |
 
-### Properties
+**Document and Page Control**
 
-| API Name                    | Description                                        |
-| --------------------------- | -------------------------------------------------- |
-| `readonly` isBoundContainer | Return whether the viewer is bound to a container. |
-| `readonly` isVisible        | Return whether the viewer is shown or hidden.      |
-| `readonly` currentDocument  | Return the object of the current document.         |
-| toolMode                    | Specify or return the tool mode of the viewer.     |
-| displayMode                 | Specify or return the display mode of the viewer.  |
-| fitMode                     | Specify or return the fit mode of the viewer.      |
-| zoom                        | Specify or return zoom ratio.                      |
-| zoomOrigin                  | Specify or return the zoom origin of the viewer.   |
+| API Name              | Description                                                  |
+| --------------------- | ------------------------------------------------------------ |
+| [`openDocument()`]({{ site.api }}class/editviewer.html#opendocument)        | Open the specified document by document uid.                 |
+| [`closeDocument()`]({{ site.api }}class/editviewer.html#closedocument)       | Close current document.                                      |
+| [`currentDocument`]({{ site.api }}class/editviewer.html#currentdocument)   | Return the object of the current document.         |
+| [`getPageCount()`]({{ site.api }}class/editviewer.html#getpagecount)        | Get the page count in the viewer.                            |
+| [`goToPage()`]({{ site.api }}class/editviewer.html#gotopage)            | Navigate to the specified page by index.                     |
+| [`getCurrentPageIndex()`]({{ site.api }}class/editviewer.html#getcurrentpageindex) | Get the index of current page.                               |
+| [`getCurrentPageUid()`]({{ site.api }}class/editviewer.html#getcurrentpageuid)   | Get the uid of the current page.                             |
+| [`indexToUid()`]({{ site.api }}class/editviewer.html#indextouid)          | Get the uid of the specified page by its index.                      |
+| [`uidToIndex()`]({{ site.api }}class/editviewer.html#uidtoindex)          | Get the index of the specified page by its uid. |
 
-### Events
+
+**Display Control**
+
+| API Name              | Description                                                  |
+| --------------------- | ------------------------------------------------------------ |
+| [`displayMode`]({{ site.api }}class/editviewer.html#displaymode)                 | Specify or return the display mode of the viewer.  |
+| [`setParallelScrollCount()`]({{ site.api }}class/editviewer.html#setparallelscrollcount)     | Specify the number of pages to scroll in parallel.    |
+| [`fitMode`]({{ site.api }}class/editviewer.html#fitmode)                     | Specify or return the fit mode of the viewer.      |
+| [`zoom`]({{ site.api }}class/editviewer.html#zoom)                        | Specify or return zoom ratio.                      |
+| [`zoomOrigin`]({{ site.api }}class/editviewer.html#zoomorigin)                  | Specify or return the zoom origin of the viewer.   |
+
+**Edit Operations**
+
+| API Name              | Description                                                  |
+| --------------------- | ------------------------------------------------------------ |
+| [`rotate()`]({{ site.api }}class/editviewer.html#rotate)              | Rotate the specified pages.                                  |
+| [`crop()`]({{ site.api }}class/editviewer.html#crop)                | Crop the specified page(s) with the specified rectangle.     |
+| [`getCropRect()`]({{ site.api }}class/editviewer.html#getcroprect)         | Get the crop rectangular selection.                            |
+| [`setCropRect()`]({{ site.api }}class/editviewer.html#setcroprect)         | Set a crop rectangular selection on the current page. *This method is only available when [`toolMode`]({{ site.api }}class/editviewer.html#toolmode) is `crop` mode.* |
+| [`undo()`]({{ site.api }}class/editviewer.html#undo)                | Undo the last editing operation.                             |
+| [`redo()`]({{ site.api }}class/editviewer.html#redo)                | Redo the last undo operation.                                |
+| [`saveOperations()`]({{ site.api }}class/editviewer.html#saveoperations)      | Save the edit operations in pages to document.               |
+
+**Events**
 
 | API Name | Description                                        |
 | -------- | -------------------------------------------------- |
-| on()     | Bind a listener to the specified event.            |
-| off()    | Unbind event listener(s) from the specified event. |
+| [`on()`]({{ site.api }}class/editviewer.html#on)     | Bind a listener to the specified event.            |
+| [`off()`]({{ site.api }}class/editviewer.html#off)    | Unbind event listener(s) from the specified event. |
+
+***Integrated Events***
 
 | Event Name          | Description                                                  |
 | ------------------- | ------------------------------------------------------------ |
-| resized             | Triggered when the viewer is resized.                        |
-| pageRendered        | Triggered when a page has been completely rendered.          |
-| currentIndexChanged | Triggered when currentIndex is changed.                      |
-| currentPageChanged  | Triggered when current page is changed.                      |
-| displayModeChanged  | Triggered when the display mode is changed.                  |
-| fitModeChanged      | Triggered when the fit mode has changed.                     |
-| zoomChanged         | Triggered when the zoom ratio has been changed.              |
-| toolModeChanged     | Triggered when the tool mode has changed.                    |
-| cropRectDrawn       | Triggered when a rectangular selection is drawn.               |
-| cropRectDeleted     | Triggered when the rectangular selection is deleted.           |
-| cropRectModified    | Triggered when the crop rectangular selection is modified.     |
-| click               | Triggered when click in the viewer's viewing area.           |
-| dblclick            | Triggered when double click in the viewer's viewing area.    |
-| rightclick          | Triggered when right click in the viewer's viewing area.     |
-| tap                 | Triggered on mobile when tap in the viewer's viewing area.   |
-| longtap             | Triggered on mobile when long tap in the viewer's viewing area. |
+| [`resized`]({{ site.api }}class/editviewer.html#resized)             | Triggered when the viewer is resized.                        |
+| [`pageRendered`]({{ site.api }}class/editviewer.html#pagerendered)        | Triggered when a page has been completely rendered.          |
+| [`currentIndexChanged`]({{ site.api }}class/editviewer.html#currentindexchanged) | Triggered when currentIndex is changed.                      |
+| [`currentPageChanged`]({{ site.api }}class/editviewer.html#currentpagechanged)  | Triggered when current page is changed.                      |
+| [`displayModeChanged`]({{ site.api }}class/editviewer.html#displaymodechanged)  | Triggered when the display mode is changed.                  |
+| [`fitModeChanged`]({{ site.api }}class/editviewer.html#fitmodechanged)      | Triggered when the fit mode has changed.                     |
+| [`zoomChanged`]({{ site.api }}class/editviewer.html#zoomchanged)         | Triggered when the zoom ratio has been changed.              |
+| [`toolModeChanged`]({{ site.api }}class/editviewer.html#toolmodechanged)     | Triggered when the tool mode has changed.                    |
+| [`cropRectDrawn`]({{ site.api }}class/editviewer.html#croprectdrawn)       | Triggered when a rectangular selection is drawn.               |
+| [`cropRectDeleted`]({{ site.api }}class/editviewer.html#croprectdeleted)     | Triggered when the rectangular selection is deleted.           |
+| [`cropRectModified`]({{ site.api }}class/editviewer.html#croprectmodified)    | Triggered when the crop rectangular selection is modified.     |
+| [`click`]({{ site.api }}class/editviewer.html#click)               | Triggered when click in the viewer's viewing area.           |
+| [`dblclick`]({{ site.api }}class/editviewer.html#dbclick)            | Triggered when double click in the viewer's viewing area.    |
+| [`rightclick`]({{ site.api }}class/editviewer.html#rightclick)          | Triggered when right click in the viewer's viewing area.     |
+| [`tap`]({{ site.api }}class/editviewer.html#tap)                 | Triggered on mobile when tap in the viewer's viewing area.   |
+| [`longtap`]({{ site.api }}class/editviewer.html#longtap)             | Triggered on mobile when long tap in the viewer's viewing area. |
 
 <div class="multi-panel-end"></div>
 
 <div class="multi-panel-start"></div>
 
-## CaptureViewer
+## CaptureViewer Class
 
-### Constructor 
+**Create and Destroy Instances** 
 
-| Method          | Description                                      |
-| --------------- | ------------------------------------------------ |
-| CaptureViewer() | Default constructor of a `CaptureViewer` object. |
+| API Name       | Description                                   |
+| ------------ | --------------------------------------------- |
+| [`CaptureViewer()`]({{ site.api }}class/captureviewer.html#captureviewer) | Default constructor of an `CaptureViewer` object. |
+| [`destroy()`]({{ site.api }}class/captureviewer.html#destroy)             | Destroy the `CaptureViewer` object.                             |
 
-### Methods
+**Viewer Control**
 
-| API Name               | Description                                                  |
-| ---------------------- | ------------------------------------------------------------ |
-| destroy()              | Destroy the `CaptureViewer` object.                          |
-| bindContainer()        | Bind the viewer to the specified container.                  |
-| unbindContainer()      | Unbind the viewer from the specified container.              |
-| getStyle()             | Get the style object of `CaptureViewer`.                        |
-| updateStyle()          | Update the style object of `CaptureViewer`.                     |
-| getUiConfig()          | Get current `UiConfig` object.                               |
-| updateUiConfig()       | Update `UiConfig` object.                                    |
-| show()                 | Show the viewer.                                             |
-| hide()                 | Hide the viewer.                                             |
-| openDocument()         | Open the specified document by document uid.                 |
-| closeDocument()        | Close current document.                                      |
-| play()                 | Play the camera video stream.                                |
-| stop()                 | Stop the camera video stream.                                |
-| capture()              | Capture a frame from video stream.                           |
-| getAllCameras()        | Return information of all available cameras on the device.   |
-| selectCamera()         | Select a camera as the video source.                         |
-| getCurrentCamera()     | Return information about the current camera.                 |
-| getCurrentResolution() | Return the resolution of the current video input.            |
-| turnOnTorch()          | Turn on the torch/flashlight if the current camera supports it. |
-| turnOffTorch()         | Turn off the torch/flashlight.                               |
+| API Name              | Description                                                  |
+| --------------------- | ------------------------------------------------------------ |
+| [`bindContainer()`]({{ site.api }}class/captureviewer.html#bindcontainer)     | Bind the viewer to the specified container.                  |
+| [`unbindContainer()`]({{ site.api }}class/captureviewer.html#unbindcontainer) | Unbind the viewer from the specified container.              |
+| [`isBoundContainer`]({{ site.api }}class/captureviewer.html#isboundcontainer) | Return whether the viewer is bound to a container. |
+| [`getStyle()`]({{ site.api }}class/captureviewer.html#getstyle)            | Get the style object of `CaptureViewer`.                        |
+| [`updateStyle()`]({{ site.api }}class/captureviewer.html#updatestyle)        | Update the style object of `CaptureViewer`.                     |
+| [`getUiConfig()`]({{ site.api }}class/captureviewer.html#getuiconfig)         | Get current `UiConfig` object.                               |
+| [`updateUiConfig()`]({{ site.api }}class/captureviewer.html#updateuiconfig)     | Update `UiConfig` object.                                    |
+| [`show()`]({{ site.api }}class/captureviewer.html#show)                | Show the viewer.                                             |
+| [`hide()`]({{ site.api }}class/captureviewer.html#hide)                | Hide the viewer.                                             |
+| [`isVisible`]({{ site.api }}class/captureviewer.html#isvisible)        | Return whether the viewer is shown or hidden.      |
 
-### Properties
+**Document Control**
 
-| API Name                    | Description                                                  |
-| --------------------------- | ------------------------------------------------------------ |
-| `readonly` isBoundContainer | Return whether the viewer is bound to a container.           |
-| `readonly` isVisible        | Return whether the viewer is shown or hidden.                |
-| `readonly` currentDocument  | Return the object of the current document.                   |
-| enableAutoCapture           | Specify or return whether to enable automatic capture.       |
-| enableAutoDetect            | Specify or return whether to enable automatic border detection in video stream. |
-| acceptedPolygonConfidence   | Specify or return the confidence when detecting the border.  |
-| maxFrameNumber              | Specify or return the maximum number of frames detected per second. |
+| API Name              | Description                                                  |
+| --------------------- | ------------------------------------------------------------ |
+| [`openDocument()`]({{ site.api }}class/captureviewer.html#opendocument)        | Open the specified document by document uid.                 |
+| [`closeDocument()`]({{ site.api }}class/captureviewer.html#closedocument)       | Close current document.                                      |
+| [`currentDocument`]({{ site.api }}class/captureviewer.html#currentdocument)   | Return the object of the current document.         |
 
-### Events
+**Camera Control**
+
+| API Name              | Description                                                  |
+| --------------------- | ------------------------------------------------------------ |
+| [`play()`]({{ site.api }}class/captureviewer.html#play)                 | Play the camera video stream.                                |
+| [`stop()`]({{ site.api }}class/captureviewer.html#stop)                 | Stop the camera video stream.                                |
+| [`capture()`]({{ site.api }}class/captureviewer.html#capture)              | Capture a frame from video stream.                           |
+| [`getAllCameras()`]({{ site.api }}class/captureviewer.html#getallcameras)        | Return information of all available cameras on the device.   |
+| [`selectCamera()`]({{ site.api }}class/captureviewer.html#selectcamera)         | Select a camera as the video source.                         |
+| [`getCurrentCamera()`]({{ site.api }}class/captureviewer.html#getcurrentcamera)     | Return information about the current camera.                 |
+| [`getCurrentResolution()`]({{ site.api }}class/captureviewer.html#getcurrentresolution) | Return the resolution of the current video input.            |
+| [`turnOnTorch()`]({{ site.api }}class/captureviewer.html#turnontorch)          | Turn on the torch/flashlight if the current camera supports it. |
+| [`turnOffTorch()`]({{ site.api }}class/captureviewer.html#turnofftorch)         | Turn off the torch/flashlight.                               |
+| [`enableAutoCapture`]({{ site.api }}class/captureviewer.html#enableautocapture)           | Specify or return whether to enable automatic capture.       |
+| [`enableAutoDetect`]({{ site.api }}class/captureviewer.html#enableautodetect)            | Specify or return whether to enable automatic border detection in video stream. |
+| [`acceptedPolygonConfidence`]({{ site.api }}class/captureviewer.html#acceptedpolygonconfidence)   | Specify or return the confidence when detecting the border.  |
+| [`maxFrameNumber`]({{ site.api }}class/captureviewer.html#maxframenumber)              | Specify or return the maximum number of frames detected per second. |
+
+**Events**
 
 | API Name | Description                                        |
 | -------- | -------------------------------------------------- |
-| on()     | Bind a listener to the specified event.            |
-| off()    | Unbind event listener(s) from the specified event. |
+| [`on()`]({{ site.api }}class/captureviewer.html#on)     | Bind a listener to the specified event.            |
+| [`off()`]({{ site.api }}class/captureviewer.html#off)    | Unbind event listener(s) from the specified event. |
+
+***Integrated Events***
 
 | Event Name    | Description                                                  |
 | ------------- | ------------------------------------------------------------ |
-| resized       | Triggered when the viewer is resized.                        |
-| played        | Triggered when the camera video stream is played.            |
-| stopped       | Triggered when the camera video stream is stopped.           |
-| captured      | Triggered when a frame is captured.                          |
-| cameraChanged | Triggered when the used camera is changed.                   |
-| click         | Triggered when click in the viewer's viewing area.           |
-| dblclick      | Triggered when double click in the viewer's viewing area.    |
-| rightclick    | Triggered when right click in the viewer's viewing area.     |
-| tap           | Triggered on mobile when tap in the viewer's viewing area.   |
-| longtap       | Triggered on mobile when long tap in the viewer's viewing area. |
+| [`resized`]({{ site.api }}class/captureviewer.html#resized)       | Triggered when the viewer is resized.                        |
+| [`played`]({{ site.api }}class/captureviewer.html#played)        | Triggered when the camera video stream is played.            |
+| [`stopped`]({{ site.api }}class/captureviewer.html#stopped)       | Triggered when the camera video stream is stopped.           |
+| [`captured`]({{ site.api }}class/captureviewer.html#captured)      | Triggered when a frame is captured.                          |
+| [`cameraChanged`]({{ site.api }}class/captureviewer.html#camerachanged) | Triggered when the used camera is changed.                   |
+| [`click`]({{ site.api }}class/captureviewer.html#click)         | Triggered when click in the viewer's viewing area.           |
+| [`dblclick`]({{ site.api }}class/captureviewer.html#dblclick)      | Triggered when double click in the viewer's viewing area.    |
+| [`rightclick`]({{ site.api }}class/captureviewer.html#rightclick)    | Triggered when right click in the viewer's viewing area.     |
+| [`tap`]({{ site.api }}class/captureviewer.html#tap)           | Triggered on mobile when tap in the viewer's viewing area.   |
+| [`longtap`]({{ site.api }}class/captureviewer.html#longtap)       | Triggered on mobile when long tap in the viewer's viewing area. |
 
 <div class="multi-panel-end"></div>
 
 <div class="multi-panel-start"></div>
 
-## PerspectiveViewer
+## PerspectiveViewer Class
 
-### Constructor 
+**Create and Destroy Instances** 
 
-| Method              | Description                                          |
-| ------------------- | ---------------------------------------------------- |
-| PerspectiveViewer() | Default constructor of a `PerspectiveViewer` object. |
+| API Name       | Description                                   |
+| ------------ | --------------------------------------------- |
+| [`PerspectiveViewer()`]({{ site.api }}class/perspectiveviewer.html#perspectiveviewer) | Default constructor of an `PerspectiveViewer` object. |
+| [`destroy()`]({{ site.api }}class/perspectiveviewer.html#destroy)             | Destroy the `PerspectiveViewer` object.                             |
 
-### Methods
+**Viewer Control**
 
 | API Name              | Description                                                  |
 | --------------------- | ------------------------------------------------------------ |
-| destroy()             | Destroy the `PerspectiveViewer` object.                      |
-| bindContainer()       | Bind the viewer to the specified container.                  |
-| unbindContainer()     | Unbind the viewer from the specified container.              |
-| getStyle()            | Get the style object of `PerspectiveViewer`.                        |
-| updateStyle()         | Update the style object of `PerspectiveViewer`.                     |
-| getUiConfig()         | Get current `UiConfig` object.                               |
-| updateUiConfig()      | Update `UiConfig` object.                                    |
-| show()                | Show the viewer.                                             |
-| hide()                | Hide the viewer.                                             |
-| openDocument()        | Open the specified document by document uid.                 |
-| closeDocument()       | Close current document.                                      |
-| getPageCount()        | Get the page count in the viewer.                            |
-| goToPage()            | Navigate to the specified page by index.                     |
-| getCurrentPageIndex() | Get the index of current page.                               |
-| getCurrentPageUid()   | Get the uid of the current page.                             |
-| indexToUid()          | Get the uid of the page by the index.                        |
-| uidToIndex()          | Get the index of the page represented by the uid in the activated document. |
-| setQuadSelection()    | Set a quadrilateral selection on the current page.              |
-| getQuadSelection()    | Get the quadrilateral selection.                                |
-| resetQuadSelection()  | Reset the quadrilateral selection to the original one.          |
-| perspective()         | Performs a perspective transformation in current page based on the specified quadrangle. |
-| rotate()              | Rotate the specified pages.                                  |
-| saveOperations()      | Save the edit operations in pages to document.               |
+| [`bindContainer()`]({{ site.api }}class/perspectiveviewer.html#bindcontainer)     | Bind the viewer to the specified container.                  |
+| [`unbindContainer()`]({{ site.api }}class/perspectiveviewer.html#unbindcontainer) | Unbind the viewer from the specified container.              |
+| [`isBoundContainer`]({{ site.api }}class/perspectiveviewer.html#isboundcontainer) | Return whether the viewer is bound to a container. |
+| [`getStyle()`]({{ site.api }}class/perspectiveviewer.html#getstyle)            | Get the style object of `PerspectiveViewer`.                        |
+| [`updateStyle()`]({{ site.api }}class/perspectiveviewer.html#updatestyle)        | Update the style object of `PerspectiveViewer`.                     |
+| [`getUiConfig()`]({{ site.api }}class/perspectiveviewer.html#getuiconfig)         | Get current `UiConfig` object.                               |
+| [`updateUiConfig()`]({{ site.api }}class/perspectiveviewer.html#updateuiconfig)     | Update `UiConfig` object.                                    |
+| [`show()`]({{ site.api }}class/perspectiveviewer.html#show)                | Show the viewer.                                             |
+| [`hide()`]({{ site.api }}class/perspectiveviewer.html#hide)                | Hide the viewer.                                             |
+| [`isVisible`]({{ site.api }}class/perspectiveviewer.html#isvisible)        | Return whether the viewer is shown or hidden.      |
 
-### Properties
+**Document and Page Control**
 
-| API Name                    | Description                                        |
-| --------------------------- | -------------------------------------------------- |
-| `readonly` isBoundContainer | Return whether the viewer is bound to a container. |
-| `readonly` isVisible        | Return whether the viewer is shown or hidden.      |
-| `readonly` currentDocument  | Return the object of the current document.         |
+| API Name              | Description                                                  |
+| --------------------- | ------------------------------------------------------------ |
+| [`openDocument()`]({{ site.api }}class/perspectiveviewer.html#opendocument)        | Open the specified document by document uid.                 |
+| [`closeDocument()`]({{ site.api }}class/perspectiveviewer.html#closedocument)       | Close current document.                                      |
+| [`currentDocument`]({{ site.api }}class/perspectiveviewer.html#currentdocument)   | Return the object of the current document.         |
+| [`getPageCount()`]({{ site.api }}class/perspectiveviewer.html#getpagecount)        | Get the page count in the viewer.                            |
+| [`goToPage()`]({{ site.api }}class/perspectiveviewer.html#gotopage)            | Navigate to the specified page by index.                     |
+| [`getCurrentPageIndex()`]({{ site.api }}class/perspectiveviewer.html#getcurrentpageindex) | Get the index of current page.                               |
+| [`getCurrentPageUid()`]({{ site.api }}class/perspectiveviewer.html#getcurrentpageuid)   | Get the uid of the current page.                             |
+| [`indexToUid()`]({{ site.api }}class/perspectiveviewer.html#indextouid)          | Get the uid of the specified page by its index.                      |
+| [`uidToIndex()`]({{ site.api }}class/perspectiveviewer.html#uidtoindex)          | Get the index of the specified page by its uid. |
 
-### Events
+**Perspective Transformation**
+
+| API Name              | Description                                                  |
+| --------------------- | ------------------------------------------------------------ |
+| [`setQuadSelection()`]({{ site.api }}class/perspectiveviewer.html#setquadselection)    | Set a quadrilateral selection on the current page.              |
+| [`getQuadSelection()`]({{ site.api }}class/perspectiveviewer.html#getquadselection)    | Get the quadrilateral selection.                                |
+| [`resetQuadSelection()`]({{ site.api }}class/perspectiveviewer.html#resetquadselection)  | Reset the quadrilateral selection to the original one.          |
+| [`perspective()`]({{ site.api }}class/perspectiveviewer.html#perspective)         | Performs a perspective transformation in current page based on the specified quadrangle. |
+
+**Edit Operations**
+
+| API Name              | Description                                                  |
+| --------------------- | ------------------------------------------------------------ |
+| [`rotate()`]({{ site.api }}class/perspectiveviewer.html#rotate)              | Rotate the specified pages.                                  |
+| [`saveOperations()`]({{ site.api }}class/perspectiveviewer.html#saveoperations)      | Save the edit operations in pages to document.               |
+
+**Events**
 
 | API Name | Description                                        |
 | -------- | -------------------------------------------------- |
-| on()     | Bind a listener to the specified event.            |
-| off()    | Unbind event listener(s) from the specified event. |
+| [`on()`]({{ site.api }}class/perspectiveviewer.html#on)     | Bind a listener to the specified event.            |
+| [`off()`]({{ site.api }}class/perspectiveviewer.html#off)    | Unbind event listener(s) from the specified event. |
+
+***Integrated Events***
 
 | Event Name          | Description                                                  |
 | ------------------- | ------------------------------------------------------------ |
-| resized             | Triggered when the viewer is resized.                        |
-| pageRendered        | Triggered when a page has been completely rendered.          |
-| currentIndexChanged | Triggered when currentIndex is changed.                      |
-| currentPageChanged  | Triggered when current page is changed.                      |
-| quadModified        | Triggered when the quadrilateral selection is modified.         |
-| click               | Triggered when click in the viewer's viewing area.           |
-| dblclick            | Triggered when double click in the viewer's viewing area.    |
-| rightclick          | Triggered when right click in the viewer's viewing area.     |
-| tap                 | Triggered on mobile when tap in the viewer's viewing area.   |
-| longtap             | Triggered on mobile when long tap in the viewer's viewing area. |
+| [`resized`]({{ site.api }}class/perspectiveviewer.html#resized)             | Triggered when the viewer is resized.                        |
+| [`pageRendered`]({{ site.api }}class/perspectiveviewer.html#pagerendered)        | Triggered when a page has been completely rendered.          |
+| [`currentIndexChanged`]({{ site.api }}class/perspectiveviewer.html#currentindexchanged) | Triggered when currentIndex is changed.                      |
+| [`currentPageChanged`]({{ site.api }}class/perspectiveviewer.html#currentpagechanged)  | Triggered when current page is changed.                      |
+| [`quadModifiedModified`]({{ site.api }}class/perspectiveviewer.html#quadmodified)    | Triggered when the quadrilateral selection is modified.     |
+| [`click`]({{ site.api }}class/perspectiveviewer.html#click)               | Triggered when click in the viewer's viewing area.           |
+| [`dblclick`]({{ site.api }}class/perspectiveviewer.html#dbclick)            | Triggered when double click in the viewer's viewing area.    |
+| [`rightclick`]({{ site.api }}class/perspectiveviewer.html#rightclick)          | Triggered when right click in the viewer's viewing area.     |
+| [`tap`]({{ site.api }}class/perspectiveviewer.html#tap)                 | Triggered on mobile when tap in the viewer's viewing area.   |
+| [`longtap`]({{ site.api }}class/perspectiveviewer.html#longtap)             | Triggered on mobile when long tap in the viewer's viewing area. |
 
 <div class="multi-panel-end"></div>
 
 <div class="multi-panel-start"></div>
 
-## BrowseViewer
+## BrowseViewer Class
 
-### Constructor 
+**Create and Destroy Instances** 
 
-| Method         | Description                                     |
-| -------------- | ----------------------------------------------- |
-| BrowseViewer() | Default constructor of a `BrowseViewer` object. |
+| API Name       | Description                                   |
+| ------------ | --------------------------------------------- |
+| [`BrowseViewer()`]({{ site.api }}class/browseviewer.html#browseviewer) | Default constructor of an `BrowseViewer` object. |
+| [`destroy()`]({{ site.api }}class/browseviewer.html#destroy)             | Destroy the `BrowseViewer` object.                             |
 
-### Methods
+**Viewer Control**
 
-| API Name                 | Description                                                  |
-| ------------------------ | ------------------------------------------------------------ |
-| destroy()                | Destroy the `BrowseViewer` object.                           |
-| bindContainer()          | Bind the viewer to the specified container.                  |
-| unbindContainer()        | Unbind the viewer from the specified container.              |
-| getStyle()               | Get the style object of `BrowseViewer`.                        |
-| updateStyle()            | Update the style object of `BrowseViewer`.                     |
-| getUiConfig()            | Get current `UiConfig` object.                               |
-| updateUiConfig()         | Update `UiConfig` object.                                    |
-| show()                   | Show the viewer.                                             |
-| hide()                   | Hide the viewer.                                             |
-| openDocument()           | Open the specified document by document uid.                 |
-| closeDocument()          | Close current document.                                      |
-| getPageCount()           | Get the page count in the viewer.                            |
-| goToPage()               | Navigate to the specified page by index.                     |
-| getCurrentPageIndex()    | Get the index of current page.                               |
-| getCurrentPageUid()      | Get the uid of the current page.                             |
-| indexToUid()             | Get the uid of the page by the index.                        |
-| uidToIndex()             | Get the index of the page represented by the uid in the activated document. |
-| getSelectedPageIndices() | Get indices of selected pages.                               |
-| selectAllPages()         | Select all pages.                                            |
-| selectPages()            | Select pages by specified indices.                           |
-| setRowAndColumn()        | Set rows and columns of displayed pages.                     |
-| rotate()                 | Rotate the specified pages.                                  |
-| saveOperations()         | Save the edit operations in pages to document.               |
+| API Name              | Description                                                  |
+| --------------------- | ------------------------------------------------------------ |
+| [`bindContainer()`]({{ site.api }}class/browseviewer.html#bindcontainer)     | Bind the viewer to the specified container.                  |
+| [`unbindContainer()`]({{ site.api }}class/browseviewer.html#unbindcontainer) | Unbind the viewer from the specified container.              |
+| [`isBoundContainer`]({{ site.api }}class/browseviewer.html#isboundcontainer) | Return whether the viewer is bound to a container. |
+| [`getStyle()`]({{ site.api }}class/browseviewer.html#getstyle)            | Get the style object of `BrowseViewer`.                        |
+| [`updateStyle()`]({{ site.api }}class/browseviewer.html#updatestyle)        | Update the style object of `BrowseViewer`.                     |
+| [`getUiConfig()`]({{ site.api }}class/browseviewer.html#getuiconfig)         | Get current `UiConfig` object.                               |
+| [`updateUiConfig()`]({{ site.api }}class/browseviewer.html#updateuiconfig)     | Update `UiConfig` object.                                    |
+| [`show()`]({{ site.api }}class/browseviewer.html#show)                | Show the viewer.                                             |
+| [`hide()`]({{ site.api }}class/browseviewer.html#hide)                | Hide the viewer.                                             |
+| [`isVisible`]({{ site.api }}class/browseviewer.html#isvisible)        | Return whether the viewer is shown or hidden.      |
+| [`multiselectMode`]({{ site.api }}class/browseviewer.html#multiselectmode) | Specify or return whether to allow multiple pages to be selected at once. |
 
-### Properties
+**Document and Page Control**
 
-| API Name                    | Description                                        |
-| --------------------------- | -------------------------------------------------- |
-| `readonly` isBoundContainer | Return whether the viewer is bound to a container. |
-| `readonly` isVisible        | Return whether the viewer is shown or hidden.      |
-| `readonly` currentDocument  | Return the object of the current document.         |
-| multiselectMode | Specify or return whether to allow multiple pages to be selected at once. |
+| API Name              | Description                                                  |
+| --------------------- | ------------------------------------------------------------ |
+| [`openDocument()`]({{ site.api }}class/browseviewer.html#opendocument)        | Open the specified document by document uid.                 |
+| [`closeDocument()`]({{ site.api }}class/browseviewer.html#closedocument)       | Close current document.                                      |
+| [`currentDocument`]({{ site.api }}class/browseviewer.html#currentdocument)   | Return the object of the current document.         |
+| [`getPageCount()`]({{ site.api }}class/browseviewer.html#getpagecount)        | Get the page count in the viewer.                            |
+| [`goToPage()`]({{ site.api }}class/browseviewer.html#gotopage)            | Navigate to the specified page by index.                     |
+| [`getCurrentPageIndex()`]({{ site.api }}class/browseviewer.html#getcurrentpageindex) | Get the index of current page.                               |
+| [`getCurrentPageUid()`]({{ site.api }}class/browseviewer.html#getcurrentpageuid)   | Get the uid of the current page.                             |
+| [`indexToUid()`]({{ site.api }}class/browseviewer.html#indextouid)          | Get the uid of the specified page by its index.                      |
+| [`uidToIndex()`]({{ site.api }}class/browseviewer.html#uidtoindex)          | Get the index of the specified page by its uid. |
+| [`getSelectedPageIndices()`]({{ site.api }}class/browseviewer.html#getselectedpageindices) | Get indices of selected pages.                               |
+| [`selectPages()`]({{ site.api }}class/browseviewer.html#selectpages)            | Select pages by specified indices.                           |
+| [`selectAllPages()`]({{ site.api }}class/browseviewer.html#selectallpages)         | Select all pages.                                            |
 
-### Events
+
+**Display Control**
+
+| API Name              | Description                                                  |
+| --------------------- | ------------------------------------------------------------ |
+| [`setRowAndColumn()`]({{ site.api }}class/browseviewer.html#setrowandcolumn)        | Set rows and columns of displayed pages.                     |
+
+**Edit Operations**
+
+| API Name              | Description                                                  |
+| --------------------- | ------------------------------------------------------------ |
+| [`rotate()`]({{ site.api }}class/browseviewer.html#rotate)              | Rotate the specified pages.                                  |
+| [`saveOperations()`]({{ site.api }}class/browseviewer.html#saveoperations)      | Save the edit operations in pages to document.               |
+
+**Events**
 
 | API Name | Description                                        |
 | -------- | -------------------------------------------------- |
-| on()     | Bind a listener to the specified event.            |
-| off()    | Unbind event listener(s) from the specified event. |
+| [`on()`]({{ site.api }}class/browseviewer.html#on)     | Bind a listener to the specified event.            |
+| [`off()`]({{ site.api }}class/browseviewer.html#off)    | Unbind event listener(s) from the specified event. |
 
-| Event Name           | Description                                                  |
-| -------------------- | ------------------------------------------------------------ |
-| resized              | Triggered when the viewer is resized.                        |
-| pageRendered         | Triggered when a page has been completely rendered.          |
-| currentIndexChanged  | Triggered when currentIndex is changed.                      |
-| currentPageChanged   | Triggered when current page is changed.                      |
-| selectedPagesChanged | Trigeered when the page(s) is selected.                      |
-| pagesDragged         | Triggered when page(s) is dragged.                           |
-| pagesDropped         | Triggered when page(s) is dropped.                           |
-| click                | Triggered when click in the viewer's viewing area.           |
-| dblclick             | Triggered when double click in the viewer's viewing area.    |
-| rightclick           | Triggered when right click in the viewer's viewing area.     |
-| tap                  | Triggered on mobile when tap in the viewer's viewing area.   |
-| longtap              | Triggered on mobile when long tap in the viewer's viewing area. |
+***Integrated Events***
+
+| Event Name          | Description                                                  |
+| ------------------- | ------------------------------------------------------------ |
+| [`resized`]({{ site.api }}class/browseviewer.html#resized)             | Triggered when the viewer is resized.                        |
+| [`pageRendered`]({{ site.api }}class/browseviewer.html#pagerendered)        | Triggered when a page has been completely rendered.          |
+| [`currentIndexChanged`]({{ site.api }}class/browseviewer.html#currentindexchanged) | Triggered when currentIndex is changed.                      |
+| [`currentPageChanged`]({{ site.api }}class/browseviewer.html#currentpagechanged)  | Triggered when current page is changed.                      |
+| [`selectedPagesChanged`]({{ site.api }}class/browseviewer.html#selectedpageschanged) | Trigeered when the page(s) is selected.                      |
+| [`pagesDragged`]({{ site.api }}class/browseviewer.html#pagesdragged)         | Triggered when page(s) is dragged.                           |
+| [`pagesDropped`]({{ site.api }}class/browseviewer.html#pagesdropped)         | Triggered when page(s) is dropped.                           |
+| [`click`]({{ site.api }}class/browseviewer.html#click)               | Triggered when click in the viewer's viewing area.           |
+| [`dblclick`]({{ site.api }}class/browseviewer.html#dbclick)            | Triggered when double click in the viewer's viewing area.    |
+| [`rightclick`]({{ site.api }}class/browseviewer.html#rightclick)          | Triggered when right click in the viewer's viewing area.     |
+| [`tap`]({{ site.api }}class/browseviewer.html#tap)                 | Triggered on mobile when tap in the viewer's viewing area.   |
+| [`longtap`]({{ site.api }}class/browseviewer.html#longtap)             | Triggered on mobile when long tap in the viewer's viewing area. |
 
 <div class="multi-panel-end"></div>
 
 <div class="multi-panel-start"></div>
 
-## CustomViewer
+## CustomViewer Class
 
-### Constructor 
+**Create and Destroy Instances** 
 
-| Method         | Description                                     |
-| -------------- | ----------------------------------------------- |
-| CustomViewer() | Default constructor of a `CustomViewer` object. |
+| API Name       | Description                                   |
+| ------------ | --------------------------------------------- |
+| [`CustomViewer()`]({{ site.api }}class/customviewer.html#customviewer) | Default constructor of an `CustomViewer` object. |
+| [`destroy()`]({{ site.api }}class/customviewer.html#destroy)             | Destroy the `CustomViewer` object.                             |
 
-### Methods
+**Viewer Control**
 
-| API Name          | Description                                     |
-| ----------------- | ----------------------------------------------- |
-| destroy()         | Destroy the `CustomViewer` object.              |
-| bindContainer()   | Bind the viewer to the specified container.     |
-| unbindContainer() | Unbind the viewer from the specified container. |
-| getUiConfig()     | Get current `UiConfig` object.                  |
-| updateUiConfig()  | Update `UiConfig` object.                       |
-| show()            | Show the viewer.                                |
-| hide()            | Hide the viewer.                                |
+| API Name              | Description                                                  |
+| --------------------- | ------------------------------------------------------------ |
+| [`bindContainer()`]({{ site.api }}class/customviewer.html#bindcontainer)     | Bind the viewer to the specified container.                  |
+| [`unbindContainer()`]({{ site.api }}class/customviewer.html#unbindcontainer) | Unbind the viewer from the specified container.              |
+| [`isBoundContainer`]({{ site.api }}class/customviewer.html#isboundcontainer) | Return whether the viewer is bound to a container. |
+| [`getUiConfig()`]({{ site.api }}class/customviewer.html#getuiconfig)         | Get current `UiConfig` object.                               |
+| [`updateUiConfig()`]({{ site.api }}class/customviewer.html#updateuiconfig)     | Update `UiConfig` object.                                    |
+| [`show()`]({{ site.api }}class/customviewer.html#show)                | Show the viewer.                                             |
+| [`hide()`]({{ site.api }}class/customviewer.html#hide)                | Hide the viewer.                                             |
+| [`isVisible`]({{ site.api }}class/customviewer.html#isvisible)        | Return whether the viewer is shown or hidden.      |
 
-### Properties
-
-| API Name                    | Description                                        |
-| --------------------------- | -------------------------------------------------- |
-| `readonly` isBoundContainer | Return whether the viewer is bound to a container. |
-| `readonly` isVisible        | Return whether the viewer is shown or hidden.      |
-
-### Events
+**Events**
 
 | API Name | Description                                        |
 | -------- | -------------------------------------------------- |
-| on()     | Bind a listener to the specified event.            |
-| off()    | Unbind event listener(s) from the specified event. |
+| [`on()`]({{ site.api }}class/customviewer.html#on)     | Bind a listener to the specified event.            |
+| [`off()`]({{ site.api }}class/customviewer.html#off)    | Unbind event listener(s) from the specified event. |
 
 <div class="multi-panel-end"></div>
 
