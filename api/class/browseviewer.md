@@ -14,7 +14,7 @@ permalink: /api/class/browseviewer.html
 
 <div class="multi-panel-switching-prefix"></div>
 
-- [BrowseViewer](#browseviewer)
+- [BrowseViewer](#browseviewer-class-1)
 - [IBrowseViewer](#ibrowseviewer)
 
 <div class="multi-panel-start"></div>
