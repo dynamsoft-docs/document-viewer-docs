@@ -128,28 +128,11 @@ permalink: /api/class/browseviewer.html
 | [`on()`](#on)     | Bind a listener to the specified event.            |
 | [`off()`](#off)    | Unbind event listener(s) from the specified event. |
 
-***Integrated Events***
-
-| Event Name          | Description                                                  |
-| ------------------- | ------------------------------------------------------------ |
-| [`resized`](#resized)             | Triggered when the viewer is resized.                        |
-| [`pageRendered`](#pagerendered)        | Triggered when a page has been completely rendered.          |
-| [`currentIndexChanged`](#currentindexchanged) | Triggered when currentIndex is changed.                      |
-| [`currentPageChanged`](#currentpagechanged)  | Triggered when current page is changed.                      |
-| [`selectedPagesChanged`](#selectedpageschanged) | Trigeered when the page(s) is selected.                      |
-| [`pagesDragged`](#pagesdragged)         | Triggered when page(s) is dragged.                           |
-| [`pagesDropped`](#pagesdropped)         | Triggered when page(s) is dropped.                           |
-| [`click`](#click)               | Triggered when click in the viewer's viewing area.           |
-| [`dblclick`](#dbclick)            | Triggered when double click in the viewer's viewing area.    |
-| [`rightclick`](#rightclick)          | Triggered when right click in the viewer's viewing area.     |
-| [`tap`](#tap)                 | Triggered on mobile when tap in the viewer's viewing area.   |
-| [`longtap`](#longtap)             | Triggered on mobile when long tap in the viewer's viewing area. |
-
 <div class="multi-panel-end"></div>
 
 <div class="multi-panel-switching-end"></div>
 
-## Create and Destroy Instances
+
 
 ### BrowseViewer()
 
@@ -210,7 +193,7 @@ browseViewer.destroy();
 
 [saveOperations](#saveoperations)
 
-## Viewer Control
+
 
 ### bindContainer()
 
@@ -548,7 +531,7 @@ browseViewer.multiselectMode = true;
 
 If it is not specified in [`viewerConfig`]({{ site.api }}interface/browseviewerconstructoroptions.html#viewerconfig) while creating the viewer additionally, its default value is `false`.
 
-## Document and Page Control
+
 
 ### openDocument()
 
@@ -913,8 +896,6 @@ browseViewer.selectAllPages();
  -80305 | There is no image in the current document.          | `[]`
 
 
-## Display Control
-
 ### setRowAndColumn()
 
 Set rows and columns of displayed pages.
@@ -956,8 +937,6 @@ browseViewer.setRowAndColumn(5,8); // Display the page in five rows and eight co
 **Remark**
 
 - If it is not specified in [`viewerConfig`]({{ site.api }}interface/browseviewerconstructoroptions.html#viewerconfig) while creating the viewer additionally, its default rows is 4 and columns is 6.
-
-## Edit Operations
 
 ### rotate()
 
@@ -1034,7 +1013,6 @@ browseViewer.saveOperations();
 --------|-----------------------------------------------------|-----------------
  -80304 | No document opened.                                 | `false`
 
-## Events
 
 ### on()
 
