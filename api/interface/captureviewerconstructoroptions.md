@@ -27,7 +27,7 @@ interface CaptureViewerConstructorOptions {
 
 - `container`: The container which is used to show the viewer. Its `id` or `HTMLElement` is acceppted.
 
-- `viewerConfig`: The configurations of viewer, please refer to [`CaptureViewerConfig`]({{ site.api }}interface/editviewerconfig.html). If it is not specified, the [default configuration]({{ site.viewer }}viewerconfig.html#editviewerconfig) will be applied.
+- `viewerConfig`: The configurations of viewer, please refer to [`CaptureViewerConfig`]({{ site.api }}interface/editviewerconfig.html). If it is not specified, the [default configuration]({{ site.viewer }}viewerconfig.html#captureviewerconfig) will be applied.
 
 - `uiConfig`: The UI layout configurations of viewer, please refer to [`UiConfig`]({{ site.api }}interface/uiconfig.html). If it is not specified, the [default UI]({{ site.ui }}default_ui.html#capture-viewer) will be applied.
 

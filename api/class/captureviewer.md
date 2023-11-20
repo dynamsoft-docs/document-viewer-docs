@@ -18,7 +18,7 @@ permalink: /api/class/captureviewer.html
 
 | API Name       | Description                                   |
 | ------------ | --------------------------------------------- |
-| [`CaptureViewer()`](#editviewer) | Default constructor of an `CaptureViewer` object. |
+| [`CaptureViewer()`](#captureviewer) | Default constructor of an `CaptureViewer` object. |
 | [`destroy()`](#destroy)             | Destroy the `CaptureViewer` object.                             |
 
 **Viewer Control**
@@ -126,9 +126,9 @@ const captureViewer = new Dynamsoft.DDV.CaptureViewer({
 
  Error Code | Description                                                  
  ---------- | ------------------------------------------------------------ 
- -80315     | DocumentDetect needs to be configured to enable the document detection feature. 
+ -80315     | DocumentDetect needs to be configured by Dynamsoft.DDV.setProcessingHandler to enable the document detection feature. 
 
- ### destroy()
+### destroy()
 
 Destroy the `CaptureViewer` object.
 
@@ -319,7 +319,7 @@ getUiConfig(): UiConfig;
 
 **Return Value**
 
-The [`UiConfig`]({{ site.api }}interface/idocument.html) object.
+The [`UiConfig`]({{ site.api }}interface/uiconfig.html) object.
 
 **Code Snippet**
 
@@ -353,7 +353,7 @@ updateUiConfig(uiConfig: UiConfig): boolean;
 const viewerUi = Dynamsoft.DDV.getDefaultUiConfig("captureViewer");
 const header = viewerUi.children[0];
 header.children.splice(0,1); //Remove Resolution element
-captureViewer.updateUiConfig(viewerUI);
+captureViewer.updateUiConfig(viewerUi);
 ```
 
 **Warning**
@@ -805,7 +805,7 @@ captureViewer.enableAutoCapture = true;
 
 **Remark** 
 
-- The default value is false.
+- If it is not specified in [`viewerConfig`]() while creating the viewer additionally, the default value is `false`.
 - If the auto detect is disabled, it will automatically capture a frame every 3 seconds by default.
 - If the auto detect is enabled, automatic capturing will only be performed when the detection result meets expectations. See also [`enableAutoDetect`](#enableautodetect).
 
@@ -834,7 +834,7 @@ captureViewer.enableAutoDetect = true;
 
 **Remark**
 
-- The default value is false. 
+- If it is not specified in [`viewerConfig`]() while creating the viewer additionally, the default value is `false`. 
 - This API only takes effect when [`DocumentDetect`]() is set by [`setProcessingHandler()`]().
 
 ### acceptedPolygonConfidence
@@ -861,7 +861,7 @@ captureViewer.acceptedPolygonConfidence = 60;
 
 **Remark**
 
-- The default value is 80. 
+- If it is not specified in [`viewerConfig`]() while creating the viewer additionally, the default value is 80. 
 - The range of available values is 0-100 on a percentage scale.
 - The higher the setting, the more accurate the automatic border detection.
 
@@ -889,8 +889,8 @@ captureViewer.maxFrameNumber = 3;
 
 **Remark**
 
-- The default value is 10. 
-- The value range is 1 to 60.
+- If it is not specified in [`viewerConfig`]() while creating the viewer additionally, the default value is 10. 
+- The value range is (0,60].
 
 ## Events
 
