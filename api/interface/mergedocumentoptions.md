@@ -16,11 +16,33 @@ permalink: /api/interface/mergedocumentoptions.html
 
 ```typescript
 interface MergeDocumentOptions {
-    name?: string; // Specify the name of the new document.
-    author?: string; // Specify the author of the new document.
-    creationDate?: string; // Specify the creation date. Note that the argument should be 'D:YYYYMMDDHHmmSS', like 'D:20230101085959'.
-    deleteOriginal?: boolean; // Whether to delete the original documents. Default: false
+    name?: string; 
+    author?: string; 
+    creationDate?: string; 
+    deleteOriginal?: boolean; 
 }
 ```
 
 ## Attributes
+
+### name
+
+Specify the name of the new merged document.
+
+### author
+
+Specify the author of the new merged document.
+
+### creationDate
+
+Specify the creation date of the new merged document. Please note that the argument should be `D:YYYYMMDDHHmmSS`, like `D:20230101085959`.
+
+### deleteOriginal
+
+Specify whether to delete the original documents. 
+
+Default value: `false`
+
+## Related
+
+- [`mergeDocuments()`]({{ site.api }}class/documentmanager.html#mergedocuments)

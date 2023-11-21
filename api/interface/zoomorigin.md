@@ -23,17 +23,21 @@ interface ZoomOrigin {
 
 ## Attributes
 
-- `x`: Specify the origin of x-coordinate.
+### x
 
-    Supported value: `center`, `start`, `end`
+Specify the origin of x-coordinate.
 
-    Default value: `center`
+Supported value: `center`, `start`, `end`
 
-- `y`: Specify the origin of y-coordinate.
+Default value: `center`
 
-    Supported value: `center`, `start`, `end`
-    
-    Default value: `center`
+### y
+
+Specify the origin of y-coordinate.
+
+Supported value: `center`, `start`, `end`
+
+Default value: `center`
 
 
 ![Zoom Origin](/assets/imgs/zoomorigin.png)    

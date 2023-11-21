@@ -22,3 +22,29 @@ interface BaseStyle {
 ```
 
 ## Attributes
+
+### border
+
+The border style contains three parts, borderWidth, borderStyle and borderColor.
+
+Only takes effect when set borderWidth, borderStyle and borderColor at the same time.
+
+borderWidth only supports `px` unit.
+
+borderStyle only supports `dashed`, `solid`.
+
+**Example**
+
+```typescript
+border: "2px dashed red", 
+```
+
+### background
+
+The background style.
+
+**Example**
+
+```typescript
+background: "rgba(255,255,255,0)", 
+```

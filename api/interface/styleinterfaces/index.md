@@ -12,10 +12,14 @@ permalink: /api/interface/styleinterface/index.html
 
 # Style Interfaces
 
-
-
-- [`BaseStyle`]({{ site.api }}interface/styleinterface/basestyle.html)
-- [`CanvasStyle`]({{ site.api }}interface/styleinterface/canvasstyle.html)
-- [`CheckboxStyle`]({{ site.api }}interface/styleinterface/checkboxstyle.html)
-- [`PageNumberStyle`]({{ site.api }}interface/styleinterface/pagenumberstyle.html)
-- [`QuadSelectionStyle`]({{ site.api }}interface/styleinterface/quadselectionstyle.html)
+| Style Name           | Style Interface                                              |
+| -------------------- | ------------------------------------------------------------ |
+| `pageStyle`          | [`BaseStyle`]({{ site.api }}interface/styleinterface/basestyle.html) |
+| `currentPageStyle`     | [`BaseStyle`]({{ site.api }}interface/styleinterface/basestyle.html) |
+| `selectedPageStyle`    | [`BaseStyle`]({{ site.api }}interface/styleinterface/basestyle.html) |
+| `hoveredPageStyle`     | [`BaseStyle`]({{ site.api }}interface/styleinterface/basestyle.html) |
+| `placeholderStyle`     | [`BaseStyle`]({{ site.api }}interface/styleinterface/basestyle.html) |
+| `pageNumberStyle`      | [`PageNumberStyle`]({{ site.api }}interface/styleinterface/pagenumberstyle.html) |
+| `checkboxStyle`        | [`CheckboxStyle`]({{ site.api }}interface/styleinterface/checkboxstyle.html) |
+| `canvasStyle`        | [`CanvasStyle`]({{ site.api }}interface/styleinterface/canvasstyle.html) |
+| `quadSelectionStyle` | [`QuadSelectionStyle`]({{ site.api }}interface/styleinterface/quadselectionstyle.html) |

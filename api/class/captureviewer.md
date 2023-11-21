@@ -617,7 +617,7 @@ getAllCameras(): Promise<VideoDeviceInfo[]>;
 
 **Return value**
 
-A promise resolving to an array of [`VideoConfig`]({{ site.api }}interface/videoconfig.html) objects.
+A promise resolving to an array of [`VideoDeviceInfo`]({{ site.api }}interface/videodeviceinfo.html) objects.
 
 **Code Snippet**
 
@@ -637,7 +637,7 @@ selectCamera(cameraObjectOrDeviceID: VideoDeviceInfo | string): Promise<PlayCall
 
 **Parameters**
 
-`cameraObjectOrDeviceID`: Specify the camera by an object [`VideoConfig`]({{ site.api }}interface/videoconfig.html) or the device id string.
+`cameraObjectOrDeviceID`: Specify the camera by an object [`VideoDeviceInfo`]({{ site.api }}interface/videodeviceinfo.html) or the device id string.
 
 **Return value**
 
@@ -839,7 +839,7 @@ captureViewer.enableAutoDetect = true;
 
 ### acceptedPolygonConfidence
 
-Specify or return the confidence when detecting the border.
+Specify or return the threshold confidence level when detecting boundaries.
 
 **Syntax**
 

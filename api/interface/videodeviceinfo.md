@@ -16,7 +16,23 @@ permalink: /api/interface/videodeviceinfo.html
 
 ```typescript
 interface VideoDeviceInfo {
-	deviceId: string; // An alphanumeric string that uniquely identifies a camera.
-	label: string; //A human-readable string describing the camera.
+	deviceId: string; 
+	label: string;
 }
 ```
+
+## Attributes
+
+### deviceId
+
+An alphanumeric string that uniquely identifies a camera.
+
+### label
+
+A human-readable string describing the camera.
+
+## Related
+
+- [`getAllCameras()`]({{ site.api }}class/captureviewer.html#getallcameras)
+- [`getCurrentCameras()`]({{ site.api }}class/captureviewer.html#getcurrentcamera)
+- [`selectCamera()`]({{ site.api }}class/captureviewer.html#selectcamera)

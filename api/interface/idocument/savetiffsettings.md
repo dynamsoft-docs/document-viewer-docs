@@ -32,9 +32,18 @@ interface SaveTiffSettings {
 
 ## Attributes
 
-- `customTag`: Custom tiff tag(s). Please refer to [CustomTag]({{ site.api }}interface/idocument/customtag.html)
+### customTag
 
-- `compression`: Specify the compression type. Please refer to [EnumTiffCompressionType]({{ site.api }}enumeration/enumtiffcompressiontype.html).
+Custom tiff tag(s). Please refer to [CustomTag]({{ site.api }}interface/idocument/customtag.html)
 
-- `quality`: Specify the quality of the images in the file. The value ranges from 0 to 100. Only valid when the `compression` is 'JPEG'.
+### compression
 
+Specify the compression type. Please refer to [EnumTiffCompressionType]({{ site.api }}enumeration/enumtiffcompressiontype.html).
+
+### quality
+
+Specify the quality of the images in the file. The value ranges from 0 to 100. Only valid when the `compression` is 'JPEG'.
+
+## Related
+
+- [`saveToTiff()`]({{ site.api }}interface/idocument/index.html#savetotiff)

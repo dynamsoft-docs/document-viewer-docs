@@ -25,18 +25,26 @@ interface Rect {
 
 ## Attributes
 
-- `left`: The x-coordinate of the upper-left corner of the area.
+### left
 
-- `top`: The y-coordinate of the upper-left corner of the area.
+The x-coordinate of the upper-left corner of the area.
 
-- `width`: The width of the rectangle area. The unit is pixel.
+### top
 
-- `height`: The height of the rectangle area. The unit is pixel.
+The y-coordinate of the upper-left corner of the area.
+
+### width 
+
+The width of the rectangle area. The unit is pixel.
+
+### height
+
+The height of the rectangle area. The unit is pixel.
 
 ![Rect](/assets/imgs/rect.png)
 
-## Related APIs
+## Related
 
 - [`crop()`]({{ site.api }}class/editviewer.html#crop)
-- [`getCropRect`]({{ site.api }}class/editviewer.html#getcroprect)
-- [`setCropRect`]({{ site.api }}class/editviewer.html#setcroprect)
+- [`getCropRect()`]({{ site.api }}class/editviewer.html#getcroprect)
+- [`setCropRect()`]({{ site.api }}class/editviewer.html#setcroprect)

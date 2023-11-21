@@ -19,6 +19,29 @@ interface PerspectiveViewerConfig {
 	canvasStyle?: CanvasStyle;
 	pageStyle?: BaseStyle;
 	quadSelectionStyle?: QuadSelectionStyle;    
-	enableSlide?: boolean; // Whether allow to slide the pages, default: true
+	enableSlide?: boolean; 
 }
 ```
+
+## Attributes
+
+### canvasStyle
+
+The style of canvas of the viewer. Please refer to [`CanvasStyle`]({{ site.api }}interface/styleinterface/canvasstyle.html).
+
+### pageStyle
+
+The style of displayed page in the viewer. Please refer to [`BaseStyle`]({{ site.api }}interface/styleinterface/basestyle.html).
+
+### quadSelectionStyle
+
+The style of quadrilateral selection. Please refer to [`QuadSelectionStyle`]({{ site.api }}interface/styleinterface/quadselectionstyle.html).
+
+### enableSlide
+
+Specify whether allow to slide the pages.
+
+
+## Related
+
+- [`PerspectiveViewerConstructorOptions`]({{ site.api }}interface/perspectiveviewerconstructoroptions.html)

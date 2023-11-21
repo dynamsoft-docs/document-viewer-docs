@@ -45,3 +45,7 @@ The configurations of integrated thumbnail, please refer to [`ThumbnailConfig`](
 ### groupUid
 
 The uid of viewers' group. Please refer to [Data synchronisation between viewers](). If it is not specified, a random groupUid will be generated.
+
+## Related
+
+- [`EditViewer()`]({{ site.api }}class/editviewer.html#editviewer)

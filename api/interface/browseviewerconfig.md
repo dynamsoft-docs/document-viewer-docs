@@ -18,17 +18,81 @@ permalink: /api/interface/browseviewerconfig.html
 interface BrowseViewerConfig {
     canvasStyle?: CanvasStyle;
     pageStyle?: BaseStyle;
-    currentPageStyle?: BaseStyle; // only border effective
+    currentPageStyle?: BaseStyle;
     selectedPageStyle?: BaseStyle;
     hoveredPageStyle?: BaseStyle;
     placeholderStyle?: BaseStyle;
     pageNumberStyle?: PageNumberStyle;
     checkboxStyle?: CheckboxStyle;
-    rows?: number; //The number of rows
-    columns?: number; //The number of columns
-    multiselectMode?: boolean; //Whether can select multiple pages at one time
-    scrollToLatest?: boolean; // Auto set the latest loaded page as the current page
-    enableDragPage?: boolean; // Whether to allow drag&drop pages
-    scrollDirection?: string; // The scroll direction, supports "horizontal", "vertical"
+    rows?: number;
+    columns?: number; 
+    multiselectMode?: boolean; 
+    scrollToLatest?: boolean;
+    enableDragPage?: boolean;
+    scrollDirection?: string; 
 }
 ```
+
+## Attributes
+
+### canvasStyle
+
+The style of canvas of the viewer. Please refer to [`CanvasStyle`]({{ site.api }}interface/styleinterface/canvasstyle.html).
+
+### pageStyle
+
+The style of displayed page in the viewer. Please refer to [`BaseStyle`]({{ site.api }}interface/styleinterface/basestyle.html).
+
+### currentPageStyle
+
+The style of current page in the viewer. Please refer to [`BaseStyle`]({{ site.api }}interface/styleinterface/basestyle.html).
+
+### selectedPageStyle
+
+The style of selected page in the viewer. Please refer to [`BaseStyle`]({{ site.api }}interface/styleinterface/basestyle.html).
+
+### hoveredPageStyle
+
+The style of the page which is hovered by mouse pointer in the viewer. Please refer to [`BaseStyle`]({{ site.api }}interface/styleinterface/basestyle.html).
+
+### placeholderStyle
+
+The style of the placeholder when the page is dragged. Please refer to [`BaseStyle`]({{ site.api }}interface/styleinterface/basestyle.html).
+
+### pageNumberStyle
+
+The style of page number. Please refer to [`PageNumberStyle`]({{ site.api }}interface/styleinterface/pagenumberstyle.html).
+
+### checkboxStyle
+
+The style of checkbox. Please refer to [`CheckboxStyle`]({{ site.api }}interface/styleinterface/checkboxstyle.html).
+
+### rows
+
+The number of rows. The maximum value is 20.
+
+### columns
+
+The number of columns. The maximum value is 20.
+
+### multiselectMode
+
+Specify whether to allow multiple pages to be selected at once.
+
+### scrollToLatest
+
+Specify whether to scroll to latest page automatically when importing new pages.
+
+### enableDragPage
+
+Specify whether to allow drag&drop page feature in the viewer.
+
+### scrollDirection
+
+Specify the scroll direction, supported values are `horizontal`, `vertical`.
+
+![scrollDirection BrowseViewer](/assets/imgs/scrollDirection-browse.png)
+
+## Related
+
+- [`BrowseViewerConstructorOptions`]({{ site.api }}interface/browseviewerconstructoroptions.html)
