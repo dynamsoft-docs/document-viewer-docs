@@ -23,6 +23,7 @@ permalink: /api/interface/index.html
     - [`SavePdfSettings`]({{ site.api }}interface/idocument/savepdfsettings.html)
     - [`CustomTag`]({{ site.api }}interface/idocument/customtag.html)
 - Style Interfaces
+    
     | Style Name           | Style Interface                                              |
     | -------------------- | ------------------------------------------------------------ |
     | `pageStyle`          | [`BaseStyle`]({{ site.api }}interface/styleinterface/basestyle.html) |
@@ -34,6 +35,7 @@ permalink: /api/interface/index.html
     | `checkboxStyle`        | [`CheckboxStyle`]({{ site.api }}interface/styleinterface/checkboxstyle.html) |
     | `canvasStyle`        | [`CanvasStyle`]({{ site.api }}interface/styleinterface/canvasstyle.html) |
     | `quadSelectionStyle` | [`QuadSelectionStyle`]({{ site.api }}interface/styleinterface/quadselectionstyle.html) |
+
 - [`CreateDocumentOptions`]({{ site.api }}interface/createdocumentoptions.html)
 - [`MergeDocumentOptions`]({{ site.api }}interface/mergedocumentoptions.html)
 - [`TransferOptions`]({{ site.api }}interface/transferoptions.html)
