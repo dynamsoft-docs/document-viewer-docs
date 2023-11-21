@@ -12,7 +12,7 @@ permalink: /api/interface/ibrowseviewer.html
 
 # IBrowseViewer
 
-This interface that defines a thumbnail object and this object will be created automatically as soon as an `EditViewer` instance is created.
+This interface that defines a thumbnail object and this object will be created automatically as soon as an [`EditViewer`]({{ site.api }}class/editviewer.html#editviewer) instance is created.
 
 **Code Snippet**
 
