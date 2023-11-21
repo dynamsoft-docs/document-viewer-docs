@@ -16,9 +16,23 @@ permalink: /api/interface/transferoptions.html
 
 ```typescript
 interface TransferOptions {
-    sourceIndices? : number[]; // The array of pages indices to be moved or copied. If not set, means all pages.
-    insertBeforeIndex? : number; // The moved or copied pages will be placed before this index. If not set, the specified page(s) will be moved after the last page.
+    sourceIndices? : number[];
+    insertBeforeIndex? : number;
 }
 ```
 
 ## Attributes
+
+### sourceIndices
+
+The array of pages indices to be moved or copied. If it is not specified, all pages will be moved or copied.
+
+### insertBeforeIndex
+
+The moved or copied pages will be placed before this index. If it is not specified, the specified page(s) will be moved or copied after the last page.
+
+
+## Related
+
+- [`copyPagesToDocument()`]({{ site.api }}class/documentmanager.html#copypagestodocument)
+- [`movePagesToDocument()`]({{ site.api }}class/documentmanager.html#movepagestodocument)

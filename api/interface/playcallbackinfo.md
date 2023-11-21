@@ -16,8 +16,26 @@ permalink: /api/interface/playcallbackinfo.html
 
 ```typescript
 interface PlayCallbackInfo {
-	deviceId: string; //The ID of the currently used camera.
-	width: number; //The width (in pixels) of the video input.
-	height: number; //The height (in pixels) of the video input.
+	deviceId: string;
+	width: number;
+	height: number; 
 }
 ```
+
+## Attributes
+
+### deviceId
+
+The ID of the currently used camera.
+
+### width
+
+The width (in pixels) of the video input.
+
+### height
+
+The height (in pixels) of the video input.
+
+## Related
+
+- [`selectCamera()`]({{ site.api }}class/captureviewer.html#selectcamera)

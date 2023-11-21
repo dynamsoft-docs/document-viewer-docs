@@ -35,3 +35,5 @@ interface CustomTag {
 The content of the tags can be plain text or a base64-encoded string. If it’s encoded, it’ll be decoded when generating the TIFF file.
 
 ## Related
+
+- [`SaveTiffSettings`]({{ site.api }}interface/idocument/savetiffsettings.html)

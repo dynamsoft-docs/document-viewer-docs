@@ -22,4 +22,10 @@ interface SaveJpegSettings {
 
 ## Attributes
 
-- `quality`: Specify the quality for JPEG compression. The value ranges from 0 to 100, default value is 80.
+### quality
+
+Specify the quality for JPEG compression. The value range is [0, 100], default value is 80.
+
+## Related
+
+- [`saveToJpeg()`]({{ site.api }}interface/idocument/index.html#savetojpeg)

@@ -22,12 +22,18 @@ permalink: /api/interface/index.html
     - [`SaveTiffSettings`]({{ site.api }}interface/idocument/savetiffsettings.html)
     - [`SavePdfSettings`]({{ site.api }}interface/idocument/savepdfsettings.html)
     - [`CustomTag`]({{ site.api }}interface/idocument/customtag.html)
-- [Style Interfaces]({{ site.api }}interface/styleinterface/index.html)
-    - [`BaseStyle`]({{ site.api }}interface/styleinterface/basestyle.html)
-    - [`CanvasStyle`]({{ site.api }}interface/styleinterface/canvasstyle.html)
-    - [`CheckboxStyle`]({{ site.api }}interface/styleinterface/checkboxstyle.html)
-    - [`PageNumberStyle`]({{ site.api }}interface/styleinterface/pagenumberstyle.html)
-    - [`QuadSelectionStyle`]({{ site.api }}interface/styleinterface/quadselectionstyle.html)
+- Style Interfaces
+    | Style Name           | Style Interface                                              |
+    | -------------------- | ------------------------------------------------------------ |
+    | `pageStyle`          | [`BaseStyle`]({{ site.api }}interface/styleinterface/basestyle.html) |
+    | `currentPageStyle`     | [`BaseStyle`]({{ site.api }}interface/styleinterface/basestyle.html) |
+    | `selectedPageStyle`    | [`BaseStyle`]({{ site.api }}interface/styleinterface/basestyle.html) |
+    | `hoveredPageStyle`     | [`BaseStyle`]({{ site.api }}interface/styleinterface/basestyle.html) |
+    | `placeholderStyle`     | [`BaseStyle`]({{ site.api }}interface/styleinterface/basestyle.html) |
+    | `pageNumberStyle`      | [`PageNumberStyle`]({{ site.api }}interface/styleinterface/pagenumberstyle.html) |
+    | `checkboxStyle`        | [`CheckboxStyle`]({{ site.api }}interface/styleinterface/checkboxstyle.html) |
+    | `canvasStyle`        | [`CanvasStyle`]({{ site.api }}interface/styleinterface/canvasstyle.html) |
+    | `quadSelectionStyle` | [`QuadSelectionStyle`]({{ site.api }}interface/styleinterface/quadselectionstyle.html) |
 - [`CreateDocumentOptions`]({{ site.api }}interface/createdocumentoptions.html)
 - [`MergeDocumentOptions`]({{ site.api }}interface/mergedocumentoptions.html)
 - [`TransferOptions`]({{ site.api }}interface/transferoptions.html)

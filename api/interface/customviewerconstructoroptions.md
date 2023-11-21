@@ -23,6 +23,14 @@ interface CustomViewerConstructorOptions {
 
 ## Attributes
 
-- `container`: The container which is used to show the viewer. Its `id` or `HTMLElement` is acceppted.
+### container
 
-- `uiConfig`: The UI layout configurations of viewer, please refer to [`UiConfig`]({{ site.api }}interface/uiconfig.html).
+The container which is used to show the viewer. Its `id` or `HTMLElement` is acceppted.
+
+### uiConfig
+
+The UI layout configurations of viewer, please refer to [`UiConfig`]({{ site.api }}interface/uiconfig.html).
+
+## Related
+
+- [`CustomViewer()`]({{ site.api }}class/customviewer.html#customviewer)

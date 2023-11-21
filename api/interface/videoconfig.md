@@ -16,7 +16,21 @@ permalink: /api/interface/videoconfig.html
 
 ```typescript
 interface videoConfig {
-    resolution?: [number, number]; // The resolution of the camera video input. If the specified resolution is not exactly supported, the closest resolution will be applied.
-    fill?: boolean; // Whether the video stream fills the viewer.
+    resolution?: [number, number];
+    fill?: boolean; 
 }
 ```
+
+## Attributes
+
+### resolution
+
+The resolution of the camera video input. If the specified resolution is not exactly supported, the closest resolution will be applied.
+
+### fill
+
+Specify whether the video stream fills the viewer.
+
+## Related
+
+- [`play()`]({{ site.api }}class/captureviewer.html#play)

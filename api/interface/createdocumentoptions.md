@@ -23,3 +23,19 @@ interface CreateDocumentOptions {
 ```
 
 ## Attributes
+
+### name
+
+Specify the name of the new document.
+
+### author
+
+Specify the author of the new document.
+
+### creationDate
+
+Specify the creation date of the new document. Please note that the argument should be `D:YYYYMMDDHHmmSS`, like `D:20230101085959`.
+
+## Related
+
+- [`createDocument()`]({{ site.api }}class/documentmanager.html#createdocument)

@@ -25,3 +25,37 @@ interface CaptureViewerConfig {
 	maxFrameNumber?: number; // default: 10
 }
 ```
+
+## Attributes
+
+### canvasStyle
+
+The style of canvas of the viewer. Please refer to [`CanvasStyle`]({{ site.api }}interface/styleinterface/canvasstyle.html).
+
+### quadSelectionStyle
+
+The style of rectangular selection. Please refer to [`QuadSelectionStyle`]({{ site.api }}interface/styleinterface/quadselectionstyle.html).
+
+### enableTorch
+
+Specify whether to turn on the flashlight.
+
+### enableAutoCapture
+
+Specify whether to enable automatic capture. 
+
+### enableAutoDetect
+
+Specify whether to enable automatic border detection in video stream.
+
+### acceptedPolygonConfidence
+
+Specify the threshold confidence level when detecting boundaries.
+
+### maxFrameNumber
+
+Specify the maximum number of frames detected per second.
+
+## Related
+
+- [`CaptureViewerConstructorOptions`]({{ site.api }}interface/captureviewerconstructoroptions.html)
