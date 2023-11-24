@@ -26,13 +26,13 @@ detect(image: VImageData, config?: DocumentDetectConfig): Promise<DocumentDetect
 
 **Parameters**
 
-`image`: The image which is used to detect boundaries. Please refer to [`VImageData`]().
+`image`: The image which is used to detect boundaries. Please refer to [`VImageData`]({{ site.api }}interface/vimagedata.html).
 
-`config`: The configuration of document detect. Please refer to [`DocumentDetectConfig`]().
+`config`: The configuration of document detect. Please refer to [`DocumentDetectConfig`]({{ site.api }}interface/documentdetectconfig.html).
 
 **Return Value**
 
-A promise resolving to an [`DocumentDetectResult`]() object that contains the detected result.
+A promise resolving to an [`DocumentDetectResult`]({{ site.api }}interface/documentdetectresult.html) object that contains the detected result.
 
 ### destory()
 

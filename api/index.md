@@ -12,10 +12,13 @@ permalink: /api/index.html
 
 # API Reference
 
-## Class
+## Namespaces
 
-- [`DDV`]({{ site.api }}class/ddv.html)
-- [`DDV.Elements`]({{ site.api }}class/ddv_elements.html)
+- [`Dynamsoft.DDV`]({{ site.api }}namespace/ddv.html)
+- [`Dynamsoft.DDV.Elements`]({{ site.api }}namespace/ddv_elements.html)
+
+## Classes
+
 - [DocumentManager]({{ site.api }}class/documentmanager.html)
 - [EditViewer]({{ site.api }}class/editviewer.html)
 - [CaptureViewer]({{ site.api }}class/captureviewer.html)
@@ -23,7 +26,11 @@ permalink: /api/index.html
 - [BrowseViewer]({{ site.api }}class/browseviewer.html)
 - [CustomViewer]({{ site.api }}class/customviewer.html)
 
-## Interface
+- Advanced
+    - [ImageFilter]({{ site.api }}class/advanced/imagefilter.html)
+    - [DocumentDetect]({{ site.api }}class/advanced/documentdetect.html)
+
+## Interfaces
 
 - [`IDocument`]({{ site.api }}interface/idocument/index.html)
     - [`Source`]({{ site.api }}interface/idocument/source.html)
@@ -36,7 +43,7 @@ permalink: /api/index.html
     - [`SavePdfSettings`]({{ site.api }}interface/idocument/savepdfsettings.html)
     - [`CustomTag`]({{ site.api }}interface/idocument/customtag.html)
 - Style Interfaces
-    
+
     | Style Name           | Style Interface                                              |
     | -------------------- | ------------------------------------------------------------ |
     | `pageStyle`          | [`BaseStyle`]({{ site.api }}interface/styleinterface/basestyle.html) |
@@ -49,6 +56,8 @@ permalink: /api/index.html
     | `canvasStyle`        | [`CanvasStyle`]({{ site.api }}interface/styleinterface/canvasstyle.html) |
     | `quadSelectionStyle` | [`QuadSelectionStyle`]({{ site.api }}interface/styleinterface/quadselectionstyle.html) |
 
+- [`Configuration`]({{ site.api }}interface/configuration.html)
+- [`ConfigResult`]({{ site.api }}interface/configresult.html)
 - [`CreateDocumentOptions`]({{ site.api }}interface/createdocumentoptions.html)
 - [`MergeDocumentOptions`]({{ site.api }}interface/mergedocumentoptions.html)
 - [`TransferOptions`]({{ site.api }}interface/transferoptions.html)
@@ -68,7 +77,18 @@ permalink: /api/index.html
 - [`BrowseViewerConstructorOptions`]({{ site.api }}interface/browseviewerconstructoroptions.html)
 - [`BrowseViewerConfig`]({{ site.api }}interface/browseviewerconfig.html)
 - [`CustomViewerConstructorOptions`]({{ site.api }}interface/customviewerconstructoroptions.html)
+- [`Tooltip`]({{ site.api }}interface/tooltip.html)
+- [`DisplayTextConfig`]({{ site.api }}interface/displaytextconfig.html)
 - [`UiConfig`]({{ site.api }}interface/uiconfig.html)
+- [`DDVError`]({{ site.api }}interface/ddverror.html)
+- [`VError`]({{ site.api }}interface/verror.html)
+- [`VImageData`]({{ site.api }}interface/vimagedata.html)
+- [`IImageFilter`]({{ site.api }}interface/iimagefilter.html)
+- [`ImageFilterItem`]({{ site.api }}interface/imagefilteritem.html)
+- [`IDocumentDetect`]({{ site.api }}interface/idocumentdetect.html)
+- [`DocumentDetectConfidence`]({{ site.api }}interface/documentdetectconfidence.html)
+- [`DocumentDetectConfig`]({{ site.api }}interface/documentdetectconfig.html)
+- [`DocumentDetectResult`]({{ site.api }}interface/documentdetectresult.html)
 
 ## Enumeration & Type
 
@@ -76,9 +96,12 @@ permalink: /api/index.html
 - [`EnumPdfCompressionType`]({{ site.api }}enumeration-type/enumpdfcompressiontype.html)
 - [`EnumTiffCompressionType`]({{ site.api }}enumeration-type/enumtiffcompressiontype.html)
 - [`EnumConvertMode`]({{ site.api }}enumeration-type/enumconvertmode.html)
+- [`EnumImageDataType`]({{ site.api }}enumeration-type/enumimagedatatype.html)
+- [`EnumImageFilterType`]({{ site.api }}enumeration-type/enumimagefiltertype.html)
+- [`EnumDocumentDetectionStatus`]({{ site.api }}enumeration-type/enumdocumentdetectionstatus.html)
 - [`type Quad`]({{ site.api }}enumeration-type/quad.html)
 
 ## Error
 
-- [Error List]()
+- [Error List]({{ site.api }}errorlist.html)
 

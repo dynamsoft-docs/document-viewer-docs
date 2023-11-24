@@ -33,4 +33,4 @@ The UUID of the client device. Please refer to [Client UUID](https://www.dynamso
 
 ## Related
 
-- [`setConfig()`]()
+- [`setConfig()`]({{ site.api }}namespace/ddv.html#static-setconfig)

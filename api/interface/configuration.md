@@ -38,4 +38,4 @@ Specify a human-readable name that identifies the device. This name will appear 
 
 ## Related
 
-- [`setConfig()`]()
+- [`setConfig()`]({{ site.api }}namespace/ddv.html#static-setconfig)
