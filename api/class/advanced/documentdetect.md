@@ -20,11 +20,11 @@ The APIs for this class include:
 
  API Name                   | Description                                 
 ----------------------------|---------------------------------------------
- detect()                   | Detect the boundaries quadrangle.                   
- processDetectResult()      | Process the detected result.                
- getStatusMsg()             | Get the message of status during detection. 
- calculateConfidence()      | Calculate individual confidence.            
- calculateTotalConfidence() | Calculate total confidence.                 
+ [`detect()`](#detect)                   | Detect the boundaries quadrangle.                   
+ [`processDetectResult()`](#processdetectresult)      | Process the detected result.                
+ [`getStatusMsg()`](#getstatusmsg)             | Get the message of status during detection. 
+ [`calculateConfidence()`](#calculateconfidence)      | Calculate individual confidence.            
+ [`calculateTotalConfidence()`](#calculatetotalconfidence) | Calculate total confidence.                 
 
 ## detect()
 
@@ -38,7 +38,7 @@ detect(image: VImageData, config?: DocumentDetectConfig): Promise<DocumentDetect
 
 **Parameters**
 
-`image`: The image which is used to detect boundaries. Please refer to [`VImageData`]({{ site.api }}interface/vimagedata.html).
+`image`: The image to detect boundaries. Please refer to [`VImageData`]({{ site.api }}interface/vimagedata.html).
 
 `config`: The configuration of document detect. Please refer to [`DocumentDetectConfig`]({{ site.api }}interface/documentdetectconfig.html).
 

@@ -10,7 +10,7 @@ description: Dynamsoft Document Viewer Documentation API Reference Interface Ind
 permalink: /api/interface/index.html
 ---
 
-# DDV Interface
+# DDV Interfaces
 
 - [`IDocument`]({{ site.api }}interface/idocument/index.html)
     - [`Source`]({{ site.api }}interface/idocument/source.html)
@@ -23,7 +23,7 @@ permalink: /api/interface/index.html
     - [`SavePdfSettings`]({{ site.api }}interface/idocument/savepdfsettings.html)
     - [`CustomTag`]({{ site.api }}interface/idocument/customtag.html)
 - Style Interfaces
-    
+
     | Style Name           | Style Interface                                              |
     | -------------------- | ------------------------------------------------------------ |
     | `pageStyle`          | [`BaseStyle`]({{ site.api }}interface/styleinterface/basestyle.html) |
@@ -36,6 +36,8 @@ permalink: /api/interface/index.html
     | `canvasStyle`        | [`CanvasStyle`]({{ site.api }}interface/styleinterface/canvasstyle.html) |
     | `quadSelectionStyle` | [`QuadSelectionStyle`]({{ site.api }}interface/styleinterface/quadselectionstyle.html) |
 
+- [`Configuration`]({{ site.api }}interface/configuration.html)
+- [`ConfigResult`]({{ site.api }}interface/configresult.html)
 - [`CreateDocumentOptions`]({{ site.api }}interface/createdocumentoptions.html)
 - [`MergeDocumentOptions`]({{ site.api }}interface/mergedocumentoptions.html)
 - [`TransferOptions`]({{ site.api }}interface/transferoptions.html)
@@ -55,4 +57,15 @@ permalink: /api/interface/index.html
 - [`BrowseViewerConstructorOptions`]({{ site.api }}interface/browseviewerconstructoroptions.html)
 - [`BrowseViewerConfig`]({{ site.api }}interface/browseviewerconfig.html)
 - [`CustomViewerConstructorOptions`]({{ site.api }}interface/customviewerconstructoroptions.html)
+- [`Tooltip`]({{ site.api }}interface/tooltip.html)
+- [`DisplayTextConfig`]({{ site.api }}interface/displaytextconfig.html)
 - [`UiConfig`]({{ site.api }}interface/uiconfig.html)
+- [`DDVError`]({{ site.api }}interface/ddverror.html)
+- [`VError`]({{ site.api }}interface/verror.html)
+- [`VImageData`]({{ site.api }}interface/vimagedata.html)
+- [`IImageFilter`]({{ site.api }}interface/iimagefilter.html)
+- [`ImageFilterItem`]({{ site.api }}interface/imagefilteritem.html)
+- [`IDocumentDetect`]({{ site.api }}interface/idocumentdetect.html)
+- [`DocumentDetectConfidence`]({{ site.api }}interface/documentdetectconfidence.html)
+- [`DocumentDetectConfig`]({{ site.api }}interface/documentdetectconfig.html)
+- [`DocumentDetectResult`]({{ site.api }}interface/documentdetectresult.html)
