@@ -18,18 +18,7 @@ First, we need to know how DDV creates the UI. DDV has an interface named `UiCon
 
 ## Structure
 
-```typescript
-interface UiConfig {
-	type: string; // DDV.Elements.Layout, DDV.Elements.Button, default elements.
-	flexDirection?: string; //"column", "row", only available when type is DDV.Elements.Layout
-	id?: string; //the id of dom element, default: random
-	className?: string; // className of CSS
-	style?: CSSStyleDeclaration; // can cover the original CSS style 
-	tooltip?: string; //tooltip
-	events?: Record<string, string>;
-	children?: (UiConfig | string)[]; // take effect only when type is DDV.Elements.Layout
-}
-```
+Please refer to Interface [`UiConfig`]({{ site.api }}interface/uiconfig.html).
 
 ## How to configure
 
@@ -43,19 +32,19 @@ So simply speaking, the overall UiConfig framework is roughly as follows,
 
 ```typescript
 const mobileEditViewerUiConfig = {
-    type: DDV.Elements.Layout,
+    type: Dynamsoft.DDV.Elements.Layout,
     flexDirection: "column",
     className: "ddv-edit-viewer-mobile",
     children: [
         headerUiConfig,
-        DDV.Elements.MainView, // the view which is used to display the pages
+        Dynamsoft.DDV.Elements.MainView, // the view which is used to display the pages
         footerUiConfig,
     ],
 };
 ```
 
-- When `type` is set to `DDV.Elements.Layout` and flexDirection is `column`, it means the layout is from top to bottom.
-- `DDV.Elements.MainView` is one of the default elements DDV provides. Learn more about default elements.
+- When `type` is set to `Dynamsoft.DDV.Elements.Layout` and flexDirection is `column`, it means the layout is from top to bottom.
+- `Dynamsoft.DDV.Elements.MainView` is one of the default elements DDV provides. Learn more about default elements.
 
 Next, the specific configuration of headerUiConfig, it can be seen that the icons are arranged from left to right, then
 
@@ -65,13 +54,13 @@ Next, the specific configuration of headerUiConfig, it can be seen that the icon
 
 ```typescript
 {
-    type: DDV.Elements.Layout,
+    type: Dynamsoft.DDV.Elements.Layout,
     flexDirection: "row", // since the default value is "row", this line can be left out.
     className: "ddv-edit-viewer-header-mobile",
     children: [
-        DDV.Elements.ThumbnailSwitch,
-        DDV.Elements.Pagination,
-        DDV.Elements.Download,
+        Dynamsoft.DDV.Elements.ThumbnailSwitch,
+        Dynamsoft.DDV.Elements.Pagination,
+        Dynamsoft.DDV.Elements.Download,
     ],
 }
 ```
@@ -83,17 +72,17 @@ Also can know the footerUiConfig is as follows,
 
 ```typescript
 {
-    type: DDV.Elements.Layout,
+    type: Dynamsoft.DDV.Elements.Layout,
     flexDirection: "row", // since the default value is "row", this line can be left out.
     className: "ddv-edit-viewer-footer-mobile",
     children: [
-        DDV.Elements.DisplayMode,
-        DDV.Elements.RotateLeft,
-        DDV.Elements.Crop,
-        DDV.Elements.Filter,
-        DDV.Elements.Undo,
-        DDV.Elements.Delete,
-        DDV.Elements.Load,
+        Dynamsoft.DDV.Elements.DisplayMode,
+        Dynamsoft.DDV.Elements.RotateLeft,
+        Dynamsoft.DDV.Elements.Crop,
+        Dynamsoft.DDV.Elements.Filter,
+        Dynamsoft.DDV.Elements.Undo,
+        Dynamsoft.DDV.Elements.Delete,
+        Dynamsoft.DDV.Elements.Load,
     ],
 }
 ```
@@ -102,31 +91,31 @@ Combining these three parts creates the overall user interface layout.
 
 ```typescript
 const mobileEditViewerUiConfig = {
-    type: DDV.Elements.Layout,
+    type: Dynamsoft.DDV.Elements.Layout,
     flexDirection: "column",
     className: "ddv-edit-viewer-mobile",
     children: [
         {
-            type: DDV.Elements.Layout,
+            type: Dynamsoft.DDV.Elements.Layout,
             className: "ddv-edit-viewer-header-mobile",
             children: [
-                DDV.Elements.ThumbnailSwitch,
-                DDV.Elements.Pagination,
-                DDV.Elements.Download,
+                Dynamsoft.DDV.Elements.ThumbnailSwitch,
+                Dynamsoft.DDV.Elements.Pagination,
+                Dynamsoft.DDV.Elements.Download,
             ],
         },
-        DDV.Elements.MainView,
+        Dynamsoft.DDV.Elements.MainView,
         {
-            type: DDV.Elements.Layout,
+            type: Dynamsoft.DDV.Elements.Layout,
             className: "ddv-edit-viewer-footer-mobile",
             children: [
-                DDV.Elements.DisplayMode,
-                DDV.Elements.RotateLeft,
-                DDV.Elements.Crop,
-                DDV.Elements.Filter,
-                DDV.Elements.Undo,
-                DDV.Elements.Delete,
-                DDV.Elements.Load,
+                Dynamsoft.DDV.Elements.DisplayMode,
+                Dynamsoft.DDV.Elements.RotateLeft,
+                Dynamsoft.DDV.Elements.Crop,
+                Dynamsoft.DDV.Elements.Filter,
+                Dynamsoft.DDV.Elements.Undo,
+                Dynamsoft.DDV.Elements.Delete,
+                Dynamsoft.DDV.Elements.Load,
             ],
         },
     ],

@@ -119,8 +119,8 @@ const captureViewer = new Dynamsoft.DDV.CaptureViewer({
  -80003 | XXX module license is missing.                          
  -80004 | XXX module license version does not match.                                 
  -80005 | Domain does not match the domain bound to the XXX module license.  
- -80050 | DDV.setConfig has not been set up yet.  
- -80051 | DDV.setConfig has not been completed.   
+ -80050 | Dynamsoft.DDV.setConfig has not been set up yet.  
+ -80051 | Dynamsoft.DDV.setConfig has not been completed.   
 
 **Warning**
 
@@ -584,7 +584,7 @@ The Blob of the captured image.
 **Code Snippet**
 
 ```typescript
-const captureViewer = new DDV.CaptureViewer({container: document.getElementById("viewer")});
+const captureViewer = new Dynamsoft.DDV.CaptureViewer({container: document.getElementById("viewer")});
 await captureViewer.play( {
 	 resolution: [1080, 720], 
 	 fill: true, 

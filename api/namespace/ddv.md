@@ -12,7 +12,22 @@ permalink: /api/namespace/ddv.html
 
 # Dynamsoft.DDV
 
-## Classes
+## Index
+
+**Initialization**
+
+| API Name                        | Description                                       |
+| ------------------------------- | ------------------------------------------------- |
+| [`<static> setConfig()`](#static-setconfig)           | Initialize license, engineResourcePath and so on. |
+| [`<static> setProcessingHandler()`](#static-setprocessinghandler) | Set a processing handler to the DDV system.       |
+
+**Members**
+
+| API Name                        | Description                                       |
+| ------------------------------- | ------------------------------------------------- |
+| [`<static> documentManager`](#static-documentmanager)   | [`DocumentManager`]({{ site.api }}class/documentmanager.html) instance.   |
+
+**Classes**
 
 - [DocumentManager]({{ site.api }}class/documentmanager.html)
 - [EditViewer]({{ site.api }}class/editviewer.html)
@@ -22,17 +37,13 @@ permalink: /api/namespace/ddv.html
 - [CustomViewer]({{ site.api }}class/customviewer.html)
 
 - Advanced
-    - [ImageFilter]()
-    - [DocumentDetect]()
-
-## API Index
+    - [ImageFilter]({{ site.api }}class/advanced/imagefilter.html)
+    - [DocumentDetect]({{ site.api }}class/advanced/documentdetect.html)
 
 **Methods**
 
 | API Name                        | Description                                       |
 | ------------------------------- | ------------------------------------------------- |
-| [`<static> setConfig()`](#static-setconfig)           | Initialize license, engineResourcePath and so on. |
-| [`<static> setProcessingHandler()`](#static-setprocessinghandler) | Set a processing handler to the DDV system.       |
 | [`<static> getDefaultUiConfig()`](#static-getdefaultuiconfig)   | Get default UiConfig object.                      |
 | [`<static> clearLastError()`](#static-clearlasterror)       | Clear the last error or warning.                  |
 | [`<static> unload()`](#static-unload)               | Unload all DDV resources.                         |
@@ -58,9 +69,7 @@ permalink: /api/namespace/ddv.html
 | [`warning`](#warning)    | Triggered when any warning occurs . |
 | [`verbose`](#verbose)    | Triggered when DDV is running.      |
 
-
-
-## Methods
+## Initialization
 
 ### `<static>` setConfig()
 
@@ -117,7 +126,7 @@ A `HandlerType` can be one of two types.
 type HandlerType = "documentBoundariesDetect"|"imageFilter";
 ```
 
-`handler`: The handler to set. Please refer to [IDocumentDetect](#idocumentdetect) and [IImageFilter](#iimagefilter).
+`handler`: The handler to set. Please refer to [IDocumentDetect]({{ site.api }}interface/idocumentdetect.html) and [IImageFilter]({{ site.api }}interface/iimagefiler.html).
 
 **Exception**
 
@@ -131,6 +140,33 @@ type HandlerType = "documentBoundariesDetect"|"imageFilter";
 
 - If `documentBoundariesDetect` handler is not set, the default element `Dynamsoft.DDV.Elements.AutoDetect` will be disabled.
 - If `imageFilter` handler is not set, the default element `Dynamsoft.DDV.Elements.Filter` will be disabled.
+
+## Member
+
+### `<static>` documentManager
+
+[`DocumentManager`]({{ site.api }}class/documentmanager.html) instance.
+
+**Code Snippet**
+
+```typescript
+await Dynamsoft.DDV.setConfig({
+    license: "Your-License-String",
+    engineLocation: "Resources/WASM/",
+});
+
+const docManager = Dynamsoft.DDV.documentManager;
+```
+
+## Methods
+
+| API Name                        | Description                                       |
+| ------------------------------- | ------------------------------------------------- |
+| [`<static> setConfig()`](#static-setconfig)           | Initialize license, engineResourcePath and so on. |
+| [`<static> setProcessingHandler()`](#static-setprocessinghandler) | Set a processing handler to the DDV system.       |
+| [`<static> getDefaultUiConfig()`](#static-getdefaultuiconfig)   | Get default UiConfig object.                      |
+| [`<static> clearLastError()`](#static-clearlasterror)       | Clear the last error or warning.                  |
+| [`<static> unload()`](#static-unload)               | Unload all DDV resources.                         |
 
 ### `<static>` getDefaultUiConfig()
 
@@ -168,21 +204,6 @@ const defaultEditUi = Dynamsoft.DDV.getDefaultUiConfig("editViewer");
  -80102 | XXX(ClassName.API): XXX(Parameter Name) is missing.                    | `null`
  -80103 | XXX(ClassName.API): The value for XXX(Parameter Name) is not supported.| `null`
 
-
-### `<static>` lastError
-
-Return the last error or warning.
-
-**Syntax**
-
-```typescript
-static readonly lastError: DDVError;
-```
-
-**Return Values**
-
-A [`DDVError`]() object.
-
 ### `<static>` clearLastError()
 
 Clear the last error or warning.
@@ -207,7 +228,32 @@ Unload all DDV resources.
 static unload(): void;
 ```
 
+## Properties
+
+| API Name                        | Description                                       |
+| ------------------------------- | ------------------------------------------------- |
+| [`<static> lastError `](#static-lasterror)             | Return the last error or warning.                 |
+
+### `<static>` lastError
+
+Return the last error or warning.
+
+**Syntax**
+
+```typescript
+static readonly lastError: DDVError;
+```
+
+**Return Values**
+
+A [`DDVError`]({{ site.api }}interface/ddverror.html) object.
+
 ## Events
+
+| API Name | Description                                        |
+| -------- | -------------------------------------------------- |
+| [`<static> on()`](#on)     | Bind a listener to the specified event.            |
+| [`<static> off()`](#off)    | Unbind event listener(s) from the specified event. |
 
 ### `<static>` on()
 
@@ -272,6 +318,12 @@ Dynamsoft.DDV.off("error");
  -80103 | XXX(ClassName.API): The value for XXX(Parameter Name) is not supported.
 
 ### Integrated Event
+
+| Event Name | Description                         |
+| ---------- | ----------------------------------- |
+| [`error`](#error)      | Triggered when any error occurs.    |
+| [`warning`](#warning)    | Triggered when any warning occurs . |
+| [`verbose`](#verbose)    | Triggered when DDV is running.      |
 
 #### error
 

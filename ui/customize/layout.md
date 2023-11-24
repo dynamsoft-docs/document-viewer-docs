@@ -22,50 +22,50 @@ Without changing the toolbar, only changing the relative position of the toolbar
 
 - **Step one**: Refer to the default UiConfig which is listed on [Default user interface](#) section and reverse two elements in its children. Can use `getDefaultUiConfig` method,
     ```typescript
-    const newUiConfig = DDV.getDefaultUiConfig("editViewer");
+    const newUiConfig = Dynamsoft.DDV.getDefaultUiConfig("editViewer");
     newUiConfig.children.reverse();
     ```
 
     Or modify the default object directly.
     ```typescript
     const newUiConfig = {
-            type: DDV.Elements.Layout,
+            type: Dynamsoft.DDV.Elements.Layout,
             flexDirection: "column",
             className: "ddv-edit-viewer-desktop",
             children: [
-                DDV.Elements.MainView,
+                Dynamsoft.DDV.Elements.MainView,
                 {
-                    type: DDV.Elements.Layout,
+                    type: Dynamsoft.DDV.Elements.Layout,
                     className: "ddv-edit-viewer-header-desktop",
                     children: [
                         {
-                            type: DDV.Elements.Layout,
+                            type: Dynamsoft.DDV.Elements.Layout,
                             children: [
-                                DDV.Elements.ThumbnailSwitch,
-                                DDV.Elements.Zoom,
-                                DDV.Elements.FitMode,
-                                DDV.Elements.DisplayMode,
-                                DDV.Elements.RotateLeft,
-                                DDV.Elements.RotateRight,
-                                DDV.Elements.Crop,
-                                DDV.Elements.Filter,
-                                DDV.Elements.Undo,
-                                DDV.Elements.Redo,
-                                DDV.Elements.DeleteCurrent,
-                                DDV.Elements.DeleteAll,
-                                DDV.Elements.Pan,
+                                Dynamsoft.DDV.Elements.ThumbnailSwitch,
+                                Dynamsoft.DDV.Elements.Zoom,
+                                Dynamsoft.DDV.Elements.FitMode,
+                                Dynamsoft.DDV.Elements.DisplayMode,
+                                Dynamsoft.DDV.Elements.RotateLeft,
+                                Dynamsoft.DDV.Elements.RotateRight,
+                                Dynamsoft.DDV.Elements.Crop,
+                                Dynamsoft.DDV.Elements.Filter,
+                                Dynamsoft.DDV.Elements.Undo,
+                                Dynamsoft.DDV.Elements.Redo,
+                                Dynamsoft.DDV.Elements.DeleteCurrent,
+                                Dynamsoft.DDV.Elements.DeleteAll,
+                                Dynamsoft.DDV.Elements.Pan,
                             ],
                         },
                         {
-                            type: DDV.Elements.Layout,
+                            type: Dynamsoft.DDV.Elements.Layout,
                             children: [
                                 {
-                                    type: DDV.Elements.Pagination,
+                                    type: Dynamsoft.DDV.Elements.Pagination,
                                     className: "ddv-edit-viewer-pagination-desktop",
                                 },
-                                DDV.Elements.Load,
-                                DDV.Elements.Download,
-                                DDV.Elements.Print,
+                                Dynamsoft.DDV.Elements.Load,
+                                Dynamsoft.DDV.Elements.Download,
+                                Dynamsoft.DDV.Elements.Print,
                             ],
                         },
                     ],
@@ -75,7 +75,7 @@ Without changing the toolbar, only changing the relative position of the toolbar
     ```
 - **Step two**: Configure it when creating the new viewer.
     ```typescript
-    const editViewer = new DDV.EditViewer({
+    const editViewer = new Dynamsoft.DDV.EditViewer({
         containerId: "viewer",
         uiConfig: newUiConfig,
     });
@@ -86,7 +86,7 @@ Without changing the toolbar, only changing the relative position of the toolbar
 
 - **Step one**: Get current UiConfig by using method [`getUiConfig()`]().
     ```typescript
-    const editViewer = new DDV.EditViewer({
+    const editViewer = new Dynamsoft.DDV.EditViewer({
         containerId: "viewer",
     });
     const uiConfig = editViewer.getUiConfig();
@@ -106,36 +106,36 @@ Sometimes the requirements don't match the default UI layout at all, then it's a
 
 ```typescript
 const newUiConfig = {
-    type: DDV.Elements.Layout,
+    type: Dynamsoft.DDV.Elements.Layout,
     flexDirection: "row", // Configure the layout to be left to right
     className: "ddv-edit-viewer-desktop",
     children: [
         {
-            type: DDV.Elements.Layout,
+            type: Dynamsoft.DDV.Elements.Layout,
             flexDirection: "column", // Configure Elements layout to be top-down.
             style: {
                 width: "46px", // Set the width of toolbar, you can also set other style configurations here.
             },
             children: [
-                        DDV.Elements.ThumbnailSwitch,
-                        DDV.Elements.FitMode,
-                        DDV.Elements.DisplayMode,
-                        DDV.Elements.RotateLeft,
-                        DDV.Elements.RotateRight,
-                        DDV.Elements.Crop,
-                        DDV.Elements.Filter,
-                        DDV.Elements.Undo,
-                        DDV.Elements.Redo,
-                        DDV.Elements.DeleteCurrent,
-                        DDV.Elements.DeleteAll,
-                        DDV.Elements.Pan,
-                        DDV.Elements.Load,
-                        DDV.Elements.Download,
-                        DDV.Elements.Print,
+                        Dynamsoft.DDV.Elements.ThumbnailSwitch,
+                        Dynamsoft.DDV.Elements.FitMode,
+                        Dynamsoft.DDV.Elements.DisplayMode,
+                        Dynamsoft.DDV.Elements.RotateLeft,
+                        Dynamsoft.DDV.Elements.RotateRight,
+                        Dynamsoft.DDV.Elements.Crop,
+                        Dynamsoft.DDV.Elements.Filter,
+                        Dynamsoft.DDV.Elements.Undo,
+                        Dynamsoft.DDV.Elements.Redo,
+                        Dynamsoft.DDV.Elements.DeleteCurrent,
+                        Dynamsoft.DDV.Elements.DeleteAll,
+                        Dynamsoft.DDV.Elements.Pan,
+                        Dynamsoft.DDV.Elements.Load,
+                        Dynamsoft.DDV.Elements.Download,
+                        Dynamsoft.DDV.Elements.Print,
 
             ],
         },
-        DDV.Elements.MainView,
+        Dynamsoft.DDV.Elements.MainView,
     ],
 }
 ```
@@ -143,7 +143,7 @@ const newUiConfig = {
 And configure the UiConfig when creating the edit viewer.
 
 ```typescript
-const editViewer = new DDV.EditViewer({
+const editViewer = new Dynamsoft.DDV.EditViewer({
     containerId: "viewer",
     uiConfig: newUiConfig,
 });

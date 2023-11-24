@@ -12,9 +12,9 @@ permalink: /api/class/documentmanager.html
 
 # DocumentManager Class
 
-## API Index
+The `Dynamsoft.DDV.documentManager` instance will be created automatically as soon as DDV is initialized. Please refer to [`documentManager`]({{ site.api }}namespace/ddv.html#documentmanager).
 
-The `Dynamsoft.DDV.documentManager` instance will be created automatically as soon as DDV is initialized.
+## API Index
 
 **Methods**
 
@@ -68,7 +68,7 @@ The object of the created document. Please refer to [`IDocument`]({{ site.api }}
 **Code Snippet**
 
 ```typescript
-const firstDoc = DDV.documentManager.createDocument({
+const firstDoc = Dynamsoft.DDV.documentManager.createDocument({
     name: "first_document",
     author: "DDV",
     creationDate: "D:20230101085959",
@@ -105,7 +105,7 @@ deleteDocuments(docUids: string[]): boolean;
 **Code Snippet**
 
 ```typescript
-const firstDoc = DDV.documentManager.createDocument({
+const firstDoc = Dynamsoft.DDV.documentManager.createDocument({
     name: "first_document",
     author: "DDV",
     creationDate: "D:20230101085959",
@@ -113,7 +113,7 @@ const firstDoc = DDV.documentManager.createDocument({
 
 const docUid = firstDoc.uid;
 
-DDV.documentManager.deleteDocuments([docUid]);
+Dynamsoft.DDV.documentManager.deleteDocuments([docUid]);
 ```
 
 **Warning**
@@ -143,7 +143,7 @@ deleteAllDocuments(): boolean;
 **Code Snippet**
 
 ```typescript
-DDV.documentManager.deleteAllDocuments();
+Dynamsoft.DDV.documentManager.deleteAllDocuments();
 ```
 
 ## getDocument()
@@ -167,7 +167,7 @@ The object of the specified document. Please refer to [`IDocument`]({{ site.api 
 **Code Snippet**
 
 ```typescript
-DDV.documentManager.getDocument("lnn0ll9o124");
+Dynamsoft.DDV.documentManager.getDocument("lnn0ll9o124");
 ```
 
 **Exception**
@@ -196,7 +196,7 @@ The array of all documents' objects. Please refer to [`IDocument`]({{ site.api }
 **Code Snippet**
 
 ```typescript
-DDV.documentManager.getAllDocuments();
+Dynamsoft.DDV.documentManager.getAllDocuments();
 ```
 
 **Remark**
@@ -228,13 +228,13 @@ The object of the new document. Please refer to [`IDocument`]({{ site.api }}inte
 
 ```typescript
 
-const firstDoc = DDV.documentManager.createDocument({
+const firstDoc = Dynamsoft.DDV.documentManager.createDocument({
     name: "first_document",
     author: "DDV",
     creationDate: "D:20230101085959",
     });
 
-const secondDoc = DDV.documentManager.createDocument({
+const secondDoc = Dynamsoft.DDV.documentManager.createDocument({
     name: "second_document",
     });
 
@@ -249,10 +249,10 @@ const mergeOptions = {
 };
 
 //Merge these two docs
-DDV.documentManager.mergeDocuments([docUid1, docUid2], mergeOptions);
+Dynamsoft.DDV.documentManager.mergeDocuments([docUid1, docUid2], mergeOptions);
 
 //OR
-DDV.documentManager.mergeDocuments(["lnn0ll9o124", "lnn0iai110t"], mergeOptions);
+Dynamsoft.DDV.documentManager.mergeDocuments(["lnn0ll9o124", "lnn0iai110t"], mergeOptions);
 ```
 
 **Exception**
@@ -291,7 +291,7 @@ const copyOptions = {
     insertBeforeIndex: 0,
 };
 
-DDV.documentManager.copyPagesToDocument("lnn0ll9o124", "lnn0iai110t", copyOptions);
+Dynamsoft.DDV.documentManager.copyPagesToDocument("lnn0ll9o124", "lnn0iai110t", copyOptions);
 ```
 
 **Exception**
@@ -329,7 +329,7 @@ const moveOptions = {
     sourceIndices: [0,1],
     insertBeforeIndex: 0,
 }
-DDV.documentManager.movePagesToDocument("lnn0ll9o124", "lnn0iai110t", moveOptions);
+Dynamsoft.DDV.documentManager.movePagesToDocument("lnn0ll9o124", "lnn0iai110t", moveOptions);
 ```
 
 **Exception**

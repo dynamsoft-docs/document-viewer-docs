@@ -384,7 +384,7 @@ updateUiConfig(uiConfig: UiConfig): boolean;
 **Code Snippet**
 
 ```typescript
-const viewerUi = DDV.getDefaultUiConfig("editViewer");
+const viewerUi = Dynamsoft.DDV.getDefaultUiConfig("editViewer");
 const header = viewerUi.children[0];
 header.children.splice(0,0,Dynamsoft.DDV.Elements.Delete); //Add `Delete` element in header.
 editViewer.updateUiConfig(viewerUi);

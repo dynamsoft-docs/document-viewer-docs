@@ -29,11 +29,11 @@ To change the style and icon of the default elements, can use the properties `st
 
 **Use case**
 
-- Change style and icon of `DDV.Elements.DeleteCurrent`.
+- Change style and icon of `Dynamsoft.DDV.Elements.DeleteCurrent`.
 
     ```typescript
     {
-        type: DDV.Elements.DeleteCurrent,
+        type: Dynamsoft.DDV.Elements.DeleteCurrent,
         className: "ddv-button-done", // can change its icon to your own one
         style: {
             background: "blue", // change its background color
@@ -49,12 +49,12 @@ Most of default elements have their own event, you may need to add new event(s) 
 
 **Use case**
 
-Add an event to `DDV.Elements.Capture`.
+Add an event to `Dynamsoft.DDV.Elements.Capture`.
 
 ```typescript
 //Replace the original capture element in UiConfig with the object below.
 {
-    type: DDV.Elements.Capture,
+    type: Dynamsoft.DDV.Elements.Capture,
     events: {
         click: "myClick";
     },
@@ -65,7 +65,7 @@ const uiConfig = {......};
 */
 
 //Bind the event in the specified viewer.
-const captureViewer = new DDV.CaptureViewer({
+const captureViewer = new Dynamsoft.DDV.CaptureViewer({
         containerId: "viewer",
         uiConfig: uiConfig,
 });
@@ -84,16 +84,16 @@ DDV does not provide the default tooptips to the default elements, developers ca
 
 **Use case**
 
-Add tooltips to `DDV.Elements.RotateLeft` and `DDV.Elements.RotateRight`.
+Add tooltips to `Dynamsoft.DDV.Elements.RotateLeft` and `Dynamsoft.DDV.Elements.RotateRight`.
 
 ```typescript
-const newTooltip = DDV.Elements.getTooltip();
+const newTooltip = Dynamsoft.DDV.Elements.getTooltip();
 newTooltip.RotateLeft = "Rotate left";
 newTooltip.RotateRight = "Rotate right";
 
-DDV.Elements.setTooltip(newTooltip);
+Dynamsoft.DDV.Elements.setTooltip(newTooltip);
 
-const editViewer = new DDV.EditViewer({
+const editViewer = new Dynamsoft.DDV.EditViewer({
     containerId: "viewer", 
 });
 ```
@@ -108,31 +108,31 @@ If any accompanying display texts are required to add or change of the default e
 
 **Use cases**
 
-- Change display texts which are in `DDV.Elements.DisplayMode`.
+- Change display texts which are in `Dynamsoft.DDV.Elements.DisplayMode`.
 
     ![Change display text](/assets/imgs/changedistext.png)
 
     ```typescript
-    const newDisplayText = DDV.Elements.getDisplayTextConfig();
+    const newDisplayText = Dynamsoft.DDV.Elements.getDisplayTextConfig();
     newDisplayText.DisplayMode_ContinuousPage = "Enable Scrolling";
     newDisplayText.DisplayMode_SinglePage = "Page by page";
-    DDV.Elements.setDisplayTextConfig(newDisplayText);
+    Dynamsoft.DDV.Elements.setDisplayTextConfig(newDisplayText);
 
-    const editViewer = new DDV.EditViewer({
+    const editViewer = new Dynamsoft.DDV.EditViewer({
         containerId: "viewer", 
     });
     ```
 
-- Add display texts to default elements, take `DDV.Elements.Pan` as an example.
+- Add display texts to default elements, take `Dynamsoft.DDV.Elements.Pan` as an example.
 
     ![Add display text](/assets/imgs/adddistext.png)
 
     ```typescript
-    const newDisplayText = DDV.Elements.getDisplayTextConfig();
+    const newDisplayText = Dynamsoft.DDV.Elements.getDisplayTextConfig();
     newDisplayText.Pan = "Pan";
-    DDV.Elements.setDisplayTextConfig(newDisplayText);
+    Dynamsoft.DDV.Elements.setDisplayTextConfig(newDisplayText);
 
-    const editViewer = new DDV.EditViewer({
+    const editViewer = new Dynamsoft.DDV.EditViewer({
         containerId: "viewer", 
     });
     ```
@@ -143,11 +143,11 @@ If any accompanying display texts are required to add or change of the default e
 
     ```typescript
     // Add display text firstly.
-    const newDisplayText = DDV.Elements.getDisplayTextConfig();
+    const newDisplayText = Dynamsoft.DDV.Elements.getDisplayTextConfig();
     newDisplayText.Load = "Load";
     newDisplayText.Download = "Download";
     newDisplayText.Print = "Print";
-    DDV.Elements.setDisplayTextConfig(newDisplayText);
+    Dynamsoft.DDV.Elements.setDisplayTextConfig(newDisplayText);
 
     // Set the relative position by using style-flexDirection of the default element.
     // "column" means below the icon
@@ -155,27 +155,27 @@ If any accompanying display texts are required to add or change of the default e
     // "column-reverse" means above the icon
     const newElements = [
         {
-            type: DDV.Elements.Load,
+            type: Dynamsoft.DDV.Elements.Load,
             style: { flexDirection: "column" }, 
         },
         {
-            type: DDV.Elements.Download,
+            type: Dynamsoft.DDV.Elements.Download,
             style: { flexDirection: "column" }, 
         },
         {            
-            type: DDV.Elements.Print,
+            type: Dynamsoft.DDV.Elements.Print,
             style: { flexDirection: "column" },
         }
     ];
 
-    const viewerUi = DDV.getDefaultUiConfig("editViewer");
+    const viewerUi = Dynamsoft.DDV.getDefaultUiConfig("editViewer");
     const headerPart2 = viewerUi.children[0].children[1]; 
 
     // Use newElements to replace the original ones.
     headerPart2.children.splice(1, 3, ...newElements);
 
     // Create the new viewer with updated uiConfig.
-    const editViewer = new DDV.EditViewer({
+    const editViewer = new Dynamsoft.DDV.EditViewer({
         containerId: "viewer", 
         uiConfig: viewerUi,
     });
@@ -198,7 +198,7 @@ Besides the default elements, you may need to create your own button to call oth
 - Step one: Configure a button UiConfig.
     ```typescript
     const closeButton = {
-        type: DDV.Elements.Button, 
+        type: Dynamsoft.DDV.Elements.Button, 
         className: "ddv-button-close", // Set the button's icon
         tooltip: "close viewer", // Set tooltip for the button
         events: {
@@ -208,11 +208,11 @@ Besides the default elements, you may need to create your own button to call oth
     ```
 - Step two: Place the button in the corresponding positions of the UiConfig and configure the UiConfig when creating the edit viewer.
     ```typescript
-    const uiConfig = DDV.getDefaultUiConfig("editViewer"); // Get the default UiConfig of EditViewer
+    const uiConfig = Dynamsoft.DDV.getDefaultUiConfig("editViewer"); // Get the default UiConfig of EditViewer
     const header = uiConfig.children[0];
     header.children[1].children.splice(4, 0, closeButton); // Add the close button to the header's right
 
-    const editViewer = new DDV.EditViewer({
+    const editViewer = new Dynamsoft.DDV.EditViewer({
         containerId: "viewer",
         uiConfig: uiConfig,
     });

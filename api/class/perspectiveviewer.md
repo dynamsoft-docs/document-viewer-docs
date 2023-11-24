@@ -122,8 +122,8 @@ const perspectiveViewer = new Dynamsoft.DDV.PerspectiveViewer({
  -80003 | XXX module license is missing.                          
  -80004 | XXX module license version does not match.                                 
  -80005 | Domain does not match the domain bound to the XXX module license.  
- -80050 | DDV.setConfig has not been set up yet.  
- -80051 | DDV.setConfig has not been completed.   
+ -80050 | Dynamsoft.DDV.setConfig has not been set up yet.  
+ -80051 | Dynamsoft.DDV.setConfig has not been completed.   
 
 ### destroy()
 
@@ -355,9 +355,9 @@ updateUiConfig(uiConfig: UiConfig): boolean;
 **Code Snippet**
 
 ```typescript
-const viewerUi = DDV.getDefaultUiConfig("perspectiveViewer");
+const viewerUi = Dynamsoft.DDV.getDefaultUiConfig("perspectiveViewer");
 const header = viewerUi.children[0];
-header.children.splice(0,0,DDV.Elements.Load); //Add Load element in header.
+header.children.splice(0,0,Dynamsoft.DDV.Elements.Load); //Add Load element in header.
 perspectiveViewer.updateUiConfig(viewerUi);
 ```
 

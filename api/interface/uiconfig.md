@@ -29,28 +29,17 @@ interface UiConfig {
 
 ## Attributes
 
-<!-- | Attribute       | Type                     |
-| --------------- | ------------------------ |
-| `type`          | `string` &brvbar; `DDV.Elements.Layout` &brvbar; `DDV.Elements.Button` &brvbar; `` |
-| `flexDirection` | `string`                 |
-| `id`            | `string`                 |
-| `className`     | `string`                 |
-| `style`         | `CSSStyleDeclaration`    |
-| `tooltip`       | `string`                 |
-| `events`        | `Record<string, string>` |
-| `children`      | `UiConfig[]` &brvbar; `string[]` | -->
-
 ### type
 
 The type of the element.
 
-Supported value: `Dynamsoft.DDV.Elements.Layout`, `Dynamsoft.DDV.Elements.Button` and [built-in elements]().
+Supported value: `Dynamsoft.DDV.Elements.Layout`, `Dynamsoft.DDV.Elements.Button` and [built-in elements]({{ site.ui }}default_elements.html).
 
 ### flexDirection
 
 The flexDirection of the element. Only takes effect when [`type`](#type) is `Dynamsoft.DDV.Elements.Layout`.
 
-Supported value: `column``, `row`
+Supported value: `column`, `row`
 
 Default value is `row`.
 
@@ -68,11 +57,11 @@ The style which will cover CSS.
 
 ### tooltip
 
-The tooltip of the element. Only takes effect when [`type`](#type) is `Dynamsoft.DDV.Elements.Button` and [built-in elements]().
+The tooltip of the element. Only takes effect when [`type`](#type) is `Dynamsoft.DDV.Elements.Button` and [built-in elements]({{ site.ui }}default_elements.html).
 
 ### events
 
-The event of the element. Only takes effect when [`type`](#type) is `Dynamsoft.DDV.Elements.Button` and [built-in elements]().
+The event of the element. Only takes effect when [`type`](#type) is `Dynamsoft.DDV.Elements.Button` and [built-in elements]({{ site.ui }}default_elements.html).
 
 ### children
 

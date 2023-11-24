@@ -19,7 +19,7 @@ Sometimes, there are requirements that require dynamically changing the layout, 
 
 <!-- - **Step one**: Get current UiConfig by using method [`getUiConfig()`]().
     ```typescript
-    const editViewer = new DDV.EditViewer({
+    const editViewer = new Dynamsoft.DDV.EditViewer({
         containerId: "viewer",
     });
     const uiConfig = editViewer.getUiConfig();
