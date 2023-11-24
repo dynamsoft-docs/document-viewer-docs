@@ -44,7 +44,7 @@ The filter type of the updated page.
 
 **Remark**
 
-- If `imageFilter` handler is not set, the filter type won't be applied to the updated page. Please refer to [`setProcessingHandler()`]().
+- If `imageFilter` handler is not set, the filter type won't be applied to the updated page. Please refer to [`setProcessingHandler()`]({{ site.api }}namespace/ddv.html#static-setprocessinghandler).
 
 ### perspectiveQuad
 

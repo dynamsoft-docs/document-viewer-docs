@@ -33,5 +33,5 @@ The specific original cause of the error or warning. Please refer to [`VError`](
 
 ## Related
 
-- [`lastError`]()
-- [`clearLastError()`]()
+- [`lastError`]({{ site.api }}namespace/ddv.html#static-lasterror)
+- [`clearLastError()`]({{ site.api }}namespace/ddv.html#static-clearlasterror)

@@ -46,7 +46,7 @@ static getTooltip(): Tooltip;
 
 **Return value**
 
-A Tooltip object. Please refer to [`Tooltip`]().
+A Tooltip object. Please refer to [`Tooltip`]({{ site.api }}interface/tooltip.html).
 
 **Example**
 
@@ -66,7 +66,7 @@ static setTooltip(tooltip: Tooltip): boolean;
 
 **Parameters**
 
-`tooltip`: A Tooltip object to set. Please refer to [`Tooltip`]().
+`tooltip`: A Tooltip object to set. Please refer to [`Tooltip`]({{ site.api }}interface/tooltip.html).
 
 **Return Value**
 
@@ -109,7 +109,7 @@ static getDisplayTextConfig(): DisplayTextConfig;
 
 **Return value**
 
-A DisplayTextConfig object. Please refer to [`DisplayTextConfig`]().
+A DisplayTextConfig object. Please refer to [`DisplayTextConfig`]({{ site.api }}interface/displaytextconfig.html).
 
 ### `<static>` setDisplayTextConfig()
 
@@ -123,7 +123,7 @@ static setDisplayTextConfig(displaytextconfig: DisplayTextConfig): boolean;
 
 **Parameters**
 
-`displaytextconfig`: The DisplayTextConfig object to set. Please refer to [`DisplayTextConfig`]().
+`displaytextconfig`: The DisplayTextConfig object to set. Please refer to [`DisplayTextConfig`]({{ site.api }}interface/displaytextconfig.html).
 
 **Return Value**
 

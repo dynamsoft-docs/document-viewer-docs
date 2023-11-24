@@ -69,7 +69,7 @@ Only takes effect when [`type`](#type) is `Dynamsoft.DDV.Elements.Layout`.
 
 ## Related
 
-- [`getDefaultUiConfig()`]()
+- [`getDefaultUiConfig()`]({{ site.api }}namespace/ddv.html#static-getdefaultuiconfig)
 - `getUiConfig()` in 
     - [EditViewer Class]({{ site.api }}class/editviewer.html#getuiconfig)
     - [CaptureViewer Class]({{ site.api }}class/captureviewer.html#getuiconfig)

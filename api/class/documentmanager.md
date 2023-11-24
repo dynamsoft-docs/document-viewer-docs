@@ -82,7 +82,7 @@ const firstDoc = Dynamsoft.DDV.documentManager.createDocument({
  -80100 | XXX(ClassName.API): XXX(Parameter Name) is invalid. 
 
 
-## deleteDocuments()
+### deleteDocuments()
 
 Delete the specified document(s) by the document uid(s).
 
@@ -124,7 +124,7 @@ Dynamsoft.DDV.documentManager.deleteDocuments([docUid]);
  -80102 | XXX(ClassName.API): XXX(Parameter Name) is missing.         | `false`
  -80104 | XXX(ClassName.API): The specified document(s) do not exist. | `false`
 
-## deleteAllDocuments()
+### deleteAllDocuments()
 
 Delete all documents.
 
@@ -146,7 +146,7 @@ deleteAllDocuments(): boolean;
 Dynamsoft.DDV.documentManager.deleteAllDocuments();
 ```
 
-## getDocument()
+### getDocument()
 
 Get the document object with the document uid.
 
@@ -179,7 +179,7 @@ Dynamsoft.DDV.documentManager.getDocument("lnn0ll9o124");
  -80104 | XXX(ClassName.API): The specified document(s) do not exist.
 
 
-## getAllDocuments()
+### getAllDocuments()
 
 Get all documents' objects.
 
@@ -204,7 +204,7 @@ Dynamsoft.DDV.documentManager.getAllDocuments();
 - If there is no document, returns `[]`.
 
 
-## mergeDocuments()
+### mergeDocuments()
 
 Merge specified documents to a new document.
 
@@ -264,7 +264,7 @@ Dynamsoft.DDV.documentManager.mergeDocuments(["lnn0ll9o124", "lnn0iai110t"], mer
  -80104 | XXX(ClassName.API): The specified document(s) do not exist.
  -80201 | docUid does not allow duplicate.     
 
-## copyPagesToDocument()
+### copyPagesToDocument()
 
 Copy pages from a specified document to another document.
 
@@ -303,7 +303,7 @@ Dynamsoft.DDV.documentManager.copyPagesToDocument("lnn0ll9o124", "lnn0iai110t", 
  -80104 | XXX(ClassName.API): The specified document(s) do not exist.
 
 
-## movePagesToDocument()
+### movePagesToDocument()
 
 Move pages from a specified document to another document.
 
