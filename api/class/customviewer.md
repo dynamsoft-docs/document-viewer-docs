@@ -71,8 +71,8 @@ const customViewer = new Dynamsoft.DDV.CustomViewer({
  -80003 | XXX module license is missing.                          
  -80004 | XXX module license version does not match.                                 
  -80005 | Domain does not match the domain bound to the XXX module license.  
- -80050 | DDV.setConfig has not been set up yet.  
- -80051 | DDV.setConfig has not been completed.   
+ -80050 | Dynamsoft.DDV.setConfig has not been set up yet.  
+ -80051 | Dynamsoft.DDV.setConfig has not been completed.   
 
 ### destroy()
 

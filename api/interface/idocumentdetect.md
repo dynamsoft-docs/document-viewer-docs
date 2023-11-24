@@ -12,14 +12,7 @@ permalink: /api/interface/idocumentdetect.html
 
 # IDocumentDetect
 
-<!-- ## Syntax
-
-```typescript
-interface IDocumentDetect {
-    detect(image: VImageData, config?: DocumentDetectConfig): Promise<DocumentDetectResult>;
-    destory(): void;
-}
-``` -->
+It is implemented by [`DocuemntDetect`]({{ site.api }}class/advanced/documentdetect.html) Class.
 
 ## Members
 
@@ -48,7 +41,3 @@ A promise resolving to an [`DocumentDetectResult`]() object that contains the de
 ```typescript
 destory(): void;
 ```
-
-## Related
-
-- [`DocuemntDetect` Class]({{ site.api }}class/advanced/documentdetect.html)

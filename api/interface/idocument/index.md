@@ -109,7 +109,7 @@ readonly pages: string[];
 **Code Snippet**
 
 ```typescript
-const firstDoc = DDV.documentManager.createDocument({
+const firstDoc = Dynamsoft.DDV.documentManager.createDocument({
     name: "first_document",
     author: "DDV",
     creationDate: "D:20230101085959",
@@ -149,7 +149,7 @@ A Promise object which will be resolved with the page uids of the loaded pages w
 **Code Snippet**
 
 ```typescript
-const firstDoc = DDV.documentManager.createDocument({
+const firstDoc = Dynamsoft.DDV.documentManager.createDocument({
     name: "first_document",
     author: "DDV",
     creationDate: "D:20230101085959",
@@ -478,7 +478,7 @@ rename(name: string): boolean;
 **Code Snippet**
 
 ```typescript
-const firstDoc = DDV.documentManager.createDocument({
+const firstDoc = Dynamsoft.DDV.documentManager.createDocument({
     name: "first_document",
     author: "DDV",
     creationDate: "D:20230101085959",

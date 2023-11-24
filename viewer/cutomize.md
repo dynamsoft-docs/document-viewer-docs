@@ -43,7 +43,7 @@ Customize `pageStyle` while creating an edit viewer.
 
  - Step three: Configure the customized viewer config while creating the edti viewer.
     ```typescript
-    const editViewer = new DDV.EditViewer({
+    const editViewer = new Dynamsoft.DDV.EditViewer({
         containerId: "viewer",
         viewerConfig: newViewerConfig,
     });
@@ -60,7 +60,7 @@ Besides customize the initial viewer style, DDV also allows update the styles dy
 Update the `CanvasStyle` after the edit viewer is created.
 
 ```typescript
-const editViewer = new DDV.EditViewer({
+const editViewer = new Dynamsoft.DDV.EditViewer({
     containerId: "viewer",
 });
 
@@ -86,7 +86,7 @@ const newViewerConfig = {
     maxZoom: 64,  // Set the maximum zoom value to 6400%
 };
 
-const editViewer = new DDV.EditViewer({
+const editViewer = new Dynamsoft.DDV.EditViewer({
     containerId: "viewer",
     viewerConfig: newViewerConfig,
 });

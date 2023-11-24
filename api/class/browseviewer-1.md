@@ -166,8 +166,8 @@ const browseViewer = new Dynamsoft.DDV.BrowseViewer({
  -80003 | XXX module license is missing.                          
  -80004 | XXX module license version does not match.                                 
  -80005 | Domain does not match the domain bound to the XXX module license.  
- -80050 | DDV.setConfig has not been set up yet.  
- -80051 | DDV.setConfig has not been completed.   
+ -80050 | Dynamsoft.DDV.setConfig has not been set up yet.  
+ -80051 | Dynamsoft.DDV.setConfig has not been completed.   
 
 ## destroy()
 
@@ -400,14 +400,14 @@ updateUiConfig(uiConfig: UiConfig): boolean;
 
 ```typescript
 const sidebar = {
-    type: DDV.Elements.Layout,
+    type: Dynamsoft.DDV.Elements.Layout,
     flexDirection: "column",
     style: {
         width: "80px",
     },
     children: [
-        DDV.Elements.Load,
-        DDV.Elements.DeleteAll,
+        Dynamsoft.DDV.Elements.Load,
+        Dynamsoft.DDV.Elements.DeleteAll,
     ],
 };
 
@@ -421,22 +421,22 @@ Or,
 
 ```typescript
 const header = {
-    type: DDV.Elements.Layout,
+    type: Dynamsoft.DDV.Elements.Layout,
     style: {
         height: "80px",
     },
     children: [
-        DDV.Elements.Pagination,
-        DDV.Elements.DeleteAll,
+        Dynamsoft.DDV.Elements.Pagination,
+        Dynamsoft.DDV.Elements.DeleteAll,
     ],
 };
 
 const viewerUi =  {
-    type: DDV.Elements.Layout,
+    type: Dynamsoft.DDV.Elements.Layout,
     flexDirection: "column",
     children: [
         header,
-        DDV.Elements.MainView,
+        Dynamsoft.DDV.Elements.MainView,
     ],
 }
 

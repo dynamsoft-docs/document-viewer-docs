@@ -18,26 +18,25 @@ permalink: /api/namespace/ddv_elements.html
 
 | API Name               | Description                                                  |
 | ---------------------- | ------------------------------------------------------------ |
-| [`<static>` `getTooltip()`](#static-gettooltip)           | Get tooltip object of default elements.                      |
-| [`<static>` `setTooltip()`](#static-settooltip)           | Set tooltip to default elements.                             |
-| [`<static>` `getDisplayTextConfig()`](#static-getdisplaytextconfig) | Get DisplayTextConfig object of default elements.            |
+| [`<static>` `getTooltip()`](#static-gettooltip)           | Get tooltip object of built-in elements.                      |
+| [`<static>` `setTooltip()`](#static-settooltip)           | Set tooltip to built-in elements.                             |
+| [`<static>` `getDisplayTextConfig()`](#static-getdisplaytextconfig) | Get DisplayTextConfig object of built-in elements.            |
 | [`<static>` `setDisplayTextConfig()`](#static-setdisplaytextconfig) | Set display text of the default element to your own words or language. |
 
-**Properties**
+**Members**
 
-| Name                   | Description                                                  |
-| ---------------------- | ------------------------------------------------------------ |
-| `Layout`      |            |
-| `Button`      |            |
+- `Dynamsoft.DDV.Elements.Layout`
+- `Dynamsoft.DDV.Elements.Button`
 
 ***Built-in Elements***
 
+Built-in elements have different availability in different types of viewers. They are listed in categories on [Bulit-in Elements]({{ site.ui }}default_elements.html) page, please refer to it.
 
 ## Methods
 
 ### `<static>` getTooltip()
 
-Get Tooltip object of default elements.
+Get Tooltip object of built-in elements.
 
 **Syntax**
 
@@ -57,7 +56,7 @@ const mytooltips = Dynamsoft.DDV.Elements.getTooltip();
 
 ### `<static>` setTooltip()
 
-Set tooltip to default elements.
+Set tooltip to built-in elements.
 
 **Syntax**
 
@@ -100,7 +99,7 @@ static setTooltip(tooltip: Tooltip): boolean;
 
 ### `<static>` getDisplayTextConfig()
 
-Get DisplayTextConfig object of default elements.
+Get DisplayTextConfig object of built-in elements.
 
 **Syntax**
 
@@ -155,4 +154,16 @@ static setDisplayTextConfig(displaytextconfig: DisplayTextConfig): boolean;
 
 - Need to be set before creating viewers.
 
-## Properties
+## Members
+
+### Dynamsoft.DDV.Elements.Layout
+
+One supported type of UiConfig which is used to configure the layout of user interface.
+
+Please refer to [User Interface - Layout]({{ site.ui }}customize/layout.html).
+
+### Dynamsoft.DDV.Elements.Button
+
+One supported type of UiConfig which is used to configure a custom button.
+
+Please refer to [Create your own button]({{ site.ui }}customize/elements.html#create-your-own-button).

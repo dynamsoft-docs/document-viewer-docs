@@ -28,7 +28,7 @@ Dynamsoft Document Viewer Javascript library comes with six primary classes:
 
 ## [DocumentManager Class]({{ site.api }}class/documentmanager.html)
 
-The `Dynamsoft.DDV.documentManager` instance will be created automatically as soon as DDV is initialized.
+The `Dynamsoft.DDV.documentManager` instance will be created automatically as soon as DDV is initialized. Please refer to [`documentManager`]({{ site.api }}namespace/ddv.html#documentmanager).
 
 **Methods**
 
@@ -429,3 +429,8 @@ The `Dynamsoft.DDV.documentManager` instance will be created automatically as so
 <div class="multi-panel-end"></div>
 
 <div class="multi-panel-switching-end"></div>
+
+Besides, there are two advanced classes.
+
+- [ImageFilter]({{ site.api }}class/advanced/imagefilter.html)
+- [DocumentDetect]({{ site.api }}class/advanced/documentdetect.html)

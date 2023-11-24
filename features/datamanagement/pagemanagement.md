@@ -25,7 +25,7 @@ DDV is using `Interface IDocument` to manage the page data.
 
     ```typescript
     // Create a document
-    const docManager = DDV.documentManager;
+    const docManager = Dynamsoft.DDV.documentManager;
     const firstDoc = docManager.createDocument({
         name: "first_document",
         author: "DDV",

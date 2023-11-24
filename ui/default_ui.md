@@ -31,31 +31,31 @@ Default UiConfig:
 
 ```typescript
 {
-    type: DDV.Elements.Layout,
+    type: Dynamsoft.DDV.Elements.Layout,
     flexDirection: "column",
     className: "ddv-edit-viewer-mobile",
     children: [
         {
-            type: DDV.Elements.Layout,
+            type: Dynamsoft.DDV.Elements.Layout,
             className: "ddv-edit-viewer-header-mobile",
             children: [
-                DDV.Elements.Blank,
-                DDV.Elements.Pagination,
-                DDV.Elements.Download,
+                Dynamsoft.DDV.Elements.Blank,
+                Dynamsoft.DDV.Elements.Pagination,
+                Dynamsoft.DDV.Elements.Download,
             ],
         },
-        DDV.Elements.MainView,
+        Dynamsoft.DDV.Elements.MainView,
         {
-            type: DDV.Elements.Layout,
+            type: Dynamsoft.DDV.Elements.Layout,
             className: "ddv-edit-viewer-footer-mobile",
             children: [
-                DDV.Elements.DisplayMode,
-                DDV.Elements.RotateLeft,
-                DDV.Elements.Crop,
-                DDV.Elements.Filter,
-                DDV.Elements.Undo,
-                DDV.Elements.Delete,
-                DDV.Elements.Load,
+                Dynamsoft.DDV.Elements.DisplayMode,
+                Dynamsoft.DDV.Elements.RotateLeft,
+                Dynamsoft.DDV.Elements.Crop,
+                Dynamsoft.DDV.Elements.Filter,
+                Dynamsoft.DDV.Elements.Undo,
+                Dynamsoft.DDV.Elements.Delete,
+                Dynamsoft.DDV.Elements.Load,
             ],
         },
     ],
@@ -70,47 +70,47 @@ Default UiConfig:
 
 ```typescript
 {
-    type: DDV.Elements.Layout,
+    type: Dynamsoft.DDV.Elements.Layout,
     flexDirection: "column",
     className: "ddv-edit-viewer-desktop",
     children: [
         {
-            type: DDV.Elements.Layout,
+            type: Dynamsoft.DDV.Elements.Layout,
             className: "ddv-edit-viewer-header-desktop",
             children: [
                 {
-                    type: DDV.Elements.Layout,
+                    type: Dynamsoft.DDV.Elements.Layout,
                     children: [
-                        DDV.Elements.ThumbnailSwitch,
-                        DDV.Elements.Zoom,
-                        DDV.Elements.FitMode,
-                        DDV.Elements.DisplayMode,
-                        DDV.Elements.RotateLeft,
-                        DDV.Elements.RotateRight,
-                        DDV.Elements.Crop,
-                        DDV.Elements.Filter,
-                        DDV.Elements.Undo,
-                        DDV.Elements.Redo,
-                        DDV.Elements.DeleteCurrent,
-                        DDV.Elements.DeleteAll,
-                        DDV.Elements.Pan,
+                        Dynamsoft.DDV.Elements.ThumbnailSwitch,
+                        Dynamsoft.DDV.Elements.Zoom,
+                        Dynamsoft.DDV.Elements.FitMode,
+                        Dynamsoft.DDV.Elements.DisplayMode,
+                        Dynamsoft.DDV.Elements.RotateLeft,
+                        Dynamsoft.DDV.Elements.RotateRight,
+                        Dynamsoft.DDV.Elements.Crop,
+                        Dynamsoft.DDV.Elements.Filter,
+                        Dynamsoft.DDV.Elements.Undo,
+                        Dynamsoft.DDV.Elements.Redo,
+                        Dynamsoft.DDV.Elements.DeleteCurrent,
+                        Dynamsoft.DDV.Elements.DeleteAll,
+                        Dynamsoft.DDV.Elements.Pan,
                     ],
                 },
                 {
-                    type: DDV.Elements.Layout,
+                    type: Dynamsoft.DDV.Elements.Layout,
                     children: [
                         {
-                            type: DDV.Elements.Pagination,
+                            type: Dynamsoft.DDV.Elements.Pagination,
                             className: "ddv-edit-viewer-pagination-desktop",
                         },
-                        DDV.Elements.Load,
-                        DDV.Elements.Download,
-                        DDV.Elements.Print,
+                        Dynamsoft.DDV.Elements.Load,
+                        Dynamsoft.DDV.Elements.Download,
+                        Dynamsoft.DDV.Elements.Print,
                     ],
                 },
             ],
         },
-        DDV.Elements.MainView,
+        Dynamsoft.DDV.Elements.MainView,
     ],
 };
 ```
@@ -129,33 +129,33 @@ Default UiConfig:
 
 ```typescript
 {
-    type: DDV.Elements.Layout,
+    type: Dynamsoft.DDV.Elements.Layout,
     flexDirection: "column",
     children: [
         {
-            type: DDV.Elements.Layout,
+            type: Dynamsoft.DDV.Elements.Layout,
             className: "ddv-capture-viewer-header-mobile",
             children: [
                 {
                     type: "CameraResolution",
                     className: "ddv-capture-viewer-resolution",
                 },
-                DDV.Elements.Flashlight,
+                Dynamsoft.DDV.Elements.Flashlight,
             ],
         },
-        DDV.Elements.MainView,
+        Dynamsoft.DDV.Elements.MainView,
         {
-            type: DDV.Elements.Layout,
+            type: Dynamsoft.DDV.Elements.Layout,
             className: "ddv-capture-viewer-footer-mobile",
             children: [
-                DDV.Elements.AutoDetect,
-                DDV.Elements.AutoCapture,
+                Dynamsoft.DDV.Elements.AutoDetect,
+                Dynamsoft.DDV.Elements.AutoCapture,
                 {
                     type: "Capture",
                     className: "ddv-capture-viewer-captureButton",
                 },
-                DDV.Elements.ImagePreview,
-                DDV.Elements.CameraConvert,
+                Dynamsoft.DDV.Elements.ImagePreview,
+                Dynamsoft.DDV.Elements.CameraConvert,
             ],
         },
     ],
@@ -170,29 +170,29 @@ Default UiConfig:
 
 ```typescript
 {
-    type: DDV.Elements.Layout,
+    type: Dynamsoft.DDV.Elements.Layout,
     flexDirection: "column",
     className: "ddv-capture-viewer-desktop",
     children: [
         {
-            type: DDV.Elements.Layout,
+            type: Dynamsoft.DDV.Elements.Layout,
             className: "ddv-capture-viewer-header-desktop",
             children: [
                 {
-                    type: DDV.Elements.CameraResolution,
+                    type: Dynamsoft.DDV.Elements.CameraResolution,
                     className: "ddv-capture-viewer-resolution-desktop",
                 },
-                DDV.Elements.AutoDetect,
+                Dynamsoft.DDV.Elements.AutoDetect,
                 {
-                    type: DDV.Elements.Capture,
+                    type: Dynamsoft.DDV.Elements.Capture,
                     className: "ddv-capture-viewer-capture-desktop",
                 },
-                DDV.Elements.AutoCapture,
+                Dynamsoft.DDV.Elements.AutoCapture,
             ],
         },
-        DDV.Elements.MainView,
+        Dynamsoft.DDV.Elements.MainView,
         {
-            type: DDV.Elements.ImagePreview,
+            type: Dynamsoft.DDV.Elements.ImagePreview,
             className: "ddv-capture-viewer-image-preview-desktop",
         },
     ],
@@ -213,28 +213,28 @@ Default UiConfig:
 
 ```typescript
 {
-    type: DDV.Elements.Layout,
+    type: Dynamsoft.DDV.Elements.Layout,
     flexDirection: "column",
     children: [
         {
-            type: DDV.Elements.Layout,
+            type: Dynamsoft.DDV.Elements.Layout,
             className: "ddv-perspective-viewer-header-mobile",
             children: [
-                DDV.Elements.Blank,
-                DDV.Elements.Pagination,
-                DDV.Elements.Perspective,
+                Dynamsoft.DDV.Elements.Blank,
+                Dynamsoft.DDV.Elements.Pagination,
+                Dynamsoft.DDV.Elements.Perspective,
             ],
         },
-        DDV.Elements.MainView,
+        Dynamsoft.DDV.Elements.MainView,
         {
-            type: DDV.Elements.Layout,
+            type: Dynamsoft.DDV.Elements.Layout,
             className: "ddv-perspective-viewer-footer-mobile",
             children: [
-                DDV.Elements.ResetQuad,
-                DDV.Elements.RotateLeft,
-                DDV.Elements.RotateRight,
-                DDV.Elements.DeleteCurrent,
-                DDV.Elements.DeleteAll,
+                Dynamsoft.DDV.Elements.ResetQuad,
+                Dynamsoft.DDV.Elements.RotateLeft,
+                Dynamsoft.DDV.Elements.RotateRight,
+                Dynamsoft.DDV.Elements.DeleteCurrent,
+                Dynamsoft.DDV.Elements.DeleteAll,
             ],
         },
     ],
@@ -249,29 +249,29 @@ Default UiConfig:
 
 ```typescript
 {
-    type: DDV.Elements.Layout,
+    type: Dynamsoft.DDV.Elements.Layout,
     flexDirection: "column",
     children: [
         {
-            type: DDV.Elements.Layout,
+            type: Dynamsoft.DDV.Elements.Layout,
             className: "ddv-perspective-viewer-header-desktop",
             children: [
-                DDV.Elements.ResetQuad,
-                DDV.Elements.RotateLeft,
-                DDV.Elements.RotateRight,
-                DDV.Elements.DeleteCurrent,
-                DDV.Elements.DeleteAll,
+                Dynamsoft.DDV.Elements.ResetQuad,
+                Dynamsoft.DDV.Elements.RotateLeft,
+                Dynamsoft.DDV.Elements.RotateRight,
+                Dynamsoft.DDV.Elements.DeleteCurrent,
+                Dynamsoft.DDV.Elements.DeleteAll,
                 {
-                    type: DDV.Elements.Pagination,
+                    type: Dynamsoft.DDV.Elements.Pagination,
                     className: "ddv-perspective-viewer-pagination-desktop",
                 },
                 {
-                    type: DDV.Elements.Perspective,
+                    type: Dynamsoft.DDV.Elements.Perspective,
                     className: "ddv-perspective-viewer-perspective-desktop",
                 },
             ],
         },
-        DDV.Elements.MainView,
+        Dynamsoft.DDV.Elements.MainView,
     ],
 };
 ```
@@ -288,9 +288,9 @@ Default UiConfig:
 
 ```typescript
 {
-    type: DDV.Elements.Layout,
+    type: Dynamsoft.DDV.Elements.Layout,
     children: [
-        DDV.Elements.MainView,
+        Dynamsoft.Dynamsoft.DDV.Elements.MainView,
     ],
 };
 ```
