@@ -12,13 +12,10 @@ permalink: /api/index.html
 
 # API Reference
 
-## Namespace
-
-- [`DDV`]()
-- [`DDV.Elements`]()
-
 ## Class
 
+- [`DDV`]({{ site.api }}class/ddv.html)
+- [`DDV.Elements`]({{ site.api }}class/ddv_elements.html)
 - [DocumentManager]({{ site.api }}class/documentmanager.html)
 - [EditViewer]({{ site.api }}class/editviewer.html)
 - [CaptureViewer]({{ site.api }}class/captureviewer.html)

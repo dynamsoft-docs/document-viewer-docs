@@ -16,7 +16,21 @@ permalink: /api/interface/idocument/source.html
 
 ```typescript
 interface Source {
-    fileData: Blob; //The blob of the file to be loaded.
-    extraPageData: ExtraPageData[]; // The extra data to be set.
+    fileData: Blob; 
+    extraPageData: ExtraPageData[]; 
 }
 ```
+
+## Attributes
+
+### fileData
+
+The blob of the file to be loaded.
+
+### extraPageData
+
+The extra data to be set. Please refer to [`ExtraPageData`]({{ site.api }}interface/idocument/extrapagedata.html);
+
+## Related
+
+- [`loadSource()`]({{ site.api }}interface/idocument/index.html#loadsource)
