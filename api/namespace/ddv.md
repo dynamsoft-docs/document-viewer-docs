@@ -1,0 +1,317 @@
+---
+layout: default-layout
+needAutoGenerateSidebar: true
+needGenerateH3Content: true
+noTitleIndex: true
+title: Dynamsoft Document Viewer API Reference - Namespace - Dynamsoft.DDV
+keywords: Documentation, Dynamsoft Document Viewer, API Reference, Namespace, Dynamsoft.DDV
+breadcrumbText: Dynamsoft.DDV
+description: Dynamsoft Document Viewer Documentation API Reference Namespace Dynamsoft.DDV Page
+permalink: /api/namespace/ddv.html
+---
+
+# Dynamsoft.DDV
+
+## Classes
+
+- [DocumentManager]({{ site.api }}class/documentmanager.html)
+- [EditViewer]({{ site.api }}class/editviewer.html)
+- [CaptureViewer]({{ site.api }}class/captureviewer.html)
+- [PerspectiveViewer]({{ site.api }}class/perspectiveviewer.html)
+- [BrowseViewer]({{ site.api }}class/browseviewer.html)
+- [CustomViewer]({{ site.api }}class/customviewer.html)
+
+- Advanced
+    - [ImageFilter]()
+    - [DocumentDetect]()
+
+## API Index
+
+**Methods**
+
+| API Name                        | Description                                       |
+| ------------------------------- | ------------------------------------------------- |
+| [`<static> setConfig()`](#static-setconfig)           | Initialize license, engineResourcePath and so on. |
+| [`<static> setProcessingHandler()`](#static-setprocessinghandler) | Set a processing handler to the DDV system.       |
+| [`<static> getDefaultUiConfig()`](#static-getdefaultuiconfig)   | Get default UiConfig object.                      |
+| [`<static> clearLastError()`](#static-clearlasterror)       | Clear the last error or warning.                  |
+| [`<static> unload()`](#static-unload)               | Unload all DDV resources.                         |
+
+**Properties**
+
+| API Name                        | Description                                       |
+| ------------------------------- | ------------------------------------------------- |
+| [`<static> lastError `](#static-lasterror)             | Return the last error or warning.                 |
+
+**Events**
+
+| API Name | Description                                        |
+| -------- | -------------------------------------------------- |
+| [`<static> on()`](#on)     | Bind a listener to the specified event.            |
+| [`<static> off()`](#off)    | Unbind event listener(s) from the specified event. |
+
+***Integrated Events***
+
+| Event Name | Description                         |
+| ---------- | ----------------------------------- |
+| [`error`](#error)      | Triggered when any error occurs.    |
+| [`warning`](#warning)    | Triggered when any warning occurs . |
+| [`verbose`](#verbose)    | Triggered when DDV is running.      |
+
+
+
+## Methods
+
+### `<static>` setConfig()
+
+Initialize license, engineResourcePath and so on.
+
+**Syntax**
+
+```typescript
+static setConfig(config: Configuration): Promise<ConfigResult>;
+```
+
+**Parameters**
+
+`config`: The object which contains license, engineResourcePath and so on. Please refer to [`Configuration`]({{ site.api }}interface/configuration.html).
+
+**Return values**
+
+A Promise [`ConfigResult`]({{ site.api }}interface/configresult.html) object. 
+
+**Code Snippet**
+
+```typescript
+await Dynamsoft.DDV.setConfig({
+    license: "Your-License-String",
+    engineLocation: "Resources/WASM/",
+});
+```
+
+**Exception**
+
+ Error Code  | Description                                         
+--------|-----------------------------------------------------
+ -80100 | XXX(ClassName.API): XXX(Parameter Name) is invalid. 
+ -80102 | XXX(ClassName.API): XXX(Parameter Name) is missing. 
+
+
+### `<static>` setProcessingHandler()
+
+Set a processing handler to the DDV system.
+
+**Syntax**
+
+```typescript
+static setProcessingHandler(handlerType: HandlerType, handler: any): void;
+```
+
+**Parameters**
+
+`handlerType`: The type of processing handler. 
+
+A `HandlerType` can be one of two types.
+
+```typescript
+type HandlerType = "documentBoundariesDetect"|"imageFilter";
+```
+
+`handler`: The handler to set. Please refer to [IDocumentDetect](#idocumentdetect) and [IImageFilter](#iimagefilter).
+
+**Exception**
+
+ Error Code  | Description                                         
+--------|-----------------------------------------------------
+ -80100 | XXX(ClassName.API): XXX(Parameter Name) is invalid. 
+ -80102 | XXX(ClassName.API): XXX(Parameter Name) is missing. 
+ -80103 | XXX(ClassName.API): The value for XXX(Parameter Name) is not supported.
+
+**Remark**
+
+- If `documentBoundariesDetect` handler is not set, the default element `Dynamsoft.DDV.Elements.AutoDetect` will be disabled.
+- If `imageFilter` handler is not set, the default element `Dynamsoft.DDV.Elements.Filter` will be disabled.
+
+### `<static>` getDefaultUiConfig()
+
+Get default UiConfig object.
+
+**Syntax**
+
+```typescript
+static getDefaultUiConfig(viewerType: ViewerType): UiConfig | null;
+```
+
+**Parameters**
+
+`viewerType`: A `ViewerType` can be one of three types.
+
+```typescript
+type ViewerType = "editViewer"|"captureViewer"|"perspectiveViewer"|"browseViewer";
+```
+
+**Return Values**
+
+The [default UiConfig]({{ site.ui }}default_ui.html) object for each kind of viewer.
+
+**Code Snippet**
+
+```typescript
+const defaultEditUi = Dynamsoft.DDV.getDefaultUiConfig("editViewer");
+```
+
+**Warning**
+
+ Error Code  | Description                                                            | API Return Value
+--------|------------------------------------------------------------------------|----------------------
+ -80100 | XXX(ClassName.API): XXX(Parameter Name) is invalid.                    | `null`
+ -80102 | XXX(ClassName.API): XXX(Parameter Name) is missing.                    | `null`
+ -80103 | XXX(ClassName.API): The value for XXX(Parameter Name) is not supported.| `null`
+
+
+### `<static>` lastError
+
+Return the last error or warning.
+
+**Syntax**
+
+```typescript
+static readonly lastError: DDVError;
+```
+
+**Return Values**
+
+A [`DDVError`]() object.
+
+### `<static>` clearLastError()
+
+Clear the last error or warning.
+
+**Syntax**
+
+```typescript
+static clearLastError(): void;
+```
+
+**Remark**
+
+- Once called this method, [`lastError`](#static-lasterror) will return `undefined`.
+
+### `<static>` unload()
+
+Unload all DDV resources.
+
+**Syntax**
+
+```typescript
+static unload(): void;
+```
+
+## Events
+
+### `<static>` on()
+
+Bind a listener to the specified event. 
+
+**Syntax**
+
+```typescript
+static on(eventName: EventName, listener:(event:EventObject)=>void): void;
+```
+
+**Parameters**
+
+`eventName`: Specify the event name. It can be [an integrated event name](#integrated-events).
+
+`listener`: Specify the listener.
+
+**Code Snippet**
+
+```typescript
+Dynamsoft.DDV.on("error", (e)=>{
+    console.log(e.message, e.cause);
+});
+```
+
+**Exception**
+
+ Error Code  | Description                                         
+--------|-----------------------------------------------------
+ -80100 | XXX(ClassName.API): XXX(Parameter Name) is invalid. 
+ -80102 | XXX(ClassName.API): XXX(Parameter Name) is missing. 
+ -80103 | XXX(ClassName.API): The value for XXX(Parameter Name) is not supported.
+
+### `<static>` off()
+
+Unbind event listener(s) from the specified event. 
+
+**Syntax**
+
+```typescript
+static off(eventName: EventName, listener?:(event:EventObject)=>void): void;
+```
+
+**Parameters**
+
+`eventName`: Specify the event name. It can be [an integrated event name](#integrated-events).
+
+`listener`: Specify the listener. If no listener is specified, unbind all event listeners from the specified event.
+
+**Code Snippet**
+
+```typescript
+Dynamsoft.DDV.off("error");
+```
+
+**Exception**
+
+ Error Code  | Description                                         
+--------|-----------------------------------------------------
+ -80100 | XXX(ClassName.API): XXX(Parameter Name) is invalid. 
+ -80102 | XXX(ClassName.API): XXX(Parameter Name) is missing. 
+ -80103 | XXX(ClassName.API): The value for XXX(Parameter Name) is not supported.
+
+### Integrated Event
+
+#### error
+
+Triggered when any error occurs. 
+
+**Callback**
+
+An EventObject which contains the detailed error info.
+
+**Attributes**
+
+[`DDVError`](#ddverror): Detailed error info.
+
+#### warning
+
+Triggered when any warning occurs. 
+
+**Callback**
+
+An EventObject which contains the detailed warning info.
+
+**Attributes**
+
+[`DDVError`](#ddverror): Detailed warning info.
+
+#### verbose
+
+Triggered when DDV is running.
+
+**Callback**
+
+EventObject array which contain the detailed verbose info.
+
+**Example**
+
+```typescript
+Dynamsoft DDV.on("verbose", (...args) => { 
+    console.log(...args); 
+    if (args[0].cause) { 
+        console.error(args[0].cause); 
+    } 
+});
+```

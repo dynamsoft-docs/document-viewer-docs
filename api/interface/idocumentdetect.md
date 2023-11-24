@@ -1,0 +1,54 @@
+---
+layout: default-layout
+needAutoGenerateSidebar: true
+needGenerateH3Content: true
+noTitleIndex: true
+title: Dynamsoft Document Viewer API Reference - Interface IDocumentDetect
+keywords: Documentation, Dynamsoft Document Viewer, API Reference, Interface IDocumentDetect
+breadcrumbText: Interface IDocumentDetect
+description: Dynamsoft Document Viewer Documentation API Reference Interface IDocumentDetect Page
+permalink: /api/interface/idocumentdetect.html
+---
+
+# IDocumentDetect
+
+<!-- ## Syntax
+
+```typescript
+interface IDocumentDetect {
+    detect(image: VImageData, config?: DocumentDetectConfig): Promise<DocumentDetectResult>;
+    destory(): void;
+}
+``` -->
+
+## Members
+
+### detect()
+
+**Syntax**
+
+```typescript
+detect(image: VImageData, config?: DocumentDetectConfig): Promise<DocumentDetectResult>;
+```
+
+**Parameters**
+
+`image`: The image which is used to detect boundaries. Please refer to [`VImageData`]().
+
+`config`: The configuration of document detect. Please refer to [`DocumentDetectConfig`]().
+
+**Return Value**
+
+A promise resolving to an [`DocumentDetectResult`]() object that contains the detected result.
+
+### destory()
+
+**Syntax**
+
+```typescript
+destory(): void;
+```
+
+## Related
+
+- [`DocuemntDetect` Class]({{ site.api }}class/advanced/documentdetect.html)

@@ -16,20 +16,20 @@ permalink: /api/interface/uiconfig.html
 
 ```typescript
 interface UiConfig {
-	type: string; // DDV.Elements.Layout, DDV.Elements.Button, default elements.
-	flexDirection?: string; //"column", "row", only available when type is DDV.Elements.Layout
-	id?: string; //the id of dom element, default: random
-	className?: string; // className of CSS
-	style?: CSSStyleDeclaration; // can cover the original CSS style 
-	tooltip?: string; //tooltip
+	type: string; 
+	flexDirection?: string; 
+	id?: string; 
+	className?: string; 
+	style?: CSSStyleDeclaration;  
+	tooltip?: string; 
 	events?: Record<string, string>;
-	children?: (UiConfig | string)[]; // take effect, when type is DDV.Elements.Layout
+	children?: (UiConfig | string)[]; 
 }
 ```
 
 ## Attributes
 
-| Attribute       | Type                     |
+<!-- | Attribute       | Type                     |
 | --------------- | ------------------------ |
 | `type`          | `string` &brvbar; `DDV.Elements.Layout` &brvbar; `DDV.Elements.Button` &brvbar; `` |
 | `flexDirection` | `string`                 |
@@ -38,47 +38,58 @@ interface UiConfig {
 | `style`         | `CSSStyleDeclaration`    |
 | `tooltip`       | `string`                 |
 | `events`        | `Record<string, string>` |
-| `children`      | `UiConfig[]` &brvbar; `string[]` |
+| `children`      | `UiConfig[]` &brvbar; `string[]` | -->
 
 ### type
 
+The type of the element.
 
+Supported value: `Dynamsoft.DDV.Elements.Layout`, `Dynamsoft.DDV.Elements.Button` and [built-in elements]().
 
 ### flexDirection
 
+The flexDirection of the element. Only takes effect when [`type`](#type) is `Dynamsoft.DDV.Elements.Layout`.
+
+Supported value: `column``, `row`
+
+Default value is `row`.
 
 ### id
 
-
+The id of Dom Element. If it is not specified, a random string will be generated.
 
 ### className
 
+The className of CSS.
 
 ### style
 
+The style which will cover CSS.
 
 ### tooltip
 
+The tooltip of the element. Only takes effect when [`type`](#type) is `Dynamsoft.DDV.Elements.Button` and [built-in elements]().
 
 ### events
 
-
+The event of the element. Only takes effect when [`type`](#type) is `Dynamsoft.DDV.Elements.Button` and [built-in elements]().
 
 ### children
 
+Only takes effect when [`type`](#type) is `Dynamsoft.DDV.Elements.Layout`.
 
-## Related APIs
+## Related
 
 - [`getDefaultUiConfig()`]()
 - `getUiConfig()` in 
-    - EditViewer Class
-    - CaptureViewer Class
-    - PerspectiveViewer Class
-    - BrowseViewer Class
-    - CustomViewer Class
+    - [EditViewer Class]({{ site.api }}class/editviewer.html#getuiconfig)
+    - [CaptureViewer Class]({{ site.api }}class/captureviewer.html#getuiconfig)
+    - [PerspectiveViewer Class]({{ site.api }}class/perspectiveviewer.html#getuiconfig)
+    - [BrowseViewer Class]({{ site.api }}class/browseviewer.html#getuiconfig)
+    - [CustomViewer Class]({{ site.api }}class/customviewer.html#getuiconfig)
 - `updateUiConfig()` in
-    - EditViewer Class
-    - CaptureViewer Class
-    - PerspectiveViewer Class
-    - BrowseViewer Class
-    - CustomViewer Class
+    - [EditViewer Class]({{ site.api }}class/editviewer.html#updateuiconfig)
+    - [CaptureViewer Class]({{ site.api }}class/captureviewer.html#updateuiconfig)
+    - [PerspectiveViewer Class]({{ site.api }}class/perspectiveviewer.html#updateuiconfig)
+    - [BrowseViewer Class]({{ site.api }}class/browseviewer.html#updateuiconfig)
+    - [CustomViewer Class]({{ site.api }}class/customviewer.html#updateuiconfig)

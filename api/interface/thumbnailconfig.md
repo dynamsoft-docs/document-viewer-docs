@@ -16,8 +16,43 @@ permalink: /api/interface/thumbnailconfig.html
 
 ```typescript
 interface ThumbnailConfig extends BrowseViewerConfig {
-    position?: string; // The position of the thumbnail view box displayed on the main viewer, supports "left", "right", "top", "bottom"
-    size?: string; // The width or height of thumbnail, supports "px", "%"
-    visibility?: string; // Whether show this thumbnail when the edit viewer is created and shown, supports "hidden", "visible"
+    position?: string; 
+    size?: string; 
+    visibility?: string; 
 }
 ```
+
+## Extends
+
+[`BrowseViewerConfig`]({{ site.api }}interface/browseviewerconfig.html)
+
+## Attributes
+
+### position
+
+Specify the position of the thumbnail view box displayed on the main eidt viewer.
+
+Supported value: `left`, `right`, `top`, `bottom`
+
+**Remark**
+
+If you see a blank display after importing images, it is because the size is too small and rows&columns exceeds, please adjust the [`size`](#size) or [`rows`]({{ site.api }}interface/browseviewerconfig.html#rows)&[`columns`]({{ site.api }}interface/browseviewerconfig.html#columns).
+
+### size
+
+Specify the width or height of thumbnail. Supports `px` and `%`.
+
+**Remark**
+
+- When `position` is set to `left` or `right`, `size` means the width of thumbnail.
+- When `position` is set to `top` or `bottom`, `size` means the height of thumbnail.
+
+### visibility
+
+Specify whether to show the thumbnail when an edit viewer is created and shown. 
+
+Supported value: `hidden`, `visible`
+
+## Related
+
+- [`EditViewerConstructorOptions`]({{ site.api }}interface/editviewerconstructoroptions.html)

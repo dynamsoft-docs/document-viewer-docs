@@ -93,6 +93,10 @@ Specify the scroll direction, supported values are `horizontal`, `vertical`.
 
 ![scrollDirection BrowseViewer](/assets/imgs/scrollDirection-browse.png)
 
+## Remark
+
+- If you see a blank display after importing images, it is because the container size is too small and rows&columns exceeds, please adjust the container size or [`rows`](#rows)&[`columns`](#columns).
+
 ## Related
 
 - [`BrowseViewerConstructorOptions`]({{ site.api }}interface/browseviewerconstructoroptions.html)
