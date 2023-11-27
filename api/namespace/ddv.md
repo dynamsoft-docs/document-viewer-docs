@@ -94,7 +94,7 @@ A Promise [`ConfigResult`]({{ site.api }}interface/configresult.html) object.
 ```typescript
 await Dynamsoft.DDV.setConfig({
     license: "Your-License-String",
-    engineLocation: "Resources/WASM/",
+    engineResourcePath: "Resources/WASM/",
 });
 ```
 
