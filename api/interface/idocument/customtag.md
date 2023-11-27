@@ -24,11 +24,17 @@ interface CustomTag {
 
 ## Attributes
 
-`id`: The id of the custom tag.
+### id
 
-`content`: The content of the tag. 
+The id of the custom tag.
 
-`contentIsBase64`: Whether the content is encoded by Base64. 
+### content
+
+The content of the tag. 
+
+### contentIsBase64
+
+Whether the content is encoded by Base64. 
 
 ## Remark
 

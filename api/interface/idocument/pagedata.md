@@ -16,7 +16,7 @@ permalink: /api/interface/idocument/pagedata.html
 
 ```typescript
 interface PageData {
-    uid: string; // The uid of the page
+    uid: string; // 
     fileData: Blob; // The blob of the original file
     fileIndex?: number; // The page index of the original file
     filter?: string; // The filter type of the page
@@ -39,3 +39,45 @@ interface PageData {
     }
 }
 ```
+
+## Attributes
+
+### uid
+
+The uid of the page.
+
+### fileData
+
+The blob of the original file.
+
+### fileIndex
+
+The page index for the specified page in the original file.
+
+### filter
+
+The filter type of the specified page. 
+
+### perspectiveQuad
+
+The quadangle for perspective transformation in specified page. Please refer to [`Quad`]({{ site.api }}enumeration-type/quad.html).
+
+### rotation
+
+The rotation angle of specified page. 
+
+### raw
+
+The raw width, height, data of the specified page.
+
+### thumbnail
+
+The width, height, data of the specified page in thumbnail view.
+
+### display
+
+The width, height, data of the specified page in display view.
+
+## Related
+
+- [`getPageData()`]({{ site.api }}class/documentmanager.html#getpagedata)

@@ -16,10 +16,10 @@ permalink: /api/interface/idocument/updatepageoptions.html
 
 ```typescript
 interface UpdatePageOptions {
-    fileIndex?: number; // Specify the page index of the file, if not set, index 0 will be the updated page.
-    rotation?: number; // The angle of rotation
-    filter?: string; // The filter type of the page
-    perspectiveQuad?: Quad; // The detected quad in the page
+    fileIndex?: number; 
+    rotation?: number; 
+    filter?: string; 
+    perspectiveQuad?: Quad; 
 }
 ```
 
@@ -27,7 +27,11 @@ interface UpdatePageOptions {
 
 ### fileIndex
 
-Specify the page index of the file. if it is not specified, the first page in the file will be the updated page.
+Specify the page index of the file. 
+
+If it is not specified, the first page in the file will be the updated page. 
+
+If it is out of range, the last page in the file will be the updated page.
 
 ### rotation
 
@@ -44,7 +48,7 @@ The filter type of the updated page.
 
 **Remark**
 
-- If `imageFilter` handler is not set, the filter type won't be applied to the updated page. Please refer to [`setProcessingHandler()`]({{ site.api }}namespace/ddv.html#static-setprocessinghandler).
+- If `imageFilter` handler is not set, the filter type won't be applied to the updated page. Please refer to [`setProcessingHandler()`]({{ site.api }}namespace/ddv.html#static-setprocessinghandler) and [How to configure image filter]({{ site.features }}advanced/imagefilter.html).
 
 ### perspectiveQuad
 
