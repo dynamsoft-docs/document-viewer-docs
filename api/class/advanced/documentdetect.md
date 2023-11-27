@@ -14,7 +14,7 @@ permalink: /api/class/advanced/documentdetect.html
 
 `DocumentDetect` implements [`IDocumentDetect`]({{ site.api }}interface/idocumentdetect.html). 
 
-This class is used to configure document boundaries detection feature in capture viewer. Please refer to [How to configure boundaries detection]().
+This class is used to configure document boundaries detection feature in capture viewer. Please refer to [How to configure boundaries detection]({{ site.features }}advanced/documentdetect.html).
 
 The APIs for this class include:
 
