@@ -222,7 +222,7 @@ Default UiConfig:
             children: [
                 Dynamsoft.DDV.Elements.Blank,
                 Dynamsoft.DDV.Elements.Pagination,
-                Dynamsoft.DDV.Elements.Perspective,
+                Dynamsoft.DDV.Elements.PerspectiveAll,
             ],
         },
         Dynamsoft.DDV.Elements.MainView,
@@ -266,7 +266,7 @@ Default UiConfig:
                     className: "ddv-perspective-viewer-pagination-desktop",
                 },
                 {
-                    type: Dynamsoft.DDV.Elements.Perspective,
+                    type: Dynamsoft.DDV.Elements.PerspectiveAll,
                     className: "ddv-perspective-viewer-perspective-desktop",
                 },
             ],
