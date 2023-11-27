@@ -14,7 +14,7 @@ permalink: /api/class/advanced/imagefilter.html
 
 `ImageFilter` implements [`IImageFilter`]({{ site.api }}interface/iimagefilter.html). 
 
-This class is used to configure `Dynamsoft.DDV.Elements.Filter`. Please refer to [How to configure image filter]().
+This class is used to configure `Dynamsoft.DDV.Elements.Filter`. Please refer to [How to configure image filter]({{ site.features }}advanced/imagefilter.html).
 
 The APIs for this class include:
 

@@ -138,8 +138,11 @@ type HandlerType = "documentBoundariesDetect"|"imageFilter";
 
 **Remark**
 
+- Please configure the handler before creating 
 - If `documentBoundariesDetect` handler is not set, the default element `Dynamsoft.DDV.Elements.AutoDetect` will be disabled.
 - If `imageFilter` handler is not set, the default element `Dynamsoft.DDV.Elements.Filter` will be disabled.
+- [How to configure image filter]({{ site.features }}advanced/imagefilter.html)
+- [How to configure boundaries detection]({{ site.features }}advanced/documentdetect.html)
 
 ## Member
 
