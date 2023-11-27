@@ -16,15 +16,15 @@ permalink: /api/interface/styleinterface/quadselectionstyle.html
 
 ```typescript
 interface QuadSelectionStyle {
-	border?: string; // The border of Selection, for example, "1px solid green", border-width only supports px unit, border-style only supports "dashed" & "solid"
+	border?: string; 
 	background?: string; 
-	ctrlBorderRadius?: string; // The border radius of Control Points, only supports "px", "%"
-    ctrlBorder?: string; // The border style of Control Points, for example, "1px solid green"
-	ctrlWidth?: string; // The width of Control Points, only supports px unit
-	ctrlHeight?: string; // The height of Control Points, only supports px unit
-	ctrlBackground?: string; // The backgroud of Control Points
-	invalidCtrlBorderColor?: string; // The border color of Control Points when the quad selection is invalid.
-	invalidBorderColor?: string; // The border color of Selection when the quad selection is invalid.
+	ctrlBorderRadius?: string; 
+    ctrlBorder?: string; 
+	ctrlWidth?: string; 
+	ctrlHeight?: string; 
+	ctrlBackground?: string; 
+	invalidCtrlBorderColor?: string; 
+	invalidBorderColor?: string; 
 }
 ```
 
@@ -69,7 +69,7 @@ The border radius of Control Points. Supports `px` and `%`.
 The border style of Control Points.
 
 ```typescript
-border: "1px solid green", 
+ctrlBorder: "1px solid green", 
 ```
 
 ### ctrlWidth

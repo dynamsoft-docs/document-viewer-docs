@@ -85,7 +85,7 @@ The following are lists of built-in elements as well as their default icons that
 | Dynamsoft.DDV.Elements.Delete               | N/A                                                         | Composite element contains DeleteCurrent and DeleteAll.
 | Dynamsoft.DDV.Elements.DeleteCurrent        | ddv-delete-current                                          |
 | Dynamsoft.DDV.Elements.DeleteAll            | ddv-delete-all                                              |
-| Dynamsoft.DDV.Elements.Perspective          | ddv-perspective                                             |
+| Dynamsoft.DDV.Elements.PerspectiveAll          | ddv-perspective                                             |
 | Dynamsoft.DDV.Elements.ResetQuad            | ddv-reset-quad                                              |
 | Dynamsoft.DDV.Elements.Load                 | ddv-load-image                                              | Load file from local. If there is no document is opend when you click Load button, a new document (default name: dynamsoft-document-timestamp) will be created and opened automatically.
 | Dynamsoft.DDV.Elements.Download             | ddv-button-download                                         | Download pages in pdf format to local.
