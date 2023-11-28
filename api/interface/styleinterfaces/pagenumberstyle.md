@@ -16,23 +16,23 @@ permalink: /api/interface/styleinterface/pagenumberstyle.html
 
 ```typescript
 interface PageNumberStyle {
+	visibility?: string; // "hidden", "visible"
 	onPage?: boolean; // whether on image page or not
-    left?: string; // "px", "%"
-	top?: string; // "px", "%"
-	right?: string; // "px", "%"
-	bottom?: string; // "px", "%"
 	width?: string; // "px", "%"
 	height?: string; // "px", "%"
 	border?: string; // for example, "1px solid green"
 	borderRadius?: string; // "px", "%"
 	background?: string;
-	translateX?: string; // "px", "%"
-	translateY?: string; // "px", "%"
-	opacity?: number;
-	visibility?: string; // "hidden", "visible"
 	color?: string;
 	fontSize?: string;
 	fontFamily?: string; // "px"
+	opacity?: number;
+    left?: string; // "px", "%"
+	top?: string; // "px", "%"
+	right?: string; // "px", "%"
+	bottom?: string; // "px", "%"
+	translateX?: string; // "px", "%"
+	translateY?: string; // "px", "%"
 }
 ```
 
@@ -40,25 +40,15 @@ interface PageNumberStyle {
 
 ## Attributes
 
+### visibility
+
+Specify whether to show the page number. 
+
+Supported value: `hidden`, `visible`
+
 ### onPage
 
 Specify whether the page number is on page or not.
-
-### left
-
-Supports `px` and `%`.
-
-### top
-
-Supports `px` and `%`.
-
-### right
-
-Supports `px` and `%`.
-
-### bottom
-
-Supports `px` and `%`.
 
 ### width
 
@@ -98,22 +88,44 @@ The background style.
 background: "rgba(255,255,255,0)", 
 ```
 
-### translateX
-
-### translateY
-
-### opacity
-
-### visibility
-
-Specify whether to show the page number. 
-
-Supported value: `hidden`, `visible`
-
 ### color
 
-The color of page number.
+The color of page number font.
 
 ### fontSize
 
+The size of page number font.
+
 ### fontFamily
+
+The font-family of page number font.
+
+![Page Number](/assets/imgs/pagenumber-1.png)
+
+### opacity
+
+The opacity of the whole page number.
+
+### left
+
+Supports `px` and `%`.
+
+### top
+
+Supports `px` and `%`.
+
+### right
+
+Supports `px` and `%`.
+
+### bottom
+
+Supports `px` and `%`.
+
+### translateX
+
+Supports `px` and `%`.
+
+### translateY
+
+Supports `px` and `%`.
