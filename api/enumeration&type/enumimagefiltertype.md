@@ -16,16 +16,10 @@ Bulid-in image filter type.
 
 ```typescript
 enum EnumImageFilterType {
-
     NONE = "none", //default, original
-
     BLACK_AND_WHITE = "blackAndWhite",
-
     GRAY = "gray",
-
     REMOVE_SHADOW = "removeShadow",
-
     SAVE_INK = "saveInk",
-
 }
 ```
