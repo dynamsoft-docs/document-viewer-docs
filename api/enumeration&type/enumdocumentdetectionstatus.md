@@ -14,16 +14,10 @@ permalink: /api/enumeration-type/enumdocumentdetectionstatus.html
 
 ```typescript
 enum EnumDocumentDetectionStatus {
-
     AUTO_CAPTURE = "AutoCaptured",
-
     GOOD = "Good",
-
     SMALL_SIZE = "SmallSize",
-
     OFF_CENTER = "OffCenter",
-
     NOTHING_DETECTED = "NothingDetected"
-
 }
 ```

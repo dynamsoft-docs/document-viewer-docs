@@ -34,6 +34,8 @@ interface CheckboxStyle {
 }
 ```
 
+//本页的一些属性打算画图解释，后续再添加
+
 ## Attributes
 
 ### left
