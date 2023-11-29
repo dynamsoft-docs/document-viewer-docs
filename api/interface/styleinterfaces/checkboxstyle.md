@@ -16,6 +16,7 @@ permalink: /api/interface/styleinterface/checkboxstyle.html
 
 ```typescript
 interface CheckboxStyle {
+	visibility?: string; // "hidden", "visible"
 	left?: string; // "px", "%"
 	top?: string; // "px", "%"
 	right?: string; // "px", "%"
@@ -28,7 +29,6 @@ interface CheckboxStyle {
 	translateX?: string; // "px", "%"
 	translateY?: string; // "px", "%"
 	opacity?: number;
-	visibility?: string; // "hidden", "visible"
     checkMarkColor?: string;
 	checkMarkLineWidth?: string; // "px"
 }
@@ -37,6 +37,12 @@ interface CheckboxStyle {
 //本页的一些属性打算画图解释，后续再添加
 
 ## Attributes
+
+### visibility
+
+Specify whether to show the checkbox. 
+
+Supported value: `hidden`, `visible`
 
 ### left
 
@@ -97,12 +103,6 @@ background: "rgba(255,255,255,0)",
 ### translateY
 
 ### opacity
-
-### visibility
-
-Specify whether to show the checkbox. 
-
-Supported value: `hidden`, `visible`
 
 ### checkMarkColor
 
