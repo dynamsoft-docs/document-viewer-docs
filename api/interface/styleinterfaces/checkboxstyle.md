@@ -16,21 +16,21 @@ permalink: /api/interface/styleinterface/checkboxstyle.html
 
 ```typescript
 interface CheckboxStyle {
-	visibility?: string; // "hidden", "visible"
-	left?: string; // "px", "%"
-	top?: string; // "px", "%"
-	right?: string; // "px", "%"
-	bottom?: string; // "px", "%"
-	width?: string; // "px", "%"
-	height?: string; // "px", "%"
-	border?: string; // for example, "1px solid green"
-	borderRadius?: string; // "px", "%"
+	visibility?: string; 
+	width?: string; 
+	height?: string; 
+	border?: string; 
+	borderRadius?: string; 
 	background?: string;
-	translateX?: string; // "px", "%"
-	translateY?: string; // "px", "%"
 	opacity?: number;
-    checkMarkColor?: string;
-	checkMarkLineWidth?: string; // "px"
+	checkMarkColor?: string;
+	checkMarkLineWidth?: string; 
+	left?: string; 
+	top?: string; 
+	right?: string; 
+	bottom?: string; 
+	translateX?: string; 
+	translateY?: string; 
 }
 ```
 
@@ -44,29 +44,13 @@ Specify whether to show the checkbox.
 
 Supported value: `hidden`, `visible`
 
-### left
-
-Supports `px` and `%`.
-
-### top
-
-Supports `px` and `%`.
-
-### right
-
-Supports `px` and `%`.
-
-### bottom
-
-Supports `px` and `%`.
-
 ### width
 
-The width of checkbox. Supports `px` and `%`.
+The width of checkbox. Supports unit `px` or `%`, for example, `"10px"` or `"10%"`.
 
 ### height
 
-The height of checkbox. Supports `px` and `%`.
+The height of checkbox. Supports unit `px` or `%`, for example, `"10px"` or `"10%"`.
 
 ### border
 
@@ -86,7 +70,7 @@ border: "2px dashed red",
 
 ### borderRadius
 
-The border radius of checkbox. Supports `px` and `%`.
+The border radius of checkbox. Supports unit `px` or `%`, for example, `"10px"` or `"10%"`.
 
 ### background
 
@@ -98,11 +82,9 @@ The background style.
 background: "rgba(255,255,255,0)", 
 ```
 
-### translateX
-
-### translateY
-
 ### opacity
+
+The opacity of the whole checkbox. The value range is [0,1], value which is greater than 1 will default to 1.
 
 ### checkMarkColor
 
@@ -110,4 +92,62 @@ The color of check mark.
 
 ### checkMarkLineWidth
 
-The width of check mark.
+The width of check mark. For example, `"1px"`.
+
+![Checkbox](/assets/imgs/checkbox.png)
+
+### left, top, right, bottom
+
+Position the checkbox. Supports unit `px` or `%`, for example, `"10px"` or `"10%"`.
+
+**Remark**
+
+- To position a checkbox, one of `left` and `right` and one of `top` and `bottom` must be set, with the remaining positioning attributes should be set to empty strings. For example, 
+	```typescript
+	left: "10%",
+	top: "10%",
+	right: "",
+	bottom: "",
+	```
+	OR
+	```typescript
+	left: "",
+	top: "",
+	right: "10px",
+	bottom: "10px",
+	```
+	OR
+	```typescript
+	left: "10px",
+	top: "",
+	right: "",
+	bottom: "10px",
+	```
+	OR
+	```typescript
+	left: "",
+	top: "10%",
+	right: "10%",
+	bottom: "",
+	```
+- If both `left` and `right` are set, only `left` takes effect. If both `top` and `bottom` are set, only `top` takes effect.
+
+### translateX
+
+Reposition the checkbox horizontally. Supports unit `px` or `%`, for example, `"10px"` or `"10%"`.
+
+| number in string                             | checkbox shifts along x-axis    |
+| -------------------------------------------- | ------------------------------- |
+| positive, for example, `"10px"` or `"10%"`   | →                               |
+| negative, for example, `"-10px"` or `"-10%"` | ←                               |
+
+### translateY
+
+Reposition the checkbox vertically. Supports unit `px` or `%`, for example, `"10px"` or `"10%"`.
+
+| number in string                             | checkbox shifts along y-axis    |
+| -------------------------------------------- | ------------------------------- |
+| positive, for example, `"10px"` or `"10%"`   | ↓                               |
+| negative, for example, `"-10px"` or `"-10%"` | ↑                               |
+
+![Position Checkbox](/assets/imgs/positioncheckbox.png)

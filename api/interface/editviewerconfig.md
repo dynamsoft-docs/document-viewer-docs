@@ -22,8 +22,8 @@ interface EditViewerConfig {
     enableSlide?: boolean; 
     scrollToLatest?: boolean; 
     scrollDirection?: string; 
-    minZoom?: number; // minvalue&default: 0.01
-    maxZoom?: number; // maxvalue&default: 128
+    minZoom?: number; 
+    maxZoom?: number;
 }
 ```
 
@@ -45,21 +45,35 @@ The style of rectangular selection. Please refer to [`QuadSelectionStyle`]({{ si
 
 Specify whether allow to slide the pages.
 
+Default value: `true`
+
 ### scrollToLatest
 
 Specify whether to scroll to latest page automatically when importing new pages.
 
+Default value: `false`
+
 ### scrollDirection
 
-Specify the scroll direction, supported values are `horizontal`, `vertical`.
+Specify the scroll direction, supported values are `vertical`, `horizontal`.
+
+Default value: `vertical`
 
 ### minZoom
 
-The mininum zoom ratio in the viewer. The value range is [0.01, 64]. Please notice `minZoom` cannot be larger than `maxZoom`.
+The mininum zoom ratio in the viewer. The value range is [0.01, 64]. 
+
+Default value: 0.01
+
+Please notice `minZoom` cannot be larger than `maxZoom`.
 
 ### maxZoom
 
-The maxinum zoom ratio in the viewer. The value range is [0.01, 64]. Please notice `maxZoom` cannot be smaller than `minZoom`.
+The maxinum zoom ratio in the viewer. The value range is [0.01, 64]. 
+
+Default value: 64
+
+Please notice `maxZoom` cannot be smaller than `minZoom`.
 
 ## Related
 

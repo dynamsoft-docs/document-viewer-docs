@@ -16,8 +16,8 @@ permalink: /api/interface/zoomorigin.html
 
 ```typescript
 interface ZoomOrigin {
-    x: string; //x-coordinate. Default is "center", values: "start", "center", "end". 
-    y: string; //y-coordinate. Default is "center", values: "start", "center", "end". 
+    x: string; 
+    y: string; 
 }
 ```
 

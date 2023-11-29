@@ -16,23 +16,23 @@ permalink: /api/interface/styleinterface/pagenumberstyle.html
 
 ```typescript
 interface PageNumberStyle {
-	visibility?: string; // "hidden", "visible"
-	onPage?: boolean; // whether on image page or not
-	width?: string; // "px", "%"
-	height?: string; // "px", "%"
-	border?: string; // for example, "1px solid green"
-	borderRadius?: string; // "px", "%"
+	visibility?: string; 
+	onPage?: boolean;
+	width?: string; 
+	height?: string;
+	border?: string; 
+	borderRadius?: string;
 	background?: string;
+	opacity?: number;
 	color?: string;
 	fontSize?: string;
-	fontFamily?: string; // "px"
-	opacity?: number;
-    left?: string; // "px", "%"
-	top?: string; // "px", "%"
-	right?: string; // "px", "%"
-	bottom?: string; // "px", "%"
-	translateX?: string; // "px", "%"
-	translateY?: string; // "px", "%"
+	fontFamily?: string; 
+    left?: string;
+	top?: string; 
+	right?: string; 
+	bottom?: string; 
+	translateX?: string; 
+	translateY?: string;
 }
 ```
 
@@ -86,6 +86,10 @@ The background style.
 background: "rgba(255,255,255,0)", 
 ```
 
+### opacity
+
+The opacity of the whole page number. The value range is [0,1], value which is greater than 1 will default to 1.
+
 ### color
 
 The color of page number font.
@@ -100,9 +104,6 @@ The font-family of page number font.
 
 ![Page Number](/assets/imgs/pagenumber-1.png)
 
-### opacity
-
-The opacity of the whole page number. The value range is [0,1], value which is greater than 1 will default to 1.
 
 ### left, top, right, bottom
 
@@ -131,7 +132,7 @@ Position the page number. Supports unit `px` or `%`, for example, `"10px"` or `"
 	right: "",
 	bottom: "10px",
 	```
-		OR
+	OR
 	```typescript
 	left: "",
 	top: "10%",

@@ -16,12 +16,12 @@ permalink: /api/interface/idocument/pagedata.html
 
 ```typescript
 interface PageData {
-    uid: string; // 
-    fileData: Blob; // The blob of the original file
-    fileIndex?: number; // The page index of the original file
-    filter?: string; // The filter type of the page
-    perspectiveQuad?: Quad; // The detected quad in the page
-    rotation?: number; // The angle of rotation
+    uid: string; 
+    fileData: Blob; 
+    fileIndex?: number; 
+    filter?: string; 
+    perspectiveQuad?: Quad; 
+    rotation?: number; 
     raw?: {
         width: number;
         height: number;

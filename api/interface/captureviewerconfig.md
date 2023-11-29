@@ -18,11 +18,11 @@ permalink: /api/interface/captureviewerconfig.html
 interface CaptureViewerConfig {
     canvasStyle?: CanvasStyle;
 	quadSelectionStyle?: QuadSelectionStyle;
-	enableTorch?: boolean; // default: false
-	enableAutoCapture?: boolean; // default: false
-	enableAutoDetect?: boolean; // default: false
-	acceptedPolygonConfidence?: number; // deafault: 80
-	maxFrameNumber?: number; // default: 10
+	enableTorch?: boolean; 
+	enableAutoCapture?: boolean;
+	enableAutoDetect?: boolean;
+	acceptedPolygonConfidence?: number;
+	maxFrameNumber?: number;
 }
 ```
 
@@ -40,21 +40,31 @@ The style of rectangular selection. Please refer to [`QuadSelectionStyle`]({{ si
 
 Specify whether to turn on the flashlight.
 
+Default value: `false`
+
 ### enableAutoCapture
 
 Specify whether to enable automatic capture. 
+
+Default value: `false`
 
 ### enableAutoDetect
 
 Specify whether to enable automatic border detection in video stream.
 
+Default value: `false`
+
 ### acceptedPolygonConfidence
 
-Specify the threshold confidence level when detecting boundaries.
+Specify the threshold confidence level when detecting boundaries. The value range is [0,100].
+
+Default value: 80
 
 ### maxFrameNumber
 
 Specify the maximum number of frames detected per second.
+
+Default value: 10
 
 ## Related
 

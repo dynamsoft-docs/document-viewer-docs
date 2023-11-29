@@ -238,7 +238,6 @@ DDV will provide the default viewerConfig for each viewer.
     multiselectMode: false,
     scrollToLatest: false,
     enableDragPage: true,
-
     scrollDirection: "vertical",
     visibilty: "visible",
     size: "180px",

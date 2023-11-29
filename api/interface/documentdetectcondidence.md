@@ -16,13 +16,9 @@ permalink: /api/interface/documentdetectconfidence.html
 
 ```typescript
 interface DocumentDetectConfidence {
-
     angleConfidence: number; 
-
     areaConfidence: number; 
-
     centerConfidence: number;
-
 }
 ```
 
