@@ -12,31 +12,28 @@ permalink: /introduction/index.html
 
 # Introduction to Dynamsoft Document Viewer
 
-Dynamsoft Document Viewer (DDV) is an SDK designed to capture document images from the camera, detect document boundaries, and then manage and edit document images at document level.
+Dynamsoft Document Viewer (DDV) is an SDK designed to provide different types of viewers to configure and achieve different processing flows for documents. 
 
-DDV powers your software development in the following aspects:
+It contains two main features,
 
-- Built-in camera capture module for easy camera control.
-- Built-in basic document boundaries detection with perspective included. In addition, supports seamless integration with Dynamsoft Document Normalizer for a better document normalize experience.
-- Various built-in editing functions, such as cropping, rotating, filter, etc.
-- Default User Interface of viewers, such as, capture viewer, crop viewer, edit viewer and category viewer. 
-- Flexible User Interface customization, such as adding or removing default buttons, adding custom function buttons, customizing the default viewer style, etc.
-- 
+- Data Management;
+- Different types of viewers:
+    - Edit Viewer
+    - Capture Viewer
+    - Perspective Viewer
+    - Browse Viewer
+    - Custom Viewer
 
-With DDN, you can efficiently embed the functionality of quadrilateral detection and document normalization in your mobile, desktop and server applications. DDN also provides various image processing features, allowing you to customize DDN and meet your business needs.
+Besides, DDV also provide the methods to integrated with your own customized image filter process and document boundary detect process.
 
-## Key Features
+- Image filter
+- Document detection (Recommend using Dynamsoft Document Normalizer)
 
+With DDV, you can easily and efficiently create a document manage web application which meets your different requirements of working flow, user interface, style.
 
+DDV is one of the SDKs that constitute DWC.
 
-## DDN SDK Modules
+This documentation will introduce DDV in detail and help developers to explorer the features which can be achieved with DDV.
 
-
-
-## Usage Scenarios
-
-
-
-## Programming Languages
 
 
