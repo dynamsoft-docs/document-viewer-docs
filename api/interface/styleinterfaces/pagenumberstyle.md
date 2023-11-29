@@ -36,8 +36,6 @@ interface PageNumberStyle {
 }
 ```
 
-//本页的一些属性打算画图解释，后续再添加
-
 ## Attributes
 
 ### visibility
@@ -52,11 +50,11 @@ Specify whether the page number is on page or not.
 
 ### width
 
-The width of page number. Supports `px` and `%`.
+The width of page number. Supports unit `px` or `%`, for example, `"10px"` or `"10%"`.
 
 ### height
 
-The height of page number. Supports `px` and `%`.
+The height of page number. Supports unit `px` or `%`, for example, `"10px"` or `"10%"`.
 
 ### border
 
@@ -76,7 +74,7 @@ border: "2px dashed red",
 
 ### borderRadius
 
-The border radius of page number. Supports `px` and `%`.
+The border radius of page number. Supports unit `px` or `%`, for example, `"10px"` or `"10%"`.
 
 ### background
 
@@ -104,28 +102,63 @@ The font-family of page number font.
 
 ### opacity
 
-The opacity of the whole page number.
+The opacity of the whole page number. The value range is [0,1], value which is greater than 1 will default to 1.
 
-### left
+### left, top, right, bottom
 
-Supports `px` and `%`.
+Position the page number. Supports unit `px` or `%`, for example, `"10px"` or `"10%"`.
 
-### top
+**Remark**
 
-Supports `px` and `%`.
-
-### right
-
-Supports `px` and `%`.
-
-### bottom
-
-Supports `px` and `%`.
+- To position a page number, one of `left` and `right` and one of `top` and `bottom` must be set, with the remaining positioning attributes should be set to empty strings. For example, 
+	```typescript
+	left: "10%",
+	top: "10%",
+	right: "",
+	bottom: "",
+	```
+	OR
+	```typescript
+	left: "",
+	top: "",
+	right: "10px",
+	bottom: "10px",
+	```
+	OR
+	```typescript
+	left: "10px",
+	top: "",
+	right: "",
+	bottom: "10px",
+	```
+		OR
+	```typescript
+	left: "",
+	top: "10%",
+	right: "10%",
+	bottom: "",
+	```
+- If both `left` and `right` are set, only `left` takes effect. If both `top` and `bottom` are set, only `top` takes effect.
 
 ### translateX
 
-Supports `px` and `%`.
+Reposition the page number horizontally. Supports unit `px` or `%`, for example, `"10px"` or `"10%"`.
+
+| number in string                             | page number shifts along x-axis |
+| -------------------------------------------- | ------------------------------- |
+| positive, for example, `"10px"` or `"10%"`   | →                               |
+| negative, for example, `"-10px"` or `"-10%"` | ←                               |
 
 ### translateY
 
-Supports `px` and `%`.
+Reposition the page number vertically. Supports unit `px` or `%`, for example, `"10px"` or `"10%"`.
+
+| number in string                             | page number shifts along y-axis |
+| -------------------------------------------- | ------------------------------- |
+| positive, for example, `"10px"` or `"10%"`   | ↓                               |
+| negative, for example, `"-10px"` or `"-10%"` | ↑                               |
+
+
+![Position Page Number when onPage is true](/assets/imgs/positionpagenumber-1.png)
+
+![Position Page Number when onPage is false](/assets/imgs/positionpagenumber-2.png)
