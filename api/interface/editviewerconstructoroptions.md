@@ -17,10 +17,10 @@ permalink: /api/interface/editviewerconstructoroptions.html
 ```typescript
 interface EditViewerConstructorOptions {
 	container?: string | HTMLElement;
-	viewerConfig?: EditViewerConfig; // The configurations of viewer, such as page style, minZoom, maxZoom and so on.
-	uiConfig?: UiConfig; // The UI layout configurations.
-    thumbnailConfig?: ThumbnailConfig; // The thumbnail configurations.
-	groupUid?: string; //The uid of viewer's group, if it is not set, a random groupUid will generate.
+	viewerConfig?: EditViewerConfig; 
+	uiConfig?: UiConfig; 
+    thumbnailConfig?: ThumbnailConfig; 
+	groupUid?: string; 
 }
 ```
 
@@ -44,7 +44,7 @@ The configurations of integrated thumbnail, please refer to [`ThumbnailConfig`](
 
 ### groupUid
 
-The uid of viewers' group. Please refer to [Data synchronisation between viewers](). If it is not specified, a random groupUid will be generated.
+The uid of viewers' group. Please refer to [Data synchronisation between viewers]({{ site.features }}viewers/datasync.html). If it is not specified, a random groupUid will be generated.
 
 ## Related
 

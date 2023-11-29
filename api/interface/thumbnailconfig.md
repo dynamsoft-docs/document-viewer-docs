@@ -34,13 +34,15 @@ Specify the position of the thumbnail view box displayed on the main eidt viewer
 
 Supported value: `left`, `right`, `top`, `bottom`
 
+Default value: `left`
+
 **Remark**
 
 If you see a blank display after importing images, it is because the size is too small and rows&columns exceeds, please adjust the [`size`](#size) or [`rows`]({{ site.api }}interface/browseviewerconfig.html#rows)&[`columns`]({{ site.api }}interface/browseviewerconfig.html#columns).
 
 ### size
 
-Specify the width or height of thumbnail. Supports `px` and `%`.
+Specify the width or height of thumbnail. Supports unit `px` or `%`, for example, `"100px"` or `"10%"`.
 
 **Remark**
 
@@ -52,6 +54,8 @@ Specify the width or height of thumbnail. Supports `px` and `%`.
 Specify whether to show the thumbnail when an edit viewer is created and shown. 
 
 Supported value: `hidden`, `visible`
+
+Default value: `hidden`
 
 ## Related
 

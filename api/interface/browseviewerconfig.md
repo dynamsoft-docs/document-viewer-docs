@@ -79,17 +79,25 @@ The number of columns. The maximum value is 20.
 
 Specify whether to allow multiple pages to be selected at once.
 
+Default value: `false`
+
 ### scrollToLatest
 
 Specify whether to scroll to latest page automatically when importing new pages.
+
+Default value: `false`
 
 ### enableDragPage
 
 Specify whether to allow drag&drop page feature in the viewer.
 
+Default value: `true`
+
 ### scrollDirection
 
-Specify the scroll direction, supported values are `horizontal`, `vertical`.
+Specify the scroll direction, supported values are `vertical`, `horizontal`.
+
+Default value: `vertical`
 
 ![scrollDirection BrowseViewer](/assets/imgs/scrollDirection-browse.png)
 

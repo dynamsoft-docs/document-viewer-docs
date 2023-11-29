@@ -17,15 +17,7 @@ permalink: /api/interface/idocument/savetiffsettings.html
 ```typescript
 interface SaveTiffSettings {
     customTag?: CustomTag[];
-    /**
-     * Specify the compression type.
-     */
     compression?: EnumTIFFCompressionType;
-    /**
-     * Specify the quality of the images in the file.
-     * The value ranges from 0 to 100.
-     * Only valid when the {compression} is 'JPEG'.
-     */
     quality?: number;
 }
 ```
@@ -40,9 +32,11 @@ Custom tiff tag(s). Please refer to [CustomTag]({{ site.api }}interface/idocumen
 
 Specify the compression type. Please refer to [EnumTiffCompressionType]({{ site.api }}enumeration/enumtiffcompressiontype.html).
 
+Default value: `TIFF_AUTO`
+
 ### quality
 
-Specify the quality of the images in the file. The value ranges from 0 to 100. Only valid when the `compression` is 'JPEG'.
+Specify the quality of the images in the file. The value ranges from 0 to 100. Only valid when the [`compression`](#compression) is `TIFF_JPEG`.
 
 ## Related
 

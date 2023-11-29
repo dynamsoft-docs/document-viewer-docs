@@ -862,7 +862,7 @@ captureViewer.acceptedPolygonConfidence = 60;
 **Remark**
 
 - If it is not specified in [`viewerConfig`]({{ site.api }}interface/captureviewerconstructoroptions.html#viewerconfig) while creating the viewer additionally, the default value is 80. 
-- The range of available values is 0-100 on a percentage scale.
+- The range of available values is [0,100] on a percentage scale.
 - The higher the setting, the more accurate the automatic border detection.
 
 ### maxFrameNumber

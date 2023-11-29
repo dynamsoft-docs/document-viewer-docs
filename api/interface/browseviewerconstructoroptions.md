@@ -17,9 +17,9 @@ permalink: /api/interface/browseviewerconstructoroptions.html
 ```typescript
 interface BrowseViewerConstructorOptions {
 	container?: string | HTMLElement;
-	viewerConfig?: BrowseViewerConfig; // The configurations of viewer, such as page style, minZoom, maxZoom and so on.
-	uiConfig?: UiConfig; // The UI layout configurations.
-	groupUid?: string; //The uid of viewer's group, if it is not set, a random groupUid will generate.
+	viewerConfig?: BrowseViewerConfig;
+	uiConfig?: UiConfig; 
+	groupUid?: string; 
 }
 ```
 
@@ -39,7 +39,7 @@ The UI layout configurations of viewer, please refer to [`UiConfig`]({{ site.api
 
 ### groupUid
 
-The uid of viewers' group. Please refer to [Data synchronisation between viewers](). If it is not specified, a random groupUid will be generated.
+The uid of viewers' group. Please refer to [Data synchronisation between viewers]({{ site.features }}viewers/datasync.html). If it is not specified, a random groupUid will be generated.
 
 ## Related
 

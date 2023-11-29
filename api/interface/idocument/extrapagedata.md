@@ -16,10 +16,10 @@ permalink: /api/interface/idocument/extrapagedata.html
 
 ```typescript
 interface ExtraPageData {
-    index: number; // 
+    index: number; 
     rotation?: number;
     filter?: string;
-    perspectiveQuad?: Quad; // The detected quad on this page.
+    perspectiveQuad?: Quad;
 }
 ```
 

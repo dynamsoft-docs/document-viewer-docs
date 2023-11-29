@@ -16,9 +16,9 @@ permalink: /api/interface/createdocumentoptions.html
 
 ```typescript
 interface CreateDocumentOptions {
-    name?: string; // Specify the name of document.
-    author?: string; // Specify the author.
-    creationDate?: string; // Specify the creation date. Note that the argument should be 'D:YYYYMMDDHHmmSS', like 'D:20230101085959'.
+    name?: string; 
+    author?: string; 
+    creationDate?: string; 
 }
 ```
 

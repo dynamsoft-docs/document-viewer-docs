@@ -41,9 +41,13 @@ Specify the author.
 
 Specify the pdf compression type. Please refer to [`EnumPdfCompressionType`]({{ site.api }}enumeration-type/enumpdfcompressiontype.html).
 
+Default value: `PDF_AUTO`
+
 ### pageType
 
 Specify the pdf page type. Please refer to [`EnumPdfPageType`]({{ site.api }}enumeration-type/enumpdfpagetype.html).
+
+Default value: `PAGE_DEFAULT`
 
 ### creator
 
@@ -91,7 +95,7 @@ Specify the quality of the images in the file.
 
 The value range is [0, 100], default value is 80.
 
-Only takes effect when the [`compression`](#compression) is set to `JPEG` or `JPEG2000`.
+Only takes effect when the [`compression`](#compression) is set to `PDF_JPEG` or `PDF_JP2000`.
 
 ## Related
 

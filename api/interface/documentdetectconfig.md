@@ -16,13 +16,9 @@ permalink: /api/interface/documentdetectconfig.html
 
 ```typescript
 interface DocumentDetectConfig {
-
     acceptedPolygonConfidence?: number; 
-
     enableAutoCapture?: boolean; 
-
     autoCaptureDelay: number;  
-
 }
 ```
 
@@ -32,11 +28,13 @@ interface DocumentDetectConfig {
 
 The accepted confidence. Value range: [0, 100] in percentage.
 
-The default value is 60. The higher the setting, the more accurate the automatic boundaries detection.
+The higher the setting, the more accurate the automatic boundaries detection.
+
+The default value is the vaule which is set by [`CaptureViewerConfig`-`acceptedPolygonConfidence`]({{ site.api }}interface/captureviewerconfig.html#acceptedpolygonconfidence).
 
 ### enableAutoCapture
 
-Wheter to enable auto capture. The default value is `false`.
+Wheter to enable auto capture. The default value is the vaule which is set by [`CaptureViewerConfig`-`enableAutoCapture`]({{ site.api }}interface/captureviewerconfig.html#enableautocapture).
 
 ### autoCaptureDelay
 

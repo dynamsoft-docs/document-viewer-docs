@@ -16,17 +16,11 @@ permalink: /api/interface/documentdetectresult.html
 
 ```typescript
 interface DocumentDetectResult {
-
     success: boolean;
-
     location?: Quad;
-
-    confidence?: number; //percentage: 0-100
-
+    confidence?: number;
     status?: EnumDocumentDetectionStatus;
-
     statusMsg?: string;
-
 }
 ```
 
