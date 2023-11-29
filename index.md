@@ -14,6 +14,12 @@ description: Dynamsoft Document Viewer Documentation Homepage
 * [Security]({{site.security}}) 
 * [References]({{site.references}})  -->
 
+- [Introduction]({{site.introduction}}index.html) 
+- Getting Started
+    - [System Requirements]({{ site.gettingstarted }}sys_requirement.html)
+    - [Adding the dependency]({{ site.gettingstarted }}add_dependency.html)
+    - [SDK Initialization]({{ site.gettingstarted }}sdk_init.html)
+    - [Creating HelloWorld]({{ site.gettingstarted }}helloworld.html)
 - [Viewer Configuration]({{ site.viewer }}index.html)
     - [ViewerConfig]({{ site.viewer }}viewerconfig.html)
         - [Structure]({{ site.viewer }}viewerconfig.html#structure)
@@ -21,7 +27,6 @@ description: Dynamsoft Document Viewer Documentation Homepage
     - [How to customize viewer]({{ site.viewer }}customize.html)
         - [Viewer Style]({{ site.viewer }}customize.html#viewer-style)
         - [Viewer properties]({{ site.viewer }}customize.html#viewer-properties)
-
 - [User Interface]({{ site.ui }}index.html)
     - [UiConfig]({{ site.ui }}uiconfig.html)
         - [Structure]({{ site.ui }}uiconfig.html#structure)
@@ -37,3 +42,4 @@ description: Dynamsoft Document Viewer Documentation Homepage
         - [Layout]({{ site.ui }}customize/layout.html)
         - [Elements]({{ site.ui }}customize/elements.html)
         - [Update UI dynamically]({{ site.ui }}customize/dynamically.html)
+- [API Reference]({{ site.api }}index.html)
