@@ -20,6 +20,7 @@ interface PerspectiveViewerConfig {
 	pageStyle?: BaseStyle;
 	quadSelectionStyle?: QuadSelectionStyle;    
 	enableSlide?: boolean; 
+	scrollToLatest?: boolean;
 }
 ```
 
@@ -40,6 +41,12 @@ The style of quadrilateral selection. Please refer to [`QuadSelectionStyle`]({{ 
 ### enableSlide
 
 Specify whether allow to slide the pages.
+
+### scrollToLatest
+
+Specify whether to scroll to latest page automatically when importing new pages.
+
+Default value: `false`
 
 
 ## Related

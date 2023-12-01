@@ -38,4 +38,4 @@ Wheter to enable auto capture. The default value is the vaule which is set by [`
 
 ### autoCaptureDelay
 
-The delay for auto capture. The unit is millisecond. The default value is 3000.
+The delay for auto capture. The unit is millisecond. The default value is the vaule which is set by [`CaptureViewerConfig`-`autoCaptureDelay`]({{ site.api }}interface/captureviewerconfig.html#autocapturedelay).
