@@ -22,6 +22,7 @@ interface CaptureViewerConfig {
 	enableAutoCapture?: boolean;
 	enableAutoDetect?: boolean;
 	acceptedPolygonConfidence?: number;
+	autoCaptureDelay: number;
 	maxFrameNumber?: number;
 }
 ```
@@ -59,6 +60,12 @@ Default value: `false`
 Specify the threshold confidence level when detecting boundaries. The value range is [0,100].
 
 Default value: 80
+
+### autoCaptureDelay
+
+Specify the delay for auto capture. The unit is millisecond.
+
+Default value: 1000
 
 ### maxFrameNumber
 
