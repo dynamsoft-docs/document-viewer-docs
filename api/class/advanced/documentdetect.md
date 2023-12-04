@@ -22,9 +22,7 @@ The APIs for this class include:
 ----------------------------|---------------------------------------------
  [`detect()`](#detect)                   | Detect the boundaries quadrangle.                   
  [`processDetectResult()`](#processdetectresult)      | Process the detected result.                
- [`getStatusMsg()`](#getstatusmsg)             | Get the message of status during detection. 
- [`calculateConfidence()`](#calculateconfidence)      | Calculate individual confidence.            
- [`calculateTotalConfidence()`](#calculatetotalconfidence) | Calculate total confidence.                 
+ [`getStatusMsg()`](#getstatusmsg)             | Get the message of status during detection.             
 
 ## detect()
 
@@ -94,41 +92,5 @@ getStatusMsg(status: EnumDocumentDetectionStatus): string;
 
 The status message string.
 
-## calculateConfidence()
-
-**Syntax**
-
-```typescript
-calculateConfidence(location: Quad, width: number, height: number): DocumentDetectConfidence;
-```
-
-**Parameters**
-
-`location`: The result of boundaries quadrangle. Please refer to [`Quad`]({{ site.api }}enumeration-type/quad.html).
-
-`width`: The width of image. 
-
-`height`: The height of image.
-
-**Return Value**
-
-An [`DocumentDetectConfidence`]({{ site.api }}interface/documentdetectconfidence.html) object that contains the detected result.
-
-
-## calculateTotalConfidence()
-
-**Syntax**
-
-```typescript
-calculateTotalConfidence(conf: DocumentDetectConfidence): number;
-```
-
-**Parameters**
-
-`conf`: The confidence of document boundaries detection. Please refer to [`DocumentDetectConfidence`]({{ site.api }}interface/documentdetectconfidence.html).
-
-**Return Value**
-
-Number of total confidence.
 
 
