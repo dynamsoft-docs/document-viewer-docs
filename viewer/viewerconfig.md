@@ -163,7 +163,7 @@ DDV will provide the default viewerConfig for each viewer.
     enableDragPage: true,
 
     scrollDirection: "vertical",
-    visibilty: "visible",
+    visibilty: "hidden",
     size: "100%",
     position: "left",
 };
@@ -239,7 +239,7 @@ DDV will provide the default viewerConfig for each viewer.
     scrollToLatest: false,
     enableDragPage: true,
     scrollDirection: "vertical",
-    visibilty: "visible",
+    visibilty: "hidden",
     size: "180px",
     position: "left",
 };
