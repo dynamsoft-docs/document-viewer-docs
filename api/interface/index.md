@@ -66,6 +66,5 @@ permalink: /api/interface/index.html
 - [`IImageFilter`]({{ site.api }}interface/iimagefilter.html)
 - [`ImageFilterItem`]({{ site.api }}interface/imagefilteritem.html)
 - [`IDocumentDetect`]({{ site.api }}interface/idocumentdetect.html)
-- [`DocumentDetectConfidence`]({{ site.api }}interface/documentdetectconfidence.html)
 - [`DocumentDetectConfig`]({{ site.api }}interface/documentdetectconfig.html)
 - [`DocumentDetectResult`]({{ site.api }}interface/documentdetectresult.html)
