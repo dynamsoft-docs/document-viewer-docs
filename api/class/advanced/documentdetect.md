@@ -48,8 +48,6 @@ A promise resolving to an [`DocumentDetectResult`]({{ site.api }}interface/docum
 
 The border detection process will periodically call the custom detect method to obtain the detected result.
 
-![DocumentDetect_detect](/assets/imgs/DocumentDetect_detect.png)
-
 ## processDetectResult()
 
 Process the detected result.
