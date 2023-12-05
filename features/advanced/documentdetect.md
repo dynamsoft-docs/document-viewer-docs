@@ -59,7 +59,7 @@ const router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance();
 // Inherit DocumentDetect class
 class MyDocumentDetect extends Dynamsoft.DDV.DocumentDetect {
     // Rewrite the detect method
-    async detect(image, config) {
+    async detect(image, detectConfig) {
         if (!router) {
             return Promise.resolve({
                 success: false,
@@ -91,11 +91,12 @@ class MyDocumentDetect extends Dynamsoft.DDV.DocumentDetect {
             quad.push([p.x, p.y]);
         });
 
-        const ret = this.processDetectResult(
-            quad,
-            image.width,
-            image.height,
-            config,
+        const ret = this.processDetectResult({
+                location: quad,
+                width: image.width,
+                height: image.height,
+                config: detectConfig,
+            }
         );
 
         // Return detection result
@@ -161,7 +162,7 @@ Dynamsoft.DDV.setProcessingHandler("documentBoundariesDetect", detectHandler);
     // Inherit DocumentDetect class
     class MyDocumentDetect extends Dynamsoft.DDV.DocumentDetect {
         // Rewrite the detect method
-        async detect(image, config) {
+        async detect(image, detectConfig) {
             if (!router) {
                 return Promise.resolve({
                     success: false,
@@ -193,11 +194,12 @@ Dynamsoft.DDV.setProcessingHandler("documentBoundariesDetect", detectHandler);
                 quad.push([p.x, p.y]);
             });
 
-            const ret = this.processDetectResult(
-                quad,
-                image.width,
-                image.height,
-                config,
+            const ret = this.processDetectResult({
+                    location: quad,
+                    width: image.width,
+                    height: image.height,
+                    config: detectConfig,
+                }
             );
 
             // Return detection result
