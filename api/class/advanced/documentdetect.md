@@ -57,18 +57,12 @@ Process the detected result.
 **Syntax**
 
 ```typescript
-processDetectResult(location: Quad, width: number, height: number, config: DocumentDetectConfig): DocumentDetectResult;
+processDetectResult(detectResult: DetectResult): DocumentDetectResult;
 ```
 
 **Parameters**
 
-`location`: The result of boundaries quadrangle. Please refer to [`Quad`]({{ site.api }}enumeration-type/quad.html).
-
-`width`: The width of image. 
-
-`height`: The height of image.
-
-`config`: The configuration of document detect. Please refer to [`DocumentDetectConfig`]({{ site.api }}interface/documentdetectconfig.html).
+`detectResult`: The detected result. Please refer to [`DetectResult`]({{ site.api }}interface/detectresult.html).
 
 **Return Value**
 

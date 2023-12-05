@@ -86,6 +86,7 @@ permalink: /api/index.html
 - [`IImageFilter`]({{ site.api }}interface/iimagefilter.html)
 - [`ImageFilterItem`]({{ site.api }}interface/imagefilteritem.html)
 - [`IDocumentDetect`]({{ site.api }}interface/idocumentdetect.html)
+- [`DetectResult`]({{ site.api }}interface/detectresult.html)
 - [`DocumentDetectConfig`]({{ site.api }}interface/documentdetectconfig.html)
 - [`DocumentDetectResult`]({{ site.api }}interface/documentdetectresult.html)
 
