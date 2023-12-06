@@ -96,8 +96,7 @@ class MyDocumentDetect extends Dynamsoft.DDV.DocumentDetect {
                 width: image.width,
                 height: image.height,
                 config: detectConfig,
-            }
-        );
+        });
 
         // Return detection result
         return Promise.resolve(ret);
@@ -199,8 +198,7 @@ Dynamsoft.DDV.setProcessingHandler("documentBoundariesDetect", detectHandler);
                     width: image.width,
                     height: image.height,
                     config: detectConfig,
-                }
-            );
+            });
 
             // Return detection result
             return Promise.resolve(ret);
@@ -231,4 +229,4 @@ Dynamsoft.DDV.setProcessingHandler("documentBoundariesDetect", detectHandler);
 
 ## Reference
 
-- [`DocumentDetect` class]({{ site.api }}class/advanced/documentdetect.html)
+- [`DocumentDetect class`]({{ site.api }}class/advanced/documentdetect.html)
