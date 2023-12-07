@@ -85,19 +85,18 @@ Label string for each filter type means the string which is displayed in the Fil
 
 **Use case**
 
-Change label strings' language to Chinese.
+Change label strings' language to Deutsch.
 
 ```typescript
 class MyImageFilter extends Dynamsoft.DDV.ImageFilter {
     querySupported() {
         const myFilterList = [
-            {type: "none", label: "原图"},
-            {type: "blackAndWhite", label: "黑白"},
-            {type: "gray", label: "灰度"},
-            {type: "removeShadow", label: "除阴影"},
-            {type: "saveInk", label: "省墨"},
+            {type: "none", label: "Original"},
+            {type: "blackAndWhite", label: "S/W"},
+            {type: "gray", label: "Graustufen"},
+            {type: "removeShadow", label: "Sauber"},
+            {type: "saveInk", label: "Tinte sparen"},
         ];
-
         return myFilterList;
     }
 }
@@ -172,4 +171,4 @@ Dynamsoft.DDV.setProcessingHandler("imageFilter", imageFilter);
 
 ## Reference
 
-- [`ImageFilter` class]({{ site.api }}class/advanced/imagefilter.html)
+- [`ImageFilter class`]({{ site.api }}class/advanced/imagefilter.html)

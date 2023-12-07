@@ -230,7 +230,7 @@ Default UiConfig:
             type: Dynamsoft.DDV.Elements.Layout,
             className: "ddv-perspective-viewer-footer-mobile",
             children: [
-                Dynamsoft.DDV.Elements.ResetQuad,
+                Dynamsoft.DDV.Elements.FullQuad,
                 Dynamsoft.DDV.Elements.RotateLeft,
                 Dynamsoft.DDV.Elements.RotateRight,
                 Dynamsoft.DDV.Elements.DeleteCurrent,
@@ -256,7 +256,7 @@ Default UiConfig:
             type: Dynamsoft.DDV.Elements.Layout,
             className: "ddv-perspective-viewer-header-desktop",
             children: [
-                Dynamsoft.DDV.Elements.ResetQuad,
+                Dynamsoft.DDV.Elements.FullQuad,
                 Dynamsoft.DDV.Elements.RotateLeft,
                 Dynamsoft.DDV.Elements.RotateRight,
                 Dynamsoft.DDV.Elements.DeleteCurrent,

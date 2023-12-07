@@ -138,7 +138,7 @@ loadSource(sources: Source | Source[], index?: number): Promise<string[]>;
 
 `fileData`: The blob of the file to be loaded.
 
-`sources`: The target files, it could be a file or a file array. Please refer to [`Source`]({{ site.api }}interface/idocument/source.html).
+`sources`: The target files, it could be a file or a file array. Please refer to [`Source`]({{ site.api }}interface/idocument/source.html). `Source` can be extanded to [`PdfSource`]({{ site.api }}interface/idocument/pdfsource.html).
 
 `index`: The position in the document where the file(s) will be loaded to. If not set, the loaded file(s) will be added from the end of the document.
 
