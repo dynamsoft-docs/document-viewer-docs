@@ -31,6 +31,10 @@ The blob of the file to be loaded.
 
 The extra data to be set. Please refer to [`ExtraPageData`]({{ site.api }}interface/idocument/extrapagedata.html);
 
+## Remark
+
+- `Source` can be extanded as [`PdfSource`]({{ site.api }}interface/idocument/pdfsource.html).
+
 ## Related
 
 - [`loadSource()`]({{ site.api }}interface/idocument/index.html#loadsource)
