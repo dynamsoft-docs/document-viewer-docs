@@ -12,12 +12,12 @@ permalink: /features/datamanagement/pagemanagement.html
 
 # Page Management
 
-DDV is using `Interface IDocument` to manage the page data. 
+DDV is using [`Interface IDocument`]({{ site.api }}interface/idocument/index.html) to manage the page data. 
 
 
 ## Load pages
 
-`loadSource()` is used to load file(s) into the document. 
+[`loadSource()`]({{ site.api }}interface/idocument/index.html#loadsource) is used to load file(s) into the document. 
 
 **Use case**
 

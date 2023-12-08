@@ -43,7 +43,7 @@ const mobileEditViewerUiConfig = {
 };
 ```
 
-- When `type` is set to `Dynamsoft.DDV.Elements.Layout` and flexDirection is `column`, it means the layout is from top to bottom.
+- When [`type`]({{ site.api }}interface/uiconfig.html#type) is set to `Dynamsoft.DDV.Elements.Layout` and flexDirection is `column`, it means the layout is from top to bottom.
 - `Dynamsoft.DDV.Elements.MainView` is one of the default elements DDV provides. Learn more about default elements.
 
 Next, the specific configuration of headerUiConfig, it can be seen that the icons are arranged from left to right, then
