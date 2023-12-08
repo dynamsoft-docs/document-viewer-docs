@@ -150,8 +150,6 @@ The `Dynamsoft.DDV.documentManager` instance will be created automatically as so
 | [`click`]({{ site.api }}class/editviewer.html#click)               | Triggered when click in the viewer's viewing area.           |
 | [`dblclick`]({{ site.api }}class/editviewer.html#dbclick)            | Triggered when double click in the viewer's viewing area.    |
 | [`rightclick`]({{ site.api }}class/editviewer.html#rightclick)          | Triggered when right click in the viewer's viewing area.     |
-| [`tap`]({{ site.api }}class/editviewer.html#tap)                 | Triggered on mobile when tap in the viewer's viewing area.   |
-| [`longtap`]({{ site.api }}class/editviewer.html#longtap)             | Triggered on mobile when long tap in the viewer's viewing area. |
 
 <div class="multi-panel-end"></div>
 
@@ -226,8 +224,6 @@ The `Dynamsoft.DDV.documentManager` instance will be created automatically as so
 | [`click`]({{ site.api }}class/captureviewer.html#click)         | Triggered when click in the viewer's viewing area.           |
 | [`dblclick`]({{ site.api }}class/captureviewer.html#dblclick)      | Triggered when double click in the viewer's viewing area.    |
 | [`rightclick`]({{ site.api }}class/captureviewer.html#rightclick)    | Triggered when right click in the viewer's viewing area.     |
-| [`tap`]({{ site.api }}class/captureviewer.html#tap)           | Triggered on mobile when tap in the viewer's viewing area.   |
-| [`longtap`]({{ site.api }}class/captureviewer.html#longtap)       | Triggered on mobile when long tap in the viewer's viewing area. |
 
 <div class="multi-panel-end"></div>
 
@@ -306,8 +302,6 @@ The `Dynamsoft.DDV.documentManager` instance will be created automatically as so
 | [`click`]({{ site.api }}class/perspectiveviewer.html#click)               | Triggered when click in the viewer's viewing area.           |
 | [`dblclick`]({{ site.api }}class/perspectiveviewer.html#dbclick)            | Triggered when double click in the viewer's viewing area.    |
 | [`rightclick`]({{ site.api }}class/perspectiveviewer.html#rightclick)          | Triggered when right click in the viewer's viewing area.     |
-| [`tap`]({{ site.api }}class/perspectiveviewer.html#tap)                 | Triggered on mobile when tap in the viewer's viewing area.   |
-| [`longtap`]({{ site.api }}class/perspectiveviewer.html#longtap)             | Triggered on mobile when long tap in the viewer's viewing area. |
 
 <div class="multi-panel-end"></div>
 
@@ -390,8 +384,6 @@ The `Dynamsoft.DDV.documentManager` instance will be created automatically as so
 | [`click`]({{ site.api }}class/browseviewer.html#click)               | Triggered when click in the viewer's viewing area.           |
 | [`dblclick`]({{ site.api }}class/browseviewer.html#dbclick)            | Triggered when double click in the viewer's viewing area.    |
 | [`rightclick`]({{ site.api }}class/browseviewer.html#rightclick)          | Triggered when right click in the viewer's viewing area.     |
-| [`tap`]({{ site.api }}class/browseviewer.html#tap)                 | Triggered on mobile when tap in the viewer's viewing area.   |
-| [`longtap`]({{ site.api }}class/browseviewer.html#longtap)             | Triggered on mobile when long tap in the viewer's viewing area. |
 
 <div class="multi-panel-end"></div>
 

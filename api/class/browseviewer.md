@@ -89,8 +89,7 @@ permalink: /api/class/browseviewer.html
 | [`click`](#click)               | Triggered when click in the viewer's viewing area.           |
 | [`dblclick`](#dbclick)            | Triggered when double click in the viewer's viewing area.    |
 | [`rightclick`](#rightclick)          | Triggered when right click in the viewer's viewing area.     |
-| [`tap`](#tap)                 | Triggered on mobile when tap in the viewer's viewing area.   |
-| [`longtap`](#longtap)             | Triggered on mobile when long tap in the viewer's viewing area. |
+
 
 ## Create and Destroy Instances
 
@@ -1168,7 +1167,7 @@ Triggered when page(s) is dropped.
 
 ##### click
 
-Triggered when click in the viewer's viewing area.
+Triggered when click in the viewer's viewing area. On mobile device, triggered when tap in the viewer's viewing area.
 
 ##### dblclick
 
@@ -1176,17 +1175,7 @@ Triggered when double click in the viewer's viewing area.
 
 ##### rightclick
 
-Triggered when right click in the viewer's viewing area.
-
-##### tap
-
-Triggered on mobile when tap in the viewer's viewing area.
-Taps are defined as a mouse down and up within a short time period and within a short distance.
-
-##### longtap
-
-Triggered on mobile when long tap in the viewer's viewing area. This is the equivalent of the desktop right click.
-Long taps are defined as pressing a mouse and holding it down for 500ms before releasing it.
+Triggered when right click in the viewer's viewing area. On mobile device, triggered when long-tap in the viewer's viewing area.
 
 **Callback for mouse events**
 
