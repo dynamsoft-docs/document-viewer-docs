@@ -20,7 +20,7 @@ ViewerConfig contains two parts of configuration, one is the configuration on th
 
 ### Customize styles while creating a viewer
 
-Take the edit viewer as example, according to the structure `EditViewerConfig`, there are three styles which can be configured, `canvasStyle`, `pageStyle` and `quadSelectionStyle`.
+Take the edit viewer as example, according to the structure [`EditViewerConfig`]({{ site.api }}interface/editviewerconfig.html), there are three styles which can be configured, [`canvasStyle`]({{ site.api }}interface/editviewerconfig.html#canvasstyle), [`pageStyle`]({{ site.api }}interface/editviewerconfig.html#pagestyle) and [`quadSelectionStyle`]({{ site.api }}interface/editviewerconfig.html#quadselectionstyle).
 
 **Use case**
 
@@ -53,7 +53,7 @@ Please notice that only the customized style will be modified, and the remaining
 
 ### Update styles dynamically
 
-Besides customize the initial viewer style, DDV also allows update the styles dynamically after the viewer is created by using `getStyle()` & `updateStyle()`.
+Besides customize the initial viewer style, DDV also allows update the styles dynamically after the viewer is created by using [`getStyle()`]({{ site.api }}class/editviewer.html#getstyle) & [`updateStyle()`]({{ site.api }}class/editviewer.html#updatestyle).
 
 **Use case**
 
@@ -74,7 +74,7 @@ editViewer.updateStyle("canvasStyle", newCanvasStyle);
 
 ## Viewer properties
 
-Some properties can also customized, for example, the values of `minZoom` and `maxZoom` can be customized for a edit viewer.
+Some properties can also customized, for example, the values of [`minZoom`]({{ site.api }}interface/editviewerconfig.html#minzoom) and [`maxZoom`]({{ site.api }}interface/editviewerconfig.html#maxzoom) can be customized for a edit viewer.
 
 **Use case**
 
@@ -83,7 +83,7 @@ Customize the `minZoom` and `maxZoom` while creating an edit viewer.
 ```typescript
 const newViewerConfig = {
     minZoom: 0.1, // Set the minimum zoom value to 10%
-    maxZoom: 64,  // Set the maximum zoom value to 6400%
+    maxZoom: 32,  // Set the maximum zoom value to 3200%
 };
 
 const editViewer = new Dynamsoft.DDV.EditViewer({

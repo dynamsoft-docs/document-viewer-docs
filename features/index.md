@@ -31,8 +31,8 @@ And the pages are placed in the document. Each document also has its unique docU
 
 So manage data is to manage documents and pages.
 
-- Document management
-- Page management
+- [Document management]({{ site.features }}datamanagement/docmanagement.html)
+- [Page management]({{ site.features }}datamanagement/pagemanagement.html)
 
 Actually, if you are using the default UI of DDV, the data management has been done internally.
 

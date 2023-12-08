@@ -12,13 +12,13 @@ permalink: /features/datamanagement/docmanagement.html
 
 # Document Management
 
-DDV manages document data through the [`DocumentManager`]() class, which can implement functions such as creating, deleting, and merging documents.
+DDV manages document data through the [`DocumentManager`]({{ site.api }}class/documentmanager.html) class, which can implement functions such as creating, deleting, and merging documents.
 
 The `Dynamsoft.DDV.documentManager` instance will be created automatically as soon as DDV is initialized.
 
 ## Create a new document
 
-Use `createDocument()` method to create a new document in DDV, can also specify the document's name, author and creationDate at the same time.
+Use [`createDocument()`]({{ site.api }}class/documentmanager.html#createdocument) method to create a new document in DDV, can also specify the document's name, author and creationDate at the same time.
 
 ```typescript
 const docManager = Dynamsoft.DDV.documentManager;
@@ -34,11 +34,13 @@ const firstDoc = docManager.createDocument({
 const secondDoc = docManager.createDocument();
 ```
 
-`firstDoc` and `secondDoc` above are the document objects, please refer to [Page Management]() and see how to manage the page data in document.
+`firstDoc` and `secondDoc` above are the document objects, please refer to [Page Management]({{ site.features }}datamanagement/pagemanagement.html) and see how to manage the page data in document.
 
 ## Merge documents
 
-DDV provides the method `mergeDocuments()` to merge the specified documents to a new document. Take two documents which are created above as an example and merge them to a new document `mergedDoc` and delete the original documents.
+DDV provides the method [`mergeDocuments()`]({{ site.api }}class/documentmanager.html#mergedocuments) to merge the specified documents to a new document. 
+
+Take two documents which are created above as an example and merge them to a new document `mergedDoc` and delete the original documents.
 
 ```typescript
 // Get the documents' docUid
@@ -60,7 +62,7 @@ const mergedDoc = docManager.mergeDocuments([docUid1, docUid2], mergeOptions);
 
 ## Copy or move pages from a specified document to another
 
-Sometimes, may need to copy or move some pages in specified document to another document. DDV has two methods `copyPagesToDocument()` and `movePagesToDocument()` which can achieve this scenario.
+Sometimes, may need to copy or move some pages in specified document to another document. DDV has two methods [`copyPagesToDocument()`]({{ site.api }}class/documentmanager.html#copypagestodocument) and [`movePagesToDocument()`]({{ site.api }}class/documentmanager.html#movepagestodocument) which can achieve this scenario.
 
 **Use case**
 
@@ -102,7 +104,7 @@ Sometimes, may need to copy or move some pages in specified document to another 
 
 ## Delete Documents
 
-Use `deleteDocuments()` and `deleteAllDocuments()` methods to delete the existing documents.
+Use [`deleteDocuments()`]({{ site.api }}class/documentmanager.html#deletedocuments) and [`deleteAllDocuments()`]({{ site.api }}class/documentmanager.html#deletealldocuments) methods to delete the existing documents.
 
 **Use case**
 
@@ -128,5 +130,5 @@ Use `deleteDocuments()` and `deleteAllDocuments()` methods to delete the existin
 
 ## References
 
-- `DocumentManage Class`
-- `Interface IDocument`
+- [`DocumentManage Class`]({{ site.api }}class/documentmanager.html)
+- [`Interface IDocument`]({{ site.api }}interface/idocument/index.html)
