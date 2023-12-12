@@ -17,9 +17,13 @@ description: Dynamsoft Document Viewer Documentation Homepage
 - [Introduction]({{site.introduction}}index.html) 
 - Getting Started
     - [System Requirements]({{ site.gettingstarted }}sys_requirement.html)
-    - [Adding the dependency]({{ site.gettingstarted }}add_dependency.html)
+    <!-- - [Adding the dependency]({{ site.gettingstarted }}add_dependency.html)
     - [SDK Initialization]({{ site.gettingstarted }}sdk_init.html)
-    - [Creating HelloWorld]({{ site.gettingstarted }}helloworld.html)
+    - [Creating HelloWorld]({{ site.gettingstarted }}helloworld.html) -->
+- Features
+    - [Advanced]()
+        - [Image Filter]({{ site.features }}advanced/imagefilter.html)
+        - [Document Detection]({{ site.features }}advanced/documentdetect.html)
 - [Viewer Configuration]({{ site.viewer }}index.html)
     - [ViewerConfig]({{ site.viewer }}viewerconfig.html)
         - [Structure]({{ site.viewer }}viewerconfig.html#structure)
@@ -41,5 +45,6 @@ description: Dynamsoft Document Viewer Documentation Homepage
     - [How to customize UI]({{ site.ui }}customize/index.html)
         - [Layout]({{ site.ui }}customize/layout.html)
         - [Elements]({{ site.ui }}customize/elements.html)
-        - [Update UI dynamically]({{ site.ui }}customize/dynamically.html)
+        <!-- - [Update UI dynamically]({{ site.ui }}customize/dynamically.html) -->
 - [API Reference]({{ site.api }}index.html)
+
