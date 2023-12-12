@@ -67,6 +67,10 @@ DDV will provide the default viewerConfig for each viewer.
         background: "#fff",
         border: "1px solid #707070",
     },
+    currentPageStyle: {
+        background: "",
+        border: "",
+    },
     quadSelectionStyle: {
         background: "rgba(255,255,255,0)",
         border: "2px solid #fe8e14",
