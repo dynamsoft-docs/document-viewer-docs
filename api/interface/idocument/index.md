@@ -250,8 +250,11 @@ await firstDoc.updatePage(firstDoc.pages[0], fileData, updateFirstPage);
  Error Code  | Description                                         
 --------|-----------------------------------------------------
  -80100 | XXX(ClassName.API): XXX(Parameter Name) is invalid. 
+ -80101 | IDocument.updatePage: updatePageOptions.fileIndex is out of range.
  -80102 | XXX(ClassName.API): XXX(Parameter Name) is missing. 
  -80105 | XXX(ClassName.API): The specified page(s) do not exist.
+
+
 
 ### setPageCustomData()
 
