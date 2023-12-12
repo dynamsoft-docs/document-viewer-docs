@@ -57,7 +57,7 @@ permalink: /api/class/perspectiveviewer.html
 | [`setQuadSelection()`](#setquadselection)    | Set a quadrilateral selection on the current page.              |
 | [`getQuadSelection()`](#getquadselection)    | Get the quadrilateral selection.                                |
 | [`resetQuadSelection()`](#resetquadselection)  | Reset the quadrilateral selection to the original one.          |
-| [`perspective()`](#perspective)         | Performs a perspective transformation in current page based on the specified quadrangle. |
+| [`applyPerspective()`](#perspective)         | Performs a perspective transformation in current page based on the specified quadrangle. |
 
 **Edit Operations**
 
@@ -801,14 +801,14 @@ perspectiveViewer.resetQuadSelection();
  -80305 | There is no image in the current document.                | `false`
 
 
-### perspective()
+### applyPerspective()
 
 Performs a perspective transformation in current page based on the specified quadrangle.
 
 **Syntax**
 
 ```typescript
-perspective(quad: Quad): Promise<Blob>;
+applyPerspective(quad: Quad): Promise<Blob>;
 ```
 
 **Parameters**
@@ -824,7 +824,7 @@ The Blob of the result image after perspective transformation.
 ```typescript
 const quad = perspectiveViewer.getQuadSelection();
 
-await perspectiveViewer.perspective(quad);
+await perspectiveViewer.applyPerspective(quad);
 ```
 
 **Promise Exception**

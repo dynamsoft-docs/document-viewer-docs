@@ -274,7 +274,7 @@ The `Dynamsoft.DDV.documentManager` instance will be created automatically as so
 | [`setQuadSelection()`]({{ site.api }}class/perspectiveviewer.html#setquadselection)    | Set a quadrilateral selection on the current page.              |
 | [`getQuadSelection()`]({{ site.api }}class/perspectiveviewer.html#getquadselection)    | Get the quadrilateral selection.                                |
 | [`resetQuadSelection()`]({{ site.api }}class/perspectiveviewer.html#resetquadselection)  | Reset the quadrilateral selection to the original one.          |
-| [`perspective()`]({{ site.api }}class/perspectiveviewer.html#perspective)         | Performs a perspective transformation in current page based on the specified quadrangle. |
+| [`applyPerspective()`]({{ site.api }}class/perspectiveviewer.html#perspective)         | Performs a perspective transformation in current page based on the specified quadrangle. |
 
 **Edit Operations**
 
