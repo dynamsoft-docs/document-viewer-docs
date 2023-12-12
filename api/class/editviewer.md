@@ -250,10 +250,10 @@ getStyle(editViewerStyleName: EditViewerStyleName): EditViewerStyle | null;
 
 **Parameters**
 
-`editViewerStyleName`: An `EditViewerStyleName` can be one of three types.
+`editViewerStyleName`: An `EditViewerStyleName` can be one of four types.
 
 ```typescript
-type EditViewerStyleName = "canvasStyle" | "pageStyle" | "quadSelectionStyle";
+type EditViewerStyleName = "canvasStyle" | "pageStyle" | "currentPageStyle" |"quadSelectionStyle";
 ```
 
 **Return values**
@@ -290,7 +290,7 @@ updateStyle(editViewerStyleName: EditViewerStyleName, editViewerStyle: EditViewe
 `editViewerStyleName`: An `EditViewerStyleName` can be one of three types.
 
 ```typescript
-type EditViewerStyleName = "canvasStyle" | "pageStyle" | "quadSelectionStyle";
+type EditViewerStyleName = "canvasStyle" | "pageStyle" | "currentPageStyle" |"quadSelectionStyle";
 ```
 
 `editViewerStyle`: The style object. Please refer to [Style Interfaces]({{ site.api }}interface/styleinterface/index.html).

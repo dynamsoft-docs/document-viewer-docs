@@ -18,6 +18,7 @@ permalink: /api/interface/editviewerconfig.html
 interface EditViewerConfig {
     canvasStyle?: CanvasStyle;
     pageStyle?: BaseStyle;
+    currentPageStyle?: BaseStyle;
     quadSelectionStyle?: QuadSelectionStyle;
     enableSlide?: boolean; 
     scrollToLatest?: boolean; 
@@ -36,6 +37,10 @@ The style of canvas of the viewer. Please refer to [`CanvasStyle`]({{ site.api }
 ### pageStyle
 
 The style of displayed page in the viewer. Please refer to [`BaseStyle`]({{ site.api }}interface/styleinterface/basestyle.html).
+
+### currentPageStyle
+
+The style of current page in the viewer. Please refer to [`BaseStyle`]({{ site.api }}interface/styleinterface/basestyle.html).
 
 ### quadSelectionStyle
 
