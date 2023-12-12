@@ -27,9 +27,13 @@ interface videoConfig {
 
 The resolution of the camera video input. If the specified resolution is not exactly supported, the closest resolution will be applied.
 
+Default value: `[1280, 720]` which means 720P.
+
 ### fill
 
-Specify whether the video stream fills the viewer.
+Specify whether the video stream fills the viewer. 
+
+Default value: `false`
 
 ## Related
 
