@@ -137,7 +137,7 @@ Default UiConfig:
             className: "ddv-capture-viewer-header-mobile",
             children: [
                 {
-                    type: "CameraResolution",
+                    type: Dynamsoft.DDV.Elements.CameraResolution,
                     className: "ddv-capture-viewer-resolution",
                 },
                 Dynamsoft.DDV.Elements.Flashlight,
@@ -151,7 +151,7 @@ Default UiConfig:
                 Dynamsoft.DDV.Elements.AutoDetect,
                 Dynamsoft.DDV.Elements.AutoCapture,
                 {
-                    type: "Capture",
+                    type: Dynamsoft.DDV.Elements.Capture,
                     className: "ddv-capture-viewer-captureButton",
                 },
                 Dynamsoft.DDV.Elements.ImagePreview,
