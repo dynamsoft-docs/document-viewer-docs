@@ -31,7 +31,7 @@ The image data type. Please refer to [`EnumImageDataType`]({{ site.api }}enumera
 
 ### data
 
-The image data. *It cannot be destroyed.*
+The image data. ***Do not destroy it.***
 
 ### height
 
