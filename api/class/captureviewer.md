@@ -543,6 +543,10 @@ await captureViewer.play({
  -80405 | No camera available.
  -80406 | The selected camera is denied by browser.
 
+**Remark**
+
+- The value of `videoConfig` will be remembered and automatically applied the next time `play()` is called, unless another `videoConfig` is specified.
+
 ### stop()
 
 Stop the camera video stream.

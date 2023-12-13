@@ -32,6 +32,8 @@ Specify the license string.
 
 Specify the path should lead to a folder containing the distributed WASM files.
 
+If set to `""`, the library will try to find the engine in the same location as the main JavaScript file.
+
 ### deviceFriendlyName
 
 Specify a human-readable name that identifies the device. This name will appear in the device details table when you check the statistics of the according license. Default value is `""`.
