@@ -15,9 +15,7 @@ api: /document-viewer/docs/api/
 
 license: /document-viewer/docs/license/
 
-enumerations: /document-viewer/docs/programming/enumerations/
-parameters_reference: /document-viewer/docs/parameters/reference/
-release_notes: /document-viewer/docs/release-notes/
+releasenotes: /document-viewer/docs/releasenotes/
 
 useVersionTree: true
 
