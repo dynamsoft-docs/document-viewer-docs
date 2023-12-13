@@ -18,8 +18,8 @@ permalink: /api/interface/vimagedata.html
 interface VImageData {
 	type: EnumImageDataType;
 	data: ArrayBuffer | Blob; 
-	height: number;
-	width: number;
+	height?: number;
+	width?: number;
 }
 ```
 
@@ -31,7 +31,7 @@ The image data type. Please refer to [`EnumImageDataType`]({{ site.api }}enumera
 
 ### data
 
-The image data. ***Do not destroy it.***
+The image data. *It cannot be destroyed.*
 
 ### height
 
