@@ -7,19 +7,13 @@ description: Dynamsoft Document Viewer Documentation Homepage
 
 # Dynamsoft Document Viewer 
 
-<!-- * [Glossary of Terms]({{site.glossary}})
-* [Introduction]({{site.introduction}}) 
-* [Getting Started]({{site.gettingstarted}}) 
-* [Related APIs]({{site.api}}) 
-* [Security]({{site.security}}) 
-* [References]({{site.references}})  -->
 
 - [Introduction]({{site.introduction}}index.html) 
 - Getting Started
     - [System Requirements]({{ site.gettingstarted }}sys_requirement.html)
-    <!-- - [Adding the dependency]({{ site.gettingstarted }}add_dependency.html)
-    - [SDK Initialization]({{ site.gettingstarted }}sdk_init.html)
-    - [Creating HelloWorld]({{ site.gettingstarted }}helloworld.html) -->
+    - [Adding the dependency]({{ site.gettingstarted }}add_dependency.html)
+    <!-- - [SDK Initialization]({{ site.gettingstarted }}sdk_init.html) -->
+    - [Creating HelloWorld]({{ site.gettingstarted }}helloworld.html)
 - Features
     - [Advanced]()
         - [Image Filter]({{ site.features }}advanced/imagefilter.html)

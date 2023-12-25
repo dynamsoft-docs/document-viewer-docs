@@ -20,7 +20,7 @@ The default UI provided by DDV is basically a top-down layout. Taking the defaul
 
 Without changing the toolbar, only changing the relative position of the toolbar and the main view, you can refer to the following steps:
 
-- **Step one**: Refer to the default UiConfig which is listed on [Default user interface](#) section and reverse two elements in its children. Can use `getDefaultUiConfig` method,
+- **Step one**: Refer to the default UiConfig which is listed on [Default user interface]({{ site.ui }}default_ui.html) section and reverse two elements in its children. Can use [`getDefaultUiConfig()`]({{ site.api }}namespace/ddv.html#static-getdefaultuiconfig) method,
     ```typescript
     const newUiConfig = Dynamsoft.DDV.getDefaultUiConfig("editViewer");
     newUiConfig.children.reverse();
@@ -82,23 +82,7 @@ Without changing the toolbar, only changing the relative position of the toolbar
     ```
 
 ![Reverse header and main view](/assets/imgs/cusrevafter.png)
-<!-- ### Method two: Update UI dynamically after creating the edit viewer.
 
-- **Step one**: Get current UiConfig by using method [`getUiConfig()`]().
-    ```typescript
-    const editViewer = new Dynamsoft.DDV.EditViewer({
-        containerId: "viewer",
-    });
-    const uiConfig = editViewer.getUiConfig();
-    ```
-- **Step two**: Reverse two elements in its children.
-    ```typescript
-    uiConfig.children.reverse();
-    ```
-- **Step three**: Update the revised UiConfig by using method [`updateUiConfig()`]().
-    ```typescript
-    editViewer.updateUiConfig(uiConfig); 
-    ```-->
 
 ## Customize as you wish
 

@@ -56,8 +56,7 @@ The `Dynamsoft.DDV.documentManager` instance will be created automatically as so
 | --------------- | ----------------------------------------- |
 | [`documentCreated`]({{ site.api }}class/documentmanager.html#documentcreated) | Triggered when a new document is created. |
 | [`documentDeleted`]({{ site.api }}class/documentmanager.html#documentdeleted) | Triggered when a document is deleted.     |
-<!-- | [`pagesAdded`]({{ site.api }}class/documentmanager.html#pagesadded)      | Triggered when the page(s) are added.     |
-| [`pagesDeleted`]({{ site.api }}class/documentmanager.html#pagesdeleted)    | Triggered when the page(s) are deleted.   | -->
+
 
 <div class="multi-panel-end"></div>
 
