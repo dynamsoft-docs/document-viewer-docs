@@ -139,88 +139,91 @@ Dynamsoft.DDV.setProcessingHandler("documentBoundariesDetect", detectHandler);
 <body>
     <div id="viewer"></div>
 </body>
-<script type="text/javascript" src="./Resources/ddv.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@1.0.0/dist/ddv.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/dynamsoft-core@3.0.10/dist/core.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/dynamsoft-document-normalizer@2.0.11/dist/ddn.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/dynamsoft-capture-vision-router@2.0.11/dist/cvr.js"></script>
 
 <script type="module">
-    // Initializes DDV
-    await DDV.setConfig({
-        license: "**********", // Specify your DDV license
-        engineResourcePath: "xxx/Resources/WASM/", // Specify the path should lead to a folder containing the distributed WASM files.
-    });
+    (async () => {
+        // Initializes DDV
+        await DDV.setConfig({
+            license: "**********", // Specify your DDV license
+            engineResourcePath: "*************", // Specify the path should lead to a folder containing the distributed WASM files.
+        });
 
-    // Initializes the DDN license using a license key string.
-    Dynamsoft.License.LicenseManager.initLicense("**********"); 
-    // Preloads the DocumentNormalizer module, saving time in preparing for document border detection.
-    Dynamsoft.CVR.CaptureVisionRouter.preloadModule(["DDN"]); 
-    // Initializes the router variable by creating an instance of the CaptureVisionRouter class.
-    const router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance(); 
+        // Initializes the DDN license using a license key string.
+        Dynamsoft.License.LicenseManager.initLicense("**********"); 
+        // Preloads the DocumentNormalizer module, saving time in preparing for document border detection.
+        Dynamsoft.CVR.CaptureVisionRouter.preloadModule(["DDN"]); 
+        // Initializes the router variable by creating an instance of the CaptureVisionRouter class.
+        const router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance(); 
 
-    // Inherit DocumentDetect class
-    class MyDocumentDetect extends Dynamsoft.DDV.DocumentDetect {
-        // Rewrite the detect method
-        async detect(image, detectConfig) {
-            if (!router) {
-                return Promise.resolve({
-                    success: false,
-                });
-            }
+        // Inherit DocumentDetect class
+        class MyDocumentDetect extends Dynamsoft.DDV.DocumentDetect {
+            // Rewrite the detect method
+            async detect(image, detectConfig) {
+                if (!router) {
+                    return Promise.resolve({
+                        success: false,
+                    });
+                }
 
-            // Use DDN document boundaries detection algorithm
-            const DSImageData = {
-                bytes: new Uint8Array(image.data.slice(0)),
-                width: image.width,
-                height: image.height,
-                stride: image.width * 4,
-                format: 10,
-            };
-
-            const results = await router.capture(DSImageData, "detect-document-boundaries");
-
-            // Filter DDN detection results
-            if (results.items.length <= 0) {
-                return Promise.resolve({
-                    success: false,
-                });
-            }
-
-            // Use processDetectResult to obtain the comprehensive detection result DocumentDetectResult 
-            //by passing in the detected points and other parameters (including confidence, status, etc.).
-            const quad = [];
-            results.items[0].location.points.forEach(p => {
-                quad.push([p.x, p.y]);
-            });
-
-            const ret = this.processDetectResult({
-                    location: quad,
+                // Use DDN document boundaries detection algorithm
+                const DSImageData = {
+                    bytes: new Uint8Array(image.data.slice(0)),
                     width: image.width,
                     height: image.height,
-                    config: detectConfig,
-            });
+                    stride: image.width * 4,
+                    format: 10,
+                };
 
-            // Return detection result
-            return Promise.resolve(ret);
+                const results = await router.capture(DSImageData, "detect-document-boundaries");
+
+                // Filter DDN detection results
+                if (results.items.length <= 0) {
+                    return Promise.resolve({
+                        success: false,
+                    });
+                }
+
+                // Use processDetectResult to obtain the comprehensive detection result DocumentDetectResult 
+                //by passing in the detected points and other parameters (including confidence, status, etc.).
+                const quad = [];
+                results.items[0].location.points.forEach(p => {
+                    quad.push([p.x, p.y]);
+                });
+
+                const ret = this.processDetectResult({
+                        location: quad,
+                        width: image.width,
+                        height: image.height,
+                        config: detectConfig,
+                });
+
+                // Return detection result
+                return Promise.resolve(ret);
+            }
         }
-    }
 
-    const detectHandler = new MyDocumentDetect();
-    
-    Dynamsoft.DDV.setProcessingHandler("documentBoundariesDetect", detectHandler);
+        const detectHandler = new MyDocumentDetect();
+        
+        Dynamsoft.DDV.setProcessingHandler("documentBoundariesDetect", detectHandler);
 
-    // Enable auto detect and auto capture when initializing capture viewer
-    const captureViewerConfig = {
-        enableAutoCapture: true,
-        enableAutoDetect: true,
-        maxFrameNumber: 10,
-    };
-    // Create the capture viewer
-    const captureViewer = new Dynamsoft.DDV.CaptureViewer({
-        container: "viewer",
-        viewerConfig: captureViewerConfig,
-    });
-    captureViewer.play();
+        // Enable auto detect and auto capture when initializing capture viewer
+        const captureViewerConfig = {
+            enableAutoCapture: true,
+            enableAutoDetect: true,
+            maxFrameNumber: 10,
+        };
+        // Create the capture viewer
+        const captureViewer = new Dynamsoft.DDV.CaptureViewer({
+            container: "viewer",
+            viewerConfig: captureViewerConfig,
+        });
+        captureViewer.play();
+
+    })();
 </script>
 </html>
 ```
