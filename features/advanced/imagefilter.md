@@ -44,7 +44,6 @@ class MyImageFilter extends Dynamsoft.DDV.ImageFilter {
             {type: "none", label: "Original"},
             //{type: "blackAndWhite", label: "B&W"},
             {type: "gray", label: "Grayscale"},
-            {type: "removeShadow", label: "Clean"},
             {type: "saveInk", label: "SaveToner"},
         ];
 
@@ -94,7 +93,6 @@ class MyImageFilter extends Dynamsoft.DDV.ImageFilter {
             {type: "none", label: "Original"},
             {type: "blackAndWhite", label: "S/W"},
             {type: "gray", label: "Graustufen"},
-            {type: "removeShadow", label: "Sauber"},
             {type: "saveInk", label: "Tinte sparen"},
         ];
         return myFilterList;
