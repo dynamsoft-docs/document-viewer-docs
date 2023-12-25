@@ -27,14 +27,3 @@ The SDK requires the following features to work:
 - `WebAssembly`, `Blob`, `URL`/`createObjectURL`, `Web Workers`
 
   The above four features are required for the SDK to work.
-<!-- 
-The following table is a list of supported browsers based on the above requirements:
-
-  | Browser Name |             Version              |
-  | :----------: | :------------------------------: |
-  |    Chrome    |             v75+                 |
-  |   Firefox    |             v65+                 |
-  |    Safari    |             v14+                 |
-  |     Edge     |             v79+                 |
-
-Apart from the browsers, the operating systems may impose some limitations of their own that could restrict the use of the SDK. -->
