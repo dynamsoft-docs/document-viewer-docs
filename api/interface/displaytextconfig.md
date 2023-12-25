@@ -91,6 +91,7 @@ interface DisplayTextConfig {
 ## Remark
 
 - Some of built-in elements have default display texts.
+
     Elements                    | Default Text         
     ----------------------------|----------------------
     FitMode_FitWidth            | "Fit Width"          
