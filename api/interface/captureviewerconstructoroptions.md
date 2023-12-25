@@ -17,7 +17,7 @@ permalink: /api/interface/captureviewerconstructoroptions.html
 ```typescript
 interface CaptureViewerConstructorOptions {
 	container?: string | HTMLElement;
-	viewerConfig?: EditViewerConfig;
+	viewerConfig?: CaptureViewerConfig;
 	uiConfig?: UiConfig;
 	groupUid?: string; 
 }
