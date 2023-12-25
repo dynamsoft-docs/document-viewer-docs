@@ -232,9 +232,19 @@ const firstDoc = Dynamsoft.DDV.documentManager.createDocument({
     creationDate: "D:20230101085959",
     });
 
+const source1 = {
+    fileData: /*sampleBlob1*/;
+};
+await firstDoc.loadSource([source1]);
+
 const secondDoc = Dynamsoft.DDV.documentManager.createDocument({
     name: "second_document",
     });
+
+const source2 = {
+    fileData: /*sampleBlob2*/;
+};
+await secondDoc.loadSource([source2]);
 
 const docUid1 = firstDoc.uid; //"lnn0ll9o124"
 const docUid2 = secondDoc.uid; //"lnn0iai110t"
