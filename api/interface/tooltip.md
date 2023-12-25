@@ -75,5 +75,5 @@ interface Tooltip {
 
 ## Related
 
-- [`getTooltip()`](#gettooltip)
-- [`setTooltip()`](#settooltip)
+- [`getTooltip()`]({{ site.api }}namespace/ddv_elements.html#static-gettooltip)
+- [`setTooltip()`]({{ site.api }}namespace/ddv_elements.html#static-settooltip)
