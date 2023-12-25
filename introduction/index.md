@@ -24,7 +24,7 @@ It contains two main features,
     - Browse Viewer
     - Custom Viewer
 
-Besides, DDV also provide the methods to integrated with your own customized image filter process and document boundary detect process.
+Besides, DDV also provides the methods to integrate with your own customized image filter process and document boundary detect process.
 
 - Image filter
 - Document detection (Recommend using Dynamsoft Document Normalizer)
