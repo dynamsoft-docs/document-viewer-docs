@@ -42,8 +42,6 @@ The `Dynamsoft.DDV.documentManager` instance will be created automatically as so
 | --------------- | ----------------------------------------- |
 | [`documentCreated`](#documentcreated) | Triggered when a new document is created. |
 | [`documentDeleted`](#documentdeleted) | Triggered when a document is deleted.     |
-<!-- | [`pagesAdded`](#pagesadded)      | Triggered when the page(s) are added.     |
-| [`pagesDeleted`](#pagesdeleted)    | Triggered when the page(s) are deleted.   | -->
 
 ## Methods
 

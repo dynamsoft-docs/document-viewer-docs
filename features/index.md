@@ -19,7 +19,7 @@ Generally, the features of DDV can be divided to two parts as below.
 
 ## Data Management
 
-Data management is to manage the data which are imported into DDV. 
+Data management is to manage the data which is imported into DDV. 
 
 How does DDV implement data management? First of all, there are two concepts which need to be introduced, document and page. 
 

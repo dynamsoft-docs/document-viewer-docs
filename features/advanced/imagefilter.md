@@ -12,7 +12,7 @@ permalink: /features/advanced/imagefilter.html
 
 # How to configure image filter
 
-DDV provides [`setProcessingHandler`]({{ site.api }}namespace/ddv.html#static-setprocessinghandler) method for developers to access the corresponding document boundaries detection and image filter algorithms. This article mainly introduces how to configure image filter.
+DDV provides [`setProcessingHandler()`]({{ site.api }}namespace/ddv.html#static-setprocessinghandler) method for developers to access the corresponding document boundaries detection and image filter algorithms. This article mainly introduces how to configure image filter.
 
 ## Configure built-in image filter
 
