@@ -98,6 +98,7 @@ const editViewer = new Dynamsoft.DDV.EditViewer({
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>DDV - HelloWorld</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@latest/dist/ddv.css">
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@latest/dist/ddv.js"></script>
 </head>
 <style>
     html,body {
@@ -117,7 +118,6 @@ const editViewer = new Dynamsoft.DDV.EditViewer({
 <body>
     <div id="container"></div>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@latest/dist/ddv.js"></script>
 <script type="module">
     (async () => {
         await Dynamsoft.DDV.setConfig({
