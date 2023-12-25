@@ -115,5 +115,5 @@ interface DisplayTextConfig {
 
 ## Related
 
-- [`getDisplayTextConfig()`](#getdisplaytextconfig)
-- [`setDisplayTextConfig()`](#setdisplaytextconfig)
+- [`getDisplayTextConfig()`]({{ site.api }}namespace/ddv_elements.html#static-getdisplaytextconfig)
+- [`setDisplayTextConfig()`]({{ site.api }}namespace/ddv_elements.html#static-setdisplaytextconfig)
