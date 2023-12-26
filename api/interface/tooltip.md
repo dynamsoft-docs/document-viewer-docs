@@ -38,7 +38,7 @@ interface Tooltip {
     Crop?: string,
     CropAll?: string,
     CropCurrent?: string,
-    ResetQuad?: string,
+    FullQuad?: string,
     Undo?: string,
     Redo?: string,
 

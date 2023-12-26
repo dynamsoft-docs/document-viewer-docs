@@ -39,7 +39,7 @@ interface DisplayTextConfig {
     Crop?: string,
     CropAll?: string,
     CropCurrent?: string,
-    RestQuad?: string,
+    FullQuad?: string,
     Undo?: string,
     Redo?: string,
 
