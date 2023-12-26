@@ -6,11 +6,6 @@
 {%- if page.noTitleIndex or page.url contains 'release-notes' -%}
     {%- assign noTitleIndex = "noTitleIndex" -%}
 {%- endif -%}
-<style>
-    .rightSideMenu.hasNote { padding-top: 168px; }
-    .docContainer, .sideBar, .history { visibility: visible; }
-    /* #fullTreeMenuListContainer li.expandListStyle > ul { display: block; } */
-</style>
 
 <body class="dlrDoc">
     {% assign url = 'https://www.dynamsoft.com/shared/head/' %}
@@ -54,8 +49,6 @@
                     </div>
                     <div class="mainPage">
                         <ul id="fullTreeMenuListContainer" name="listLevel1">
-                            {%- assign treeList = site.data.full_tree.tree_list -%}
-                            {%- include liquid_generateFullTree.html treeList=treeList -%}
                         </ul>
                     </div>
                 </div>
@@ -75,12 +68,11 @@
         {%- include page_footer.html -%}
     </div>
     
+    <iframe id="sideBarIframe" src="{{site.firstLevelUrl}}/Hide_Tree_Page.html" allow="" height="0" frameborder="0"></iframe>
     <script type="text/javascript">
         anchors.add();
         UrlReplace();
-        FullTreeMenuList('{{ page.needAutoGenerateSidebar }}', '{{ page.needGenerateH3Content }}');
-
-        $("#fullTreeMenuListContainer li.expandListStyle > ul").show()
+        FullTreeMenuList('{{page.needAutoGenerateSidebar}}', '{{page.needGenerateH3Content}}', '{{page.pageStartVer}}', '{{site.useVersionTree}}');
     </script>
 
     {%- include livehelp.html -%}
@@ -88,7 +80,7 @@
     <script type="text/javascript">
         $('#txtSearch').keydown(function(e) { 
             if (e.keyCode == 13) {
-                window.location.href = '/remote-scan/docs/search.html?q=' + $('#txtSearch').val()
+                window.location.href = '/document-viewer/docs/search.html?q=' + $('#txtSearch').val()
             }
         })
     </script>

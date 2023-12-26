@@ -2,21 +2,20 @@ repository: dynamsoft-docs/document-viewer-docs
 repositoryUrl: https://github.com/dynamsoft-docs/document-viewer-docs/blob/main
 docFullPath: https://www.dynamsoft.com/document-viewer/docs
 firstLevelUrl: /document-viewer/docs
-docHomePage: /document-viewer/docs/introduction/
+docHomePage: /document-viewer/docs/
 
 introduction: /document-viewer/docs/introduction/
-programming: /document-viewer/docs/programming/
-parameters: /document-viewer/docs/parameters/
+gettingstarted: /document-viewer/docs/gettingstarted/
+features: /document-viewer/docs/features/
+viewer: /document-viewer/docs/viewer/
+ui: /document-viewer/docs/ui/
+api: /document-viewer/docs/api/
+
+
+
 license: /document-viewer/docs/license/
 
-javascript: /document-viewer/docs/programming/javascript/
-javascript_api: /document-viewer/docs/programming/javascript/api-reference/
-javascript_release_notes: /document-viewer/docs/programming/javascript/release-notes/
-javascript_user_guide: /document-viewer/docs/programming/javascript/user-guide/
-
-enumerations: /document-viewer/docs/programming/enumerations/
-parameters_reference: /document-viewer/docs/parameters/reference/
-release_notes: /document-viewer/docs/release-notes/
+releasenotes: /document-viewer/docs/releasenotes/
 
 useVersionTree: true
 
@@ -27,7 +26,7 @@ sad_icon: /document-viewer/docs/assets/img-icon/icon-sad.png
 
 baseurl: "/document-viewer/docs"
 
-download: "/document-viewer/downloads/1000023-confirmation/"
+download: "/document-viewer/downloads/1000031-confirmation/"
 
 plugins:
   - jemoji

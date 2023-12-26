@@ -1,38 +1,31 @@
 ---
 layout: default-layout
+needAutoGenerateSidebar: true
+needGenerateH3Content: true
+noTitleIndex: true
 title: Dynamsoft Document Viewer - Introduction
-keywords: introduction, documentation
-description: Dynamsoft Document Viewer - Introduction
-noTitleIndex: false
+keywords: Documentation, Dynamsoft Document Viewer, Introduction
+breadcrumbText: Introduction
+description: Dynamsoft Document Viewer Documentation Introduction
+permalink: /introduction/index.html
 ---
 
 # Introduction to Dynamsoft Document Viewer
 
-Dynamsoft Document Viewer (DDV) is an SDK designed to capture document images from the camera, detect document boundaries, and then manage and edit document images at document level.
+Dynamsoft Document Viewer (DDV) is a versatile SDK designed to offer a range of viewers for configuring and executing various document processing workflows.
 
-DDV powers your software development in the following aspects:
+Key features include:
 
-- Built-in camera capture module for easy camera control.
-- Built-in basic document boundaries detection with perspective included. In addition, supports seamless integration with Dynamsoft Document Normalizer for a better document normalize experience.
-- Various built-in editing functions, such as cropping, rotating, filter, etc.
-- Default User Interface of viewers, such as, capture viewer, crop viewer, edit viewer and category viewer. 
-- Flexible User Interface customization, such as adding or removing default buttons, adding custom function buttons, customizing the default viewer style, etc.
-- 
+- Data Management: Organize, retrieve, and manage documents and pages efficiently.
+- Viewer Types: Customize your document interaction with a variety of viewers.
+    - Edit Viewer
+    - Capture Viewer
+    - Perspective Viewer
+    - Browse Viewer
+    - Custom Viewer
 
-With DDN, you can efficiently embed the functionality of quadrilateral detection and document normalization in your mobile, desktop and server applications. DDN also provides various image processing features, allowing you to customize DDN and meet your business needs.
+Additionally, DDV enhances functionality by allowing integration with customized image filtering processes and document boundary detection processes. It is particularly recommended to use [Dynamsoft Document Normalizer](https://www.dynamsoft.com/document-normalizer/docs/web/programming/javascript/) for document detection.
 
-## Key Features
+DDV enables the seamless creation of a document management web application tailored to your specific workflow, user interface, and style needs.
 
-
-
-## DDN SDK Modules
-
-
-
-## Usage Scenarios
-
-
-
-## Programming Languages
-
-
+As a component of the Document Web Capture solution, DDV is detailed in this documentation to assist developers in exploring and utilizing its extensive features effectively.
