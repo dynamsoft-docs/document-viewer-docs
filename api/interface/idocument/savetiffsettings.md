@@ -30,7 +30,7 @@ Custom tiff tag(s). Please refer to [CustomTag]({{ site.api }}interface/idocumen
 
 ### compression
 
-Specify the compression type. Please refer to [EnumTiffCompressionType]({{ site.api }}enumeration/enumtiffcompressiontype.html).
+Specify the compression type. Please refer to [EnumTiffCompressionType]({{ site.api }}enumeration-type/enumtiffcompressiontype.html).
 
 Default value: `TIFF_AUTO`
 

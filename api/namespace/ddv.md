@@ -128,7 +128,7 @@ A `HandlerType` can be one of two types.
 type HandlerType = "documentBoundariesDetect"|"imageFilter";
 ```
 
-`handler`: The handler to set. Please refer to [IDocumentDetect]({{ site.api }}interface/idocumentdetect.html) and [IImageFilter]({{ site.api }}interface/iimagefiler.html).
+`handler`: The handler to set. Please refer to [IDocumentDetect]({{ site.api }}interface/idocumentdetect.html) and [IImageFilter]({{ site.api }}interface/iimagefilter.html).
 
 **Exception**
 
