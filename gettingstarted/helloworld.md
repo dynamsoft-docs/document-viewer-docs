@@ -82,6 +82,9 @@ await Dynamsoft.DDV.setConfig({
 ## Create an edit viewer
 
 ```javascript
+// Configure image filter feature
+Dynamsoft.DDV.setProcessingHandler("imageFilter", new Dynamsoft.DDV.ImageFilter());
+// Create an edit viewer
 const editViewer = new Dynamsoft.DDV.EditViewer({
     container: "container",
 });
@@ -124,6 +127,7 @@ const editViewer = new Dynamsoft.DDV.EditViewer({
             license: "your-own-license",
             engineResourcePath: "https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@latest/dist/engine",
         });
+        Dynamsoft.DDV.setProcessingHandler("imageFilter", new Dynamsoft.DDV.ImageFilter());
         const editViewer = new Dynamsoft.DDV.EditViewer({
             container: "container",
         });
