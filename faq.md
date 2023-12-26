@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Remote Scan - FAQ
-description: This is the FAQ page of Remote Scan.
+title: Dynamsoft Document Viewer - FAQ
+description: This is the FAQ page of Dynamsoft Document Viewer.
 keywords: faq
 needAutoGenerateSidebar: true
 ---
