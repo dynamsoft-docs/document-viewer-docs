@@ -61,8 +61,8 @@ Depending on how you downloaded the SDK and where you put it, you can typically 
 
   ```html
   <!-- Upon extracting the zip package into your project, you can generally include it in the following manner -->
-  <script src="./distributables/dynamsoft-document-viewer@latest/dist/ddv.js"></script>
-  <link rel="stylesheet" href="./distributables/dynamsoft-document-viewer@latest/dist/ddv.css">
+  <script src="./Your-Folder/dist/ddv.js"></script>
+  <link rel="stylesheet" href="./Your-Folder/dist/ddv.css">
   ```
 
 or
