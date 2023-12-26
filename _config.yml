@@ -26,7 +26,7 @@ sad_icon: /document-viewer/docs/assets/img-icon/icon-sad.png
 
 baseurl: "/document-viewer/docs"
 
-download: "/document-viewer/downloads/1000023-confirmation/"
+download: "/document-viewer/downloads/1000031-confirmation/"
 
 plugins:
   - jemoji
