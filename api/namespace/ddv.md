@@ -93,8 +93,10 @@ A Promise [`ConfigResult`]({{ site.api }}interface/configresult.html) object.
 
 ```typescript
 await Dynamsoft.DDV.setConfig({
-    license: "Your-License-String",
-    engineResourcePath: "", // lead to a folder containing the distributed WASM files
+    // Public trial license which is valid for 24 hours
+    // You can request a 30-day trial key from https://www.dynamsoft.com/customer/license/trialLicense/?product=ddv
+    license: "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9",
+    engineResourcePath: "https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@latest/dist/engine",
 });
 ```
 
