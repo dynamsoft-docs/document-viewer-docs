@@ -165,8 +165,6 @@ const docManager = Dynamsoft.DDV.documentManager;
 
 | API Name                        | Description                                       |
 | ------------------------------- | ------------------------------------------------- |
-| [`<static> setConfig()`](#static-setconfig)           | Initialize license, engineResourcePath and so on. |
-| [`<static> setProcessingHandler()`](#static-setprocessinghandler) | Set a processing handler to the DDV system.       |
 | [`<static> getDefaultUiConfig()`](#static-getdefaultuiconfig)   | Get default UiConfig object.                      |
 | [`<static> clearLastError()`](#static-clearlasterror)       | Clear the last error or warning.                  |
 | [`<static> unload()`](#static-unload)               | Unload all DDV resources.                         |
