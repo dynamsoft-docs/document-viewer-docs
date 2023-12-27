@@ -177,7 +177,7 @@ DDV is using [`Interface IDocument`]({{ site.api }}interface/idocument/index.htm
     ```
   ![Move pages-2](/assets/imgs/movepages-2.png)
 
-- Switch the order of two pages, [`switchPahe()`]({{ site.api }}interface/idocument/index.html#switchpage)
+- Switch the order of two pages, [`switchPage()`]({{ site.api }}interface/idocument/index.html#switchpage)
 
     ```typescript
     // Switch the order of the first page and third page 
