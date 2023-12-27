@@ -181,7 +181,7 @@ DDV is using [`Interface IDocument`]({{ site.api }}interface/idocument/index.htm
 
     ```typescript
     // Switch the order of the first page and third page 
-    firstDoc.switchPage(0,3);
+    firstDoc.switchPage(0,2);
     ```
 
 ## Get/update page data
