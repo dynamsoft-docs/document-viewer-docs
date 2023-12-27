@@ -53,17 +53,41 @@ DDV is using [`Interface IDocument`]({{ site.api }}interface/idocument/index.htm
     await firstDoc.loadSource(blobs);
     ```
 
-- Load a PDF file by using PDFSource
+- Load a image file with [`ExtraPageData`]({{ site.api }}interface/idocument/extrapagedata.html)
 
+    ```typescript
+    const extraData = {
+        index: 0, // Extra data for the first page
+        rotation: 90,
+    };
 
+    const testSource = {
+        fileData: /*Sample image blob*/,
+        extraPageData: [extraData],
+    };
 
-- Load 
+    await firstDoc.loadSource(testSource);
+    ```
+
+- Load a PDF file by using [`PDFSource`]({{ site.api }}interface/idocument/pdfsource.html)
+
+    ```typescript
+    const pdfSource = {
+        fileData: /*Sample pdf blob*/,
+        convertMode: Dynamsoft.DDV.EnumConvertMode.CM_RENDERALL,
+        renderOptions: {
+            renderAnnotations: true,
+        },
+    };
+
+    await firstDoc.loadSource(pdfSource);
+    ```
 
 ## Save pages
 
 **Use case**
 
-- Save page as a JPEG file
+- Save page as a JPEG file, [`saveToJpeg()`]({{ site.api }}interface/idocument/index.html#savetojpeg)
 
     ```typescript
     // Save the first page in the doc to a JPEG file with JPEG compression quality 60.
@@ -76,7 +100,7 @@ DDV is using [`Interface IDocument`]({{ site.api }}interface/idocument/index.htm
     const result = await firstDoc.saveToJpeg(1);
     ```
 
-- Save page(s) as a TIFF file
+- Save page(s) as a TIFF file, [`saveToTiff()`]({{ site.api }}interface/idocument/index.html#savetotiff)
 
     ```typescript
     // Set custom Tag of the tiff file
@@ -102,17 +126,40 @@ DDV is using [`Interface IDocument`]({{ site.api }}interface/idocument/index.htm
     await firstDoc.saveToTiff();
     ```
 
-- Save page(s) as a PDF file
+- Save page(s) as a PDF file, [`saveToPdf()`]({{ site.api }}interface/idocument/index.html#savetopdf)
 
     ```typescript
-    
+    // Set SavePdfSettings
+    const pdfSettings = {
+        author: "Dynamsoft",
+        compression: "pdf/jpeg",
+        pageType: "page/a4",
+        creator: "DDV",
+        creationDate: "D:20230101085959",
+        keyWords: "samplepdf",
+        modifiedDate: "D:20230101090101",
+        producer: "Dynamsoft Document Viewer",
+        subject: "SamplePdf",
+        title: "SamplePdf",
+        version: "1.5",
+        quality: 90,
+    }
+
+    // Save the fifth, sixth, seventh pages to a multi-page PDF file with the specified pdf settings.
+    await firstDoc.saveToPdf([4,5,6], pdfSettings);
+
+    // Save the whole document to a multi-page PDF file with the specified pdf settings.
+    await firstDoc.saveToPdf(pdfSettings);
+
+    // Save the whole document to a multi-page PDF file without any pdf settings.
+    await firstDoc.saveToPdf();
     ```
 
 ## Move or switch pages
 
 **Use case**
 
-- Move pages to the specified order
+- Move pages to the specified order, [`movePages()`]({{ site.api }}interface/idocument/index.html#movepages)
 
     ```typescript
     // Move the second, fourth, sixth pages to the begining of the doc. 
@@ -130,7 +177,7 @@ DDV is using [`Interface IDocument`]({{ site.api }}interface/idocument/index.htm
     ```
   ![Move pages-2](/assets/imgs/movepages-2.png)
 
-- Switch the order of two pages
+- Switch the order of two pages, [`switchPage()`]({{ site.api }}interface/idocument/index.html#switchpage)
 
     ```typescript
     // Switch the order of the first page and third page 
@@ -139,20 +186,57 @@ DDV is using [`Interface IDocument`]({{ site.api }}interface/idocument/index.htm
 
 ## Get/update page data
 
+**Use case**
+
+- Get [`PageData`]({{ site.api }}interface/idocument/pagedata.html) of the first page, [`getPageData()`]({{ site.api }}interface/idocument/index.html#getpagedata)
+
+    ```typescript
+    const pageData = await firstDoc.getPageData(firstDoc.pages[0]);
+    ```
+- Update the first page in the document with the new page, [`updatePage()`]({{ site.api }}interface/idocument/index.html#updatepage)
+
+    ```typescript
+    const updateFirstPage = {
+        fileIndex: 0, // using the first page of new file.
+    };
+
+    const fileData = /*Sample file blob*/,
+
+    await firstDoc.updatePage(firstDoc.pages[0], fileData, updateFirstPage);
+    ```
 ## Set/get custom data to page
+
+Sometimes, some custom data needs to be set with the specified page, [`setPageCustomData()`]({{ site.api }}interface/idocument/index.html#setpagecustomdata) & [`getPageCustomData()`]({{ site.api }}interface/idocument/index.html#getpagecustomdata) can be used in this case.
+
+**Use case**
+
+- Set custom data (whether has barcode in page) with the first page
+
+    ```typescript
+    const customData ={
+        hasBarcode: true; // sample custom data
+    };
+    await firstDoc.setPageCustomData(firstDoc.pages[0], customData);
+    ```
+
+- Get custom data from the first page
+
+    ```typescript
+    await firstDoc.getPageCustomData(firstDoc.pages[0]);
+    ```
 
 ## Delete pages
 
 **Use case**
 
-- Delete specified page(s)
+- Delete specified page(s), [`deletePages()`]({{ site.api }}interface/idocument/index.html#deletepages)
 
     ```typescript
     // Delete the second and third pages
     firstDoc.deletePages([1,2]);
     ```
 
-- Delete all pages
+- Delete all pages, [`deleteAllPages()`]({{ site.api }}interface/idocument/index.html#deleteallpages)
 
     ```typescript
     firstDoc.deleteAllPages();

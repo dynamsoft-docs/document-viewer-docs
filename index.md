@@ -15,7 +15,10 @@ description: Dynamsoft Document Viewer Documentation Homepage
     <!-- - [SDK Initialization]({{ site.gettingstarted }}sdk_init.html) -->
     - [Creating HelloWorld]({{ site.gettingstarted }}helloworld.html)
 - Features
-    - [Advanced]()
+    - Data Management
+        - [Document Management]({{ site.features }}datamanagement/docmanagement.html)
+        - [Page Management]({{ site.features }}datamanagement/pagemanagement.html)
+    - Advanced
         - [Image Filter]({{ site.features }}advanced/imagefilter.html)
         - [Document Detection]({{ site.features }}advanced/documentdetect.html)
 - [Viewer Configuration]({{ site.viewer }}index.html)
