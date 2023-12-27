@@ -12,10 +12,7 @@ permalink: /features/index.html
 
 # Features
 
-Generally, the features of DDV can be divided to two parts as below.
-
-- Data management
-- Viewers
+Generally, the key features of DDV are shown as below.
 
 ## Data Management
 
@@ -34,7 +31,7 @@ So manage data is to manage documents and pages.
 - [Document management]({{ site.features }}datamanagement/docmanagement.html)
 - [Page management]({{ site.features }}datamanagement/pagemanagement.html)
 
-Actually, if you are using the default UI of DDV, the data management has been done internally.
+Actually, if you are using the default UI of DDV, the data has been processed and managed internally.
 
 ## Viewers
 
@@ -46,3 +43,8 @@ Viewers are used to display the data. According to the different uses of viewers
 - Browse Viewer
 - Custom Viewer
 - Data synchronisation between viewers
+
+## Advanced
+
+- [How to configure image filter]({{ site.features }}advanced/imagefilter.html)
+- [How to configure boundaries detection]({{ site.features }}advanced/documentdetect.html)
