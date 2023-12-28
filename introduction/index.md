@@ -28,4 +28,4 @@ Additionally, DDV enhances functionality by allowing integration with customized
 
 DDV enables the seamless creation of a document management web application tailored to your specific workflow, user interface, and style needs.
 
-As a component of the Document Web Capture solution, DDV is detailed in this documentation to assist developers in exploring and utilizing its extensive features effectively.
+As a component of the [Mobile Web Capture](https://www.dynamsoft.com/use-cases/mobile-web-capture-sdk/?utm_content=nav-solutions) solution, DDV is detailed in this documentation to assist developers in exploring and utilizing its extensive features effectively.
