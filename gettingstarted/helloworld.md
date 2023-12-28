@@ -75,7 +75,7 @@ For HelloWorld, we define below elements.
 // Initialize DDV
 await Dynamsoft.DDV.setConfig({
     // Public trial license which is valid for 24 hours
-    //You can request a 30-day trial key from https://www.dynamsoft.com/customer/license/trialLicense/?product=ddv
+    // You can request a 30-day trial key from https://www.dynamsoft.com/customer/license/trialLicense/?product=ddv
     license: "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", 
     engineResourcePath: "https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@latest/dist/engine",
 });

@@ -12,7 +12,7 @@ description: Dynamsoft Document Viewer Documentation Homepage
 - Getting Started
     - [System Requirements]({{ site.gettingstarted }}sys_requirement.html)
     - [Adding the dependency]({{ site.gettingstarted }}add_dependency.html)
-    <!-- - [SDK Initialization]({{ site.gettingstarted }}sdk_init.html) -->
+    - [SDK Initialization]({{ site.gettingstarted }}sdk_init.html) 
     - [Creating HelloWorld]({{ site.gettingstarted }}helloworld.html)
 - Features
     - Data Management
