@@ -37,7 +37,7 @@ permalink: /api/index.html
     - [`ExtraPageData`]({{ site.api }}interface/idocument/extrapagedata.html)
     - [`PdfSource`]({{ site.api }}interface/idocument/pdfsource.html)
     - [`PageData`]({{ site.api }}interface/idocument/pagedata.html)
-    - [`UpdatePageOptions`]({{ site.api }}interface/idocument/updatapageoptions.html)
+    - [`UpdatePageOptions`]({{ site.api }}interface/idocument/updatepageoptions.html)
     - [`SaveJpegSettings`]({{ site.api }}interface/idocument/savejpegsettings.html)
     - [`SaveTiffSettings`]({{ site.api }}interface/idocument/savetiffsettings.html)
     - [`SavePdfSettings`]({{ site.api }}interface/idocument/savepdfsettings.html)
