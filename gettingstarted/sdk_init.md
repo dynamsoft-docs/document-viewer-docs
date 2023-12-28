@@ -17,7 +17,7 @@ permalink: /gettingstarted/sdk_init.html
 ### Get a trial key
 
 - A free public trial license is available for every new device for first use of Document. The public trial license is the default key used in samples. You can also find the public trial license on the following parts of this page.
-- If your free key is expired, please visit <a href="https://www.dynamsoft.com/customer/license/trialLicense?product=dwc&source=docs" target="_blank">Private Trial License Page</a> to get a 30-day trial extension.
+- If your free key is expired, please visit <a href="https://www.dynamsoft.com/customer/license/trialLicense?product=ddv&source=docs" target="_blank">Private Trial License Page</a> to get a 30-day trial extension.
 
 ### Get a full license
 
@@ -36,7 +36,7 @@ await Dynamsoft.DDV.setConfig({
 
 ### deviceFriendlyName
 
-A human-readable name human-readable name for the device which corresponds to its UUID is able to set during initialization. This name will appear in the device details table when you check the statistics of the according license.
+A human-readable name for the device which corresponds to its UUID is able to set during initialization. This name will appear in the device details table when you check the statistics of the according license.
 
 ```javascript
 await Dynamsoft.DDV.setConfig({
