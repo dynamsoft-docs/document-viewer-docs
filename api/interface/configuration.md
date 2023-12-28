@@ -36,7 +36,7 @@ If set to `""`, the library will try to find the engine in the same location as 
 
 ### deviceFriendlyName
 
-Specify a human-readable name that identifies the device. This name will appear in the device details table when you check the statistics of the according license. Default value is `""`.
+Specify a human-readable name for the device which corresponds to its UUID. This name will appear in the device details table when you check the statistics of the according license. Default value is `""`.
 
 ## Related
 

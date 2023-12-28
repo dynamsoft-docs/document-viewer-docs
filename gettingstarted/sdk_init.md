@@ -1,0 +1,47 @@
+---
+layout: default-layout
+needAutoGenerateSidebar: true
+needGenerateH3Content: true
+noTitleIndex: true
+title: Dynamsoft Document Viewer Getting Started - SDK Initialization
+keywords: Documentation, Dynamsoft Document Viewer, Getting Started, SDK Initialization
+breadcrumbText: SDK Initialization
+description: Dynamsoft Document Viewer Documentation Getting Started, SDK Initialization
+permalink: /gettingstarted/sdk_init.html
+---
+
+# SDK Initialization
+
+## License
+
+### Get a trial key
+
+- A free public trial license is available for every new device for first use of Document. The public trial license is the default key used in samples. You can also find the public trial license on the following parts of this page.
+- If your free key is expired, please visit <a href="https://www.dynamsoft.com/customer/license/trialLicense?product=dwc&source=docs" target="_blank">Private Trial License Page</a> to get a 30-day trial extension.
+
+### Get a full license
+
+- [Contact us](https://www.dynamsoft.com/company/contact/)  to purchase a full license
+
+## Initializiation
+
+The following code snippets are using the public trial license to initialize the license. You can replace the public trial license with your own license key.
+
+```javascript
+await Dynamsoft.DDV.setConfig({
+    license: "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", // Public trial license which is valid for 24 hours
+    engineResourcePath: "https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@latest/dist/engine", // Lead to a folder containing the distributed WASM files
+});
+```
+
+### deviceFriendlyName
+
+A human-readable name human-readable name for the device which corresponds to its UUID is able to set during initialization. This name will appear in the device details table when you check the statistics of the according license.
+
+```javascript
+await Dynamsoft.DDV.setConfig({
+    license: "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", // Public trial license which is valid for 24 hours
+    engineResourcePath: "https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@latest/dist/engine", // Lead to a folder containing the distributed WASM files
+    deviceFriendlyName: "Dynamsoft-iPhone", // A string representing the device which is easier to recognize than its UUID
+});
+```
