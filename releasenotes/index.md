@@ -29,7 +29,7 @@ Organize, retrieve, and manage documents and pages efficiently:
 Variours kinds of viewers implement different document processing flows:
 - Edit Viewer: Edit the pages in document, such as, rotating, cropping, filtering, etc. and adjust the layout of the display.
 - Capture Viewer: Control camera, play video stream, and capture the images from camera.
-- Perspective Viewer: Do page boundary manual adjustment & perspective transformation.
+- Perspective Viewer: Do page boundaries manual adjustment & perspective transformation.
 - Browse Viewer: Display pages in multiple-mode, pages can be multiple selected.
 - Custom Viewer: No built-in UI or functionality, which is used for creating your own viewer.
 
