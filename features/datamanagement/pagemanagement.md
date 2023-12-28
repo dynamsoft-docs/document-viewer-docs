@@ -21,7 +21,7 @@ DDV is using [`Interface IDocument`]({{ site.api }}interface/idocument/index.htm
 
 **Use case**
 
-- Load a image file in order
+- Load an image file in order
 
     ```typescript
     // Create a document
@@ -37,7 +37,7 @@ DDV is using [`Interface IDocument`]({{ site.api }}interface/idocument/index.htm
     await firstDoc.loadSource(blob);
     ```
 
-- Load a image file and insert it into the specified order if there are pages in the document.
+- Load an image file and insert it into the specified order if there are pages in the document.
 
     ```typescript
     var blob = /*Sample image blob*/;
@@ -53,7 +53,7 @@ DDV is using [`Interface IDocument`]({{ site.api }}interface/idocument/index.htm
     await firstDoc.loadSource(blobs);
     ```
 
-- Load a image file with [`ExtraPageData`]({{ site.api }}interface/idocument/extrapagedata.html)
+- Load an image file with [`ExtraPageData`]({{ site.api }}interface/idocument/extrapagedata.html)
 
     ```typescript
     const extraData = {
