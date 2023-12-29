@@ -13,22 +13,42 @@ permalink: /ui/customize/dynamically.html
 
 # Update UI dynamically after creating the viewer
 
-Sometimes, there are requirements that require dynamically changing the layout, such as hiding specified elements or modifying the available status of elements under certain conditions. `getUiConfig()` and `updateUiConfig()` can achieve these requirements.
+Sometimes, dynamically changing the layout is required, such as hiding specified elements or modifying the available status of elements under certain conditions. `getUiConfig()` and `updateUiConfig()` can help to achieve these requirements.
 
-**Example**
+## Use case
 
-<!-- - **Step one**: Get current UiConfig by using method [`getUiConfig()`]().
+Hide the header dynamically.
+
+- Step one: Get current `UiConfig` by using method `getUiConfig()`.
     ```typescript
     const editViewer = new Dynamsoft.DDV.EditViewer({
         containerId: "viewer",
     });
     const uiConfig = editViewer.getUiConfig();
     ```
-- **Step two**: Reverse two elements in its children.
+- Step two: Remove the header from current `UiConfig`.
     ```typescript
-    uiConfig.children.reverse();
+    uiConfig.children.splice(0,1);
     ```
-- **Step three**: Update the revised UiConfig by using method [`updateUiConfig()`]().
+- Step three: Update the revised UiConfig by using method `updateUiConfig()`.
     ```typescript
     editViewer.updateUiConfig(uiConfig);
-    ``` -->
+    ``` 
+
+![Update UI dynamically](/assets/imgs/uidynamically.png)
+
+## Related API
+
+- [`getDefaultUiConfig()`]({{ site.api }}namespace/ddv.html#static-getdefaultuiconfig)
+- `getUiConfig()` in 
+    - [EditViewer Class]({{ site.api }}class/editviewer.html#getuiconfig)
+    - [CaptureViewer Class]({{ site.api }}class/captureviewer.html#getuiconfig)
+    - [PerspectiveViewer Class]({{ site.api }}class/perspectiveviewer.html#getuiconfig)
+    - [BrowseViewer Class]({{ site.api }}class/browseviewer.html#getuiconfig)
+    - [CustomViewer Class]({{ site.api }}class/customviewer.html#getuiconfig)
+- `updateUiConfig()` in
+    - [EditViewer Class]({{ site.api }}class/editviewer.html#updateuiconfig)
+    - [CaptureViewer Class]({{ site.api }}class/captureviewer.html#updateuiconfig)
+    - [PerspectiveViewer Class]({{ site.api }}class/perspectiveviewer.html#updateuiconfig)
+    - [BrowseViewer Class]({{ site.api }}class/browseviewer.html#updateuiconfig)
+    - [CustomViewer Class]({{ site.api }}class/customviewer.html#updateuiconfig)
