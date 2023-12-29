@@ -808,7 +808,7 @@ captureViewer.enableAutoCapture = true;
 **Remark** 
 
 - If it is not specified in [`viewerConfig`]({{ site.api }}interface/captureviewerconstructoroptions.html#viewerconfig) while creating the viewer additionally, the default value is `false`.
-- If the auto detect is disabled, it will automatically capture a frame every 1 second by default.
+- If the auto detect is disabled, it will automatically capture a frame every 1 second by default. It can be set by [autoCaptureDelay]({{ site.api }}interface/captureviewerconfig.html#autocapturedelay).
 - If the auto detect is enabled, automatic capturing will only be performed when the detection result meets expectations. See also [`enableAutoDetect`](#enableautodetect).
 
 ### enableAutoDetect
