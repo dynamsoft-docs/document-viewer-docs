@@ -53,3 +53,9 @@ browseViewer.multiselectMode = true;
 ## Custom Viewer
 
 Custom Viewer does not have any built-in UI or functionality, it is used for creating your own viewer.
+
+```typescript
+const customViewer = new Dynamsoft.DDV.CustomViewer({
+    container: document.getElementById("viewer"),
+});
+```
