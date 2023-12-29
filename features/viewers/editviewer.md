@@ -14,8 +14,8 @@ permalink: /features/viewers/editviewer.html
 
 Edit Viewer is used to edit the pages in document, such as, rotating, cropping, filtering, etc. as well as adjust the layout of the display.
 
-[Default user interface]({{ site.ui }}default_elements.html#edit-viewer)
-[Default viewer configuration]({{ site.viewer }}viewerconfig.html#edit-viewer)
+- [Default user interface]({{ site.ui }}default_elements.html#edit-viewer)
+- [Default viewer configuration]({{ site.viewer }}viewerconfig.html#edit-viewer)
 
 ```typescript
 const editViewer = new Dynamsoft.DDV.EditViewer({
