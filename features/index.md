@@ -37,12 +37,12 @@ Actually, if you are using the default UI of DDV, the data has been processed an
 
 Viewers are used to display the data. According to the different uses of viewers, DDV provides five different viewer types, which are implemented through five viewer classes.
 
-- Edit Viewer
-- Capture Viewer
-- Perspective Viewer
-- Browse Viewer
-- Custom Viewer
-- Data synchronisation between viewers
+- [Edit Viewer]({{ site.features}}viewers/editviewer.html)
+- [Capture Viewer]({{ site.features }}viewers/captureviewer.html)
+- [Perspective Viewer]({{ site.features }}viewers/perspectiveviewer.html)
+- [Browse Viewer]({{ site.features }}viewers/others.html#browse-viewer)
+- [Custom Viewer]({{ site.features }}viewers/others.html#custom-viewer)
+{% comment %}- Data synchronisation between viewers{% endcomment %}
 
 ## Advanced
 

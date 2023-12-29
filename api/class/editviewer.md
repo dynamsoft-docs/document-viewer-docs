@@ -1139,7 +1139,7 @@ editViewer.setCropRect(rect);
 
 ### undo()
 
-> *This method takes effect only for [crop](#crop), [rotate](#rotate) & filter(which is operated by using UI Element) operations.*
+> *This method takes effect only for [crop](#crop), [rotate](#rotate) operations.*
 
 Undo the last editing operation.
 
@@ -1170,7 +1170,7 @@ editViewer.undo();
 
 ### redo()
 
-> *This method takes effect only for [crop](#crop), [rotate](#rotate) & filter(which is operated by using UI Element) operations.*
+> *This method takes effect only for [crop](#crop), [rotate](#rotate) operations.*
 
 Redo the last undo operation.
 

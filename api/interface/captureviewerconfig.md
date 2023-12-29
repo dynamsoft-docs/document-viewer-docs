@@ -22,7 +22,7 @@ interface CaptureViewerConfig {
 	enableAutoCapture?: boolean;
 	enableAutoDetect?: boolean;
 	acceptedPolygonConfidence?: number;
-	autoCaptureDelay: number;
+	autoCaptureDelay?: number;
 	maxFrameNumber?: number;
 }
 ```

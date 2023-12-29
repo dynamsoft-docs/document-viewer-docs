@@ -14,6 +14,17 @@ permalink: /features/viewers/perspectiveviewer.html
 
 Perspective Viewer is used to do page boundaries manual adjustment & perspective transformation. The page data displayed on this viewer is its original data.
 
+[Default user interface]({{ site.ui }}default_elements.html#perspective-viewer)
+[Default viewer configuration]({{ site.viewer }}viewerconfig.html#perspective-viewer)
+
+```typescript
+const perspectiveViewer = new Dynamsoft.DDV.PerspectiveViewer({
+    container: document.getElementById("viewer")
+});
+
+perspectiveViewer.openDocument("docUid"); // Open a document which has pages
+```
+
 ## Quadrilateral selection
 
 Quadrilateral Selection in the perspective viewer means the selection which will be perspective transformed.
@@ -25,10 +36,6 @@ In addition to drawing and adjusting the selection through the UI, DDV also prov
 - Set a quadrilateral selection on the current page by using [`setQuadSelection()`]({{ site.api }}class/perspectiveviewer.html#setquadselection). If the selection is exceeds the bounds of the current page, it won't take effect.
 
     ```typescript
-    const perspectiveViewer = new Dynamsoft.DDV.PerspectiveViewer({
-        container: document.getElementById("viewer")
-    });
-
     const quad = [
         [314,518],
         [2200,625],

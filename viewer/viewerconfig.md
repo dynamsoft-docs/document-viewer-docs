@@ -270,6 +270,7 @@ DDV will provide the default viewerConfig for each viewer.
     enableAutoDetect: false,
     enableTorch: false,
     maxFrameNumber: 10,
+    autoCaptureDelay: 1000,
     acceptedPolygonConfidence: 80,
 };
 ```

@@ -12,3 +12,4 @@ permalink: /features/viewers/datasync.html
 
 # Data Synchronisation between Viewers
 
+If multiple viewers are used at the same time, how to ensure that the data in different viewers is synchronized?

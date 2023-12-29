@@ -17,12 +17,14 @@ Dynamsoft Document Viewer (DDV) is a versatile SDK designed to offer a range of 
 Key features include:
 
 - Data Management: Organize, retrieve, and manage documents and pages efficiently.
+    - [Document management]({{ site.features }}datamanagement/docmanagement.html)
+    - [Page management]({{ site.features }}datamanagement/pagemanagement.html)
 - Viewer Types: Customize your document interaction with a variety of viewers.
-    - Edit Viewer
-    - Capture Viewer
-    - Perspective Viewer
-    - Browse Viewer
-    - Custom Viewer
+    - [Edit Viewer]({{ site.features}}viewers/editviewer.html)
+    - [Capture Viewer]({{ site.features }}viewers/captureviewer.html)
+    - [Perspective Viewer]({{ site.features }}viewers/perspectiveviewer.html)
+    - [Browse Viewer]({{ site.features }}viewers/others.html#browse-viewer)
+    - [Custom Viewer]({{ site.features }}viewers/others.html#custom-viewer)
 
 Additionally, DDV enhances functionality by allowing integration with customized image filtering processes and document boundary detection processes. It is particularly recommended to use [Dynamsoft Document Normalizer](https://www.dynamsoft.com/document-normalizer/docs/web/programming/javascript/) for document detection.
 
