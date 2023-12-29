@@ -26,7 +26,7 @@ editViewer.openDocument("docUid"); // Open a document which has pages
 
 ## Edit pages
 
-### Rotating
+### Rotate
 
 The method [`rotate()`]({{ site.api }}class/editviewer.html#rotate) is used to rotate the pages in the edit viewer.
 
@@ -45,7 +45,7 @@ The method [`rotate()`]({{ site.api }}class/editviewer.html#rotate) is used to r
     editViewer.rotate(90,[...Array(pageCount).keys()]);
     ```
 
-### Cropping 
+### Crop 
 
 The method [`crop()`]({{ site.api }}class/editviewer.html#crop) is used to crop the pages. If the rectanle selection is exceeds the bounds of the page, it won't take effect.
 
