@@ -17,16 +17,19 @@ permalink: /features/viewers/others.html
 Browse Viewer is used to display pages in multiple-mode, pages can be multiple selected in this viewer. 
 >The built-in thumbnail in the edit viewer is implemented by browse viewer.
 
+```typescript
+const browseViewer = new Dynamsoft.DDV.BrowseViewer({
+    container: document.getElementById("viewer")
+});
+
+browseViewer.openDocument("docUid"); // Open a document which has pages.
+```
+
 ### Select page(s)
 
 - Select the second and third pages by using [`selectPages()`]({{ site.api }}class/browseviewer.html#selectpages).
 
     ```typescript
-    const browseViewer = new Dynamsoft.DDV.BrowseViewer({
-        container: document.getElementById("viewer")
-    });
-    browseViewer.openDocument("docUid"); // Open a document which has pages.
-
     browseViewer.selectPages([1,2]);
     ```
 
