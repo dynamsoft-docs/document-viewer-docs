@@ -29,6 +29,8 @@ In addition to drawing and adjusting the selection through the UI, DDV also prov
         container: document.getElementById("viewer")
     });
 
+    perspectiveViewer.openDocument("docUid"); // Open a document which has pages.
+
     const quad = [
         [314,518],
         [2200,625],
