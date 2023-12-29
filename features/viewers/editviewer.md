@@ -47,7 +47,7 @@ The method [`rotate()`]({{ site.api }}class/editviewer.html#rotate) is used to r
 
 ### Crop 
 
-The method [`crop()`]({{ site.api }}class/editviewer.html#crop) is used to crop the pages. If the rectanle selection is exceeds the bounds of the page, it won't take effect.
+The method [`crop()`]({{ site.api }}class/editviewer.html#crop) is used to crop the pages. If the rectangle selection is exceeds the bounds of the page, it won't take effect.
 
 **Use cases**
 
