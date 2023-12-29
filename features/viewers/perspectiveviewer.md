@@ -19,7 +19,7 @@ const perspectiveViewer = new Dynamsoft.DDV.PerspectiveViewer({
     container: document.getElementById("viewer")
 });
 
-perspectiveViewer.openDocument("docUid"); // Open a document which has pages.
+perspectiveViewer.openDocument("docUid"); // Open a document which has pages
 ```
 
 ## Quadrilateral selection
