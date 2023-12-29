@@ -14,6 +14,9 @@ permalink: /features/viewers/perspectiveviewer.html
 
 Perspective Viewer is used to do page boundaries manual adjustment & perspective transformation. The page data displayed on this viewer is its original data.
 
+[Default user interface]({{ site.ui }}default_elements.html#perspective-viewer)
+[Default viewer configuration]({{ site.viewer }}viewerconfig.html#perspective-viewer)
+
 ```typescript
 const perspectiveViewer = new Dynamsoft.DDV.PerspectiveViewer({
     container: document.getElementById("viewer")
