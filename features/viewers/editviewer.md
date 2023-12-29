@@ -149,4 +149,4 @@ editViewer.thumbnail.show();
 
 // Hide thumbnail
 editViewer.thumbnail.hide();
-    ```
+```
