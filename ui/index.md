@@ -18,7 +18,7 @@ permalink: /ui/index.html
         - [Structure]({{ site.ui }}uiconfig.html#structure)
         - [How to configure]({{ site.ui }}uiconfig.html#how-to-configure)
         - [Reference]({{ site.ui }}uiconfig.html#reference)
-    - [Default Elements]({{ site.ui }}default_elements.html)
+    - [Built-in Elements]({{ site.ui }}default_elements.html)
     - [Default User Interface]({{ site.ui }}default_ui.html)
         - [Edit viewer]({{ site.ui }}default_ui.html#edit-viewer)
         - [Capture viewer]({{ site.ui }}default_ui.html#capture-viewer)

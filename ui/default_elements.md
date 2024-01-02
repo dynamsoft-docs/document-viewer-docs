@@ -46,7 +46,7 @@ The following are lists of built-in elements as well as their default icons that
 | Dynamsoft.DDV.Elements.DisplayMode           | N/A                                                         | Composite element contains SinglePage and ContinuousPage. 
 | Dynamsoft.DDV.Elements.Crop                  | N/A                                                         | 
 | Dynamsoft.DDV.Elements.Filter                | ddv-filter                                                  | 
-| Dynamsoft.DDV.Elements.Load                  | ddv-load-image                                              | Load file from local. If there is no document is opend when you click Load button, a new document (default name: dynamsoft-document-timestamp) will be created and opened automatically.
+| Dynamsoft.DDV.Elements.Load                  | ddv-load-image                                              | Load file from local. If there is no document is opend when you click Load button, a new document (default name: doc-*timestamp*) will be created and opened automatically.
 | Dynamsoft.DDV.Elements.Undo                  | ddv-undo-page                                               |
 | Dynamsoft.DDV.Elements.Redo                  | ddv-redo-page                                               |
 | Dynamsoft.DDV.Elements.Pan                   | ddv-pan-mode                                                | 
@@ -65,7 +65,7 @@ The following are lists of built-in elements as well as their default icons that
 
 | Supported Elements                       | ClassName of default icon | More descriptions
 |--------------------------------|---------------------------|--------------------
-| Dynamsoft.DDV.Elements.Capture           | ddv-capture-image         | If there is no document opened when you click Capture button, a new document (default name: dynamsoft-document-timestamp) will be created and opened automatically.
+| Dynamsoft.DDV.Elements.Capture           | ddv-capture-image         | If there is no document opened when you click Capture button, a new document (default name: doc-*timestamp*) will be created and opened automatically.
 | Dynamsoft.DDV.Elements.Flashlight        | ddv-camera-flashlight     |
 | Dynamsoft.DDV.Elements.CameraConvert     | ddv-camera-convert        |
 | Dynamsoft.DDV.Elements.CameraResolution  | ddv-resolution            |
@@ -87,7 +87,7 @@ The following are lists of built-in elements as well as their default icons that
 | Dynamsoft.DDV.Elements.DeleteAll            | ddv-delete-all                                              |
 | Dynamsoft.DDV.Elements.PerspectiveAll          | ddv-perspective-all                                             |
 | Dynamsoft.DDV.Elements.FullQuad            | ddv-full-quad                                              |
-| Dynamsoft.DDV.Elements.Load                 | ddv-load-image                                              | Load file from local. If there is no document is opend when you click Load button, a new document (default name: dynamsoft-document-timestamp) will be created and opened automatically.
+| Dynamsoft.DDV.Elements.Load                 | ddv-load-image                                              | Load file from local. If there is no document is opend when you click Load button, a new document (default name: doc-*timestamp*) will be created and opened automatically.
 | Dynamsoft.DDV.Elements.Download             | ddv-button-download                                         | Download pages in pdf format to local.
 | Dynamsoft.DDV.Elements.Print                | ddv-print-page                                              |
 
@@ -104,7 +104,7 @@ The following are lists of built-in elements as well as their default icons that
 | Dynamsoft.DDV.Elements.DeleteCurrent         | ddv-delete-current                                          |
 | Dynamsoft.DDV.Elements.DeleteAll             | ddv-delete-all                                              |
 | Dynamsoft.DDV.Elements.Print                 | ddv-print-page                                              |
-| Dynamsoft.DDV.Elements.Load                  | ddv-load-image                                              | Load file from local. If there is no document is opend when you click Load button, a new document (default name: dynamsoft-document-timestamp) will be created and opened automatically.
+| Dynamsoft.DDV.Elements.Load                  | ddv-load-image                                              | Load file from local. If there is no document is opend when you click Load button, a new document (default name: doc-*timestamp*) will be created and opened automatically.
 | Dynamsoft.DDV.Elements.Download              | ddv-button-download                                         | Download pages in pdf format to local.
 
 <div class="multi-panel-end"></div>
