@@ -12,6 +12,8 @@ permalink: /api/class/browseviewer.html
 
 # BrowseViewer Class
 
+Browse Viewer is used to display pages in multiple-mode, pages can be multiple selected in this viewer.
+
 ## API Index
 
 **Create and Destroy Instances** 

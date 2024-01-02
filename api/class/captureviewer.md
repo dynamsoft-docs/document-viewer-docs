@@ -12,6 +12,8 @@ permalink: /api/class/captureviewer.html
 
 # CaptureViewer Class
 
+Capture Viewer is used to control camera, play video stream, and capture the images from camera.
+
 ## API Index
 
 **Create and Destroy Instances** 
