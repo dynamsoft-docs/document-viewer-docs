@@ -17,4 +17,4 @@ In actual scenarios, the default UI may not meet all requirements. Developers wi
 - [How to customize UI]({{ site.ui }}customize/index.html)
     - [Layout]({{ site.ui }}customize/layout.html)
     - [Elements]({{ site.ui }}customize/elements.html)
-    <!-- - [Update UI dynamically]({{ site.ui }}customize/dynamically.html) -->
+    - [Update UI dynamically]({{ site.ui }}customize/dynamically.html)
