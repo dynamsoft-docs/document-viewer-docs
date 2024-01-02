@@ -137,7 +137,7 @@ editViewer.fitMode = "actualSize";
 
 ## Built-in Thumbnail
 
-Each edit viewer has a built-in thumbnail, as you may know, an `IBrowseViewer` object represents the thumbnail object in edit viewer. When you create an `editViewer` instance, the `editViewer.thumbnail` object will be generated at meanwhile.
+Each edit viewer has a built-in thumbnail, as you may know, an [`IBrowseViewer`]({{ site.api }}interface/ibrowseviewer.html) object represents the thumbnail object in edit viewer. When you create an `editViewer` instance, the `editViewer.thumbnail` object will be generated at meanwhile.
 
 **Use case**
 
