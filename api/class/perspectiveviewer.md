@@ -12,6 +12,8 @@ permalink: /api/class/perspectiveviewer.html
 
 # PerspectiveViewer Class
 
+Perspective Viewer is used to do page boundaries manual adjustment & perspective transformation. The page data displayed on this viewer is its original data.
+
 ## API Index
 
 **Create and Destroy Instances** 

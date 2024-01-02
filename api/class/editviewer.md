@@ -12,6 +12,8 @@ permalink: /api/class/editviewer.html
 
 # EditViewer Class
 
+Edit Viewer is used to edit the pages in document, such as, rotating, cropping, filtering, etc. as well as adjust the layout of the display.
+
 ## API Index
 
 **Create and Destroy Instances** 

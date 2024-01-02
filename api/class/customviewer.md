@@ -10,6 +10,10 @@ description: Dynamsoft Document Viewer Documentation API Reference CustomViewer 
 permalink: /api/class/customviewer.html
 ---
 
+# CustomViewer Class
+
+Custom Viewer does not have any built-in UI or functionality, it is used for creating your own viewer.
+
 ## API Index
 
 **Create and Destroy Instances** 
