@@ -113,7 +113,7 @@ new Dynamsoft.DDV.BrowseViewer(options?: BrowseViewerConstructorOptions);
 
 ```typescript
 const browseViewer = new Dynamsoft.DDV.BrowseViewer({
-    container: document.getElementById("viewer")
+    container: document.getElementById("viewer"),
 });
 ```
 

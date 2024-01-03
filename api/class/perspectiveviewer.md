@@ -109,7 +109,7 @@ new Dynamsoft.DDV.PerspectiveViewer(options?: PerspectiveViewerConstructorOption
 
 ```typescript
 const perspectiveViewer = new Dynamsoft.DDV.PerspectiveViewer({
-    container: document.getElementById("viewer")
+    container: document.getElementById("viewer"),
 });
 ```
 

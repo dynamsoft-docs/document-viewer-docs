@@ -46,7 +46,7 @@ The configurations of integrated thumbnail, please refer to [`ThumbnailConfig`](
 
 The uid of viewers' group. If it is not specified, a random groupUid will be generated.
 
-<!-- Please refer to [Data synchronisation between viewers]({{ site.features }}viewers/datasync.html). -->
+Please refer to [Data synchronisation between viewers]({{ site.features }}viewers/datasync.html).
 
 ## Related
 
