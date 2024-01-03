@@ -27,7 +27,7 @@ interface PageNumberStyle {
 	color?: string;
 	fontSize?: string;
 	fontFamily?: string; 
-    left?: string;
+	left?: string;
 	top?: string; 
 	right?: string; 
 	bottom?: string; 

@@ -19,7 +19,7 @@ interface EditViewerConstructorOptions {
 	container?: string | HTMLElement;
 	viewerConfig?: EditViewerConfig; 
 	uiConfig?: UiConfig; 
-    thumbnailConfig?: ThumbnailConfig; 
+	thumbnailConfig?: ThumbnailConfig; 
 	groupUid?: string; 
 }
 ```
