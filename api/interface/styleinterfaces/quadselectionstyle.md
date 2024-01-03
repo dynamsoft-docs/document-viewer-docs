@@ -19,7 +19,7 @@ interface QuadSelectionStyle {
 	border?: string; 
 	background?: string; 
 	ctrlBorderRadius?: string; 
-    ctrlBorder?: string; 
+	ctrlBorder?: string; 
 	ctrlWidth?: string; 
 	ctrlHeight?: string; 
 	ctrlBackground?: string; 
