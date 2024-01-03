@@ -19,7 +19,7 @@ Edit Viewer is used to edit the pages in document, such as, rotating, cropping, 
 
 ```typescript
 const editViewer = new Dynamsoft.DDV.EditViewer({
-    container: document.getElementById("viewer")
+    container: document.getElementById("viewer"),
 });
 editViewer.openDocument("docUid"); // Open a document which has pages
 ```

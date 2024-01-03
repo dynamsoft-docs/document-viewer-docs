@@ -21,7 +21,7 @@ Browse Viewer is used to display pages in multiple-mode, pages can be multiple s
 
 ```typescript
 const browseViewer = new Dynamsoft.DDV.BrowseViewer({
-    container: document.getElementById("viewer")
+    container: document.getElementById("viewer"),
 });
 
 browseViewer.openDocument("docUid"); // Open a document which has pages
