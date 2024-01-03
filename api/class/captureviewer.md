@@ -105,7 +105,7 @@ new Dynamsoft.DDV.CaptureViewer(options?: CaptureViewerConstructorOptions);
 
 ```typescript
 const captureViewer = new Dynamsoft.DDV.CaptureViewer({
-    container: document.getElementById("viewer")
+    container: document.getElementById("viewer"),
 });
 ```
 
@@ -588,12 +588,13 @@ The Blob of the captured image.
 **Code Snippet**
 
 ```typescript
-const captureViewer = new Dynamsoft.DDV.CaptureViewer({container: document.getElementById("viewer")});
+const captureViewer = new Dynamsoft.DDV.CaptureViewer({
+    container: document.getElementById("viewer"),
+});
 await captureViewer.play( {
 	 resolution: [1080, 720], 
 	 fill: true, 
-	 }
-);
+});
 
 const capturedPage = await captureViewer.capture();
 ```

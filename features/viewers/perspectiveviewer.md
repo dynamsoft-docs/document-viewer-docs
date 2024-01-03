@@ -19,7 +19,7 @@ Perspective Viewer is used to do page boundaries manual adjustment & perspective
 
 ```typescript
 const perspectiveViewer = new Dynamsoft.DDV.PerspectiveViewer({
-    container: document.getElementById("viewer")
+    container: document.getElementById("viewer"),
 });
 
 perspectiveViewer.openDocument("docUid"); // Open a document which has pages

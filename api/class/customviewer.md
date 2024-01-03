@@ -61,7 +61,7 @@ new Dynamsoft.DDV.CustomViewer(options?: CustomViewerConstructorOptions);
 
 ```typescript
 const customViewer = new Dynamsoft.DDV.CustomViewer({
-    container: document.getElementById("viewer")
+    container: document.getElementById("viewer"),
 });
 ```
 
