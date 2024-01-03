@@ -94,10 +94,10 @@ DDV is using [`Interface IDocument`]({{ site.api }}interface/idocument/index.htm
     const settings = {
         quality: 60, // The default quality is 80.
     };
-    const result = await firstDoc.saveToJpeg(0, settings);
+    const result1 = await firstDoc.saveToJpeg(0, settings);
 
     // Save the second page in the doc to a JPEG file with default JPEG compression quality
-    const result = await firstDoc.saveToJpeg(1);
+    const result2 = await firstDoc.saveToJpeg(1);
     ```
 
 - Save page(s) as a TIFF file, [`saveToTiff()`]({{ site.api }}interface/idocument/index.html#savetotiff)
@@ -117,13 +117,13 @@ DDV is using [`Interface IDocument`]({{ site.api }}interface/idocument/index.htm
     }
 
     // Save the fifth, sixth, seventh pages to a multi-page TIFF file with the specified tiff settings.
-    await firstDoc.saveToTiff([4,5,6], tiffSettings);
+    const result1 = await firstDoc.saveToTiff([4,5,6], tiffSettings);
 
     // Save the whole document to a multi-page TIFF file with the specified tiff settings.
-    await firstDoc.saveToTiff(tiffSettings);
+    const result2 = await firstDoc.saveToTiff(tiffSettings);
 
     // Save the whole document to a multi-page TIFF file without any tiff settings.
-    await firstDoc.saveToTiff();
+    const result2 = await firstDoc.saveToTiff();
     ```
 
 - Save page(s) as a PDF file, [`saveToPdf()`]({{ site.api }}interface/idocument/index.html#savetopdf)
@@ -146,13 +146,13 @@ DDV is using [`Interface IDocument`]({{ site.api }}interface/idocument/index.htm
     }
 
     // Save the fifth, sixth, seventh pages to a multi-page PDF file with the specified pdf settings.
-    await firstDoc.saveToPdf([4,5,6], pdfSettings);
+    const result1 = await firstDoc.saveToPdf([4,5,6], pdfSettings);
 
     // Save the whole document to a multi-page PDF file with the specified pdf settings.
-    await firstDoc.saveToPdf(pdfSettings);
+    const result2 = await firstDoc.saveToPdf(pdfSettings);
 
     // Save the whole document to a multi-page PDF file without any pdf settings.
-    await firstDoc.saveToPdf();
+    const result3 = await firstDoc.saveToPdf();
     ```
 
 ## Move or switch pages

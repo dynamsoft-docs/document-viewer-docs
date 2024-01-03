@@ -616,10 +616,10 @@ const tiffSettings = {
 }
 
 // Save the fifth, sixth, seventh pages to a multi-page TIFF file with the specified tiff settings.
-await firstDoc.saveToTiff([4,5,6], tiffSettings);
+const result1 = await firstDoc.saveToTiff([4,5,6], tiffSettings);
 
 // Save the whole document to a multi-page TIFF file with the specified tiff settings.
-await firstDoc.saveToTiff(tiffSettings);
+const result2 = await firstDoc.saveToTiff(tiffSettings);
 ```
 
 **Promise Exception**
@@ -674,10 +674,10 @@ const pdfSettings = {
 }
 
 // Save the fifth, sixth, seventh pages to a multi-page PDF file with the specified pdf settings.
-await firstDoc.saveToPdf([4,5,6], pdfSettings);
+const result1 = await firstDoc.saveToPdf([4,5,6], pdfSettings);
 
 // Save the whole document to a multi-page PDF file with the specified pdf settings.
-await firstDoc.saveToPdf(pdfSettings);
+const result2 = await firstDoc.saveToPdf(pdfSettings);
 ```
 
 **Promise Exception**

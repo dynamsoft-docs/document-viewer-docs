@@ -18,6 +18,13 @@ description: Dynamsoft Document Viewer Documentation Homepage
     - Data Management
         - [Document Management]({{ site.features }}datamanagement/docmanagement.html)
         - [Page Management]({{ site.features }}datamanagement/pagemanagement.html)
+    - Viewers
+        - [Edit Viewer]({{ site.features}}viewers/editviewer.html)
+        - [Capture Viewer]({{ site.features }}viewers/captureviewer.html)
+        - [Perspective Viewer]({{ site.features }}viewers/perspectiveviewer.html)
+        - [Browse Viewer]({{ site.features }}viewers/others.html#browse-viewer)
+        - [Custom Viewer]({{ site.features }}viewers/others.html#custom-viewer)
+        - [Data synchronisation between viewers]({{ site.features }}viewers/datasync.html)
     - Advanced
         - [Image Filter]({{ site.features }}advanced/imagefilter.html)
         - [Document Detection]({{ site.features }}advanced/documentdetect.html)
@@ -42,6 +49,6 @@ description: Dynamsoft Document Viewer Documentation Homepage
     - [How to customize UI]({{ site.ui }}customize/index.html)
         - [Layout]({{ site.ui }}customize/layout.html)
         - [Elements]({{ site.ui }}customize/elements.html)
-        <!-- - [Update UI dynamically]({{ site.ui }}customize/dynamically.html) -->
+        - [Update UI dynamically]({{ site.ui }}customize/dynamically.html)
 - [API Reference]({{ site.api }}index.html)
-
+- [Release Notes]({{ site.releasenotes }}index.html)
