@@ -121,5 +121,3 @@ const mobileEditViewerUiConfig = {
     ],
 };
 ```
-
-## Reference
