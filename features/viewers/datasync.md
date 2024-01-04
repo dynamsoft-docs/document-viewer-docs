@@ -81,4 +81,4 @@ Which data will be synchronized in detail?
     editViewer.getCurrentPageIndex(); // Returns 3
     ```
 
-- Page data: When data of a page in a viewer is edited or updated, for example, rotated 90 degrees clockwise, the data changes on this page are synchronized with other viewers in the same group.
+{% comment %} - Page data: When data of a page in a viewer is edited or updated, for example, rotated 90 degrees clockwise, the data changes on this page are synchronized with other viewers in the same group. {% endcomment %}
