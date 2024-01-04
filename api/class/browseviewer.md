@@ -121,14 +121,14 @@ const browseViewer = new Dynamsoft.DDV.BrowseViewer({
 
  Error Code  | Description                                         
 --------|-----------------------------------------------------
- -80100 | XXX(ClassName.API): XXX(Parameter Name) is invalid.                                   
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.                                     
  -80001 | License string is invalid.                              
- -80002 | XXX module license has expired.                                                            
- -80003 | XXX module license is missing.                          
- -80004 | XXX module license version does not match.                                 
- -80005 | Domain does not match the domain bound to the XXX module license.  
- -80050 | Dynamsoft.DDV.setConfig has not been set up yet.  
- -80051 | Dynamsoft.DDV.setConfig has not been completed.   
+ -80002 | *XXX(LicenseModuleName)* module license has expired.                                                           
+ -80003 | *XXX(LicenseModuleName)* module license is missing.                         
+ -80004 | *XXX(LicenseModuleName)* module license version does not match.                                 
+ -80005 | Domain does not match the domain bound to the *XXX(LicenseModuleName)* module license.  
+ -80050 | DDV.setConfig has not been set up yet.  
+ -80051 | DDV.setConfig has not been completed.   
 
 ### destroy()
 
@@ -181,8 +181,8 @@ browseViewer.bindContainer("viewercontainer");
 
  Error Code  | Description                                         
 --------|-----------------------------------------------------
- -80100 | XXX(ClassName.API): XXX(Parameter Name) is invalid. 
- -80102 | XXX(ClassName.API): XXX(Parameter Name) is missing. 
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
+ -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  
  -80301 | The specified container does not exist. 
 
 **Remark**
@@ -248,9 +248,9 @@ const pageStyle = browseViewer.getStyle("pageStyle");
 
  Error Code  | Description                                                             | API Return Value
 --------|-------------------------------------------------------------------------|----------------------
- -80100 | XXX(ClassName.API): XXX(Parameter Name) is invalid.                     | `null`
- -80102 | XXX(ClassName.API): XXX(Parameter Name) is missing.                     | `null`
- -80103 | XXX(ClassName.API): The value for XXX(Parameter Name) is not supported. | `null`
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.                       | `null`
+ -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.                      | `null`
+ -80103 | *XXX(API)*: The value for *XXX(ParameterName)* is not supported. | `null`
 
 ### updateStyle()
 
@@ -308,9 +308,9 @@ type BrowseViewerStyleName = "canvasStyle" | "pageStyle" | "selectedPageStyle" |
 
  Error Code  | Description                                                             | API Return Value
 --------|-------------------------------------------------------------------------|----------------------
- -80100 | XXX(ClassName.API): XXX(Parameter Name) is invalid.                     | `false`
- -80102 | XXX(ClassName.API): XXX(Parameter Name) is missing.                     | `false`
- -80103 | XXX(ClassName.API): The value for XXX(Parameter Name) is not supported. | `false`
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.                       | `false`
+ -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.                      | `false`
+ -80103 | *XXX(API)*: The value for *XXX(ParameterName)* is not supported. | `false`
 
 
 **Remark**
@@ -408,9 +408,9 @@ browseViewer.updateUiConfig(viewerUi); // Configure a header which includes "Pag
 
  Error Code  | Description                                         | API Return Value
 --------|-----------------------------------------------------|----------------------
- -80100 | XXX(ClassName.API): XXX(Parameter Name) is invalid. | `false`
- -80102 | XXX(ClassName.API): XXX(Parameter Name) is missing. | `false`
- -80313 | The element XXX is not supported in XXX class.      | `false`
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   | `false`
+ -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  | `false`
+ -80313 | The element *XXX(ElementName)* is not supported in *XXX(ClassName)* class.      | `false`
 
 **Remark**
 
@@ -486,7 +486,7 @@ browseViewer.multiselectMode = true;
 
  Error Code  | Description                                         
 --------|-----------------------------------------------------
- -80100 | XXX(ClassName.API): XXX(Parameter Name) is invalid. 
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
 
 **Remark**
 
@@ -524,9 +524,9 @@ browseViewer.openDocument(docUid);
 
  Error Code  | Description                                         
 --------|-----------------------------------------------------
- -80100 | XXX(ClassName.API): XXX(Parameter Name) is invalid. 
- -80102 | XXX(ClassName.API): XXX(Parameter Name) is missing.  
- -80104 | XXX(ClassName.API): The specified document(s) do not exist.
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
+ -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.   
+ -80104 | *XXX(API)*: The specified document(s) do not exist.  
 
 **Remark**
 
@@ -635,9 +635,9 @@ browseViewer.goToPage(3);
 
  Error Code  | Description                                              | API Return Value
 --------|----------------------------------------------------------|------------------
- -80100 | XXX(ClassName.API): XXX(Parameter Name) is invalid.      | `-1`
- -80101 | XXX(ClassName.API): XXX(Parameter Name) is out of range. | `-1`
- -80102 | XXX(ClassName.API): XXX(Parameter Name) is missing.      | `-1`
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.        | `-1`
+ -80101 | *XXX(API)*: *XXX(ParameterName)* is out of range.    | `-1`
+ -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.       | `-1`
  -80304 | No document opened.                                      | `-1`
  -80305 | There is no image in the current document.               | `-1`
 
@@ -724,9 +724,9 @@ const firstPageUid = browseViewer.indexToUid(0);
 
  Error Code  | Description                                              | API Return Value
 --------|----------------------------------------------------------|------------------
- -80100 | XXX(ClassName.API): XXX(Parameter Name) is invalid.      | `''`
- -80101 | XXX(ClassName.API): XXX(Parameter Name) is out of range. | `''`
- -80102 | XXX(ClassName.API): XXX(Parameter Name) is missing.      | `''`
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.        | `''`
+ -80101 | *XXX(API)*: *XXX(ParameterName)* is out of range.    | `''`
+ -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.       | `''`
  -80304 | No document opened.                                      | `''`
  -80305 | There is no image in the current document.               | `''`
 
@@ -759,9 +759,9 @@ browseViewer.uidToIndex(curPageUid);
 
  Error Code  | Description                                              | API Return Value
 --------|----------------------------------------------------------|------------------
- -80100 | XXX(ClassName.API): XXX(Parameter Name) is invalid.      | `-1`
- -80102 | XXX(ClassName.API): XXX(Parameter Name) is missing.      | `-1`
- -80105 | XXX(ClassName.API): The specified page(s) do not exist.  | `-1`
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.        | `-1`
+ -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.       | `-1`
+ -80105 | *XXX(API)*: The specified page(s) do not exist.  | `-1`
  -80304 | No document opened.                                      | `-1`
  -80305 | There is no image in the current document.               | `-1`
 
@@ -825,8 +825,8 @@ browseViewer.selectPages([0,1]);
 
  Error Code  | Description                                         | API Return Value
 --------|-----------------------------------------------------|--------------------
- -80100 | XXX(ClassName.API): XXX(Parameter Name) is invalid. | `[]`
- -80102 | XXX(ClassName.API): XXX(Parameter Name) is missing. | `[]`
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   | `[]`
+ -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  | `[]`
  -80304 | No document opened.                                 | `[]`
 
 ### selectAllPages()
@@ -893,9 +893,9 @@ browseViewer.setRowAndColumn(5,8); // Display the page in five rows and eight co
 
  Error Code  | Description                                         | API Return Value
 --------|-----------------------------------------------------|--------------------
- -80100 | XXX(ClassName.API): XXX(Parameter Name) is invalid. | `false`
- -80101 | XXX(ClassName.API): XXX(Parameter Name) is out of range.  | `false`
- -80102 | XXX(ClassName.API): XXX(Parameter Name) is missing. | `false`
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   | `false`
+ -80101 | *XXX(API)*: *XXX(ParameterName)* is out of range.     | `false`
+ -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  | `false`
 
 **Remark**
 
@@ -942,9 +942,9 @@ browseViewer.rotate(-90);
 
  Error Code  | Description                                                        | API Return Value
 --------|-------------------------------------------------------------------------|-------------------    
- -80100 | XXX(ClassName.API): XXX(Parameter Name) is invalid.                     | `false`
- -80102 | XXX(ClassName.API): XXX(Parameter Name) is missing.                     | `false`
- -80103 | XXX(ClassName.API): The value for XXX(Parameter Name) is not supported. | `false`
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.                       | `false`
+ -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.                      | `false`
+ -80103 | *XXX(API)*: The value for *XXX(ParameterName)* is not supported. | `false`
  -80304 | No document opened.                                                     | `false`
  -80305 | There is no image in the current document.                              | `false`
 
@@ -1013,8 +1013,8 @@ browseViewer.on("resized", eventFunc);
 
  Error Code  | Description                                         
 --------|-----------------------------------------------------
- -80100 | XXX(ClassName.API): XXX(Parameter Name) is invalid. 
- -80102 | XXX(ClassName.API): XXX(Parameter Name) is missing. 
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
+ -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  
 
 
 ### off()
@@ -1052,8 +1052,8 @@ browseViewer.off("resized", eventFunc);
 
  Error Code  | Description                                         
 --------|-----------------------------------------------------
- -80100 | XXX(ClassName.API): XXX(Parameter Name) is invalid. 
- -80102 | XXX(ClassName.API): XXX(Parameter Name) is missing. 
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
+ -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  
 
 ### Integrated Events
 

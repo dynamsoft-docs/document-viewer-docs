@@ -104,8 +104,8 @@ await Dynamsoft.DDV.setConfig({
 
  Error Code  | Description                                         
 --------|-----------------------------------------------------
- -80100 | XXX(ClassName.API): XXX(Parameter Name) is invalid. 
- -80102 | XXX(ClassName.API): XXX(Parameter Name) is missing. 
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
+ -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  
 
 
 ### `<static>` setProcessingHandler()
@@ -134,9 +134,9 @@ type HandlerType = "documentBoundariesDetect"|"imageFilter";
 
  Error Code  | Description                                         
 --------|-----------------------------------------------------
- -80100 | XXX(ClassName.API): XXX(Parameter Name) is invalid. 
- -80102 | XXX(ClassName.API): XXX(Parameter Name) is missing. 
- -80103 | XXX(ClassName.API): The value for XXX(Parameter Name) is not supported.
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
+ -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  
+ -80103 | *XXX(API)*: The value for *XXX(ParameterName)* is not supported.
 
 **Remark**
 
@@ -203,9 +203,9 @@ const defaultEditUi = Dynamsoft.DDV.getDefaultUiConfig("editViewer");
 
  Error Code  | Description                                                            | API Return Value
 --------|------------------------------------------------------------------------|----------------------
- -80100 | XXX(ClassName.API): XXX(Parameter Name) is invalid.                    | `null`
- -80102 | XXX(ClassName.API): XXX(Parameter Name) is missing.                    | `null`
- -80103 | XXX(ClassName.API): The value for XXX(Parameter Name) is not supported.| `null`
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.                      | `null`
+ -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.                     | `null`
+ -80103 | *XXX(API)*: The value for *XXX(ParameterName)* is not supported.| `null`
 
 ### `<static>` clearLastError()
 
@@ -286,9 +286,9 @@ Dynamsoft.DDV.on("error", (e)=>{
 
  Error Code  | Description                                         
 --------|-----------------------------------------------------
- -80100 | XXX(ClassName.API): XXX(Parameter Name) is invalid. 
- -80102 | XXX(ClassName.API): XXX(Parameter Name) is missing. 
- -80103 | XXX(ClassName.API): The value for XXX(Parameter Name) is not supported.
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
+ -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  
+ -80103 | *XXX(API)*: The value for *XXX(ParameterName)* is not supported.
 
 ### `<static>` off()
 
@@ -316,9 +316,9 @@ Dynamsoft.DDV.off("error");
 
  Error Code  | Description                                         
 --------|-----------------------------------------------------
- -80100 | XXX(ClassName.API): XXX(Parameter Name) is invalid. 
- -80102 | XXX(ClassName.API): XXX(Parameter Name) is missing. 
- -80103 | XXX(ClassName.API): The value for XXX(Parameter Name) is not supported.
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
+ -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  
+ -80103 | *XXX(API)*: The value for *XXX(ParameterName)* is not supported.
 
 ### Integrated Event
 
