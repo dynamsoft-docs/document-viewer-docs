@@ -165,12 +165,12 @@ await firstDoc.loadSource([source]);
  Error Code  | Description                                         
 --------|-----------------------------------------------------                               
  -80001 | License string is invalid.                              
- -80002 | XXX module license has expired.                                                                
- -80003 | XXX module license is missing.                          
- -80004 | XXX module license version does not match.                                 
- -80005 | Domain does not match the domain bound to the XXX module license.  
- -80100 | XXX(ClassName.API): XXX(Parameter Name) is invalid. 
- -80102 | XXX(ClassName.API): XXX(Parameter Name) is missing. 
+ -80002 | *XXX(LicenseModuleName)* module license has expired.                                                               
+ -80003 | *XXX(LicenseModuleName)* module license is missing.                         
+ -80004 | *XXX(LicenseModuleName)* module license version does not match.                                 
+ -80005 | Domain does not match the domain bound to the *XXX(LicenseModuleName)* module license.  
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
+ -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  
  -80200 | File type is not supported. 
  -80202 | Failed to read the PDF file becouse it's encrypted and the correct password is not provided.
 
@@ -202,9 +202,9 @@ const pageData = await firstDoc.getPageData(firstDoc.pages[0]);
 
  Error Code  | Description                                         
 --------|-----------------------------------------------------
- -80100 | XXX(ClassName.API): XXX(Parameter Name) is invalid. 
- -80102 | XXX(ClassName.API): XXX(Parameter Name) is missing. 
- -80105 | XXX(ClassName.API): The specified page(s) do not exist.
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
+ -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  
+ -80105 | *XXX(API)*: The specified page(s) do not exist.
 
 
 ### updatePage()
@@ -249,10 +249,10 @@ await firstDoc.updatePage(firstDoc.pages[0], fileData, updateFirstPage);
 
  Error Code  | Description                                         
 --------|-----------------------------------------------------
- -80100 | XXX(ClassName.API): XXX(Parameter Name) is invalid. 
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
  -80101 | IDocument.updatePage: updatePageOptions.fileIndex is out of range.
- -80102 | XXX(ClassName.API): XXX(Parameter Name) is missing. 
- -80105 | XXX(ClassName.API): The specified page(s) do not exist.
+ -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  
+ -80105 | *XXX(API)*: The specified page(s) do not exist.
 
 
 
@@ -293,9 +293,9 @@ await firstDoc.setPageCustomData(firstDoc.pages[0], customData);
 
  Error Code  | Description                                         
 --------|-----------------------------------------------------
- -80100 | XXX(ClassName.API): XXX(Parameter Name) is invalid. 
- -80102 | XXX(ClassName.API): XXX(Parameter Name) is missing. 
- -80105 | XXX(ClassName.API): The specified page(s) do not exist.
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
+ -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  
+ -80105 | *XXX(API)*: The specified page(s) do not exist.
 
 ### getPageCustomData()
 
@@ -325,9 +325,9 @@ const customdata = await firstDoc.getPageCutomData(firstDoc.pages[0]);
 
  Error Code  | Description                                         
 --------|-----------------------------------------------------
- -80100 | XXX(ClassName.API): XXX(Parameter Name) is invalid. 
- -80102 | XXX(ClassName.API): XXX(Parameter Name) is missing. 
- -80105 | XXX(ClassName.API): The specified page(s) do not exist.
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
+ -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  
+ -80105 | *XXX(API)*: The specified page(s) do not exist.
 
 ### deletePages()
 
@@ -360,8 +360,8 @@ firstDoc.deletePages([0,1]);
 
  Error Code  | Description                                    | API return value     
 -------------|------------------------------------------------|---------------     
- -80100 | XXX(ClassName.API): XXX(Parameter Name) is invalid. | `false`
- -80102 | XXX(ClassName.API): XXX(Parameter Name) is missing. | `false`
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   | `false`
+ -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  | `false`
 
 ### deleteAllPages()
 
@@ -418,8 +418,8 @@ firstDoc.movePages([5,3,1], 0);
 
  Error Code  | Description                                         
 --------|-----------------------------------------------------
- -80100 | XXX(ClassName.API): XXX(Parameter Name) is invalid. 
- -80102 | XXX(ClassName.API): XXX(Parameter Name) is missing. 
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
+ -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  
 
 
 ### switchPage()
@@ -455,9 +455,9 @@ firstDoc.switchPage(2, 5);
 
  Error Code  | Description                                         
 --------|-----------------------------------------------------
- -80100 | XXX(ClassName.API): XXX(Parameter Name) is invalid. 
- -80101 | XXX(ClassName.API): XXX(Parameter Name) is out of range. 
- -80102 | XXX(ClassName.API): XXX(Parameter Name) is missing. 
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
+ -80101 | *XXX(API)*: *XXX(ParameterName)* is out of range.    
+ -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  
 
 ### rename()
 
@@ -494,8 +494,8 @@ firstDoc.rename("my_doc");
 
  Error Code  | Description                                   | API return value     
 --------|-----------------------------------------------------|---------------
- -80100 | XXX(ClassName.API): XXX(Parameter Name) is invalid. | `false`
- -80102 | XXX(ClassName.API): XXX(Parameter Name) is missing. | `false`
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   | `false`
+ -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  | `false`
 
 ### saveToPng()
 
@@ -527,13 +527,13 @@ const result = await firstDoc.saveToPng(0);
  Error Code  | Description                                         
 --------|-----------------------------------------------------                                    
  -80001 | License string is invalid.                              
- -80002 | XXX module license has expired.                                                                
- -80003 | XXX module license is missing.                          
- -80004 | XXX module license version does not match.                                 
- -80005 | Domain does not match the domain bound to the XXX module license.  
- -80100 | XXX(ClassName.API): XXX(Parameter Name) is invalid. 
- -80101 | XXX(ClassName.API): XXX(Parameter Name) is out of range. 
- -80102 | XXX(ClassName.API): XXX(Parameter Name) is missing. 
+ -80002 | *XXX(LicenseModuleName)* module license has expired.                                                               
+ -80003 | *XXX(LicenseModuleName)* module license is missing.                         
+ -80004 | *XXX(LicenseModuleName)* module license version does not match.                                 
+ -80005 | Domain does not match the domain bound to the *XXX(LicenseModuleName)* module license.  
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
+ -80101 | *XXX(API)*: *XXX(ParameterName)* is out of range.    
+ -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  
 
 ### saveToJpeg()
 
@@ -570,13 +570,13 @@ const result = await firstDoc.saveToJpeg(0, settings);
  Error Code  | Description                                         
 --------|-----------------------------------------------------                                          
  -80001 | License string is invalid.                              
- -80002 | XXX module license has expired.                                                                
- -80003 | XXX module license is missing.                          
- -80004 | XXX module license version does not match.                                 
- -80005 | Domain does not match the domain bound to the XXX module license.  
- -80100 | XXX(ClassName.API): XXX(Parameter Name) is invalid. 
- -80101 | XXX(ClassName.API): XXX(Parameter Name) is out of range. 
- -80102 | XXX(ClassName.API): XXX(Parameter Name) is missing. 
+ -80002 | *XXX(LicenseModuleName)* module license has expired.                                                               
+ -80003 | *XXX(LicenseModuleName)* module license is missing.                         
+ -80004 | *XXX(LicenseModuleName)* module license version does not match.                                 
+ -80005 | Domain does not match the domain bound to the *XXX(LicenseModuleName)* module license.  
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
+ -80101 | *XXX(API)*: *XXX(ParameterName)* is out of range.    
+ -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  
 
 ### saveToTiff()
 
@@ -627,11 +627,11 @@ const result2 = await firstDoc.saveToTiff(tiffSettings);
  Error Code  | Description                                         
 --------|-----------------------------------------------------                                      
  -80001 | License string is invalid.                              
- -80002 | XXX module license has expired.                                                                
- -80003 | XXX module license is missing.                          
- -80004 | XXX module license version does not match.                                 
- -80005 | Domain does not match the domain bound to the XXX module license.  
- -80100 | XXX(ClassName.API): XXX(Parameter Name) is invalid. 
+ -80002 | *XXX(LicenseModuleName)* module license has expired.                                                               
+ -80003 | *XXX(LicenseModuleName)* module license is missing.                         
+ -80004 | *XXX(LicenseModuleName)* module license version does not match.                                 
+ -80005 | Domain does not match the domain bound to the *XXX(LicenseModuleName)* module license.  
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
  -80305 | There is no image in the current document.
 
 ### saveToPdf()
@@ -685,11 +685,11 @@ const result2 = await firstDoc.saveToPdf(pdfSettings);
  Error Code  | Description                                         
 --------|-----------------------------------------------------                                     
  -80001 | License string is invalid.                              
- -80002 | XXX module license has expired.                                                                
- -80003 | XXX module license is missing.                          
- -80004 | XXX module license version does not match.                                 
- -80005 | Domain does not match the domain bound to the XXX module license.  
- -80100 | XXX(ClassName.API): XXX(Parameter Name) is invalid. 
+ -80002 | *XXX(LicenseModuleName)* module license has expired.                                                               
+ -80003 | *XXX(LicenseModuleName)* module license is missing.                         
+ -80004 | *XXX(LicenseModuleName)* module license version does not match.                                 
+ -80005 | Domain does not match the domain bound to the *XXX(LicenseModuleName)* module license.  
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
  -80305 | There is no image in the current document.
 
 ### print()
@@ -728,5 +728,5 @@ firstDoc.print([1,2]);
 
  Error Code  | Description                                         
 --------|-----------------------------------------------------
- -80100 | XXX(ClassName.API): XXX(Parameter Name) is invalid. 
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
  -80305 | There is no image in the current document.

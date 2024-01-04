@@ -26,19 +26,19 @@ permalink: /api/errorlist.html
 
  Error Code | Error Message                                    
  ---------- | ------------------------------------------------ 
- -80050     | Dynamsoft.DDV.setConfig has not been set up yet. 
- -80051     | Dynamsoft.DDV.setConfig has not been completed.  
+ -80050     | DDV.setConfig has not been set up yet. 
+ -80051     | DDV.setConfig has not been completed.  
 
 ## Common Error
 
  Error Code | Error Message                                                
  ---------- | ------------------------------------------------------------ 
- -80100     | *XXX(ClassName.API)*: *XXX(ParameterName)* is invalid.          
- -80101     | *XXX(ClassName.API)*: *XXX(ParameterName)* is out of range.     
- -80102     | *XXX(ClassName.API)*: *XXX(ParameterName)* is missing.          
- -80103     | *XXX(ClassName.API)*: The value for *XXX(ParameterName)* is not supported. 
- -80104     | *XXX(ClassName.API)*: The specified document(s) do not exist.  
- -80105     | *XXX(ClassName.API)*: The specified page(s) do not exist.      
+ -80100     | *XXX(API)*: *XXX(ParameterName)* is invalid.          
+ -80101     | *XXX(API)*: *XXX(ParameterName)* is out of range.     
+ -80102     | *XXX(API)*: *XXX(ParameterName)* is missing.          
+ -80103     | *XXX(API)*: The value for *XXX(ParameterName)* is not supported. 
+ -80104     | *XXX(API)*: The specified document(s) do not exist.  
+ -80105     | *XXX(API)*: The specified page(s) do not exist.      
 
 ## Document related Error
 
@@ -64,7 +64,7 @@ permalink: /api/errorlist.html
  -80311     | No operations to redo.                                       
  -80312     | The specified quad exceeds the bounds of the current page.   
  -80313     | The element *XXX(ElementName)* is not supported in *XXX(ClassName)* class.               
- -80314     | *XXX(ClassName.API)*: Not available in current toolMode.       
+ -80314     | *XXX(API)*: Not available in current toolMode.       
  -80315     | DocumentDetect needs to be configured by Dynamsoft.DDV.setProcessingHandler to enable the document detection feature. 
  -80316     | ImageFilter needs to be configured by Dynamsoft.DDV.setProcessingHandler to enable the image filter feature. 
 
