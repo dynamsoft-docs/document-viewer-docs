@@ -28,10 +28,10 @@ permalink: /gettingstarted/sdk_init.html
 The following code snippets are using the public trial license to initialize the license. You can replace the public trial license with your own license key.
 
 ```javascript
-Dynamsoft.DDV.Core.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@latest/dist/engine";// Lead to a folder containing the distributed WASM files
-await Dynamsoft.DDV.Core.loadWasm();
-Dynamsoft.DDV.Core.license = "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9"; // Public trial license which is valid for 24 hours
-await Dynamsoft.DDV.Core.init(); 
+await Dynamsoft.DDV.setConfig({
+    license: "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", // Public trial license which is valid for 24 hours
+    engineResourcePath: "https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@latest/dist/engine", // Lead to a folder containing the distributed WASM files
+});
 ```
 
 ### deviceFriendlyName
@@ -39,9 +39,9 @@ await Dynamsoft.DDV.Core.init();
 A human-readable name for the device which corresponds to its UUID is able to set during initialization. This name will appear in the device details table when you check the statistics of the according license.
 
 ```javascript
-Dynamsoft.DDV.Core.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@latest/dist/engine"; // Lead to a folder containing the distributed WASM files
-await Dynamsoft.DDV.Core.loadWasm();
-Dynamsoft.Core.deviceFriendlyName = "Dynamsoft-iPhone"; // A string representing the device which is easier to recognize than its UUID
-Dynamsoft.DDV.Core.license = "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9";// Public trial license which is valid for 24 hours
-await Dynamsoft.DDV.Core.init(); 
+await Dynamsoft.DDV.setConfig({
+    license: "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", // Public trial license which is valid for 24 hours
+    engineResourcePath: "https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@latest/dist/engine", // Lead to a folder containing the distributed WASM files
+    deviceFriendlyName: "Dynamsoft-iPhone", // A string representing the device which is easier to recognize than its UUID
+});
 ```

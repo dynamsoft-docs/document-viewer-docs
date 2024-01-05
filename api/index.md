@@ -15,6 +15,7 @@ permalink: /api/index.html
 ## Namespaces
 
 - [`Dynamsoft.DDV`]({{ site.api }}namespace/ddv.html)
+- [`Dynamsoft.DDV.Core`]({{ site.api }}namespace/ddv_core.html)
 - [`Dynamsoft.DDV.Elements`]({{ site.api }}namespace/ddv_elements.html)
 
 ## Classes
