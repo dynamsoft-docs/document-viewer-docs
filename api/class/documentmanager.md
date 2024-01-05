@@ -77,7 +77,7 @@ const firstDoc = Dynamsoft.DDV.documentManager.createDocument({
 
  Error Code  | Description                                         
 --------|-----------------------------------------------------
- -80100 | XXX(ClassName.API): XXX(Parameter Name) is invalid. 
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
 
 
 ### deleteDocuments()
@@ -118,9 +118,9 @@ Dynamsoft.DDV.documentManager.deleteDocuments([docUid]);
 
  Error Code  | Description                                            | API return value     
 -------------|--------------------------------------------------------|---------------    
- -80100 | XXX(ClassName.API): XXX(Parameter Name) is invalid.         | `false`
- -80102 | XXX(ClassName.API): XXX(Parameter Name) is missing.         | `false`
- -80104 | XXX(ClassName.API): The specified document(s) do not exist. | `false`
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.           | `false`
+ -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.          | `false`
+ -80104 | *XXX(API)*: The specified document(s) do not exist.   | `false`
 
 ### deleteAllDocuments()
 
@@ -172,9 +172,9 @@ Dynamsoft.DDV.documentManager.getDocument("lnn0ll9o124");
 
  Error Code  | Description                                         
 --------|-----------------------------------------------------
- -80100 | XXX(ClassName.API): XXX(Parameter Name) is invalid. 
- -80102 | XXX(ClassName.API): XXX(Parameter Name) is missing.  
- -80104 | XXX(ClassName.API): The specified document(s) do not exist.
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
+ -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.   
+ -80104 | *XXX(API)*: The specified document(s) do not exist.  
 
 
 ### getAllDocuments()
@@ -267,9 +267,9 @@ Dynamsoft.DDV.documentManager.mergeDocuments(["lnn0ll9o124", "lnn0iai110t"], mer
 
  Error Code  | Description                                         
 --------|-----------------------------------------------------
- -80100 | XXX(ClassName.API): XXX(Parameter Name) is invalid. 
- -80102 | XXX(ClassName.API): XXX(Parameter Name) is missing.  
- -80104 | XXX(ClassName.API): The specified document(s) do not exist.
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
+ -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.   
+ -80104 | *XXX(API)*: The specified document(s) do not exist.  
  -80201 | docUid does not allow duplicate.     
 
 ### copyPagesToDocument()
@@ -306,9 +306,9 @@ Dynamsoft.DDV.documentManager.copyPagesToDocument("lnn0ll9o124", "lnn0iai110t", 
 
  Error Code  | Description                                         
 --------|-----------------------------------------------------
- -80100 | XXX(ClassName.API): XXX(Parameter Name) is invalid. 
- -80102 | XXX(ClassName.API): XXX(Parameter Name) is missing.  
- -80104 | XXX(ClassName.API): The specified document(s) do not exist.
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
+ -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.   
+ -80104 | *XXX(API)*: The specified document(s) do not exist.  
 
 
 ### movePagesToDocument()
@@ -344,9 +344,9 @@ Dynamsoft.DDV.documentManager.movePagesToDocument("lnn0ll9o124", "lnn0iai110t", 
 
  Error Code  | Description                                         
 --------|-----------------------------------------------------
- -80100 | XXX(ClassName.API): XXX(Parameter Name) is invalid. 
- -80102 | XXX(ClassName.API): XXX(Parameter Name) is missing.  
- -80104 | XXX(ClassName.API): The specified document(s) do not exist.
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
+ -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.   
+ -80104 | *XXX(API)*: The specified document(s) do not exist.  
 
 ## Events
 
@@ -383,8 +383,8 @@ Dynamsoft.DDV.documentManager.on("documentCreated", eventFunc);
 
  Error Code  | Description                                         
 --------|-----------------------------------------------------
- -80100 | XXX(ClassName.API): XXX(Parameter Name) is invalid. 
- -80102 | XXX(ClassName.API): XXX(Parameter Name) is missing. 
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
+ -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  
 
 
 ### off()
@@ -422,8 +422,8 @@ Dynamsoft.DDV.documentManager.off("documentCreated", eventFunc);
 
  Error Code  | Description                                         
 --------|-----------------------------------------------------
- -80100 | XXX(ClassName.API): XXX(Parameter Name) is invalid. 
- -80102 | XXX(ClassName.API): XXX(Parameter Name) is missing. 
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
+ -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  
 
 ### Integrated Events
 
@@ -455,7 +455,7 @@ Triggered when a document is deleted.
 
  `docName`: The name of the deleted document.
 
-<!-- #### pagesAdded
+{% comment %} #### pagesAdded
 
 Triggered when the page(s) are added.
 
@@ -485,4 +485,4 @@ Triggered when the page(s) are deleted.
 
  `indices[]`: The array of the deleted page(s) indices.
 
- `pageUids[]`: The array of the deleted page(s) uids. -->
+ `pageUids[]`: The array of the deleted page(s) uids. {% endcomment %}

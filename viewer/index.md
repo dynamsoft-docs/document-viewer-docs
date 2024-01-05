@@ -10,10 +10,11 @@ description: Dynamsoft Document Viewer Documentation Viewer Configuration
 permalink: /viewer/index.html
 ---
 
-- [Viewer Configuration]({{ site.viewer }}index.html)
-    - [ViewerConfig]({{ site.viewer }}viewerconfig.html)
-        - [Structure]({{ site.viewer }}viewerconfig.html#structure)
-        - [Default ViewerConfig]({{ site.viewer }}viewerconfig.html#default-viewerconfig)
-    - [How to customize viewer]({{ site.viewer }}customize.html)
-        - [Viewer Style]({{ site.viewer }}customize.html#viewer-style)
-        - [Viewer properties]({{ site.viewer }}customize.html#viewer-properties)
+# Viewer Configuration
+
+- [ViewerConfig]({{ site.viewer }}viewerconfig.html)
+    - [Structure]({{ site.viewer }}viewerconfig.html#structure)
+    - [Default ViewerConfig]({{ site.viewer }}viewerconfig.html#default-viewerconfig)
+- [How to customize viewer]({{ site.viewer }}customize.html)
+    - [Viewer Style]({{ site.viewer }}customize.html#viewer-style)
+    - [Viewer properties]({{ site.viewer }}customize.html#viewer-properties)

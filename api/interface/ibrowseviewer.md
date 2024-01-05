@@ -79,9 +79,9 @@ const pageStyle = thumbnailObj.getStyle("pageStyle");
 
  Error Code  | Description                                                             | API Return Value
 --------|-------------------------------------------------------------------------|----------------------
- -80100 | XXX(ClassName.API): XXX(Parameter Name) is invalid.                     | `null`
- -80102 | XXX(ClassName.API): XXX(Parameter Name) is missing.                     | `null`
- -80103 | XXX(ClassName.API): The value for XXX(Parameter Name) is not supported. | `null`
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.                       | `null`
+ -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.                      | `null`
+ -80103 | *XXX(API)*: The value for *XXX(ParameterName)* is not supported. | `null`
 
 ### updateStyle()
 
@@ -139,9 +139,9 @@ type BrowseViewerStyleName = "canvasStyle" | "pageStyle" | "selectedPageStyle" |
 
  Error Code  | Description                                                             | API Return Value
 --------|-------------------------------------------------------------------------|----------------------
- -80100 | XXX(ClassName.API): XXX(Parameter Name) is invalid.                     | `false`
- -80102 | XXX(ClassName.API): XXX(Parameter Name) is missing.                     | `false`
- -80103 | XXX(ClassName.API): The value for XXX(Parameter Name) is not supported. | `false`
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.                       | `false`
+ -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.                      | `false`
+ -80103 | *XXX(API)*: The value for *XXX(ParameterName)* is not supported. | `false`
 
 
 **Remark**
@@ -192,9 +192,9 @@ updateUiConfig(uiConfig: UiConfig): boolean;
 
  Error Code  | Description                                         | API Return Value
 --------|-----------------------------------------------------|----------------------
- -80100 | XXX(ClassName.API): XXX(Parameter Name) is invalid. | `false`
- -80102 | XXX(ClassName.API): XXX(Parameter Name) is missing. | `false`
- -80313 | The element XXX is not supported in XXX class.      | `false`
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   | `false`
+ -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  | `false`
+ -80313 | The element *XXX(ElementName)* is not supported in *XXX(ClassName)* class.      | `false`
 
 **Remark**
 
@@ -266,7 +266,7 @@ thumbnailObj.multiselectMode = true;
 
  Error Code  | Description                                         
 --------|-----------------------------------------------------
- -80100 | XXX(ClassName.API): XXX(Parameter Name) is invalid. 
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
 
 **Remark**
 
@@ -332,8 +332,8 @@ thumbnailObj.selectPages([0,1]);
 
  Error Code  | Description                                         | API Return Value
 --------|-----------------------------------------------------|--------------------
- -80100 | XXX(ClassName.API): XXX(Parameter Name) is invalid. | `[]`
- -80102 | XXX(ClassName.API): XXX(Parameter Name) is missing. | `[]`
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   | `[]`
+ -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  | `[]`
  -80304 | No document opened.                                 | `[]`
 
 ### selectAllPages()
@@ -397,9 +397,9 @@ thumbnailObj.setRowAndColumn(5,8); // Display the page in five rows and eight co
 
  Error Code  | Description                                         | API Return Value
 --------|-----------------------------------------------------|--------------------
- -80100 | XXX(ClassName.API): XXX(Parameter Name) is invalid. | `false`
- -80101 | XXX(ClassName.API): XXX(Parameter Name) is out of range.  | `false`
- -80102 | XXX(ClassName.API): XXX(Parameter Name) is missing. | `false`
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   | `false`
+ -80101 | *XXX(API)*: *XXX(ParameterName)* is out of range.     | `false`
+ -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  | `false`
 
 **Remark**
 

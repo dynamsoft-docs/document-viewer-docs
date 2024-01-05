@@ -69,14 +69,14 @@ const customViewer = new Dynamsoft.DDV.CustomViewer({
 
  Error Code  | Description                                         
 --------|-----------------------------------------------------
- -80100 | XXX(ClassName.API): XXX(Parameter Name) is invalid.                                   
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.                                     
  -80001 | License string is invalid.                              
- -80002 | XXX module license has expired.                                                            
- -80003 | XXX module license is missing.                          
- -80004 | XXX module license version does not match.                                 
- -80005 | Domain does not match the domain bound to the XXX module license.  
- -80050 | Dynamsoft.DDV.setConfig has not been set up yet.  
- -80051 | Dynamsoft.DDV.setConfig has not been completed.   
+ -80002 | *XXX(LicenseModuleName)* module license has expired.                                                           
+ -80003 | *XXX(LicenseModuleName)* module license is missing.                         
+ -80004 | *XXX(LicenseModuleName)* module license version does not match.                                 
+ -80005 | Domain does not match the domain bound to the *XXX(LicenseModuleName)* module license.  
+ -80050 | DDV.setConfig has not been set up yet.  
+ -80051 | DDV.setConfig has not been completed.   
 
 ### destroy()
 
@@ -121,8 +121,8 @@ customViewer.bindContainer("viewercontainer");
 
  Error Code  | Description                                         
 --------|-----------------------------------------------------
- -80100 | XXX(ClassName.API): XXX(Parameter Name) is invalid. 
- -80102 | XXX(ClassName.API): XXX(Parameter Name) is missing. 
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
+ -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  
  -80301 | The specified container does not exist. 
 
 **Remark**
@@ -199,9 +199,9 @@ updateUiConfig(uiConfig: UiConfig): boolean;
 
  Error Code  | Description                                         | API Return Value
 --------|-----------------------------------------------------|----------------------
- -80100 | XXX(ClassName.API): XXX(Parameter Name) is invalid. | `false`
- -80102 | XXX(ClassName.API): XXX(Parameter Name) is missing. | `false`
- -80313 | The element XXX is not supported in XXX class.      | `false`
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   | `false`
+ -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  | `false`
+ -80313 | The element *XXX(ElementName)* is not supported in *XXX(ClassName)* class.      | `false`
 
 **Remark**
 
@@ -279,8 +279,8 @@ on(eventName: EventName, listener:(event:EventObject)=>void): void;
 
  Error Code  | Description                                         
 --------|-----------------------------------------------------
- -80100 | XXX(ClassName.API): XXX(Parameter Name) is invalid. 
- -80102 | XXX(ClassName.API): XXX(Parameter Name) is missing. 
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
+ -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  
 
 
 ### off()
@@ -303,5 +303,5 @@ off(eventName: EventName, listener?:(event:EventObject)=>void): void;
 
  Error Code  | Description                                         
 --------|-----------------------------------------------------
- -80100 | XXX(ClassName.API): XXX(Parameter Name) is invalid. 
- -80102 | XXX(ClassName.API): XXX(Parameter Name) is missing. 
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
+ -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  

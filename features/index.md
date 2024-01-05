@@ -42,7 +42,7 @@ Viewers are used to display the data. According to the different uses of viewers
 - [Perspective Viewer]({{ site.features }}viewers/perspectiveviewer.html)
 - [Browse Viewer]({{ site.features }}viewers/others.html#browse-viewer)
 - [Custom Viewer]({{ site.features }}viewers/others.html#custom-viewer)
-{% comment %}- Data synchronisation between viewers{% endcomment %}
+{% comment %}- [Data synchronisation between viewers]({{ site.features }}viewers/datasync.html){% endcomment %}
 
 ## Advanced
 
