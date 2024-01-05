@@ -455,7 +455,7 @@ Triggered when a document is deleted.
 
  `docName`: The name of the deleted document.
 
-<!-- #### pagesAdded
+{% comment %} #### pagesAdded
 
 Triggered when the page(s) are added.
 
@@ -485,4 +485,4 @@ Triggered when the page(s) are deleted.
 
  `indices[]`: The array of the deleted page(s) indices.
 
- `pageUids[]`: The array of the deleted page(s) uids. -->
+ `pageUids[]`: The array of the deleted page(s) uids. {% endcomment %}

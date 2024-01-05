@@ -486,9 +486,9 @@ editViewer.toolMode = "crop";
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
  -80103 | *XXX(API)*: The value for *XXX(ParameterName)* is not supported.
 
-<!-- **Remark**
+{% comment %} **Remark**
 
-- The default `toolMode` is `pan` mode. -->
+- The default `toolMode` is `pan` mode. {% endcomment %}
 
 
 ## Document and Page Control
