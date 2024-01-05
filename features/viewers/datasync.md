@@ -35,7 +35,7 @@ const perspectiveViewer = new Dynamsoft.DDV.PerspectiveViewer({
 
 Thus, the data is synchronized in the viewers which have the same `groupUid`.
 
-## The data to synchronize
+## Data to synchronize
 
 Which data will be synchronized in detail?
 
