@@ -26,7 +26,7 @@ Each viewer class has its own `viewerConfig` structure. Please refer to the link
 
 *`CustomViewer` does not have `viewerConfig`.*
 
-<!-- Take `EditViewerConfig` as example, we can configure some styles of the viewer and configurations of the viewer.
+{% comment %} Take `EditViewerConfig` as example, we can configure some styles of the viewer and configurations of the viewer.
 
 ```typescript
 interface EditViewerConfig {
@@ -39,7 +39,7 @@ interface EditViewerConfig {
     minZoom?: number; 
     maxZoom?: number; 
 }
-``` -->
+``` {% endcomment %}
 
 ## Default viewerConfig
 
@@ -387,7 +387,7 @@ DDV will provide the default viewerConfig for each viewer.
 
 Developers can customize it to achieve their own requirement. Please refer to [How to customize viewer]({{ site.viewer }}customize.html).
 
-<!-- <div class="multi-panel-switching-prefix"></div>
+{% comment %} <div class="multi-panel-switching-prefix"></div>
 
 - [Edit viewer](#edit-viewer)
 - [Capture viewer](#capture-viewer)
@@ -469,4 +469,4 @@ interface BrowseViewerConfig {
 ```
 <div class="multi-panel-end"></div>
 
-<div class="multi-panel-switching-end"></div> -->
+<div class="multi-panel-switching-end"></div> {% endcomment %}

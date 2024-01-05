@@ -24,7 +24,7 @@ description: Dynamsoft Document Viewer Documentation Homepage
         - [Perspective Viewer]({{ site.features }}viewers/perspectiveviewer.html)
         - [Browse Viewer]({{ site.features }}viewers/others.html#browse-viewer)
         - [Custom Viewer]({{ site.features }}viewers/others.html#custom-viewer)
-        - [Data synchronisation between viewers]({{ site.features }}viewers/datasync.html)
+        {% comment %} - [Data synchronisation between viewers]({{ site.features }}viewers/datasync.html){% endcomment %}
     - Advanced
         - [Image Filter]({{ site.features }}advanced/imagefilter.html)
         - [Document Detection]({{ site.features }}advanced/documentdetect.html)
