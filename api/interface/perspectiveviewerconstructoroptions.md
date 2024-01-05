@@ -39,9 +39,7 @@ The UI layout configurations of viewer, please refer to [`UiConfig`]({{ site.api
 
 ### groupUid
 
-The uid of viewers' group. If it is not specified, a random groupUid will be generated.
-
-Please refer to [Data synchronisation between viewers]({{ site.features }}viewers/datasync.html).
+The uid of viewers' group. Please refer to [Data synchronisation between viewers](). If it is not specified, a random groupUid will be generated.
 
 ## Related
 
