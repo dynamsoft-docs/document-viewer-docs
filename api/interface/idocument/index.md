@@ -476,9 +476,9 @@ insertBlankPage(
 
 **Parameters**
 
-`pageWidth`: The page width of the blank page to insert. Unit: inch. Value range: (0, 200].
+`pageWidth`: The page width of the blank page to insert. Unit: inch. Value range: (0, 100].
 
-`pageHeight`: The page height of the blank page to insert. Unit: inch. Value range: (0, 200].
+`pageHeight`: The page height of the blank page to insert. Unit: inch. Value range: (0, 100].
 
 `insertBeforeIndex`: The blank page will be inserted before this index. If not set or out of the maximum range, the blank page will be added after the last page.
 
