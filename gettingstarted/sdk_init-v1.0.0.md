@@ -7,7 +7,7 @@ title: Dynamsoft Document Viewer Getting Started - SDK Initialization
 keywords: Documentation, Dynamsoft Document Viewer, Getting Started, SDK Initialization
 breadcrumbText: SDK Initialization
 description: Dynamsoft Document Viewer Documentation Getting Started, SDK Initialization
-permalink: /gettingstarted/sdk_init.html
+permalink: /gettingstarted/sdk_init-v1.0.0.html
 ---
 
 # SDK Initialization

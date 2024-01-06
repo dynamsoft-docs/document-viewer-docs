@@ -7,7 +7,7 @@ title: Dynamsoft Document Viewer Getting Started - Creating HelloWorld
 keywords: Documentation, Dynamsoft Document Viewer, Getting Started, Creating HelloWorld
 breadcrumbText: Creating HelloWorld
 description: Dynamsoft Document Viewer Documentation Getting Started, Creating HelloWorld
-permalink: /gettingstarted/helloworld.html
+permalink: /gettingstarted/helloworld-v1.0.0.html
 ---
 
 # Creating HelloWorld

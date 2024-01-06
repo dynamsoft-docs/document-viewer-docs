@@ -7,7 +7,7 @@ title: Dynamsoft Document Viewer API Reference - Namespace - Dynamsoft.DDV
 keywords: Documentation, Dynamsoft Document Viewer, API Reference, Namespace, Dynamsoft.DDV
 breadcrumbText: Dynamsoft.DDV
 description: Dynamsoft Document Viewer Documentation API Reference Namespace Dynamsoft.DDV Page
-permalink: /api/namespace/ddv.html
+permalink: /api/namespace/ddv-v1.0.0.html
 ---
 
 # Dynamsoft.DDV

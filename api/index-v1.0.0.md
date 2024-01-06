@@ -7,7 +7,7 @@ title: Dynamsoft Document Viewer API Reference
 keywords: Documentation, Dynamsoft Document Viewer, API Reference
 breadcrumbText: API Reference
 description: Dynamsoft Document Viewer Documentation API Reference Page
-permalink: /api/index.html
+permalink: /api/index-v1.0.0.html
 ---
 
 # API Reference
