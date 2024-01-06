@@ -7,7 +7,7 @@ title: Dynamsoft Document Viewer API Reference - Interface
 keywords: Documentation, Dynamsoft Document Viewer, API Reference, Interface
 breadcrumbText: Interface IBrowseViewer
 description: Dynamsoft Document Viewer Documentation API Reference Interface Index Page
-permalink: /api/interface/index.html
+permalink: /api/interface/index-v1.0.0.html
 ---
 
 # DDV Interfaces
@@ -36,6 +36,7 @@ permalink: /api/interface/index.html
     | `canvasStyle`        | [`CanvasStyle`]({{ site.api }}interface/styleinterface/canvasstyle.html) |
     | `quadSelectionStyle` | [`QuadSelectionStyle`]({{ site.api }}interface/styleinterface/quadselectionstyle.html) |
 
+- [`Configuration`]({{ site.api }}interface/configuration.html)
 - [`ConfigResult`]({{ site.api }}interface/configresult.html)
 - [`CreateDocumentOptions`]({{ site.api }}interface/createdocumentoptions.html)
 - [`MergeDocumentOptions`]({{ site.api }}interface/mergedocumentoptions.html)
