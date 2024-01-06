@@ -18,8 +18,8 @@ permalink: /api/namespace/ddv_core.html
 
 | API Name             | Description                                                  |
 | -------------------- | ------------------------------------------------------------ |
-| [`engineResourcePath`](#engineresourcepath) | Specify the path should lead to a folder containing the distributed WASM files. |
 | [`license` ](#engineresourcepath)           | Specify the license string.                                  |
+| [`engineResourcePath`](#engineresourcepath) | Specify the path should lead to a folder containing the distributed WASM files. |
 | [`deviceFriendlyName`](#devicefriendlyname) | Specify a human-readable name for the device which corresponds to its UUID. |
 
 **Methods**
@@ -30,28 +30,6 @@ permalink: /api/namespace/ddv_core.html
 | [`init()`](#init)     | Initialize DDV.                        |
 
 ## Properties
-
-### engineResourcePath
-
-Specify the path should lead to a folder containing the distributed WASM files.
-
-**Syntax**
-
-```typescript
-engineResourcePath: string;
-```
-
-**Code Snippet**
-
-```typescript
-Dynamsoft.DDV.Core.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@latest/dist/engine";
-```
-
-**Exception**
-
- Error Code  | Description                                         
---------|-----------------------------------------------------
- -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid. 
 
 ### license
 
@@ -76,6 +54,29 @@ Dynamsoft.DDV.Core.license = "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9";
  Error Code  | Description                                         
 --------|-----------------------------------------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid. 
+
+### engineResourcePath
+
+Specify the path should lead to a folder containing the distributed WASM files.
+
+**Syntax**
+
+```typescript
+engineResourcePath: string;
+```
+
+**Code Snippet**
+
+```typescript
+Dynamsoft.DDV.Core.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@latest/dist/engine";
+```
+
+**Exception**
+
+ Error Code  | Description                                         
+--------|-----------------------------------------------------
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid. 
+
 
 ### deviceFriendlyName
 
@@ -148,9 +149,11 @@ A Promise [`ConfigResult`](https://www.dynamsoft.com/document-viewer/docs/api/in
 **Code Snippet**
 
 ```typescript
-Dynamsoft.DDV.Core.engineResourcePath = "xxxxxxx";
+// Public trial license which is valid for 24 hours
+// You can request a 30-day trial key from https://www.dynamsoft.com/customer/license/trialLicense/?product=ddv
+Dynamsoft.DDV.Core.license = "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9";
+Dynamsoft.DDV.Core.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@latest/dist/engine";
 Dynamsoft.DDV.Core.loadWasm(); 
-Dynamsoft.DDV.Core.license = "xxxxxxx";
 await Dynamsoft.DDV.Core.init(); 
 ```
 
