@@ -26,9 +26,8 @@ permalink: /api/errorlist.html
 
  Error Code | Error Message                                    
  ---------- | ------------------------------------------------ 
- -80050     | DDV.Core.init() has not been set up yet. 
- -80051     | DDV.Core.init() has not been completed.  
- -80052     | *XXX(API)*: Resource is not found from the specified engineResourcePath.
+ -80050     | DDV.setConfig has not been set up yet. 
+ -80051     | DDV.setConfig has not been completed.  
 
 ## Common Error
 
