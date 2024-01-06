@@ -144,7 +144,7 @@ init():Promise<ConfigResult>;
 
 **Return values**
 
-A Promise [`ConfigResult`](https://www.dynamsoft.com/document-viewer/docs/api/interface/configresult.html) object. 
+A Promise [`ConfigResult`]({{ site.api }}interface/configresult.html) object. 
 
 **Code Snippet**
 
