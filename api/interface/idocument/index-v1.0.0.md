@@ -7,7 +7,7 @@ title: Dynamsoft Document Viewer API Reference - Interface IDocument
 keywords: Documentation, Dynamsoft Document Viewer, API Reference, Interface IDocument
 breadcrumbText: Interface IDocument
 description: Dynamsoft Document Viewer Documentation API Reference Interface IDocument Page
-permalink: /api/interface/idocument/index.html
+permalink: /api/interface/idocument/index-v1.0.0.html
 ---
 
 # IDocument

@@ -7,7 +7,7 @@ title: Dynamsoft Document Viewer Getting Started - System Requirements
 keywords: Documentation, Dynamsoft Document Viewer, Getting Started, System Requirements
 breadcrumbText: System Requirements
 description: Dynamsoft Document Viewer Documentation Getting Started, System Requirements
-permalink: /gettingstarted/sys_requirement.html
+permalink: /gettingstarted/sys_requirement-v1.0.0.html
 ---
 
 
