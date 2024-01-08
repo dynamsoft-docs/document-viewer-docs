@@ -30,7 +30,7 @@ The following code snippets are using the public trial license to initialize the
 ```javascript
 await Dynamsoft.DDV.setConfig({
     license: "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", // Public trial license which is valid for 24 hours
-    engineResourcePath: "https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@latest/dist/engine", // Lead to a folder containing the distributed WASM files
+    engineResourcePath: "https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@1.0.0/dist/engine", // Lead to a folder containing the distributed WASM files
 });
 ```
 
@@ -41,7 +41,7 @@ A human-readable name for the device which corresponds to its UUID is able to se
 ```javascript
 await Dynamsoft.DDV.setConfig({
     license: "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", // Public trial license which is valid for 24 hours
-    engineResourcePath: "https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@latest/dist/engine", // Lead to a folder containing the distributed WASM files
+    engineResourcePath: "https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@1.0.0/dist/engine", // Lead to a folder containing the distributed WASM files
     deviceFriendlyName: "Dynamsoft-iPhone", // A string representing the device which is easier to recognize than its UUID
 });
 ```
