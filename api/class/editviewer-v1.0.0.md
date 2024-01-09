@@ -3,16 +3,16 @@ layout: default-layout
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
-title: Dynamsoft Document Viewer API Reference - BrowseViewer Class
-keywords: Documentation, Dynamsoft Document Viewer, API Reference, BrowseViewer Class
-breadcrumbText: BrowseViewer Class
-description: Dynamsoft Document Viewer Documentation API Reference BrowseViewer Class Page
-permalink: /api/class/browseviewer.html
+title: Dynamsoft Document Viewer API Reference - EditViewer Class
+keywords: Documentation, Dynamsoft Document Viewer, API Reference, EditViewer Class
+breadcrumbText: EditViewer Class
+description: Dynamsoft Document Viewer Documentation API Reference EditViewer Class Page
+permalink: /api/class/editviewer-v1.0.0.html
 ---
 
-# BrowseViewer Class
+# EditViewer Class
 
-Browse Viewer is used to display pages in multiple-mode, pages can be multiple selected in this viewer.
+Edit Viewer is used to edit the pages in document, such as, rotating, cropping, filtering, etc. as well as adjust the layout of the display.
 
 ## API Index
 
@@ -20,8 +20,8 @@ Browse Viewer is used to display pages in multiple-mode, pages can be multiple s
 
 | API Name       | Description                                   |
 | ------------ | --------------------------------------------- |
-| [`BrowseViewer()`](#browseviewer) | Default constructor of a `BrowseViewer` instance. |
-| [`destroy()`](#destroy)             | Destroy the `BrowseViewer` instance.                             |
+| [`EditViewer()`](#editviewer) | Default constructor of an `EditViewer` instance. |
+| [`destroy()`](#destroy)             | Destroy the `EditViewer` instance.                             |
 
 **Viewer Control**
 
@@ -30,14 +30,14 @@ Browse Viewer is used to display pages in multiple-mode, pages can be multiple s
 | [`bindContainer()`](#bindcontainer)     | Bind the viewer to the specified container.                  |
 | [`unbindContainer()`](#unbindcontainer) | Unbind the viewer from the specified container.              |
 | [`isBoundContainer`](#isboundcontainer) | Return whether the viewer is bound to a container. |
-| [`getStyle()`](#getstyle)            | Get the style object of `BrowseViewer`.                        |
-| [`updateStyle()`](#updatestyle)        | Update the style object of `BrowseViewer`.                     |
+| [`getStyle()`](#getstyle)            | Get the style object of `EditViewer`.                        |
+| [`updateStyle()`](#updatestyle)        | Update the style object of `EditViewer`.                     |
 | [`getUiConfig()`](#getuiconfig)         | Get current `UiConfig` object.                               |
 | [`updateUiConfig()`](#updateuiconfig)     | Update `UiConfig` object.                                    |
 | [`show()`](#show)                | Show the viewer.                                             |
 | [`hide()`](#hide)                | Hide the viewer.                                             |
 | [`isVisible`](#isvisible)        | Return whether the viewer is shown or hidden.      |
-| [`multiselectMode`](#multiselectmode) | Specify or return whether to allow multiple pages to be selected at once. |
+| [`toolMode`](#toolmode)              | Specify or return the tool mode of the viewer.     |
 
 **Document and Page Control**
 
@@ -52,22 +52,28 @@ Browse Viewer is used to display pages in multiple-mode, pages can be multiple s
 | [`getCurrentPageUid()`](#getcurrentpageuid)   | Get the uid of the current page.                             |
 | [`indexToUid()`](#indextouid)          | Get the uid of the specified page by its index.                      |
 | [`uidToIndex()`](#uidtoindex)          | Get the index of the specified page by its uid. |
-| [`getSelectedPageIndices()`](#getselectedpageindices) | Get indices of selected pages.                               |
-| [`selectPages()`](#selectpages)            | Select pages by specified indices.                           |
-| [`selectAllPages()`](#selectallpages)         | Select all pages.                                            |
 
 
 **Display Control**
 
 | API Name              | Description                                                  |
 | --------------------- | ------------------------------------------------------------ |
-| [`setRowAndColumn()`](#setrowandcolumn)        | Set rows and columns of displayed pages.                     |
+| [`displayMode`](#displaymode)                 | Specify or return the display mode of the viewer.  |
+| [`setParallelScrollCount()`](#setparallelscrollcount)     | Specify the number of pages to scroll in parallel.    |
+| [`fitMode`](#fitmode)                     | Specify or return the fit mode of the viewer.      |
+| [`zoom`](#zoom)                        | Specify or return zoom ratio.                      |
+| [`zoomOrigin`](#zoomorigin)                  | Specify or return the zoom origin of the viewer.   |
 
 **Edit Operations**
 
 | API Name              | Description                                                  |
 | --------------------- | ------------------------------------------------------------ |
 | [`rotate()`](#rotate)              | Rotate the specified pages.                                  |
+| [`crop()`](#crop)                | Crop the specified page(s) with the specified rectangle.     |
+| [`getCropRect()`](#getcroprect)         | Get the crop rectangular selection.                            |
+| [`setCropRect()`](#setcroprect)         | Set a crop rectangular selection on the current page. *This method is only available when [`toolMode`](#toolmode) is `crop` mode.* |
+| [`undo()`](#undo)                | Undo the last editing operation.                             |
+| [`redo()`](#redo)                | Redo the last undo operation.                                |
 | [`saveOperations()`](#saveoperations)      | Save the edit operations in pages to document.               |
 
 **Events**
@@ -85,54 +91,73 @@ Browse Viewer is used to display pages in multiple-mode, pages can be multiple s
 | [`pageRendered`](#pagerendered)        | Triggered when a page has been completely rendered.          |
 | [`currentIndexChanged`](#currentindexchanged) | Triggered when currentIndex is changed.                      |
 | [`currentPageChanged`](#currentpagechanged)  | Triggered when current page is changed.                      |
-| [`selectedPagesChanged`](#selectedpageschanged) | Trigeered when the page(s) is selected.                      |
-| [`pagesDragged`](#pagesdragged)         | Triggered when page(s) is dragged.                           |
-| [`pagesDropped`](#pagesdropped)         | Triggered when page(s) is dropped.                           |
+| [`displayModeChanged`](#displaymodechanged)  | Triggered when the display mode is changed.                  |
+| [`fitModeChanged`](#fitmodechanged)      | Triggered when the fit mode has changed.                     |
+| [`zoomChanged`](#zoomchanged)         | Triggered when the zoom ratio has been changed.              |
+| [`toolModeChanged`](#toolmodechanged)     | Triggered when the tool mode has changed.                    |
+| [`cropRectDrawn`](#croprectdrawn)       | Triggered when a rectangular selection is drawn.               |
+| [`cropRectDeleted`](#croprectdeleted)     | Triggered when the rectangular selection is deleted.           |
+| [`cropRectModified`](#croprectmodified)    | Triggered when the crop rectangular selection is modified.     |
 | [`click`](#click)               | Triggered when click in the viewer's viewing area.           |
 | [`dblclick`](#dbclick)            | Triggered when double click in the viewer's viewing area.    |
 | [`rightclick`](#rightclick)          | Triggered when right click in the viewer's viewing area.     |
 
 
+
 ## Create and Destroy Instances
 
-### BrowseViewer()
+### EditViewer()
 
-Default constructor of a `BrowseViewer` instance.
+Default constructor of an `EditViewer` instance. 
 
 **Syntax**
 
 ```typescript
-new Dynamsoft.DDV.BrowseViewer(options?: BrowseViewerConstructorOptions);
+new Dynamsoft.DDV.EditViewer(options?: EditViewerConstructorOptions);
 ```
 
 **Parameters**
 
-`options`: The constructor options for a `BrowseViewer` instance. Please refer to [`BrowseViewerConstructorOptions`]({{ site.api }}interface/browseviewerconstructoroptions.html).
+`options`: The constructor options for an `EditViewer` instance. Please refer to [`EditViewerConstructorOptions`]({{ site.api }}interface/editviewerconstructoroptions.html).
 
 **Code Snippet**
 
 ```typescript
-const browseViewer = new Dynamsoft.DDV.BrowseViewer({
+const editViewer = new Dynamsoft.DDV.EditViewer({
     container: document.getElementById("viewer"),
 });
+
+// An IBrowseViewer object will be created at meanwhile. Please refer to Remark part.
+const thumbnailObj = editViewer.thumbnail; 
 ```
 
 **Exception**
 
  Error Code  | Description                                         
 --------|-----------------------------------------------------
- -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.                                     
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.                                            
  -80001 | License string is invalid.                              
- -80002 | *XXX(LicenseModuleName)* module license has expired.                                                           
+ -80002 | *XXX(LicenseModuleName)* module license has expired.                                                               
  -80003 | *XXX(LicenseModuleName)* module license is missing.                         
  -80004 | *XXX(LicenseModuleName)* module license version does not match.                                 
  -80005 | Domain does not match the domain bound to the *XXX(LicenseModuleName)* module license.  
- -80050 | DDV.Core.init() has not been set up yet.   
- -80051 | DDV.Core.init() has not been completed.   
+ -80050 | DDV.setConfig has not been set up yet.  
+ -80051 | DDV.setConfig has not been completed.   
+ -80302 | minZoom value cannot be larger than maxZoom value.                        
+
+**Warning**
+
+ Error Code | Description                                                  
+ ---------- | ------------------------------------------------------------ 
+ -80316     | ImageFilter needs to be configured by Dynamsoft.DDV.setProcessingHandler to enable the image filter feature.                        
+
+**Remark**
+
+- An `IBrowseViewer` object, `editViewer.thumbnail`, will be created at meanwhile which represents the thumbnail object in edit viewer. Please refer to [`IBrowseViewer`]({{ site.api }}interface/ibrowseviewer.html).
 
 ### destroy()
 
-Destroy the `BrowseViewer` instance.
+Destroy the `EditViewer` instance.
 
 **Syntax**
 
@@ -143,12 +168,12 @@ destroy(): void;
 **Code Snippet**
 
 ```typescript
-browseViewer.destroy();
+editViewer.destroy();
 ```
 
 **Remark**
 
-- The editing operations (rotating) in pages will be saved to document automatically when destroy the viewer instance.
+- The editing operations (rotating, cropping, filtering) in pages will be saved to document automatically when destroy the viewer instance.
 
 **See Also**
 
@@ -174,7 +199,7 @@ bindContainer(container: string | HTMLElement): void;
 
 ```typescript
 // Assume there is a container with id "viewercontainer" on the page.
-browseViewer.bindContainer("viewercontainer");
+editViewer.bindContainer("viewercontainer");
 ```
 
 **Exception**
@@ -202,7 +227,7 @@ unbindContainer(): void;
 **Code Snippet**
 
 ```typescript
-browseViewer.unbindContainer();
+editViewer.unbindContainer();
 ```
 
 ### isBoundContainer
@@ -217,31 +242,31 @@ readonly isBoundContainer: boolean;
 
 ### getStyle()
 
-Get the style object of `BrowseViewer`.
+Get the style object of `EditViewer`.
 
 **Syntax**
 
 ```typescript
-getStyle(browseViewerStyleName: BrowseViewerStyleName): BrowseViewerStyle | null;
+getStyle(editViewerStyleName: EditViewerStyleName): EditViewerStyle | null;
 ```
 
 **Parameters**
 
-`browseViewerStyleName`: A `BrowseViewerStyleName` can be one of eight types.
+`editViewerStyleName`: An `EditViewerStyleName` can be one of four types.
 
 ```typescript
-type BrowseViewerStyleName = "canvasStyle" | "pageStyle" | "selectedPageStyle" | "currentPageStyle" | "hoveredPageStyle" | "placeholderStyle" | "pageNumberStyle" | "checkboxStyle";
+type EditViewerStyleName = "canvasStyle" | "pageStyle" | "currentPageStyle" |"quadSelectionStyle";
 ```
 
 **Return values**
 
-The style object. Please refer to [Style Interfaces]({{ site.api }}interface/styleinterface/index.html).
+The style object. Please refer to [Style Interfaces]({{ site.api }}interface/styleinterface/index.html)..
 
 **Code Snippet**
 
 ```typescript
 // Get pageStyle object;
-const pageStyle = browseViewer.getStyle("pageStyle");
+const pageStyle = editViewer.getStyle("pageStyle");
 ```
 
 **Warning**
@@ -254,23 +279,23 @@ const pageStyle = browseViewer.getStyle("pageStyle");
 
 ### updateStyle()
 
-Update the style object of `BrowseViewer`.
+Update the style object of `EditViewer`.
 
 **Syntax**
 
 ```typescript
-updateStyle(browseViewerStyleName: BrowseViewerStyleName, browseViewerStyle: BrowseViewerStyle): boolean;
+updateStyle(editViewerStyleName: EditViewerStyleName, editViewerStyle: EditViewerStyle): boolean;
 ```
 
 **Parameters**
 
-`browseViewerStyleName`: A `BrowseViewerStyleName` can be one of eight types.
+`editViewerStyleName`: An `EditViewerStyleName` can be one of three types.
 
 ```typescript
-type BrowseViewerStyleName = "canvasStyle" | "pageStyle" | "selectedPageStyle" | "currentPageStyle" | "hoveredPageStyle" | "placeholderStyle" | "pageNumberStyle" | "checkboxStyle";
+type EditViewerStyleName = "canvasStyle" | "pageStyle" | "currentPageStyle" |"quadSelectionStyle";
 ```
 
-`browseViewerStyle`: The style object. Please refer to [Style Interfaces]({{ site.api }}interface/styleinterface/index.html).
+`editViewerStyle`: The style object. Please refer to [Style Interfaces]({{ site.api }}interface/styleinterface/index.html).
 
 **Return Value**
 
@@ -284,21 +309,21 @@ type BrowseViewerStyleName = "canvasStyle" | "pageStyle" | "selectedPageStyle" |
 
     ```typescript
     // Get style object
-    const pageStyle = browseViewer.getStyle("pageStyle");
+    const pageStyle = editViewer.getStyle("pageStyle");
 
     // Modify the style object
     pageStyle.background = "red";
     pageStyle.border = "1px solid green";
 
     // Update page style
-    browseViewer.updateStyle("pageStyle", pageStyle);
+    editViewer.updateStyle("pageStyle", pageStyle);
     ```
 
 - Second method
 
     ```typescript
     // Update the style object directly
-    browseViewer.updateStyle("pageStyle", {
+    editViewer.updateStyle("pageStyle", {
         background: "red",
         border: "1px solid green",
     });
@@ -334,7 +359,7 @@ The [`UiConfig`]({{ site.api }}interface/uiconfig.html) object.
 **Code Snippet**
 
 ```typescript
-const viewerUi = browseViewer.getUiConfig();
+const viewerUi = editViewer.getUiConfig();
 ```
 
 ### updateUiConfig()
@@ -360,48 +385,10 @@ updateUiConfig(uiConfig: UiConfig): boolean;
 **Code Snippet**
 
 ```typescript
-const sidebar = {
-    type: Dynamsoft.DDV.Elements.Layout,
-    flexDirection: "column",
-    style: {
-        width: "80px",
-    },
-    children: [
-        Dynamsoft.DDV.Elements.Load,
-        Dynamsoft.DDV.Elements.DeleteAll,
-    ],
-};
-
-const viewerUi = browseViewer.getUiConfig();
-
-viewerUi.children.splice(0,0,sidebar);
-
-browseViewer.updateUiConfig(viewerUi); // Configure a sidebar which includes "Load" and "DeleteAll" elements.
-```
-Or,
-
-```typescript
-const header = {
-    type: Dynamsoft.DDV.Elements.Layout,
-    style: {
-        height: "80px",
-    },
-    children: [
-        Dynamsoft.DDV.Elements.Pagination,
-        Dynamsoft.DDV.Elements.DeleteAll,
-    ],
-};
-
-const viewerUi =  {
-    type: Dynamsoft.DDV.Elements.Layout,
-    flexDirection: "column",
-    children: [
-        header,
-        Dynamsoft.DDV.Elements.MainView,
-    ],
-}
-
-browseViewer.updateUiConfig(viewerUi); // Configure a header which includes "Pagination" and "DeleteAll" elements.
+const viewerUi = Dynamsoft.DDV.getDefaultUiConfig("editViewer");
+const header = viewerUi.children[0];
+header.children.splice(0,0,Dynamsoft.DDV.Elements.Delete); //Add `Delete` element in header.
+editViewer.updateUiConfig(viewerUi);
 ```
 
 **Warning**
@@ -429,7 +416,7 @@ show(): void;
 **Code Snippet**
 
 ```typescript
-browseViewer.show();
+editViewer.show();
 ```
 
 **Remark**
@@ -449,7 +436,7 @@ hide(): void;
 **Code Snippet**
 
 ```typescript
-browseViewer.hide();
+editViewer.hide();
 ```
 
 ### isVisible
@@ -466,20 +453,30 @@ readonly isVisible: boolean;
 
 - The viewer is shown automatically when it is created which means the default value of `isVisible` is `true`.
 
-### multiselectMode
+### toolMode
 
-Specify or return whether to allow multiple pages to be selected at once.
+Specify the tool mode of the viewer.
 
 **Syntax**
 
 ```typescript
-multiselectMode: boolean; 
+toolMode: ToolMode; 
 ```
 
-**Example**
+A `ToolMode` can be one of two types. 
 
 ```typescript
-browseViewer.multiselectMode = true;
+type ToolMode = "pan" | "crop";
+```
+
+`pan`: The default tool mode.
+
+`crop`: A mode what allows to draw a rectangle by [`setCropRect()`](#setcroprect).
+
+**Code Snippet**
+
+```typescript
+editViewer.toolMode = "crop";
 ```
 
 **Warning**
@@ -487,10 +484,12 @@ browseViewer.multiselectMode = true;
  Error Code  | Description                                         
 --------|-----------------------------------------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
+ -80103 | *XXX(API)*: The value for *XXX(ParameterName)* is not supported.
 
-**Remark**
+{% comment %} **Remark**
 
-If it is not specified in [`viewerConfig`]({{ site.api }}interface/browseviewerconstructoroptions.html#viewerconfig) while creating the viewer additionally, its default value is `false`.
+- The default `toolMode` is `pan` mode. {% endcomment %}
+
 
 ## Document and Page Control
 
@@ -512,12 +511,12 @@ openDocument(docUid: string): void;
 
 ```typescript
 // Assume there is a document whose id is "lnn0ll9o124".
-browseViewer.openDocument("lnn0ll9o124");
+editViewer.openDocument("lnn0ll9o124");
 
 // OR
 // Assume there is a document object firstDoc.
 const docUid = firstDoc.uid;
-browseViewer.openDocument(docUid);
+editViewer.openDocument(docUid);
 ```
 
 **Exception**
@@ -551,7 +550,7 @@ closeDocument(): boolean;
 **Code Snippet**
 
 ```typescript
-browseViewer.closeDocument();
+editViewer.closeDocument();
 ```
 
 **Warning**
@@ -573,12 +572,12 @@ readonly currentDocument: IDocument | null;
 **Code Snippet**
 
 ```typescript
-const currentDoc = browseViewer.currentDocument;
+const currentDoc = editViewer.currentDocument;
 ```
 
 **See Also**
 
-[IDocument]({{ site.api }}interface/idocument/index.html)
+[IDocument]({{ site.api }}interface/idocument.html)
 
 ### getPageCount()
 
@@ -597,7 +596,7 @@ The page count.
 **Code Snippet**
 
 ```typescript
-const pageCount = browseViewer.getPageCount();
+const pageCount = editViewer.getPageCount();
 ```
 
 **Warning**
@@ -628,7 +627,7 @@ The index of the page which navigate to.
 
 ```typescript
 // Navigate to page 4.
-browseViewer.goToPage(3);
+editViewer.goToPage(3);
 ```
 
 **Warning**
@@ -658,7 +657,7 @@ The index of the current page.
 **Code Snippet**
 
 ```typescript
-const currentIndex = browseViewer.getCurrentPageIndex();
+const currentIndex = editViewer.getCurrentPageIndex();
 ```
 
 **Warning**
@@ -685,7 +684,7 @@ The uid of the current page.
 **Code Snippet**
 
 ```typescript
-const curPageUid = browseViewer.getCurrentPageUid();
+const curPageUid = editViewer.getCurrentPageUid();
 ```
 
 **Warning**
@@ -717,7 +716,7 @@ The uid of the page.
 
 ```typescript
 // Get the first page's uid
-const firstPageUid = browseViewer.indexToUid(0);
+const firstPageUid = editViewer.indexToUid(0);
 ```
 
 **Warning**
@@ -751,8 +750,8 @@ The index of the page.
 **Code Snippet**
 
 ```typescript
-const curPageUid = browseViewer.getCurrentPageUid();
-browseViewer.uidToIndex(curPageUid);
+const curPageUid = editViewer.getCurrentPageUid();
+editViewer.uidToIndex(curPageUid);
 ```
 
 **Warning**
@@ -765,117 +764,58 @@ browseViewer.uidToIndex(curPageUid);
  -80304 | No document opened.                                      | `-1`
  -80305 | There is no image in the current document.               | `-1`
 
-### getSelectedPageIndices()
+## Display Control
 
-Get indices of selected pages.
+### displayMode
+
+Specify or return the display mode of the viewer.
 
 **Syntax**
 
 ```typescript
-getSelectedPageIndices(): number[];
+displayMode: DisplayMode; 
 ```
 
-**Return Value**
-
-The array of the selected pages' indices.
-
-**Example**
+A `DisplayMode` can be one of two types. 
 
 ```typescript
-const selPages = browseViewer.getSelectedPageIndices();
+type DisplayMode = "single" | "continuous";
+```
+
+`single`: The pages in the viewer is displayed page by page.
+
+`continuous`: The pages in the viewer is displayed continuously.
+
+**Code Snippet**
+
+```typescript
+editViewer.displayMode = "single";
 ```
 
 **Warning**
 
- Error Code  | Description                                         | API Return Value
---------|-----------------------------------------------------|--------------------
- -80304 | No document opened.                                 | `[]`
+ Error Code  | Description                                         
+--------|-----------------------------------------------------
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
+ -80103 | *XXX(API)*: The value for *XXX(ParameterName)* is not supported.
 
 **Remark**
 
-- If no page is selected in the viewer, returns [].
-- The order of the returned array elements is based on the order in which the pages are selected. For example, if select the pages with the index 6, 5, 2 in order, the returned array will be [6,5,2].
+- Default `displayMode` is `continuous`.
+- When `displayMode` is `continuous`, the default number of pages to scroll in parallel is 1 and which can be configure by [`setParallelScrollCount`](#setparallelscrollcount).
 
-### selectPages()
+### setParallelScrollCount()
 
-Select pages by specified indices.
-
-**Syntax**
-
-```typescript
-selectPages(indices: number[]): string[];
-```
-
-**Parameters**
-
-`indices`: Specify the indices of the pages to be selected. If set to an empty array `[]`, no pages will be selected.
-
-**Return Value**
-
-The array of selected pages' uids.
-
-**Example**
-
-```typescript
-// Select the first and second pages.
-browseViewer.selectPages([0,1]);
-```
-
-**Warning**
-
- Error Code  | Description                                         | API Return Value
---------|-----------------------------------------------------|--------------------
- -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   | `[]`
- -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  | `[]`
- -80304 | No document opened.                                 | `[]`
-
-### selectAllPages()
-
-Select all pages.
+Specify the number of pages to scroll in parallel.
 
 **Syntax**
 
 ```typescript
-selectAllPages(): string[];
-```
-
-**Return Value**
-
-The array of selected pages' uids.
-
-**Example**
-
-```typescript
-browseViewer.selectAllPages();
-```
-
-**Warning**
-
- Error Code  | Description                                         | API Return Value
---------|-----------------------------------------------------|--------------------
- -80304 | No document opened.                                 | `[]`
- -80305 | There is no image in the current document.          | `[]`
-
-
-## Display Control
-
-### setRowAndColumn()
-
-Set rows and columns of displayed pages.
-
-**Syntax**
-
-```typescript
-setRowAndColumn(
-    rows: number, 
-	columns: number 
-): boolean;
+setParallelScrollCount(count: number): boolean;
 ```
 **Parameters**
 
-`rows`: The number of rows. The maximum value is 20.
-
-`columns`: The number of columns. The maximum value is 20.
+`count`: The number of pages to scroll in parallel. The maximum value is 20.
 
 **Return Value**
 
@@ -883,23 +823,140 @@ setRowAndColumn(
 
 `false`: Failed.
 
-**Example**
+**Code Snippet**
 
 ```typescript
-browseViewer.setRowAndColumn(5,8); // Display the page in five rows and eight columns.
+// Set three pages to scroll in parallel
+editViewer.setParallelScrollCount(3); 
 ```
 
 **Warning**
 
- Error Code  | Description                                         | API Return Value
---------|-----------------------------------------------------|--------------------
- -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   | `false`
- -80101 | *XXX(API)*: *XXX(ParameterName)* is out of range.     | `false`
- -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  | `false`
+ Error Code  | Description                                                  | API Return Value
+--------|--------------------------------------------------------------|--------------------
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.            | `false`
+ -80101 | *XXX(API)*: *XXX(ParameterName)* is out of range.        | `false`
+ -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.           | `false`
+ -80308 | EditViewer.setParallelScrollCount: Not available in current displayMode.       | `false`
 
 **Remark**
 
-- If it is not specified in [`viewerConfig`]({{ site.api }}interface/browseviewerconstructoroptions.html#viewerconfig) while creating the viewer additionally, its default rows is 4 and columns is 6.
+- The setting will be applied when [`displayMode`](#displaymode) is `continuous` mode.
+
+### fitMode
+
+Specify or return the fit mode of the viewer.
+
+**Syntax**
+
+```typescript
+fitMode: FitMode; 
+```
+
+A `FitMode` can be one of four types. 
+
+```typescript
+type FitMode = "width" | "height" | "window" | "actualSize";
+```
+
+`width`: The page is displayed to fit the width.
+
+`height`: The page is displayed to fit the height.
+
+`window`: The page is displayed to fit the window.
+
+`actualSize`: The page is displayed at its actual size, equal to [`zoom`](#zoom) set to 1.
+
+**Code Snippet**
+
+```typescript
+editViewer.fitMode = "width";
+```
+
+**Warning**
+
+ Error Code  | Description                                         
+--------|-----------------------------------------------------
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
+ -80103 | *XXX(API)*: The value for *XXX(ParameterName)* is not supported.
+
+**Remark**
+
+- The default `fitMode` is `window`, which means fit window. 
+- Since the specified `fitMode` is calculated by zoom ratio, if the zoom ratio which set by `zoom` does not match any of `fitMode`, the page will be displayed in specified zoom ratio and `fitMode` will return `none`.
+
+### zoom
+
+Specify or return zoom ratio.
+
+**Syntax**
+
+```typescript
+zoom: number; 
+```
+
+**Code Snippet**
+
+```typescript
+//Actual size
+editViewer.zoom = 1;
+
+//Twice the actual size
+editViewer.zoom = 2; 
+
+//10% the actual size
+editViewer.zoom = 0.1;
+```
+
+**Warning**
+
+ Error Code  | Description                                         
+--------|-----------------------------------------------------
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
+ -80306 | The value for zoom is larger than maxZoom value.                          
+ -80307 | The value for zoom is smaller than minZoom value.
+
+**Remark**
+
+- The interval of available values depends on `minZoom` and `maxZoom` which is set in [EditViewerConfig](#editviewerconfig) when create `EditViewer` object.
+- 1 means actual size of the page and equals to `actualSize` in [`fitMode`](#fitmode).
+- Return value will be rounded to four decimal places.
+
+### zoomOrigin
+
+Specify or return the zoom origin of the viewer.
+
+**Syntax**
+
+```typescript
+zoomOrigin: ZoomOrigin;
+```
+
+**Code Snippet**
+
+```typescript
+// Set the zoom origin to upper left
+const newZoomOrigin = {
+    x: "start",
+    y: "start",
+};
+
+editViewer.zoomOrigin = newZoomOrigin;
+```
+
+**Warning**
+
+ Error Code  | Description                                         
+--------|-----------------------------------------------------
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
+
+**Remark**
+
+- The default zoomOrigin is center point of the viewer.
+
+**See Also**
+
+[`ZoomOrigin`]({{ site.api }}interface/zoomorigin.html)
 
 ## Edit Operations
 
@@ -918,7 +975,7 @@ rotate(
 
 **Parameters**
 
-`angle`: Specify the angle. Only multiples of 90 degrees are supported. Clockwise rotation is positive, counterclockwise rotation is negative.
+`angle`: Specify the angle. Only multiples of 90 degrees are supported. Postive value means clockwise rotation, negative value means counterclockwise rotation.
 
 `indices`: The array of the pages indices which will be rotated. If not set, the current page will be rotated.
 
@@ -932,10 +989,10 @@ rotate(
 
 ```typescript
 // Rotate the first and second pages 90 degrees clockwise.
-browseViewer.rotate(90, [0,1]);
+editViewer.rotate(90, [0,1]);
 
 // Rotate current page 90 degrees counterclockwise.
-browseViewer.rotate(-90);
+editViewer.rotate(-90);
 ```
 
 **Warning**
@@ -948,9 +1005,205 @@ browseViewer.rotate(-90);
  -80304 | No document opened.                                                     | `false`
  -80305 | There is no image in the current document.                              | `false`
 
+### crop()
+
+Crop the specified page(s) with the specified rectangle.
+
+**Syntax**
+
+```typescript
+crop(
+    rect: Rect, 
+    indices?: number[]
+): boolean; 
+```
+**Parameters**
+
+`rect`: Specify the rectangle. Please refer to [`Rect`]({{ site.api }}interface/rect.html).
+
+`indices`: Specify the indices of the pages to be cropped. If not set, the current page will be cropped.
+
+**Return Value**
+
+`true`: Successfully.
+
+`false`: Failed.
+
+**Code Snippet**
+
+```typescript
+const rect = {
+    left: 100,
+    top: 100,
+    width: 200,
+    height: 200,
+};
+
+editViewer.crop(rect, [0]); // Crop the first page
+```
+
+**Warning**
+
+ Error Code  | Description                                           | API Return Value
+--------|------------------------------------------------------------|-------------------      
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.          | `false`
+ -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.         | `false`
+ -80304 | No document opened.                                        | `false`
+ -80305 | There is no image in the current document.                 | `false`
+ -80309 | The specified rect exceeds the bounds of page index *X(IndexNum)*.  | `false`
+
+**Remark**
+
+If one of the points of the rectangle is out of page range, crop operation does not take effect in this page and report warning.
+
+### getCropRect()
+
+Get the crop rectangular selection.
+
+**Syntax**
+
+```typescript
+getCropRect(): Rect | null;
+```
+
+**Return Value**
+
+The rectangular selection. Please refer to [`Rect`]({{ site.api }}interface/rect.html).
+
+**Code Snippet**
+
+```typescript
+editViewer.getCropRect();
+```
+
+**Warning**
+
+ Error Code  | Description                                               | API Return Value
+--------|-----------------------------------------------------------|---------------------
+-80304  | No document opened.                                       | `null`
+
+**Remark**
+
+- If there is no crop rectangular selection, returns `null`.
+
+### setCropRect()
+
+> *This method is only available when [`toolMode`](#toolmode) is `crop` mode.*
+
+Set a crop rectangular selection on the current page.
+
+**Syntax**
+
+```typescript
+setCropRect(rect: Rect): boolean;
+```
+
+**Parameters**
+
+`rect`: Specify the rectangular selection. Please refer to [`Rect`]({{ site.api }}interface/rect.html).
+
+**Return Value**
+
+`true`: Successfully.
+
+`false`: Failed.
+
+**Code Snippet**
+
+```typescript
+editViewer.toolMode = "crop"; // Set toolMode to "crop"
+
+const rect = {
+    left: 100,
+    top: 100,
+    width: 200,
+    height: 200,
+};
+
+editViewer.setCropRect(rect); 
+```
+
+**Warning**
+
+ Error Code  | Description                                               | API Return Value
+--------|-----------------------------------------------------------|-------------------
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.         | `false`
+ -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.        | `false`
+ -80304 | No document opened.                                       | `false`
+ -80305 | There is no image in the current document.                | `false`
+ -80309 | The specified rect exceeds the bounds of page index *X(IndexNum)*. | `false`
+ -80314 | *XXX(API)*: Not available in current toolMode.    | `false`
+
+**Remark**
+
+- In the viewer, only one rectangular selection can exist on the page at a time, which means if there is a rectangular selection existed when a new selection is drawn, the old one will be clear automatically.
+- When [`toolMode`](#toolmode) is set to `pan`, the drawn rectangular selection will be clear.
+
+### undo()
+
+> *This method takes effect only for [crop](#crop), [rotate](#rotate) operations.*
+
+Undo the last editing operation.
+
+**Syntax**
+
+```typescript
+undo(): boolean;
+```
+
+**Return Value**
+
+`true`: Successfully.
+
+`false`: Failed.
+
+**Code Snippet**
+
+```typescript
+editViewer.undo();
+```
+
+**Warning**
+
+ Error Code  | Description                                         | API Return Value
+--------|-----------------------------------------------------|-----------------
+ -80304 | No document opened.                                 | `false`
+ -80310 | No operations to undo.                              | `false`
+
+### redo()
+
+> *This method takes effect only for [crop](#crop), [rotate](#rotate) operations.*
+
+Redo the last undo operation.
+
+**Syntax**
+
+```typescript
+redo(): boolean;
+```
+
+**Return Value**
+
+`true`: Successfully.
+
+`false`: Failed.
+
+**Code Snippet**
+
+```typescript
+editViewer.redo();
+```
+
+**Warning**
+
+ Error Code  | Description                                         | API Return Value
+--------|-----------------------------------------------------|-----------------
+ -80304 | No document opened.                                 | `false`
+ -80311 | No operations to redo.                              | `false`
+
 ### saveOperations()
 
-> *This method takes effect only for [rotate](#rotate) operation.*
+> *This method takes effect only for [crop](#crop), [rotate](#rotate) & filter(which is operated by using UI Element) operations.*
 
 Save the edit operations in pages to document.
 
@@ -969,7 +1222,7 @@ saveOperations(): boolean;
 **Code Snippet**
 
 ```typescript
-browseViewer.saveOperations();
+editViewer.saveOperations();
 ```
 
 **Warning**
@@ -1006,7 +1259,7 @@ const eventFunc = (e)=>{
     console.log(e.newWidth);
 };
 
-browseViewer.on("resized", eventFunc);
+editViewer.on("resized", eventFunc);
 ```
 
 **Warning**
@@ -1042,10 +1295,10 @@ const eventFunc = (e)=>{
     console.log(e.newWidth);
 };
 
-browseViewer.on("resized", eventFunc);
+editViewer.on("resized", eventFunc);
 
 // Unbind the specified event listener.
-browseViewer.off("resized", eventFunc);
+editViewer.off("resized", eventFunc);
 ```
 
 **Warning**
@@ -1077,7 +1330,7 @@ Triggered when the viewer is resized.
 
 #### pageRendered
 
-Triggered when a page has been completely rendered. We only render the pages that are visible on the screen, so this event won't get fired for every page in the document at once. This event will get called when the user scrolls up and down the document, or when a page is rotated, or anything else that makes it rerender.
+Triggered when a page has been completely rendered. We only render the pages that are visible on the screen, so this event won't get fired for every page in the document at once. This event will get called when the user scrolls up and down the document, or when a page is zoomed or rotated, or anything else that makes it rerender.
 
 **Callback**
 
@@ -1117,53 +1370,99 @@ Triggered when current page is changed.
 
 `newPageUid`: The uid of the page which is new current index. If there is no index in the viewer, return `''`.
 
-#### selectedPagesChanged
+#### displayModeChanged
 
-Trigeered when the page(s) is selected.
+Triggered when the display mode is changed.
 
-***Callback***
+**Callback**
 
- `SelectedPagesChangedEvent`: An EventObject.
+`DisplayModeChangedEvent`: An EventObject.
 
-***Attributes***
+**Attributes**
 
-`oldIndices[]`: The array of old selected pages indices.
+`oldDisplayMode`: The old display mode.
 
-`oldPageUids[]`: The array of old selected pages uids.
+`newDisplayMode`: The new display mode.
 
-`newIndices[]`: The array of new selected pages indices.
+#### fitModeChanged
 
-`newPageUids[]`: The array of new selected pages uids.
+Triggered when the fit mode has changed.
 
-#### pagesDragged
+**Callback**
 
-Triggered when page(s) is dragged.
+`FitModeChangedEvent`: An EventObject.
 
-***Callback***
+**Attributes**
 
- `PageDraggedEvent`: An EventObject.
+`oldFitMode`: The old fit mode.
 
-***Attributes***
+`newFitmode`: The new fit mode.
 
-`indices[]` : The array of the dragged pages indices.
+#### zoomChanged
 
-`pageUids[]`: The array of the dragged pages uids.
+Triggered when the zoom ratio has been changed.
 
-#### pagesDropped
+**Callback**
 
-Triggered when page(s) is dropped.
+`ZoomChangedEvent`: An EventObject.
 
-***Callback***
+**Attributes**
 
- `PageDroppedEvent`: An EventObject.
+`oldZoomRatio`: The old zoom ratio.
 
-***Attributes***
+`newZoomRatio`: The new zoom ratio.
 
-`indicesBefore[]`: The array of the dropped pages indices before dropping.
+#### toolModeChanged
 
-`indicesAfter[]`: The array of the dropped pages indices after dropping.
+Triggered when the tool mode has changed.
 
-`pageUids[]`: The array of the dropped pages uids.
+**Callback**
+
+`ToolModeChangedEvent`: An EventObject.
+
+**Attributes**
+
+`oldToolMode`: The old tool mode.
+
+`newToolMode`: The new tool mode.
+
+#### cropRectDrawn
+
+Triggered when a rectangular selection is drawn.
+
+**Callback**
+
+`CropRectDrawnEvent`: An EventObject.
+
+**Attributes**
+
+`rect`: The drawn rectangle.
+
+#### cropRectDeleted
+
+Triggered when the rectangular selection is deleted.
+
+**Callback**
+
+`CropRectDeletedEvent`: An EventObject.
+
+**Attributes**
+
+`rect`: The deleted rectangle.
+
+#### cropRectModified
+
+Triggered when the crop rectangular selection is modified.
+
+**Callback**
+
+`CropRectModifiedEvent`: An EventObject.
+
+**Attributes**
+
+`oldRect`: The old rectangle.
+
+`newRect`: The new rectangle.
 
 #### Mouse Events
 
@@ -1178,6 +1477,7 @@ Triggered when double click in the viewer's viewing area.
 ##### rightclick
 
 Triggered when right click in the viewer's viewing area. On mobile device, triggered when long-tap in the viewer's viewing area.
+
 
 **Callback for mouse events**
 

@@ -3,16 +3,16 @@ layout: default-layout
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
-title: Dynamsoft Document Viewer API Reference - BrowseViewer Class
-keywords: Documentation, Dynamsoft Document Viewer, API Reference, BrowseViewer Class
-breadcrumbText: BrowseViewer Class
-description: Dynamsoft Document Viewer Documentation API Reference BrowseViewer Class Page
-permalink: /api/class/browseviewer.html
+title: Dynamsoft Document Viewer API Reference - PerspectiveViewer Class
+keywords: Documentation, Dynamsoft Document Viewer, API Reference, PerspectiveViewer Class
+breadcrumbText: PerspectiveViewer Class
+description: Dynamsoft Document Viewer Documentation API Reference PerspectiveViewer Class Page
+permalink: /api/class/perspectiveviewer-v1.0.0.html
 ---
 
-# BrowseViewer Class
+# PerspectiveViewer Class
 
-Browse Viewer is used to display pages in multiple-mode, pages can be multiple selected in this viewer.
+Perspective Viewer is used to do page boundaries manual adjustment & perspective transformation. The page data displayed on this viewer is its original data.
 
 ## API Index
 
@@ -20,8 +20,8 @@ Browse Viewer is used to display pages in multiple-mode, pages can be multiple s
 
 | API Name       | Description                                   |
 | ------------ | --------------------------------------------- |
-| [`BrowseViewer()`](#browseviewer) | Default constructor of a `BrowseViewer` instance. |
-| [`destroy()`](#destroy)             | Destroy the `BrowseViewer` instance.                             |
+| [`PerspectiveViewer()`](#perspectiveviewer) | Default constructor of a `PerspectiveViewer` instance. |
+| [`destroy()`](#destroy)             | Destroy the `PerspectiveViewer` instance.                             |
 
 **Viewer Control**
 
@@ -30,14 +30,13 @@ Browse Viewer is used to display pages in multiple-mode, pages can be multiple s
 | [`bindContainer()`](#bindcontainer)     | Bind the viewer to the specified container.                  |
 | [`unbindContainer()`](#unbindcontainer) | Unbind the viewer from the specified container.              |
 | [`isBoundContainer`](#isboundcontainer) | Return whether the viewer is bound to a container. |
-| [`getStyle()`](#getstyle)            | Get the style object of `BrowseViewer`.                        |
-| [`updateStyle()`](#updatestyle)        | Update the style object of `BrowseViewer`.                     |
+| [`getStyle()`](#getstyle)            | Get the style object of `PerspectiveViewer`.                        |
+| [`updateStyle()`](#updatestyle)        | Update the style object of `PerspectiveViewer`.                     |
 | [`getUiConfig()`](#getuiconfig)         | Get current `UiConfig` object.                               |
 | [`updateUiConfig()`](#updateuiconfig)     | Update `UiConfig` object.                                    |
 | [`show()`](#show)                | Show the viewer.                                             |
 | [`hide()`](#hide)                | Hide the viewer.                                             |
 | [`isVisible`](#isvisible)        | Return whether the viewer is shown or hidden.      |
-| [`multiselectMode`](#multiselectmode) | Specify or return whether to allow multiple pages to be selected at once. |
 
 **Document and Page Control**
 
@@ -52,16 +51,15 @@ Browse Viewer is used to display pages in multiple-mode, pages can be multiple s
 | [`getCurrentPageUid()`](#getcurrentpageuid)   | Get the uid of the current page.                             |
 | [`indexToUid()`](#indextouid)          | Get the uid of the specified page by its index.                      |
 | [`uidToIndex()`](#uidtoindex)          | Get the index of the specified page by its uid. |
-| [`getSelectedPageIndices()`](#getselectedpageindices) | Get indices of selected pages.                               |
-| [`selectPages()`](#selectpages)            | Select pages by specified indices.                           |
-| [`selectAllPages()`](#selectallpages)         | Select all pages.                                            |
 
-
-**Display Control**
+**Perspective Transformation**
 
 | API Name              | Description                                                  |
 | --------------------- | ------------------------------------------------------------ |
-| [`setRowAndColumn()`](#setrowandcolumn)        | Set rows and columns of displayed pages.                     |
+| [`setQuadSelection()`](#setquadselection)    | Set a quadrilateral selection on the current page.              |
+| [`getQuadSelection()`](#getquadselection)    | Get the quadrilateral selection.                                |
+| [`resetQuadSelection()`](#resetquadselection)  | Reset the quadrilateral selection to the original one.          |
+| [`applyPerspective()`](#applyperspective)         | Performs a perspective transformation in current page based on the specified quadrangle. |
 
 **Edit Operations**
 
@@ -85,9 +83,7 @@ Browse Viewer is used to display pages in multiple-mode, pages can be multiple s
 | [`pageRendered`](#pagerendered)        | Triggered when a page has been completely rendered.          |
 | [`currentIndexChanged`](#currentindexchanged) | Triggered when currentIndex is changed.                      |
 | [`currentPageChanged`](#currentpagechanged)  | Triggered when current page is changed.                      |
-| [`selectedPagesChanged`](#selectedpageschanged) | Trigeered when the page(s) is selected.                      |
-| [`pagesDragged`](#pagesdragged)         | Triggered when page(s) is dragged.                           |
-| [`pagesDropped`](#pagesdropped)         | Triggered when page(s) is dropped.                           |
+| [`quadModifiedModified`](#quadmodified)    | Triggered when the quadrilateral selection is modified.     |
 | [`click`](#click)               | Triggered when click in the viewer's viewing area.           |
 | [`dblclick`](#dbclick)            | Triggered when double click in the viewer's viewing area.    |
 | [`rightclick`](#rightclick)          | Triggered when right click in the viewer's viewing area.     |
@@ -95,24 +91,24 @@ Browse Viewer is used to display pages in multiple-mode, pages can be multiple s
 
 ## Create and Destroy Instances
 
-### BrowseViewer()
+### PerspectiveViewer()
 
-Default constructor of a `BrowseViewer` instance.
+Default constructor of a `PerspectiveViewer` instance.
 
 **Syntax**
 
 ```typescript
-new Dynamsoft.DDV.BrowseViewer(options?: BrowseViewerConstructorOptions);
+new Dynamsoft.DDV.PerspectiveViewer(options?: PerspectiveViewerConstructorOptions);
 ```
 
 **Parameters**
 
-`options`: The constructor options for a `BrowseViewer` instance. Please refer to [`BrowseViewerConstructorOptions`]({{ site.api }}interface/browseviewerconstructoroptions.html).
+`options`: The constructor options for a `PerspectiveViewer` instance. Please refer to [`PerspectiveViewerConstructorOptions`]({{ site.api }}interface/perspectiveviewerconstructoroptions.html).
 
 **Code Snippet**
 
 ```typescript
-const browseViewer = new Dynamsoft.DDV.BrowseViewer({
+const perspectiveViewer = new Dynamsoft.DDV.PerspectiveViewer({
     container: document.getElementById("viewer"),
 });
 ```
@@ -127,12 +123,12 @@ const browseViewer = new Dynamsoft.DDV.BrowseViewer({
  -80003 | *XXX(LicenseModuleName)* module license is missing.                         
  -80004 | *XXX(LicenseModuleName)* module license version does not match.                                 
  -80005 | Domain does not match the domain bound to the *XXX(LicenseModuleName)* module license.  
- -80050 | DDV.Core.init() has not been set up yet.   
- -80051 | DDV.Core.init() has not been completed.   
+ -80050 | DDV.setConfig has not been set up yet.  
+ -80051 | DDV.setConfig has not been completed.   
 
 ### destroy()
 
-Destroy the `BrowseViewer` instance.
+Destroy the `PerspectiveViewer` instance.
 
 **Syntax**
 
@@ -143,7 +139,7 @@ destroy(): void;
 **Code Snippet**
 
 ```typescript
-browseViewer.destroy();
+perspectiveViewer.destroy();
 ```
 
 **Remark**
@@ -174,7 +170,7 @@ bindContainer(container: string | HTMLElement): void;
 
 ```typescript
 // Assume there is a container with id "viewercontainer" on the page.
-browseViewer.bindContainer("viewercontainer");
+perspectiveViewer.bindContainer("viewercontainer");
 ```
 
 **Exception**
@@ -202,7 +198,7 @@ unbindContainer(): void;
 **Code Snippet**
 
 ```typescript
-browseViewer.unbindContainer();
+perspectiveViewer.unbindContainer();
 ```
 
 ### isBoundContainer
@@ -217,31 +213,31 @@ readonly isBoundContainer: boolean;
 
 ### getStyle()
 
-Get the style object of `BrowseViewer`.
+Get the style object of `PerspectiveViewer`.
 
 **Syntax**
 
 ```typescript
-getStyle(browseViewerStyleName: BrowseViewerStyleName): BrowseViewerStyle | null;
+getStyle(perspectiveViewerStyleName: PerspectiveViewerStyleName): PerspectiveViewerStyle | null;
 ```
 
 **Parameters**
 
-`browseViewerStyleName`: A `BrowseViewerStyleName` can be one of eight types.
+`perspectiveViewerStyleName`: A `PerspectiveViewerStyleName` can be one of three types.
 
 ```typescript
-type BrowseViewerStyleName = "canvasStyle" | "pageStyle" | "selectedPageStyle" | "currentPageStyle" | "hoveredPageStyle" | "placeholderStyle" | "pageNumberStyle" | "checkboxStyle";
+type PerspectiveViewerStyleName = "canvasStyle" | "pageStyle" | "quadSelectionStyle";
 ```
 
 **Return values**
 
-The style object. Please refer to [Style Interfaces]({{ site.api }}interface/styleinterface/index.html).
+The style object. Please refer to [Style Interfaces]({{ site.api }}interface/styleinterface/index.html)..
 
 **Code Snippet**
 
 ```typescript
 // Get pageStyle object;
-const pageStyle = browseViewer.getStyle("pageStyle");
+const pageStyle = perspectiveViewer.getStyle("pageStyle");
 ```
 
 **Warning**
@@ -254,23 +250,23 @@ const pageStyle = browseViewer.getStyle("pageStyle");
 
 ### updateStyle()
 
-Update the style object of `BrowseViewer`.
+Update the style object of `PerspectiveViewer`.
 
 **Syntax**
 
 ```typescript
-updateStyle(browseViewerStyleName: BrowseViewerStyleName, browseViewerStyle: BrowseViewerStyle): boolean;
+updateStyle(perspectiveViewerStyleName: PerspectiveViewerStyleName, perspectiveViewerStyle: PerspectiveViewerStyle): boolean;
 ```
 
 **Parameters**
 
-`browseViewerStyleName`: A `BrowseViewerStyleName` can be one of eight types.
+`perspectiveViewerStyleName`: A `PerspectiveViewerStyleName` can be one of three types.
 
 ```typescript
-type BrowseViewerStyleName = "canvasStyle" | "pageStyle" | "selectedPageStyle" | "currentPageStyle" | "hoveredPageStyle" | "placeholderStyle" | "pageNumberStyle" | "checkboxStyle";
+type PerspectiveViewerStyleName = "canvasStyle" | "pageStyle" | "quadSelectionStyle";
 ```
 
-`browseViewerStyle`: The style object. Please refer to [Style Interfaces]({{ site.api }}interface/styleinterface/index.html).
+`perspectiveViewerStyle`: The style object. Please refer to [Style Interfaces]({{ site.api }}interface/styleinterface/index.html).
 
 **Return Value**
 
@@ -284,21 +280,21 @@ type BrowseViewerStyleName = "canvasStyle" | "pageStyle" | "selectedPageStyle" |
 
     ```typescript
     // Get style object
-    const pageStyle = browseViewer.getStyle("pageStyle");
+    const pageStyle = perspectiveViewer.getStyle("pageStyle");
 
     // Modify the style object
     pageStyle.background = "red";
     pageStyle.border = "1px solid green";
 
     // Update page style
-    browseViewer.updateStyle("pageStyle", pageStyle);
+    perspectiveViewer.updateStyle("pageStyle", pageStyle);
     ```
 
 - Second method
 
     ```typescript
     // Update the style object directly
-    browseViewer.updateStyle("pageStyle", {
+    perspectiveViewer.updateStyle("pageStyle", {
         background: "red",
         border: "1px solid green",
     });
@@ -334,7 +330,7 @@ The [`UiConfig`]({{ site.api }}interface/uiconfig.html) object.
 **Code Snippet**
 
 ```typescript
-const viewerUi = browseViewer.getUiConfig();
+const viewerUi = perspectiveViewer.getUiConfig();
 ```
 
 ### updateUiConfig()
@@ -360,48 +356,10 @@ updateUiConfig(uiConfig: UiConfig): boolean;
 **Code Snippet**
 
 ```typescript
-const sidebar = {
-    type: Dynamsoft.DDV.Elements.Layout,
-    flexDirection: "column",
-    style: {
-        width: "80px",
-    },
-    children: [
-        Dynamsoft.DDV.Elements.Load,
-        Dynamsoft.DDV.Elements.DeleteAll,
-    ],
-};
-
-const viewerUi = browseViewer.getUiConfig();
-
-viewerUi.children.splice(0,0,sidebar);
-
-browseViewer.updateUiConfig(viewerUi); // Configure a sidebar which includes "Load" and "DeleteAll" elements.
-```
-Or,
-
-```typescript
-const header = {
-    type: Dynamsoft.DDV.Elements.Layout,
-    style: {
-        height: "80px",
-    },
-    children: [
-        Dynamsoft.DDV.Elements.Pagination,
-        Dynamsoft.DDV.Elements.DeleteAll,
-    ],
-};
-
-const viewerUi =  {
-    type: Dynamsoft.DDV.Elements.Layout,
-    flexDirection: "column",
-    children: [
-        header,
-        Dynamsoft.DDV.Elements.MainView,
-    ],
-}
-
-browseViewer.updateUiConfig(viewerUi); // Configure a header which includes "Pagination" and "DeleteAll" elements.
+const viewerUi = Dynamsoft.DDV.getDefaultUiConfig("perspectiveViewer");
+const header = viewerUi.children[0];
+header.children.splice(0,0,Dynamsoft.DDV.Elements.Load); //Add Load element in header.
+perspectiveViewer.updateUiConfig(viewerUi);
 ```
 
 **Warning**
@@ -429,7 +387,7 @@ show(): void;
 **Code Snippet**
 
 ```typescript
-browseViewer.show();
+perspectiveViewer.show();
 ```
 
 **Remark**
@@ -449,7 +407,7 @@ hide(): void;
 **Code Snippet**
 
 ```typescript
-browseViewer.hide();
+perspectiveViewer.hide();
 ```
 
 ### isVisible
@@ -465,32 +423,6 @@ readonly isVisible: boolean;
 **Remark**
 
 - The viewer is shown automatically when it is created which means the default value of `isVisible` is `true`.
-
-### multiselectMode
-
-Specify or return whether to allow multiple pages to be selected at once.
-
-**Syntax**
-
-```typescript
-multiselectMode: boolean; 
-```
-
-**Example**
-
-```typescript
-browseViewer.multiselectMode = true;
-```
-
-**Warning**
-
- Error Code  | Description                                         
---------|-----------------------------------------------------
- -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
-
-**Remark**
-
-If it is not specified in [`viewerConfig`]({{ site.api }}interface/browseviewerconstructoroptions.html#viewerconfig) while creating the viewer additionally, its default value is `false`.
 
 ## Document and Page Control
 
@@ -512,12 +444,12 @@ openDocument(docUid: string): void;
 
 ```typescript
 // Assume there is a document whose id is "lnn0ll9o124".
-browseViewer.openDocument("lnn0ll9o124");
+perspectiveViewer.openDocument("lnn0ll9o124");
 
 // OR
 // Assume there is a document object firstDoc.
 const docUid = firstDoc.uid;
-browseViewer.openDocument(docUid);
+perspectiveViewer.openDocument(docUid);
 ```
 
 **Exception**
@@ -551,7 +483,7 @@ closeDocument(): boolean;
 **Code Snippet**
 
 ```typescript
-browseViewer.closeDocument();
+perspectiveViewer.closeDocument();
 ```
 
 **Warning**
@@ -573,12 +505,12 @@ readonly currentDocument: IDocument | null;
 **Code Snippet**
 
 ```typescript
-const currentDoc = browseViewer.currentDocument;
+const currentDoc = perspectiveViewer.currentDocument;
 ```
 
 **See Also**
 
-[IDocument]({{ site.api }}interface/idocument/index.html)
+[IDocument]({{ site.api }}interface/idocument.html)
 
 ### getPageCount()
 
@@ -597,7 +529,7 @@ The page count.
 **Code Snippet**
 
 ```typescript
-const pageCount = browseViewer.getPageCount();
+const pageCount = perspectiveViewer.getPageCount();
 ```
 
 **Warning**
@@ -628,7 +560,7 @@ The index of the page which navigate to.
 
 ```typescript
 // Navigate to page 4.
-browseViewer.goToPage(3);
+perspectiveViewer.goToPage(3);
 ```
 
 **Warning**
@@ -658,7 +590,7 @@ The index of the current page.
 **Code Snippet**
 
 ```typescript
-const currentIndex = browseViewer.getCurrentPageIndex();
+const currentIndex = perspectiveViewer.getCurrentPageIndex();
 ```
 
 **Warning**
@@ -685,7 +617,7 @@ The uid of the current page.
 **Code Snippet**
 
 ```typescript
-const curPageUid = browseViewer.getCurrentPageUid();
+const curPageUid = perspectiveViewer.getCurrentPageUid();
 ```
 
 **Warning**
@@ -717,7 +649,7 @@ The uid of the page.
 
 ```typescript
 // Get the first page's uid
-const firstPageUid = browseViewer.indexToUid(0);
+const firstPageUid = perspectiveViewer.indexToUid(0);
 ```
 
 **Warning**
@@ -751,8 +683,8 @@ The index of the page.
 **Code Snippet**
 
 ```typescript
-const curPageUid = browseViewer.getCurrentPageUid();
-browseViewer.uidToIndex(curPageUid);
+const curPageUid = perspectiveViewer.getCurrentPageUid();
+perspectiveViewer.uidToIndex(curPageUid);
 ```
 
 **Warning**
@@ -765,117 +697,90 @@ browseViewer.uidToIndex(curPageUid);
  -80304 | No document opened.                                      | `-1`
  -80305 | There is no image in the current document.               | `-1`
 
-### getSelectedPageIndices()
+## Perspective Transformation
 
-Get indices of selected pages.
+### setQuadSelection()
+
+Set a quadrilateral selection on the current page.
 
 **Syntax**
 
 ```typescript
-getSelectedPageIndices(): number[];
+setQuadSelection(quad: Quad): boolean;
 ```
 
-**Return Value**
+**Parameters**
 
-The array of the selected pages' indices.
+`quad`: A quadrangle. Please refer to [`Quad`]({{ site.api }}enumeration-type/quad.html).
 
 **Example**
 
 ```typescript
-const selPages = browseViewer.getSelectedPageIndices();
+const quad = [
+	[80,200],
+	[180,120],
+	[115,340],
+	[70,330]
+];
+
+perspectiveViewer.setQuadSelection(quad);
 ```
 
 **Warning**
 
- Error Code  | Description                                         | API Return Value
---------|-----------------------------------------------------|--------------------
- -80304 | No document opened.                                 | `[]`
+ Error Code  | Description                                               | API Return Value
+--------|-----------------------------------------------------------|-------------------
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.         | `false`
+ -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.        | `false`
+ -80304 | No document opened.                                       | `false`
+ -80305 | There is no image in the current document.                | `false`
+ -80312 | The specified quad exceeds the bounds of the current page.| `false`
+
 
 **Remark**
 
-- If no page is selected in the viewer, returns [].
-- The order of the returned array elements is based on the order in which the pages are selected. For example, if select the pages with the index 6, 5, 2 in order, the returned array will be [6,5,2].
+- In the viewer, only one quadrilateral selection can exist on the page at a time, which means if there is a quadrilateral selection existed when a new selection is drawn, the old one will be clear automatically.
 
-### selectPages()
+### getQuadSelection()
 
-Select pages by specified indices.
+Get the quadrilateral selection.
 
 **Syntax**
 
 ```typescript
-selectPages(indices: number[]): string[];
+getQuadSelection(): Quad | null;
 ```
 
-**Parameters**
+**Return value**
 
-`indices`: Specify the indices of the pages to be selected. If set to an empty array `[]`, no pages will be selected.
-
-**Return Value**
-
-The array of selected pages' uids.
+A quadrangle. Please refer to [`Quad`]({{ site.api }}enumeration-type/quad.html).
 
 **Example**
 
 ```typescript
-// Select the first and second pages.
-browseViewer.selectPages([0,1]);
+const quad = perspectiveViewer.getQuadSelection();
 ```
 
 **Warning**
 
  Error Code  | Description                                         | API Return Value
---------|-----------------------------------------------------|--------------------
- -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   | `[]`
- -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  | `[]`
- -80304 | No document opened.                                 | `[]`
+--------|-----------------------------------------------------|---------------------
+ -80304 | No document opened.                                 | `null`
+ -80305 | There is no image in the current document.          | `null`
 
-### selectAllPages()
+### resetQuadSelection()
 
-Select all pages.
-
-**Syntax**
-
-```typescript
-selectAllPages(): string[];
-```
-
-**Return Value**
-
-The array of selected pages' uids.
-
-**Example**
-
-```typescript
-browseViewer.selectAllPages();
-```
-
-**Warning**
-
- Error Code  | Description                                         | API Return Value
---------|-----------------------------------------------------|--------------------
- -80304 | No document opened.                                 | `[]`
- -80305 | There is no image in the current document.          | `[]`
-
-
-## Display Control
-
-### setRowAndColumn()
-
-Set rows and columns of displayed pages.
+Reset the quadrilateral selection to the original one. The original selection means the last saved one.
 
 **Syntax**
 
 ```typescript
-setRowAndColumn(
-    rows: number, 
-	columns: number 
-): boolean;
+resetQuadSelection(indices?: number[]): boolean;
 ```
+
 **Parameters**
 
-`rows`: The number of rows. The maximum value is 20.
-
-`columns`: The number of columns. The maximum value is 20.
+`indices`: The array of the pages indices which will be reset. If not set, the current page will be reset.
 
 **Return Value**
 
@@ -886,20 +791,53 @@ setRowAndColumn(
 **Example**
 
 ```typescript
-browseViewer.setRowAndColumn(5,8); // Display the page in five rows and eight columns.
+perspectiveViewer.resetQuadSelection();
 ```
 
 **Warning**
 
- Error Code  | Description                                         | API Return Value
---------|-----------------------------------------------------|--------------------
- -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   | `false`
- -80101 | *XXX(API)*: *XXX(ParameterName)* is out of range.     | `false`
- -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  | `false`
+ Error Code  | Description                                               | API Return Value
+--------|-----------------------------------------------------------|-------------------
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.         | `false`
+ -80304 | No document opened.                                       | `false`
+ -80305 | There is no image in the current document.                | `false`
 
-**Remark**
 
-- If it is not specified in [`viewerConfig`]({{ site.api }}interface/browseviewerconstructoroptions.html#viewerconfig) while creating the viewer additionally, its default rows is 4 and columns is 6.
+### applyPerspective()
+
+Performs a perspective transformation in current page based on the specified quadrangle.
+
+**Syntax**
+
+```typescript
+applyPerspective(quad: Quad): Promise<Blob>;
+```
+
+**Parameters**
+
+`quad`: The quadrangle to be transferred. Please refer to [`Quad`]({{ site.api }}enumeration-type/quad.html).
+
+**Return value**
+
+The Blob of the result image after perspective transformation.
+
+**Example**
+
+```typescript
+const quad = perspectiveViewer.getQuadSelection();
+
+await perspectiveViewer.applyPerspective(quad);
+```
+
+**Promise Exception**
+
+ Error Code  | Description                                         
+--------|-----------------------------------------------------
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
+ -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  
+ -80304 | No document opened.                                 
+ -80305 | There is no image in the current document. 
+ -80312 | The specified quad exceeds the bounds of the current page.         
 
 ## Edit Operations
 
@@ -932,10 +870,10 @@ rotate(
 
 ```typescript
 // Rotate the first and second pages 90 degrees clockwise.
-browseViewer.rotate(90, [0,1]);
+perspectiveViewer.rotate(90, [0,1]);
 
 // Rotate current page 90 degrees counterclockwise.
-browseViewer.rotate(-90);
+perspectiveViewer.rotate(-90);
 ```
 
 **Warning**
@@ -969,7 +907,7 @@ saveOperations(): boolean;
 **Code Snippet**
 
 ```typescript
-browseViewer.saveOperations();
+perspectiveViewer.saveOperations();
 ```
 
 **Warning**
@@ -1006,7 +944,7 @@ const eventFunc = (e)=>{
     console.log(e.newWidth);
 };
 
-browseViewer.on("resized", eventFunc);
+perspectiveViewer.on("resized", eventFunc);
 ```
 
 **Warning**
@@ -1042,10 +980,10 @@ const eventFunc = (e)=>{
     console.log(e.newWidth);
 };
 
-browseViewer.on("resized", eventFunc);
+perspectiveViewer.on("resized", eventFunc);
 
 // Unbind the specified event listener.
-browseViewer.off("resized", eventFunc);
+perspectiveViewer.off("resized", eventFunc);
 ```
 
 **Warning**
@@ -1117,53 +1055,19 @@ Triggered when current page is changed.
 
 `newPageUid`: The uid of the page which is new current index. If there is no index in the viewer, return `''`.
 
-#### selectedPagesChanged
+#### quadModified
 
-Trigeered when the page(s) is selected.
-
-***Callback***
-
- `SelectedPagesChangedEvent`: An EventObject.
-
-***Attributes***
-
-`oldIndices[]`: The array of old selected pages indices.
-
-`oldPageUids[]`: The array of old selected pages uids.
-
-`newIndices[]`: The array of new selected pages indices.
-
-`newPageUids[]`: The array of new selected pages uids.
-
-#### pagesDragged
-
-Triggered when page(s) is dragged.
+Triggered when the quadrilateral selection is modified.
 
 ***Callback***
 
- `PageDraggedEvent`: An EventObject.
+ `QuadModifiedEvent`: An EventObject.
 
 ***Attributes***
 
-`indices[]` : The array of the dragged pages indices.
+`oldQuad`: The old quadrangle.
 
-`pageUids[]`: The array of the dragged pages uids.
-
-#### pagesDropped
-
-Triggered when page(s) is dropped.
-
-***Callback***
-
- `PageDroppedEvent`: An EventObject.
-
-***Attributes***
-
-`indicesBefore[]`: The array of the dropped pages indices before dropping.
-
-`indicesAfter[]`: The array of the dropped pages indices after dropping.
-
-`pageUids[]`: The array of the dropped pages uids.
+`newQuad`: The new quadrangle.
 
 #### Mouse Events
 

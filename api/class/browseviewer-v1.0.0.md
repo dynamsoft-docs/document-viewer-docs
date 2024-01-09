@@ -7,7 +7,7 @@ title: Dynamsoft Document Viewer API Reference - BrowseViewer Class
 keywords: Documentation, Dynamsoft Document Viewer, API Reference, BrowseViewer Class
 breadcrumbText: BrowseViewer Class
 description: Dynamsoft Document Viewer Documentation API Reference BrowseViewer Class Page
-permalink: /api/class/browseviewer.html
+permalink: /api/class/browseviewer-v1.0.0.html
 ---
 
 # BrowseViewer Class
@@ -127,8 +127,8 @@ const browseViewer = new Dynamsoft.DDV.BrowseViewer({
  -80003 | *XXX(LicenseModuleName)* module license is missing.                         
  -80004 | *XXX(LicenseModuleName)* module license version does not match.                                 
  -80005 | Domain does not match the domain bound to the *XXX(LicenseModuleName)* module license.  
- -80050 | DDV.Core.init() has not been set up yet.   
- -80051 | DDV.Core.init() has not been completed.   
+ -80050 | DDV.setConfig has not been set up yet.  
+ -80051 | DDV.setConfig has not been completed.   
 
 ### destroy()
 

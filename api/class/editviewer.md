@@ -141,8 +141,8 @@ const thumbnailObj = editViewer.thumbnail;
  -80003 | *XXX(LicenseModuleName)* module license is missing.                         
  -80004 | *XXX(LicenseModuleName)* module license version does not match.                                 
  -80005 | Domain does not match the domain bound to the *XXX(LicenseModuleName)* module license.  
- -80050 | DDV.setConfig has not been set up yet.  
- -80051 | DDV.setConfig has not been completed.   
+ -80050 | DDV.Core.init() has not been set up yet.   
+ -80051 | DDV.Core.init() has not been completed.  
  -80302 | minZoom value cannot be larger than maxZoom value.                        
 
 **Warning**
