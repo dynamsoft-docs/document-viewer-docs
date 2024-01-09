@@ -133,7 +133,7 @@ const thumbnailObj = editViewer.thumbnail;
 
 **Exception**
 
- Error Code  | Description                                         
+ Error Code  | Error Message                                        
 --------|-----------------------------------------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.                                            
  -80001 | License string is invalid.                              
@@ -204,7 +204,7 @@ editViewer.bindContainer("viewercontainer");
 
 **Exception**
 
- Error Code  | Description                                         
+ Error Code  | Error Message                                        
 --------|-----------------------------------------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  
@@ -271,7 +271,7 @@ const pageStyle = editViewer.getStyle("pageStyle");
 
 **Warning**
 
- Error Code  | Description                                                             | API Return Value
+ Error Code  | Error Message                                                            | API Return Value
 --------|-------------------------------------------------------------------------|----------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.                       | `null`
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.                      | `null`
@@ -331,7 +331,7 @@ type EditViewerStyleName = "canvasStyle" | "pageStyle" | "currentPageStyle" |"qu
 
 **Warning**
 
- Error Code  | Description                                                             | API Return Value
+ Error Code  | Error Message                                                            | API Return Value
 --------|-------------------------------------------------------------------------|----------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.                       | `false`
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.                      | `false`
@@ -393,7 +393,7 @@ editViewer.updateUiConfig(viewerUi);
 
 **Warning**
 
- Error Code  | Description                                         | API Return Value
+ Error Code  | Error Message                                        | API Return Value
 --------|-----------------------------------------------------|----------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   | `false`
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  | `false`
@@ -481,7 +481,7 @@ editViewer.toolMode = "crop";
 
 **Warning**
 
- Error Code  | Description                                         
+ Error Code  | Error Message                                        
 --------|-----------------------------------------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
  -80103 | *XXX(API)*: The value for *XXX(ParameterName)* is not supported.
@@ -521,7 +521,7 @@ editViewer.openDocument(docUid);
 
 **Exception**
 
- Error Code  | Description                                         
+ Error Code  | Error Message                                        
 --------|-----------------------------------------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.   
@@ -555,7 +555,7 @@ editViewer.closeDocument();
 
 **Warning**
 
- Error Code  | Description                                         | API Return Value
+ Error Code  | Error Message                                        | API Return Value
 --------|-----------------------------------------------------|--------------------
  -80304 | No document opened.                                 | `false`
 
@@ -601,7 +601,7 @@ const pageCount = editViewer.getPageCount();
 
 **Warning**
 
- Error Code  | Description                                         | API Return Value
+ Error Code  | Error Message                                        | API Return Value
 --------|-----------------------------------------------------|--------------------
  -80304 | No document opened.                                 | `-1`
 
@@ -632,7 +632,7 @@ editViewer.goToPage(3);
 
 **Warning**
 
- Error Code  | Description                                              | API Return Value
+ Error Code  | Error Message                                             | API Return Value
 --------|----------------------------------------------------------|------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.        | `-1`
  -80101 | *XXX(API)*: *XXX(ParameterName)* is out of range.    | `-1`
@@ -662,7 +662,7 @@ const currentIndex = editViewer.getCurrentPageIndex();
 
 **Warning**
 
- Error Code  | Description                                         | API Return Value
+ Error Code  | Error Message                                        | API Return Value
 --------|-----------------------------------------------------|--------------------
  -80304 | No document opened.                                 | `-1`
  -80305 | There is no image in the current document.          | `-1`
@@ -689,7 +689,7 @@ const curPageUid = editViewer.getCurrentPageUid();
 
 **Warning**
 
- Error Code  | Description                                         | API Return Value
+ Error Code  | Error Message                                        | API Return Value
 --------|-----------------------------------------------------|--------------------
  -80304 | No document opened.                                 | `''`
  -80305 | There is no image in the current document.          | `''`
@@ -721,7 +721,7 @@ const firstPageUid = editViewer.indexToUid(0);
 
 **Warning**
 
- Error Code  | Description                                              | API Return Value
+ Error Code  | Error Message                                             | API Return Value
 --------|----------------------------------------------------------|------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.        | `''`
  -80101 | *XXX(API)*: *XXX(ParameterName)* is out of range.    | `''`
@@ -756,7 +756,7 @@ editViewer.uidToIndex(curPageUid);
 
 **Warning**
 
- Error Code  | Description                                              | API Return Value
+ Error Code  | Error Message                                             | API Return Value
 --------|----------------------------------------------------------|------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.        | `-1`
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.       | `-1`
@@ -794,7 +794,7 @@ editViewer.displayMode = "single";
 
 **Warning**
 
- Error Code  | Description                                         
+ Error Code  | Error Message                                        
 --------|-----------------------------------------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
  -80103 | *XXX(API)*: The value for *XXX(ParameterName)* is not supported.
@@ -832,7 +832,7 @@ editViewer.setParallelScrollCount(3);
 
 **Warning**
 
- Error Code  | Description                                                  | API Return Value
+ Error Code  | Error Message                                                 | API Return Value
 --------|--------------------------------------------------------------|--------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.            | `false`
  -80101 | *XXX(API)*: *XXX(ParameterName)* is out of range.        | `false`
@@ -875,7 +875,7 @@ editViewer.fitMode = "width";
 
 **Warning**
 
- Error Code  | Description                                         
+ Error Code  | Error Message                                        
 --------|-----------------------------------------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
  -80103 | *XXX(API)*: The value for *XXX(ParameterName)* is not supported.
@@ -910,7 +910,7 @@ editViewer.zoom = 0.1;
 
 **Warning**
 
- Error Code  | Description                                         
+ Error Code  | Error Message                                        
 --------|-----------------------------------------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
  -80306 | The value for zoom is larger than maxZoom value.                          
@@ -946,7 +946,7 @@ editViewer.zoomOrigin = newZoomOrigin;
 
 **Warning**
 
- Error Code  | Description                                         
+ Error Code  | Error Message                                        
 --------|-----------------------------------------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
 
@@ -997,7 +997,7 @@ editViewer.rotate(-90);
 
 **Warning**
 
- Error Code  | Description                                                        | API Return Value
+ Error Code  | Error Message                                                       | API Return Value
 --------|-------------------------------------------------------------------------|-------------------    
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.                       | `false`
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.                      | `false`
@@ -1044,7 +1044,7 @@ editViewer.crop(rect, [0]); // Crop the first page
 
 **Warning**
 
- Error Code  | Description                                           | API Return Value
+ Error Code  | Error Message                                          | API Return Value
 --------|------------------------------------------------------------|-------------------      
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.          | `false`
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.         | `false`
@@ -1078,7 +1078,7 @@ editViewer.getCropRect();
 
 **Warning**
 
- Error Code  | Description                                               | API Return Value
+ Error Code  | Error Message                                              | API Return Value
 --------|-----------------------------------------------------------|---------------------
 -80304  | No document opened.                                       | `null`
 
@@ -1125,7 +1125,7 @@ editViewer.setCropRect(rect);
 
 **Warning**
 
- Error Code  | Description                                               | API Return Value
+ Error Code  | Error Message                                              | API Return Value
 --------|-----------------------------------------------------------|-------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.         | `false`
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.        | `false`
@@ -1165,7 +1165,7 @@ editViewer.undo();
 
 **Warning**
 
- Error Code  | Description                                         | API Return Value
+ Error Code  | Error Message                                        | API Return Value
 --------|-----------------------------------------------------|-----------------
  -80304 | No document opened.                                 | `false`
  -80310 | No operations to undo.                              | `false`
@@ -1196,7 +1196,7 @@ editViewer.redo();
 
 **Warning**
 
- Error Code  | Description                                         | API Return Value
+ Error Code  | Error Message                                        | API Return Value
 --------|-----------------------------------------------------|-----------------
  -80304 | No document opened.                                 | `false`
  -80311 | No operations to redo.                              | `false`
@@ -1227,7 +1227,7 @@ editViewer.saveOperations();
 
 **Warning**
 
- Error Code  | Description                                         | API Return Value
+ Error Code  | Error Message                                        | API Return Value
 --------|-----------------------------------------------------|-----------------
  -80304 | No document opened.                                 | `false`
 
@@ -1264,7 +1264,7 @@ editViewer.on("resized", eventFunc);
 
 **Warning**
 
- Error Code  | Description                                         
+ Error Code  | Error Message                                        
 --------|-----------------------------------------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  
@@ -1303,7 +1303,7 @@ editViewer.off("resized", eventFunc);
 
 **Warning**
 
- Error Code  | Description                                         
+ Error Code  | Error Message                                        
 --------|-----------------------------------------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  

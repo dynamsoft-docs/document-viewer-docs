@@ -102,7 +102,7 @@ await Dynamsoft.DDV.setConfig({
 
 **Exception**
 
- Error Code  | Description                                         
+ Error Code  | Error Message                                        
 --------|-----------------------------------------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  
@@ -132,7 +132,7 @@ type HandlerType = "documentBoundariesDetect"|"imageFilter";
 
 **Exception**
 
- Error Code  | Description                                         
+ Error Code  | Error Message                                        
 --------|-----------------------------------------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  
@@ -201,7 +201,7 @@ const defaultEditUi = Dynamsoft.DDV.getDefaultUiConfig("editViewer");
 
 **Warning**
 
- Error Code  | Description                                                            | API Return Value
+ Error Code  | Error Message                                                           | API Return Value
 --------|------------------------------------------------------------------------|----------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.                      | `null`
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.                     | `null`
@@ -284,7 +284,7 @@ Dynamsoft.DDV.on("error", (e)=>{
 
 **Exception**
 
- Error Code  | Description                                         
+ Error Code  | Error Message                                        
 --------|-----------------------------------------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  
@@ -314,7 +314,7 @@ Dynamsoft.DDV.off("error");
 
 **Exception**
 
- Error Code  | Description                                         
+ Error Code  | Error Message                                        
 --------|-----------------------------------------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  

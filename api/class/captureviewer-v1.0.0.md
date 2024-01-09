@@ -111,7 +111,7 @@ const captureViewer = new Dynamsoft.DDV.CaptureViewer({
 
 **Exception**
 
- Error Code  | Description                                         
+ Error Code  | Error Message                                        
 --------|-----------------------------------------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.                                     
  -80001 | License string is invalid.                              
@@ -169,7 +169,7 @@ captureViewer.bindContainer("viewercontainer");
 
 **Exception**
 
- Error Code  | Description                                         
+ Error Code  | Error Message                                        
 --------|-----------------------------------------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  
@@ -236,7 +236,7 @@ const canvasStyle = captureViewer.getStyle("canvasStyle");
 
 **Warning**
 
- Error Code  | Description                                                             | API Return Value
+ Error Code  | Error Message                                                            | API Return Value
 --------|-------------------------------------------------------------------------|----------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.                       | `null`
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.                      | `null`
@@ -296,7 +296,7 @@ type CaptureViewerStyleName = "canvasStyle" | "quadSelectionStyle";
 
 **Warning**
 
- Error Code  | Description                                                             | API Return Value
+ Error Code  | Error Message                                                            | API Return Value
 --------|-------------------------------------------------------------------------|----------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.                       | `false`
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.                      | `false`
@@ -358,7 +358,7 @@ captureViewer.updateUiConfig(viewerUi);
 
 **Warning**
 
- Error Code  | Description                                         | API Return Value
+ Error Code  | Error Message                                        | API Return Value
 --------|-----------------------------------------------------|----------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   | `false`
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  | `false`
@@ -448,7 +448,7 @@ captureViewer.openDocument(docUid);
 
 **Exception**
 
- Error Code  | Description                                         
+ Error Code  | Error Message                                        
 --------|-----------------------------------------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.   
@@ -483,7 +483,7 @@ captureViewer.closeDocument();
 
 **Warning**
 
- Error Code  | Description                                         | API Return Value
+ Error Code  | Error Message                                        | API Return Value
 --------|-----------------------------------------------------|--------------------
  -80304 | No document opened.                                 | `false`
 
@@ -537,7 +537,7 @@ await captureViewer.play({
 
 **Promise Exception**
 
- Error Code  | Description                                         
+ Error Code  | Error Message                                        
 --------|-----------------------------------------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
  -80401 | The specified camera is occupied.   
@@ -567,7 +567,7 @@ captureViewer.stop();
 
 **Warning**
 
- Error Code  | Description                                         
+ Error Code  | Error Message                                        
 --------|-----------------------------------------------------
  -80402 | No video stream is played.
 
@@ -601,7 +601,7 @@ const capturedPage = await captureViewer.capture();
 
 **Promise Exception**
 
- Error Code  | Description                                         
+ Error Code  | Error Message                                        
 --------|-----------------------------------------------------
  -80402 | No video stream is played.
  -80407 | No bound container.
@@ -659,7 +659,7 @@ if (cameras.length) {
 
 **Promise Exception**
 
- Error Code  | Description                                         
+ Error Code  | Error Message                                        
 --------|-----------------------------------------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.   
@@ -742,7 +742,7 @@ await captureViewer.turnOnTorch();
 
 **Promise Exception**
 
- Error Code  | Description                                         
+ Error Code  | Error Message                                        
 --------|-----------------------------------------------------
  -80402  | No video stream is played.                  
  -80404 | The camera does not support a flashlight.
@@ -775,7 +775,7 @@ await captureViewer.turnOffTorch();
 
 **Promise Exception**
 
- Error Code  | Description                                         
+ Error Code  | Error Message                                        
 --------|-----------------------------------------------------
  -80402  | No video stream is played.                  
  -80404 | The camera does not support a flashlight.
@@ -804,7 +804,7 @@ captureViewer.enableAutoCapture = true;
 
 **Warning**
 
- Error Code  | Description                                         
+ Error Code  | Error Message                                        
 --------|-----------------------------------------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
 
@@ -832,7 +832,7 @@ captureViewer.enableAutoDetect = true;
 
 **Warning**
 
- Error Code  | Description                                         
+ Error Code  | Error Message                                        
 --------|-----------------------------------------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
  -80315      | DocumentDetect needs to be configured to enable the document detection feature.
@@ -860,7 +860,7 @@ captureViewer.acceptedPolygonConfidence = 60;
 
 **Warning**
 
- Error Code  | Description                                         
+ Error Code  | Error Message                                        
 --------|-----------------------------------------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
 
@@ -888,7 +888,7 @@ captureViewer.maxFrameNumber = 3;
 
 **Warning**
 
- Error Code  | Description                                         
+ Error Code  | Error Message                                        
 --------|-----------------------------------------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
 
@@ -930,7 +930,7 @@ captureViewer.on("resized", eventFunc);
 
 **Warning**
 
- Error Code  | Description                                         
+ Error Code  | Error Message                                        
 --------|-----------------------------------------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  
@@ -969,7 +969,7 @@ captureViewer.off("resized", eventFunc);
 
 **Warning**
 
- Error Code  | Description                                         
+ Error Code  | Error Message                                        
 --------|-----------------------------------------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  

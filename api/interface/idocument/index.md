@@ -163,7 +163,7 @@ await firstDoc.loadSource([source]);
 
 **Promise Exception**
 
- Error Code  | Description                                         
+ Error Code  | Error Message                                        
 --------|-----------------------------------------------------                               
  -80001 | License string is invalid.                              
  -80002 | *XXX(LicenseModuleName)* module license has expired.                                                               
@@ -203,7 +203,7 @@ const pageData = await firstDoc.getPageData(firstDoc.pages[0]);
 
 **Promise Exception**
 
- Error Code  | Description                                         
+ Error Code  | Error Message                                        
 --------|-----------------------------------------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  
@@ -250,7 +250,7 @@ await firstDoc.updatePage(firstDoc.pages[0], fileData, updateFirstPage);
 
 **Promise Exception**
 
- Error Code  | Description                                         
+ Error Code  | Error Message                                        
 --------|-----------------------------------------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
  -80101 | IDocument.updatePage: updatePageOptions.fileIndex is out of range.
@@ -294,7 +294,7 @@ await firstDoc.setPageCustomData(firstDoc.pages[0], customData);
 
 **Promise Exception**
 
- Error Code  | Description                                         
+ Error Code  | Error Message                                        
 --------|-----------------------------------------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  
@@ -326,7 +326,7 @@ const customdata = await firstDoc.getPageCutomData(firstDoc.pages[0]);
 
 **Promise Exception**
 
- Error Code  | Description                                         
+ Error Code  | Error Message                                        
 --------|-----------------------------------------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  
@@ -361,7 +361,7 @@ firstDoc.deletePages([0,1]);
 
 **Warning**
 
- Error Code  | Description                                    | API return value     
+ Error Code  | Error Message                                   | API return value     
 -------------|------------------------------------------------|---------------     
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   | `false`
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  | `false`
@@ -419,7 +419,7 @@ firstDoc.movePages([5,3,1], 0);
 
 **Exception**
 
- Error Code  | Description                                         
+ Error Code  | Error Message                                        
 --------|-----------------------------------------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  
@@ -456,7 +456,7 @@ firstDoc.switchPage(2, 5);
 
 **Exception**
 
- Error Code  | Description                                         
+ Error Code  | Error Message                                        
 --------|-----------------------------------------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
  -80101 | *XXX(API)*: *XXX(ParameterName)* is out of range.    
@@ -499,7 +499,7 @@ The page uid of the inserted blank page.
 
 **Exception**
 
- Error Code  | Description                                         
+ Error Code  | Error Message                                        
 -------------|-----------------------------------------------------
  -80100      | *XXX(API)*: *XXX(ParameterName)* is invalid. 
  -80050      | DDV.Core.init() has not been set up yet.  
@@ -541,7 +541,7 @@ firstDoc.rename("my_doc");
 
 **Warning**
 
- Error Code  | Description                                   | API return value     
+ Error Code  | Error Message                                  | API return value     
 --------|-----------------------------------------------------|---------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   | `false`
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  | `false`
@@ -573,7 +573,7 @@ const result = await firstDoc.saveToPng(0);
 
 **Promise Exception**
 
- Error Code  | Description                                         
+ Error Code  | Error Message                                        
 --------|-----------------------------------------------------                                    
  -80001 | License string is invalid.                              
  -80002 | *XXX(LicenseModuleName)* module license has expired.                                                               
@@ -616,7 +616,7 @@ const result = await firstDoc.saveToJpeg(0, settings);
 
 **Promise Exception**
 
- Error Code  | Description                                         
+ Error Code  | Error Message                                        
 --------|-----------------------------------------------------                                          
  -80001 | License string is invalid.                              
  -80002 | *XXX(LicenseModuleName)* module license has expired.                                                               
@@ -673,7 +673,7 @@ const result2 = await firstDoc.saveToTiff(tiffSettings);
 
 **Promise Exception**
 
- Error Code  | Description                                         
+ Error Code  | Error Message                                        
 --------|-----------------------------------------------------                                      
  -80001 | License string is invalid.                              
  -80002 | *XXX(LicenseModuleName)* module license has expired.                                                               
@@ -731,7 +731,7 @@ const result2 = await firstDoc.saveToPdf(pdfSettings);
 
 **Promise Exception**
 
- Error Code  | Description                                         
+ Error Code  | Error Message                                        
 --------|-----------------------------------------------------                                     
  -80001 | License string is invalid.                              
  -80002 | *XXX(LicenseModuleName)* module license has expired.                                                               
@@ -775,7 +775,7 @@ firstDoc.print([1,2]);
 
 **Exception**
 
- Error Code  | Description                                         
+ Error Code  | Error Message                                        
 --------|-----------------------------------------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
  -80305 | There is no image in the current document.

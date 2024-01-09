@@ -67,7 +67,7 @@ const customViewer = new Dynamsoft.DDV.CustomViewer({
 
 **Exception**
 
- Error Code  | Description                                         
+ Error Code  | Error Message                                        
 --------|-----------------------------------------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.                                     
  -80001 | License string is invalid.                              
@@ -119,7 +119,7 @@ customViewer.bindContainer("viewercontainer");
 
 **Exception**
 
- Error Code  | Description                                         
+ Error Code  | Error Message                                        
 --------|-----------------------------------------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  
@@ -197,7 +197,7 @@ updateUiConfig(uiConfig: UiConfig): boolean;
 
 **Warning**
 
- Error Code  | Description                                         | API Return Value
+ Error Code  | Error Message                                        | API Return Value
 --------|-----------------------------------------------------|----------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   | `false`
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  | `false`
@@ -277,7 +277,7 @@ on(eventName: EventName, listener:(event:EventObject)=>void): void;
 
 **Warning**
 
- Error Code  | Description                                         
+ Error Code  | Error Message                                        
 --------|-----------------------------------------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  
@@ -301,7 +301,7 @@ off(eventName: EventName, listener?:(event:EventObject)=>void): void;
 
 **Warning**
 
- Error Code  | Description                                         
+ Error Code  | Error Message                                        
 --------|-----------------------------------------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  

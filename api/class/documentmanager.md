@@ -75,7 +75,7 @@ const firstDoc = Dynamsoft.DDV.documentManager.createDocument({
 
 **Exception**
 
- Error Code  | Description                                         
+ Error Code  | Error Message                                        
 --------|-----------------------------------------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
 
@@ -116,7 +116,7 @@ Dynamsoft.DDV.documentManager.deleteDocuments([docUid]);
 
 **Warning**
 
- Error Code  | Description                                            | API return value     
+ Error Code  | Error Message                                           | API return value     
 -------------|--------------------------------------------------------|---------------    
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.           | `false`
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.          | `false`
@@ -170,7 +170,7 @@ Dynamsoft.DDV.documentManager.getDocument("lnn0ll9o124");
 
 **Exception**
 
- Error Code  | Description                                         
+ Error Code  | Error Message                                        
 --------|-----------------------------------------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.   
@@ -265,7 +265,7 @@ Dynamsoft.DDV.documentManager.mergeDocuments(["lnn0ll9o124", "lnn0iai110t"], mer
 
 **Exception**
 
- Error Code  | Description                                         
+ Error Code  | Error Message                                        
 --------|-----------------------------------------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.   
@@ -304,7 +304,7 @@ Dynamsoft.DDV.documentManager.copyPagesToDocument("lnn0ll9o124", "lnn0iai110t", 
 
 **Exception**
 
- Error Code  | Description                                         
+ Error Code  | Error Message                                        
 --------|-----------------------------------------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.   
@@ -342,7 +342,7 @@ Dynamsoft.DDV.documentManager.movePagesToDocument("lnn0ll9o124", "lnn0iai110t", 
 
 **Exception**
 
- Error Code  | Description                                         
+ Error Code  | Error Message                                        
 --------|-----------------------------------------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.   
@@ -381,7 +381,7 @@ Dynamsoft.DDV.documentManager.on("documentCreated", eventFunc);
 
 **Warning**
 
- Error Code  | Description                                         
+ Error Code  | Error Message                                        
 --------|-----------------------------------------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  
@@ -420,7 +420,7 @@ Dynamsoft.DDV.documentManager.off("documentCreated", eventFunc);
 
 **Warning**
 
- Error Code  | Description                                         
+ Error Code  | Error Message                                        
 --------|-----------------------------------------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  
