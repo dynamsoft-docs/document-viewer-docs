@@ -77,7 +77,7 @@ const pageStyle = thumbnailObj.getStyle("pageStyle");
 
 **Warning**
 
- Error Code  | Description                                                             | API Return Value
+ Error Code  | Error Message                                                            | API Return Value
 --------|-------------------------------------------------------------------------|----------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.                       | `null`
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.                      | `null`
@@ -137,7 +137,7 @@ type BrowseViewerStyleName = "canvasStyle" | "pageStyle" | "selectedPageStyle" |
 
 **Warning**
 
- Error Code  | Description                                                             | API Return Value
+ Error Code  | Error Message                                                            | API Return Value
 --------|-------------------------------------------------------------------------|----------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.                       | `false`
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.                      | `false`
@@ -190,7 +190,7 @@ updateUiConfig(uiConfig: UiConfig): boolean;
 
 **Warning**
 
- Error Code  | Description                                         | API Return Value
+ Error Code  | Error Message                                        | API Return Value
 --------|-----------------------------------------------------|----------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   | `false`
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  | `false`
@@ -264,7 +264,7 @@ thumbnailObj.multiselectMode = true;
 
 **Warning**
 
- Error Code  | Description                                         
+ Error Code  | Error Message                                        
 --------|-----------------------------------------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
 
@@ -294,7 +294,7 @@ const selPages = thumbnailObj.getSelectedPageIndices();
 
 **Warning**
 
- Error Code  | Description                                         | API Return Value
+ Error Code  | Error Message                                        | API Return Value
 --------|-----------------------------------------------------|--------------------
  -80304 | No document opened.                                 | `[]`
 
@@ -330,7 +330,7 @@ thumbnailObj.selectPages([0,1]);
 
 **Warning**
 
- Error Code  | Description                                         | API Return Value
+ Error Code  | Error Message                                        | API Return Value
 --------|-----------------------------------------------------|--------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   | `[]`
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  | `[]`
@@ -358,7 +358,7 @@ thumbnailObj.selectAllPages();
 
 **Warning**
 
- Error Code  | Description                                         | API Return Value
+ Error Code  | Error Message                                        | API Return Value
 --------|-----------------------------------------------------|--------------------
  -80304 | No document opened.                                 | `[]`
  -80305 | There is no image in the current document.          | `[]`
@@ -395,7 +395,7 @@ thumbnailObj.setRowAndColumn(5,8); // Display the page in five rows and eight co
 
 **Warning**
 
- Error Code  | Description                                         | API Return Value
+ Error Code  | Error Message                                        | API Return Value
 --------|-----------------------------------------------------|--------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   | `false`
  -80101 | *XXX(API)*: *XXX(ParameterName)* is out of range.     | `false`

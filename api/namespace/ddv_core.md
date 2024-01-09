@@ -51,7 +51,7 @@ Dynamsoft.DDV.Core.license = "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9";
 
 **Exception**
 
- Error Code  | Description                                         
+ Error Code  | Error Message                                        
 --------|-----------------------------------------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid. 
 
@@ -73,7 +73,7 @@ Dynamsoft.DDV.Core.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-
 
 **Exception**
 
- Error Code  | Description                                         
+ Error Code  | Error Message                                        
 --------|-----------------------------------------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid. 
 
@@ -96,7 +96,7 @@ Dynamsoft.DDV.Core.deviceFriendlyName = "xxxxxxx";
 
 **Exception**
 
- Error Code  | Description                                         
+ Error Code  | Error Message                                        
 --------|-----------------------------------------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid. 
 
@@ -127,7 +127,7 @@ await Dynamsoft.DDV.Core.loadWasm();
 
 **Promise Exception**
 
- Error Code  | Description                                         
+ Error Code  | Error Message                                        
 --------|-----------------------------------------------------
  -80052 | *XXX(API)*: Resource is not found from the specified engineResourcePath.
 
@@ -159,6 +159,6 @@ await Dynamsoft.DDV.Core.init();
 
 **Promise Exception**
 
- Error Code  | Description                                         
+ Error Code  | Error Message                                        
 --------|-----------------------------------------------------
  -80052 | *XXX(API)*: Resource is not found from the specified engineResourcePath.
