@@ -147,7 +147,7 @@ const thumbnailObj = editViewer.thumbnail;
 
 **Warning**
 
- Error Code | Description                                                  
+ Error Code | Error Message                                                 
  ---------- | ------------------------------------------------------------ 
  -80316     | ImageFilter needs to be configured by Dynamsoft.DDV.setProcessingHandler to enable the image filter feature.                        
 
