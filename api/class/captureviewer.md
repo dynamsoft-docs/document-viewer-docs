@@ -124,7 +124,7 @@ const captureViewer = new Dynamsoft.DDV.CaptureViewer({
 
 **Warning**
 
- Error Code | Description                                                  
+ Error Code | Error Message                                                 
  ---------- | ------------------------------------------------------------ 
  -80315     | DocumentDetect needs to be configured by Dynamsoft.DDV.setProcessingHandler to enable the document detection feature. 
 
