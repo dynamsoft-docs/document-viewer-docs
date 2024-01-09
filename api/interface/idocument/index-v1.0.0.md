@@ -168,7 +168,9 @@ await firstDoc.loadSource([source]);
  -80002 | *XXX(LicenseModuleName)* module license has expired.                                                               
  -80003 | *XXX(LicenseModuleName)* module license is missing.                         
  -80004 | *XXX(LicenseModuleName)* module license version does not match.                                 
- -80005 | Domain does not match the domain bound to the *XXX(LicenseModuleName)* module license.  
+ -80005 | Domain does not match the domain bound to the *XXX(LicenseModuleName)* module license.
+ -80050 | DDV.Core.init() has not been set up yet.  
+ -80051 | DDV.Core.init() has not been completed.  
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  
  -80200 | File type is not supported. 
