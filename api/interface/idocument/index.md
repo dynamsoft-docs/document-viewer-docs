@@ -501,9 +501,9 @@ The page uid of the inserted blank page.
 
  Error Code  | Error Message                                        
 -------------|-----------------------------------------------------
- -80100      | *XXX(API)*: *XXX(ParameterName)* is invalid. 
  -80050      | DDV.Core.init() has not been set up yet.  
  -80051      | DDV.Core.init() has not been completed.
+ -80100      | *XXX(API)*: *XXX(ParameterName)* is invalid. 
  -80101      | *XXX(API)*: *XXX(ParameterName)* is out of range. 
  -80102      | *XXX(API)*: *XXX(ParameterName)* is missing.
 
