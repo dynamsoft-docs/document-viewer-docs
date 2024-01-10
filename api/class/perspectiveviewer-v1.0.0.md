@@ -510,7 +510,7 @@ const currentDoc = perspectiveViewer.currentDocument;
 
 **See Also**
 
-[IDocument]({{ site.api }}interface/idocument.html)
+[IDocument]({{ site.api }}interface/idocument/index.html)
 
 ### getPageCount()
 
