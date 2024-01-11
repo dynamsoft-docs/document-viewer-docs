@@ -139,7 +139,7 @@ Dynamsoft.DDV.setProcessingHandler("documentBoundariesDetect", detectHandler);
 <body>
     <div id="viewer"></div>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@1.1.0/dist/ddv.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@1.0.0/dist/ddv.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/dynamsoft-core@3.0.10/dist/core.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/dynamsoft-document-normalizer@2.0.11/dist/ddn.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/dynamsoft-capture-vision-router@2.0.11/dist/cvr.js"></script>
@@ -147,9 +147,10 @@ Dynamsoft.DDV.setProcessingHandler("documentBoundariesDetect", detectHandler);
 <script type="module">
     (async () => {
         // Initializes DDV
-        Dynamsoft.DDV.Core.license = "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9"; // Public trial license which is valid for 24 hours
-        Dynamsoft.DDV.Core.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@1.1.0/dist/engine";
-        await Dynamsoft.DDV.Core.init(); 
+        await DDV.setConfig({
+            license: "**********", // Specify your DDV license
+            engineResourcePath: "*************", // Specify the path should lead to a folder containing the distributed WASM files.
+        });
 
         // Initializes the DDN license using a license key string.
         Dynamsoft.License.LicenseManager.initLicense("**********"); 
