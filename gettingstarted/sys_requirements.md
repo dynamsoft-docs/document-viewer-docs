@@ -23,11 +23,11 @@ The SDK requires the following features to work:
 
 The following table is a list of supported browsers based on the above requirements:
 
-  | Browser Name |             Version              |
-  | :----------: | :------------------------------: |
-  |    Chrome    |             v75+                 |
-  |   Firefox    |             v69+                 |
-  |    Safari    |             v14+                 |
-  |     Edge     |             v79+                 |
+  | Browser Name |             PC                   |   Mobile    |
+  | :----------: | :------------------------------: | :---------: |
+  |    Chrome    |             v75+                 |   v75+      |
+  |   Firefox    |             v69+                 |   v79+      |
+  |    Safari    |             v14+                 |   v15+      |
+  |     Edge     |             v79+                 |   v92+      |
 
 Apart from the browsers, the operating systems may impose some limitations of their own that could restrict the use of the SDKs.
