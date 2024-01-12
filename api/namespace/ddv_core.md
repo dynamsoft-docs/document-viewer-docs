@@ -68,7 +68,7 @@ engineResourcePath: string;
 **Code Snippet**
 
 ```typescript
-Dynamsoft.DDV.Core.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@latest/dist/engine";
+Dynamsoft.DDV.Core.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@1.1.0/dist/engine";
 ```
 
 **Exception**
@@ -152,7 +152,7 @@ A Promise [`ConfigResult`]({{ site.api }}interface/configresult.html) object.
 // Public trial license which is valid for 24 hours
 // You can request a 30-day trial key from https://www.dynamsoft.com/customer/license/trialLicense/?product=ddv
 Dynamsoft.DDV.Core.license = "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9";
-Dynamsoft.DDV.Core.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@latest/dist/engine";
+Dynamsoft.DDV.Core.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@1.1.0/dist/engine";
 Dynamsoft.DDV.Core.loadWasm(); 
 await Dynamsoft.DDV.Core.init(); 
 ```

@@ -26,21 +26,23 @@ The simplest way to include the SDK is to use either the [jsDelivr](https://jsde
 
 - jsDelivr
 
-  ```html
-  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-core@3.0.10/dist/core.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-document-normalizer@2.0.11/dist/ddn.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-capture-vision-router@2.0.11/dist/cvr.js"></script>
-  ```
+    ```html
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-core@3.0.30/dist/core.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-license@3.0.20/dist/license.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-document-normalizer@2.0.20/dist/ddn.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-capture-vision-router@2.0.30/dist/cvr.js"></script>
+    ```
 
 - UNPKG
 
-  ```html
-  <script src="https://unpkg.com/dynamsoft-core@3.0.10/dist/core.js"></script>
-  <script src="https://unpkg.com/dynamsoft-document-normalizer@2.0.11/dist/ddn.js"></script>
-  <script src="https://unpkg.com/dynamsoft-capture-vision-router@2.0.11/dist/cvr.js"></script>
-  ```
+    ```html
+    <script src="https://unpkg.com/npm/dynamsoft-core@3.0.30/dist/core.js"></script>
+    <script src="https://unpkg.com/npm/dynamsoft-license@3.0.20/dist/license.js"></script>
+    <script src="https://unpkg.com/npm/dynamsoft-document-normalizer@2.0.20/dist/ddn.js"></script>
+    <script src="https://unpkg.com/npm/dynamsoft-capture-vision-router@2.0.30/dist/cvr.js"></script>
+    ```
 
-You can also download the SDK and host its files on your own website / server before including it in your application. Please refer to [Host the SDK yourself](https://www.dynamsoft.com/document-normalizer/docs/web/programming/javascript/user-guide/index.html#host-the-sdk-yourself).
+You can also download the SDK and host its files on your own website/server before including it in your application. Please refer to [Host the SDK yourself](https://www.dynamsoft.com/document-normalizer/docs/web/programming/javascript/user-guide/index.html#host-the-sdk-yourself).
 
 ### Initialize DDN
 
@@ -48,7 +50,7 @@ You can also download the SDK and host its files on your own website / server be
 // Initializes the DDN license using a license key string.
 Dynamsoft.License.LicenseManager.initLicense("**********"); 
 // Preloads the DocumentNormalizer module, saving time in preparing for document border detection.
-Dynamsoft.CVR.CaptureVisionRouter.preloadModule(["DDN"]); 
+Dynamsoft.Core.CoreModule.loadWasm(["DDN"]); 
 // Initializes the router variable by creating an instance of the CaptureVisionRouter class.
 const router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance(); 
 ```
@@ -121,7 +123,7 @@ Dynamsoft.DDV.setProcessingHandler("documentBoundariesDetect", detectHandler);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document Detect</title>
-    <link rel="stylesheet" href="./Resources/ddv.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@1.1.0/dist/ddv.css">
 </head>
 <style>
     html,body {
@@ -140,10 +142,10 @@ Dynamsoft.DDV.setProcessingHandler("documentBoundariesDetect", detectHandler);
     <div id="viewer"></div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@1.1.0/dist/ddv.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/dynamsoft-core@3.0.10/dist/core.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/dynamsoft-document-normalizer@2.0.11/dist/ddn.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/dynamsoft-capture-vision-router@2.0.11/dist/cvr.js"></script>
-
+<script src="https://cdn.jsdelivr.net/npm/dynamsoft-core@3.0.30/dist/core.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dynamsoft-license@3.0.20/dist/license.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dynamsoft-document-normalizer@2.0.20/dist/ddn.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dynamsoft-capture-vision-router@2.0.30/dist/cvr.js"></script>
 <script type="module">
     (async () => {
         // Initializes DDV
@@ -153,8 +155,8 @@ Dynamsoft.DDV.setProcessingHandler("documentBoundariesDetect", detectHandler);
 
         // Initializes the DDN license using a license key string.
         Dynamsoft.License.LicenseManager.initLicense("**********"); 
-        // Preloads the DocumentNormalizer module, saving time in preparing for document border detection.
-        Dynamsoft.CVR.CaptureVisionRouter.preloadModule(["DDN"]); 
+
+        Dynamsoft.Core.CoreModule.loadWasm(["DDN"]); 
         // Initializes the router variable by creating an instance of the CaptureVisionRouter class.
         const router = await Dynamsoft.CVR.CaptureVisionRouter.createInstance(); 
 
