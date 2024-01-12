@@ -118,7 +118,7 @@ type HandlerType = "documentBoundariesDetect"|"imageFilter";
 
 ```typescript
 Dynamsoft.DDV.Core.license = "Your-License-String";
-Dynamsoft.DDV.Core.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@latest/dist/engine"; // lead to a folder containing the distributed WASM files
+Dynamsoft.DDV.Core.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@1.1.0/dist/engine"; // lead to a folder containing the distributed WASM files
 await Dynamsoft.DDV.Core.init(); 
 
 const docManager = Dynamsoft.DDV.documentManager;
