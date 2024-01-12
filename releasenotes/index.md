@@ -12,7 +12,7 @@ permalink: /releasenotes/index.html
 
 # Release Notes
 
-## 1.1 (01/11/2024)
+## 1.1 (01/12/2024)
 
 ### Improved
 
