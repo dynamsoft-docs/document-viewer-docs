@@ -7,7 +7,7 @@ title: Dynamsoft Document Viewer API Reference - Interface IDocument
 keywords: Documentation, Dynamsoft Document Viewer, API Reference, Interface IDocument
 breadcrumbText: Interface IDocument
 description: Dynamsoft Document Viewer Documentation API Reference Interface IDocument Page
-permalink: /api/interface/idocument/index.html
+permalink: /api/interface/idocument/index-v1.0.0.html
 ---
 
 # IDocument
@@ -32,7 +32,6 @@ This interface that defines a document object.
 | [`deleteAllPages()`](#deleteallpages)    | Delete all pages in current document.                        |
 | [`movePages()`](#movepages)         | Move specified page(s) to the target position in current document. |
 | [`switchPage()`](#switchpage)        | Swap the position of two pages in current document.          |
-| [`insertBlankPage()`](#insertblankpage)          | Insert a blank page to current document. |
 | [`rename()`](#rename)            | Rename current document.                                     |
 | [`saveToPng()`](#savetopng)         | Save specified page or current page in current document to a PNG file. |
 | [`saveToJpeg()`](#savetojpeg)        | Save specified page or current page in current document to a JPEG file. |
@@ -141,7 +140,7 @@ loadSource(sources: Source | Source[], index?: number): Promise<string[]>;
 
 `sources`: The target files, it could be a file or a file array. Please refer to [`Source`]({{ site.api }}interface/idocument/source.html). `Source` can be extanded to [`PdfSource`]({{ site.api }}interface/idocument/pdfsource.html).
 
-`index`: The position in the document where the file(s) will be loaded to. If not set or out of the maximum range, the loaded file(s) will be added from the end of the document.
+`index`: The position in the document where the file(s) will be loaded to. If not set, the loaded file(s) will be added from the end of the document.
 
 **Return Value**
 
@@ -169,9 +168,9 @@ await firstDoc.loadSource([source]);
  -80002 | *XXX(LicenseModuleName)* module license has expired.                                                               
  -80003 | *XXX(LicenseModuleName)* module license is missing.                         
  -80004 | *XXX(LicenseModuleName)* module license version does not match.                                 
- -80005 | Domain does not match the domain bound to the *XXX(LicenseModuleName)* module license. 
+ -80005 | Domain does not match the domain bound to the *XXX(LicenseModuleName)* module license.
  -80050 | DDV.Core.init() has not been set up yet.  
- -80051 | DDV.Core.init() has not been completed.   
+ -80051 | DDV.Core.init() has not been completed.  
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  
  -80200 | File type is not supported. 
@@ -407,7 +406,7 @@ movePages(indices: number[], insertBeforeIndex?: number): void;
 
 `indices`: The array of page(s) indices to be moved.
 
-`insertBeforeIndex`: Moved pages will be placed before this index. If not set or out of the maximum range, the specified page(s) will be moved after the last page.
+`insertBeforeIndex`: Moved pages will be placed before this index. If not set, the specified page(s) will be moved after the last page.
 
 **Code Snippet**
 
@@ -461,52 +460,6 @@ firstDoc.switchPage(2, 5);
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
  -80101 | *XXX(API)*: *XXX(ParameterName)* is out of range.    
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  
-
-### insertBlankPage()
-
-Insert a blank page to current document.
-
-**Syntax**
-
-```typescript
-insertBlankPage(
-  pageWidth: number;
-  pageHeight: number;
-  insertBeforeIndex?: number;
-):string;
-```
-
-**Parameters**
-
-`pageWidth`: The page width of the blank page to insert. Unit: inch. Value range: [0.01, 100].
-
-`pageHeight`: The page height of the blank page to insert. Unit: inch. Value range: [0.01, 100].
-
-`insertBeforeIndex`: The blank page will be inserted before this index. If not set or out of the maximum range, the blank page will be added after the last page.
-
-*Common page sizes:*
-
- Page size | pageWidth (inch) | pageHeight (inch) 
------------|------------------|-------------------
- Letter    | 8.5              | 11                
- Legal     | 8.5              | 14                
- A4        | 8.3              | 11.7              
- A3        | 11.7             | 16.5              
-
-**Return value**
-
-The page uid of the inserted blank page.
-
-**Exception**
-
- Error Code  | Error Message                                        
--------------|-----------------------------------------------------
- -80050      | DDV.Core.init() has not been set up yet.  
- -80051      | DDV.Core.init() has not been completed.
- -80100      | *XXX(API)*: *XXX(ParameterName)* is invalid. 
- -80101      | *XXX(API)*: *XXX(ParameterName)* is out of range. 
- -80102      | *XXX(API)*: *XXX(ParameterName)* is missing.
-
 
 ### rename()
 

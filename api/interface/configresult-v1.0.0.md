@@ -7,7 +7,7 @@ title: Dynamsoft Document Viewer API Reference - Interface ConfigResult
 keywords: Documentation, Dynamsoft Document Viewer, API Reference, Interface ConfigResult
 breadcrumbText: Interface ConfigResult
 description: Dynamsoft Document Viewer Documentation API Reference Interface ConfigResult Page
-permalink: /api/interface/configresult.html
+permalink: /api/interface/configresult-v1.0.0.html
 ---
 
 # ConfigResult
@@ -33,4 +33,4 @@ The UUID of the client device. Please refer to [Client UUID](https://www.dynamso
 
 ## Related
 
-- [`init()`]({{ site.api }}namespace/ddv_core.html#init)
+- [`setConfig()`]({{ site.api }}namespace/ddv.html#static-setconfig)

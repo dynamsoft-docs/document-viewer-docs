@@ -7,17 +7,18 @@ title: Dynamsoft Document Viewer API Reference - Namespace - Dynamsoft.DDV
 keywords: Documentation, Dynamsoft Document Viewer, API Reference, Namespace, Dynamsoft.DDV
 breadcrumbText: Dynamsoft.DDV
 description: Dynamsoft Document Viewer Documentation API Reference Namespace Dynamsoft.DDV Page
-permalink: /api/namespace/ddv.html
+permalink: /api/namespace/ddv-v1.0.0.html
 ---
 
 # Dynamsoft.DDV
 
 ## Index
 
-**Handler Configuration**
+**Initialization**
 
 | API Name                        | Description                                       |
 | ------------------------------- | ------------------------------------------------- |
+| [`<static> setConfig()`](#static-setconfig)           | Initialize license, engineResourcePath and so on. |
 | [`<static> setProcessingHandler()`](#static-setprocessinghandler) | Set a processing handler to the DDV system.       |
 
 **Members**
@@ -68,7 +69,44 @@ permalink: /api/namespace/ddv.html
 | [`warning`](#warning)    | Triggered when any warning occurs . |
 | [`verbose`](#verbose)    | Triggered when DDV is running.      |
 
-## Handler Configuration
+## Initialization
+
+### `<static>` setConfig()
+
+Initialize license, engineResourcePath and so on.
+
+**Syntax**
+
+```typescript
+static setConfig(config: Configuration): Promise<ConfigResult>;
+```
+
+**Parameters**
+
+`config`: The object which contains license, engineResourcePath and so on. Please refer to [`Configuration`]({{ site.api }}interface/configuration.html).
+
+**Return values**
+
+A Promise [`ConfigResult`]({{ site.api }}interface/configresult.html) object. 
+
+**Code Snippet**
+
+```typescript
+await Dynamsoft.DDV.setConfig({
+    // Public trial license which is valid for 24 hours
+    // You can request a 30-day trial key from https://www.dynamsoft.com/customer/license/trialLicense/?product=ddv
+    license: "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9",
+    engineResourcePath: "https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@1.0.0/dist/engine",
+});
+```
+
+**Exception**
+
+ Error Code  | Error Message                                        
+--------|-----------------------------------------------------
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
+ -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  
+
 
 ### `<static>` setProcessingHandler()
 
@@ -117,9 +155,10 @@ type HandlerType = "documentBoundariesDetect"|"imageFilter";
 **Code Snippet**
 
 ```typescript
-Dynamsoft.DDV.Core.license = "Your-License-String";
-Dynamsoft.DDV.Core.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@latest/dist/engine"; // lead to a folder containing the distributed WASM files
-await Dynamsoft.DDV.Core.init(); 
+await Dynamsoft.DDV.setConfig({
+    license: "Your-License-String",
+    engineResourcePath: "Resources/WASM/", // lead to a folder containing the distributed WASM files
+});
 
 const docManager = Dynamsoft.DDV.documentManager;
 ```

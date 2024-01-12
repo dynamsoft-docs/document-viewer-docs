@@ -7,7 +7,7 @@ title: Dynamsoft Document Viewer API Reference - Error List
 keywords: Documentation, Dynamsoft Document Viewer, API Reference, Error List
 breadcrumbText: API Reference
 description: Dynamsoft Document Viewer Documentation API Reference Error List Page
-permalink: /api/errorlist.html
+permalink: /api/errorlist-v1.0.0.html
 ---
 
 # Error List
@@ -26,9 +26,8 @@ permalink: /api/errorlist.html
 
  Error Code | Error Message                                    
  ---------- | ------------------------------------------------ 
- -80050     | DDV.Core.init() has not been set up yet. 
- -80051     | DDV.Core.init() has not been completed.  
- -80052     | *XXX(API)*: Resource is not found from the specified engineResourcePath.
+ -80050     | DDV.setConfig has not been set up yet. 
+ -80051     | DDV.setConfig has not been completed.  
 
 ## Common Error
 

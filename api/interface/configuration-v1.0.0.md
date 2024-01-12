@@ -7,7 +7,7 @@ title: Dynamsoft Document Viewer API Reference - Interface Configuration
 keywords: Documentation, Dynamsoft Document Viewer, API Reference, Interface Configuration
 breadcrumbText: Interface Configuration
 description: Dynamsoft Document Viewer Documentation API Reference Interface Configuration Page
-permalink: /api/interface/configuration.html
+permalink: /api/interface/configuration-v1.0.0.html
 ---
 
 # Configuration

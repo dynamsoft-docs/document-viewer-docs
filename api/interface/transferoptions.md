@@ -29,7 +29,7 @@ The array of pages indices to be moved or copied. If it is not specified, all pa
 
 ### insertBeforeIndex
 
-The moved or copied pages will be placed before this index. If it is not specified, the specified page(s) will be moved or copied after the last page.
+The moved or copied pages will be placed before this index. If it is not specified or out of the maximum range, the specified page(s) will be moved or copied after the last page.
 
 
 ## Related

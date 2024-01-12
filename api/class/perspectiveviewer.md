@@ -115,7 +115,7 @@ const perspectiveViewer = new Dynamsoft.DDV.PerspectiveViewer({
 
 **Exception**
 
- Error Code  | Description                                         
+ Error Code  | Error Message                                        
 --------|-----------------------------------------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.                                     
  -80001 | License string is invalid.                              
@@ -123,8 +123,8 @@ const perspectiveViewer = new Dynamsoft.DDV.PerspectiveViewer({
  -80003 | *XXX(LicenseModuleName)* module license is missing.                         
  -80004 | *XXX(LicenseModuleName)* module license version does not match.                                 
  -80005 | Domain does not match the domain bound to the *XXX(LicenseModuleName)* module license.  
- -80050 | DDV.setConfig has not been set up yet.  
- -80051 | DDV.setConfig has not been completed.   
+ -80050 | DDV.Core.init() has not been set up yet.  
+ -80051 | DDV.Core.init() has not been completed.   
 
 ### destroy()
 
@@ -175,7 +175,7 @@ perspectiveViewer.bindContainer("viewercontainer");
 
 **Exception**
 
- Error Code  | Description                                         
+ Error Code  | Error Message                                        
 --------|-----------------------------------------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  
@@ -242,7 +242,7 @@ const pageStyle = perspectiveViewer.getStyle("pageStyle");
 
 **Warning**
 
- Error Code  | Description                                                             | API Return Value
+ Error Code  | Error Message                                                            | API Return Value
 --------|-------------------------------------------------------------------------|----------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.                       | `null`
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.                      | `null`
@@ -302,7 +302,7 @@ type PerspectiveViewerStyleName = "canvasStyle" | "pageStyle" | "quadSelectionSt
 
 **Warning**
 
- Error Code  | Description                                                             | API Return Value
+ Error Code  | Error Message                                                            | API Return Value
 --------|-------------------------------------------------------------------------|----------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.                       | `false`
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.                      | `false`
@@ -364,7 +364,7 @@ perspectiveViewer.updateUiConfig(viewerUi);
 
 **Warning**
 
- Error Code  | Description                                         | API Return Value
+ Error Code  | Error Message                                        | API Return Value
 --------|-----------------------------------------------------|----------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   | `false`
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  | `false`
@@ -454,7 +454,7 @@ perspectiveViewer.openDocument(docUid);
 
 **Exception**
 
- Error Code  | Description                                         
+ Error Code  | Error Message                                        
 --------|-----------------------------------------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.   
@@ -488,7 +488,7 @@ perspectiveViewer.closeDocument();
 
 **Warning**
 
- Error Code  | Description                                         | API Return Value
+ Error Code  | Error Message                                        | API Return Value
 --------|-----------------------------------------------------|--------------------
  -80304 | No document opened.                                 | `false`
 
@@ -510,7 +510,7 @@ const currentDoc = perspectiveViewer.currentDocument;
 
 **See Also**
 
-[IDocument]({{ site.api }}interface/idocument.html)
+[IDocument]({{ site.api }}interface/idocument/index.html)
 
 ### getPageCount()
 
@@ -534,7 +534,7 @@ const pageCount = perspectiveViewer.getPageCount();
 
 **Warning**
 
- Error Code  | Description                                         | API Return Value
+ Error Code  | Error Message                                        | API Return Value
 --------|-----------------------------------------------------|--------------------
  -80304 | No document opened.                                 | `-1`
 
@@ -565,7 +565,7 @@ perspectiveViewer.goToPage(3);
 
 **Warning**
 
- Error Code  | Description                                              | API Return Value
+ Error Code  | Error Message                                             | API Return Value
 --------|----------------------------------------------------------|------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.        | `-1`
  -80101 | *XXX(API)*: *XXX(ParameterName)* is out of range.    | `-1`
@@ -595,7 +595,7 @@ const currentIndex = perspectiveViewer.getCurrentPageIndex();
 
 **Warning**
 
- Error Code  | Description                                         | API Return Value
+ Error Code  | Error Message                                        | API Return Value
 --------|-----------------------------------------------------|--------------------
  -80304 | No document opened.                                 | `-1`
  -80305 | There is no image in the current document.          | `-1`
@@ -622,7 +622,7 @@ const curPageUid = perspectiveViewer.getCurrentPageUid();
 
 **Warning**
 
- Error Code  | Description                                         | API Return Value
+ Error Code  | Error Message                                        | API Return Value
 --------|-----------------------------------------------------|--------------------
  -80304 | No document opened.                                 | `''`
  -80305 | There is no image in the current document.          | `''`
@@ -654,7 +654,7 @@ const firstPageUid = perspectiveViewer.indexToUid(0);
 
 **Warning**
 
- Error Code  | Description                                              | API Return Value
+ Error Code  | Error Message                                             | API Return Value
 --------|----------------------------------------------------------|------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.        | `''`
  -80101 | *XXX(API)*: *XXX(ParameterName)* is out of range.    | `''`
@@ -689,7 +689,7 @@ perspectiveViewer.uidToIndex(curPageUid);
 
 **Warning**
 
- Error Code  | Description                                              | API Return Value
+ Error Code  | Error Message                                             | API Return Value
 --------|----------------------------------------------------------|------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.        | `-1`
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.       | `-1`
@@ -728,7 +728,7 @@ perspectiveViewer.setQuadSelection(quad);
 
 **Warning**
 
- Error Code  | Description                                               | API Return Value
+ Error Code  | Error Message                                              | API Return Value
 --------|-----------------------------------------------------------|-------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.         | `false`
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.        | `false`
@@ -763,7 +763,7 @@ const quad = perspectiveViewer.getQuadSelection();
 
 **Warning**
 
- Error Code  | Description                                         | API Return Value
+ Error Code  | Error Message                                        | API Return Value
 --------|-----------------------------------------------------|---------------------
  -80304 | No document opened.                                 | `null`
  -80305 | There is no image in the current document.          | `null`
@@ -796,7 +796,7 @@ perspectiveViewer.resetQuadSelection();
 
 **Warning**
 
- Error Code  | Description                                               | API Return Value
+ Error Code  | Error Message                                              | API Return Value
 --------|-----------------------------------------------------------|-------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.         | `false`
  -80304 | No document opened.                                       | `false`
@@ -831,7 +831,7 @@ await perspectiveViewer.applyPerspective(quad);
 
 **Promise Exception**
 
- Error Code  | Description                                         
+ Error Code  | Error Message                                        
 --------|-----------------------------------------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  
@@ -878,7 +878,7 @@ perspectiveViewer.rotate(-90);
 
 **Warning**
 
- Error Code  | Description                                                        | API Return Value
+ Error Code  | Error Message                                                       | API Return Value
 --------|-------------------------------------------------------------------------|-------------------    
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.                       | `false`
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.                      | `false`
@@ -912,7 +912,7 @@ perspectiveViewer.saveOperations();
 
 **Warning**
 
- Error Code  | Description                                         | API Return Value
+ Error Code  | Error Message                                        | API Return Value
 --------|-----------------------------------------------------|-----------------
  -80304 | No document opened.                                 | `false`
 
@@ -949,7 +949,7 @@ perspectiveViewer.on("resized", eventFunc);
 
 **Warning**
 
- Error Code  | Description                                         
+ Error Code  | Error Message                                        
 --------|-----------------------------------------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  
@@ -988,7 +988,7 @@ perspectiveViewer.off("resized", eventFunc);
 
 **Warning**
 
- Error Code  | Description                                         
+ Error Code  | Error Message                                        
 --------|-----------------------------------------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  

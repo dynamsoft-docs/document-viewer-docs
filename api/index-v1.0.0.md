@@ -3,14 +3,34 @@ layout: default-layout
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
-title: Dynamsoft Document Viewer API Reference - Interface
-keywords: Documentation, Dynamsoft Document Viewer, API Reference, Interface
-breadcrumbText: Interface IBrowseViewer
-description: Dynamsoft Document Viewer Documentation API Reference Interface Index Page
-permalink: /api/interface/index.html
+title: Dynamsoft Document Viewer API Reference
+keywords: Documentation, Dynamsoft Document Viewer, API Reference
+breadcrumbText: API Reference
+description: Dynamsoft Document Viewer Documentation API Reference Page
+permalink: /api/index-v1.0.0.html
 ---
 
-# DDV Interfaces
+# API Reference
+
+## Namespaces
+
+- [`Dynamsoft.DDV`]({{ site.api }}namespace/ddv.html)
+- [`Dynamsoft.DDV.Elements`]({{ site.api }}namespace/ddv_elements.html)
+
+## Classes
+
+- [DocumentManager]({{ site.api }}class/documentmanager.html)
+- [EditViewer]({{ site.api }}class/editviewer.html)
+- [CaptureViewer]({{ site.api }}class/captureviewer.html)
+- [PerspectiveViewer]({{ site.api }}class/perspectiveviewer.html)
+- [BrowseViewer]({{ site.api }}class/browseviewer.html)
+- [CustomViewer]({{ site.api }}class/customviewer.html)
+
+- Advanced
+    - [ImageFilter]({{ site.api }}class/advanced/imagefilter.html)
+    - [DocumentDetect]({{ site.api }}class/advanced/documentdetect.html)
+
+## Interfaces
 
 - [`IDocument`]({{ site.api }}interface/idocument/index.html)
     - [`Source`]({{ site.api }}interface/idocument/source.html)
@@ -36,6 +56,7 @@ permalink: /api/interface/index.html
     | `canvasStyle`        | [`CanvasStyle`]({{ site.api }}interface/styleinterface/canvasstyle.html) |
     | `quadSelectionStyle` | [`QuadSelectionStyle`]({{ site.api }}interface/styleinterface/quadselectionstyle.html) |
 
+- [`Configuration`]({{ site.api }}interface/configuration.html)
 - [`ConfigResult`]({{ site.api }}interface/configresult.html)
 - [`CreateDocumentOptions`]({{ site.api }}interface/createdocumentoptions.html)
 - [`MergeDocumentOptions`]({{ site.api }}interface/mergedocumentoptions.html)
@@ -68,3 +89,19 @@ permalink: /api/interface/index.html
 - [`DetectResult`]({{ site.api }}interface/detectresult.html)
 - [`DocumentDetectConfig`]({{ site.api }}interface/documentdetectconfig.html)
 - [`DocumentDetectResult`]({{ site.api }}interface/documentdetectresult.html)
+
+## Enumeration & Type
+
+- [`EnumPdfPageType`]({{ site.api }}enumeration-type/enumpdfpagetype.html)
+- [`EnumPdfCompressionType`]({{ site.api }}enumeration-type/enumpdfcompressiontype.html)
+- [`EnumTiffCompressionType`]({{ site.api }}enumeration-type/enumtiffcompressiontype.html)
+- [`EnumConvertMode`]({{ site.api }}enumeration-type/enumconvertmode.html)
+- [`EnumImageDataType`]({{ site.api }}enumeration-type/enumimagedatatype.html)
+- [`EnumImageFilterType`]({{ site.api }}enumeration-type/enumimagefiltertype.html)
+- [`EnumDocumentDetectionStatus`]({{ site.api }}enumeration-type/enumdocumentdetectionstatus.html)
+- [`type Quad`]({{ site.api }}enumeration-type/quad.html)
+
+## Error
+
+- [Error List]({{ site.api }}errorlist.html)
+
