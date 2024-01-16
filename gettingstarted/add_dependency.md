@@ -69,7 +69,7 @@ or
 
   ```html
   <script src="./node_modules/dynamsoft-document-viewer/dist/ddv.js"></script>
-  <link rel="stylesheet" href="./node_modules/dynamsoft-document-viewer@1.1.0/dist/ddv.css">
+  <link rel="stylesheet" href="./node_modules/dynamsoft-document-viewer/dist/ddv.css">
   ```
 
 or
