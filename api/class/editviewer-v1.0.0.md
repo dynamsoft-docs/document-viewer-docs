@@ -975,7 +975,7 @@ rotate(
 
 **Parameters**
 
-`angle`: Specify the angle. Only multiples of 90 degrees are supported. Postive value means clockwise rotation, negative value means counterclockwise rotation.
+`angle`: Specify the angle. Only multiples of 90 degrees are supported. Positive value means clockwise rotation, negative value means counterclockwise rotation.
 
 `indices`: The array of the pages indices which will be rotated. If not set, the current page will be rotated.
 

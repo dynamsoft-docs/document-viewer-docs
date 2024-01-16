@@ -36,7 +36,7 @@ The rotation angle of specified page.
 **Remark**
 
 - Only multiples of 90 degrees are supported. 
-- Postive value means clockwise rotation, negative value means counterclockwise rotation.
+- Positive value means clockwise rotation, negative value means counterclockwise rotation.
 
 ### filter
 
