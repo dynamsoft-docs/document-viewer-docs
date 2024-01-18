@@ -30,7 +30,7 @@ permalink: /api/namespace/ddv_elements.html
 
 ***Built-in Elements***
 
-Built-in elements have different availability in different types of viewers. They are listed in categories on [Bulit-in Elements]({{ site.ui }}default_elements.html) page, please refer to it.
+Built-in elements have different availability in different types of viewers. They are listed in categories on [Built-in Elements]({{ site.ui }}default_elements.html) page, please refer to it.
 
 ## Methods
 
