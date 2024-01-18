@@ -16,7 +16,7 @@ DDV provides [`setProcessingHandler()`]({{ site.api }}namespace/ddv.html#static-
 
 ## Configure built-in image filter
 
-DDV has a bulit-in image filter handler. To configure it, please refer to the code below.
+DDV has a built-in image filter handler. To configure it, please refer to the code below.
 
 ```typescript
 const imageFilter = new Dynamsoft.DDV.ImageFilter();
@@ -29,7 +29,7 @@ Then, `Dynamsoft.DDV.Elements.Filter` will be enabled.
 
 ### Customize built-in image filter 
 
-#### Remove some filter items from bulit-in element
+#### Remove some filter items from built-in element
 
 If you want to remove some filter items from the bulid-in Filter element, you can modify the return of [`querySupported()`]({{ site.api }}class/advanced/imagefilter.html#querysupported) accordingly.
 
@@ -107,7 +107,7 @@ Dynamsoft.DDV.setProcessingHandler("imageFilter", imageFilter);
 
 ## Configure your own image filter
 
-Besides use the bulit-in image filter handler, you can also configure your own image filter algorithm.
+Besides use the built-in image filter handler, you can also configure your own image filter algorithm.
 
 **Example**
 
