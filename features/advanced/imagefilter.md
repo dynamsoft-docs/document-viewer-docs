@@ -61,7 +61,7 @@ Dynamsoft.DDV.setProcessingHandler("imageFilter", imageFilter);
 
 By default, `none` is the default filter type which means original image. You can reset [`defaultFilterType`]({{ site.api }}class/advanced/imagefilter.html#defaultfiltertype) to your expected one. 
 
-Please note the defauly filter type will be applied to the image directly.
+Please note the default filter type will be applied to the image directly.
 
 **Use case**
 
