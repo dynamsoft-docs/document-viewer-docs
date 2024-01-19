@@ -26,7 +26,7 @@ Key features include:
     - [Browse Viewer]({{ site.features }}viewers/others.html#browse-viewer)
     - [Custom Viewer]({{ site.features }}viewers/others.html#custom-viewer)
 
-Additionally, DDV enhances functionality by allowing integration with customized image filtering processes and document boundary detection processes. It is particularly recommended to use [Dynamsoft Document Normalizer](https://www.dynamsoft.com/document-normalizer/docs/web/programming/javascript/) for document detection.
+Additionally, DDV enhances functionality by allowing integration with customized image filtering processes and document boundary detection processes. It is particularly recommended to use [Dynamsoft Document Normalizer](https://www.dynamsoft.com/document-normalizer/docs/web/programming/javascript/){:target="_blank"} for document detection.
 
 DDV enables the seamless creation of a document management web application tailored to your specific workflow, user interface, and style needs.
 
