@@ -50,7 +50,7 @@ Default value: `""`.
 
 #### renderAnnotations
 
-Whether the annotations will be rendered or not. Only take effects when [`convertMode`](#convertmode) is set to `CM_RENDERALL` or `CM_AUTO` with a valid PDF Rastierzer license.
+Whether the annotations will be rendered or not. Only take effects when [`convertMode`](#convertmode) is set to `CM_RENDERALL` or `CM_AUTO`.
 
 Default value: `false`
 
