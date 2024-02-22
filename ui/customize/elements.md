@@ -66,7 +66,7 @@ const uiConfig = {......};
 
 //Bind the event in the specified viewer.
 const captureViewer = new Dynamsoft.DDV.CaptureViewer({
-        containerId: "viewer",
+        container: "viewer",
         uiConfig: uiConfig,
 });
 captureViewer.on("myClick", (e) => {
@@ -94,7 +94,7 @@ newTooltip.RotateRight = "Rotate right";
 Dynamsoft.DDV.Elements.setTooltip(newTooltip);
 
 const editViewer = new Dynamsoft.DDV.EditViewer({
-    containerId: "viewer", 
+    container: "viewer", 
 });
 ```
 
@@ -119,7 +119,7 @@ If any accompanying display texts are required to add or change of the default e
     Dynamsoft.DDV.Elements.setDisplayTextConfig(newDisplayText);
 
     const editViewer = new Dynamsoft.DDV.EditViewer({
-        containerId: "viewer", 
+        container: "viewer", 
     });
     ```
 
@@ -133,7 +133,7 @@ If any accompanying display texts are required to add or change of the default e
     Dynamsoft.DDV.Elements.setDisplayTextConfig(newDisplayText);
 
     const editViewer = new Dynamsoft.DDV.EditViewer({
-        containerId: "viewer", 
+        container: "viewer", 
     });
     ```
 
@@ -176,7 +176,7 @@ If any accompanying display texts are required to add or change of the default e
 
     // Create the new viewer with updated uiConfig.
     const editViewer = new Dynamsoft.DDV.EditViewer({
-        containerId: "viewer", 
+        container: "viewer", 
         uiConfig: viewerUi,
     });
     ```
@@ -213,7 +213,7 @@ Besides the default elements, you may need to create your own button to call oth
     header.children[1].children.splice(4, 0, closeButton); // Add the close button to the header's right
 
     const editViewer = new Dynamsoft.DDV.EditViewer({
-        containerId: "viewer",
+        container: "viewer",
         uiConfig: uiConfig,
     });
     ```
