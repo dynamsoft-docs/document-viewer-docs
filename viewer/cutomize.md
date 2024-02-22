@@ -44,7 +44,7 @@ Customize `pageStyle` while creating an edit viewer.
  - Step three: Configure the customized viewer config while creating the edti viewer.
     ```typescript
     const editViewer = new Dynamsoft.DDV.EditViewer({
-        containerId: "viewer",
+        container: "viewer",
         viewerConfig: newViewerConfig,
     });
     ```
@@ -61,7 +61,7 @@ Update the `CanvasStyle` after the edit viewer is created.
 
 ```typescript
 const editViewer = new Dynamsoft.DDV.EditViewer({
-    containerId: "viewer",
+    container: "viewer",
 });
 
 const newCanvasStyle = editViewer.getStyle("canvasStyle");
@@ -87,7 +87,7 @@ const newViewerConfig = {
 };
 
 const editViewer = new Dynamsoft.DDV.EditViewer({
-    containerId: "viewer",
+    container: "viewer",
     viewerConfig: newViewerConfig,
 });
 ```

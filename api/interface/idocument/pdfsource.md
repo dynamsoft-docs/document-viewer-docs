@@ -16,15 +16,15 @@ permalink: /api/interface/idocument/pdfsource.html
 
 ```typescript
 interface PdfSource extends Source {
-    convertMode: EnumConvertMode,   
-    password?: string,  
+    convertMode: EnumConvertMode;   
+    password?: string;  
     renderOptions?: {
-        renderAnnotations?: boolean,
-        resolution?: number,  
-        maxWidth?: number,
-        maxHeight?: number,
-        renderGrayscale?: boolean  
-    }
+        renderAnnotations?: boolean;
+        resolution?: number;  
+        maxWidth?: number;
+        maxHeight?: number;
+        renderGrayscale?: boolean;  
+    };
 }
 ```
 

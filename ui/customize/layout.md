@@ -76,7 +76,7 @@ Without changing the toolbar, only changing the relative position of the toolbar
 - **Step two**: Configure it when creating the new viewer.
     ```typescript
     const editViewer = new Dynamsoft.DDV.EditViewer({
-        containerId: "viewer",
+        container: "viewer",
         uiConfig: newUiConfig,
     });
     ```
@@ -128,7 +128,7 @@ And configure the UiConfig when creating the edit viewer.
 
 ```typescript
 const editViewer = new Dynamsoft.DDV.EditViewer({
-    containerId: "viewer",
+    container: "viewer",
     uiConfig: newUiConfig,
 });
 ```

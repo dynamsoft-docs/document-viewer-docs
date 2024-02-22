@@ -22,7 +22,7 @@ Hide the header dynamically.
 - Step one: Get current `UiConfig` by using method `getUiConfig()`.
     ```typescript
     const editViewer = new Dynamsoft.DDV.EditViewer({
-        containerId: "viewer",
+        container: "viewer",
     });
     const uiConfig = editViewer.getUiConfig();
     ```
