@@ -32,7 +32,7 @@ permalink: /releasenotes/index.html
 
 - Added the method [`init()`]({{ site.api }}namespace/ddv_core.html#init) to initialize DDV.
 
-- Added the method [`insertBlankPage()`]({{ site.api }}namespace/ddv_core.html#insertblankpage) to insert a blank page to the document.
+- Added the method [`insertBlankPage()`]({{ site.api }}interface/idocument/index.html#insertblankpage) to insert a blank page to the document.
 
 ### Removed
 
