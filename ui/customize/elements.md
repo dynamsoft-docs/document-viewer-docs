@@ -25,7 +25,7 @@ Although DDV provides many default elements, some customizations are also requir
 
 <div class="multi-panel-start"></div>
 
-To change the style and icon of the default elements, can use the properties `style` and `className` of `UiConfig`, please refer to the example below.
+To change the style and icon of the default elements, can use the properties `style` and `className` of [`UiConfig`]({{ site.api }}interface/uiconfig.html), please refer to the example below.
 
 **Use case**
 
@@ -78,7 +78,7 @@ captureViewer.on("myClick", (e) => {
 
 <div class="multi-panel-start"></div>
 
-DDV does not provide the default tooptips to the default elements, developers can configure it by use `getTooltip()` and `setTooltip()` easily. 
+DDV does not provide the default tooptips to the default elements, developers can configure it by use [`getTooltip()`]({{ site.api }}namespace/ddv_elements.html#static-gettooltip) and [`setTooltip()`]({{ site.api }}namespace/ddv_elements.html#static-settooltip) easily. 
 
 >It must be set before creating the viewer.
 
@@ -102,7 +102,7 @@ const editViewer = new Dynamsoft.DDV.EditViewer({
 
 <div class="multi-panel-start"></div>
 
-If any accompanying display texts are required to add or change of the default elements, DDV provides the methods `getDisplayTextConfig()` and `setDisplayTextConfig()` for this requirement. 
+If any accompanying display texts are required to add or change of the default elements, DDV provides the methods [`getDisplayTextConfig()`]({{ site.api }}namespace/ddv_elements.html#static-getdisplaytextconfig) and [`setDisplayTextConfig()`]({{ site.api }}namespace/ddv_elements.html#static-setdisplaytextconfig) for this requirement. 
 
 >It must be set before creating the viewer.
 
