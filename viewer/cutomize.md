@@ -41,7 +41,7 @@ Customize `pageStyle` while creating an edit viewer.
     };
     ```
 
- - Step three: Configure the customized viewer config while creating the edti viewer.
+ - Step three: Configure the customized viewer config while creating the edit viewer.
     ```typescript
     const editViewer = new Dynamsoft.DDV.EditViewer({
         container: "viewer",
