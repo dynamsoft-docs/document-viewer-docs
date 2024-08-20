@@ -1,0 +1,168 @@
+---
+layout: default-layout
+needAutoGenerateSidebar: true
+needGenerateH3Content: true
+noTitleIndex: true
+title: Dynamsoft Document Viewer API Reference - Rectangle Class
+keywords: Documentation, Dynamsoft Document Viewer, API Reference, Rectangle Class
+breadcrumbText: Rectangle Class
+description: Dynamsoft Document Viewer Documentation API Reference Rectangle Class Page
+permalink: /api/class/annotation/rectangle.html
+---
+
+# Rectangle Class
+
+## API Index
+
+| API Name               | Description                                                 |
+| ---------------------- | ----------------------------------------------------------- |
+| [`uid`](#uid)              | Return the uid of the annotation.                           |
+| [`pageUid`](#pageuid)          | Return the uid of the page where the annotation is located. |
+| [`creationDate`](#creationdate)     | Return the creation date of the annotation.                 |
+| [`modificationDate`](#modificationdate) | Return the modification date of the annotation.             |
+| [`getOptions()`](#getoptions)     | Get the annotation options.                                 |
+| [`updateOptions()`](#updateoptions)  | Update the annotation options.                              |
+
+## uid
+
+Return the uid of the annotation.
+
+**Syntax**
+
+```typescript
+readonly uid: string;
+```
+
+{% comment %}
+**Remark**
+
+- It will return `''`, if the annotation is be deleted. 
+{% endcomment %}
+
+## pageUid
+
+Return the uid of the page where the annotation is located.
+
+**Syntax**
+
+```typescript
+readonly pageUid: string;
+```
+
+**Remark**
+
+- It will return `''`, if the annotation is be deleted.
+
+{% comment %}
+## aabb
+
+Return Axis-aligned bounding box of the annotation.
+
+**Syntax**
+
+```typescript
+readonly aabb: Rect;
+```
+
+**Remark**
+
+![AABB-Rectangle](/assets/imgs/aabbrectangle.png)
+
+{% endcomment %}
+
+## creationDate
+
+Return the creation date of the annotation.
+
+**Syntax**
+
+```typescript
+readonly creationDate: string;
+```
+
+**Remark**
+
+- The string would be `D:YYYYMMDDHHmmSSOHH'mm'`, like `D:20230101085959-08'00'`.
+
+{% comment %}
+- It will return `''`, if the annotation is be deleted. 
+{% endcomment %}
+
+## modificationDate
+
+Return the modification date of the annotation.
+
+**Syntax**
+
+```typescript
+readonly modificationDate: string;
+```
+
+**Remark**
+
+- The string would be `D:YYYYMMDDHHmmSSOHH'mm'`, like `D:20230101085959-08'00'`.
+- It will return `''`, if the annotation is be deleted.
+- If the annotation is created but not be modified after adding, it equals to [`creationDate`](#creationdate). 
+
+
+## getOptions()
+
+Get the annotation options.
+
+**Syntax**
+
+```typescript
+getOptions(): RectAnnotationOptions;
+```
+
+**Return value**
+
+The object of rectangle annotation options. Please refer to [`RectAnnotationOptions`]({{ site.api }}interface/annotationinterface/rectannotationoptions.html).
+
+**Code Snippet**
+
+```typescript
+// Given that editViewer is an existing instance of EditViewer and a document is currently open.
+const pageUid = editViewer.indexToUid(0);
+const rect = Dynamsoft.DDV.annotationManager.createAnnotation(pageUid, "rectangle"); // Create a default Rectangle annotation instance.
+const rectOptions = rect.getOptions();
+```
+
+## updateOptions() 
+
+Update the annotation options.
+
+**Syntax**
+
+```typescript
+updateOptions(rectAnnotationOptions: RectAnnotationOptions): boolean;
+```
+
+**Parameters**
+
+`rectAnnotationOptions`: The new rectangle annotation options. Please refer to [`RectAnnotationOptions`]({{ site.api }}interface/annotationinterface/rectannotationoptions.html).
+
+**Return value**
+
+`true`: Successfully.
+
+`false`: Failed.
+
+**Code Snippet**
+
+```typescript
+// Given that editViewer is an existing instance of EditViewer and a document is currently open.
+const pageUid = editViewer.indexToUid(0);
+const rect = Dynamsoft.DDV.annotationManager.createAnnotation(pageUid, "rectangle"); // Create a default Rectangle annotation instance.
+const rectOptions = {
+    background: "red",
+};
+rect.updateOptions(rectOptions); // Update the background of the rectangle to red.
+```
+
+**Warning**
+
+ Error Code  | Error Message                                        | API Return Value
+--------|-----------------------------------------------------|----------------------
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   | `false`
+ -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  | `false`

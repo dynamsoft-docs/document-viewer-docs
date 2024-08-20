@@ -16,9 +16,9 @@ permalink: /api/interface/configuration-v1.0.0.html
 
 ```typescript
 interface Configuration {
-	license: string; 
-	engineResourcePath: string; 
-	deviceFriendlyName?: string; 
+    license: string; 
+    engineResourcePath: string; 
+    deviceFriendlyName?: string; 
 }
 ```
 

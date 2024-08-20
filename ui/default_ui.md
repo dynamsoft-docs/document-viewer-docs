@@ -80,6 +80,7 @@ Default UiConfig:
             children: [
                 {
                     type: Dynamsoft.DDV.Elements.Layout,
+                    enableScroll: true,
                     children: [
                         Dynamsoft.DDV.Elements.ThumbnailSwitch,
                         Dynamsoft.DDV.Elements.Zoom,

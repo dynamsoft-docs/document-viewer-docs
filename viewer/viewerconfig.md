@@ -19,14 +19,16 @@ The viewer configurations and styles are configured by `viewerConfig` when creat
 Each viewer class has its own `viewerConfig` structure. Please refer to the links below and check the details.
 
 - [`EditViewerConfig`]({{ site.api }}interface/editviewerconfig.html)
-    - [`ThumbnailConfig`]({{ site.api }}interface/thumbnailconfig.html)
+- [`ThumbnailConfig`]({{ site.api }}interface/thumbnailconfig.html)
+- [`AnnotationConfig`]({{ site.api }}interface/annotationconfig.html)
 - [`CaptureViewerConfig`]({{ site.api }}interface/captureviewerconfig.html)
 - [`PerspectiveViewerConfig`]({{ site.api }}interface/perspectiveviewerconfig.html)
 - [`BrowseViewerConfig`]({{ site.api }}interface/browseviewerconfig.html)
 
 *`CustomViewer` does not have `viewerConfig`.*
 
-{% comment %} Take `EditViewerConfig` as example, we can configure some styles of the viewer and configurations of the viewer.
+{% comment %} 
+Take `EditViewerConfig` as example, we can configure some styles of the viewer and configurations of the viewer.
 
 ```typescript
 interface EditViewerConfig {
@@ -39,7 +41,9 @@ interface EditViewerConfig {
     minZoom?: number; 
     maxZoom?: number; 
 }
-``` {% endcomment %}
+```
+
+{% endcomment %}
 
 ## Default viewerConfig
 
@@ -49,6 +53,7 @@ DDV will provide the default viewerConfig for each viewer.
 
 - [Edit viewer](#edit-viewer)
 - [Thumbnail](#thumbnail)
+- [Annotation](#annotation)
 - [Capture viewer](#capture-viewer)
 - [Perspective viewer](#perspective-viewer)
 - [Browse viewer](#browse-viewer)
@@ -246,6 +251,206 @@ DDV will provide the default viewerConfig for each viewer.
     visibilty: "hidden",
     size: "180px",
     position: "left",
+};
+```
+
+<div class="multi-panel-end"></div>
+
+<div class="multi-panel-start"></div>
+
+### AnnotationConfig
+
+#### Mobile
+
+```typescript
+{
+    toolbarConfig: {
+        style: {
+            height: "40px",
+            width: "84px",
+            background: "#f5f5f5",
+        },
+    },
+    paletteConfig: {
+        colorList: [
+            "#F01314", "#FD7C10", "#FFEE5F", "#07C37F", "#0E68F5", "#9D3BFE", "#000000",
+            "#FF9494", "#87440C", "#B7A514", "#046743", "#50C9FF", "#EBA3ED", "#FFFFFF",
+            "#CECECE",
+        ],
+        labels: {
+            text: "Text",
+            stroke: "Stroke",
+            fill: "Fill",
+            opacity: "Opacity",
+            style: "Style",
+            standardBusiness: "StandardBusiness",
+        },
+    },
+    annotationSelectionStyle: {
+        border: "1px solid #59626A",
+        background: "",
+        ctrlBorderRadius: "6px",
+        ctrlWidth: "12px",
+        ctrlHeight: "12px",
+        ctrlBorder: "1px solid #59626A",
+        ctrlBackground: "white",
+    },
+    inkCreateDelay: 1000, 
+    showOnTopWhenSelected: false,
+    enableContinuousDrawing: false,
+    defaultStyleConfig: {
+        rectangle: defaultShapeStyle,
+        ellipse: defaultShapeStyle,
+        polygon: defaultShapeStyle,
+        polyline: {
+            ...defaultShapeStyle,
+            lineEnding: {
+                start: Dynamsoft.DDV.EnumLineEnding.NONE,
+                end: Dynamsoft.DDV.EnumLineEnding.NONE,
+            },
+        },
+        line: {
+            ...defaultShapeStyle,
+            lineEnding: {
+                start: Dynamsoft.DDV.EnumLineEnding.NONE,
+                end: Dynamsoft.DDV.EnumLineEnding.NONE,
+            },
+        },
+        ink: baseStyle,
+        textBox: {
+            ...defaultShapeStyle,
+            textAlign: "left",
+            textContent: defaultTextContent,
+        },
+        textTypewriter: {
+            opacity: 1,
+            textContent: defaultTextContent,
+        },
+        stamp: {
+            opacity: 1,
+            stamp: Dynamsoft.DDV.EnumStampIcon.DRAFT,
+        },
+    },
+};
+
+const baseStyle = {
+    borderWidth: 3,  //The unit is point.
+    borderColor: rgb(0,0,0),
+    opacity: 1,
+};
+
+const defaultShapeStyle = {
+    ...baseStyle,
+    background: '',
+    lineDash: [0, 0],
+};
+
+const defaultTextContent = {
+    content: "",
+    color: rgb(0,0,0),
+    underline: false,
+    lineThrough: false,
+    fontFamily: "Helvetica",
+    fontSize: 72,
+    fontStyle: "normal",
+    fontWeight: "normal", 
+};
+```
+
+#### Desktop
+
+```typescript
+{
+    toolbarConfig: {
+        style: {
+            height: "40px",
+            width: "84px",
+            background: "#f5f5f5",
+        },
+    },
+    paletteConfig: {
+        colorList: [
+            "#F01314", "#FD7C10", "#FFEE5F", "#07C37F", "#0E68F5", "#9D3BFE", "#000000",
+            "#FF9494", "#87440C", "#B7A514", "#046743", "#50C9FF", "#EBA3ED", "#FFFFFF",
+            "#CECECE",
+        ],
+        labels: {
+            text: "Text",
+            stroke: "Stroke",
+            fill: "Fill",
+            opacity: "Opacity",
+            style: "Style",
+            standardBusiness: "StandardBusiness",
+        },
+    },
+    annotationSelectionStyle: {
+        border: "1px solid #59626A",
+        background: "",
+        ctrlBorderRadius: "6px",
+        ctrlWidth: "12px",
+        ctrlHeight: "12px",
+        ctrlBorder: "1px solid #59626A",
+        ctrlBackground: "white",
+    },
+    inkCreateDelay: 1000, 
+    showOnTopWhenSelected: false,
+    enableContinuousDrawing: false,
+    defaultStyleConfig: {
+        rectangle: defaultShapeStyle,
+        ellipse:defaultShapeStyle,
+        polygon: defaultShapeStyle,
+        polyline: {
+            ...defaultShapeStyle,
+            lineEnding: {
+                start: Dynamsoft.DDV.EnumLineEnding.NONE,
+                end: Dynamsoft.DDV.EnumLineEnding.NONE,
+            },
+        },
+        line: {
+            ...defaultShapeStyle,
+            lineEnding: {
+                start: Dynamsoft.DDV.EnumLineEnding.NONE,
+                end: Dynamsoft.DDV.EnumLineEnding.NONE,
+            },
+        },
+        ink: baseStyle,
+        textBox: {
+            ...defaultShapeStyle,
+            textAlign: "left",
+            textContent: defaultTextContent,
+        },
+        textTypewriter: {
+            opacity: 1,
+            textContent: defaultTextContent,
+        },
+        stamp: {
+            opacity: 1,
+            stamp: Dynamsoft.DDV.EnumStampIcon.DRAFT,
+        },
+    },
+};
+
+const baseStyle = {
+    borderWidth: 1,  //The unit is point.
+    borderColor: rgb(0,0,0),
+    opacity: 1,
+};
+
+const defaultShapeStyle = {
+    ...baseStyle,
+    background: '',
+    lineDash: [0, 0],
+};
+
+const defaultTextContent = {
+    content: "",
+    color: rgb(0,0,0),
+    underline: false,
+    lineThrough: false,
+    fontFamily: "Helvetica",
+    fontSize: 16,
+    fontStyle: "normal",
+    fontWeight: "normal", 
 };
 ```
 

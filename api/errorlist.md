@@ -40,6 +40,8 @@ permalink: /api/errorlist.html
  -80103     | *XXX(API)*: The value for *XXX(ParameterName)* is not supported. 
  -80104     | *XXX(API)*: The specified document(s) do not exist.  
  -80105     | *XXX(API)*: The specified page(s) do not exist.      
+ -80106     | *XXX(API)*: The specified annotation does not exist.
+
 
 ## Document related Error
 
@@ -48,6 +50,7 @@ permalink: /api/errorlist.html
  -80200     | File type is not supported.                   
  -80201     | docUid does not allow duplicate.              
  -80202     | Failed to read the PDF file becouse it's encrypted and the correct password is not provided. 
+ -80203     | Failed to read some annotations because they are not supported by Dynamsoft Document Viewer so far.
 
 ## Viewer releated Error
 
@@ -68,6 +71,10 @@ permalink: /api/errorlist.html
  -80314     | *XXX(API)*: Not available in current toolMode.       
  -80315     | DocumentDetect needs to be configured by Dynamsoft.DDV.setProcessingHandler to enable the document detection feature. 
  -80316     | ImageFilter needs to be configured by Dynamsoft.DDV.setProcessingHandler to enable the image filter feature. 
+ -80317     | The specified annotation(s) is not on the current page or does not exist.
+ -80318     | The document contains unsupported fonts, which may result in font loss after saving.
+ -80319     | ReadOnly annotation or noView annotation cannot be selected.
+ -80320     | Unknown annotation or incomplete annotation cannot be selected.
 
 ## Camera releated Error
 

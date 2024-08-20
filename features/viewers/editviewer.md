@@ -14,7 +14,7 @@ permalink: /features/viewers/editviewer.html
 
 Edit Viewer is used to edit the pages in document, such as, rotating, cropping, filtering, etc. as well as adjust the layout of the display.
 
-- [Default user interface]({{ site.ui }}default_elements.html#edit-viewer)
+- [Default user interface]({{ site.ui }}default_ui.html#edit-viewer)
 - [Default viewer configuration]({{ site.viewer }}viewerconfig.html#edit-viewer)
 
 ```typescript
@@ -135,7 +135,7 @@ editViewer.fitMode = "window";
 editViewer.fitMode = "actualSize";
 ```
 
-## Built-in Thumbnail
+## Built-in thumbnail
 
 Each edit viewer has a built-in thumbnail, as you may know, an [`IBrowseViewer`]({{ site.api }}interface/ibrowseviewer.html) object represents the thumbnail object in edit viewer. When you create an `editViewer` instance, the `editViewer.thumbnail` object will be generated at meanwhile.
 
@@ -149,4 +149,61 @@ editViewer.thumbnail.show();
 
 // Hide thumbnail
 editViewer.thumbnail.hide();
+```
+
+## Annotation feature
+
+### Create and edit annotation(s) via programming
+
+Please refer to [Annotation Management]({{ site.features }}datamanagement/annotmanagement.html).
+
+### Create an editViewer with AnnotationSet built-in elements
+
+If you want to operate annotations via the UI, you can create an editViewer with AnnotationSet built-in elements. By default, AnnotationSet built-in elements are not displayed in the editViewer.
+
+```typescript
+const editViewer = new Dynamsoft.DDV.EditViewer({
+    container: "container",
+    uiConfig: Dynamsoft.DDV.getDefaultUiConfig("editViewer", {includeAnnotationSet: true}),
+});
+```
+
+### Create annotation(s) via UI
+
+When [`toolMode`]({{ site.api }}class/editviewer.html#toolmode) is set to `annotation`, you can use the mouse to draw corresponding annotations on the page which is displayed in the Edit Viewer if [`annotationMode`]({{ site.api }}class/editviewer.html#annotationmode) is set to `rectangle `or similar annotation type modes.
+
+For example, if you set the code snippet below,
+
+```typescript
+editViewer.toolMode = "annotation";
+editViewer.annotationMode = "rectangle";
+```
+you can draw a rectangle annotation via mouse pointer on page now.
+
+After completing an annotation drawing interaction, please note that the `toolMode` automatically switches to `pan`, unless the `annotationMode` is set to `select`, `erase`, or `ink` mode.
+
+Annotations drawn through the UI come with predefined default styles. If you intend to customize these default styles, please refer to [how to customize the default annotation style]({{ site.viewer }}customize.html#default-annotation-style). 
+
+### Select annotation(s) on the current page
+
+**Use cases**
+
+- Select all annotations on the current page using [`getAnnotationsByPage()`]({{ site.api }}class/annotationmanager.html#getannotationsbypage) and [`selectAnnotations()`]({{ site.api }}class/editviewer.html#selectannotations).
+
+    ```typescript
+    const curPageUid = editViewer.getCurrentPageUid();; // Get the page uid of current page in the edit viewer
+
+    const annotations = Dynamsoft.DDV.annotationManager.getAnnotationsByPage(curPageUid);
+
+    const annotationUids = annotations.map(obj=>obj.uid);
+
+    editViewer.selectAnnotations(annotationUids);
+    ```
+
+### Get selected annotation(s)
+
+Using [`getSelectedAnnotations`]({{ site.api }}class/editviewer.html#getselectedannotations).
+
+```typescript
+const annotations = editViewer.getSelectedAnnotations();
 ```

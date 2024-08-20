@@ -58,8 +58,8 @@ permalink: /api/namespace/ddv-v1.0.0.html
 
 | API Name | Description                                        |
 | -------- | -------------------------------------------------- |
-| [`<static> on()`](#on)     | Bind a listener to the specified event.            |
-| [`<static> off()`](#off)    | Unbind event listener(s) from the specified event. |
+| [`<static> on()`](static-#on)     | Bind a listener to the specified event.            |
+| [`<static> off()`](static-#off)    | Unbind event listener(s) from the specified event. |
 
 ***Integrated Events***
 
@@ -255,8 +255,8 @@ A [`DDVError`]({{ site.api }}interface/ddverror.html) object.
 
 | API Name | Description                                        |
 | -------- | -------------------------------------------------- |
-| [`<static> on()`](#on)     | Bind a listener to the specified event.            |
-| [`<static> off()`](#off)    | Unbind event listener(s) from the specified event. |
+| [`<static> on()`](#static-on)     | Bind a listener to the specified event.            |
+| [`<static> off()`](#static-off)    | Unbind event listener(s) from the specified event. |
 
 ### `<static>` on()
 
@@ -270,7 +270,7 @@ static on(eventName: EventName, listener:(event:EventObject)=>void): void;
 
 **Parameters**
 
-`eventName`: Specify the event name. It can be [an integrated event name](#integrated-events).
+`eventName`: Specify the event name. It should be [an integrated event name](#integrated-events).
 
 `listener`: Specify the listener.
 
@@ -302,7 +302,7 @@ static off(eventName: EventName, listener?:(event:EventObject)=>void): void;
 
 **Parameters**
 
-`eventName`: Specify the event name. It can be [an integrated event name](#integrated-events).
+`eventName`: Specify the event name. It should be [an integrated event name](#integrated-events).
 
 `listener`: Specify the listener. If no listener is specified, unbind all event listeners from the specified event.
 
@@ -320,7 +320,7 @@ Dynamsoft.DDV.off("error");
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  
  -80103 | *XXX(API)*: The value for *XXX(ParameterName)* is not supported.
 
-### Integrated Event
+### Integrated Events
 
 | Event Name | Description                         |
 | ---------- | ----------------------------------- |
@@ -338,7 +338,7 @@ An EventObject which contains the detailed error info.
 
 **Attributes**
 
-[`DDVError`](#ddverror): Detailed error info.
+[`DDVError`]({{ site.api }}interface/ddverror.html): Detailed error info.
 
 #### warning
 
@@ -350,7 +350,7 @@ An EventObject which contains the detailed warning info.
 
 **Attributes**
 
-[`DDVError`](#ddverror): Detailed warning info.
+[`DDVError`]({{ site.api }}interface/ddverror.html): Detailed warning info.
 
 #### verbose
 
@@ -363,7 +363,7 @@ EventObject array which contain the detailed verbose info.
 **Example**
 
 ```typescript
-Dynamsoft DDV.on("verbose", (...args) => { 
+Dynamsoft.DDV.on("verbose", (...args) => { 
     console.log(...args); 
     if (args[0].cause) { 
         console.error(args[0].cause); 

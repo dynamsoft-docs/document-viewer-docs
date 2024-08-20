@@ -36,7 +36,9 @@ interface PageData {
         width: number;
         height: number;
         data: Blob;
-    }
+    },
+    mediaBox: Rect, 
+    cropBox: Rect
 }
 ```
 
@@ -78,6 +80,13 @@ The width, height, data of the specified page in thumbnail view.
 
 The width, height, data of the specified page in display view.
 
+### mediaBox
+MediaBox in the specified page. Units for left, top, width, and height are in points.
+
+### cropBox
+
+The crop area of the specified page. Units for left, top, width, and height are in points.
+
 ## Related
 
-- [`getPageData()`]({{ site.api }}class/documentmanager.html#getpagedata)
+- [`getPageData()`]({{ site.api }}interface/idocument/index.html#getpagedata)

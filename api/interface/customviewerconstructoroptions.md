@@ -16,8 +16,8 @@ permalink: /api/interface/customviewerconstructoroptions.html
 
 ```typescript
 interface CustomViewerConstructorOptions {
-	container?: string | HTMLElement;
-	uiConfig?: UiConfig;
+    container?: string | HTMLElement;
+    uiConfig?: UiConfig;
 }
 ```
 

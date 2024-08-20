@@ -11,13 +11,18 @@ permalink: /api/class/index.html
 ---
 
 
-# DDV Class
+# Class
 
-Dynamsoft Document Viewer Javascript library comes with six primary classes:
+Dynamsoft Document Viewer JavaScript library has two main categories of classes: one is under the namespace Dynamsoft.DDV, and the other is related to annotations.
+
+## Dynamsoft.DDV Classes
+
+Under the namespace Dynamsoft.DDV, Dynamsoft Document Viewer JavaScript library contains seven primary classes:
 
 <div class="multi-panel-switching-prefix"></div>
 
 - [DocumentManager](#documentmanager)
+- [AnnotationManager](#annotationmanager)
 - [EditViewer](#editviewer)
 - [CaptureViewer](#captureviewer)
 - [PerspectiveViewer](#perspectiveviewer)
@@ -26,7 +31,7 @@ Dynamsoft Document Viewer Javascript library comes with six primary classes:
 
 <div class="multi-panel-start"></div>
 
-## [DocumentManager Class]({{ site.api }}class/documentmanager.html)
+### [DocumentManager Class]({{ site.api }}class/documentmanager.html)
 
 The `Dynamsoft.DDV.documentManager` instance will be created automatically as soon as DDV is initialized. Please refer to [`documentManager`]({{ site.api }}namespace/ddv.html#static-documentmanager).
 
@@ -59,10 +64,52 @@ The `Dynamsoft.DDV.documentManager` instance will be created automatically as so
 
 
 <div class="multi-panel-end"></div>
+<div class="multi-panel-start"></div>
+
+### [AnnotationManager Class]({{ site.api }}class/annotationmanager.html)
+
+The `Dynamsoft.DDV.annotationManager` instance will be created automatically as soon as DDV is initialized. Please refer to [`annotationManager`]({{ site.api }}namespace/ddv.html#static-annotationmanager).
+
+**Methods**
+
+| API Name                       | Description                                                  |
+| ------------------------------ | ------------------------------------------------------------ |
+| [`createAnnotation()`]({{ site.api }}class/annotationmanager.html#createAnnotation)          | Create an annotation instance. |
+| [`getAnnotationsByUids()`]({{ site.api }}class/annotationmanager.html#getannotationsbyuids)   | Get annotations by annotation uids.                          |
+| [`getAnnotationsByPage()`]({{ site.api }}class/annotationmanager.html#getannotationsbypage)   | Get annotations in specified page.                           |
+| [`getAnnotationsByDoc()`]({{ site.api }}class/annotationmanager.html#getannotationsbydoc)    | Get all annotations in specified document.                   |
+| [`deleteAnnotations()`]({{ site.api }}class/annotationmanager.html#deleteannotations)      | Delete specified annotations.                                |
+| [`bringAnnotationForward()`]({{ site.api }}class/annotationmanager.html#bringannotationforward) | Bring the specified annotation forward.                      |
+| [`sendAnnotationBackward()`]({{ site.api }}class/annotationmanager.html#sendannotationbackward) | Send the specified annotation backward.                      |
+| [`bringAnnotationToFront()`]({{ site.api }}class/annotationmanager.html#bringannotationtofront) | Bring the specified annotation in front of all other annotations. |
+| [`sendAnnotationToBack()`]({{ site.api }}class/annotationmanager.html#sendannotationtoback)   | Send the specified annotation behind all other annotations.  |
+{% comment %}
+| [`importXfdf()`]({{ site.api }}class/annotationmanager.html#importxfdf)             | Import annotations in an XFDF(XML) string to the specified document. |
+| [`exportXfdf()`]({{ site.api }}class/annotationmanager.html#exportxfdf)             | Export all annotations from the specified document as an XFDF(XML) string. |
+{% endcomment %}
+
+**Events**
+
+| API Name | Description                                        |
+| -------- | -------------------------------------------------- |
+| [`on()`]({{ site.api }}class/annotationmanager.html#on)     | Bind a listener to the specified event.            |
+| [`off()`]({{ site.api }}class/annotationmanager.html#off)    | Unbind event listener(s) from the specified event. |
+
+***Integrated Events***
+
+| Event Name      | Description                               |
+| --------------- | ----------------------------------------- |
+| [`annotationsAdded`]({{ site.api }}class/annotationmanager.html#annotationsadded) | Triggered when new annotation(s) is added. |
+| [`annotationsDeleted`]({{ site.api }}class/annotationmanager.html#annotationsdeleted) | Triggered when annotation(s) is deleted.     |
+| [`annotationLayerChanged`]({{ site.api }}class/annotationmanager.html#annotationlayerchanged) | Triggered when annotation's layer is changed.     |
+| [`annotationsModified`]({{ site.api }}class/annotationmanager.html#annotationsmodified) | Triggered when annotation(s) is modified.     |
+
+
+<div class="multi-panel-end"></div>
 
 <div class="multi-panel-start"></div>
 
-## [EditViewer Class]({{ site.api }}class/editviewer.html)
+### [EditViewer Class]({{ site.api }}class/editviewer.html)
 
 **Create and Destroy Instances** 
 
@@ -112,6 +159,13 @@ The `Dynamsoft.DDV.documentManager` instance will be created automatically as so
 | [`zoom`]({{ site.api }}class/editviewer.html#zoom)                        | Specify or return zoom ratio.                      |
 | [`zoomOrigin`]({{ site.api }}class/editviewer.html#zoomorigin)                  | Specify or return the zoom origin of the viewer.   |
 
+**Annotation Control**
+
+| API Name              | Description                                                  |
+| --------------------- | ------------------------------------------------------------ |
+|[`selectAnnotations()`]({{ site.api }}class/editviewer.html#selectannotations)    | Select the specified annotation(s) on the current page. |
+|[`getSelectedAnnotations()`]({{ site.api }}class/editviewer.html#getselectedannotations) | Get selected annotation(s). |
+
 **Edit Operations**
 
 | API Name              | Description                                                  |
@@ -146,6 +200,7 @@ The `Dynamsoft.DDV.documentManager` instance will be created automatically as so
 | [`cropRectDrawn`]({{ site.api }}class/editviewer.html#croprectdrawn)       | Triggered when a rectangular selection is drawn.               |
 | [`cropRectDeleted`]({{ site.api }}class/editviewer.html#croprectdeleted)     | Triggered when the rectangular selection is deleted.           |
 | [`cropRectModified`]({{ site.api }}class/editviewer.html#croprectmodified)    | Triggered when the crop rectangular selection is modified.     |
+| [`selectedAnnotationsChanged`]({{ site.api }}class/editviewer.html#selectedannotationschanged) | Triggered when selected annotation(s) is changed. |
 | [`click`]({{ site.api }}class/editviewer.html#click)               | Triggered when click in the viewer's viewing area.           |
 | [`dblclick`]({{ site.api }}class/editviewer.html#dbclick)            | Triggered when double click in the viewer's viewing area.    |
 | [`rightclick`]({{ site.api }}class/editviewer.html#rightclick)          | Triggered when right click in the viewer's viewing area.     |
@@ -154,7 +209,7 @@ The `Dynamsoft.DDV.documentManager` instance will be created automatically as so
 
 <div class="multi-panel-start"></div>
 
-## [CaptureViewer Class]({{ site.api }}class/captureviewer.html)
+### [CaptureViewer Class]({{ site.api }}class/captureviewer.html)
 
 **Create and Destroy Instances** 
 
@@ -228,7 +283,7 @@ The `Dynamsoft.DDV.documentManager` instance will be created automatically as so
 
 <div class="multi-panel-start"></div>
 
-## [PerspectiveViewer Class]({{ site.api }}class/perspectiveviewer.html)
+### [PerspectiveViewer Class]({{ site.api }}class/perspectiveviewer.html)
 
 **Create and Destroy Instances** 
 
@@ -306,7 +361,7 @@ The `Dynamsoft.DDV.documentManager` instance will be created automatically as so
 
 <div class="multi-panel-start"></div>
 
-## [BrowseViewer Class]({{ site.api }}class/browseviewer.html)
+### [BrowseViewer Class]({{ site.api }}class/browseviewer.html)
 
 **Create and Destroy Instances** 
 
@@ -388,7 +443,7 @@ The `Dynamsoft.DDV.documentManager` instance will be created automatically as so
 
 <div class="multi-panel-start"></div>
 
-## [CustomViewer Class]({{ site.api }}class/customviewer.html)
+### [CustomViewer Class]({{ site.api }}class/customviewer.html)
 
 **Create and Destroy Instances** 
 
@@ -425,3 +480,183 @@ Besides, there are two advanced classes.
 
 - [ImageFilter]({{ site.api }}class/advanced/imagefilter.html)
 - [DocumentDetect]({{ site.api }}class/advanced/documentdetect.html)
+
+## Annotation
+
+Annotation has eleven main classes:
+
+<div class="multi-panel-switching-prefix"></div>
+
+- [Rectangle](#rectangle)
+- [Ellipse](#ellipse)
+- [Polygon](#polygon)
+- [Polyline](#polyline)
+- [Line](#line)
+- [Ink](#ink)
+- [TextBox](#textbox)
+- [TextTypewriter](#texttypewriter)
+- [Stamp](#stamp)
+- [Incomplete](#incomplete)
+- [Unknown](#unknown)
+
+<div class="multi-panel-start"></div>
+
+### [Rectangle Class]({{ site.api }}class/annotation/rectangle.html)
+
+| API Name               | Description                                                 |
+| ---------------------- | ----------------------------------------------------------- |
+| [`uid`]({{ site.api }}class/annotation/rectangle.html#uid)              | Return the uid of the annotation.                           |
+| [`pageUid`]({{ site.api }}class/annotation/rectangle.html#pageuid)          | Return the uid of the page where the annotation is located. |
+| [`creationDate`]({{ site.api }}class/annotation/rectangle.html#creationdate)     | Return the creation date of the annotation.                 |
+| [`modificationDate`]({{ site.api }}class/annotation/rectangle.html#modificationdate) | Return the modification date of the annotation.             |
+| [`getOptions()`]({{ site.api }}class/annotation/rectangle.html#getoptions)     | Get the annotation options.                                 |
+| [`updateOptions()`]({{ site.api }}class/annotation/rectangle.html#updateoptions)  | Update the annotation options.                              |
+
+<div class="multi-panel-end"></div>
+
+<div class="multi-panel-start"></div>
+
+### [Ellipse Class]({{ site.api }}class/annotation/ellipse.html)
+
+| API Name               | Description                                                 |
+| ---------------------- | ----------------------------------------------------------- |
+| [`uid`]({{ site.api }}class/annotation/ellipse.html#uid)              | Return the uid of the annotation.                           |
+| [`pageUid`]({{ site.api }}class/annotation/ellipse.html#pageuid)          | Return the uid of the page where the annotation is located. |
+| [`creationDate`]({{ site.api }}class/annotation/ellipse.html#creationdate)     | Return the creation date of the annotation.                 |
+| [`modificationDate`]({{ site.api }}class/annotation/ellipse.html#modificationdate) | Return the modification date of the annotation.             |
+| [`getOptions()`]({{ site.api }}class/annotation/ellipse.html#getoptions)     | Get the annotation options.                                 |
+| [`updateOptions()`]({{ site.api }}class/annotation/ellipse.html#updateoptions)  | Update the annotation options.                              |
+
+<div class="multi-panel-end"></div>
+
+<div class="multi-panel-start"></div>
+
+### [Polygon Class]({{ site.api }}class/annotation/polygon.html)
+
+| API Name               | Description                                                 |
+| ---------------------- | ----------------------------------------------------------- |
+| [`uid`]({{ site.api }}class/annotation/polygon.html#uid)              | Return the uid of the annotation.                           |
+| [`pageUid`]({{ site.api }}class/annotation/polygon.html#pageuid)          | Return the uid of the page where the annotation is located. |
+| [`creationDate`]({{ site.api }}class/annotation/polygon.html#creationdate)     | Return the creation date of the annotation.                 |
+| [`modificationDate`]({{ site.api }}class/annotation/polygon.html#modificationdate) | Return the modification date of the annotation.             |
+| [`getOptions()`]({{ site.api }}class/annotation/polygon.html#getoptions)     | Get the annotation options.                                 |
+| [`updateOptions()`]({{ site.api }}class/annotation/polygon.html#updateoptions)  | Update the annotation options.                              |
+
+<div class="multi-panel-end"></div>
+
+<div class="multi-panel-start"></div>
+
+### [Polyline Class]({{ site.api }}class/annotation/polyline.html)
+
+| API Name               | Description                                                 |
+| ---------------------- | ----------------------------------------------------------- |
+| [`uid`]({{ site.api }}class/annotation/polyline.html#uid)              | Return the uid of the annotation.                           |
+| [`pageUid`]({{ site.api }}class/annotation/polyline.html#pageuid)          | Return the uid of the page where the annotation is located. |
+| [`creationDate`]({{ site.api }}class/annotation/polyline.html#creationdate)     | Return the creation date of the annotation.                 |
+| [`modificationDate`]({{ site.api }}class/annotation/polyline.html#modificationdate) | Return the modification date of the annotation.             |
+| [`getOptions()`]({{ site.api }}class/annotation/polyline.html#getoptions)     | Get the annotation options.                                 |
+| [`updateOptions()`]({{ site.api }}class/annotation/polyline.html#updateoptions)  | Update the annotation options.                              |
+
+<div class="multi-panel-end"></div>
+
+<div class="multi-panel-start"></div>
+
+### [Line Class]({{ site.api }}class/annotation/line.html)
+
+| API Name               | Description                                                 |
+| ---------------------- | ----------------------------------------------------------- |
+| [`uid`]({{ site.api }}class/annotation/line.html#uid)              | Return the uid of the annotation.                           |
+| [`pageUid`]({{ site.api }}class/annotation/line.html#pageuid)          | Return the uid of the page where the annotation is located. |
+| [`creationDate`]({{ site.api }}class/annotation/line.html#creationdate)     | Return the creation date of the annotation.                 |
+| [`modificationDate`]({{ site.api }}class/annotation/line.html#modificationdate) | Return the modification date of the annotation.             |
+| [`getOptions()`]({{ site.api }}class/annotation/line.html#getoptions)     | Get the annotation options.                                 |
+| [`updateOptions()`]({{ site.api }}class/annotation/line.html#updateoptions)  | Update the annotation options.                              |
+
+<div class="multi-panel-end"></div>
+
+<div class="multi-panel-start"></div>
+
+### [Ink Class]({{ site.api }}class/annotation/ink.html)
+
+| API Name               | Description                                                 |
+| ---------------------- | ----------------------------------------------------------- |
+| [`uid`]({{ site.api }}class/annotation/ink.html#uid)              | Return the uid of the annotation.                           |
+| [`pageUid`]({{ site.api }}class/annotation/ink.html#pageuid)          | Return the uid of the page where the annotation is located. |
+| [`creationDate`]({{ site.api }}class/annotation/ink.html#creationdate)     | Return the creation date of the annotation.                 |
+| [`modificationDate`]({{ site.api }}class/annotation/ink.html#modificationdate) | Return the modification date of the annotation.             |
+| [`getOptions()`]({{ site.api }}class/annotation/ink.html#getoptions)     | Get the annotation options.                                 |
+| [`updateOptions()`]({{ site.api }}class/annotation/ink.html#updateoptions)  | Update the annotation options.                              |
+
+<div class="multi-panel-end"></div>
+
+<div class="multi-panel-start"></div>
+
+### [TextBox Class]({{ site.api }}class/annotation/textbox.html)
+
+| API Name               | Description                                                 |
+| ---------------------- | ----------------------------------------------------------- |
+| [`uid`]({{ site.api }}class/annotation/textbox.html#uid)              | Return the uid of the annotation.                           |
+| [`pageUid`]({{ site.api }}class/annotation/textbox.html#pageuid)          | Return the uid of the page where the annotation is located. |
+| [`creationDate`]({{ site.api }}class/annotation/textbox.html#creationdate)     | Return the creation date of the annotation.                 |
+| [`modificationDate`]({{ site.api }}class/annotation/textbox.html#modificationdate) | Return the modification date of the annotation.             |
+| [`getOptions()`]({{ site.api }}class/annotation/textbox.html#getoptions)     | Get the annotation options.                                 |
+| [`updateOptions()`]({{ site.api }}class/annotation/textbox.html#updateoptions)  | Update the annotation options.                              |
+
+<div class="multi-panel-end"></div>
+
+<div class="multi-panel-start"></div>
+
+### [TextTypewriter Class]({{ site.api }}class/annotation/texttypewriter.html)
+
+| API Name               | Description                                                 |
+| ---------------------- | ----------------------------------------------------------- |
+| [`uid`]({{ site.api }}class/annotation/texttypewriter.html#uid)              | Return the uid of the annotation.                           |
+| [`pageUid`]({{ site.api }}class/annotation/texttypewriter.html#pageuid)          | Return the uid of the page where the annotation is located. |
+| [`creationDate`]({{ site.api }}class/annotation/texttypewriter.html#creationdate)     | Return the creation date of the annotation.                 |
+| [`modificationDate`]({{ site.api }}class/annotation/texttypewriter.html#modificationdate) | Return the modification date of the annotation.             |
+| [`getOptions()`]({{ site.api }}class/annotation/texttypewriter.html#getoptions)     | Get the annotation options.                                 |
+| [`updateOptions()`]({{ site.api }}class/annotation/texttypewriter.html#updateoptions)  | Update the annotation options.                              |
+
+<div class="multi-panel-end"></div>
+
+<div class="multi-panel-start"></div>
+
+### [Stamp Class]({{ site.api }}class/annotation/stamp.html)
+
+| API Name               | Description                                                 |
+| ---------------------- | ----------------------------------------------------------- |
+| [`uid`]({{ site.api }}class/annotation/stamp.html#uid)              | Return the uid of the annotation.                           |
+| [`pageUid`]({{ site.api }}class/annotation/stamp.html#pageuid)          | Return the uid of the page where the annotation is located. |
+| [`creationDate`]({{ site.api }}class/annotation/stamp.html#creationdate)     | Return the creation date of the annotation.                 |
+| [`modificationDate`]({{ site.api }}class/annotation/stamp.html#modificationdate) | Return the modification date of the annotation.             |
+| [`getOptions()`]({{ site.api }}class/annotation/stamp.html#getoptions)     | Get the annotation options.                                 |
+| [`updateOptions()`]({{ site.api }}class/annotation/stamp.html#updateoptions)  | Update the annotation options.                              |
+
+<div class="multi-panel-end"></div>
+
+<div class="multi-panel-start"></div>
+
+### [Incomplete Class]({{ site.api }}class/annotation/incomplete.html)
+
+| API Name               | Description                                                 |
+| ---------------------- | ----------------------------------------------------------- |
+| [`uid`]({{ site.api }}class/annotation/incomplete.html#uid)              | Return the uid of the annotation.                           |
+| [`pageUid`]({{ site.api }}class/annotation/incomplete.html#pageuid)          | Return the uid of the page where the annotation is located. |
+| [`creationDate`]({{ site.api }}class/annotation/incomplete.html#creationdate)     | Return the creation date of the annotation.                 |
+| [`raw`]({{ site.api }}class/annotation/incomplete.html#raw) | Return the raw data of the annotation.             |
+
+<div class="multi-panel-end"></div>
+
+<div class="multi-panel-start"></div>
+
+### [Unknown Class]({{ site.api }}class/annotation/unknown.html)
+
+| API Name               | Description                                                 |
+| ---------------------- | ----------------------------------------------------------- |
+| [`uid`]({{ site.api }}class/annotation/unknown.html#uid)              | Return the uid of the annotation.                           |
+| [`pageUid`]({{ site.api }}class/annotation/unknown.html#pageuid)          | Return the uid of the page where the annotation is located. |
+| [`creationDate`]({{ site.api }}class/annotation/unknown.html#creationdate)     | Return the creation date of the annotation.                 |
+
+<div class="multi-panel-end"></div>
+
+<div class="multi-panel-switching-end"></div>

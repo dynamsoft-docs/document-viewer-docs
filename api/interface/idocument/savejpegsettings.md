@@ -17,6 +17,7 @@ permalink: /api/interface/idocument/savejpegsettings.html
 ```typescript
 interface SaveJpegSettings {
     quality?: number; 
+    saveAnnotation?: boolean; 
 }
 ```
 
@@ -25,6 +26,10 @@ interface SaveJpegSettings {
 ### quality
 
 Specify the quality for JPEG compression. The value range is [0, 100], default value is 80.
+
+### saveAnnotation
+
+Whether to save the annotation(s) as the part of image. Default vaule: `false`.
 
 ## Related
 

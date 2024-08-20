@@ -85,6 +85,24 @@ interface DisplayTextConfig {
     CameraResolution_1080P?: string,
     CameraResolution_1440P?: string,
     CameraResolution_2160P?: string,
+
+    AnnotationSet?: string;
+    RectAnnotation?: string;
+    EllipseAnnotation?: string;
+    PolygonAnnotation?: string;
+    PolylineAnnotation?: string;
+    LineAnnotation?: string;
+    InkAnnotation?: string;
+    TextBoxAnnotation?: string;
+    TextTypewriterAnnotation?: string;
+    StampIconAnnotation?: string;
+    StampImageAnnotation?: string;
+    SelectAnnotation?: string;
+    EraseAnnotation?:string;
+    BringForward?: string;
+    BringToFront?: string;
+    SendBackward?: string;
+    SendToBack?: string;
 }
 ```
 
@@ -112,6 +130,7 @@ interface DisplayTextConfig {
     CameraResolution_1080P      | "1080P"
     CameraResolution_1440P      | "1440P"
     CameraResolution_2160P      | "2160P"
+    AnnotationSet               | "Annotation"
 
 ## Related
 

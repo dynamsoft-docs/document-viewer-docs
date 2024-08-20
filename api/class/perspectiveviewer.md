@@ -428,17 +428,19 @@ readonly isVisible: boolean;
 
 ### openDocument()
 
-Open the specified document by document uid.
+Open the specified document.
 
 **Syntax**
 
 ```typescript
-openDocument(docUid: string): void;
+openDocument(docUid: string | doc: IDocument): void;
 ```
 
 **Parameters**
 
-`docUid`: The uid of the specified document.
+`docUid`: The uid of the specified document. 
+
+`doc`: The object of the document to open. Please refer to [IDocument]({{ site.api }}interface/idocument/index.html).
 
 **Code Snippet**
 
@@ -450,14 +452,15 @@ perspectiveViewer.openDocument("lnn0ll9o124");
 // Assume there is a document object firstDoc.
 const docUid = firstDoc.uid;
 perspectiveViewer.openDocument(docUid);
+perspectiveViewer.openDocument(firstDoc);
 ```
 
 **Exception**
 
  Error Code  | Error Message                                        
 --------|-----------------------------------------------------
- -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
- -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.   
+ -80100 | *XXX(API)*: docUid or doc is invalid.   
+ -80102 | *XXX(API)*: docUid or doc is missing.   
  -80104 | *XXX(API)*: The specified document(s) do not exist.  
 
 **Remark**

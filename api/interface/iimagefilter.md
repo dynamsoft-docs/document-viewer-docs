@@ -65,5 +65,3 @@ A Promise object which will be resolved with `Blob` of the filtered image.
 ```typescript
 destroy(): void;
 ```
-
-

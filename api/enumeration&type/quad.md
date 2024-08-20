@@ -16,10 +16,10 @@ permalink: /api/enumeration-type/quad.html
 
 ```typescript
 type Quad = [
-	[ number,number ], // Point one
-	[ number,number ], // Point two
-	[ number,number ], // Point three
-	[ number,number ], // Point four
+	[ number,number ], // Point one. The unit is pixel.
+	[ number,number ], // Point two. The unit is pixel.
+	[ number,number ], // Point three. The unit is pixel.
+	[ number,number ], // Point four. The unit is pixel.
 ];
 ```
 

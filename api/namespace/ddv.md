@@ -25,10 +25,12 @@ permalink: /api/namespace/ddv.html
 | API Name                        | Description                                       |
 | ------------------------------- | ------------------------------------------------- |
 | [`<static> documentManager`](#static-documentmanager)   | [`DocumentManager`]({{ site.api }}class/documentmanager.html) instance.   |
+| [`<static> annotationManager`](#static-annotationmanager)   | [`AnnotationManager`]({{ site.api }}class/annoationmanager.html) instance. |
 
 **Classes**
 
 - [DocumentManager]({{ site.api }}class/documentmanager.html)
+- [AnnotationManager]({{ site.api }}class/annoationmanager.html)
 - [EditViewer]({{ site.api }}class/editviewer.html)
 - [CaptureViewer]({{ site.api }}class/captureviewer.html)
 - [PerspectiveViewer]({{ site.api }}class/perspectiveviewer.html)
@@ -44,6 +46,7 @@ permalink: /api/namespace/ddv.html
 | API Name                        | Description                                       |
 | ------------------------------- | ------------------------------------------------- |
 | [`<static> getDefaultUiConfig()`](#static-getdefaultuiconfig)   | Get default UiConfig object.                      |
+| [`<static> addFonts()`](#static-addfonts)                  | Add font to library.             |
 | [`<static> clearLastError()`](#static-clearlasterror)       | Clear the last error or warning.                  |
 | [`<static> unload()`](#static-unload)               | Unload all DDV resources.                         |
 
@@ -57,8 +60,8 @@ permalink: /api/namespace/ddv.html
 
 | API Name | Description                                        |
 | -------- | -------------------------------------------------- |
-| [`<static> on()`](#on)     | Bind a listener to the specified event.            |
-| [`<static> off()`](#off)    | Unbind event listener(s) from the specified event. |
+| [`<static> on()`](#static-on)     | Bind a listener to the specified event.            |
+| [`<static> off()`](#static-off)    | Unbind event listener(s) from the specified event. |
 
 ***Integrated Events***
 
@@ -118,11 +121,26 @@ type HandlerType = "documentBoundariesDetect"|"imageFilter";
 
 ```typescript
 Dynamsoft.DDV.Core.license = "Your-License-String";
-Dynamsoft.DDV.Core.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@1.1.0/dist/engine"; // lead to a folder containing the distributed WASM files
+Dynamsoft.DDV.Core.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@latest/dist/engine"; // lead to a folder containing the distributed WASM files
 await Dynamsoft.DDV.Core.init(); 
 
 const docManager = Dynamsoft.DDV.documentManager;
 ```
+
+### `<static>` annotationManager
+
+[`AnnotationManager`]({{ site.api }}class/annotationmanager.html) instance.
+
+**Code Snippet**
+
+```typescript
+Dynamsoft.DDV.Core.license = "Your-License-String";
+Dynamsoft.DDV.Core.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@latest/dist/engine"; // lead to a folder containing the distributed WASM files
+await Dynamsoft.DDV.Core.init(); 
+
+const annotManager = Dynamsoft.DDV.annotationManager;
+```
+
 
 ## Methods
 
@@ -139,7 +157,7 @@ Get default UiConfig object.
 **Syntax**
 
 ```typescript
-static getDefaultUiConfig(viewerType: ViewerType): UiConfig | null;
+static getDefaultUiConfig(viewerType: ViewerType, options?:DefaultUiConfigOptions): UiConfig | null;
 ```
 
 **Parameters**
@@ -150,6 +168,9 @@ static getDefaultUiConfig(viewerType: ViewerType): UiConfig | null;
 type ViewerType = "editViewer"|"captureViewer"|"perspectiveViewer"|"browseViewer";
 ```
 
+`options`: Whether to return the configuration with annotation when viewerType = "editViewer". Please refer to [`DefaultUiConfigOptions`]({{ site.api }}interface/defaultuiconfigoptions.html).
+
+
 **Return Values**
 
 The [default UiConfig]({{ site.ui }}default_ui.html) object for each kind of viewer.
@@ -157,7 +178,7 @@ The [default UiConfig]({{ site.ui }}default_ui.html) object for each kind of vie
 **Code Snippet**
 
 ```typescript
-const defaultEditUi = Dynamsoft.DDV.getDefaultUiConfig("editViewer");
+const defaultEditUi = Dynamsoft.DDV.getDefaultUiConfig("editViewer", {includeAnnotationSet: true});
 ```
 
 **Warning**
@@ -167,6 +188,29 @@ const defaultEditUi = Dynamsoft.DDV.getDefaultUiConfig("editViewer");
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.                      | `null`
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.                     | `null`
  -80103 | *XXX(API)*: The value for *XXX(ParameterName)* is not supported.| `null`
+
+### `<static>` addFonts()
+
+Add font to library.
+
+**Syntax**
+
+```typescript
+addFonts(fonts: Blob[]): Promise<void>;
+```
+
+**Parameters**
+
+`fonts`: Specify the fonts to add.
+
+**Exception**
+
+ Error Code | Error Message                                               
+ ---------- | ------------------------------------------------------------ 
+ -80100     | *XXX(API)*: *XXX(ParameterName)* is invalid.                
+ -80102     | *XXX(API)*: *XXX(ParameterName)* is missing.                
+
+
 
 ### `<static>` clearLastError()
 
@@ -216,8 +260,8 @@ A [`DDVError`]({{ site.api }}interface/ddverror.html) object.
 
 | API Name | Description                                        |
 | -------- | -------------------------------------------------- |
-| [`<static> on()`](#on)     | Bind a listener to the specified event.            |
-| [`<static> off()`](#off)    | Unbind event listener(s) from the specified event. |
+| [`<static> on()`](#static-on)     | Bind a listener to the specified event.            |
+| [`<static> off()`](#static-off)    | Unbind event listener(s) from the specified event. |
 
 ### `<static>` on()
 
@@ -231,7 +275,7 @@ static on(eventName: EventName, listener:(event:EventObject)=>void): void;
 
 **Parameters**
 
-`eventName`: Specify the event name. It can be [an integrated event name](#integrated-events).
+`eventName`: Specify the event name. It should be [an integrated event name](#integrated-events).
 
 `listener`: Specify the listener.
 
@@ -263,7 +307,7 @@ static off(eventName: EventName, listener?:(event:EventObject)=>void): void;
 
 **Parameters**
 
-`eventName`: Specify the event name. It can be [an integrated event name](#integrated-events).
+`eventName`: Specify the event name. It should be [an integrated event name](#integrated-events).
 
 `listener`: Specify the listener. If no listener is specified, unbind all event listeners from the specified event.
 
@@ -281,7 +325,7 @@ Dynamsoft.DDV.off("error");
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  
  -80103 | *XXX(API)*: The value for *XXX(ParameterName)* is not supported.
 
-### Integrated Event
+### Integrated Events
 
 | Event Name | Description                         |
 | ---------- | ----------------------------------- |
@@ -299,7 +343,7 @@ An EventObject which contains the detailed error info.
 
 **Attributes**
 
-[`DDVError`](#ddverror): Detailed error info.
+[`DDVError`]({{ site.api }}interface/ddverror.html): Detailed error info.
 
 #### warning
 
@@ -311,7 +355,7 @@ An EventObject which contains the detailed warning info.
 
 **Attributes**
 
-[`DDVError`](#ddverror): Detailed warning info.
+[`DDVError`]({{ site.api }}interface/ddverror.html): Detailed warning info.
 
 #### verbose
 
@@ -324,7 +368,7 @@ EventObject array which contain the detailed verbose info.
 **Example**
 
 ```typescript
-Dynamsoft DDV.on("verbose", (...args) => { 
+Dynamsoft.DDV.on("verbose", (...args) => { 
     console.log(...args); 
     if (args[0].cause) { 
         console.error(args[0].cause); 

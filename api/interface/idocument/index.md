@@ -53,7 +53,7 @@ readonly name: string;
 
 **Remark**
 
-- It can be set while creating the document by using [`createDocument`]({{ site.api }}class/documentmanager.html#createdocument). If it is not set, return the name which is auto generated.
+- It can be set while creating the document by using [`createDocument()`]({{ site.api }}class/documentmanager.html#createdocument). If it is not set, return the name which is auto generated.
 
 ### author
 
@@ -67,7 +67,7 @@ readonly author: string;
 
 **Remark**
 
-- It can be set while creating the document by using [`createDocument`]({{ site.api }}class/documentmanager.html#createdocument). If it is not set, return `''`.
+- It can be set while creating the document by using [`createDocument()`]({{ site.api }}class/documentmanager.html#createdocument). If it is not set, return `''`.
 
 ### creationDate
 
@@ -81,7 +81,7 @@ readonly creationDate: string;
 
 **Remark**
 
-- It can be set while creating the document by using [`createDocument`]({{ site.api }}class/documentmanager.html#createdocument). If it is not set, return the actual creation date of the document.
+- It can be set while creating the document by using [`createDocument()`]({{ site.api }}class/documentmanager.html#createdocument). If it is not set, return the actual creation date of the document.
 
 ### uid
 
@@ -113,7 +113,7 @@ readonly pages: string[];
 const firstDoc = Dynamsoft.DDV.documentManager.createDocument({
     name: "first_document",
     author: "DDV",
-    creationDate: "D:20230101085959",
+    creationDate: "D:20230101085959-08'00'",
     });
 
 const docName = firstDoc.name;
@@ -132,14 +132,14 @@ Load file(s) to current document.
 
 ```typescript
 loadSource(fileData: Blob | Blob[], index?: number): Promise<string[]>;
-loadSource(sources: Source | Source[], index?: number): Promise<string[]>;
+loadSource(sources: Source | PdfSource | (Source | PdfSource)[], index?: number): Promise<string[]>;
 ```
 
 **Parameters**
 
 `fileData`: The blob of the file to be loaded.
 
-`sources`: The target files, it could be a file or a file array. Please refer to [`Source`]({{ site.api }}interface/idocument/source.html). `Source` can be extanded to [`PdfSource`]({{ site.api }}interface/idocument/pdfsource.html).
+`sources`: The target files, it could be a file or a file array. Please refer to [`Source`]({{ site.api }}interface/idocument/source.html). `Source` can be extended to [`PdfSource`]({{ site.api }}interface/idocument/pdfsource.html).
 
 `index`: The position in the document where the file(s) will be loaded to. If not set or out of the maximum range, the loaded file(s) will be added from the end of the document.
 
@@ -153,7 +153,7 @@ A Promise object which will be resolved with the page uids of the loaded pages w
 const firstDoc = Dynamsoft.DDV.documentManager.createDocument({
     name: "first_document",
     author: "DDV",
-    creationDate: "D:20230101085959",
+    creationDate: "D:20230101085959-08'00'",
     });
 const source = {
     fileData: /*sampleBlob*/;
@@ -176,6 +176,7 @@ await firstDoc.loadSource([source]);
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  
  -80200 | File type is not supported. 
  -80202 | Failed to read the PDF file becouse it's encrypted and the correct password is not provided.
+ -80203 | Failed to read some annotations because they are not supported by Dynamsoft Document Viewer so far.
 
 ### getPageData()
 
@@ -478,20 +479,20 @@ insertBlankPage(
 
 **Parameters**
 
-`pageWidth`: The page width of the blank page to insert. Unit: inch. Value range: [0.01, 100].
+`pageWidth`: The page width of the blank page to insert. The unit is point.
 
-`pageHeight`: The page height of the blank page to insert. Unit: inch. Value range: [0.01, 100].
+`pageHeight`: The page height of the blank page to insert. The unit is point. 
 
 `insertBeforeIndex`: The blank page will be inserted before this index. If not set or out of the maximum range, the blank page will be added after the last page.
 
 *Common page sizes:*
 
- Page size | pageWidth (inch) | pageHeight (inch) 
+ Page size | pageWidth (pt) | pageHeight (pt) 
 -----------|------------------|-------------------
- Letter    | 8.5              | 11                
- Legal     | 8.5              | 14                
- A4        | 8.3              | 11.7              
- A3        | 11.7             | 16.5              
+ Letter    | 612              | 792                
+ Legal     | 612              | 1008                
+ A4        | 597.6              | 842.4              
+ A3        | 842.4             | 1188             
 
 **Return value**
 
@@ -534,7 +535,7 @@ rename(name: string): boolean;
 const firstDoc = Dynamsoft.DDV.documentManager.createDocument({
     name: "first_document",
     author: "DDV",
-    creationDate: "D:20230101085959",
+    creationDate: "D:20230101085959-08'00'",
     });
 firstDoc.rename("my_doc");
 ```
@@ -553,12 +554,14 @@ Save specified page or current page in current document to a PNG file.
 **Syntax**
 
 ```typescript
-saveToPng(index: number): Promise<Blob>;
+saveToPng(index: number, savePngSettings?: SavePngSettings): Promise<Blob>;
 ```
 
 **Parameters**
 
 `index`: Specify index of the page to be saved.
+
+`savePngSettings`: Specify the save settings. Please refer to [`SavePngSettings`]({{ site.api }}interface/idocument/savepngsettings.html).
 
 **Return Values**
 
@@ -607,9 +610,10 @@ A Promise object which will be resolved with `Blob` of the saved image.
 **Code Snippet**
 
 ```typescript
-// Save the first page to a JPEG file with JPEG compression quality 100.
+// Save the first page as a JPEG file with a JPEG compression quality of 100, and the annotations are saved as part of the JPEG.
 const settings = {
     quality: 100,
+    saveAnnotation: false,
 };
 const result = await firstDoc.saveToJpeg(0, settings);
 ```
@@ -712,15 +716,18 @@ const pdfSettings = {
     compression: "pdf/jpeg",
     pageType: "page/a4",
     creator: "DDV",
-    creationDate: "D:20230101085959",
+    creationDate: "D:20230101085959-08'00'",
     keyWords: "samplepdf",
-    modifiedDate: "D:20230101090101",
+    modifiedDate: "D:20230101090101-08'00'",
     producer: "Dynamsoft Document Viewer",
     subject: "SamplePdf",
     title: "SamplePdf",
     version: "1.5",
     quality: 90,
-}
+    password: "dynamsoft",
+    saveAnnotation: "annotation",
+    imageScaleFactor: 1,
+};
 
 // Save the fifth, sixth, seventh pages to a multi-page PDF file with the specified pdf settings.
 const result1 = await firstDoc.saveToPdf([4,5,6], pdfSettings);
@@ -740,20 +747,24 @@ const result2 = await firstDoc.saveToPdf(pdfSettings);
  -80005 | Domain does not match the domain bound to the *XXX(LicenseModuleName)* module license.  
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
  -80305 | There is no image in the current document.
+ -80318 | The document contains unsupported fonts, which may result in font loss after saving.
 
 ### print()
 
-Use the browser’s built-in print feature to print the specified image(s).
+Use the browser’s built-in print feature to print the specified image(s) and whether printable annotations can be printed
 
 **Syntax**
 
 ```typescript
-print(indices?: number[]): void;
+print(printSettings?: PrintSettings);
+print(indices: number[], printSettings?: PrintSettings);
 ```
 
 **Parameters**
 
 `indices`: The array of page indices which will be printed. If not set, will export all pages to the browser’s built-in print window.
+
+`printSettings`: Specify the print settings. Please refer to [`PrintSettings`]({{ site.api }}interface/idocument/printsettings.html).
 
 **Return Values**
 
@@ -771,6 +782,11 @@ firstDoc.print();
 
 // To print the second and third pages
 firstDoc.print([1,2]);
+
+// To print the whole doc pages, including printable annotations.
+firstDoc.print({
+    printAnnotation: true;
+});
 ```
 
 **Exception**

@@ -69,7 +69,7 @@ The object of the created document. Please refer to [`IDocument`]({{ site.api }}
 const firstDoc = Dynamsoft.DDV.documentManager.createDocument({
     name: "first_document",
     author: "DDV",
-    creationDate: "D:20230101085959",
+    creationDate: "D:20230101085959-08'00'",
     });
 ```
 
@@ -106,7 +106,7 @@ deleteDocuments(docUids: string[]): boolean;
 const firstDoc = Dynamsoft.DDV.documentManager.createDocument({
     name: "first_document",
     author: "DDV",
-    creationDate: "D:20230101085959",
+    creationDate: "D:20230101085959-08'00'",
     });
 
 const docUid = firstDoc.uid;
@@ -225,11 +225,10 @@ The object of the new document. Please refer to [`IDocument`]({{ site.api }}inte
 **Code Snippet**
 
 ```typescript
-
 const firstDoc = Dynamsoft.DDV.documentManager.createDocument({
     name: "first_document",
     author: "DDV",
-    creationDate: "D:20230101085959",
+    creationDate: "D:20230101085959-08'00'",
     });
 
 const source1 = {
@@ -252,7 +251,7 @@ const docUid2 = secondDoc.uid; //"lnn0iai110t"
 const mergeOptions = {
     name: "mergedDoc", // Specify the name of the new document.
     author: "DDV", // Specify the author of the new document.
-    creationDate: "D:20230101092020", // Specify the creation date. Note that the argument should be 'D:YYYYMMDDHHmmSS', like 'D:20230101085959'.
+    creationDate: "D:20230101085959-08'00'", // Specify the creation date. Note that the argument should be D:YYYYMMDDHHmmSSOHH'mm', like D:20230101085959-08'00'.
     deleteOriginal: true, // Whether to delete the original documents.
 };
 
@@ -362,7 +361,7 @@ on(eventName: EventName, listener:(event:EventObject)=>void): void;
 
 **Parameters**
 
-`eventName`: Specify the event name. It can be [an integrated event name](#integrated-events).
+`eventName`: Specify the event name. It should be [an integrated event name](#integrated-events).
 
 `listener`: Specify the listener.
 
@@ -385,7 +384,7 @@ Dynamsoft.DDV.documentManager.on("documentCreated", eventFunc);
 --------|-----------------------------------------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  
-
+ -80103 | *XXX(API)*: The value for *XXX(ParameterName)* is not supported.
 
 ### off()
 
@@ -399,7 +398,7 @@ off(eventName: EventName, listener?:(event:EventObject)=>void): void;
 
 **Parameters**
 
-`eventName`: Specify the event name. It can be [an integrated event name](#integrated-events).
+`eventName`: Specify the event name. It should be [an integrated event name](#integrated-events).
 
 `listener`: Specify the listener. If no listener is specified, unbind all event listeners from the specified event
 
@@ -424,7 +423,8 @@ Dynamsoft.DDV.documentManager.off("documentCreated", eventFunc);
 --------|-----------------------------------------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  
-
+ -80103 | *XXX(API)*: The value for *XXX(ParameterName)* is not supported.
+ 
 ### Integrated Events
 
 #### documentCreated
@@ -455,7 +455,9 @@ Triggered when a document is deleted.
 
  `docName`: The name of the deleted document.
 
-{% comment %} #### pagesAdded
+{% comment %} 
+
+#### pagesAdded
 
 Triggered when the page(s) are added.
 
@@ -485,4 +487,6 @@ Triggered when the page(s) are deleted.
 
  `indices[]`: The array of the deleted page(s) indices.
 
- `pageUids[]`: The array of the deleted page(s) uids. {% endcomment %}
+ `pageUids[]`: The array of the deleted page(s) uids. 
+ 
+ {% endcomment %}

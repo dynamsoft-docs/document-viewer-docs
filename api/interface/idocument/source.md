@@ -17,7 +17,9 @@ permalink: /api/interface/idocument/source.html
 ```typescript
 interface Source {
     fileData: Blob; 
-    extraPageData: ExtraPageData[]; 
+    extraPageData?: ExtraPageData[]; 
+    pageWidth: number;  
+    pageHeight: number; 
 }
 ```
 
@@ -31,9 +33,26 @@ The blob of the file to be loaded.
 
 The extra data to be set. Please refer to [`ExtraPageData`]({{ site.api }}interface/idocument/extrapagedata.html);
 
+### pageWidth
+
+The page width of the displayed page. The unit is point.
+
+### pageHeight
+
+The page height of the displayed page. The unit is point.
+
+*Common page sizes:*
+
+ Page size | pageWidth (pt) | pageHeight (pt) 
+-----------|------------------|-------------------
+ Letter    | 612              | 792                
+ Legal     | 612              | 1008                
+ A4        | 597.6              | 842.4              
+ A3        | 842.4             | 1188     
+
 ## Remark
 
-- `Source` can be extanded as [`PdfSource`]({{ site.api }}interface/idocument/pdfsource.html).
+- `Source` can be extended as [`PdfSource`]({{ site.api }}interface/idocument/pdfsource.html).
 
 ## Related
 

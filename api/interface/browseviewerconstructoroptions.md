@@ -29,7 +29,7 @@ interface BrowseViewerConstructorOptions {
 
 The container which is used to show the viewer. Its `id` or `HTMLElement` is acceppted.
 
-### viewerConfig 
+### viewerConfig
 
 The configurations of viewer, please refer to [`BrowseViewerConfig`]({{ site.api }}interface/browseviewerconfig.html). If it is not specified, the [default configuration]({{ site.viewer }}viewerconfig.html#browseviewerconfig) will be applied.
 

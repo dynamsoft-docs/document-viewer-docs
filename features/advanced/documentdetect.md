@@ -123,7 +123,7 @@ Dynamsoft.DDV.setProcessingHandler("documentBoundariesDetect", detectHandler);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document Detect</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@1.1.0/dist/ddv.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@latest/dist/ddv.css">
 </head>
 <style>
     html,body {
@@ -141,7 +141,7 @@ Dynamsoft.DDV.setProcessingHandler("documentBoundariesDetect", detectHandler);
 <body>
     <div id="viewer"></div>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@1.1.0/dist/ddv.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@latest/dist/ddv.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/dynamsoft-core@3.0.30/dist/core.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/dynamsoft-license@3.0.20/dist/license.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/dynamsoft-document-normalizer@2.0.20/dist/ddn.js"></script>
@@ -150,7 +150,7 @@ Dynamsoft.DDV.setProcessingHandler("documentBoundariesDetect", detectHandler);
     (async () => {
         // Initializes DDV
         Dynamsoft.DDV.Core.license = "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9"; // Public trial license which is valid for 24 hours
-        Dynamsoft.DDV.Core.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@1.1.0/dist/engine";
+        Dynamsoft.DDV.Core.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@latest/dist/engine";
         await Dynamsoft.DDV.Core.init(); 
 
         // Initializes the DDN license using a license key string.
