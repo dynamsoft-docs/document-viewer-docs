@@ -12,7 +12,7 @@ permalink: /features/viewers/editviewer.html
 
 # Edit Viewer
 
-Edit Viewer is used to edit the pages in document, such as, rotating, cropping, filtering, etc. as well as adjust the layout of the display.
+Edit Viewer is used to edit the pages in document, such as, rotating, cropping, filtering, annotating, etc. as well as adjust the layout of the display.
 
 - [Default user interface]({{ site.ui }}default_ui.html#edit-viewer)
 - [Default viewer configuration]({{ site.viewer }}viewerconfig.html#edit-viewer)
