@@ -12,7 +12,7 @@ permalink: /releasenotes/index.html
 
 # Release Notes
 
-## 2.0 (20/08/2024)
+## 2.0 (08/20/2024)
 
 **We are excited to introduce version 2.0, which focuses on adding a powerful new annotation feature. This release includes comprehensive support for various types of annotations, new APIs for managing annotations, and advanced UI capabilities for seamless interaction.**
 
@@ -52,7 +52,7 @@ Supported Annotation Types:
 
   - [annotationSelectionStyle]({{ site.api }}interface/annotationconfig.html#annotationSelectionStyle): Defines the style of annotation selection.
   - [inkCreateDelay]({{ site.api }}interface/annotationconfig.html#inkCreateDelay): Specifies the delay for ink creation to support annotations created in multiple strokes.
-  - [showOnTopWhenSelected]({{ site.api }}interface/annotationconfig.html#showOnTopWhenSelected): Determines whether the selected annotation should be displayed on the top layer. 
+  - [showOnTopWhenSelected]({{ site.api }}interface/annotationconfig.html#showOnTopWhenSelected): Determines whether the selected annotation should be displayed on the top layer.
 
 - Added the method [`<static> addFonts()`]({{ site.api }}namespace/ddv.html#static-addfonts) to add fonts to the library.
 
