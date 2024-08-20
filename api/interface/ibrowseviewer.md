@@ -372,9 +372,10 @@ Set rows and columns of displayed pages.
 ```typescript
 setRowAndColumn(
     rows: number, 
-	columns: number 
+    columns: number 
 ): boolean;
 ```
+
 **Parameters**
 
 `rows`: The number of rows. The maximum value is 20.

@@ -14,7 +14,7 @@ permalink: /features/viewers/captureviewer.html
 
 Capture Viewer is used to control camera, play video stream, and capture the images from camera.
 
-- [Default user interface]({{ site.ui }}default_elements.html#capture-viewer)
+- [Default user interface]({{ site.ui }}default_ui.html#capture-viewer)
 - [Default viewer configuration]({{ site.viewer }}viewerconfig.html#capture-viewer)
 
 ```typescript

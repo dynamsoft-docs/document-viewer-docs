@@ -14,7 +14,6 @@ permalink: /features/datamanagement/pagemanagement.html
 
 DDV is using [`Interface IDocument`]({{ site.api }}interface/idocument/index.html) to manage the page data. 
 
-
 ## Load pages
 
 [`loadSource()`]({{ site.api }}interface/idocument/index.html#loadsource) is used to load file(s) into the document. 
@@ -29,7 +28,7 @@ DDV is using [`Interface IDocument`]({{ site.api }}interface/idocument/index.htm
     const firstDoc = docManager.createDocument({
         name: "first_document",
         author: "DDV",
-        creationDate: "D:20230101085959",
+        creationDate: "D:20230101085959-08'00'",
     });
 
     //Load a file
@@ -69,14 +68,28 @@ DDV is using [`Interface IDocument`]({{ site.api }}interface/idocument/index.htm
     await firstDoc.loadSource(testSource);
     ```
 
-- Load a PDF file by using [`PDFSource`]({{ site.api }}interface/idocument/pdfsource.html)
+- Load a PDF file and render its annotations using [`PDFSource`]({{ site.api }}interface/idocument/pdfsource.html)
 
     ```typescript
     const pdfSource = {
         fileData: /*Sample pdf blob*/,
         convertMode: Dynamsoft.DDV.EnumConvertMode.CM_RENDERALL,
         renderOptions: {
-            renderAnnotations: true,
+            renderAnnotations: Dynamsoft.DDV.EnumAnnotationRenderMode.RENDER_ANNOTATIONS,
+        },
+    };
+
+    await firstDoc.loadSource(pdfSource);
+    ```
+
+- Load a PDF file with it annotations using [`PDFSource`]({{ site.api }}interface/idocument/pdfsource.html)
+
+    ```typescript
+    const pdfSource = {
+        fileData: /*Sample pdf blob*/,
+        convertMode: Dynamsoft.DDV.EnumConvertMode.CM_RENDERALL,
+        renderOptions: {
+            renderAnnotations: Dynamsoft.DDV.EnumAnnotationRenderMode.LOAD_ANNOTATIONS,
         },
     };
 
@@ -87,20 +100,26 @@ DDV is using [`Interface IDocument`]({{ site.api }}interface/idocument/index.htm
 
 **Use case**
 
-- Save page as a JPEG file, [`saveToJpeg()`]({{ site.api }}interface/idocument/index.html#savetojpeg)
+- Save page as a JPEG file using [`saveToJpeg()`]({{ site.api }}interface/idocument/index.html#savetojpeg)
 
     ```typescript
     // Save the first page in the doc to a JPEG file with JPEG compression quality 60.
-    const settings = {
+    const settings1 = {
         quality: 60, // The default quality is 80.
     };
-    const result1 = await firstDoc.saveToJpeg(0, settings);
+    const result1 = await firstDoc.saveToJpeg(0, settings1);
 
     // Save the second page in the doc to a JPEG file with default JPEG compression quality
     const result2 = await firstDoc.saveToJpeg(1);
+
+    // Save the first page with annotations
+    const settings2 = {
+        saveAnnotation: true, 
+    };
+    const result3 = await firstDoc.saveToJpeg(0, settings2);
     ```
 
-- Save page(s) as a TIFF file, [`saveToTiff()`]({{ site.api }}interface/idocument/index.html#savetotiff)
+- Save page(s) as a TIFF file using [`saveToTiff()`]({{ site.api }}interface/idocument/index.html#savetotiff)
 
     ```typescript
     // Set custom Tag of the tiff file
@@ -108,13 +127,13 @@ DDV is using [`Interface IDocument`]({{ site.api }}interface/idocument/index.htm
     id: 700,
     content: "Created By Dynamsoft",
     contentIsBase64: false,
-    }
+    };
 
     // Set SaveTiffSettings
     const tiffSettings = {
         customTag: [customTag1],
         compression: "tiff/auto",
-    }
+    };
 
     // Save the fifth, sixth, seventh pages to a multi-page TIFF file with the specified tiff settings.
     const result1 = await firstDoc.saveToTiff([4,5,6], tiffSettings);
@@ -126,7 +145,7 @@ DDV is using [`Interface IDocument`]({{ site.api }}interface/idocument/index.htm
     const result2 = await firstDoc.saveToTiff();
     ```
 
-- Save page(s) as a PDF file, [`saveToPdf()`]({{ site.api }}interface/idocument/index.html#savetopdf)
+- Save page(s) as a PDF file using [`saveToPdf()`]({{ site.api }}interface/idocument/index.html#savetopdf)
 
     ```typescript
     // Set SavePdfSettings
@@ -135,15 +154,15 @@ DDV is using [`Interface IDocument`]({{ site.api }}interface/idocument/index.htm
         compression: "pdf/jpeg",
         pageType: "page/a4",
         creator: "DDV",
-        creationDate: "D:20230101085959",
+        creationDate: "D:20230101085959-08'00'",
         keyWords: "samplepdf",
-        modifiedDate: "D:20230101090101",
+        modifiedDate: "D:20230101090101-08'00'",
         producer: "Dynamsoft Document Viewer",
         subject: "SamplePdf",
         title: "SamplePdf",
         version: "1.5",
         quality: 90,
-    }
+    };
 
     // Save the fifth, sixth, seventh pages to a multi-page PDF file with the specified pdf settings.
     const result1 = await firstDoc.saveToPdf([4,5,6], pdfSettings);
@@ -155,11 +174,34 @@ DDV is using [`Interface IDocument`]({{ site.api }}interface/idocument/index.htm
     const result3 = await firstDoc.saveToPdf();
     ```
 
+- Save page(s) as an encrypted PDF file using [`saveToPdf()`]({{ site.api }}interface/idocument/index.html#savetopdf)
+
+    ```typescript
+    // Set SavePdfSettings
+    const pdfSettings = {
+        password: "Dynamsoft-1",
+    };
+
+    // Save the whole document to a multi-page PDF file.
+    const result = await firstDoc.saveToPdf(pdfSettings);
+    ```
+
+- Save page(s) with annotations as a PDF file using [`saveToPdf()`]({{ site.api }}interface/idocument/index.html#savetopdf)
+
+    ```typescript  
+    const pdfSettings = {
+        saveAnnotation: "annotation",
+    };
+
+    // Save the whole document to a multi-page PDF file.
+    const result = await firstDoc.saveToPdf(pdfSettings);
+    ```
+
 ## Move or switch pages
 
 **Use case**
 
-- Move pages to the specified order, [`movePages()`]({{ site.api }}interface/idocument/index.html#movepages)
+- Move pages to the specified order using [`movePages()`]({{ site.api }}interface/idocument/index.html#movepages)
 
     ```typescript
     // Move the second, fourth, sixth pages to the begining of the doc. 
@@ -177,7 +219,7 @@ DDV is using [`Interface IDocument`]({{ site.api }}interface/idocument/index.htm
     ```
   ![Move pages-2](/assets/imgs/movepages-2.png)
 
-- Switch the order of two pages, [`switchPage()`]({{ site.api }}interface/idocument/index.html#switchpage)
+- Switch the order of two pages using [`switchPage()`]({{ site.api }}interface/idocument/index.html#switchpage)
 
     ```typescript
     // Switch the order of the first page and third page 
@@ -188,7 +230,7 @@ DDV is using [`Interface IDocument`]({{ site.api }}interface/idocument/index.htm
 
 **Use case**
 
-- Get [`PageData`]({{ site.api }}interface/idocument/pagedata.html) of the first page, [`getPageData()`]({{ site.api }}interface/idocument/index.html#getpagedata)
+- Get [`PageData`]({{ site.api }}interface/idocument/pagedata.html) of the first page using [`getPageData()`]({{ site.api }}interface/idocument/index.html#getpagedata)
 
     ```typescript
     const pageData = await firstDoc.getPageData(firstDoc.pages[0]);
@@ -229,14 +271,14 @@ Sometimes, some custom data needs to be set with the specified page, [`setPageCu
 
 **Use case**
 
-- Delete specified page(s), [`deletePages()`]({{ site.api }}interface/idocument/index.html#deletepages)
+- Delete specified page(s) using [`deletePages()`]({{ site.api }}interface/idocument/index.html#deletepages)
 
     ```typescript
     // Delete the second and third pages
     firstDoc.deletePages([1,2]);
     ```
 
-- Delete all pages, [`deleteAllPages()`]({{ site.api }}interface/idocument/index.html#deleteallpages)
+- Delete all pages using [`deleteAllPages()`]({{ site.api }}interface/idocument/index.html#deleteallpages)
 
     ```typescript
     firstDoc.deleteAllPages();

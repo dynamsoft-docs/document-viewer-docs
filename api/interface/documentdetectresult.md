@@ -49,6 +49,3 @@ The status during detection. Please refer to [`EnumDocumentDetectionStatus`]({{ 
 ### statusMsg
 
 The status message string.
-
-
-

@@ -14,7 +14,7 @@ permalink: /gettingstarted/helloworld-v1.0.0.html
 
 In this section, we’ll break down and show all the steps needed to build the HelloWorld.
 
-![Hello World](/assets/imgs/helloWorld.GIF)
+![Hello World](/assets/imgs/helloWorld-v1.1.GIF)
 
 We’ll build on this skeleton page:
 

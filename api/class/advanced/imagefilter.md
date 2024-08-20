@@ -94,7 +94,3 @@ Destroy the instance.
 ```typescript
 destroy(): void;
 ```
-
-
-
-

@@ -33,11 +33,15 @@ So manage data is to manage documents and pages.
 
 Actually, if you are using the default UI of DDV, the data has been processed and managed internally.
 
+Starting from version 2.0, DDV supports annotation functionalities, which means that annotation data also needs to be managed.
+
+- [Annotation management]({{ site.features }}datamanagement/annotmanagement.html)
+
 ## Viewers
 
 Viewers are used to display the data. According to the different uses of viewers, DDV provides five different viewer types, which are implemented through five viewer classes.
 
-- [Edit Viewer]({{ site.features}}viewers/editviewer.html)
+- [Edit Viewer]({{ site.features }}viewers/editviewer.html)
 - [Capture Viewer]({{ site.features }}viewers/captureviewer.html)
 - [Perspective Viewer]({{ site.features }}viewers/perspectiveviewer.html)
 - [Browse Viewer]({{ site.features }}viewers/others.html#browse-viewer)

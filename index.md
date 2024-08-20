@@ -18,6 +18,7 @@ description: Dynamsoft Document Viewer Documentation Homepage
     - Data Management
         - [Document Management]({{ site.features }}datamanagement/docmanagement.html)
         - [Page Management]({{ site.features }}datamanagement/pagemanagement.html)
+        - [Annotation management]({{ site.features }}datamanagement/annotmanagement.html)
     - Viewers
         - [Edit Viewer]({{ site.features}}viewers/editviewer.html)
         - [Capture Viewer]({{ site.features }}viewers/captureviewer.html)

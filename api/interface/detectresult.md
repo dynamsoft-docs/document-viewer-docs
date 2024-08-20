@@ -32,7 +32,7 @@ The result of boundaries quadrangle. Please refer to [`Quad`]({{ site.api }}enum
 
 ### width
 
-The width of image. 
+The width of image.
 
 ### height
 
@@ -45,4 +45,3 @@ The configuration of document detect. Please refer to [`DocumentDetectConfig`]({
 ### confidence
 
 The confidence of the result quadrangle.
-

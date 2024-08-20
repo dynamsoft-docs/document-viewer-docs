@@ -45,7 +45,7 @@ Default value: `false`
 
 ### enableAutoCapture
 
-Specify whether to enable automatic capture. 
+Specify whether to enable automatic capture.
 
 Default value: `false`
 

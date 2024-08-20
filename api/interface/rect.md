@@ -35,11 +35,11 @@ The y-coordinate of the upper-left corner of the area.
 
 ### width 
 
-The width of the rectangle area. The unit is pixel.
+The width of the rectangle area. The unit is point.
 
 ### height
 
-The height of the rectangle area. The unit is pixel.
+The height of the rectangle area. The unit is point.
 
 ![Rect](/assets/imgs/rect.png)
 

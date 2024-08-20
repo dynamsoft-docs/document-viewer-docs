@@ -28,6 +28,9 @@ interface SavePdfSettings {
     title?: string;
     version?: string;
     quality?: number;
+    password?: string;
+    saveAnnotation?: SaveAnnotation;
+    imageScaleFactor?: number;
 }
 ```
 
@@ -57,7 +60,7 @@ Specify the creator.
 
 Specify the creation date.
 
-Please note that the argument should be `D:YYYYMMDDHHmmSS`, like `D:20230101085959`.
+Please note that the parameter should be in the format `D:YYYYMMDDHHmmSSOHH'mm'`, such as `D:20230101085959-08'00'`. It also supports the older format `D:YYYYMMDDHHmmSS`, like `D:20230101085959`; in this case, the system will automatically add the corresponding time zone information, for example, `D:20230101085959-08'00'`.
 
 ### keyWords
 
@@ -67,7 +70,7 @@ Specify the keywords.
 
 Specify the modified date.
 
-Please note that the argument should be `D:YYYYMMDDHHmmSS`, like `D:20230101085959`.
+Please note that the parameter should be in the format `D:YYYYMMDDHHmmSSOHH'mm'`, such as `D:20230101085959-08'00'`. It also supports the older format `D:YYYYMMDDHHmmSS`, like `D:20230101085959`; in this case, the system will automatically add the corresponding time zone information, for example, `D:20230101085959-08'00'`.
 
 ### producer
 
@@ -96,6 +99,37 @@ Specify the quality of the images in the file.
 The value range is [0, 100], default value is 80.
 
 Only takes effect when the [`compression`](#compression) is set to `PDF_JPEG` or `PDF_JP2000`.
+
+### password
+
+Specify the saved PDF owner password. Default value: `''`.
+
+Maximum of 32 characters.
+
+### saveAnnotation
+
+Specify how to save annotation(s) in pdf file. Default value: `none`.
+
+A `SaveAnnotation` can be one of four types.
+
+```typescript
+type SaveAnnotation = "none" | "image" | "annotation" | "flatten";
+```
+- `none`: not saving annotations. 
+
+- `image`: saving annotations as a part of image. 
+
+- `annotation`: saving annotations as pdf annotations.
+
+- `flatten`: saving annotations as page content.
+
+### imageScaleFactor
+
+Specify the scale factor of the images in the file.
+
+The value ranges from greater than 0 to less than or equal to 1.
+
+Default is 1.
 
 ## Related
 

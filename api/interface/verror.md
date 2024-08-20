@@ -26,7 +26,7 @@ interface VError {
 
 ### code
 
-The error code. Please refer to [Error List]() for the whole error codes DDV has.
+The error code. Please refer to [Error List]({{ site.api }}errorlist.html) for the whole error codes DDV has.
 
 ### message
 

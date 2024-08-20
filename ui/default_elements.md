@@ -29,7 +29,7 @@ The following are lists of built-in elements as well as their default icons that
 
 <div class="multi-panel-start"></div>
 
-| Supported Elements                           | ClassName of its default icon                               | More descriptions
+| Supported Elements                           | className of its default icon                               | More descriptions
 |------------------------------------|-------------------------------------------------------------|-------------------
 | Dynamsoft.DDV.Elements.Pagination            | ddv-first-page<br>ddv-prev-page<br>ddv-next-page<br>ddv-last-page | 
 | Dynamsoft.DDV.Elements.RotateLeft            | ddv-rotate-left                                             | 
@@ -57,13 +57,33 @@ The following are lists of built-in elements as well as their default icons that
 | Dynamsoft.DDV.Elements.ActualSize            | ddv-fit-actual                                              | 
 | Dynamsoft.DDV.Elements.SinglePage            | ddv-single-mode                                             |
 | Dynamsoft.DDV.Elements.ContinuousPage        | ddv-continuous-mode                                         |
-| Dynamsoft.DDV.Elements.Download              | ddv-button-download                                         | Download pages in pdf format to local.
+| Dynamsoft.DDV.Elements.Download              | ddv-button-download                                         | Download pages in pdf format to local.                   |
+
+|Annotation-related Elements                     | className of its default icon |
+| ----------------------------------------------- | ----------------------------- |
+| Dynamsoft.DDV.Elements.AnnotationSet            | ddv-annotation-mode           |
+| Dynamsoft.DDV.Elements.RectAnnotation           | ddv-rect                      |
+| Dynamsoft.DDV.Elements.EllipseAnnotation        | ddv-ellipse                   |
+| Dynamsoft.DDV.Elements.PolygonAnnotation        | ddv-polygon                   |
+| Dynamsoft.DDV.Elements.PolylineAnnotation       | ddv-polyline                  |
+| Dynamsoft.DDV.Elements.LineAnnotation           | ddv-line                      |
+| Dynamsoft.DDV.Elements.InkAnnotation            | ddv-ink                       |
+| Dynamsoft.DDV.Elements.TextBoxAnnotation        | ddv-text-box                  |
+| Dynamsoft.DDV.Elements.TextTypewriterAnnotation | ddv-typewriter                |
+| Dynamsoft.DDV.Elements.StampIconAnnotation      | ddv-stamp-icon                |
+| Dynamsoft.DDV.Elements.StampImageAnnotation     | ddv-stamp-image               |
+| Dynamsoft.DDV.Elements.SelectAnnotation         | ddv-annot-select              |
+| Dynamsoft.DDV.Elements.EraseAnnotation          | ddv-annot-eraser              |
+| Dynamsoft.DDV.Elements.BringForward             | ddv-bring-forward             |
+| Dynamsoft.DDV.Elements.BringToFront             | ddv-bring-to-front            |
+| Dynamsoft.DDV.Elements.SendBackward             | ddv-send-backward             |
+| Dynamsoft.DDV.Elements.SendToBack               | ddv-send-to-back              |
 
 <div class="multi-panel-end"></div>
 
 <div class="multi-panel-start"></div>
 
-| Supported Elements                       | ClassName of default icon | More descriptions
+| Supported Elements                       | className of default icon | More descriptions
 |--------------------------------|---------------------------|--------------------
 | Dynamsoft.DDV.Elements.Capture           | ddv-capture-image         | If there is no document opened when you click Capture button, a new document (default name: doc-*timestamp*) will be created and opened automatically.
 | Dynamsoft.DDV.Elements.Flashlight        | ddv-camera-flashlight     |
@@ -77,7 +97,7 @@ The following are lists of built-in elements as well as their default icons that
 
 <div class="multi-panel-start"></div>
 
-| Supported Elements                          | ClassName of default icon                                   | More descriptions
+| Supported Elements                          | className of default icon                                   | More descriptions
 |-----------------------------------|-------------------------------------------------------------|------------------
 | Dynamsoft.DDV.Elements.Pagination           | ddv-first-page<br>ddv-prev-page<br>ddv-next-page<br>ddv-last-page |
 | Dynamsoft.DDV.Elements.RotateLeft           | ddv-rotate-left                                             | 
@@ -95,7 +115,7 @@ The following are lists of built-in elements as well as their default icons that
 
 <div class="multi-panel-start"></div>
 
-| Supported Elements                           | ClassName of default icon                                   | More descriptions
+| Supported Elements                           | className of default icon                                   | More descriptions
 |------------------------------------|-------------------------------------------------------------|-------------------
 | Dynamsoft.DDV.Elements.Pagination            | ddv-first-page, ddv-prev-page, ddv-next-page, ddv-last-page |
 | Dynamsoft.DDV.Elements.RotateLeft            | ddv-rotate-left                                             | 
@@ -113,7 +133,7 @@ The following are lists of built-in elements as well as their default icons that
 
 The following list shows the common elements which could be used within all viewer classes.
 
-| Elements                   | ClassName of default icon | More descriptions
+| Elements                   | className of default icon | More descriptions
 |----------------------------|---------------------------|----------------
 | Dynamsoft.DDV.Elements.Blank         | N/A                       |
 | Dynamsoft.DDV.Elements.SeparatorLine | N/A                       |
@@ -121,7 +141,7 @@ The following list shows the common elements which could be used within all view
 
 Besides, three designed icons are provided and can be used if you want to add the related buttons in order to unify the icon style.
 
-| Related Button   | ClassName of default icon       
+| Related Button   | className of default icon       
 |------------------|----------------------
 | Close            | ddv-button-close
 | Done             | ddv-button-done

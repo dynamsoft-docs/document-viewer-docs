@@ -24,15 +24,15 @@ The simplest way to include the SDK is to use either the [jsDelivr](https://jsde
 - jsDelivr
 
   ```html
-  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@1.1.0/dist/ddv.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@1.1.0/dist/ddv.css">
+  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@latest/dist/ddv.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@latest/dist/ddv.css">
   ```
 
 - UNPKG
 
   ```html
-  <script src="https://unpkg.com/dynamsoft-document-viewer@1.1.0/dist/ddv.js"></script>
-  <link rel="stylesheet" href="https://unpkg.com/dynamsoft-document-viewer@1.1.0/dist/ddv.css">
+  <script src="https://unpkg.com/dynamsoft-document-viewer@latest/dist/ddv.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/dynamsoft-document-viewer@latest/dist/ddv.css">
   ```
 
 ## Host the SDK yourself
@@ -48,13 +48,13 @@ Options to download the SDK:
 - yarn
 
   ```cmd
-  yarn add dynamsoft-document-viewer@1.1.0
+  yarn add dynamsoft-document-viewer@latest
   ```
 
 - npm
 
   ```cmd
-  npm install dynamsoft-document-viewer@1.1.0
+  npm install dynamsoft-document-viewer@latest
   ```
 
 Depending on how you downloaded the SDK and where you put it, you can typically include it like this:

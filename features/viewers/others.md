@@ -16,7 +16,7 @@ permalink: /features/viewers/others.html
 
 Browse Viewer is used to display pages in multiple-mode, pages can be multiple selected in this viewer. 
 
-- [Default user interface]({{ site.ui }}default_elements.html#browse-viewer)
+- [Default user interface]({{ site.ui }}default_ui.html#browse-viewer)
 - [Default viewer configuration]({{ site.viewer }}viewerconfig.html#browse-viewer)
 
 ```typescript
@@ -27,7 +27,7 @@ const browseViewer = new Dynamsoft.DDV.BrowseViewer({
 browseViewer.openDocument("docUid"); // Open a document which has pages
 ```
 
-### Select page(s)
+### Select page(s) via programming
 
 - Select the second and third pages by using [`selectPages()`]({{ site.api }}class/browseviewer.html#selectpages).
 
@@ -41,9 +41,11 @@ browseViewer.openDocument("docUid"); // Open a document which has pages
     browseViewer.selectAllPages();
     ```
 
-### Multiple select
+### Multiple select via UI
 
 To enable multiple select mode, you need to set [`multiselectMode`]({{ site.api }}class/browseviewer.html#multiselectmode) to `true`. 
+
+In this case, you can select multiple pages by clicking on them in the viewer without the need to additionally press the Ctrl key.
 
 ```typescript
 browseViewer.multiselectMode = true;

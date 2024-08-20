@@ -19,7 +19,7 @@ interface PdfSource extends Source {
     convertMode: EnumConvertMode;   
     password?: string;  
     renderOptions?: {
-        renderAnnotations?: boolean;
+        renderAnnotations?: EnumAnnotationRenderMode; 
         resolution?: number;  
         maxWidth?: number;
         maxHeight?: number;
@@ -38,7 +38,7 @@ interface PdfSource extends Source {
 
 Specify PDF convert mode. Please refer to [`EnumConvertMode`]({{ site.api }}enumeration-type/enumconvertmode.html).
 
-Default value: `CM_AUTO`
+Default value: `Dynamsoft.DDV.EnumConvertMode.CM_AUTO`
 
 ### password
 
@@ -50,9 +50,11 @@ Default value: `""`.
 
 #### renderAnnotations
 
-Whether the annotations will be rendered or not. Only take effects when [`convertMode`](#convertmode) is set to `CM_RENDERALL` or `CM_AUTO`.
+Specify how to load the annotations. Please refer to [`EnumAnnotationRenderMode`]({{ site.api }}enumeration-type/enumannotationrendermode.html).
 
-Default value: `false`
+Only take effects when [`convertMode`](#convertmode) is set to `Dynamsoft.DDV.EnumConvertMode.CM_RENDERALL` or `Dynamsoft.DDV.EnumConvertMode.CM_AUTO`(`Dynamsoft.DDV.EnumConvertMode.CM_RENDERALL` in fact).
+
+Default value: `Dynamsoft.DDV.EnumAnnotationRenderMode.NO_ANNOTATIONS`
 
 #### resolution
 
@@ -77,6 +79,8 @@ In pixels. 0 means no limit. Default value: 0
 Whether rasterize the PDF in grayscale.
 
 Default value: `false`
+
+Only take effects when [`convertMode`](#convertmode) is set to `Dynamsoft.DDV.EnumConvertMode.CM_RENDERALL` or `Dynamsoft.DDV.EnumConvertMode.CM_AUTO`(`Dynamsoft.DDV.EnumConvertMode.CM_RENDERALL` in fact).
 
 ## Related
 

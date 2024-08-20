@@ -66,6 +66,24 @@ interface Tooltip {
     LastPage?: string,
     NextPage?: string,
     PrevPage?: string,
+
+    AnnotationSet?: string;
+    RectAnnotation?: string;
+    EllipseAnnotation?: string;
+    PolygonAnnotation?: string;
+    PolylineAnnotation?: string;
+    LineAnnotation?: string;
+    InkAnnotation?: string;
+    TextBoxAnnotation?: string;
+    TextTypewriterAnnotation?: string;
+    StampIconAnnotation?: string;
+    StampImageAnnotation?: string;
+    SelectAnnotation?: string;
+    EraseAnnotation?:string;
+    BringForward?: string;
+    BringToFront?: string;
+    SendBackward?: string;
+    SendToBack?: string;
 }
 ```
 

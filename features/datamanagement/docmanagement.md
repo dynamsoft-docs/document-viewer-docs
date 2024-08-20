@@ -27,7 +27,7 @@ const docManager = Dynamsoft.DDV.documentManager;
 const firstDoc = docManager.createDocument({
     name: "first_document",
     author: "DDV",
-    creationDate: "D:20230101085959",
+    creationDate: "D:20230101085959-08'00'",
     });
 
 // Document's name and creationDate will be generated automatically, and author will be blank, if they are not specified
@@ -51,7 +51,7 @@ const docUid2 = secondDoc.uid;
 const mergeOptions = {
     name: "mergedDoc", // Specify the name of the new document.
     author: "DDV", // Specify the author of the new document.
-    creationDate: "D:20230101092020", // Specify the creation date of the new document.
+    creationDate: "D:20230101085959-08'00'", // Specify the creation date of the new document.
     deleteOriginal: true, // Delete the original documents after merging.
 };
 

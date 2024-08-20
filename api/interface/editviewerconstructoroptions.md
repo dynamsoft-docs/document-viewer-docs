@@ -16,11 +16,12 @@ permalink: /api/interface/editviewerconstructoroptions.html
 
 ```typescript
 interface EditViewerConstructorOptions {
-	container?: string | HTMLElement;
-	viewerConfig?: EditViewerConfig; 
-	uiConfig?: UiConfig; 
-	thumbnailConfig?: ThumbnailConfig; 
-	groupUid?: string; 
+    container?: string | HTMLElement;
+    viewerConfig?: EditViewerConfig; 
+    uiConfig?: UiConfig; 
+    thumbnailConfig?: ThumbnailConfig; 
+    annotationConfig?: AnnotationConfig;
+    groupUid?: string; 
 }
 ```
 
@@ -41,6 +42,10 @@ The UI layout configurations of viewer, please refer to [`UiConfig`]({{ site.api
 ### thumbnailConfig
 
 The configurations of integrated thumbnail, please refer to [`ThumbnailConfig`]({{ site.api }}interface/thumbnailconfig.html). If it is not specified, the [default configuration]({{ site.viewer }}viewerconfig.html#thumbnailconfig) will be applied.
+
+### annotationConfig
+
+The configurations of annotation part in the viewer, please refer to [`AnnotationConfig`]({{ site.api }}interface/annotationconfig.html). If it is not specified, the [default configuration]({{ site.viewer }}viewerconfig.html#annotationconfig) will be applied.
 
 ### groupUid
 

@@ -38,6 +38,7 @@ Edit Viewer is used to edit the pages in document, such as, rotating, cropping, 
 | [`hide()`](#hide)                | Hide the viewer.                                             |
 | [`isVisible`](#isvisible)        | Return whether the viewer is shown or hidden.      |
 | [`toolMode`](#toolmode)              | Specify or return the tool mode of the viewer.     |
+| [`annotationMode`](#annotationmode) | Specify or return the annotation mode of the viewer. |
 
 **Document and Page Control**
 
@@ -63,6 +64,13 @@ Edit Viewer is used to edit the pages in document, such as, rotating, cropping, 
 | [`fitMode`](#fitmode)                     | Specify or return the fit mode of the viewer.      |
 | [`zoom`](#zoom)                        | Specify or return zoom ratio.                      |
 | [`zoomOrigin`](#zoomorigin)                  | Specify or return the zoom origin of the viewer.   |
+
+**Annotation Control**
+
+| API Name              | Description                                                  |
+| --------------------- | ------------------------------------------------------------ |
+|[`selectAnnotations()`](#selectannotations)    | Select the specified annotation(s) on the current page. |
+|[`getSelectedAnnotations()`](#getselectedannotations) | Get selected annotation(s). |
 
 **Edit Operations**
 
@@ -98,6 +106,7 @@ Edit Viewer is used to edit the pages in document, such as, rotating, cropping, 
 | [`cropRectDrawn`](#croprectdrawn)       | Triggered when a rectangular selection is drawn.               |
 | [`cropRectDeleted`](#croprectdeleted)     | Triggered when the rectangular selection is deleted.           |
 | [`cropRectModified`](#croprectmodified)    | Triggered when the crop rectangular selection is modified.     |
+| [`selectedAnnotationsChanged`](#selectedannotationschanged) | Triggered when selected annotation(s) is changed. |
 | [`click`](#click)               | Triggered when click in the viewer's viewing area.           |
 | [`dblclick`](#dbclick)            | Triggered when double click in the viewer's viewing area.    |
 | [`rightclick`](#rightclick)          | Triggered when right click in the viewer's viewing area.     |
@@ -252,10 +261,10 @@ getStyle(editViewerStyleName: EditViewerStyleName): EditViewerStyle | null;
 
 **Parameters**
 
-`editViewerStyleName`: An `EditViewerStyleName` can be one of four types.
+`editViewerStyleName`: An `EditViewerStyleName` can be one of five types.
 
 ```typescript
-type EditViewerStyleName = "canvasStyle" | "pageStyle" | "currentPageStyle" |"quadSelectionStyle";
+type EditViewerStyleName = "canvasStyle" | "pageStyle" | "currentPageStyle" | "quadSelectionStyle" | "annotationSelectionStyle";
 ```
 
 **Return values**
@@ -289,10 +298,10 @@ updateStyle(editViewerStyleName: EditViewerStyleName, editViewerStyle: EditViewe
 
 **Parameters**
 
-`editViewerStyleName`: An `EditViewerStyleName` can be one of three types.
+`editViewerStyleName`: An `EditViewerStyleName` can be one of five types.
 
 ```typescript
-type EditViewerStyleName = "canvasStyle" | "pageStyle" | "currentPageStyle" |"quadSelectionStyle";
+type EditViewerStyleName = "canvasStyle" | "pageStyle" | "currentPageStyle" | "quadSelectionStyle" | "annotationSelectionStyle";
 ```
 
 `editViewerStyle`: The style object. Please refer to [Style Interfaces]({{ site.api }}interface/styleinterface/index.html).
@@ -455,7 +464,7 @@ readonly isVisible: boolean;
 
 ### toolMode
 
-Specify the tool mode of the viewer.
+Specify or return the tool mode of the viewer. 
 
 **Syntax**
 
@@ -463,15 +472,17 @@ Specify the tool mode of the viewer.
 toolMode: ToolMode; 
 ```
 
-A `ToolMode` can be one of two types. 
+A `ToolMode` can be one of three types. 
 
 ```typescript
-type ToolMode = "pan" | "crop";
+type ToolMode = "pan" | "crop" | "annotation";
 ```
 
 `pan`: The default tool mode.
 
 `crop`: A mode what allows to draw a rectangle by [`setCropRect()`](#setcroprect).
+
+`annotation`: A mode that allows to annotations to be manipulated via the UI. 
 
 **Code Snippet**
 
@@ -486,26 +497,85 @@ editViewer.toolMode = "crop";
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
  -80103 | *XXX(API)*: The value for *XXX(ParameterName)* is not supported.
 
-{% comment %} **Remark**
+**Remark**
 
-- The default `toolMode` is `pan` mode. {% endcomment %}
+- If `toolMode` is set to `annotation`, can use [`annotationMode`](#annotationmode) to clarify the specific operation.
 
+### annotationMode
+
+Specify or return the annotation mode of the viewer.
+
+**Syntax**
+
+```typescript
+annotationMode: AnnotationMode;
+```
+
+An `AnnotationMode` can be one of eleven types.
+
+```typescript
+type AnnotationMode = "select" | "erase" | "rectangle" | "ellipse" | "line" | "polygon" | "polyline" | "ink" | "textBox" | "textTypewriter" | "stamp";
+```
+
+`select`: A mode that allows to select annotation(s) via UI.
+
+`erase`: A mode that allows to delete annotation(s) via UI.
+
+`rectangle`: A mode that allows to draw rectangle annotation(s) via UI.
+
+`ellipse`: A mode that allows to draw ellipse annotation(s) via UI.
+
+`line`: A mode that allows to draw line annotation(s) via UI.
+
+`polygon`: A mode that allows to draw polygon annotation(s) via UI.
+
+`polyline`: A mode that allows to draw polyline annotation(s) via UI.
+
+`ink`: A mode that allows to draw ink annotation(s) via UI.
+
+`textBox`: A mode that allows to draw text box annotation(s) via UI.
+
+`textTypewriter`: A mode that allows to draw text typewriter annotation(s) via UI.
+
+`stamp`: A mode that allows to draw stamp annotation(s) via UI.
+
+**Code Snippet**
+
+```typescript
+editViewer.toolMode = "annotation";
+editViewer.annotationMode = "select";
+```
+
+**Warning**
+
+ Error Code  | Error Message                                        
+--------|-----------------------------------------------------
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.
+ -80103 | *XXX(API)*: The value for *XXX(ParameterName)* is not supported.
+
+**Remark**
+
+- It only take effect when [`toolMode`](#toolmode) is `annotation`.
+- Default value is `select`.
+- When `enableContinuousDrawing` is false, please note that the `toolMode` will automatically switch to `pan` after completing an annotation drawing interaction, unless the `annotationMode` is set to `select`, `erase`, or `ink` mode.
 
 ## Document and Page Control
 
 ### openDocument()
 
-Open the specified document by document uid.
+Open the specified document.
 
 **Syntax**
 
 ```typescript
-openDocument(docUid: string): void;
+openDocument(docUid: string | doc: IDocument): void;
 ```
 
 **Parameters**
 
 `docUid`: The uid of the specified document.
+
+`doc`: The object of the document to open. Please refer to [IDocument]({{ site.api }}interface/idocument/index.html).
 
 **Code Snippet**
 
@@ -517,14 +587,15 @@ editViewer.openDocument("lnn0ll9o124");
 // Assume there is a document object firstDoc.
 const docUid = firstDoc.uid;
 editViewer.openDocument(docUid);
+editViewer.openDocument(firstDoc);
 ```
 
 **Exception**
 
  Error Code  | Error Message                                        
 --------|-----------------------------------------------------
- -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
- -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.   
+ -80100 | *XXX(API)*: docUid or doc is invalid.
+ -80102 | *XXX(API)*: docUid or doc is missing.
  -80104 | *XXX(API)*: The specified document(s) do not exist.  
 
 **Remark**
@@ -763,6 +834,69 @@ editViewer.uidToIndex(curPageUid);
  -80105 | *XXX(API)*: The specified page(s) do not exist.  | `-1`
  -80304 | No document opened.                                      | `-1`
  -80305 | There is no image in the current document.               | `-1`
+
+## Annotation Control
+
+### selectAnnotations()
+
+Select the specified annotations on the current page.
+
+**Syntax**
+
+```typescript
+selectAnnotations(annotationUids: string[]): boolean;
+```
+
+**Parameters**
+
+`annotationUids`: Specify the array of annotation uids to select. If set to `[]`, no annotation will be selected.
+
+**Return value**
+
+`true`: Successfully.
+
+`false`: Failed.
+
+
+**Warning**
+
+ Error Code | Error Message                                               | API return value
+ ---------- | ------------------------------------------------------------|--------- 
+ -80100     | *XXX(API)*: *XXX(ParameterName)* is invalid.                | `false`
+ -80102     | *XXX(API)*: *XXX(ParameterName)* is missing.                | `false`
+ -80304     | No document opened.                                         | `false`
+ -80305     | There is no image in the current document.                  | `false`
+ -80314     | *XXX(API)*: Not available in current toolMode.              | `false`
+ -80317     | The specified annotation(s) is not on the current page or does not exist.     | `false`
+ -80319     | ReadOnly annotation or noView annotation cannot be selected.     | `false`
+ -80320     | Unknown annotation or incomplete annotation cannot be selected.     | `false`  
+
+### getSelectedAnnotations()
+
+Get selected annotation(s).
+
+**Syntax**
+
+```typescript
+getSelectedAnnotations(): Annotation[];
+```
+
+**Return value**
+
+An array of selected [`Annotation`]() object.
+
+**Code Snippet**
+
+```typescript
+const selectAnnots = editViewer.getSelectAnnotations();
+```
+
+**Warning**
+
+ Error Code | Error Message                                               | API return value
+ ---------- | ------------------------------------------------------------|--------- 
+ -80304     | No document opened.                                         | `[]`
+ -80305     | There is no image in the current document.                  | `[]`
 
 ## Display Control
 
@@ -1463,6 +1597,20 @@ Triggered when the crop rectangular selection is modified.
 `oldRect`: The old rectangle.
 
 `newRect`: The new rectangle.
+
+#### selectedAnnotationsChanged
+
+Triggered when selected annotation(s) is changed.
+
+**Callback**
+
+`SelectedAnnotationsChanged`: An EventObject.
+
+**Attributes**
+
+`oldAnnotationUids`: The array of old selected annotations uids.
+
+`newAnnotationUids`: The array of new selected annotations uids.
 
 #### Mouse Events
 

@@ -17,7 +17,7 @@ permalink: /gettingstarted/sdk_init.html
 ### Get a trial key
 
 - A free public trial license is available for every new device for first use of Dynamsoft Document Viewer. The public trial license is the default key used in samples. You can also find the public trial license on the following parts of this page.
-- If your free key is expired, please visit <a href="https://www.dynamsoft.com/customer/license/trialLicense?product=ddv&source=docs" target="_blank">Private Trial License Page</a> to get a 30-day trial extension.
+- If your free key is expired, please visit <a href="https://www.dynamsoft.com/customer/license/trialLicense?product=mwc&source=docs" target="_blank">Private Trial License Page</a> to get a 30-day trial extension.
 
 ### Get a full license
 
@@ -29,7 +29,7 @@ The following code snippets are using the public trial license to initialize the
 
 ```javascript
 Dynamsoft.DDV.Core.license = "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9"; // Public trial license which is valid for 24 hours
-Dynamsoft.DDV.Core.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@1.1.0/dist/engine";// Lead to a folder containing the distributed WASM files
+Dynamsoft.DDV.Core.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@latest/dist/engine";// Lead to a folder containing the distributed WASM files
 await Dynamsoft.DDV.Core.loadWasm();
 await Dynamsoft.DDV.Core.init(); 
 ```
@@ -40,8 +40,8 @@ A human-readable name for the device which corresponds to its UUID is able to se
 
 ```javascript
 Dynamsoft.DDV.Core.license = "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9";// Public trial license which is valid for 24 hours
-Dynamsoft.DDV.Core.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@1.1.0/dist/engine"; // Lead to a folder containing the distributed WASM files
-Dynamsoft.Core.deviceFriendlyName = "Dynamsoft-iPhone"; // A string representing the device which is easier to recognize than its UUID
+Dynamsoft.DDV.Core.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@latest/dist/engine"; // Lead to a folder containing the distributed WASM files
+Dynamsoft.DDV.Core.deviceFriendlyName = "Dynamsoft-iPhone"; // A string representing the device which is easier to recognize than its UUID
 await Dynamsoft.DDV.Core.loadWasm();
 await Dynamsoft.DDV.Core.init(); 
 ```

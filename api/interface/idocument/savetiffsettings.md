@@ -19,6 +19,7 @@ interface SaveTiffSettings {
     customTag?: CustomTag[];
     compression?: EnumTIFFCompressionType;
     quality?: number;
+    saveAnnotation?: boolean; 
 }
 ```
 
@@ -37,6 +38,10 @@ Default value: `TIFF_AUTO`
 ### quality
 
 Specify the quality of the images in the file. The value ranges from 0 to 100. Only valid when the [`compression`](#compression) is `TIFF_JPEG`.
+
+### saveAnnotation
+
+Whether to save the annotation(s) as the part of image. Default vaule: `false`.
 
 ## Related
 
