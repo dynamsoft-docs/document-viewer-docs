@@ -10,12 +10,9 @@ features: /document-viewer/docs/features/
 viewer: /document-viewer/docs/viewer/
 ui: /document-viewer/docs/ui/
 api: /document-viewer/docs/api/
-
-
-
 license: /document-viewer/docs/license/
-
 releasenotes: /document-viewer/docs/releasenotes/
+faq: /document-viewer/docs/faq/
 
 useVersionTree: true
 

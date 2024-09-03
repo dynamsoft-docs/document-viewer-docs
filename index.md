@@ -53,3 +53,4 @@ description: Dynamsoft Document Viewer Documentation Homepage
         - [Update UI dynamically]({{ site.ui }}customize/dynamically.html)
 - [API Reference]({{ site.api }}index.html)
 - [Release Notes]({{ site.releasenotes }}index.html)
+- [FAQ]({{ site.faq }}index.html)
