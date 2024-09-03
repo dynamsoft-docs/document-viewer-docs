@@ -6,6 +6,7 @@ tree_file_list:
   - sidelist-ui.html
   - sidelist-apis.html
   - sidelist-releasenotes.html
+  - sidelist-faq.html
   - sidelist-full-tree.html
   - sidelist-apis-v1.0.0.html
   - sidelist-apis-v1.1.html

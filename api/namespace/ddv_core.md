@@ -45,7 +45,7 @@ license: string;
 
 ```typescript
 // Public trial license which is valid for 24 hours
-// You can request a 30-day trial key from https://www.dynamsoft.com/customer/license/trialLicense/?product=ddv
+// You can request a 30-day trial key from https://www.dynamsoft.com/customer/license/trialLicense/?product=mwc
 Dynamsoft.DDV.Core.license = "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9";
 ```
 
@@ -150,7 +150,7 @@ A Promise [`ConfigResult`]({{ site.api }}interface/configresult.html) object.
 
 ```typescript
 // Public trial license which is valid for 24 hours
-// You can request a 30-day trial key from https://www.dynamsoft.com/customer/license/trialLicense/?product=ddv
+// You can request a 30-day trial key from https://www.dynamsoft.com/customer/license/trialLicense/?product=mwc
 Dynamsoft.DDV.Core.license = "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9";
 Dynamsoft.DDV.Core.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@latest/dist/engine";
 Dynamsoft.DDV.Core.loadWasm(); 
