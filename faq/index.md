@@ -12,4 +12,4 @@ permalink: /faq/index.html
 
 # FAQ
 
-- [How to add annotations to a scanned document?](https://www.dynamsoft.com/web-twain/docs/faq/dwt-with-annotation.html)
+- [How to acquire scanned images from the scanner?](https://www.dynamsoft.com/web-twain/docs/faq/dwt-with-annotation.html)
