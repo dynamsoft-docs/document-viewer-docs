@@ -14,7 +14,13 @@ permalink: /gettingstarted/helloworld.html
 
 In this section, we’ll break down and show all the steps needed to build the HelloWorld.
 
-![Hello World](/assets/imgs/helloWorld.GIF)
+### Mobile View Mockup
+
+![Hello World for Mobile](/assets/imgs/dmhelloworld.jpg)
+
+### Desktop View Mockup
+
+![Hello World for Desktop](/assets/imgs/ddhelloworld.jpg)
 
 We’ll build on this skeleton page:
 
@@ -76,6 +82,8 @@ For HelloWorld, we define below elements.
 // You can request a 30-day trial key from https://www.dynamsoft.com/customer/license/trialLicense/?product=mwc
 Dynamsoft.DDV.Core.license = "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9";
 Dynamsoft.DDV.Core.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@latest/dist/engine";
+// Preload DDV Resource
+Dynamsoft.DDV.Core.loadWasm();
 await Dynamsoft.DDV.Core.init(); 
 ```
 
@@ -128,6 +136,8 @@ const editViewer = new Dynamsoft.DDV.EditViewer({
         // You can request a 30-day trial key from https://www.dynamsoft.com/customer/license/trialLicense/?product=mwc
         Dynamsoft.DDV.Core.license = "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9";
         Dynamsoft.DDV.Core.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@latest/dist/engine";
+        // Preload DDV Resource
+        Dynamsoft.DDV.Core.loadWasm();
         await Dynamsoft.DDV.Core.init();
         Dynamsoft.DDV.setProcessingHandler("imageFilter", new Dynamsoft.DDV.ImageFilter());
         const editViewer = new Dynamsoft.DDV.EditViewer({
