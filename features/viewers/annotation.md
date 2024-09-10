@@ -115,7 +115,7 @@ rect.updateOptions(newRectOptions);
 
 Even after the annotation has been created by [`createAnnotation()`]({{ site.api }}class/annotationmanager.html#createAnnotation), updating the options will lead to instant changes in the displayed annotation on the page.
 
-### Create an annotation instance after cropping
+### Create an annotation instance after image cropping
 
 After cropping, if no specific options are passed during the creation of the annotation instance, the generated annotation will use default options, which might result in it being invisible.
 

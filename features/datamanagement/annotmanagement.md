@@ -14,7 +14,7 @@ permalink: /features/datamanagement/annotmanagement.html
 
 Starting from DDV 2.0, Annotation functionality is supported. This guide introduces some of the key Annotation features. The following functionalities can all be achieved through bulit-in Elements which are related to annotation functionality, this guide only focuses on programming methods.
 
-It is important to note that annotations on the page can be displayed in the UI of either the EditViewer or the BrowseViewer, but they can only be processed through the UI in the EditViewer.Additionally, [built-in Elements related to annotation functionality]({{ site.ui }}default_elements.html#edit-viewer) can only be configured within the UiConfig of the EditViewer.
+It is important to note that annotations on the page can be displayed in the UI of either the EditViewer or the BrowseViewer, but they can only be processed through the UI in the EditViewer. Additionally, [built-in Elements related to annotation functionality]({{ site.ui }}default_elements.html#edit-viewer) can only be configured within the UiConfig of the EditViewer.
 
 ## Annotation creation 
 
@@ -117,7 +117,7 @@ rect.updateOptions(newRectOptions);
 
 Even after the annotation has been created to the page by [`createAnnotation()`]({{ site.api }}class/annotationmanager.html#createAnnotation), updating the options will lead to instant changes in the displayed annotation on the page.
 
-### Create an annotation instance after cropping
+### Create an annotation instance after image cropping
 
 After cropping, if no specific options are passed during the creation of the annotation instance, the generated annotation will use default options, which might result in it being invisible.
 
