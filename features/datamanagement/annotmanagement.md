@@ -16,7 +16,7 @@ Starting from DDV 2.0, Annotation functionality is supported. This guide introdu
 
 It is important to note that annotations on the page can be displayed in the UI of either the EditViewer or the BrowseViewer, but they can only be processed through the UI in the EditViewer. Additionally, [built-in Elements related to annotation functionality]({{ site.ui }}default_elements.html#edit-viewer) can only be configured within the UiConfig of the EditViewer.
 
-## Annotation creation 
+## Annotation creation
 
 ### Supported annotation types
 

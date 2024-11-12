@@ -7,7 +7,7 @@ title: Dynamsoft Document Viewer API Reference - DocumentManager Class
 keywords: Documentation, Dynamsoft Document Viewer, API Reference, DocumentManager Class
 breadcrumbText: DocumentManager Class
 description: Dynamsoft Document Viewer Documentation API Reference DocumentManager Class Page
-permalink: /api/class/documentmanager.html
+permalink: /api/class/documentmanager-v2.0.html
 ---
 
 # DocumentManager Class
@@ -151,7 +151,7 @@ Get the document object with the document uid.
 **Syntax**
 
 ```typescript
-getDocument(docUid: string): IDocument | null;
+getDocument(docUid: string): IDocument;
 ```
 
 **Parameters**
@@ -167,6 +167,15 @@ The object of the specified document. Please refer to [`IDocument`]({{ site.api 
 ```typescript
 Dynamsoft.DDV.documentManager.getDocument("lnn0ll9o124");
 ```
+
+**Exception**
+
+ Error Code  | Error Message                                        
+--------|-----------------------------------------------------
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
+ -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.   
+ -80104 | *XXX(API)*: The specified document(s) do not exist.  
+
 
 ### getAllDocuments()
 
