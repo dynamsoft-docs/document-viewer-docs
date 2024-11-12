@@ -25,12 +25,12 @@ permalink: /api/namespace/ddv.html
 | API Name                        | Description                                       |
 | ------------------------------- | ------------------------------------------------- |
 | [`<static> documentManager`](#static-documentmanager)   | [`DocumentManager`]({{ site.api }}class/documentmanager.html) instance.   |
-| [`<static> annotationManager`](#static-annotationmanager)   | [`AnnotationManager`]({{ site.api }}class/annoationmanager.html) instance. |
+| [`<static> annotationManager`](#static-annotationmanager)   | [`AnnotationManager`]({{ site.api }}class/annotationmanager.html) instance. |
 
 **Classes**
 
 - [DocumentManager]({{ site.api }}class/documentmanager.html)
-- [AnnotationManager]({{ site.api }}class/annoationmanager.html)
+- [AnnotationManager]({{ site.api }}class/annotationmanager.html)
 - [EditViewer]({{ site.api }}class/editviewer.html)
 - [CaptureViewer]({{ site.api }}class/captureviewer.html)
 - [PerspectiveViewer]({{ site.api }}class/perspectiveviewer.html)
