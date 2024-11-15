@@ -27,6 +27,88 @@ permalink: /gettingstarted/sdk_init.html
 
 The following code snippets are using the public trial license to initialize the license. You can replace the public trial license with your own license key.
 
+<div class="multi-panel-switching-prefix"></div>
+
+- [Use a CDN](#-)
+- [Host the SDK yourself](#--)
+
+<div class="multi-panel-start"></div>
+
+<div style="height: 20px;"></div>
+ 
+
+```javascript
+Dynamsoft.DDV.Core.license = "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9"; // Public trial license which is valid for 24 hours
+Dynamsoft.DDV.Core.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@latest/dist/engine";// Lead to a folder containing the distributed WASM files
+await Dynamsoft.DDV.Core.loadWasm();
+await Dynamsoft.DDV.Core.init(); 
+```
+
+<div class="multi-panel-end"></div>
+
+<div class="multi-panel-start"></div>
+
+<div style="height: 20px;"></div>
+  
+
+```javascript
+Dynamsoft.DDV.Core.license = "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9"; // Public trial license which is valid for 24 hours
+Dynamsoft.DDV.Core.engineResourcePath = "./node_modules/dynamsoft-document-viewer/dist/engine";// Lead to a folder containing the distributed WASM files
+await Dynamsoft.DDV.Core.loadWasm();
+await Dynamsoft.DDV.Core.init(); 
+```
+
+<div class="multi-panel-end"></div>
+
+<div class="multi-panel-switching-end"></div>
+
+### deviceFriendlyName
+
+A human-readable name for the device which corresponds to its UUID is able to set during initialization. This name will appear in the device details table when you check the statistics of the according license.
+
+
+<div class="multi-panel-switching-prefix"></div>
+
+- [Use a CDN](#---)
+- [Host the SDK yourself](#----)
+
+<div class="multi-panel-start"></div>
+
+<div style="height: 20px;"></div>
+
+   
+
+```javascript
+Dynamsoft.DDV.Core.license = "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9";// Public trial license which is valid for 24 hours
+Dynamsoft.DDV.Core.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@latest/dist/engine"; // Lead to a folder containing the distributed WASM files
+Dynamsoft.DDV.Core.deviceFriendlyName = "Dynamsoft-iPhone"; // A string representing the device which is easier to recognize than its UUID
+await Dynamsoft.DDV.Core.loadWasm();
+await Dynamsoft.DDV.Core.init(); 
+```
+
+<div class="multi-panel-end"></div>
+
+<div class="multi-panel-start"></div>
+
+<div style="height: 20px;"></div>
+    
+
+```javascript
+Dynamsoft.DDV.Core.license = "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9";// Public trial license which is valid for 24 hours
+Dynamsoft.DDV.Core.engineResourcePath = "./node_modules/dynamsoft-document-viewer/dist/engine"; // Lead to a folder containing the distributed WASM files
+Dynamsoft.DDV.Core.deviceFriendlyName = "Dynamsoft-iPhone"; // A string representing the device which is easier to recognize than its UUID
+await Dynamsoft.DDV.Core.loadWasm();
+await Dynamsoft.DDV.Core.init(); 
+```
+
+<div class="multi-panel-end"></div>
+
+<div class="multi-panel-switching-end"></div>
+
+
+{% comment %}
+
+
 ```javascript
 Dynamsoft.DDV.Core.license = "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9"; // Public trial license which is valid for 24 hours
 Dynamsoft.DDV.Core.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@latest/dist/engine";// Lead to a folder containing the distributed WASM files
@@ -45,3 +127,5 @@ Dynamsoft.DDV.Core.deviceFriendlyName = "Dynamsoft-iPhone"; // A string represen
 await Dynamsoft.DDV.Core.loadWasm();
 await Dynamsoft.DDV.Core.init(); 
 ```
+
+{% endcomment %}
