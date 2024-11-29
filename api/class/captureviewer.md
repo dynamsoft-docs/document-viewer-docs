@@ -843,7 +843,7 @@ captureViewer.enableAutoDetect = true;
 **Remark**
 
 - If it is not specified in [`viewerConfig`]({{ site.api }}interface/captureviewerconstructoroptions.html#viewerconfig) while creating the viewer additionally, the default value is `false`. 
-- This API only takes effect when [`DocumentDetect`]({{ site.api }}class/advanced/documentdetect.html) is set by [`setProcessingHandler()`](({{ site.api }}namespace/ddv.html#static-setprocessinghandler)).
+- This API only takes effect when [`DocumentDetect`]({{ site.api }}class/advanced/documentdetect.html) is set by [`setProcessingHandler()`]({{ site.api }}namespace/ddv.html#static-setprocessinghandler).
 
 ### acceptedPolygonConfidence
 
