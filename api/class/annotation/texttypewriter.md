@@ -7,7 +7,7 @@ title: Dynamsoft Document Viewer API Reference - TextTypewriter Class
 keywords: Documentation, Dynamsoft Document Viewer, API Reference, TextTypewriter Class
 breadcrumbText: TextTypewriter Class
 description: Dynamsoft Document Viewer Documentation API Reference TextTypewriter Class Page
-permalink: /api/interface/annotationinterface/texttypewriter.html
+permalink: /api/class/annotation/texttypewriter.html
 ---
 
 # TextTypewriter Class
