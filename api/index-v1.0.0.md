@@ -56,7 +56,7 @@ permalink: /api/index-v1.0.0.html
     | `canvasStyle`        | [`CanvasStyle`]({{ site.api }}interface/styleinterface/canvasstyle.html) |
     | `quadSelectionStyle` | [`QuadSelectionStyle`]({{ site.api }}interface/styleinterface/quadselectionstyle.html) |
 
-- [`Configuration`]({{ site.api }}interface/configuration.html)
+- [`Configuration`]({{ site.api }}interface/configuration-v1.0.0.html)
 - [`ConfigResult`]({{ site.api }}interface/configresult.html)
 - [`CreateDocumentOptions`]({{ site.api }}interface/createdocumentoptions.html)
 - [`MergeDocumentOptions`]({{ site.api }}interface/mergedocumentoptions.html)

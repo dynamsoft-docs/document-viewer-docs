@@ -24,7 +24,7 @@ Dynamsoft Document Viewer is designed to work seamlessly across different browse
 
 ## Supported File Types
 
-Users can open, edit, and save PDFs, as well as various image formats such as JPEG, PNG, BMP, TIFF, and GIF.
+Users can open, edit, and save PDFs, as well as various image formats such as JPEG, PNG, and TIFF.
 
 ## Annotation Types
 

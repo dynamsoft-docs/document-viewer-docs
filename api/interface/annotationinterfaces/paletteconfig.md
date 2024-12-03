@@ -16,22 +16,29 @@ permalink: /api/interface/annotationinterface/paletteconfig.html
 
 ```typescript
 interface PaletteConfig {
-    id?: string; 
-    className?: string;
-    style?: cssstyleDeclaration;
-    colorList?: string[]; 
-    labels?: {
-        text? : string; 
-        stroke? : string; 
-        fill?: string; 
-        opacity?: string; 
-        style?: string; 
-        standardBusiness?: string; 
-    }
-}
+	enabled?: boolean;
+	id?: string;
+	className?: string;
+	style?: cssstyleDeclaration;
+	colorList?: string[];
+	labels?: {
+		text? : string;
+		stroke? : string;
+		fill?: string;
+		opacity?: string;
+		style?: string;
+		standardBusiness?: string;
+	}
+	}
 ```
 
 ## Attributes
+
+### enabled
+
+Whether or not the toolbar is enabled.
+
+Default value: `true`
 
 ### id
 

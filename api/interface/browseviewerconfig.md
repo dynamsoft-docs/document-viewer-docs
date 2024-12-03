@@ -25,11 +25,12 @@ interface BrowseViewerConfig {
     pageNumberStyle?: PageNumberStyle;
     checkboxStyle?: CheckboxStyle;
     rows?: number;
-    columns?: number; 
+    columns?: number;
     multiselectMode?: boolean; 
     scrollToLatest?: boolean;
     enableDragPage?: boolean;
-    scrollDirection?: string; 
+    enableLoadSourceByDrag?: boolean;
+    scrollDirection?: string;
 }
 ```
 
@@ -90,6 +91,12 @@ Default value: `false`
 ### enableDragPage
 
 Specify whether to allow drag&drop page feature in the viewer.
+
+Default value: `true`
+
+### enableLoadSourceByDrag
+
+Enables loading files by dragging them into the Viewer.
 
 Default value: `true`
 

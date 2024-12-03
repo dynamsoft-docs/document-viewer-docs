@@ -65,11 +65,12 @@ permalink: /api/namespace/ddv.html
 
 ***Integrated Events***
 
-| Event Name | Description                         |
-| ---------- | ----------------------------------- |
-| [`error`](#error)      | Triggered when any error occurs.    |
-| [`warning`](#warning)    | Triggered when any warning occurs . |
-| [`verbose`](#verbose)    | Triggered when DDV is running.      |
+| Event Name            | Description                          |
+| --------------------- | ------------------------------------ |
+| [`error`](#error)     | Triggered when any error occurs.     |
+| [`warning`](#warning) | Triggered when any warning occurs .  |
+| [`verbose`](#verbose) | Triggered when DDV is running.       |
+| [`info`](#info)       | Triggered during various operations. |
 
 ## Handler Configuration
 
@@ -327,11 +328,12 @@ Dynamsoft.DDV.off("error");
 
 ### Integrated Events
 
-| Event Name | Description                         |
-| ---------- | ----------------------------------- |
-| [`error`](#error)      | Triggered when any error occurs.    |
-| [`warning`](#warning)    | Triggered when any warning occurs . |
-| [`verbose`](#verbose)    | Triggered when DDV is running.      |
+| Event Name            | Description                          |
+| --------------------- | ------------------------------------ |
+| [`error`](#error)     | Triggered when any error occurs.     |
+| [`warning`](#warning) | Triggered when any warning occurs.   |
+| [`verbose`](#verbose) | Triggered when DDV is running.       |
+| [`info`](#info)       | Triggered during various operations. |
 
 #### error
 
@@ -374,4 +376,31 @@ Dynamsoft.DDV.on("verbose", (...args) => {
         console.error(args[0].cause); 
     } 
 });
+```
+
+#### info
+
+Triggered for any of the following tasks:
+
+- `init`
+- `loadSource`
+- `save`
+- `filter`
+- `perspective`
+- `loadWasm`
+
+See [`InfoObject`]({{ site.api }}interface/infoobject.html) for details.
+
+**Callback**
+
+[`InfoObject`]({{ site.api }}interface/infoobject.html) which contains different attributes depending on the type of event.
+
+**Example**
+
+```js
+DDV.on("info", (event) => {
+    if(event.type === "loadSource" && event.status === "Pending"){
+        console.log("Begin loading file")
+    }
+}) 
 ```

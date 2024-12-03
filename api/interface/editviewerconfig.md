@@ -20,6 +20,8 @@ interface EditViewerConfig {
     pageStyle?: BaseStyle;
     currentPageStyle?: BaseStyle;
     quadSelectionStyle?: QuadSelectionStyle;
+    enableLoadSourceByDrag?: boolean;
+    enableMagnifier?: boolean;
     enableSlide?: boolean; 
     scrollToLatest?: boolean; 
     scrollDirection?: string; 
@@ -45,6 +47,18 @@ The style of current page in the viewer. Please refer to [`BaseStyle`]({{ site.a
 ### quadSelectionStyle
 
 The style of rectangular selection. Please refer to [`QuadSelectionStyle`]({{ site.api }}interface/styleinterface/quadselectionstyle.html).
+
+### enableLoadSourceByDrag
+
+Enables loading files by dragging them into the Viewer.
+
+Default value: `true`
+
+### enableMagnifier
+
+Specifies whether or not to display a corner magnifier on the canvas. This feature is primarily used to provide a zoomed-in preview of the selected area for more precise adjustments.
+
+Default value: `true`
 
 ### enableSlide
 

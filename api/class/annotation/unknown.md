@@ -16,11 +16,12 @@ This type of annotation may be cannot read by Dynamsoft Document Viewer so far.
 
 ## API Index
 
-| API Name               | Description                                                 |
-| ---------------------- | ----------------------------------------------------------- |
-| [`uid`](#uid)              | Return the uid of the annotation.                           |
-| [`pageUid`](#pageuid)          | Return the uid of the page where the annotation is located. |
-| [`creationDate`](#creationdate)     | Return the creation date of the annotation.                 |
+| API Name                                | Description                                                 |
+| --------------------------------------- | ----------------------------------------------------------- |
+| [`uid`](#uid)                           | Return the uid of the annotation.                           |
+| [`pageUid`](#pageuid)                   | Return the uid of the page where the annotation is located. |
+| [`creationDate`](#creationdate)         | Return the creation date of the annotation.                 |
+| [`modificationDate`](#modificationdate) | Return the modification date of the annotation.             |
 
 ## uid
 

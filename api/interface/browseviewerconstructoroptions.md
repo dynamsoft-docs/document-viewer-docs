@@ -17,6 +17,7 @@ permalink: /api/interface/browseviewerconstructoroptions.html
 ```typescript
 interface BrowseViewerConstructorOptions {
 	container?: string | HTMLElement;
+	keyboardInteractionConfig?: KeyboardInteractionConfig;
 	viewerConfig?: BrowseViewerConfig;
 	uiConfig?: UiConfig; 
 	groupUid?: string; 
@@ -28,6 +29,10 @@ interface BrowseViewerConstructorOptions {
 ### container
 
 The container which is used to show the viewer. Its `id` or `HTMLElement` is acceppted.
+
+### keyboardInteractionConfig
+
+This configures the use of keyboard shortcuts for the viewer - please see [`KeyboardInteractionConfig`]({{ site.api }}interfaces/keyboardinteractionconfig.html) for details. If not specified, all keyboard shortcuts are disabled by default. **Note**: editing shortcuts do not have any effect on the Browse viewer.
 
 ### viewerConfig
 

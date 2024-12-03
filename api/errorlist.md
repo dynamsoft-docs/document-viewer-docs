@@ -75,6 +75,7 @@ permalink: /api/errorlist.html
  -80318     | The document contains unsupported fonts, which may result in font loss after saving.
  -80319     | ReadOnly annotation or noView annotation cannot be selected.
  -80320     | Unknown annotation or incomplete annotation cannot be selected.
+ -80321     | Flattened annotation cannot be selected.
 
 ## Camera releated Error
 

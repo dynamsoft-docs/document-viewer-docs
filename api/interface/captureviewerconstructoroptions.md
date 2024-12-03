@@ -17,9 +17,10 @@ permalink: /api/interface/captureviewerconstructoroptions.html
 ```typescript
 interface CaptureViewerConstructorOptions {
 	container?: string | HTMLElement;
+	keyboardInteractionConfig?: KeyboardInteractionConfig;
 	viewerConfig?: CaptureViewerConfig;
 	uiConfig?: UiConfig;
-	groupUid?: string; 
+	groupUid?: string;
 }
 ```
 
@@ -27,7 +28,11 @@ interface CaptureViewerConstructorOptions {
 
 ### container
 
-The container which is used to show the viewer. Its `id` or `HTMLElement` is acceppted.
+The container which is used to show the viewer. Its `id` or `HTMLElement` is accepted.
+
+### keyboardInteractionConfig
+
+This configures the use of keyboard shortcuts for the viewer - please see [`KeyboardInteractionConfig`]({{ site.api }}interface/keyboardinteractionconfig.html) for details. If not specified, all keyboard shortcuts are disabled by default.
 
 ### viewerConfig
 

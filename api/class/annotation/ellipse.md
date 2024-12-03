@@ -15,14 +15,15 @@ permalink: /api/class/annotation/ellipse.html
 
 ## API Index
 
-| API Name               | Description                                                 |
-| ---------------------- | ----------------------------------------------------------- |
-| [`uid`](#uid)              | Return the uid of the annotation.                           |
-| [`pageUid`](#pageuid)          | Return the uid of the page where the annotation is located. |
-| [`creationDate`](#creationdate)     | Return the creation date of the annotation.                 |
-| [`modificationDate`](#modificationdate) | Return the modification date of the annotation.             |
-| [`getOptions()`](#getoptions)     | Get the annotation options.                                 |
-| [`updateOptions()`](#updateoptions)  | Update the annotation options.                              |
+| API Name                                | Description                                                                                 |
+| --------------------------------------- | ------------------------------------------------------------------------------------------- |
+| [`uid`](#uid)                           | Return the uid of the annotation.                                                           |
+| [`pageUid`](#pageuid)                   | Return the uid of the page where the annotation is located.                                 |
+| [`creationDate`](#creationdate)         | Return the creation date of the annotation.                                                 |
+| [`flattened`](#flattened)               | Flattens the annotation onto the image layer, or inspect if the annotation is flattened. |
+| [`modificationDate`](#modificationdate) | Return the modification date of the annotation.                                             |
+| [`getOptions()`](#getoptions)           | Get the annotation options.                                                                 |
+| [`updateOptions()`](#updateoptions)     | Update the annotation options.                                                              |
 
 ## uid
 
@@ -88,6 +89,22 @@ readonly creationDate: string;
 {% comment %}
 - It will return `''`, if the annotation is be deleted. 
 {% endcomment %}
+
+## flattened
+
+Flattens the annotation onto the image layer, or inspect if the annotation is flattened.
+
+**Syntax**
+
+```typescript
+flattened: boolean;
+```
+
+**Remark**
+
+Flattened annotations move below all unflattened annotations on the page, and are stacked amongst themselves accordingly.
+
+Flattened annotations become part of the page layer upon file export and cease to be annotations.
 
 ## modificationDate
 

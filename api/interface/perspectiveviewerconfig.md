@@ -18,8 +18,10 @@ permalink: /api/interface/perspectiveviewerconfig.html
 interface PerspectiveViewerConfig {
 	canvasStyle?: CanvasStyle;
 	pageStyle?: BaseStyle;
-	quadSelectionStyle?: QuadSelectionStyle;    
-	enableSlide?: boolean; 
+	quadSelectionStyle?: QuadSelectionStyle;
+	enableLoadSourceByDrag?: boolean;
+	enableMagnifier?: boolean;
+	enableSlide?: boolean;
 	scrollToLatest?: boolean;
 }
 ```
@@ -38,13 +40,25 @@ The style of displayed page in the viewer. Please refer to [`BaseStyle`]({{ site
 
 The style of quadrilateral selection. Please refer to [`QuadSelectionStyle`]({{ site.api }}interface/styleinterface/quadselectionstyle.html).
 
+### enableLoadSourceByDrag
+
+Enables loading files by dragging them into the Viewer.
+
+Default value: `true`
+
+### enableMagnifier
+
+Specifies whether or not to display a corner magnifier on the canvas. This feature is primarily used to provide a zoomed-in preview of the selected area for more precise adjustments.
+
+Default value: `true`
+
 ### enableSlide
 
-Specify whether allow to slide the pages.
+Specifies whether or not to allow to slide the pages.
 
 ### scrollToLatest
 
-Specify whether to scroll to latest page automatically when importing new pages.
+Specifies whether or not to scroll to latest page automatically when importing new pages.
 
 Default value: `false`
 
