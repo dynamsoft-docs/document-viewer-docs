@@ -91,7 +91,7 @@ Flattens the annotation onto the image layer, or inspect if the annotation is fl
 **Syntax**
 
 ```typescript
-flattened: boolean;
+flattened: boolean;  //Default value is `false`.
 ```
 
 **Remark**
