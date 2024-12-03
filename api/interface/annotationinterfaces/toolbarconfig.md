@@ -16,6 +16,7 @@ permalink: /api/interface/annotationinterface/toolbarconfig.html
 
 ```typescript
 interface ToolbarConfig {
+    enabled?: boolean;
     id?: string; 
     className?: string; // the className of CSS
     style?: CssStyleDeclaration; // the style of the toolbar
@@ -25,6 +26,12 @@ interface ToolbarConfig {
 ```
 
 ## Attributes
+
+### enabled
+
+Whether or not the toolbar is enabled.
+
+Default value: `true`
 
 ### id
 

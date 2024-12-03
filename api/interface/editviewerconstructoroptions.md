@@ -16,12 +16,13 @@ permalink: /api/interface/editviewerconstructoroptions.html
 
 ```typescript
 interface EditViewerConstructorOptions {
-    container?: string | HTMLElement;
-    viewerConfig?: EditViewerConfig; 
-    uiConfig?: UiConfig; 
-    thumbnailConfig?: ThumbnailConfig; 
-    annotationConfig?: AnnotationConfig;
-    groupUid?: string; 
+	container?: string | HTMLElement;
+	viewerConfig?: EditViewerConfig;
+	uiConfig?: UiConfig;
+	thumbnailConfig?: ThumbnailConfig;
+	annotationConfig?: AnnotationConfig;
+	keyboardInteractionConfig?: KeyboardInteractionConfig;
+	groupUid?: string;
 }
 ```
 
@@ -46,6 +47,10 @@ The configurations of integrated thumbnail, please refer to [`ThumbnailConfig`](
 ### annotationConfig
 
 The configurations of annotation part in the viewer, please refer to [`AnnotationConfig`]({{ site.api }}interface/annotationconfig.html). If it is not specified, the [default configuration]({{ site.viewer }}viewerconfig.html#annotationconfig) will be applied.
+
+### keyboardInteractionConfig
+
+This configures the use of keyboard shortcuts for the viewer - please see [`KeyboardInteractionConfig`]({{ site.api }}interface/keyboardinteractionconfig.html) for details. If not specified, all keyboard shortcuts are disabled by default.
 
 ### groupUid
 

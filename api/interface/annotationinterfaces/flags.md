@@ -16,9 +16,12 @@ permalink: /api/interface/annotationinterface/flags.html
 
 ```typescript
 interface Flags {
-    print?: boolean; 
-    noView?: boolean; 
-    readOnly?: boolean; 
+    print?: boolean;
+    noMove?: boolean;
+    noView?: boolean;
+    noResize?: boolean;
+    noRotate?: boolean;
+    readOnly?: boolean;
 }
 ```
 
@@ -29,9 +32,29 @@ interface Flags {
 <!--To print the annotation when printing the page, default value: `true`.-->
 Whether the annotation is printable, default value: `true`. Only printable annotations can be printed when the page is printed.
 
+### noMove
+
+Prevents users from moving annotations.
+
+Default value: `false`
+
 ### noView
 
-Not to display the annotation or allow a user to interact with the annotation, default value: `false`.
+Not to display the annotation or allow a user to interact with the annotation.
+
+Default value: `false`
+
+### noResize
+
+Prevents users from resizing annotations.
+
+Default value: `false`
+
+### noRotate
+
+Prevents users from rotating annotations.
+
+Default value: `false`
 
 ### readOnly
 

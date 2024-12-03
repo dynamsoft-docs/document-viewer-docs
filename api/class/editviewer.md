@@ -18,100 +18,99 @@ Edit Viewer is used to edit the pages in document, such as, rotating, cropping, 
 
 **Create and Destroy Instances** 
 
-| API Name       | Description                                   |
-| ------------ | --------------------------------------------- |
+| API Name                      | Description                                      |
+| ----------------------------- | ------------------------------------------------ |
 | [`EditViewer()`](#editviewer) | Default constructor of an `EditViewer` instance. |
-| [`destroy()`](#destroy)             | Destroy the `EditViewer` instance.                             |
+| [`destroy()`](#destroy)       | Destroy the `EditViewer` instance.               |
 
 **Viewer Control**
 
-| API Name              | Description                                                  |
-| --------------------- | ------------------------------------------------------------ |
-| [`bindContainer()`](#bindcontainer)     | Bind the viewer to the specified container.                  |
-| [`unbindContainer()`](#unbindcontainer) | Unbind the viewer from the specified container.              |
-| [`isBoundContainer`](#isboundcontainer) | Return whether the viewer is bound to a container. |
-| [`getStyle()`](#getstyle)            | Get the style object of `EditViewer`.                        |
-| [`updateStyle()`](#updatestyle)        | Update the style object of `EditViewer`.                     |
-| [`getUiConfig()`](#getuiconfig)         | Get current `UiConfig` object.                               |
-| [`updateUiConfig()`](#updateuiconfig)     | Update `UiConfig` object.                                    |
-| [`show()`](#show)                | Show the viewer.                                             |
-| [`hide()`](#hide)                | Hide the viewer.                                             |
-| [`isVisible`](#isvisible)        | Return whether the viewer is shown or hidden.      |
-| [`toolMode`](#toolmode)              | Specify or return the tool mode of the viewer.     |
-| [`annotationMode`](#annotationmode) | Specify or return the annotation mode of the viewer. |
+| API Name                                | Description                                          |
+| --------------------------------------- | ---------------------------------------------------- |
+| [`bindContainer()`](#bindcontainer)     | Bind the viewer to the specified container.          |
+| [`unbindContainer()`](#unbindcontainer) | Unbind the viewer from the specified container.      |
+| [`isBoundContainer`](#isboundcontainer) | Return whether the viewer is bound to a container.   |
+| [`getStyle()`](#getstyle)               | Get the style object of `EditViewer`.                |
+| [`updateStyle()`](#updatestyle)         | Update the style object of `EditViewer`.             |
+| [`getUiConfig()`](#getuiconfig)         | Get current `UiConfig` object.                       |
+| [`updateUiConfig()`](#updateuiconfig)   | Update `UiConfig` object.                            |
+| [`show()`](#show)                       | Show the viewer.                                     |
+| [`hide()`](#hide)                       | Hide the viewer.                                     |
+| [`isVisible`](#isvisible)               | Return whether the viewer is shown or hidden.        |
+| [`toolMode`](#toolmode)                 | Specify or return the tool mode of the viewer.       |
+| [`annotationMode`](#annotationmode)     | Specify or return the annotation mode of the viewer. |
 
 **Document and Page Control**
 
-| API Name              | Description                                                  |
-| --------------------- | ------------------------------------------------------------ |
-| [`openDocument()`](#opendocument)        | Open the specified document by document uid.                 |
-| [`closeDocument()`](#closedocument)       | Close current document.                                      |
-| [`currentDocument`](#currentdocument)   | Return the object of the current document.         |
-| [`getPageCount()`](#getpagecount)        | Get the page count in the viewer.                            |
-| [`goToPage()`](#gotopage)            | Navigate to the specified page by index.                     |
-| [`getCurrentPageIndex()`](#getcurrentpageindex) | Get the index of current page.                               |
-| [`getCurrentPageUid()`](#getcurrentpageuid)   | Get the uid of the current page.                             |
-| [`indexToUid()`](#indextouid)          | Get the uid of the specified page by its index.                      |
-| [`uidToIndex()`](#uidtoindex)          | Get the index of the specified page by its uid. |
+| API Name                                        | Description                                     |
+| ----------------------------------------------- | ----------------------------------------------- |
+| [`openDocument()`](#opendocument)               | Open the specified document by document uid.    |
+| [`closeDocument()`](#closedocument)             | Close current document.                         |
+| [`currentDocument`](#currentdocument)           | Return the object of the current document.      |
+| [`getPageCount()`](#getpagecount)               | Get the page count in the viewer.               |
+| [`goToPage()`](#gotopage)                       | Navigate to the specified page by index.        |
+| [`getCurrentPageIndex()`](#getcurrentpageindex) | Get the index of current page.                  |
+| [`getCurrentPageUid()`](#getcurrentpageuid)     | Get the uid of the current page.                |
+| [`indexToUid()`](#indextouid)                   | Get the uid of the specified page by its index. |
+| [`uidToIndex()`](#uidtoindex)                   | Get the index of the specified page by its uid. |
 
 
 **Display Control**
 
-| API Name              | Description                                                  |
-| --------------------- | ------------------------------------------------------------ |
-| [`displayMode`](#displaymode)                 | Specify or return the display mode of the viewer.  |
-| [`setParallelScrollCount()`](#setparallelscrollcount)     | Specify the number of pages to scroll in parallel.    |
-| [`fitMode`](#fitmode)                     | Specify or return the fit mode of the viewer.      |
-| [`zoom`](#zoom)                        | Specify or return zoom ratio.                      |
-| [`zoomOrigin`](#zoomorigin)                  | Specify or return the zoom origin of the viewer.   |
+| API Name                                              | Description                                        |
+| ----------------------------------------------------- | -------------------------------------------------- |
+| [`displayMode`](#displaymode)                         | Specify or return the display mode of the viewer.  |
+| [`setParallelScrollCount()`](#setparallelscrollcount) | Specify the number of pages to scroll in parallel. |
+| [`fitMode`](#fitmode)                                 | Specify or return the fit mode of the viewer.      |
+| [`zoom`](#zoom)                                       | Specify or return zoom ratio.                      |
+| [`zoomOrigin`](#zoomorigin)                           | Specify or return the zoom origin of the viewer.   |
 
 **Annotation Control**
 
-| API Name              | Description                                                  |
-| --------------------- | ------------------------------------------------------------ |
-|[`selectAnnotations()`](#selectannotations)    | Select the specified annotation(s) on the current page. |
-|[`getSelectedAnnotations()`](#getselectedannotations) | Get selected annotation(s). |
+| API Name                                                    | Description                                                      |
+| ----------------------------------------------------------- | ---------------------------------------------------------------- |
+| [`setAnnotationDrawingStyle()`](#setannotationdrawingstyle) | Set the default drawing style of annotations by annotation type. |
+| [`selectAnnotations()`](#selectannotations)                 | Select the specified annotation(s) on the current page.          |
+| [`getSelectedAnnotations()`](#getselectedannotations)       | Get selected annotation(s).                                      |
 
 **Edit Operations**
 
-| API Name              | Description                                                  |
-| --------------------- | ------------------------------------------------------------ |
-| [`rotate()`](#rotate)              | Rotate the specified pages.                                  |
-| [`crop()`](#crop)                | Crop the specified page(s) with the specified rectangle.     |
-| [`getCropRect()`](#getcroprect)         | Get the crop rectangular selection.                            |
-| [`setCropRect()`](#setcroprect)         | Set a crop rectangular selection on the current page. *This method is only available when [`toolMode`](#toolmode) is `crop` mode.* |
-| [`undo()`](#undo)                | Undo the last editing operation.                             |
-| [`redo()`](#redo)                | Redo the last undo operation.                                |
-| [`saveOperations()`](#saveoperations)      | Save the edit operations in pages to document.               |
+| API Name                              | Description                                                                                                                        |
+| ------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| [`rotate()`](#rotate)                 | Rotate the specified pages.                                                                                                        |
+| [`crop()`](#crop)                     | Crop the specified page(s) with the specified rectangle.                                                                           |
+| [`getCropRect()`](#getcroprect)       | Get the crop rectangular selection.                                                                                                |
+| [`setCropRect()`](#setcroprect)       | Set a crop rectangular selection on the current page. *This method is only available when [`toolMode`](#toolmode) is `crop` mode.* |
+| [`undo()`](#undo)                     | Undo the last editing operation.                                                                                                   |
+| [`redo()`](#redo)                     | Redo the last undo operation.                                                                                                      |
+| [`saveOperations()`](#saveoperations) | Save the edit operations in pages to document.                                                                                     |
 
 **Events**
 
-| API Name | Description                                        |
-| -------- | -------------------------------------------------- |
-| [`on()`](#on)     | Bind a listener to the specified event.            |
-| [`off()`](#off)    | Unbind event listener(s) from the specified event. |
+| API Name        | Description                                        |
+| --------------- | -------------------------------------------------- |
+| [`on()`](#on)   | Bind a listener to the specified event.            |
+| [`off()`](#off) | Unbind event listener(s) from the specified event. |
 
 ***Integrated Events***
 
-| Event Name          | Description                                                  |
-| ------------------- | ------------------------------------------------------------ |
-| [`resized`](#resized)             | Triggered when the viewer is resized.                        |
-| [`pageRendered`](#pagerendered)        | Triggered when a page has been completely rendered.          |
-| [`currentIndexChanged`](#currentindexchanged) | Triggered when currentIndex is changed.                      |
-| [`currentPageChanged`](#currentpagechanged)  | Triggered when current page is changed.                      |
-| [`displayModeChanged`](#displaymodechanged)  | Triggered when the display mode is changed.                  |
-| [`fitModeChanged`](#fitmodechanged)      | Triggered when the fit mode has changed.                     |
-| [`zoomChanged`](#zoomchanged)         | Triggered when the zoom ratio has been changed.              |
-| [`toolModeChanged`](#toolmodechanged)     | Triggered when the tool mode has changed.                    |
-| [`cropRectDrawn`](#croprectdrawn)       | Triggered when a rectangular selection is drawn.               |
-| [`cropRectDeleted`](#croprectdeleted)     | Triggered when the rectangular selection is deleted.           |
-| [`cropRectModified`](#croprectmodified)    | Triggered when the crop rectangular selection is modified.     |
-| [`selectedAnnotationsChanged`](#selectedannotationschanged) | Triggered when selected annotation(s) is changed. |
-| [`click`](#click)               | Triggered when click in the viewer's viewing area.           |
-| [`dblclick`](#dbclick)            | Triggered when double click in the viewer's viewing area.    |
-| [`rightclick`](#rightclick)          | Triggered when right click in the viewer's viewing area.     |
-
-
+| Event Name                                                  | Description                                                |
+| ----------------------------------------------------------- | ---------------------------------------------------------- |
+| [`resized`](#resized)                                       | Triggered when the viewer is resized.                      |
+| [`pageRendered`](#pagerendered)                             | Triggered when a page has been completely rendered.        |
+| [`currentIndexChanged`](#currentindexchanged)               | Triggered when currentIndex is changed.                    |
+| [`currentPageChanged`](#currentpagechanged)                 | Triggered when current page is changed.                    |
+| [`displayModeChanged`](#displaymodechanged)                 | Triggered when the display mode is changed.                |
+| [`fitModeChanged`](#fitmodechanged)                         | Triggered when the fit mode has changed.                   |
+| [`zoomChanged`](#zoomchanged)                               | Triggered when the zoom ratio has been changed.            |
+| [`toolModeChanged`](#toolmodechanged)                       | Triggered when the tool mode has changed.                  |
+| [`cropRectDrawn`](#croprectdrawn)                           | Triggered when a rectangular selection is drawn.           |
+| [`cropRectDeleted`](#croprectdeleted)                       | Triggered when the rectangular selection is deleted.       |
+| [`cropRectModified`](#croprectmodified)                     | Triggered when the crop rectangular selection is modified. |
+| [`selectedAnnotationsChanged`](#selectedannotationschanged) | Triggered when selected annotation(s) is changed.          |
+| [`click`](#click)                                           | Triggered when click in the viewer's viewing area.         |
+| [`dblclick`](#dbclick)                                      | Triggered when double click in the viewer's viewing area.  |
+| [`rightclick`](#rightclick)                                 | Triggered when right click in the viewer's viewing area.   |
 
 ## Create and Destroy Instances
 
@@ -142,23 +141,23 @@ const thumbnailObj = editViewer.thumbnail;
 
 **Exception**
 
- Error Code  | Error Message                                        
---------|-----------------------------------------------------
- -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.                                            
- -80001 | License string is invalid.                              
- -80002 | *XXX(LicenseModuleName)* module license has expired.                                                               
- -80003 | *XXX(LicenseModuleName)* module license is missing.                         
- -80004 | *XXX(LicenseModuleName)* module license version does not match.                                 
- -80005 | Domain does not match the domain bound to the *XXX(LicenseModuleName)* module license.  
- -80050 | DDV.Core.init() has not been set up yet.   
- -80051 | DDV.Core.init() has not been completed.  
- -80302 | minZoom value cannot be larger than maxZoom value.                        
+ | Error Code | Error Message                                                                          |
+ | ---------- | -------------------------------------------------------------------------------------- |
+ | -80100     | *XXX(API)*: *XXX(ParameterName)* is invalid.                                           |
+ | -80001     | License string is invalid.                                                             |
+ | -80002     | *XXX(LicenseModuleName)* module license has expired.                                   |
+ | -80003     | *XXX(LicenseModuleName)* module license is missing.                                    |
+ | -80004     | *XXX(LicenseModuleName)* module license version does not match.                        |
+ | -80005     | Domain does not match the domain bound to the *XXX(LicenseModuleName)* module license. |
+ | -80050     | DDV.Core.init() has not been set up yet.                                               |
+ | -80051     | DDV.Core.init() has not been completed.                                                |
+ | -80302     | minZoom value cannot be larger than maxZoom value.                                     |
 
 **Warning**
 
- Error Code | Error Message                                                 
- ---------- | ------------------------------------------------------------ 
- -80316     | ImageFilter needs to be configured by Dynamsoft.DDV.setProcessingHandler to enable the image filter feature.                        
+ | Error Code | Error Message                                                                                                |
+ | ---------- | ------------------------------------------------------------------------------------------------------------ |
+ | -80316     | ImageFilter needs to be configured by Dynamsoft.DDV.setProcessingHandler to enable the image filter feature. |
 
 **Remark**
 
@@ -837,6 +836,33 @@ editViewer.uidToIndex(curPageUid);
 
 ## Annotation Control
 
+### setAnnotationDrawingStyle()
+
+Set the default drawing style of annotations by annotation type.
+
+**Syntax**
+
+```typescript
+setAnnotationDrawingStyle(config: AnnotationDrawingStyleConfig): boolean;
+```
+
+**Parameters**
+
+`config`: Specifies the default drawing style of each stamp type provided. See [`AnnotationDrawingStyleConfig`]({{ site.api }}interface/styleinterface/annotationdrawingstyleconfig.html) for details.
+
+**Return value**
+
+`true`: Successfully set the specified default drawing styles.
+
+`false`: Failed to set the specified default drawing styles.
+
+**Warning**
+
+ | Error Code | Error Message                                | API return value |
+ | ---------- | -------------------------------------------- | ---------------- |
+ | -80100     | *XXX(API)*: *XXX(ParameterName)* is invalid. | `false`          |
+ | -80102     | *XXX(API)*: *XXX(ParameterName)* is missing. | `false`          |
+
 ### selectAnnotations()
 
 Select the specified annotations on the current page.
@@ -853,23 +879,24 @@ selectAnnotations(annotationUids: string[]): boolean;
 
 **Return value**
 
-`true`: Successfully.
+`true`: Selected the specified annotations.
 
-`false`: Failed.
+`false`: Failed to select the specified annotations.
 
 
 **Warning**
 
- Error Code | Error Message                                               | API return value
- ---------- | ------------------------------------------------------------|--------- 
- -80100     | *XXX(API)*: *XXX(ParameterName)* is invalid.                | `false`
- -80102     | *XXX(API)*: *XXX(ParameterName)* is missing.                | `false`
- -80304     | No document opened.                                         | `false`
- -80305     | There is no image in the current document.                  | `false`
- -80314     | *XXX(API)*: Not available in current toolMode.              | `false`
- -80317     | The specified annotation(s) is not on the current page or does not exist.     | `false`
- -80319     | ReadOnly annotation or noView annotation cannot be selected.     | `false`
- -80320     | Unknown annotation or incomplete annotation cannot be selected.     | `false`  
+ | Error Code | Error Message                                                             | API return value |
+ | ---------- | ------------------------------------------------------------------------- | ---------------- |
+ | -80100     | *XXX(API)*: *XXX(ParameterName)* is invalid.                              | `false`          |
+ | -80102     | *XXX(API)*: *XXX(ParameterName)* is missing.                              | `false`          |
+ | -80304     | No document opened.                                                       | `false`          |
+ | -80305     | There is no image in the current document.                                | `false`          |
+ | -80314     | *XXX(API)*: Not available in current toolMode.                            | `false`          |
+ | -80317     | The specified annotation(s) is not on the current page or does not exist. | `false`          |
+ | -80319     | ReadOnly annotation or noView annotation cannot be selected.              | `false`          |
+ | -80320     | Unknown annotation or incomplete annotation cannot be selected.           | `false`          |
+ | -80321     | Flattened annotation cannot be selected.                                  | `false`          |
 
 ### getSelectedAnnotations()
 

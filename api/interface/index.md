@@ -56,7 +56,7 @@ permalink: /api/interface/index.html
     - [`LineStyle`]({{ site.api }}interface/annotationinterface/linestyle.html)
     - [`InkStyle`]({{ site.api }}interface/annotationinterface/inkstyle.html)
     - [`TextBoxStyle`]({{ site.api }}interface/annotationinterface/textboxstyle.html)
-    - [`TextTypewriterStyle`]({{ site.api }}interface/annotationinterface/textTypewriter.html)
+    - [`TextTypewriterStyle`]({{ site.api }}interface/annotationinterface/textTypewriterstyle.html)
     - [`StampStyle`]({{ site.api }}interface/annotationinterface/stampstyle.html)
     - [`ToolbarConfig`]({{ site.api }}interface/annotationinterface/toolbarconfig.html)
     - [`PaletteConfig`]({{ site.api }}interface/annotationinterface/paletteconfig.html)
