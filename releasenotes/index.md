@@ -14,7 +14,7 @@ permalink: /releasenotes/index.html
 
 ## 2.1 (12/03/2024)
 
-Version 2.1 of Dynamsoft Document Viewer comes with a suite of both exciting new features, improvements to existing features, and performance optimizations.
+Version 2.1 of Dynamsoft Document Viewer comes with a suite of exciting new features, improvements to existing features, and performance optimizations.
 
 Dynamsoft Document Viewer now comes with **massively improved performance** for working with huge documents with a large number of high resolution images. Users can expect to load, edit, annotate, and export massive documents with ease.
 
