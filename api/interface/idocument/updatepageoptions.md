@@ -27,7 +27,7 @@ interface UpdatePageOptions {
 
 ### fileIndex
 
-Specify the page index of the file. 
+Specify the page index of the multi-page file, such as a PDF or TIFF. 
 
 If it is not specified, the first page in the file will be the updated page. 
 

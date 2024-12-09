@@ -240,13 +240,13 @@ A Promise object which will be resolved with a boolean value.
 **Code Snippet**
 
 ```typescript
-const updateFirstPage = {
-    fileIndex: 1, // using the second page of new file.
+const updatePageOptions = {
+    fileIndex: 1, // Using the second page of the new multi-page file, such as PDF or TIFF.
 };
 
 const fileData = /*sample blob*/,
 
-await firstDoc.updatePage(firstDoc.pages[0], fileData, updateFirstPage);
+await firstDoc.updatePage(firstDoc.pages[0], fileData, updatePageOptions);
 ```
 
 **Promise Exception**
