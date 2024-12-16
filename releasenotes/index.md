@@ -18,6 +18,8 @@ Version 2.1 of Dynamsoft Document Viewer comes with a suite of exciting new feat
 
 Dynamsoft Document Viewer now comes with **massively improved performance** for working with huge documents with a large number of high resolution images. Users can expect to load, edit, annotate, and export massive documents with ease.
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3OD6wJ60zaA?si=kfXo78tsRbTjhKYL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ### New Features
 
 - Added `enableMagnifier`, which provides a corner magnifier in the [Edit Viewer]({{ site.api }}interface/editviewerconfig.html#enablemagnifier) and [Perspective Viewer]({{ site.api }}interface/perspectiveviewerconfig.html#enablemagnifier). This magnifier creates a zoomed-in view of the selected area to allow for more precise adjustments on touchscreen devices.
