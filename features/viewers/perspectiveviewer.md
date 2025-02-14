@@ -46,7 +46,7 @@ In addition to drawing and adjusting the selection through the UI, DDV also prov
     perspectiveViewer.setQuadSelection(quad);
     ```
 
-- Get the quadrilateral selection on the current page by using [`getQuadSelection()`]({{ site.api }}class/perspectiveviewer.html#getquadselection).
+- Obtain the coordinates of the four vertices of the quadrilateral selection by using [`getQuadSelection()`]({{ site.api }}class/perspectiveviewer.html#getquadselection). It returns an array of the four corner coordinates of the quadrilateral selection.
 
     ```typescript
     const quad = perspectiveViewer.getQuadSelection();

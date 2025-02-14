@@ -143,7 +143,7 @@ const rect = Dynamsoft.DDV.annotationManager.createAnnotation(pageUid, "rectangl
 
 #### Add image to the page by using Stamp Annotation
 
-Observing the structure of [`StampAnnotationOptions`]({{ site.api }}interface/annotationinterface/stampannotationoptions.html), the data type of stamp is `EnumStampIcon` or `Blob`. When stamp is set to `EnumStampIcon`, it indicates that the generated annotation will be displayed as a standard business stamp icon, with the default value being `draft`. When stamp is set to `EnumStampIcon`, it indicates that the generated annotation will be displayed as a standard business stamp icon, with the default value being `draft`. When stamp is set to a Blob, such as the blob of a custom image, it means the annotation will be displayed as an image.
+Observing the structure of [`StampAnnotationOptions`]({{ site.api }}interface/annotationinterface/stampannotationoptions.html), the data type of stamp is `EnumStampIcon` or `Blob`. When stamp is set to `EnumStampIcon`, it indicates that the generated annotation will be displayed as a standard business stamp icon, with the default value being `DRAFT`. When stamp is set to `EnumStampIcon`, it indicates that the generated annotation will be displayed as a standard business stamp icon, with the default value being `DRAFT`. When stamp is set to a Blob, such as the blob of a custom image, it means the annotation will be displayed as an image.
 
 The supported types of standard business stamps are as follows:
 

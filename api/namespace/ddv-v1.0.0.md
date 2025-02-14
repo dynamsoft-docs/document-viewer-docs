@@ -183,7 +183,7 @@ static getDefaultUiConfig(viewerType: ViewerType): UiConfig | null;
 
 **Parameters**
 
-`viewerType`: A `ViewerType` can be one of three types.
+`viewerType`: A `ViewerType` can be one of four types.
 
 ```typescript
 type ViewerType = "editViewer"|"captureViewer"|"perspectiveViewer"|"browseViewer";

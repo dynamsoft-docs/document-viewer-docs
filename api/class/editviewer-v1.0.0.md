@@ -289,7 +289,7 @@ updateStyle(editViewerStyleName: EditViewerStyleName, editViewerStyle: EditViewe
 
 **Parameters**
 
-`editViewerStyleName`: An `EditViewerStyleName` can be one of three types.
+`editViewerStyleName`: An `EditViewerStyleName` can be one of four types.
 
 ```typescript
 type EditViewerStyleName = "canvasStyle" | "pageStyle" | "currentPageStyle" |"quadSelectionStyle";
