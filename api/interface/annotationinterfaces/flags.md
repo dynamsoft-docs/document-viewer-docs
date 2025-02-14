@@ -30,7 +30,7 @@ interface Flags {
 ### print
 
 <!--To print the annotation when printing the page, default value: `true`.-->
-Whether the annotation is printable, default value: `true`. Only printable annotations can be printed when the page is printed.
+Indicates whether the annotation is printable. Default value: `true`. Only printable annotations will be included when the page is printed.
 
 ### noMove
 

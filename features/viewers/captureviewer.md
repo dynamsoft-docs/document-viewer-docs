@@ -21,7 +21,7 @@ Capture Viewer is used to control camera, play video stream, and capture the ima
 const captureViewer = new Dynamsoft.DDV.CaptureViewer({
     container: document.getElementById("viewer"),
 });
-captureViewer.openDocument("docUid"); // Open a document which has pages
+
 ```
 
 ## Control camera
