@@ -72,7 +72,7 @@ The resolution of camera can be set when playing the video stream.
 ```typescript
 // Set to 1080P
 await captureViewer.play({
-	 resolution: [1920,1080], 
+    resolution: [1920,1080], 
 });
 ```
 
@@ -114,3 +114,12 @@ captureViewer.enableAutoCapture = true;
 
 > If the auto detect is enabled, automatic capturing will only be performed when the detection result meets expectations. 
 
+## FAQ
+
+### What cameras are supported?
+
+Capture Viewer uses the [getUserMedia](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia) API to access the camera. Normally, the device's built-in cameras and UVC cameras are supported.
+
+### Why can't I use my camera?
+
+This feature is available only in secure contexts (HTTPS or localhost). In addition, if the user denies permission, or the matching media is not available, it will reject your request with `NotAllowedError` or `NotFoundError` DOMException respectively.
