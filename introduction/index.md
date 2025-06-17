@@ -7,7 +7,6 @@ title: JavaScript PDF Viewer SDK | Dynamsoft Document Viewer
 keywords: Documentation, Dynamsoft Document Viewer, Introduction
 breadcrumbText: Introduction
 description: Powerful JavaScript PDF viewer & document viewer SDK. Integrate seamless document viewing into your web apps with Dynamsoft Document Viewer.
-permalink: /introduction/index.html
 ---
 
 # Introduction to Dynamsoft Document Viewer
