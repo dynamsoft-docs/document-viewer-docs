@@ -18,6 +18,8 @@ permalink: /api/class/annotation/line.html
 | --------------------------------------- | ------------------------------------------------------------------------------------------- |
 | [`uid`](#uid)                           | Return the uid of the annotation.                                                           |
 | [`pageUid`](#pageuid)                   | Return the uid of the page where the annotation is located.                                 |
+| [`source`](#source)                   | Return the source of the annotation.                               |
+| [`type`](#type)                   | Return the type of the annotation                               |
 | [`creationDate`](#creationdate)         | Return the creation date of the annotation.                                                 |
 | [`flattened`](#flattened)               | Flattens the annotation onto the image layer, or inspect if the annotation is flattened. |
 | [`modificationDate`](#modificationdate) | Return the modification date of the annotation.                                             |
@@ -37,7 +39,7 @@ readonly uid: string;
 {% comment %}
 **Remark**
 
-- It will return `''`, if the annotation is be deleted. 
+- It will return `''`, if the annotation is deleted. 
 {% endcomment %}
 
 ## pageUid
@@ -52,7 +54,7 @@ readonly pageUid: string;
 
 **Remark**
 
-- It will return `''`, if the annotation is be deleted. 
+- It will return `''`, if the annotation is deleted. 
 
 {% comment %}
 ## aabb
@@ -66,6 +68,28 @@ readonly aabb: Rect;
 ```
 
 {% endcomment %}
+
+## source
+
+Return the source of the annotation. Possible values:
+
+* user: the annotation is created by the user's action
+* file: the annotation is created from a PDF file
+* api: the annotation is created with code
+
+**Remark**
+
+It will return `''`, if the annotation is deleted.
+
+## type
+
+Return the type of the annotation: `line`.
+
+All annotation types:
+
+```ts
+"rectangle" | "ellipse" | "line" | "polygon" | "polyline" | "ink" | "textBox" | "textTypewriter" | "stamp" | "highlight" | "underline" | "strikeout" | "incomplete" | "unknown"
+```
 
 ## creationDate
 
@@ -82,7 +106,7 @@ readonly creationDate: string;
 - The string would be `D:YYYYMMDDHHmmSSOHH'mm'`, like `D:20230101085959-08'00'`.
 
 {% comment %}
-- It will return `''`, if the annotation is be deleted. 
+- It will return `''`, if the annotation is deleted. 
 {% endcomment %}
 
 ## flattened
@@ -114,7 +138,7 @@ readonly modificationDate: string;
 **Remark**
 
 - The string would be `D:YYYYMMDDHHmmSSOHH'mm'`, like `D:20230101085959-08'00'`.
-- It will return `''`, if the annotation is be deleted. 
+- It will return `''`, if the annotation is deleted. 
 - If the annotation is created but not be modified after adding, it equals to [`creationDate`](#creationdate). 
 
 

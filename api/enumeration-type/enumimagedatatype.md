@@ -14,9 +14,9 @@ permalink: /api/enumeration-type/enumimagedatatype.html
 
 ```typescript
 enum EnumImageDataType {
-	RGBA = 1,
-	BGRA = 2,
-	JPEG = 3,
-	PNG = 4
+    RGBA = 1,
+    BGRA = 2,
+    JPEG = 3,
+    PNG = 4
 }
 ```

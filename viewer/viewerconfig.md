@@ -625,12 +625,12 @@ interface EditViewerConfig {
 ```typescript
 interface CaptureViewerConfig {
     canvasStyle?: CanvasStyle;
-	quadSelectionStyle?: QuadSelectionStyle;
-	enableTorch?: boolean; // default: false
-	enableAutoCapture?: boolean; // default: false
-	enableAutoDetect?: boolean; // default: false
-	acceptedPolygonConfidence?: number; // deafault: 80
-	maxFrameNumber?: number; // default: 10
+    quadSelectionStyle?: QuadSelectionStyle;
+    enableTorch?: boolean; // default: false
+    enableAutoCapture?: boolean; // default: false
+    enableAutoDetect?: boolean; // default: false
+    acceptedPolygonConfidence?: number; // deafault: 80
+    maxFrameNumber?: number; // default: 10
 }
 ```
 
@@ -642,10 +642,10 @@ interface CaptureViewerConfig {
 
 ```typescript
 interface PerspectiveViewerConfig {
-	canvasStyle?: CanvasStyle;
-	pageStyle?: BaseStyle;
-	quadSelectionStyle?: QuadSelectionStyle;    
-	enableSlide?: boolean; // Whether allow to slide the pages, default: true
+    canvasStyle?: CanvasStyle;
+    pageStyle?: BaseStyle;
+    quadSelectionStyle?: QuadSelectionStyle;    
+    enableSlide?: boolean; // Whether allow to slide the pages, default: true
 }
 ```
 <div class="multi-panel-end"></div>

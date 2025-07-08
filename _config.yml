@@ -35,13 +35,13 @@ relative_links:
   collections: true
 
 collections:
-  v1.0:
+  old:
     output: true
-    permalink: /:path-:collection:output_ext
+    permalink: /:path:output_ext
   v1.1:
     output: true
     permalink: /:path-:collection:output_ext
-  v2.0:
+  v2.1:
     output: true
     permalink: /:path-:collection:output_ext
     

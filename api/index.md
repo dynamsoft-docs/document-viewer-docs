@@ -17,7 +17,6 @@ permalink: /api/index.html
 - [`Dynamsoft.DDV`]({{ site.api }}namespace/ddv.html)
 - [`Dynamsoft.DDV.Core`]({{ site.api }}namespace/ddv_core.html)
 - [`Dynamsoft.DDV.Elements`]({{ site.api }}namespace/ddv_elements.html)
-- [`Annotation`]({{ site.api }}namespace/ddv_annotation.html)
 
 ## Classes
 
@@ -42,6 +41,9 @@ permalink: /api/index.html
     - [TextBox]({{ site.api }}class/annotation/textbox.html)
     - [TextTypewriter]({{ site.api }}class/annotation/texttypewriter.html)
     - [Stamp]({{ site.api }}class/annotation/stamp.html) 
+    - [Highlight](/api/class/annotation/highlight.md) 
+    - [Underline](/api/class/annotation/underline.md)
+    - [Strikeout](/api/class/annotation/strikeout.md) 
     - [Incomplete]({{ site.api }}class/annotation/incomplete.html)
     - [Unknown]({{ site.api }}class/annotation/unknown.html) 
 
@@ -50,16 +52,14 @@ permalink: /api/index.html
 
 - [`IDocument`]({{ site.api }}interface/idocument/index.html)
     - [`Source`]({{ site.api }}interface/idocument/source.html)
-    - [`ExtraPageData`]({{ site.api }}interface/idocument/extrapagedata.html)
     - [`PdfSource`]({{ site.api }}interface/idocument/pdfsource.html)
-    - [`PageData`]({{ site.api }}interface/idocument/pagedata.html)
-    - [`UpdatePageOptions`]({{ site.api }}interface/idocument/updatepageoptions.html)
     - [`SavePngSettings`]({{ site.api }}interface/idocument/savepngsettings.html)
     - [`SaveJpegSettings`]({{ site.api }}interface/idocument/savejpegsettings.html)
     - [`SaveTiffSettings`]({{ site.api }}interface/idocument/savetiffsettings.html)
     - [`SavePdfSettings`]({{ site.api }}interface/idocument/savepdfsettings.html)
     - [`CustomTag`]({{ site.api }}interface/idocument/customtag.html)
     - [`PrintSettings`]({{ site.api }}interface/idocument/printsettings.html)
+    - [`IDocTextSearcher`](/api/interface/idocument/idoctextsearcher.md)
 
 - Style Interfaces
 
@@ -86,6 +86,9 @@ permalink: /api/index.html
     - [`TextBoxAnnotationOptions`]({{ site.api }}interface/annotationinterface/textboxannotationoptions.html)
     - [`TextTypewriterAnnotationOptions`]({{ site.api }}interface/annotationinterface/texttypewriterannotationoptions.html)
     - [`StampAnnotationOptions`]({{ site.api }}interface/annotationinterface/stampannotationoptions.html)
+    - [`HighlightAnnotationOptions`](/api/interface/annotationinterface/highlightannotationoptions.md)
+    - [`UnderlineAnnotationOptions`](/api/interface/annotationinterface/underlineannotationoptions.md)
+    - [`StrikeoutAnnotationOptions`](/api/interface/annotationinterface/strikeoutannotationoptions.md)
     - [`Flags`]({{ site.api }}interface/annotationinterface/flags.html)
     - [`Point`]({{ site.api }}interface/annotationinterface/point.html)
     - [`TextContent`]({{ site.api }}interface/annotationinterface/textcontent.html)
@@ -98,6 +101,9 @@ permalink: /api/index.html
     - [`TextBoxStyle`]({{ site.api }}interface/annotationinterface/textboxstyle.html)
     - [`TextTypewriterStyle`]({{ site.api }}interface/annotationinterface/texttypewriterstyle.html)
     - [`StampStyle`]({{ site.api }}interface/annotationinterface/stampstyle.html)
+    - [`HighlightStyle`](/api/interface/annotationinterface/highlightstyle.md)
+    - [`UnderlineStyle`](/api/interface/annotationinterface/underlinestyle.md)
+    - [`StrikeoutStyle`](/api/interface/annotationinterface/strikeoutstyle.md)
     - [`ToolbarConfig`]({{ site.api }}interface/annotationinterface/toolbarconfig.html)
     - [`PaletteConfig`]({{ site.api }}interface/annotationinterface/paletteconfig.html)
     - [`AnnotationToolbarButton`]({{ site.api }}interface/annotationinterface/annotationtoolbarbutton.html)
@@ -112,6 +118,7 @@ permalink: /api/index.html
 - [`AnnotationConfig`]({{ site.api }}interface/annotationconfig.html)
 - [`IBrowseViewer`]({{ site.api }}interface/ibrowseviewer.html)
 - [`Rect`]({{ site.api }}interface/rect.html)
+- [`RectXY`](/api/interface/rectxy.md)
 - [`ZoomOrigin`]({{ site.api }}interface/zoomorigin.html)
 - [`CaptureViewerConstructorOptions`]({{ site.api }}interface/captureviewerconstructoroptions.html)
 - [`CaptureViewerConfig`]({{ site.api }}interface/captureviewerconfig.html)
@@ -135,7 +142,17 @@ permalink: /api/index.html
 - [`DetectResult`]({{ site.api }}interface/detectresult.html)
 - [`DocumentDetectConfig`]({{ site.api }}interface/documentdetectconfig.html)
 - [`DocumentDetectResult`]({{ site.api }}interface/documentdetectresult.html)
-- [`DefaultUiConfigOptions`]({{ site.api }}interface/defaultuiconfigoptions.html)
+- [`ITextSelectedInfo`](/api/interface/itextselectedinfo.md)
+- [`ITextSearchedInfo`](/api/interface/itextsearchedinfo.md)
+- [`TextSearchResult`](/api/interface/textsearchresult.md)
+- [`PageVisualInfo`](/api/interface/pagevisualinfo.md)
+- [`PageImageInfo`](/api/interface/pageimageinfo.md)
+- [`SearchTextOptions`](/api/interface/searchtextoptions.md)
+- [`UpdatedSource`](/api/interface/updatedsource.md)
+- [`UpdatedPdfSource`](/api/interface/updatedpdfsource.md)
+- [`IPointerEvent`](/api/interface/ipointerevent.md)
+- [`IQuadModifiedEvent`](/api/interface/iquadmodifiedevent.md)
+- [`IPageData`](/api/interface/ipagedata.md)
 
 ## Enumeration & Type
 

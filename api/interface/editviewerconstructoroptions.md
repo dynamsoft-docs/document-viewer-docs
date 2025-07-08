@@ -16,13 +16,13 @@ permalink: /api/interface/editviewerconstructoroptions.html
 
 ```typescript
 interface EditViewerConstructorOptions {
-	container?: string | HTMLElement;
-	viewerConfig?: EditViewerConfig;
-	uiConfig?: UiConfig;
-	thumbnailConfig?: ThumbnailConfig;
-	annotationConfig?: AnnotationConfig;
-	keyboardInteractionConfig?: KeyboardInteractionConfig;
-	groupUid?: string;
+    container?: string | HTMLElement;
+    viewerConfig?: EditViewerConfig;
+    uiConfig?: UiConfig;
+    thumbnailConfig?: ThumbnailConfig;
+    annotationConfig?: AnnotationConfig;
+    keyboardInteractionConfig?: KeyboardInteractionConfig;
+    groupUid?: string;
 }
 ```
 

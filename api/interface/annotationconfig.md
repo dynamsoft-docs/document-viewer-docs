@@ -22,17 +22,7 @@ interface AnnotationConfig {
     inkCreateDelay?: number; 
     showOnTopWhenSelected?: boolean; 
     enableContinuousDrawing?: boolean;
-    defaultStyleConfig?: {
-        rectangle?: RectangleStyle;
-        ellipse?: EllipseStyle;
-        polygon?: PolygonStyle;
-        polyline?: PolylineStyle;
-        line?: LineStyle;
-        ink?: InkStyle;
-        textBox?: TextBoxStyle;
-        textTypewriter?: TextTypewriterStyle;
-        stamp?: StampStyle;
-    };
+    defaultStyleConfig?: AnnotationDrawingStyleConfig;
 }
 ```
 
@@ -74,15 +64,7 @@ Default value: `false`
 
 ### defaultStyleConfig
 
-The initial style configurations for each type of annotation, please refer to [`RectangleStyle`]({{ site.api }}interface/annotationinterface/rectanglestyle.html)
-[`EllipseStyle`]({{ site.api }}interface/annotationinterface/ellipsestyle.html)
-[`PolygonStyle`]({{ site.api }}interface/annotationinterface/polygonstyle.html)
-[`PolylineStyle`]({{ site.api }}interface/annotationinterface/polylinestyle.html)
-[`LineStyle`]({{ site.api }}interface/annotationinterface/linestyle.html)
-[`InkStyle`]({{ site.api }}interface/annotationinterface/inkstyle.html)
-[`TextBoxStyle`]({{ site.api }}interface/annotationinterface/textboxstyle.html)
-[`TextTypewriterStyle`]({{ site.api }}interface/annotationinterface/texttypewriterstyle.html)
-[`StampStyle`]({{ site.api }}interface/annotationinterface/stampstyle.html)
+The initial style configurations for each type of annotation, please refer to [`AnnotationDrawingStyleConfig`](/api/interface/styleinterface/annotationdrawingstyleconfig.md)
 
 ## Related
 

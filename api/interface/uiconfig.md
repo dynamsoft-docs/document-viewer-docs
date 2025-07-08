@@ -16,14 +16,14 @@ permalink: /api/interface/uiconfig.html
 
 ```typescript
 interface UiConfig {
-	type: string; 
-	flexDirection?: string; 
-	id?: string; 
-	className?: string; 
-	style?: CSSStyleDeclaration;  
-	tooltip?: string; 
-	events?: Record<string, string>;
-	children?: (UiConfig | string)[]; 
+    type: string; 
+    flexDirection?: string; 
+    id?: string; 
+    className?: string; 
+    style?: CSSStyleDeclaration;  
+    tooltip?: string; 
+    events?: Record<string, string>;
+    children?: (UiConfig | string)[]; 
 }
 ```
 

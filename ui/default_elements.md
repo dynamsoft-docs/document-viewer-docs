@@ -58,6 +58,9 @@ The following are lists of built-in elements as well as their default icons that
 | Dynamsoft.DDV.Elements.SinglePage            | ddv-single-mode                                             |
 | Dynamsoft.DDV.Elements.ContinuousPage        | ddv-continuous-mode                                         |
 | Dynamsoft.DDV.Elements.Download              | ddv-button-download                                         | Download pages in pdf format to local.                   |
+| Dynamsoft.DDV.Elements.TextSelectionMode              | ddv-text-selection-mode                                         |                    |
+| Dynamsoft.DDV.Elements.TextSearchPanelSwitch              | ddv-search-switch                                         |                    |
+| Dynamsoft.DDV.Elements.TextSearchPanel              | N/A                                |                    |
 
 |Annotation-related Elements                     | className of its default icon |
 | ----------------------------------------------- | ----------------------------- |
@@ -72,6 +75,9 @@ The following are lists of built-in elements as well as their default icons that
 | Dynamsoft.DDV.Elements.TextTypewriterAnnotation | ddv-typewriter                |
 | Dynamsoft.DDV.Elements.StampIconAnnotation      | ddv-stamp-icon                |
 | Dynamsoft.DDV.Elements.StampImageAnnotation     | ddv-stamp-image               |
+| Dynamsoft.DDV.Elements.HighlightAnnotation               | ddv-highlight-mode              |
+| Dynamsoft.DDV.Elements.UnderlineAnnotation               | ddv-underline-mode              |
+| Dynamsoft.DDV.Elements.StrikeoutAnnotation               | ddv-strikeout-mode              |
 | Dynamsoft.DDV.Elements.SelectAnnotation         | ddv-annot-select              |
 | Dynamsoft.DDV.Elements.EraseAnnotation          | ddv-annot-eraser              |
 | Dynamsoft.DDV.Elements.BringForward             | ddv-bring-forward             |

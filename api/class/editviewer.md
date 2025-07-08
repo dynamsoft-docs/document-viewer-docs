@@ -31,6 +31,7 @@ Edit Viewer is used to edit the pages in document, such as, rotating, cropping, 
 | [`unbindContainer()`](#unbindcontainer) | Unbind the viewer from the specified container.      |
 | [`isBoundContainer`](#isboundcontainer) | Return whether the viewer is bound to a container.   |
 | [`getStyle()`](#getstyle)               | Get the style object of `EditViewer`.                |
+| [`getVisiblePagesInfo()`](#getVisiblePagesInfo)               | Get the visible pages info                |
 | [`updateStyle()`](#updatestyle)         | Update the style object of `EditViewer`.             |
 | [`getUiConfig()`](#getuiconfig)         | Get current `UiConfig` object.                       |
 | [`updateUiConfig()`](#updateuiconfig)   | Update `UiConfig` object.                            |
@@ -85,6 +86,20 @@ Edit Viewer is used to edit the pages in document, such as, rotating, cropping, 
 | [`redo()`](#redo)                     | Redo the last undo operation.                                                                                                      |
 | [`saveOperations()`](#saveoperations) | Save the edit operations in pages to document.                                                                                     |
 
+**Text Selection**
+
+| API Name        | Description                                        |
+| --------------- | -------------------------------------------------- |
+| [`getTextSelection()`](#gettextselection) | Get selected text's detailed info. |
+
+**Search**
+
+| API Name        | Description                                        |
+| --------------- | -------------------------------------------------- |
+| [`searchNextText()`](#searchnexttext)   | Search the next matched result. |
+| [`searchPrevText()`](#searchprevtext) | Search the previous matched result. |
+| [`searchFullText()`](#searchfulltext) | Search the full text to get all the matched results. |
+
 **Events**
 
 | API Name        | Description                                        |
@@ -94,23 +109,32 @@ Edit Viewer is used to edit the pages in document, such as, rotating, cropping, 
 
 ***Integrated Events***
 
-| Event Name                                                  | Description                                                |
-| ----------------------------------------------------------- | ---------------------------------------------------------- |
-| [`resized`](#resized)                                       | Triggered when the viewer is resized.                      |
-| [`pageRendered`](#pagerendered)                             | Triggered when a page has been completely rendered.        |
-| [`currentIndexChanged`](#currentindexchanged)               | Triggered when currentIndex is changed.                    |
-| [`currentPageChanged`](#currentpagechanged)                 | Triggered when current page is changed.                    |
-| [`displayModeChanged`](#displaymodechanged)                 | Triggered when the display mode is changed.                |
-| [`fitModeChanged`](#fitmodechanged)                         | Triggered when the fit mode has changed.                   |
-| [`zoomChanged`](#zoomchanged)                               | Triggered when the zoom ratio has been changed.            |
-| [`toolModeChanged`](#toolmodechanged)                       | Triggered when the tool mode has changed.                  |
-| [`cropRectDrawn`](#croprectdrawn)                           | Triggered when a rectangular selection is drawn.           |
-| [`cropRectDeleted`](#croprectdeleted)                       | Triggered when the rectangular selection is deleted.       |
-| [`cropRectModified`](#croprectmodified)                     | Triggered when the crop rectangular selection is modified. |
-| [`selectedAnnotationsChanged`](#selectedannotationschanged) | Triggered when selected annotation(s) is changed.          |
-| [`click`](#click)                                           | Triggered when click in the viewer's viewing area.         |
-| [`dblclick`](#dbclick)                                      | Triggered when double click in the viewer's viewing area.  |
-| [`rightclick`](#rightclick)                                 | Triggered when right click in the viewer's viewing area.   |
+| Event Name                                                  |
+| ----------------------------------------------------------- |
+| [`resized`](#resized)                                       |
+| [`pageRendered`](#pagerendered)                             |
+| [`currentIndexChanged`](#currentindexchanged)               |
+| [`currentPageChanged`](#currentpagechanged)                 |
+| [`displayModeChanged`](#displaymodechanged)                 |
+| [`fitModeChanged`](#fitmodechanged)                         |
+| [`zoomChanged`](#zoomchanged)                               |
+| [`toolModeChanged`](#toolmodechanged)                       |
+| [`cropRectDrawn`](#croprectdrawn)                           |
+| [`cropRectDeleted`](#croprectdeleted)                       |
+| [`cropRectModified`](#croprectmodified)                     |
+| [`selectedAnnotationsChanged`](#selectedannotationschanged) |
+| [`click`](#click)                                           |
+| [`dblclick`](#dbclick)                                      |
+| [`rightclick`](#rightclick)                                 |
+| [`visibilityChanged`](#visibilitychanged)                   |
+| [`textUnselected`](#textunselected)                   |
+| [`textSelected`](#textselected)                   |
+| [`textSearchTriggered`](#textSearchtriggered)                   |
+| [`pointerdown`](#pointerdown)                   |
+| [`pointermove`](#pointermove)                   |
+| [`pointerup`](#pointerup)                   |
+| [`pageover`](#pageover)                   |
+| [`pageout`](#pageout)                   |
 
 ## Create and Destroy Instances
 
@@ -284,6 +308,20 @@ const pageStyle = editViewer.getStyle("pageStyle");
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.                       | `null`
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.                      | `null`
  -80103 | *XXX(API)*: The value for *XXX(ParameterName)* is not supported. | `null`
+
+### getVisiblePagesInfo()
+
+Get the visible pages info.
+
+**Syntax**
+
+```typescript
+getVisiblePagesInfo(): PageVisualInfo[];
+```
+
+**Return values**
+
+Array of the `PageVisualInfo` object. Please refer to [`PageVisualInfo`](/api/interface/pagevisualinfo.md).
 
 ### updateStyle()
 
@@ -471,17 +509,19 @@ Specify or return the tool mode of the viewer.
 toolMode: ToolMode; 
 ```
 
-A `ToolMode` can be one of three types. 
+A `ToolMode` can be one of following types.
 
 ```typescript
-type ToolMode = "pan" | "crop" | "annotation";
+type ToolMode = "pan" | "crop" | "annotation" | "textSelection";
 ```
 
 `pan`: The default tool mode.
 
-`crop`: A mode what allows to draw a rectangle by [`setCropRect()`](#setcroprect).
+`crop`: A mode what allows drawing a rectangle by [`setCropRect()`](#setcroprect).
 
-`annotation`: A mode that allows to annotations to be manipulated via the UI. 
+`annotation`: A mode that allows creating annotations to be manipulated via the UI.
+
+`textSelection`: A mode that allows selecting text to be manipulated via the UI. 
 
 **Code Snippet**
 
@@ -510,33 +550,11 @@ Specify or return the annotation mode of the viewer.
 annotationMode: AnnotationMode;
 ```
 
-An `AnnotationMode` can be one of eleven types.
+An `AnnotationMode` can be one of following types.
 
 ```typescript
-type AnnotationMode = "select" | "erase" | "rectangle" | "ellipse" | "line" | "polygon" | "polyline" | "ink" | "textBox" | "textTypewriter" | "stamp";
+type AnnotationMode = "select" | "erase" | "rectangle" | "ellipse" | "line" | "polygon" | "polyline" | "ink" | "textBox" | "textTypewriter" | "stamp" | "highlight" | "strikeout" | "underline";
 ```
-
-`select`: A mode that allows to select annotation(s) via UI.
-
-`erase`: A mode that allows to delete annotation(s) via UI.
-
-`rectangle`: A mode that allows to draw rectangle annotation(s) via UI.
-
-`ellipse`: A mode that allows to draw ellipse annotation(s) via UI.
-
-`line`: A mode that allows to draw line annotation(s) via UI.
-
-`polygon`: A mode that allows to draw polygon annotation(s) via UI.
-
-`polyline`: A mode that allows to draw polyline annotation(s) via UI.
-
-`ink`: A mode that allows to draw ink annotation(s) via UI.
-
-`textBox`: A mode that allows to draw text box annotation(s) via UI.
-
-`textTypewriter`: A mode that allows to draw text typewriter annotation(s) via UI.
-
-`stamp`: A mode that allows to draw stamp annotation(s) via UI.
 
 **Code Snippet**
 
@@ -910,7 +928,7 @@ getSelectedAnnotations(): Annotation[];
 
 **Return value**
 
-An array of selected [`Annotation`]() object.
+An array of selected `Annotation` object.
 
 **Code Snippet**
 
@@ -1392,6 +1410,102 @@ editViewer.saveOperations();
 --------|-----------------------------------------------------|-----------------
  -80304 | No document opened.                                 | `false`
 
+## Text Selection
+
+### getTextSelection()
+
+Get selected text's detailed info.
+
+**Syntax**
+
+```typescript
+getTextSelection(): ITextSelectedInfo[];
+```
+
+**Return values**
+
+Array of the `ITextSelectedInfo` object. Please refer to [`ITextSelectedInfo`](/api/interface/itextselectedinfo.md).
+
+## Search
+
+### searchNextText()
+
+Search the next matched result.
+
+**Syntax**
+
+```typescript
+searchNextText(text: string, options?: SearchTextOptions): Promise<boolean>;
+```
+
+**Parameters**
+
+* `text`: text to search
+* `options`: Please refer to [`SearchTextOptions`](/api/interface/searchtextoptions.md)
+
+**Warnings**
+
+ Error Code  | Error Message
+--------|-----------------------------------------------------
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
+ -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  
+ -80104 | *XXX(API)*: The specified document(s) do not exist.
+ -80304 | No document opened.
+ -80305 | There is no image in the current document.
+ -80322 | No results found.
+
+### searchPrevText()
+
+Search the previous matched result.
+
+**Syntax**
+
+```typescript
+searchPrevText(text: string, options?: SearchTextOptions): Promise<boolean>;
+```
+
+**Parameters**
+
+* `text`: text to search
+* `options`: Please refer to [`SearchTextOptions`](/api/interface/searchtextoptions.md)
+
+**Warnings**
+
+ Error Code  | Error Message
+--------|-----------------------------------------------------
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
+ -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  
+ -80104 | *XXX(API)*: The specified document(s) do not exist.
+ -80304 | No document opened.
+ -80305 | There is no image in the current document.
+ -80322 | No results found.
+
+### searchFullText()
+
+Search the full text to get all the matched results.
+
+**Syntax**
+
+```typescript
+searchFullText(text: string, options?: SearchTextOptions): Promise<boolean>;
+```
+
+**Parameters**
+
+* `text`: text to search
+* `options`: Please refer to [`SearchTextOptions`](/api/interface/searchtextoptions.md)
+
+**Warnings**
+
+ Error Code  | Error Message
+--------|-----------------------------------------------------
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
+ -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  
+ -80104 | *XXX(API)*: The specified document(s) do not exist.
+ -80304 | No document opened.
+ -80305 | There is no image in the current document.
+ -80322 | No results found.
+
 ## Events
 
 ### on()
@@ -1639,6 +1753,42 @@ Triggered when selected annotation(s) is changed.
 
 `newAnnotationUids`: The array of new selected annotations uids.
 
+#### visibilityChanged
+
+Triggered when the viewer's visibility is changed. It will return an `isVisible` boolean value.
+
+#### textSelected
+
+Triggered when text is selected. It will return an array of [`ITextSelectedInfo`](/api/interface/itextselectedinfo.md).
+
+#### textUnselected
+
+Triggered when text is unselected.
+
+#### textSearchTriggered
+
+Triggered when text search is performed. It will return an array of [`ITextSearchedInfo`](/api/interface/itextsearchedinfo.md).
+
+#### pointerdown
+
+Triggered when a pointer becomes active buttons state. It will return an [`IPointerEvent`](/api/interface/ipointerevent.md) object.
+
+#### pointermove
+
+Triggered when a pointer changes coordinates. It will return an [`IPointerEvent`](/api/interface/ipointerevent.md) object.
+
+#### pointerup
+
+Triggered when a pointer is no longer active buttons state. It will return an [`IPointerEvent`](/api/interface/ipointerevent.md) object.
+
+#### pageover
+
+Triggered when a pointer is moved into a page's hit test boundaries. It will return an [`IPointerEvent`](/api/interface/ipointerevent.md) object.
+
+#### pageout
+
+Triggered when a pointer is moved out of the hit test boundaries of a page. It will return an [`IPointerEvent`](/api/interface/ipointerevent.md) object.
+
 #### Mouse Events
 
 ##### click
@@ -1656,7 +1806,7 @@ Triggered when right click in the viewer's viewing area. On mobile device, trigg
 
 **Callback for mouse events**
 
- `VPointerEvent`: An EventObject.
+ `IPointerEvent`: An EventObject.
 
 **Attributes**
 

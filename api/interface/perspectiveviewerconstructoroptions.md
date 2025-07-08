@@ -16,10 +16,10 @@ permalink: /api/interface/perspectiveviewerconstructoroptions.html
 
 ```typescript
 interface PerspectiveViewerConstructorOptions {
-	container?: string | HTMLElement;
-	viewerConfig?: PerspectiveViewerConfig; // The configurations of viewer, such as page style, minZoom, maxZoom and so on.
-	uiConfig?: UiConfig; // The UI layout configurations.
-	groupUid?: string; //The uid of viewer's group, if it is not set, a random groupUid will generate.
+    container?: string | HTMLElement;
+    viewerConfig?: PerspectiveViewerConfig; // The configurations of viewer, such as page style, minZoom, maxZoom and so on.
+    uiConfig?: UiConfig; // The UI layout configurations.
+    groupUid?: string; //The uid of viewer's group, if it is not set, a random groupUid will generate.
 }
 ```
 

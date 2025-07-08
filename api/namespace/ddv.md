@@ -158,7 +158,7 @@ Get default UiConfig object.
 **Syntax**
 
 ```typescript
-static getDefaultUiConfig(viewerType: ViewerType, options?:DefaultUiConfigOptions): UiConfig | null;
+static getDefaultUiConfig(viewerType: ViewerType): UiConfig | null;
 ```
 
 **Parameters**
@@ -169,8 +169,6 @@ static getDefaultUiConfig(viewerType: ViewerType, options?:DefaultUiConfigOption
 type ViewerType = "editViewer"|"captureViewer"|"perspectiveViewer"|"browseViewer";
 ```
 
-`options`: Whether to return the configuration with annotation when viewerType = "editViewer". Please refer to [`DefaultUiConfigOptions`]({{ site.api }}interface/defaultuiconfigoptions.html).
-
 
 **Return Values**
 
@@ -179,7 +177,7 @@ The [default UiConfig]({{ site.ui }}default_ui.html) object for each kind of vie
 **Code Snippet**
 
 ```typescript
-const defaultEditUi = Dynamsoft.DDV.getDefaultUiConfig("editViewer", {includeAnnotationSet: true});
+const defaultEditUi = Dynamsoft.DDV.getDefaultUiConfig("editViewer");
 ```
 
 **Warning**
@@ -197,12 +195,16 @@ Add font to library.
 **Syntax**
 
 ```typescript
-addFonts(fonts: Blob[]): Promise<void>;
+addFonts(fonts: Blob[]): Promise<string[]>;
 ```
 
 **Parameters**
 
 `fonts`: Specify the fonts to add.
+
+**Return Values**
+
+Array of font names.
 
 **Exception**
 

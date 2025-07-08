@@ -17,13 +17,13 @@ permalink: /api/interface/captureviewerconfig.html
 ```typescript
 interface CaptureViewerConfig {
     canvasStyle?: CanvasStyle;
-	quadSelectionStyle?: QuadSelectionStyle;
-	enableTorch?: boolean; 
-	enableAutoCapture?: boolean;
-	enableAutoDetect?: boolean;
-	acceptedPolygonConfidence?: number;
-	autoCaptureDelay?: number;
-	maxFrameNumber?: number;
+    quadSelectionStyle?: QuadSelectionStyle;
+    enableTorch?: boolean; 
+    enableAutoCapture?: boolean;
+    enableAutoDetect?: boolean;
+    acceptedPolygonConfidence?: number;
+    autoCaptureDelay?: number;
+    maxFrameNumber?: number;
 }
 ```
 

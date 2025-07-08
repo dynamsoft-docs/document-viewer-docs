@@ -174,7 +174,7 @@ await firstDoc.loadSource([source]);
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  
  -80200 | File type is not supported. 
- -80202 | Failed to read the PDF file becouse it's encrypted and the correct password is not provided.
+ -80202 | Failed to read the PDF file because it's encrypted and the correct password is not provided.
 
 ### getPageData()
 

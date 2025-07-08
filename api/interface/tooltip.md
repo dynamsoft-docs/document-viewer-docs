@@ -16,74 +16,76 @@ permalink: /api/interface/tooltip.html
 
 ```typescript
 interface Tooltip {
-    CameraResolution?: string,
-    Capture?: string,
-    Flashlight?: string,
-    CameraConvert?: string,
-    AutoDetect?: string,
-    AutoCapture?: string,
-
-    RotateLeft?: string,
-    RotateRight?: string,
-
-    Load?: string,
-    Download?: string,
-    Delete?: string,
-    DeleteCurrent?: string,
-    DeleteAll?: string,
-
-    ZoomIn?: string,
-    ZoomOut?: string,
-
-    Crop?: string,
-    CropAll?: string,
-    CropCurrent?: string,
-    FullQuad?: string,
-    Undo?: string,
-    Redo?: string,
-
-    Pan?: string,
-    Filter?: string,
-
-    Print?: string,
-    ThumbnailSwitch?: string,
-
-    DisplayMode?: string,
-    ContinuousPage?: string,
-    SinglePage?: string,
-
-    FitMode?: string,
-    FitWidth?: string,
-    FitHeight?: string,
-    FitWindow?: string,
-    ActualSize?: string,
-
-    Back?: string,
-    Close?: string,
-    Done?: string,
-
-    FirstPage?: string,
-    LastPage?: string,
-    NextPage?: string,
-    PrevPage?: string,
-
+    CameraResolution?: string;
+    Capture?: string;
+    Flashlight?: string;
+    CameraConvert?: string;
+    AutoDetect?: string;
+    AutoCapture?: string;
+    Rotate?: string;
+    RotateLeft?: string;
+    RotateRight?: string;
+    Load?: string;
+    Download?: string;
+    Delete?: string;
+    DeleteCurrent?: string;
+    DeleteAll?: string;
+    Zoom?: string;
+    ZoomIn?: string;
+    ZoomOut?: string;
+    ZoomByPercentage?: string;
+    Crop?: string;
+    CropAll?: string;
+    CropCurrent?: string;
+    CropMode?: string;
+    PerspectiveAll?: string;
+    FullQuad?: string;
+    Undo?: string;
+    Redo?: string;
+    Restore?: string;
+    Pan?: string;
+    Filter?: string;
+    Print?: string;
+    ThumbnailSwitch?: string;
+    DisplayMode?: string;
+    ContinuousPage?: string;
+    MultiPage?: string;
+    SinglePage?: string;
+    FitMode?: string;
+    FitWidth?: string;
+    FitHeight?: string;
+    FitWindow?: string;
+    ActualSize?: string;
+    Back?: string;
+    Close?: string;
+    Done?: string;
+    FirstPage?: string;
+    LastPage?: string;
+    NextPage?: string;
+    PrevPage?: string;
+    ImagePreview?: string;
     AnnotationSet?: string;
-    RectAnnotation?: string;
     EllipseAnnotation?: string;
+    InkAnnotation?: string;
+    LineAnnotation?: string;
     PolygonAnnotation?: string;
     PolylineAnnotation?: string;
-    LineAnnotation?: string;
-    InkAnnotation?: string;
-    TextBoxAnnotation?: string;
-    TextTypewriterAnnotation?: string;
+    RectAnnotation?: string;
     StampIconAnnotation?: string;
     StampImageAnnotation?: string;
+    TextBoxAnnotation?: string;
+    TextTypewriterAnnotation?: string;
     SelectAnnotation?: string;
-    EraseAnnotation?:string;
+    EraseAnnotation?: string;
+    HighlightAnnotation?: string;
+    UnderlineAnnotation?: string;
+    StrikeoutAnnotation?: string;
     BringForward?: string;
     BringToFront?: string;
     SendBackward?: string;
     SendToBack?: string;
+    TextSearchPanelSwitch?: string;
+    TextSelectionMode?: string;
 }
 ```
 

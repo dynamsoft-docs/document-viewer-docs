@@ -61,9 +61,7 @@ Create an annotation instance and add the created instance to the specified page
 **Syntax**
 
 ```typescript
-createAnnotation(pageUid: string, type: AnnotationType, annotationOptions?: RectAnnotationOptions|EllipseAnnotationOptions|PolygonAnnotationOptions|PolylineAnnotationOptions|LineAnnotationOptions|InkAnnotationOptions|TextBoxAnnotationOptions|TextTypewriterAnnotationOptions):Rectangle|Ellipse|Polygon|Polyline|Line|Ink|TextBox|TextTypewriter;
-
-createAnnotation(pageUid: string, "stamp", annotationOptions?: StampAnnotationOptions): Promise<Stamp>;
+createAnnotation<K extends keyof AnnotationsTypeMapOuter>(pageUid: string, type: K, annotationOptions?: AnnotationsTypeMapOuter[K]["options"]): AnnotationsTypeMapOuter[K]["return"];
 ```
 
 **Parameters**
@@ -72,35 +70,14 @@ createAnnotation(pageUid: string, "stamp", annotationOptions?: StampAnnotationOp
 
 `type`: Specify the type of annotation to create.
 ```typescript
-type AnnotationType = "rectangle" | "ellipse" | "polygon" | "polyline" | "line" | "ink" | "textBox" | "textTypewriter" | "stamp";
+type AnnotationType = "rectangle" | "ellipse" | "polygon" | "polyline" | "line" | "ink" | "textBox" | "textTypewriter" | "stamp" | "highlight" | "underline"| "strikeout";
 ```
 
-`annotationOptions`: The annotation options. Please refer to 
-
-- [RectAnnotationOptions]({{ site.api }}interface/annotationinterface/rectannotationoptions.html)
-- [EllipseAnnotationOptions]({{ site.api }}interface/annotationinterface/ellipseannotationoptions.html)
-- [PolygonAnnotationOptions]({{ site.api }}interface/annotationinterface/polygonannotationoptions.html)
-- [PolylineAnnotationOptions]({{ site.api }}interface/annotationinterface/polylineannotationoptions.html)
-- [LineAnnotationOptions]({{ site.api }}interface/annotationinterface/lineannotationoptions.html)
-- [InkAnnotationOptions]({{ site.api }}interface/annotationinterface/inkannotationoptions.html)
-- [TextBoxAnnotationOptions]({{ site.api }}interface/annotationinterface/textboxannotationoptions.html)
-- [TextTypewriterAnnotationOptions]({{ site.api }}interface/annotationinterface/texttypewriterannotationoptions.html)
-- [StampAnnotationOptions]({{ site.api }}interface/annotationinterface/stampannotationoptions.html)
+`annotationOptions`: The annotation options. Please refer to [the options list](/api/interface/annotationinterface/index.md#options).
 
 **Return value**
 
-The instance of annotation. Please refer to 
-
-- [Rectangle]({{ site.api }}class/annotation/rectangle.html)
-- [Ellipse]({{ site.api }}class/annotation/ellipse.html)
-- [Polygon]({{ site.api }}class/annotation/polygon.html)
-- [Polyline]({{ site.api }}class/annotation/polyline.html)
-- [Line]({{ site.api }}class/annotation/line.html)
-- [Ink]({{ site.api }}class/annotation/ink.html)
-- [TextBox]({{ site.api }}class/annotation/textbox.html)
-- [TextTypewriter]({{ site.api }}class/annotation/texttypewriter.html)
-- [Stamp]({{ site.api }}class/annotation/stamp.html)
-
+The instance of annotation. Please refer to [Annotation](/api/class/annotation/index.md).
 
 **Code Snippet**
 
@@ -155,21 +132,7 @@ getAnnotationsByUids(annotationUids: string[]): Annotation[];
 
 **Return value**
 
-An array of [Annotation]({{ site.api }}class/annotation/index.html) objects.
-
-Please refer to 
-
-- [Rectangle]({{ site.api }}class/annotation/rectangle.html)
-- [Ellipse]({{ site.api }}class/annotation/ellipse.html)
-- [Polygon]({{ site.api }}class/annotation/polygon.html)
-- [Polyline]({{ site.api }}class/annotation/polyline.html)
-- [Line]({{ site.api }}class/annotation/line.html)
-- [Ink]({{ site.api }}class/annotation/ink.html)
-- [TextBox]({{ site.api }}class/annotation/textbox.html)
-- [TextTypewriter]({{ site.api }}class/annotation/texttypewriter.html)
-- [Stamp]({{ site.api }}class/annotation/stamp.html)
-- [Incomplete]({{ site.api }}class/annotation/incomplete.html)
-- [Unknown]({{ site.api }}class/annotation/unknown.html)
+An array of [Annotation](/api/class/annotation/index.md) objects.
 
 **Warning**
 
@@ -195,21 +158,7 @@ getAnnotationsByPage(pageUid: string): Annotation[];
 
 **Return value**
 
-An array of [Annotation]({{ site.api }}class/annotation/index.html) object.
-
-Please refer to 
-
-- [Rectangle]({{ site.api }}class/annotation/rectangle.html)
-- [Ellipse]({{ site.api }}class/annotation/ellipse.html)
-- [Polygon]({{ site.api }}class/annotation/polygon.html)
-- [Polyline]({{ site.api }}class/annotation/polyline.html)
-- [Line]({{ site.api }}class/annotation/line.html)
-- [Ink]({{ site.api }}class/annotation/ink.html)
-- [TextBox]({{ site.api }}class/annotation/textbox.html)
-- [TextTypewriter]({{ site.api }}class/annotation/texttypewriter.html)
-- [Stamp]({{ site.api }}class/annotation/stamp.html)
-- [Incomplete]({{ site.api }}class/annotation/incomplete.html)
-- [Unknown]({{ site.api }}class/annotation/unknown.html)
+An array of [Annotation](/api/class/annotation/index.md) object.
 
 **Warning**
 
@@ -233,21 +182,7 @@ getAnnotationsByDoc(docUid: string): Annotation[];
 
 **Return value**
 
-An array of [Annotation]({{ site.api }}class/annotation/index.html) objects.
-
-Please refer to 
-
-- [Rectangle]({{ site.api }}class/annotation/rectangle.html)
-- [Ellipse]({{ site.api }}class/annotation/ellipse.html)
-- [Polygon]({{ site.api }}class/annotation/polygon.html)
-- [Polyline]({{ site.api }}class/annotation/polyline.html)
-- [Line]({{ site.api }}class/annotation/line.html)
-- [Ink]({{ site.api }}class/annotation/ink.html)
-- [TextBox]({{ site.api }}class/annotation/textbox.html)
-- [TextTypewriter]({{ site.api }}class/annotation/texttypewriter.html)
-- [Stamp]({{ site.api }}class/annotation/stamp.html)
-- [Incomplete]({{ site.api }}class/annotation/incomplete.html)
-- [Unknown]({{ site.api }}class/annotation/unknown.html)
+An array of [Annotation](/api/class/annotation/index.md) objects.
 
 **Warning**
 
@@ -417,7 +352,7 @@ importXfdf(docUid: string, xfdf: string): Prmoise<Annotation[]>;
 
 **Return value**
 
-An array of imported [Annotation](#annotation) objects.
+An array of imported [Annotation](/api/class/annotation/index.md) objects.
 
 **Promise Exception**
 
@@ -619,14 +554,3 @@ An EventObject.
 - `flagsChanged`
 - `appearanceChanged`
 - `contentChanged`
-
-    The table presents the 'actions' returned by events triggered by changes in attributes associated with various types of annotations.
-
-    | action              | Rectangle                                                    | Ellipse                                                      | Polygon                                                      | Polyline                                                     | Line                                                         | Ink                                                          | TextBox                                                      | TextTypewriter                                | Stamp               |
-    | ------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | --------------------------------------------- | ------------------- |
-    | `moved`             | `x`, `y`                                                     | `x`, `y`                                                     | Overall translation of `points`                            | Overall translation of  `points`                             | Overall translation of `startPoint`&`endPoint`               | Overall translation of  `points`                             | `x`, `y`                                                     | `x`, `y`                                      | `x`, `y`            |
-    | `resized`           | `width`,`height`                                             | `width`, `height`                                            | `points`                                                   | `points`                                                     | `startPoint`, `endPoint`                                     | `points` or resized through annotation selection's control points | `width`, `height`                                            | N/A                                           | `width`, `height`   |
-    | `rotated`           | `rotation`                                                   | `rotation`                                                   | `N/A`                                                   | `N/A`                                                   | `N/A`                                                   | `rotation`                                                   | `rotation`                                                   | N/A                                           | `rotation`          |
-    | `flagsChanged`      | `flags`                                                      | `flags`                                                      | `flags`                                                      | `flags`                                                      | `flags`                                                      | `flags`                                                      | `flags`                                                      | `flags`                                       | `flags`             |
-    | `appearanceChanged` | `borderWidth`, `borderColor`, `background`, `opacity`, `lineDash` | `borderWidth`, `borderColor`, `background`, `opacity`, `lineDash` | `borderWidth`, `borderColor`, `background`, `opacity`, `lineDash` | `lineEnding`，`borderWidth`, `borderColor`, `background`, `opacity`, `lineDash` | `lineEnding`，`borderWidth`, `borderColor`, `background`, `opacity`, `lineDash` | `borderWidth`, `borderColor`, `opacity`        | `textAlign`, `textContents`(excludes `content`), `borderWidth`, `borderColor`, `background`, `opacity`, `lineDash` | `textContents`(excludes `content`), `opacity` | `opacity`           |
-    | `contentChanged`    | N/A                                                          | N/A                                                          | N/A                                                          | N/A                                                          | N/A                                                          | N/A                                                          | `content` in `textContents`                                  | `content` in `textContents`                   | `stamp` |

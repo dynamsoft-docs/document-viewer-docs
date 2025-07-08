@@ -46,7 +46,7 @@ description: Dynamsoft Document Viewer Documentation API Reference Error List Pa
  ---------- | --------------------------------------------- 
  -80200     | File type is not supported.                   
  -80201     | docUid does not allow duplicate.              
- -80202     | Failed to read the PDF file becouse it's encrypted and the correct password is not provided. 
+ -80202     | Failed to read the PDF file because it's encrypted and the correct password is not provided. 
 
 ## Viewer releated Error
 

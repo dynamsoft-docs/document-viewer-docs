@@ -12,7 +12,7 @@ permalink: /api/errorlist.html
 
 # Error List
 
-## License related Error
+## License Related Errors
 
  Error Code | Error Message                                          
  ---------- | ------------------------------------------------------ 
@@ -22,7 +22,7 @@ permalink: /api/errorlist.html
  -80004     | *XXX(LicenseModuleName)* module license version does not match.             
  -80005     | Domain does not match the domain bound to the *XXX(LicenseModuleName)* module license. 
 
-## Initialize related Error
+## Initialize Related Errors
 
  Error Code | Error Message                                    
  ---------- | ------------------------------------------------ 
@@ -30,7 +30,7 @@ permalink: /api/errorlist.html
  -80051     | DDV.Core.init() has not been completed.  
  -80052     | *XXX(API)*: Resource is not found from the specified engineResourcePath.
 
-## Common Error
+## Common Errors
 
  Error Code | Error Message                                                
  ---------- | ------------------------------------------------------------ 
@@ -41,18 +41,23 @@ permalink: /api/errorlist.html
  -80104     | *XXX(API)*: The specified document(s) do not exist.  
  -80105     | *XXX(API)*: The specified page(s) do not exist.      
  -80106     | *XXX(API)*: The specified annotation does not exist.
+ -80108     | *XXX(API)*: The document has been destroyed.
+ -80109     | *XXX(API)*: The page has been destroyed.
 
 
-## Document related Error
+## Document Related Errors
 
  Error Code | Error Message                                 
  ---------- | --------------------------------------------- 
  -80200     | File type is not supported.                   
  -80201     | docUid does not allow duplicate.              
- -80202     | Failed to read the PDF file becouse it's encrypted and the correct password is not provided. 
+ -80202     | Failed to read the PDF file because it's encrypted and the correct password is not provided. 
  -80203     | Failed to read some annotations because they are not supported by Dynamsoft Document Viewer so far.
+ -80204     | PDFs containing XFA (XML Forms Architecture) forms are not supported.
+ -80205     | The pageData has been destroyed.
+ -80206     | The DocTextSearcher has been destroyed.
 
-## Viewer releated Error
+## Viewer Releated Errors
 
  Error Code | Error Message                                                
  ---------- | ------------------------------------------------------------ 
@@ -76,8 +81,9 @@ permalink: /api/errorlist.html
  -80319     | ReadOnly annotation or noView annotation cannot be selected.
  -80320     | Unknown annotation or incomplete annotation cannot be selected.
  -80321     | Flattened annotation cannot be selected.
+ -80322     | No results found.
 
-## Camera releated Error
+## Camera Releated Errors
 
  Error Code | Error Message                               
  ---------- | ------------------------------------------- 
@@ -102,3 +108,4 @@ permalink: /api/errorlist.html
  Error Code | Error Message  
 ------------|----------------
  -81100     | *External Error*     
+ 

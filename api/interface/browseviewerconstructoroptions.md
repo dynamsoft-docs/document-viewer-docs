@@ -16,11 +16,11 @@ permalink: /api/interface/browseviewerconstructoroptions.html
 
 ```typescript
 interface BrowseViewerConstructorOptions {
-	container?: string | HTMLElement;
-	keyboardInteractionConfig?: KeyboardInteractionConfig;
-	viewerConfig?: BrowseViewerConfig;
-	uiConfig?: UiConfig; 
-	groupUid?: string; 
+    container?: string | HTMLElement;
+    keyboardInteractionConfig?: KeyboardInteractionConfig;
+    viewerConfig?: BrowseViewerConfig;
+    uiConfig?: UiConfig; 
+    groupUid?: string; 
 }
 ```
 
