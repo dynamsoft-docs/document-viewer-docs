@@ -242,7 +242,7 @@ A Promise object which will be resolved with a boolean value.
 ```typescript
 const source = {
     fileIndex: 1, // Using the second page of the new multi-page file, such as PDF or TIFF.
-    fileData = /*sample blob*/,
+    fileData: /*sample blob*/
 };
 
 await firstDoc.updatePage(firstDoc.pages[0], source);
