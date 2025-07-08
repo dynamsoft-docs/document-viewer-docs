@@ -16,93 +16,93 @@ permalink: /api/interface/displaytextconfig.html
 
 ```typescript
 interface DisplayTextConfig {
-    CameraResolution?: string,
-    Capture?: string,
-    Flashlight?: string,
-    CameraConvert?: string,
-    AutoDetect?: string,
-    AutoCapture?: string,
-
-    RotateLeft?: string,
-    RotateRight?: string,
-
-    Load?: string,
-    Download?: string,
-    Delete?: string,
-    DeleteCurrent?: string,
-    DeleteAll?: string,
-
-    Zoom?: string
-    ZoomIn?: string,
-    ZoomOut?: string,
-
-    Crop?: string,
-    CropAll?: string,
-    CropCurrent?: string,
-    FullQuad?: string,
-    Undo?: string,
-    Redo?: string,
-
-    Pan?: string,
-    Filter?: string,
-
-    Print?: string,
-    ThumbnailSwitch?: string,
-
-    DisplayMode?: string,
-    ContinuousPage?: string,
-    SinglePage?: string,
-
-    FitMode?: string,
-    FitWidth?: string,
-    FitHeight?: string,
-    FitWindow?: string,
-    ActualSize?: string,
-
-    Back?: string,
-    Close?: string,
-    Done?: string,
-
-    FirstPage?: string,
-    LastPage?: string,
-    NextPage?: string,
-    PrevPage?: string,
-
-    FitMode_FitWidth?: string,
-    FitMode_FitHeight?: string,
-    FitMode_FitWindow?: string,
-    FitMode_ActualSize?: string,
-    DisplayMode_SinglePage?: string,
-    DisplayMode_ContinuousPage?: string,
-    Crop_CropAll?: string,
-    Crop_CropCurrent?: string,
-    Crop_CropCancel?: string,
-    Crop_CropApply?: string,
-    Filter_FilterAll?: string,
-    Delete_DeleteCurrent?: string,
-    Delete_DeleteAll?: string,
-    CameraResolution_720P?: string,
-    CameraResolution_1080P?: string,
-    CameraResolution_1440P?: string,
-    CameraResolution_2160P?: string,
-
+    FitMode_FitWidth?: string;
+    FitMode_FitHeight?: string;
+    FitMode_FitWindow?: string;
+    FitMode_ActualSize?: string;
+    DisplayMode_SinglePage?: string;
+    DisplayMode_ContinuousPage?: string;
+    Crop_CropAll?: string;
+    Crop_CropCurrent?: string;
+    Crop_CropCancel?: string;
+    Crop_CropApply?: string;
+    Filter_FilterAll?: string;
+    Delete_DeleteCurrent?: string;
+    Delete_DeleteAll?: string;
+    CameraResolution_720P?: string;
+    CameraResolution_1080P?: string;
+    CameraResolution_1440P?: string;
+    CameraResolution_2160P?: string;
+    CameraResolution?: string;
+    Capture?: string;
+    Flashlight?: string;
+    CameraConvert?: string;
+    AutoDetect?: string;
+    AutoCapture?: string;
+    Rotate?: string;
+    RotateLeft?: string;
+    RotateRight?: string;
+    Load?: string;
+    Download?: string;
+    Delete?: string;
+    DeleteCurrent?: string;
+    DeleteAll?: string;
+    Zoom?: string;
+    ZoomIn?: string;
+    ZoomOut?: string;
+    ZoomByPercentage?: string;
+    Crop?: string;
+    CropAll?: string;
+    CropCurrent?: string;
+    CropMode?: string;
+    PerspectiveAll?: string;
+    FullQuad?: string;
+    Undo?: string;
+    Redo?: string;
+    Restore?: string;
+    Pan?: string;
+    Filter?: string;
+    Print?: string;
+    ThumbnailSwitch?: string;
+    DisplayMode?: string;
+    ContinuousPage?: string;
+    MultiPage?: string;
+    SinglePage?: string;
+    FitMode?: string;
+    FitWidth?: string;
+    FitHeight?: string;
+    FitWindow?: string;
+    ActualSize?: string;
+    Back?: string;
+    Close?: string;
+    Done?: string;
+    FirstPage?: string;
+    LastPage?: string;
+    NextPage?: string;
+    PrevPage?: string;
+    ImagePreview?: string;
     AnnotationSet?: string;
-    RectAnnotation?: string;
     EllipseAnnotation?: string;
+    InkAnnotation?: string;
+    LineAnnotation?: string;
     PolygonAnnotation?: string;
     PolylineAnnotation?: string;
-    LineAnnotation?: string;
-    InkAnnotation?: string;
-    TextBoxAnnotation?: string;
-    TextTypewriterAnnotation?: string;
+    RectAnnotation?: string;
     StampIconAnnotation?: string;
     StampImageAnnotation?: string;
+    TextBoxAnnotation?: string;
+    TextTypewriterAnnotation?: string;
     SelectAnnotation?: string;
-    EraseAnnotation?:string;
+    EraseAnnotation?: string;
+    HighlightAnnotation?: string;
+    UnderlineAnnotation?: string;
+    StrikeoutAnnotation?: string;
     BringForward?: string;
     BringToFront?: string;
     SendBackward?: string;
     SendToBack?: string;
+    TextSearchPanelSwitch?: string;
+    TextSelectionMode?: string;
 }
 ```
 

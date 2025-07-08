@@ -32,6 +32,7 @@ const thumbnailObj = editViewer.thumbnail;
 | [`getStyle()`](#getstyle)            | Get the style object of `BrowseViewer`.                        |
 | [`updateStyle()`](#updatestyle)        | Update the style object of `BrowseViewer`.                     |
 | [`getUiConfig()`](#getuiconfig)         | Get current `UiConfig` object.                               |
+| [`getVisiblePagesInfo()`](#getVisiblePagesInfo)               | Get the visible pages info                |
 | [`updateUiConfig()`](#updateuiconfig)     | Update `UiConfig` object.                                    |
 | [`show()`](#show)                | Show the viewer.                                             |
 | [`hide()`](#hide)                | Hide the viewer.                                             |
@@ -167,6 +168,20 @@ The [`UiConfig`]({{ site.api }}interface/uiconfig.html) object.
 ```typescript
 const viewerUi = thumbnailObj.getUiConfig();
 ```
+
+### getVisiblePagesInfo()
+
+Get the visible pages info.
+
+**Syntax**
+
+```typescript
+getVisiblePagesInfo(): PageVisualInfo[];
+```
+
+**Return values**
+
+Array of the `PageVisualInfo` object. Please refer to [`PageVisualInfo`](/api/interface/pagevisualinfo.md).
 
 ### updateUiConfig()
 

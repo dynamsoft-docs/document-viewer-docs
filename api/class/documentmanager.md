@@ -151,7 +151,7 @@ Get the document object with the document uid.
 **Syntax**
 
 ```typescript
-getDocument(docUid: string): IDocument | null;
+getDocument(docUid: string): IDocument;
 ```
 
 **Parameters**

@@ -16,10 +16,10 @@ permalink: /api/interface/vimagedata.html
 
 ```typescript
 interface VImageData {
-	type: EnumImageDataType;
-	data: ArrayBuffer | Blob; 
-	height?: number;
-	width?: number;
+    type: EnumImageDataType;
+    data: ArrayBuffer | Blob; 
+    height?: number;
+    width?: number;
 }
 ```
 

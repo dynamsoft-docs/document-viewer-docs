@@ -16,11 +16,11 @@ In this section, we’ll break down and show all the steps needed to build the H
 
 ### Mobile View Mockup
 
-![Hello World for Mobile](/assets/imgs/dmhelloworld.jpg)
+![Hello World for Mobile](/assets/imgs/edit-viewer-mobile-3.0.jpg)
 
 ### Desktop View Mockup
 
-![Hello World for Desktop](/assets/imgs/ddhelloworld.jpg)
+![Hello World for Desktop](/assets/imgs/edit-viewer-3.0.jpg)
 
 We’ll build on this skeleton page:
 
@@ -79,7 +79,7 @@ For HelloWorld, we define below elements.
 
 ```javascript
 // Public trial license which is valid for 24 hours
-// You can request a 30-day trial key from https://www.dynamsoft.com/customer/license/trialLicense/?product=mwc
+// You can request a 30-day trial key from https://www.dynamsoft.com/customer/license/trialLicense/?product=ddv
 Dynamsoft.DDV.Core.license = "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9";
 Dynamsoft.DDV.Core.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@latest/dist/engine";
 // Preload DDV Resource
@@ -90,12 +90,10 @@ await Dynamsoft.DDV.Core.init();
 ## Create an edit viewer
 
 ```javascript
-// Configure image filter feature
-Dynamsoft.DDV.setProcessingHandler("imageFilter", new Dynamsoft.DDV.ImageFilter());
 // Create an edit viewer
 const editViewer = new Dynamsoft.DDV.EditViewer({
     container: "container",
-    uiConfig: Dynamsoft.DDV.getDefaultUiConfig("editViewer", {includeAnnotationSet: true}),
+    uiConfig: Dynamsoft.DDV.getDefaultUiConfig("editViewer"),
 });
 ```
 
@@ -133,16 +131,15 @@ const editViewer = new Dynamsoft.DDV.EditViewer({
 <script type="module">
     (async () => {
         // Public trial license which is valid for 24 hours
-        // You can request a 30-day trial key from https://www.dynamsoft.com/customer/license/trialLicense/?product=mwc
+        // You can request a 30-day trial key from https://www.dynamsoft.com/customer/license/trialLicense/?product=ddv
         Dynamsoft.DDV.Core.license = "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9";
         Dynamsoft.DDV.Core.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@latest/dist/engine";
         // Preload DDV Resource
         Dynamsoft.DDV.Core.loadWasm();
         await Dynamsoft.DDV.Core.init();
-        Dynamsoft.DDV.setProcessingHandler("imageFilter", new Dynamsoft.DDV.ImageFilter());
         const editViewer = new Dynamsoft.DDV.EditViewer({
             container: "container",
-            uiConfig: Dynamsoft.DDV.getDefaultUiConfig("editViewer", {includeAnnotationSet: true}),
+            uiConfig: Dynamsoft.DDV.getDefaultUiConfig("editViewer"),
         });
     })();
 </script>

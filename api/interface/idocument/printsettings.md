@@ -22,7 +22,7 @@ interface PrintSettings{
 
 ## Attributes
 
-### saveAnnotation
+### printAnnotation
 
 Whether to print the printable annotation(s) as the part of image. Default vaule: `true`.
 

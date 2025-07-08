@@ -16,11 +16,11 @@ permalink: /api/interface/captureviewerconstructoroptions.html
 
 ```typescript
 interface CaptureViewerConstructorOptions {
-	container?: string | HTMLElement;
-	keyboardInteractionConfig?: KeyboardInteractionConfig;
-	viewerConfig?: CaptureViewerConfig;
-	uiConfig?: UiConfig;
-	groupUid?: string;
+    container?: string | HTMLElement;
+    keyboardInteractionConfig?: KeyboardInteractionConfig;
+    viewerConfig?: CaptureViewerConfig;
+    uiConfig?: UiConfig;
+    groupUid?: string;
 }
 ```
 

@@ -74,16 +74,17 @@ Capture Viewer is used to control camera, play video stream, and capture the ima
 
 ***Integrated Events***
 
-| Event Name    | Description                                                  |
-| ------------- | ------------------------------------------------------------ |
-| [`resized`](#resized)       | Triggered when the viewer is resized.                        |
-| [`played`](#played)        | Triggered when the camera video stream is played.            |
-| [`stopped`](#stopped)       | Triggered when the camera video stream is stopped.           |
-| [`captured`](#captured)      | Triggered when a frame is captured.                          |
-| [`cameraChanged`](#camerachanged) | Triggered when the used camera is changed.                   |
-| [`click`](#click)         | Triggered when click in the viewer's viewing area.           |
-| [`dblclick`](#dblclick)      | Triggered when double click in the viewer's viewing area.    |
-| [`rightclick`](#rightclick)    | Triggered when right click in the viewer's viewing area.     |
+| Event Name    |
+| ------------- |
+| [`resized`](#resized)       |
+| [`played`](#played)         |
+| [`stopped`](#stopped)       |
+| [`captured`](#captured)     |
+| [`cameraChanged`](#camerachanged) |
+| [`click`](#click)           |
+| [`dblclick`](#dblclick)     |
+| [`rightclick`](#rightclick) |
+| [`visibilityChanged`](#visibilitychanged) |
 
 ## Create and Destroy Instances
 
@@ -533,8 +534,8 @@ const captureViewer = new Dynamsoft.DDV.CaptureViewer({
     container: document.getElementById("viewer"),
 });
 await captureViewer.play({
-	 resolution: [1080, 720], 
-	 fill: true, 
+     resolution: [1080, 720], 
+     fill: true, 
 });
 ```
 
@@ -595,8 +596,8 @@ const captureViewer = new Dynamsoft.DDV.CaptureViewer({
     container: document.getElementById("viewer"),
 });
 await captureViewer.play( {
-	 resolution: [1080, 720], 
-	 fill: true, 
+     resolution: [1080, 720], 
+     fill: true, 
 });
 
 const capturedPage = await captureViewer.capture();
@@ -1049,6 +1050,11 @@ Triggered when the used camera is changed.
 
 `newDeviceId`: The new camera device id.
 
+#### visibilityChanged
+
+Triggered when the viewer's visibility is changed. It will return an `isVisible` boolean value.
+
+
 #### Mouse Events
 
 ##### click
@@ -1066,7 +1072,7 @@ Triggered when right click in the viewer's viewing area. On mobile device, trigg
 
 **Callback for mouse events**
 
- `VPointerEvent`: An EventObject.
+ `IPointerEvent`: An EventObject.
 
 **Attributes**
 

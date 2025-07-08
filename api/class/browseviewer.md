@@ -31,6 +31,7 @@ Browse Viewer is used to display pages in multiple-mode, pages can be multiple s
 | [`unbindContainer()`](#unbindcontainer) | Unbind the viewer from the specified container.              |
 | [`isBoundContainer`](#isboundcontainer) | Return whether the viewer is bound to a container. |
 | [`getStyle()`](#getstyle)            | Get the style object of `BrowseViewer`.                        |
+| [`getVisiblePagesInfo()`](#getVisiblePagesInfo)               | Get the visible pages info                |
 | [`updateStyle()`](#updatestyle)        | Update the style object of `BrowseViewer`.                     |
 | [`getUiConfig()`](#getuiconfig)         | Get current `UiConfig` object.                               |
 | [`updateUiConfig()`](#updateuiconfig)     | Update `UiConfig` object.                                    |
@@ -79,19 +80,24 @@ Browse Viewer is used to display pages in multiple-mode, pages can be multiple s
 
 ***Integrated Events***
 
-| Event Name          | Description                                                  |
-| ------------------- | ------------------------------------------------------------ |
-| [`resized`](#resized)             | Triggered when the viewer is resized.                        |
-| [`pageRendered`](#pagerendered)        | Triggered when a page has been completely rendered.          |
-| [`currentIndexChanged`](#currentindexchanged) | Triggered when currentIndex is changed.                      |
-| [`currentPageChanged`](#currentpagechanged)  | Triggered when current page is changed.                      |
-| [`selectedPagesChanged`](#selectedpageschanged) | Trigeered when the page(s) is selected.                      |
-| [`pagesDragged`](#pagesdragged)         | Triggered when page(s) is dragged.                           |
-| [`pagesDropped`](#pagesdropped)         | Triggered when page(s) is dropped.                           |
-| [`click`](#click)               | Triggered when click in the viewer's viewing area.           |
-| [`dblclick`](#dbclick)            | Triggered when double click in the viewer's viewing area.    |
-| [`rightclick`](#rightclick)          | Triggered when right click in the viewer's viewing area.     |
-
+| Event Name          |
+| ------------------- |
+| [`resized`](#resized)             |
+| [`pageRendered`](#pagerendered)        |
+| [`currentIndexChanged`](#currentindexchanged) |
+| [`currentPageChanged`](#currentpagechanged)  |
+| [`selectedPagesChanged`](#selectedpageschanged) |
+| [`pagesDragged`](#pagesdragged)         |
+| [`pagesDropped`](#pagesdropped)         |
+| [`click`](#click)               |
+| [`dblclick`](#dbclick)            |
+| [`rightclick`](#rightclick)          |
+| [`visibilityChanged`](#visibilitychanged)                   |
+| [`pointerdown`](#pointerdown)                   |
+| [`pointermove`](#pointermove)                   |
+| [`pointerup`](#pointerup)                   |
+| [`pageover`](#pageover)                   |
+| [`pageout`](#pageout)                   |
 
 ## Create and Destroy Instances
 
@@ -251,6 +257,20 @@ const pageStyle = browseViewer.getStyle("pageStyle");
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.                       | `null`
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.                      | `null`
  -80103 | *XXX(API)*: The value for *XXX(ParameterName)* is not supported. | `null`
+
+### getVisiblePagesInfo()
+
+Get the visible pages info.
+
+**Syntax**
+
+```typescript
+getVisiblePagesInfo(): PageVisualInfo[];
+```
+
+**Return values**
+
+Array of the `PageVisualInfo` object. Please refer to [`PageVisualInfo`](/api/interface/pagevisualinfo.md).
 
 ### updateStyle()
 
@@ -871,7 +891,7 @@ Set rows and columns of displayed pages.
 ```typescript
 setRowAndColumn(
     rows: number, 
-	columns: number 
+    columns: number 
 ): boolean;
 ```
 **Parameters**
@@ -1168,6 +1188,31 @@ Triggered when page(s) is dropped.
 
 `pageUids[]`: The array of the dropped pages uids.
 
+
+#### visibilityChanged
+
+Triggered when the viewer's visibility is changed. It will return an `isVisible` boolean value.
+
+#### pointerdown
+
+Triggered when a pointer becomes active buttons state. It will return an [`IPointerEvent`](/api/interface/ipointerevent.md) object.
+
+#### pointermove
+
+Triggered when a pointer changes coordinates. It will return an [`IPointerEvent`](/api/interface/ipointerevent.md) object.
+
+#### pointerup
+
+Triggered when a pointer is no longer active buttons state. It will return an [`IPointerEvent`](/api/interface/ipointerevent.md) object.
+
+#### pageover
+
+Triggered when a pointer is moved into a page's hit test boundaries. It will return an [`IPointerEvent`](/api/interface/ipointerevent.md) object.
+
+#### pageout
+
+Triggered when a pointer is moved out of the hit test boundaries of a page. It will return an [`IPointerEvent`](/api/interface/ipointerevent.md) object.
+
 #### Mouse Events
 
 ##### click
@@ -1184,7 +1229,7 @@ Triggered when right click in the viewer's viewing area. On mobile device, trigg
 
 **Callback for mouse events**
 
- `VPointerEvent`: An EventObject.
+ `IPointerEvent`: An EventObject.
 
 **Attributes**
 

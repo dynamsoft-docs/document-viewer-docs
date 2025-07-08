@@ -16,8 +16,8 @@ permalink: /api/interface/videodeviceinfo.html
 
 ```typescript
 interface VideoDeviceInfo {
-	deviceId: string; 
-	label: string;
+    deviceId: string; 
+    label: string;
 }
 ```
 

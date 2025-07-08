@@ -34,17 +34,28 @@ Default UiConfig:
     type: Dynamsoft.DDV.Elements.Layout,
     flexDirection: "column",
     className: "ddv-edit-viewer-mobile",
-    children: [
-        {
+    children: [{
             type: Dynamsoft.DDV.Elements.Layout,
             className: "ddv-edit-viewer-header-mobile",
             children: [
                 Dynamsoft.DDV.Elements.Blank,
+                Dynamsoft.DDV.Elements.AnnotationSet,
                 Dynamsoft.DDV.Elements.Pagination,
                 Dynamsoft.DDV.Elements.Download,
-            ],
+                Dynamsoft.DDV.Elements.TextSearchPanelSwitch
+            ]
         },
-        Dynamsoft.DDV.Elements.MainView,
+        {
+        type: Dynamsoft.DDV.Elements.Layout,
+        flexDirection:"column",
+        children:[
+            Dynamsoft.DDV.Elements.MainView,
+            {
+                type: Dynamsoft.DDV.Elements.TextSearchPanel,
+                className: "ddv-edit-viewer-search-mobile"
+            }
+        ]
+        },
         {
             type: Dynamsoft.DDV.Elements.Layout,
             className: "ddv-edit-viewer-footer-mobile",
@@ -52,17 +63,16 @@ Default UiConfig:
                 Dynamsoft.DDV.Elements.DisplayMode,
                 Dynamsoft.DDV.Elements.RotateLeft,
                 Dynamsoft.DDV.Elements.Crop,
-                Dynamsoft.DDV.Elements.Filter,
                 Dynamsoft.DDV.Elements.Undo,
                 Dynamsoft.DDV.Elements.Delete,
-                Dynamsoft.DDV.Elements.Load,
-            ],
-        },
-    ],
-};
+                Dynamsoft.DDV.Elements.Load
+            ]
+        }
+    ]
+}
 ```
 
-![Default mobile EditViewer UI](/assets/imgs/dmeditui.png)
+![Default mobile EditViewer UI](/assets/imgs/edit-viewer-mobile-3.0.jpg)
 
 ### Desktop
 
@@ -73,14 +83,12 @@ Default UiConfig:
     type: Dynamsoft.DDV.Elements.Layout,
     flexDirection: "column",
     className: "ddv-edit-viewer-desktop",
-    children: [
-        {
+    children: [{
             type: Dynamsoft.DDV.Elements.Layout,
             className: "ddv-edit-viewer-header-desktop",
-            children: [
-                {
+            children: [{
                     type: Dynamsoft.DDV.Elements.Layout,
-                    enableScroll: true,
+                    enableScroll:true,
                     children: [
                         Dynamsoft.DDV.Elements.ThumbnailSwitch,
                         Dynamsoft.DDV.Elements.Zoom,
@@ -89,13 +97,15 @@ Default UiConfig:
                         Dynamsoft.DDV.Elements.RotateLeft,
                         Dynamsoft.DDV.Elements.RotateRight,
                         Dynamsoft.DDV.Elements.Crop,
-                        Dynamsoft.DDV.Elements.Filter,
                         Dynamsoft.DDV.Elements.Undo,
                         Dynamsoft.DDV.Elements.Redo,
                         Dynamsoft.DDV.Elements.DeleteCurrent,
                         Dynamsoft.DDV.Elements.DeleteAll,
                         Dynamsoft.DDV.Elements.Pan,
-                    ],
+                        Dynamsoft.DDV.Elements.TextSelectionMode,
+                        Dynamsoft.DDV.Elements.SeparatorLine,
+                        Dynamsoft.DDV.Elements.AnnotationSet,
+                    ]
                 },
                 {
                     type: Dynamsoft.DDV.Elements.Layout,
@@ -107,16 +117,24 @@ Default UiConfig:
                         Dynamsoft.DDV.Elements.Load,
                         Dynamsoft.DDV.Elements.Download,
                         Dynamsoft.DDV.Elements.Print,
-                    ],
-                },
-            ],
+                        Dynamsoft.DDV.Elements.TextSearchPanelSwitch
+                    ]
+                }
+            ]
         },
-        Dynamsoft.DDV.Elements.MainView,
-    ],
-};
+        {
+            type:Dynamsoft.DDV.Elements.Layout,
+            flexDirection:"row",
+            children:[
+                Dynamsoft.DDV.Elements.MainView,
+                Dynamsoft.DDV.Elements.TextSearchPanel
+            ]
+        }
+    ]
+}
 ```
 
-![Default desktop EditViewer UI](/assets/imgs/ddeditui.png)
+![Default desktop EditViewer UI](/assets/imgs/edit-viewer-3.0.jpg)
 
 <div class="multi-panel-end"></div>
 

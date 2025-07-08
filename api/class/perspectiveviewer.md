@@ -31,6 +31,7 @@ Perspective Viewer is used to do page boundaries manual adjustment & perspective
 | [`unbindContainer()`](#unbindcontainer) | Unbind the viewer from the specified container.              |
 | [`isBoundContainer`](#isboundcontainer) | Return whether the viewer is bound to a container. |
 | [`getStyle()`](#getstyle)            | Get the style object of `PerspectiveViewer`.                        |
+| [`getVisiblePagesInfo()`](#getVisiblePagesInfo)               | Get the visible pages info                |
 | [`updateStyle()`](#updatestyle)        | Update the style object of `PerspectiveViewer`.                     |
 | [`getUiConfig()`](#getuiconfig)         | Get current `UiConfig` object.                               |
 | [`updateUiConfig()`](#updateuiconfig)     | Update `UiConfig` object.                                    |
@@ -77,16 +78,22 @@ Perspective Viewer is used to do page boundaries manual adjustment & perspective
 
 ***Integrated Events***
 
-| Event Name          | Description                                                  |
-| ------------------- | ------------------------------------------------------------ |
-| [`resized`](#resized)             | Triggered when the viewer is resized.                        |
-| [`pageRendered`](#pagerendered)        | Triggered when a page has been completely rendered.          |
-| [`currentIndexChanged`](#currentindexchanged) | Triggered when currentIndex is changed.                      |
-| [`currentPageChanged`](#currentpagechanged)  | Triggered when current page is changed.                      |
-| [`quadModifiedModified`](#quadmodified)    | Triggered when the quadrilateral selection is modified.     |
-| [`click`](#click)               | Triggered when click in the viewer's viewing area.           |
-| [`dblclick`](#dbclick)            | Triggered when double click in the viewer's viewing area.    |
-| [`rightclick`](#rightclick)          | Triggered when right click in the viewer's viewing area.     |
+| Event Name          |
+| ------------------- |
+| [`resized`](#resized)             |
+| [`pageRendered`](#pagerendered)        |
+| [`currentIndexChanged`](#currentindexchanged) |
+| [`currentPageChanged`](#currentpagechanged)  |
+| [`quadModified`](#quadmodified)    |
+| [`click`](#click)               |
+| [`dblclick`](#dbclick)            |
+| [`rightclick`](#rightclick)          |
+| [`visibilityChanged`](#visibilitychanged)                   |
+| [`pointerdown`](#pointerdown)                   |
+| [`pointermove`](#pointermove)                   |
+| [`pointerup`](#pointerup)                   |
+| [`pageover`](#pageover)                   |
+| [`pageout`](#pageout)                   |
 
 
 ## Create and Destroy Instances
@@ -247,6 +254,20 @@ const pageStyle = perspectiveViewer.getStyle("pageStyle");
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.                       | `null`
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.                      | `null`
  -80103 | *XXX(API)*: The value for *XXX(ParameterName)* is not supported. | `null`
+
+### getVisiblePagesInfo()
+
+Get the visible pages info.
+
+**Syntax**
+
+```typescript
+getVisiblePagesInfo(): PageVisualInfo[];
+```
+
+**Return values**
+
+Array of the `PageVisualInfo` object. Please refer to [`PageVisualInfo`](/api/interface/pagevisualinfo.md).
 
 ### updateStyle()
 
@@ -720,10 +741,10 @@ setQuadSelection(quad: Quad): boolean;
 
 ```typescript
 const quad = [
-	[80,200],
-	[180,120],
-	[115,340],
-	[70,330]
+    [80,200],
+    [180,120],
+    [115,340],
+    [70,330]
 ];
 
 perspectiveViewer.setQuadSelection(quad);
@@ -1060,17 +1081,32 @@ Triggered when current page is changed.
 
 #### quadModified
 
-Triggered when the quadrilateral selection is modified.
+Triggered when the quadrilateral selection is modified. Please refer to [`IQuadModifiedEvent`](/api/interface/iquadmodifiedevent.md).
 
-***Callback***
 
- `QuadModifiedEvent`: An EventObject.
+#### visibilityChanged
 
-***Attributes***
+Triggered when the viewer's visibility is changed. It will return an `isVisible` boolean value.
 
-`oldQuad`: The old quadrangle.
+#### pointerdown
 
-`newQuad`: The new quadrangle.
+Triggered when a pointer becomes active buttons state. It will return an [`IPointerEvent`](/api/interface/ipointerevent.md) object.
+
+#### pointermove
+
+Triggered when a pointer changes coordinates. It will return an [`IPointerEvent`](/api/interface/ipointerevent.md) object.
+
+#### pointerup
+
+Triggered when a pointer is no longer active buttons state. It will return an [`IPointerEvent`](/api/interface/ipointerevent.md) object.
+
+#### pageover
+
+Triggered when a pointer is moved into a page's hit test boundaries. It will return an [`IPointerEvent`](/api/interface/ipointerevent.md) object.
+
+#### pageout
+
+Triggered when a pointer is moved out of the hit test boundaries of a page. It will return an [`IPointerEvent`](/api/interface/ipointerevent.md) object.
 
 #### Mouse Events
 
@@ -1088,7 +1124,7 @@ Triggered when right click in the viewer's viewing area. On mobile device, trigg
 
 **Callback for mouse events**
 
- `VPointerEvent`: An EventObject.
+ `IPointerEvent`: An EventObject.
 
 **Attributes**
 

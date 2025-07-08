@@ -7,14 +7,13 @@ title: Dynamsoft Document Viewer Features - Annotation Management
 keywords: Documentation, Dynamsoft Document Viewer, Features, Annotation Management
 breadcrumbText: Annotation Management
 description: Dynamsoft Document Viewer Documentation Features, Annotation Management
-permalink: /features/datamanagement/annotmanagement.html
 ---
 
 # Annotation Management
 
-Starting from DDV 2.0, Annotation functionality is supported. This guide introduces some of the key Annotation features. The following functionalities can all be achieved through bulit-in Elements which are related to annotation functionality, this guide only focuses on programming methods.
+Starting from DDV 2.0, annotation is supported.
 
-It is important to note that annotations on the page can be displayed in the UI of either the EditViewer or the BrowseViewer, but they can only be processed through the UI in the EditViewer. Additionally, [built-in Elements related to annotation functionality]({{ site.ui }}default_elements.html#edit-viewer) can only be configured within the UiConfig of the EditViewer.
+Annotations can be created using the built-in UI of Edit Viewer as well as code. This guide will focus on using the code.
 
 ## Annotation creation
 
@@ -31,6 +30,9 @@ Up to now, the annotation types supported by DDV are as follows:
 - [TextBox]({{ site.api }}class/annotation/textbox.html)
 - [TextTypewriter]({{ site.api }}class/annotation/texttypewriter.html)
 - [Stamp]({{ site.api }}class/annotation/stamp.html)
+- [Highlight]({{ site.api }}class/annotation/highlight.html)
+- [Underline]({{ site.api }}class/annotation/underline.html)
+- [Strikeout]({{ site.api }}class/annotation/strikeout.html)
 
 ### Create a specified type annotation instance
 
@@ -58,7 +60,7 @@ The following properties of the annotation can be accessed from the created inst
     const annotPageUid = rect.pageUid;
     ```
 
-    If the annotation is be deleted, the `pageUid` will return `''`.
+    if the annotation is deleted, the `pageUid` will return `''`.
 
 {% comment %}
 
@@ -77,7 +79,7 @@ The following properties of the annotation can be accessed from the created inst
     const modificationDate = rect.modificationDate; //D:YYYYMMDDHHmmSSOHH'mm'
     ```
 
-    If the annotation is be deleted, the `modificationDate` will return `''`.
+    if the annotation is deleted, the `modificationDate` will return `''`.
 
     If the annotation is created but not be modified after adding, `modificationDate` equals to `creationDate`. 
 

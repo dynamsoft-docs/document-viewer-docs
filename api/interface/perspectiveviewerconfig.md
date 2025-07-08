@@ -16,13 +16,13 @@ permalink: /api/interface/perspectiveviewerconfig.html
 
 ```typescript
 interface PerspectiveViewerConfig {
-	canvasStyle?: CanvasStyle;
-	pageStyle?: BaseStyle;
-	quadSelectionStyle?: QuadSelectionStyle;
-	enableLoadSourceByDrag?: boolean;
-	enableMagnifier?: boolean;
-	enableSlide?: boolean;
-	scrollToLatest?: boolean;
+    canvasStyle?: CanvasStyle;
+    pageStyle?: BaseStyle;
+    quadSelectionStyle?: QuadSelectionStyle;
+    enableLoadSourceByDrag?: boolean;
+    enableMagnifier?: boolean;
+    enableSlide?: boolean;
+    scrollToLatest?: boolean;
 }
 ```
 

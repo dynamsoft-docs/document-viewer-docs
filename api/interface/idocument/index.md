@@ -33,13 +33,14 @@ This interface that defines a document object.
 | [`movePages()`](#movepages)         | Move specified page(s) to the target position in current document. |
 | [`switchPage()`](#switchpage)        | Swap the position of two pages in current document.          |
 | [`insertBlankPage()`](#insertblankpage)          | Insert a blank page to current document. |
+| [`isPageModified()`](#ispagemodified)          | Check if a page is modified. |
 | [`rename()`](#rename)            | Rename current document.                                     |
 | [`saveToPng()`](#savetopng)         | Save specified page or current page in current document to a PNG file. |
 | [`saveToJpeg()`](#savetojpeg)        | Save specified page or current page in current document to a JPEG file. |
 | [`saveToTiff()`](#savetotiff)        | Save specified page(s) or all pages in current document to a TIFF file. |
 | [`saveToPdf()`](#savetopdf)        | Save specified page(s) or all pages in current document to a PDF file. |
 | [`print()`](#print)             | Use the browser’s built-in print feature to print the specified image(s). |
-
+| [`createTextSearcher()`](#createtextsearcher)             | Create a text searcher. |
 
 ### name
 
@@ -175,8 +176,9 @@ await firstDoc.loadSource([source]);
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  
  -80200 | File type is not supported. 
- -80202 | Failed to read the PDF file becouse it's encrypted and the correct password is not provided.
+ -80202 | Failed to read the PDF file because it's encrypted and the correct password is not provided.
  -80203 | Failed to read some annotations because they are not supported by Dynamsoft Document Viewer so far.
+ -80204 | PDFs containing XFA (XML Forms Architecture) forms are not supported.
 
 ### getPageData()
 
@@ -185,7 +187,7 @@ Get the data of specified page.
 **Syntax**
 
 ```typescript
-getPageData(pageUid: string): Promise<PageData>;
+getPageData(pageUid: string): IPageData;
 ```
 
 **Parameters**
@@ -194,12 +196,12 @@ getPageData(pageUid: string): Promise<PageData>;
 
 **Return Value**
 
-A Promise [`PageData`]({{ site.api }}interface/idocument/pagedata.html) object.
+[`IPageData`](/api/interface/ipagedata.md) object.
 
 **Code Snippet**
 
 ```typescript
-const pageData = await firstDoc.getPageData(firstDoc.pages[0]);
+const pageData = firstDoc.getPageData(firstDoc.pages[0]);
 ```
 
 **Promise Exception**
@@ -218,16 +220,14 @@ Update a page specified by the pageUid with the new data.
 **Syntax**
 
 ```typescript
-updatePage(pageUid: string, data: Blob, updatePageOptions?: UpdatePageOptions): Promise<boolean>;
+updatePage(pageUid: string, source: UpdatedSource | UpdatedPdfSource): Promise<boolean>;
 ```
 
 **Parameters**
 
 `pageUid`: The uid of the page to be updated.
 
-`data`: The new blob.
-
-`updatePageOptions`: The options of the new updated page. Please refer to [`UpdatePageOptions`]({{ site.api }}interface/idocument/updatepageoptions.html).
+`source`: The new data. Please refer to [`UpdatedSource`](/api/interface/updatedsource.md) and [`UpdatedPdfSource`](/api/interface/updatedpdfsource.md).
 
 **Return Value**
 
@@ -240,24 +240,31 @@ A Promise object which will be resolved with a boolean value.
 **Code Snippet**
 
 ```typescript
-const updatePageOptions = {
+const source = {
     fileIndex: 1, // Using the second page of the new multi-page file, such as PDF or TIFF.
+    fileData = /*sample blob*/,
 };
 
-const fileData = /*sample blob*/,
-
-await firstDoc.updatePage(firstDoc.pages[0], fileData, updatePageOptions);
+await firstDoc.updatePage(firstDoc.pages[0], source);
 ```
 
 **Promise Exception**
 
  Error Code  | Error Message                                        
 --------|-----------------------------------------------------
+ -80001 | License string is invalid.                              
+ -80002 | *XXX(LicenseModuleName)* module license has expired.                                                               
+ -80003 | *XXX(LicenseModuleName)* module license is missing.                         
+ -80004 | *XXX(LicenseModuleName)* module license version does not match.                                 
+ -80005 | Domain does not match the domain bound to the *XXX(LicenseModuleName)* module license. 
+ -80050 | DDV.Core.init() has not been set up yet.  
+ -80051 | DDV.Core.init() has not been completed.   
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
- -80101 | IDocument.updatePage: updatePageOptions.fileIndex is out of range.
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  
- -80105 | *XXX(API)*: The specified page(s) do not exist.
-
+ -80200 | File type is not supported. 
+ -80202 | Failed to read the PDF file because it's encrypted and the correct password is not provided.
+ -80203 | Failed to read some annotations because they are not supported by Dynamsoft Document Viewer so far.
+ -80204 | PDFs containing XFA (XML Forms Architecture) forms are not supported.
 
 
 ### setPageCustomData()
@@ -508,6 +515,31 @@ The page uid of the inserted blank page.
  -80101      | *XXX(API)*: *XXX(ParameterName)* is out of range. 
  -80102      | *XXX(API)*: *XXX(ParameterName)* is missing.
 
+### isPageModified()
+
+Check if a page is modified.
+
+**Syntax**
+
+```typescript
+isPageModified(index: number): boolean;
+```
+
+**Parameters**
+
+`index`: The page index.
+
+**Return value**
+
+A boolean value which indicates whether the page is modified.
+
+**Exception**
+
+ Error Code  | Error Message                                        
+--------|-----------------------------------------------------
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
+ -80101 | *XXX(API)*: *XXX(ParameterName)* is out of range.    
+ -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  
 
 ### rename()
 
@@ -795,3 +827,39 @@ firstDoc.print({
 --------|-----------------------------------------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
  -80305 | There is no image in the current document.
+
+### createTextSearcher()
+
+Create a text searcher.
+
+**Syntax**
+
+```typescript
+createTextSearcher(text: string, options?: SearchTextOptions): IDocTextSearcher;
+```
+
+**Parameters**
+
+`text`: Text to search
+
+`options`: Please refer to [`SearchTextOptions`](/api/interface/searchtextoptions.md).
+
+**Return Values**
+
+An [`IDocTextSearcher`](/api/interface/idocument/idoctextsearcher.md) object.
+
+---
+
+**Code Snippet**
+
+```typescript
+const searcher = firstDoc.createTextSearcher("text",{caseSensitive:false})
+```
+
+**Exception**
+
+ Error Code  | Error Message                                        
+--------|-----------------------------------------------------
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.
+ -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  
+

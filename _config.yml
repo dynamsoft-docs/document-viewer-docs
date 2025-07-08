@@ -29,8 +29,22 @@ download: "/document-viewer/downloads/1000031-confirmation/"
 plugins:
   - jemoji
   - jekyll-sitemap
+  
+relative_links:
+  enabled:     true
+  collections: true
 
-
+collections:
+  old:
+    output: true
+    permalink: /:path:output_ext
+  v1.1:
+    output: true
+    permalink: /:path-:collection:output_ext
+  v2.1:
+    output: true
+    permalink: /:path-:collection:output_ext
+    
 defaults:
   - scope:
       path: ""

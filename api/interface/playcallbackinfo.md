@@ -16,9 +16,9 @@ permalink: /api/interface/playcallbackinfo.html
 
 ```typescript
 interface PlayCallbackInfo {
-	deviceId: string;
-	width: number;
-	height: number; 
+    deviceId: string;
+    width: number;
+    height: number; 
 }
 ```
 

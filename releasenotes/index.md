@@ -12,6 +12,56 @@ permalink: /releasenotes/index.html
 
 # Release Notes
 
+## 3.0 (07/08/2025)
+
+### Features Highlights
+
+* Added support for text selection. We can now copy and annotate selected text.
+* Added three text markup annotations: `highlight`, `strikeout` and `underline`.
+* Added support for text search.
+
+### API Changes
+
+* Added classes for text markup annotations.
+   * [`Highlight`](/api/class/annotation/highlight.md)
+   * [`Underline`](/api/class/annotation/underline.md)
+   * [`Strikeout`](/api/class/annotation/strikeout.md)
+* Added interfaces to set up text markup annotations.
+   * [`HighlightAnnotationOptions`](/api/interface/annotationinterface/highlightannotationoptions.md)
+   * [`UnderlineAnnotationOptions`](/api/interface/annotationinterface/underlineannotationoptions.md)
+   * [`StrikeoutAnnotationOptions`](/api/interface/annotationinterface/strikeoutannotationoptions.md)
+   * [`HighlightStyle`](/api/interface/annotationinterface/highlightstyle.md)
+   * [`UnderlineStyle`](/api/interface/annotationinterface/underlinestyle.md)
+   * [`StrikeoutStyle`](/api/interface/annotationinterface/strikeoutstyle.md)
+   * [`RectXY`](/api/interface/rectxy.md)
+* Added new [tool mode](/api/class/editviewer.md#toolmode) for `EditViewer`: `textSelection`.
+* Added new [annotation modes](/api/class/editviewer.md#annotationmode) for `EditViewer`: `highlight`, `strikeout` and `underline`.
+* Added new buttons in [`ToolbarConfig`](/api/interface/annotationinterface/toolbarconfig.md): `copy`, `highlight`, `strikeout` and `underline`.
+* Added new [elements](/ui/default_elements.md) for `EditViewer`:
+   * TextSelectionMode
+   * TextSearchPanelSwitch
+   * TextSearchPanel
+   * HighlightAnnotation
+   * UnderlineAnnotation
+   * StrikeoutAnnotation
+* Added text selection and search methods and events for [`EditViewer`](/api/class/editviewer.md).
+* Added an [`IDocTextSearcher`](/api/interface/idocument/idoctextsearcher.md) interface that can be created using [`createTextSearcher()`](/api/interface/idocument/index.md#createtextsearcher) of [`IDocument`](/api/interface/idocument/index.md).
+* Added [`isPageModified()`](/api/interface/idocument/index.md#ispagemodified) method to detect whether a page has been modified.
+* Added [`getVisiblePagesInfo()`](/api/class/editviewer.md#getvisiblepagesinfo) for viewers.
+* Added new events for viewers.
+* Updated [`IPageData`](/api/interface/ipagedata.md) to use Promise functions for computing-intensive operations.
+* Updated [`updatePage()`](/api/interface/idocument/index.md#updatepage) to allow updating a page with PDF page content that has annotations.
+* Updated [`addFonts()`](/api/namespace/ddv.md#static-addfonts) to return an array of the names of added fonts.
+* Updated [`DisplayTextConfig`](/api/interface/displaytextconfig.md) for new elements.
+* Removed the options parameter of [`getDefaultUiConfig()`](/api/namespace/ddv.md#static-getdefaultuiconfig).
+
+### Improvements
+
+* Fixed the ineffective quality parameter of [`saveToJpeg()`](/api/interface/idocument/index.md#savetojpeg) if a page is unmodified.
+* Improved cursor styles.
+* Improved the performance of resaving a large PDF file.
+   
+
 ## 2.1 (12/03/2024)
 
 Version 2.1 of Dynamsoft Document Viewer comes with a suite of exciting new features, improvements to existing features, and performance optimizations.

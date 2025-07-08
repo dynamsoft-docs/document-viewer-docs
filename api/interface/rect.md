@@ -16,10 +16,10 @@ permalink: /api/interface/rect.html
 
 ```typescript
 interface Rect {
-	left: number;
-	top: number;
-	width: number;
-	height: number;
+    left: number;
+    top: number;
+    width: number;
+    height: number;
 }
 ```
 

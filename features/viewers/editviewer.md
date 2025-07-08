@@ -157,17 +157,6 @@ editViewer.thumbnail.hide();
 
 Please refer to [Annotation Management]({{ site.features }}datamanagement/annotmanagement.html).
 
-### Create an editViewer with AnnotationSet built-in elements
-
-If you want to operate annotations via the UI, you can create an editViewer with AnnotationSet built-in elements. By default, AnnotationSet built-in elements are not displayed in the editViewer.
-
-```typescript
-const editViewer = new Dynamsoft.DDV.EditViewer({
-    container: "container",
-    uiConfig: Dynamsoft.DDV.getDefaultUiConfig("editViewer", {includeAnnotationSet: true}),
-});
-```
-
 ### Create annotation(s) via UI
 
 When [`toolMode`]({{ site.api }}class/editviewer.html#toolmode) is set to `annotation`, you can use the mouse to draw corresponding annotations on the page which is displayed in the Edit Viewer if [`annotationMode`]({{ site.api }}class/editviewer.html#annotationmode) is set to `rectangle `or similar annotation type modes.

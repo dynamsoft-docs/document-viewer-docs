@@ -50,7 +50,7 @@ The following properties of the annotation can be accessed from the created inst
     const annotUid = rect.uid;
     ```
 
-    If the annotation is be deleted, the `uid` will return `''`.
+    if the annotation is deleted, the `uid` will return `''`.
 
 - Page uid where the annotation is located
 
@@ -58,7 +58,7 @@ The following properties of the annotation can be accessed from the created inst
     const annotPageUid = rect.pageUid;
     ```
 
-    If the annotation is be deleted, the `pageUid` will return `''`.
+    if the annotation is deleted, the `pageUid` will return `''`.
 {% comment %}
 
 - Axis-aligned bounding box (AABB)
@@ -75,7 +75,7 @@ The following properties of the annotation can be accessed from the created inst
     const modificationDate = rect.modificationDate; //D:YYYYMMDDHHmmSSOHH'mm'
     ```
 
-    If the annotation is be deleted, the `creationDate` will return `''`.
+    if the annotation is deleted, the `creationDate` will return `''`.
 
     If the annotation is not be modified after creating, `modificationDate` equals to `creationDate`.
 
