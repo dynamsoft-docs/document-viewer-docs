@@ -55,14 +55,12 @@ If you are using the default UI of DDV, data processing and management are handl
 
 The SDK offers extensive customization options, enabling developers to tailor the UI to meet specific application needs and branding requirements.
 
-## Designed with Camera Capture in Mind
+## Designed to Support Diverse Document Workflows
 
-Dynamsoft Document Viewer is designed for seamless integration with camera capture. It features five built-in viewer types, with the first three optimized for camera capture scenarios:
+Dynamsoft Document Viewer is built to support a wide range of document-centric workflows with its document viewing, editing, and scanning features. It has four built-in viewer types to suit different use cases:
 
-- [Edit Viewer]({{ site.features}}viewers/editviewer.html): Provides document viewing and editing features.
-- [Capture Viewer]({{ site.features }}viewers/captureviewer.html): Includes built-in camera control for continuous capture.
-- [Perspective Viewer]({{ site.features }}viewers/perspectiveviewer.html): Equipped with document cropping features; for document detection, using Dynamsoft Document Normalizer is recommended.
-- [Browse Viewer]({{ site.features }}viewers/others.html#browse-viewer)
-- [Custom Viewer]({{ site.features }}viewers/others.html#custom-viewer)
+* **Edit Viewer**: Enables viewing and editing of documents with annotation support.
+* **Capture Viewer**: Integrates camera controls for streamlined, continuous capture workflows.
+* **Perspective Viewer**: Allows document cropping with perspective transformation.
+* **Browse Viewer**: Suitable for previewing multi-page documents or navigating document collections.
 
-The viewers help developers create efficient, accurate, and user-friendly workflows, from camera capture to document finalization.
