@@ -228,8 +228,6 @@ Dynamsoft.DDV.setProcessingHandler("documentBoundariesDetect", detectHandler);
 </html>
 ```
 
-![Docuemnt Detect](/assets/imgs/documentdetect.GIF)
-
 ## Reference
 
 - [`DocumentDetect class`]({{ site.api }}class/advanced/documentdetect.html)

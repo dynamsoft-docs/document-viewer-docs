@@ -14,6 +14,10 @@ description: Dynamsoft Document Viewer Documentation Homepage
     - [Adding the dependency]({{ site.gettingstarted }}add_dependency.html)
     - [SDK Initialization]({{ site.gettingstarted }}sdk_init.html) 
     - [Creating HelloWorld]({{ site.gettingstarted }}helloworld.html)
+    - Libraries and Frameworks
+        - [Angular](/gettingstarted/angular.md)
+        - [React](/gettingstarted/react.md)
+        - [Vue](/gettingstarted/vue.md)
 - [Features]({{ site.features }}index.html)
     - Data Management
         - [Document Management]({{ site.features }}datamanagement/docmanagement.html)
