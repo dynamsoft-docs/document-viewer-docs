@@ -18,7 +18,8 @@ permalink: /api/namespace/ddv_core.html
 
 | API Name             | Description                                                  |
 | -------------------- | ------------------------------------------------------------ |
-| [`license` ](#engineresourcepath)           | Specify the license string.                                  |
+| [`versionInfo` ](#versioninfo)           | Get the version info of the SDK.                                  |
+| [`license` ](#license)           | Specify the license string.                                  |
 | [`engineResourcePath`](#engineresourcepath) | Specify the path should lead to a folder containing the distributed WASM files. |
 | [`deviceFriendlyName`](#devicefriendlyname) | Specify a human-readable name for the device which corresponds to its UUID. |
 
@@ -30,6 +31,25 @@ permalink: /api/namespace/ddv_core.html
 | [`init()`](#init)     | Initialize DDV.                        |
 
 ## Properties
+
+### versionInfo
+
+Get the version info of the SDK.
+
+**Syntax**
+
+```typescript
+versionInfo: DDVVersionInfo;
+```
+
+It will return an object like the following example:
+
+```
+{
+  viewer: '3.0.0',
+  engine: '3.0.0'
+}
+```
 
 ### license
 
