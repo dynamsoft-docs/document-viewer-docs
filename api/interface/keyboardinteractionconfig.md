@@ -56,7 +56,7 @@ Enables using the `Ctrl(Cmd) + Left Click` or `Shift + Left Click` keyboard shor
 
 ### enableMoveAnnotation
 
-Enables using arrow keys to move selected annotations on the document. This is compatible the Edit Viewers.
+Enables using arrow keys to move selected annotations on the document. This is compatible with the Edit Viewers.
 
 ### enableDeleteAnnotation
 
