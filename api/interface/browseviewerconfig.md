@@ -30,6 +30,7 @@ interface BrowseViewerConfig {
     scrollToLatest?: boolean;
     enableDragPage?: boolean;
     enableLoadSourceByDrag?: boolean;
+    enableAutoScrollForDragPages?: boolean;
     scrollDirection?: string;
 }
 ```
@@ -99,6 +100,13 @@ Default value: `true`
 Enables loading files by dragging them into the Viewer.
 
 Default value: `true`
+
+### enableAutoScrollForDragPages
+
+Specify whether to enable auto scrolling when dragging pages if the cursor is around the edges of the viewer. 
+
+Default value: `true`
+
 
 ### scrollDirection
 

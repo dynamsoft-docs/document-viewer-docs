@@ -87,12 +87,14 @@ Browse Viewer is used to display pages in multiple-mode, pages can be multiple s
 | [`currentIndexChanged`](#currentindexchanged) |
 | [`currentPageChanged`](#currentpagechanged)  |
 | [`selectedPagesChanged`](#selectedpageschanged) |
+| [`scroll`](#scroll) |
 | [`pagesDragged`](#pagesdragged)         |
 | [`pagesDropped`](#pagesdropped)         |
 | [`click`](#click)               |
 | [`dblclick`](#dbclick)            |
 | [`rightclick`](#rightclick)          |
 | [`visibilityChanged`](#visibilitychanged)                   |
+| [`paginationChanged`](#paginationchanged)                   |
 | [`pointerdown`](#pointerdown)                   |
 | [`pointermove`](#pointermove)                   |
 | [`pointerup`](#pointerup)                   |
@@ -113,7 +115,7 @@ new Dynamsoft.DDV.BrowseViewer(options?: BrowseViewerConstructorOptions);
 
 **Parameters**
 
-`options`: The constructor options for a `BrowseViewer` instance. Please refer to [`BrowseViewerConstructorOptions`]({{ site.api }}interface/browseviewerconstructoroptions.html).
+`options`: The constructor options for a `BrowseViewer` instance. Please refer to [`BrowseViewerConstructorOptions`](/api/interface/browseviewerconstructoroptions.md).
 
 **Code Snippet**
 
@@ -1142,7 +1144,7 @@ Triggered when current page is changed.
 
 #### selectedPagesChanged
 
-Trigeered when the page(s) is selected.
+Triggered when the page(s) is selected.
 
 ***Callback***
 
@@ -1157,6 +1159,10 @@ Trigeered when the page(s) is selected.
 `newIndices[]`: The array of new selected pages indices.
 
 `newPageUids[]`: The array of new selected pages uids.
+
+#### scroll
+
+Triggered when the viewer is scrolled. It will return the native event object.
 
 #### pagesDragged
 
@@ -1192,6 +1198,10 @@ Triggered when page(s) is dropped.
 #### visibilityChanged
 
 Triggered when the viewer's visibility is changed. It will return an `isVisible` boolean value.
+
+#### paginationChanged
+
+Triggered when the viewer's current page number or the page count is changed. It will return an [`IPaginationChangedEvent`](/api/interface/ipaginationchangedevent.md) object.
 
 #### pointerdown
 

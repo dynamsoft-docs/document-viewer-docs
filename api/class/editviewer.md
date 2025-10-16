@@ -73,6 +73,8 @@ Edit Viewer is used to edit the pages in document, such as, rotating, cropping, 
 | [`setAnnotationDrawingStyle()`](#setannotationdrawingstyle) | Set the default drawing style of annotations by annotation type. |
 | [`selectAnnotations()`](#selectannotations)                 | Select the specified annotation(s) on the current page.          |
 | [`getSelectedAnnotations()`](#getselectedannotations)       | Get selected annotation(s).                                      |
+| [`getAnnotationDrawingStyle()`](#getannotationdrawingstyle)       | Get the annotation drawing style(s).                                      |
+
 
 **Edit Operations**
 
@@ -82,6 +84,7 @@ Edit Viewer is used to edit the pages in document, such as, rotating, cropping, 
 | [`crop()`](#crop)                     | Crop the specified page(s) with the specified rectangle.                                                                           |
 | [`getCropRect()`](#getcroprect)       | Get the crop rectangular selection.                                                                                                |
 | [`setCropRect()`](#setcroprect)       | Set a crop rectangular selection on the current page. *This method is only available when [`toolMode`](#toolmode) is `crop` mode.* |
+| [`cropMode`](#cropmode)                     | Get the current mode for cropping: crop the current image or all the images                                    |
 | [`undo()`](#undo)                     | Undo the last editing operation.                                                                                                   |
 | [`redo()`](#redo)                     | Redo the last undo operation.                                                                                                      |
 | [`saveOperations()`](#saveoperations) | Save the edit operations in pages to document.                                                                                     |
@@ -122,6 +125,7 @@ Edit Viewer is used to edit the pages in document, such as, rotating, cropping, 
 | [`cropRectDrawn`](#croprectdrawn)                           |
 | [`cropRectDeleted`](#croprectdeleted)                       |
 | [`cropRectModified`](#croprectmodified)                     |
+| [`annotationDrawingStyleChanged`](#annotationdrawingstylechanged)                     |
 | [`selectedAnnotationsChanged`](#selectedannotationschanged) |
 | [`click`](#click)                                           |
 | [`dblclick`](#dbclick)                                      |
@@ -129,12 +133,16 @@ Edit Viewer is used to edit the pages in document, such as, rotating, cropping, 
 | [`visibilityChanged`](#visibilitychanged)                   |
 | [`textUnselected`](#textunselected)                   |
 | [`textSelected`](#textselected)                   |
-| [`textSearchTriggered`](#textSearchtriggered)                   |
+| [`textSearchTriggered`](#textsearchtriggered)                   |
+| [`undoRedoStateChanged`](#undoredostatechanged)                   |
+| [`paginationChanged`](#paginationchanged)                   |
+| [`pointerdown`](#pointerdown)                   |
 | [`pointerdown`](#pointerdown)                   |
 | [`pointermove`](#pointermove)                   |
 | [`pointerup`](#pointerup)                   |
 | [`pageover`](#pageover)                   |
 | [`pageout`](#pageout)                   |
+| [`scroll`](#scroll) |
 
 ## Create and Destroy Instances
 
@@ -150,7 +158,7 @@ new Dynamsoft.DDV.EditViewer(options?: EditViewerConstructorOptions);
 
 **Parameters**
 
-`options`: The constructor options for an `EditViewer` instance. Please refer to [`EditViewerConstructorOptions`]({{ site.api }}interface/editviewerconstructoroptions.html).
+`options`: The constructor options for an `EditViewer` instance. Please refer to [`EditViewerConstructorOptions`](/api/interface/editviewerconstructoroptions.md).
 
 **Code Snippet**
 
@@ -943,6 +951,21 @@ const selectAnnots = editViewer.getSelectAnnotations();
  -80304     | No document opened.                                         | `[]`
  -80305     | There is no image in the current document.                  | `[]`
 
+### getAnnotationDrawingStyle()
+
+Get the annotation drawing style.
+
+**Syntax**
+
+```typescript
+getAnnotationDrawingStyle(): AnnotationDrawingStyleConfig;
+```
+
+**Return value**
+
+An [`AnnotationDrawingStyleConfig`](/api/interface/styleinterface/annotationdrawingstyleconfig.md) object.
+
+
 ## Display Control
 
 ### displayMode
@@ -1200,7 +1223,7 @@ crop(
 
 `rect`: Specify the rectangle. Please refer to [`Rect`]({{ site.api }}interface/rect.html).
 
-`indices`: Specify the indices of the pages to be cropped. If not set, the current page will be cropped.
+`indices`: Specify the indices of the pages to be cropped. If not set, it will crop based on [`cropMode`](#cropmode), which uses the current image if the mode is `current` and all the images if the mode is `all`.
 
 **Return Value**
 
@@ -1234,6 +1257,23 @@ editViewer.crop(rect, [0]); // Crop the first page
 **Remark**
 
 If one of the points of the rectangle is out of page range, crop operation does not take effect in this page and report warning.
+
+
+### cropMode
+
+Get or set the current mode for cropping: crop the current image or all the images.
+
+**Syntax**
+
+```typescript
+cropMode: CropMode; 
+```
+
+It can be one of the two types. 
+
+```typescript
+type CropMode = "current" | "all";
+```
 
 ### getCropRect()
 
@@ -1739,6 +1779,10 @@ Triggered when the crop rectangular selection is modified.
 
 `newRect`: The new rectangle.
 
+#### annotationDrawingStyleChanged
+
+Triggered when the annotation drawing style is changed. It will return the old drawing style and the new drawing style of the selected annotation. See also [`AnnotationDrawingStyleConfig`](/api/interface/styleinterface/annotationdrawingstyleconfig.md).
+
 #### selectedAnnotationsChanged
 
 Triggered when selected annotation(s) is changed.
@@ -1769,6 +1813,16 @@ Triggered when text is unselected.
 
 Triggered when text search is performed. It will return an array of [`ITextSearchedInfo`](/api/interface/itextsearchedinfo.md).
 
+
+
+#### undoRedoStateChanged
+
+Triggered when the viewer's undo and redo state is changed. It will return an [`IUndoRedoStateChangedEvent`](/api/interface/iundoredostatechangedevent.md) object.
+
+#### paginationChanged
+
+Triggered when the viewer's current page number or the page count is changed. It will return an [`IPaginationChangedEvent`](/api/interface/ipaginationchangedevent.md) object.
+
 #### pointerdown
 
 Triggered when a pointer becomes active buttons state. It will return an [`IPointerEvent`](/api/interface/ipointerevent.md) object.
@@ -1788,6 +1842,10 @@ Triggered when a pointer is moved into a page's hit test boundaries. It will ret
 #### pageout
 
 Triggered when a pointer is moved out of the hit test boundaries of a page. It will return an [`IPointerEvent`](/api/interface/ipointerevent.md) object.
+
+#### scroll
+
+Triggered when the viewer is scrolled. It will return the native event object.
 
 #### Mouse Events
 

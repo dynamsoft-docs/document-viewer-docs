@@ -85,6 +85,7 @@ Capture Viewer is used to control camera, play video stream, and capture the ima
 | [`dblclick`](#dblclick)     |
 | [`rightclick`](#rightclick) |
 | [`visibilityChanged`](#visibilitychanged) |
+| [`paginationChanged`](#paginationchanged)                   |
 
 ## Create and Destroy Instances
 
@@ -1049,6 +1050,10 @@ Triggered when the used camera is changed.
 `oldDeviceId`: The old camera device id.
 
 `newDeviceId`: The new camera device id.
+
+#### paginationChanged
+
+Triggered when the viewer's current page number or the page count is changed. It will return an [`IPaginationChangedEvent`](/api/interface/ipaginationchangedevent.md) object.
 
 #### visibilityChanged
 
