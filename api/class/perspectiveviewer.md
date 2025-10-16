@@ -89,6 +89,7 @@ Perspective Viewer is used to do page boundaries manual adjustment & perspective
 | [`dblclick`](#dbclick)            |
 | [`rightclick`](#rightclick)          |
 | [`visibilityChanged`](#visibilitychanged)                   |
+| [`paginationChanged`](#paginationchanged)                   |
 | [`pointerdown`](#pointerdown)                   |
 | [`pointermove`](#pointermove)                   |
 | [`pointerup`](#pointerup)                   |
@@ -1083,6 +1084,9 @@ Triggered when current page is changed.
 
 Triggered when the quadrilateral selection is modified. Please refer to [`IQuadModifiedEvent`](/api/interface/iquadmodifiedevent.md).
 
+#### paginationChanged
+
+Triggered when the viewer's current page number or the page count is changed. It will return an [`IPaginationChangedEvent`](/api/interface/ipaginationchangedevent.md) object.
 
 #### visibilityChanged
 

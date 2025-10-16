@@ -22,7 +22,8 @@ interface EditViewerConfig {
     quadSelectionStyle?: QuadSelectionStyle;
     enableLoadSourceByDrag?: boolean;
     enableMagnifier?: boolean;
-    enableSlide?: boolean; 
+    enableSlide?: boolean;
+    enableAutoScrollForTextSelection?: boolean;
     scrollToLatest?: boolean; 
     scrollDirection?: string; 
     minZoom?: number; 
@@ -56,13 +57,19 @@ Default value: `true`
 
 ### enableMagnifier
 
-Specifies whether or not to display a corner magnifier on the canvas. This feature is primarily used to provide a zoomed-in preview of the selected area for more precise adjustments.
+Specify whether or not to display a corner magnifier on the canvas. This feature is primarily used to provide a zoomed-in preview of the selected area for more precise adjustments.
 
 Default value: `true`
 
 ### enableSlide
 
 Specify whether allow to slide the pages.
+
+Default value: `true`
+
+### enableAutoScrollForTextSelection
+
+Specify whether to enable auto scrolling when selecting text if the cursor is around the edges of the viewer.
 
 Default value: `true`
 

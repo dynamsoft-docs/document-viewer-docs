@@ -34,7 +34,7 @@ The container which is used to show the viewer. Its `id` or `HTMLElement` is acc
 
 ### viewerConfig
 
-The configurations of viewer, please refer to [`EditViewerConfig`]({{ site.api }}interface/editviewerconfig.html). If it is not specified, the [default configuration]({{ site.viewer }}viewerconfig.html#editviewerconfig) will be applied.
+The configurations of viewer, please refer to [`EditViewerConfig`](/api/interface/editviewerconfig.md). If it is not specified, the [default configuration]({{ site.viewer }}viewerconfig.html#editviewerconfig) will be applied.
 
 ### uiConfig
 

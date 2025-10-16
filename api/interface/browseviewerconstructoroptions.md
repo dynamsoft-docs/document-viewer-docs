@@ -20,7 +20,7 @@ interface BrowseViewerConstructorOptions {
     keyboardInteractionConfig?: KeyboardInteractionConfig;
     viewerConfig?: BrowseViewerConfig;
     uiConfig?: UiConfig; 
-    groupUid?: string; 
+    groupUid?: string;
 }
 ```
 
@@ -36,7 +36,7 @@ This configures the use of keyboard shortcuts for the viewer - please see [`Keyb
 
 ### viewerConfig
 
-The configurations of viewer, please refer to [`BrowseViewerConfig`]({{ site.api }}interface/browseviewerconfig.html). If it is not specified, the [default configuration]({{ site.viewer }}viewerconfig.html#browseviewerconfig) will be applied.
+The configurations of viewer, please refer to [`BrowseViewerConfig`](/api/interface/browseviewerconfig.md). If it is not specified, the [default configuration]({{ site.viewer }}viewerconfig.html#browseviewerconfig) will be applied.
 
 ### uiConfig
 

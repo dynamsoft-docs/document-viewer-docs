@@ -12,6 +12,43 @@ permalink: /releasenotes/index.html
 
 # Release Notes
 
+## 3.1 (10/16/2025)
+
+### UX Changes
+
+For Edit Viewer:
+
+* Added support for panning images in `textSelection` mode.
+* Text markup annotations can be modified after being cropped.
+* Return to `pan` mode if `textSelection` mode is turned off on mobile by clicking the icon.
+* Added support for returning to `pan` mode by pressing ESC.
+
+For Edit Viewer and Browse Viewer:
+
+When the cursor is around the viewer's edges when selecting text or dragging the thumbnails, auto-scrolling will be triggered. It can be configured using the [`enableAutoScrollForTextSelection`](/api/interface/editviewerconfig.md#enableautoscrollfortextselection) property for Edit Viewer and the [`enableAutoScrollForDragPages`](/api/interface/browseviewerconfig.md#enableautoscrollfordragpages) property for Browse Viewer.
+
+### API Changes
+
+Added interfaces for better UI customizability.
+
+* [`getAnnotationDrawingStyle()`](/api/class/editviewer.md#getannotationdrawingstyle) method for Edit Viewer
+* [`undoRedoStateChanged`](/api/class/editviewer.md#undoredostatechanged) event for Edit Viewer
+* [`annotationDrawingStyleChanged`](/api/class/editviewer.md#annotationdrawingstylechanged) event for Edit Viewer
+* [`scroll`](/api/class/editviewer.md#scroll) event for Edit Viewer and Browse Viewer
+* [`paginationChanged`](/api/class/editviewer.md#paginationchanged) event for all the viewers
+* [`cropMode`](/api/class/editviewer.md#cropmode) property for Edit Viewer. The [`crop()`](/api/class/editviewer.md#crop) method of Edit Viewer will choose which images to crop based on the `cropMode` if no image indices are passed.
+
+### Improvements
+
+* Increased the FPS of rendering documents, especially documents with lots of pages.
+* Optimized the performance of `updateOptions()`.
+* Moved the magnifier into a separate layer to improve the performance and avoid being blocked.
+
+### Bug Fixes
+
+* Fixed a bug where changes of the layout will reset the position of the current document page to its top-left.
+* Fixed a bug where the text is shifted if the PDF's media box has shifts.
+
 ## 3.0 (07/08/2025)
 
 ### Features Highlights

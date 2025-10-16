@@ -11,7 +11,7 @@ description: Powerful JavaScript PDF viewer & document viewer SDK. Integrate sea
 
 # Introduction to Dynamsoft Document Viewer
 
-Dynamsoft Document Viewer is a browser-based JavaScript SDK designed for viewing and editing images and PDFs. It provides a wide range of functionalities, including PDF annotation, page manipulation, image quality enhancement, and document saving.
+Dynamsoft Document Viewer is a browser-based JavaScript SDK designed for viewing and editing images and PDFs. It provides a wide range of functionalities, including PDF annotation, page manipulation, image quality enhancement, and document saving. To see it in action, please visit this [online demo](https://demo.dynamsoft.com/document-viewer/).
 
 ## Security
 
