@@ -9,6 +9,7 @@ breadcrumbText: Upgrade Guide
 description: Upgrade guide for Dynamsoft Document Viewer
 ---
 
+# Upgrade Guide
 
 Upgrading Dynamsoft Document Viewer from an old version to the latest version (v3.x as of now) is straightforward. You need to pay attention to the following changes:
 
