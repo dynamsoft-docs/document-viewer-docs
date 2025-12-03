@@ -39,9 +39,9 @@ const editViewer = new Dynamsoft.DDV.EditViewer({
 
 ## Default UI Config
 
-The default UI elements may be different across different versions. Check out [this post](/ui/default_elements.md) to learn about the default configs.
+The default UI elements may be different across different versions. Check out [this post](/ui/default_ui.md) to learn about the default configs.
 
-You can try to unify the UI across versions by specifying the [`UIConfig`](/api/interface/uiconfig.md). But pay attention to supported elements of different versions.
+You can try to unify the UI across versions by specifying the [`UIConfig`](/api/interface/uiconfig.md). But pay attention to supported [elements](/ui/default_elements.md) of different versions.
 
 ## Getting the Page Data
 
