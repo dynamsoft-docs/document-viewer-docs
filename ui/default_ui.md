@@ -34,7 +34,8 @@ Default UiConfig:
     type: Dynamsoft.DDV.Elements.Layout,
     flexDirection: "column",
     className: "ddv-edit-viewer-mobile",
-    children: [{
+    children: [
+        {
             type: Dynamsoft.DDV.Elements.Layout,
             className: "ddv-edit-viewer-header-mobile",
             children: [
@@ -83,7 +84,8 @@ Default UiConfig:
     type: Dynamsoft.DDV.Elements.Layout,
     flexDirection: "column",
     className: "ddv-edit-viewer-desktop",
-    children: [{
+    children: [
+        {
             type: Dynamsoft.DDV.Elements.Layout,
             className: "ddv-edit-viewer-header-desktop",
             children: [{

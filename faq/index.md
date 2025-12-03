@@ -3,7 +3,7 @@ layout: default-layout
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
-title: Dynamic Web TWAIN SDK FAQ
+title: Dynamsoft Document Viewer FAQ
 keywords: Documentation, Dynamsoft Document Viewer, FAQ
 breadcrumbText: FAQ
 description: Dynamsoft Document Viewer Documentation FAQ
