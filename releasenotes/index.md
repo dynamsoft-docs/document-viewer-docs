@@ -20,6 +20,7 @@ permalink: /releasenotes/index.html
 * Improved the rendering of selected annotations by reducing the number of items to draw.
 * Improved the performance of selecting multiple annotations.
 * Added a consistency check between the JavaScript and resource file versions.
+* Added support for pinch-to-zoom under the `textSelection` mode of `EditViewer`.
 
 ### Bug Fixes
 
