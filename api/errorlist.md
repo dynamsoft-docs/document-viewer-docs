@@ -29,6 +29,7 @@ permalink: /api/errorlist.html
  -80050     | DDV.Core.init() has not been set up yet. 
  -80051     | DDV.Core.init() has not been completed.  
  -80052     | *XXX(API)*: Resource is not found from the specified engineResourcePath.
+ -80053     | *XXX(API)*: The resource version at the specified engineResourcePath does not match this version of Dynamsoft Document Viewer.
 
 ## Common Errors
 
