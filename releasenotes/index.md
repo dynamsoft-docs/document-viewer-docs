@@ -12,6 +12,21 @@ permalink: /releasenotes/index.html
 
 # Release Notes
 
+## 3.2 (01/13/2026)
+
+### Improvements
+
+* Improved the context of search results, which now display the word before the searched word.
+* Improved the rendering of selected annotations by reducing the number of items to draw.
+* Improved the performance of selecting multiple annotations.
+* Added a consistency check between the JavaScript and resource file versions.
+
+### Bug Fixes
+
+* Fixed the text overflow issue in custom stamps.
+* Updated third-party libraries to enhance security. 
+
+
 ## 3.1 (10/16/2025)
 
 ### UX Changes
