@@ -182,3 +182,4 @@ await Dynamsoft.DDV.Core.init();
  Error Code  | Error Message                                        
 --------|-----------------------------------------------------
  -80052 | *XXX(API)*: Resource is not found from the specified engineResourcePath.
+ -80053 | *XXX(API)*: The resource version at the specified engineResourcePath does not match this version of Dynamsoft Document Viewer.
