@@ -21,11 +21,11 @@ permalink: /releasenotes/index.html
 * Improved the performance of selecting multiple annotations.
 * Added a consistency check between the JavaScript and resource file versions.
 * Added support for pinch-to-zoom under `textSelection` mode of `EditViewer` for mobile.
+* Updated third-party libraries to enhance security. 
 
 ### Bug Fixes
 
-* Fixed the text overflow issue in custom stamps.
-* Updated third-party libraries to enhance security. 
+Fixed the text overflow issue in custom stamps.
 
 
 ## 3.1 (10/16/2025)
