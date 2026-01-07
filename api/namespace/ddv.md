@@ -190,7 +190,7 @@ const defaultEditUi = Dynamsoft.DDV.getDefaultUiConfig("editViewer");
 
 ### `<static>` addFonts()
 
-Add font to library.
+Add font to library. You can fetch a font via an URL or use the [`queryLocalFonts()`](https://developer.mozilla.org/en-US/docs/Web/API/Window/queryLocalFonts) API to get the fonts installed on the local system.
 
 **Syntax**
 
