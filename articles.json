@@ -1,0 +1,16 @@
+---
+layout: null
+sitemap: false
+---
+{
+  "articles": [
+    {% for article in site.pages %}
+    {
+      "title": {{ article.title | jsonify }},
+      "url": "https://www.dynamsoft.com{{ article.url | relative_url }}",
+      "content": {{ article.raw_content | jsonify }},
+      "breadcrumb": {{ article.breadcrumbText | default: article.title | jsonify }}
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
