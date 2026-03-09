@@ -12,7 +12,7 @@ permalink: /releasenotes/index.html
 
 # Release Notes
 
-## 3.2.1 (03/09/2026)
+## 3.2.1 (03/10/2026)
 
 Updated third-party libraries to enhance security. 
 
