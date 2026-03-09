@@ -103,7 +103,7 @@ createAnnotation<K extends keyof AnnotationsTypeMapOuter>(pageUid: string, type:
 
 `type`: Specify the type of annotation to create.
 ```typescript
-type AnnotationType = "rectangle" | "ellipse" | "polygon" | "polyline" | "line" | "ink" | "textBox" | "textTypewriter" | "stamp" | "highlight" | "underline"| "strikeout";
+type AnnotationType = "rectangle" | "redaction" | "ellipse" | "polygon" | "polyline" | "line" | "ink" | "textBox" | "textTypewriter" | "stamp" | "highlight" | "underline"| "strikeout";
 ```
 
 `annotationOptions`: The annotation options. Please refer to [the options list](/api/interface/annotationinterface/index.md#options).
@@ -128,6 +128,10 @@ The instance of annotation. Please refer to [Annotation](/api/class/annotation/i
     const ink = Dynamsoft.DDV.annotationManager.createAnnotation(pageUid, "ink");
     const textBox = Dynamsoft.DDV.annotationManager.createAnnotation(pageUid, "textBox");
     const textTypewriter = Dynamsoft.DDV.annotationManager.createAnnotation(pageUid, "textTypewriter");
+    const highlight = Dynamsoft.DDV.annotationManager.createAnnotation(pageUid, "highlight");
+    const underline = Dynamsoft.DDV.annotationManager.createAnnotation(pageUid, "underline");
+    const strikeout = Dynamsoft.DDV.annotationManager.createAnnotation(pageUid, "strikeout");
+    const redaction = Dynamsoft.DDV.annotationManager.createAnnotation(pageUid, "redaction");
     const stamp = await Dynamsoft.DDV.annotationManager.createAnnotation(pageUid, "stamp");
     ```
 
