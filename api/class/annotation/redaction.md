@@ -68,7 +68,7 @@ Return the type of the annotation: `redaction`.
 All annotation types:
 
 ```ts
-"rectangle" | "ellipse" | "line" | "polygon" | "polyline" | "ink" | "textBox" | "textTypewriter" | "stamp" | "highlight" | "underline" | "strikeout" | "incomplete" | "redaction" | "unknown"
+"rectangle" | "redaction" | "ellipse" | "line" | "polygon" | "polyline" | "ink" | "textBox" | "textTypewriter" | "stamp" | "highlight" | "underline" | "strikeout" | "incomplete" | "unknown"
 ```
 
 ## creationDate
@@ -179,4 +179,3 @@ redaction.updateOptions(options); // Update the background of the redaction to r
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   | `false`
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  | `false`
  -80323 | The redaction annotation has already been applied.  | `false`
- 
