@@ -55,18 +55,6 @@ An array of rectangles marking where to put the annotations.
 
 Please refer to [`RectXY`](/api/interface/rectxy.md).
 
-### borderColor
-
-The border color of annotation.
-
-Default value: `rgb(255,0,0)` 
-
-**Example**
-
-```typescript
-borderColor: "rgb(255,0,0)", 
-```
-
 ### background
 
 The background style of annotation.
@@ -77,6 +65,18 @@ Default value: `''`, it means no fill.
 
 ```typescript
 background: "rgb(255,255,255)", 
+```
+
+### borderColor
+
+The border color of annotation.
+
+Default value: `rgb(255,0,0)` 
+
+**Example**
+
+```typescript
+borderColor: "rgb(255,0,0)", 
 ```
 
 ### overlayBackground
