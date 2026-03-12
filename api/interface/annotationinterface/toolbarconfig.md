@@ -26,6 +26,7 @@ interface ToolbarConfig {
     highlightButton?: AnnotationToolbarButton;
     underlineButton?: AnnotationToolbarButton;
     strikeoutButton?: AnnotationToolbarButton;
+    redactionApplyButton?: AnnotationToolbarButton;
 }
 ```
 
@@ -72,6 +73,10 @@ The configuration of underline button in the toolbar. Please refer to [`Annotati
 ### strikeoutButton
 
 The configuration of strikeout button in the toolbar. Please refer to [`AnnotationToolbarButton`]({{ site.api }}interface/annotationinterface/annotationtoolbarbutton.html).
+
+### redactionApplyButton
+
+The configuration of redaction application button in the toolbar. Please refer to [`AnnotationToolbarButton`](/api/interface/annotationinterface/annotationtoolbarbutton.md).
 
 ## Related
 
