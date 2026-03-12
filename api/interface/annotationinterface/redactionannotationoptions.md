@@ -96,7 +96,7 @@ The text to display after being applied. It is an object for configuration. The 
     textAlign: "left",       // text alignment: left, center, right
     fontSize: 16,            // font size
     fontFamily: "Helvetica", // font family name
-    repeatText: false,       // repeat the text to fill the marked area. Not effective if autoFontSize is true
+    repeatText: false,       // repeat the text to fill the marked area
     autoFontSize: false,     // fit the text to the marked area
 }
 ```
