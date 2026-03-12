@@ -40,6 +40,12 @@ interface PerspectiveInfo {
     perspectiveQuad: Quad;
 }
 
+interface PrintPreparationInfo { 
+    docUid: string; 
+    current: number; 
+    total: number; 
+} 
+
 interface InfoDetailsMap {
     init: InitInfo;
     loadSource: LoadSourceInfo;
@@ -47,6 +53,7 @@ interface InfoDetailsMap {
     filter: FilterInfo;
     perspective: PerspectiveInfo;
     loadWasm: LoadWasmInfo;
+    printPreparation: PrintPreparationInfo;
 }
 
 type InfoStatus =
@@ -82,6 +89,7 @@ Indicates the task type of the event. Must be one of the following events, in on
 | `filter`       | ✓         |              | ✓           | ✓        |
 | `perspective`  | ✓         |              | ✓           | ✓        |
 | `loadWasm`     | ✓         |              | ✓           | ✓        |
+| `printPreparation`     | ✓         |✓            | ✓           | ✓        |
 
 ### status
 
