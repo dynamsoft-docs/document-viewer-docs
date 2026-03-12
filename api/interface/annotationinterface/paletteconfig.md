@@ -29,7 +29,7 @@ interface PaletteConfig {
         style?: string;
         standardBusiness?: string;
     }
-    }
+}
 ```
 
 ## Attributes
