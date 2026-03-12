@@ -86,7 +86,7 @@ The following are lists of built-in elements as well as their default icons that
 | Dynamsoft.DDV.Elements.SendBackward             | ddv-send-backward             | Bring the selected annotations backward by one level                   |
 | Dynamsoft.DDV.Elements.SendToBack               | ddv-send-to-back              | Bring the selected annotations to the back                   |
 | Dynamsoft.DDV.Elements.RedactionSet               | ddv-redaction-set-box              | Bring up the redaction pulldown                  |
-| Dynamsoft.DDV.Elements.RedactionMode               | ddv-redaction-mode              | Set the annotation mode to redaction       |
+| Dynamsoft.DDV.Elements.RedactionMode               | ddv-redaction-mode              | Set the tool mode to redaction       |
 | Dynamsoft.DDV.Elements.RedactPages               | ddv-redact-pages              |  Invoke a dialog to mark pages for redaction                  |
 | Dynamsoft.DDV.Elements.RedactionApply               | ddv-redaction-apply              | Apply redactions for all pages                   |
 
