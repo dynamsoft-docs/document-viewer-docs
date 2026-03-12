@@ -62,28 +62,33 @@ The following are lists of built-in elements as well as their default icons that
 | Dynamsoft.DDV.Elements.TextSearchPanelSwitch              | ddv-search-switch                                         |                    |
 | Dynamsoft.DDV.Elements.TextSearchPanel              | N/A                                |                    |
 
-|Annotation-related Elements                     | className of its default icon |
-| ----------------------------------------------- | ----------------------------- |
-| Dynamsoft.DDV.Elements.AnnotationSet            | ddv-annotation-mode           |
-| Dynamsoft.DDV.Elements.RectAnnotation           | ddv-rect                      |
-| Dynamsoft.DDV.Elements.EllipseAnnotation        | ddv-ellipse                   |
-| Dynamsoft.DDV.Elements.PolygonAnnotation        | ddv-polygon                   |
-| Dynamsoft.DDV.Elements.PolylineAnnotation       | ddv-polyline                  |
-| Dynamsoft.DDV.Elements.LineAnnotation           | ddv-line                      |
-| Dynamsoft.DDV.Elements.InkAnnotation            | ddv-ink                       |
-| Dynamsoft.DDV.Elements.TextBoxAnnotation        | ddv-text-box                  |
-| Dynamsoft.DDV.Elements.TextTypewriterAnnotation | ddv-typewriter                |
-| Dynamsoft.DDV.Elements.StampIconAnnotation      | ddv-stamp-icon                |
-| Dynamsoft.DDV.Elements.StampImageAnnotation     | ddv-stamp-image               |
-| Dynamsoft.DDV.Elements.HighlightAnnotation               | ddv-highlight-mode              |
-| Dynamsoft.DDV.Elements.UnderlineAnnotation               | ddv-underline-mode              |
-| Dynamsoft.DDV.Elements.StrikeoutAnnotation               | ddv-strikeout-mode              |
-| Dynamsoft.DDV.Elements.SelectAnnotation         | ddv-annot-select              |
-| Dynamsoft.DDV.Elements.EraseAnnotation          | ddv-annot-eraser              |
-| Dynamsoft.DDV.Elements.BringForward             | ddv-bring-forward             |
-| Dynamsoft.DDV.Elements.BringToFront             | ddv-bring-to-front            |
-| Dynamsoft.DDV.Elements.SendBackward             | ddv-send-backward             |
-| Dynamsoft.DDV.Elements.SendToBack               | ddv-send-to-back              |
+
+|Annotation-related Elements                     | className of its default icon | More descriptions   |
+| ----------------------------------------------- | ----------------------------- |--------------------|
+| Dynamsoft.DDV.Elements.AnnotationSet            | ddv-annotation-mode           | Show the annotation pulldown                   |
+| Dynamsoft.DDV.Elements.RectAnnotation           | ddv-rect                      | Set the annotation mode to rectangle                   |
+| Dynamsoft.DDV.Elements.EllipseAnnotation        | ddv-ellipse                   | Set the annotation mode to ellipse                   |
+| Dynamsoft.DDV.Elements.PolygonAnnotation        | ddv-polygon                   | Set the annotation mode to polygon                   |
+| Dynamsoft.DDV.Elements.PolylineAnnotation       | ddv-polyline                  | Set the annotation mode to polyline                   |
+| Dynamsoft.DDV.Elements.LineAnnotation           | ddv-line                      | Set the annotation mode to line                   |
+| Dynamsoft.DDV.Elements.InkAnnotation            | ddv-ink                       | Set the annotation mode to ink                   |
+| Dynamsoft.DDV.Elements.TextBoxAnnotation        | ddv-text-box                  | Set the annotation mode to textBox                   |
+| Dynamsoft.DDV.Elements.TextTypewriterAnnotation | ddv-typewriter                | Set the annotation mode to textTypewriter                   |
+| Dynamsoft.DDV.Elements.StampIconAnnotation      | ddv-stamp-icon                | Set the annotation mode to stamp and use built-in stamps                  |
+| Dynamsoft.DDV.Elements.StampImageAnnotation     | ddv-stamp-image               | Set the annotation mode to stamp and use external images                   |
+| Dynamsoft.DDV.Elements.HighlightAnnotation               | ddv-highlight-mode              | Set the annotation mode to highlight                   |
+| Dynamsoft.DDV.Elements.UnderlineAnnotation               | ddv-underline-mode              | Set the annotation mode to underline                   |
+| Dynamsoft.DDV.Elements.StrikeoutAnnotation               | ddv-strikeout-mode              | Set the annotation mode to strikeout                   |
+| Dynamsoft.DDV.Elements.SelectAnnotation         | ddv-annot-select              | Set the annotation mode to select                   |
+| Dynamsoft.DDV.Elements.EraseAnnotation          | ddv-annot-eraser              | Set the annotation mode to erase                   |
+| Dynamsoft.DDV.Elements.BringForward             | ddv-bring-forward             | Bring the selected annotations forward by one level                   |
+| Dynamsoft.DDV.Elements.BringToFront             | ddv-bring-to-front            | Bring the selected annotations to the front                    |
+| Dynamsoft.DDV.Elements.SendBackward             | ddv-send-backward             | Bring the selected annotations backward by one level                   |
+| Dynamsoft.DDV.Elements.SendToBack               | ddv-send-to-back              | Bring the selected annotations to the back                   |
+| Dynamsoft.DDV.Elements.RedactionSet               | ddv-redaction-set-box              | Bring up the redaction pulldown                  |
+| Dynamsoft.DDV.Elements.RedactionMode               | ddv-redaction-mode              | Set the annotation mode to redaction       |
+| Dynamsoft.DDV.Elements.RedactPages               | ddv-redact-pages              |  Invoke a dialog to mark pages for redaction                  |
+| Dynamsoft.DDV.Elements.RedactionApply               | ddv-redaction-apply              | Apply redactions for all pages                   |
 
 <div class="multi-panel-end"></div>
 
