@@ -7,7 +7,6 @@ title: Dynamsoft Document Viewer API Reference - Polygon Class
 keywords: Documentation, Dynamsoft Document Viewer, API Reference, Polygon Class
 breadcrumbText: Polygon Class
 description: Dynamsoft Document Viewer Documentation API Reference Polygon Class Page
-permalink: /api/class/annotation/polygon.html
 ---
 
 # Polygon Class

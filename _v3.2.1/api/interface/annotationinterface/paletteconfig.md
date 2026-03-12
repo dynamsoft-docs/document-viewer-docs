@@ -7,7 +7,6 @@ title: Dynamsoft Document Viewer API Reference - Interface PaletteConfig
 keywords: Documentation, Dynamsoft Document Viewer, API Reference, Interface PaletteConfig
 breadcrumbText: Interface PaletteConfig
 description: Dynamsoft Document Viewer Documentation API Reference Interface PaletteConfig Page
-permalink: /api/interface/annotationinterface/paletteconfig.html
 ---
 
 # PaletteConfig

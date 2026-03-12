@@ -7,7 +7,6 @@ title: Dynamsoft Document Viewer API Reference - Interface InfoOjbect
 keywords: Documentation, Dynamsoft Document Viewer, API Reference, Interface InfoObject
 breadcrumbText: Interface InfoObject
 description: Dynamsoft Document Viewer Documentation API Reference Interface InfoObject Page
-permalink: /api/interface/infoobject.html
 ---
 
 # InfoObject

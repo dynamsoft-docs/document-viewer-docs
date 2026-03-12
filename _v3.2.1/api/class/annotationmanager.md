@@ -7,7 +7,6 @@ title: Dynamsoft Document Viewer API Reference - AnnotationManager Class
 keywords: Documentation, Dynamsoft Document Viewer, API Reference, AnnotationManager Class
 breadcrumbText: AnnotationManager Class
 description: Dynamsoft Document Viewer Documentation API Reference AnnotationManager Class Page
-permalink: /api/class/annotationmanager.html
 ---
 
 # AnnotationManager Class

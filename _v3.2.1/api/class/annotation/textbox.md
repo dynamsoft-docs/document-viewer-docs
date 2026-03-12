@@ -7,7 +7,6 @@ title: Dynamsoft Document Viewer API Reference - TextBox Class
 keywords: Documentation, Dynamsoft Document Viewer, API Reference, TextBox Class
 breadcrumbText: TextBox Class
 description: Dynamsoft Document Viewer Documentation API Reference TextBox Class Page
-permalink: /api/class/annotation/textbox.html
 ---
 
 # TextBox Class

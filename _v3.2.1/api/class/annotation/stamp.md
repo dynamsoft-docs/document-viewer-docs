@@ -7,7 +7,6 @@ title: Dynamsoft Document Viewer API Reference - Stamp Class
 keywords: Documentation, Dynamsoft Document Viewer, API Reference, Stamp Class
 breadcrumbText: Stamp Class
 description: Dynamsoft Document Viewer Documentation API Reference Stamp Class Page
-permalink: /api/class/annotation/stamp.html
 ---
 
 # Stamp Class

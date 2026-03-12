@@ -7,7 +7,6 @@ title: Dynamsoft Document Viewer API Reference - Rectangle Class
 keywords: Documentation, Dynamsoft Document Viewer, API Reference, Rectangle Class
 breadcrumbText: Rectangle Class
 description: Dynamsoft Document Viewer Documentation API Reference Rectangle Class Page
-permalink: /api/class/annotation/rectangle.html
 ---
 
 # Rectangle Class

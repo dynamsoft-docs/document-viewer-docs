@@ -7,7 +7,6 @@ title: Dynamsoft Document Viewer API Reference - Interface Flags
 keywords: Documentation, Dynamsoft Document Viewer, API Reference, Interface Flags
 breadcrumbText: Interface Flags
 description: Dynamsoft Document Viewer Documentation API Reference Interface Flags Page
-permalink: /api/interface/annotationinterface/flags.html
 ---
 
 # Flags

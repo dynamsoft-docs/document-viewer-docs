@@ -7,7 +7,6 @@ title: Dynamsoft Document Viewer API Reference - EditViewer Class
 keywords: Documentation, Dynamsoft Document Viewer, API Reference, EditViewer Class
 breadcrumbText: EditViewer Class
 description: Dynamsoft Document Viewer Documentation API Reference EditViewer Class Page
-permalink: /api/class/editviewer.html
 ---
 
 # EditViewer Class

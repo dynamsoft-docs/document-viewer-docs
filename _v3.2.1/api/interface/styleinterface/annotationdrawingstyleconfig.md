@@ -7,7 +7,6 @@ title: Dynamsoft Document Viewer API Reference - Interface AnnotationDrawingStyl
 keywords: Documentation, Dynamsoft Document Viewer, API Reference, Interface AnnotationDrawingStyleConfig
 breadcrumbText: Interface AnnotationDrawingStyleConfig
 description: Dynamsoft Document Viewer Documentation API Reference Interface AnnotationDrawingStyleConfig Page
-permalink: /api/interface/styleinterface/annotationdrawingstyleconfig.html
 ---
 
 # Interface

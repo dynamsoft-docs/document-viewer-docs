@@ -7,7 +7,6 @@ title: Dynamsoft Document Viewer API Reference - Error List
 keywords: Documentation, Dynamsoft Document Viewer, API Reference, Error List
 breadcrumbText: API Reference
 description: Dynamsoft Document Viewer Documentation API Reference Error List Page
-permalink: /api/errorlist.html
 ---
 
 # Error List

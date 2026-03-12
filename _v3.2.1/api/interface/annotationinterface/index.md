@@ -7,7 +7,6 @@ title: Dynamsoft Document Viewer API Reference - Annotation Interfaces
 keywords: Documentation, Dynamsoft Document Viewer, API Reference, Annotation Interfaces
 breadcrumbText: Annotation Interfaces
 description: Dynamsoft Document Viewer Documentation API Reference Annotation Interfaces Page
-permalink: /api/interface/annotationinterface/index.html
 ---
 
 # Annotation Interfaces
