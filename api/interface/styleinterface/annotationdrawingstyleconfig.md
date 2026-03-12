@@ -26,6 +26,7 @@ interface AnnotationDrawingStyleConfig {
     highlight?: HighlightStyle;
     underline?: UnderlineStyle;
     strikeout?: StrikeoutStyle;
+    redaction?: RedactionStyle;
 }
 ```
 
@@ -74,3 +75,7 @@ The default drawing style of the underline annotation - see [`UnderlineStyle`](/
 ### strikeout
 
 The default drawing style of the strikeout annotation - see [`StrikeoutStyle`](/api/interface/annotationinterface/strikeoutstyle.md) for more details. If not set, this uses the default values of `StrikeoutStyle`.
+
+### redaction
+
+The default drawing style of redaction annotation - see [`RedactionStyle`](/api/interface/annotationinterface/rectanglestyle.md) for more details. If not set, this uses the default values of `RedactionStyle`.
