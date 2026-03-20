@@ -33,6 +33,7 @@ permalink: /api/index.html
 
 - Annotation
     - [Rectangle]({{ site.api }}class/annotation/rectangle.html)
+    - [Redaction](/api/class/annotation/rectangle.md)
     - [Ellipse]({{ site.api }}class/annotation/ellipse.html)
     - [Polygon]({{ site.api }}class/annotation/polygon.html)
     - [Polyline]({{ site.api }}class/annotation/polyline.html)
@@ -89,6 +90,7 @@ permalink: /api/index.html
     - [`HighlightAnnotationOptions`](/api/interface/annotationinterface/highlightannotationoptions.md)
     - [`UnderlineAnnotationOptions`](/api/interface/annotationinterface/underlineannotationoptions.md)
     - [`StrikeoutAnnotationOptions`](/api/interface/annotationinterface/strikeoutannotationoptions.md)
+    - [`RedactionAnnotationOptions`](/api/interface/annotationinterface/redactionannotationoptions.md)
     - [`Flags`]({{ site.api }}interface/annotationinterface/flags.html)
     - [`Point`]({{ site.api }}interface/annotationinterface/point.html)
     - [`TextContent`]({{ site.api }}interface/annotationinterface/textcontent.html)
@@ -104,6 +106,7 @@ permalink: /api/index.html
     - [`HighlightStyle`](/api/interface/annotationinterface/highlightstyle.md)
     - [`UnderlineStyle`](/api/interface/annotationinterface/underlinestyle.md)
     - [`StrikeoutStyle`](/api/interface/annotationinterface/strikeoutstyle.md)
+    - [`RedactionStyle`](/api/interface/annotationinterface/rectanglestyle.md)
     - [`ToolbarConfig`]({{ site.api }}interface/annotationinterface/toolbarconfig.html)
     - [`PaletteConfig`]({{ site.api }}interface/annotationinterface/paletteconfig.html)
     - [`AnnotationToolbarButton`]({{ site.api }}interface/annotationinterface/annotationtoolbarbutton.html)

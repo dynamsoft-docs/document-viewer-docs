@@ -520,7 +520,7 @@ toolMode: ToolMode;
 A `ToolMode` can be one of following types.
 
 ```typescript
-type ToolMode = "pan" | "crop" | "annotation" | "textSelection";
+type ToolMode = "pan" | "crop" | "annotation" | "textSelection" | "redaction";
 ```
 
 `pan`: The default tool mode.

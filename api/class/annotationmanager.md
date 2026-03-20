@@ -20,6 +20,7 @@ The `Dynamsoft.DDV.annotationManager` instance will be created automatically as 
 
 | API Name                       | Description                                                  |
 | ------------------------------ | ------------------------------------------------------------ |
+| [`applyRedactions()`](#applyredactions)          | Apply redaction annotations. |
 | [`createAnnotation()`](#createAnnotation)          | Create an annotation instance. |
 | [`getAnnotationsByUids()`](#getannotationsbyuids)   | Get annotations by annotation uids.                          |
 | [`getAnnotationsByPage()`](#getannotationsbypage)   | Get annotations in specified page.                           |
@@ -55,6 +56,38 @@ The `Dynamsoft.DDV.annotationManager` instance will be created automatically as 
 
 ## Methods
 
+### applyRedactions()
+
+Apply redaction annotations.
+
+**Syntax**
+
+```typescript
+applyRedactions(pageUid: string, annotationUids?: string[]): Promise<boolean>;
+```
+
+**Parameters**
+
+`pageUid`: Specify the page to apply redaction annotations.
+
+`annotationUids`: Specify the array of uids of redaction annotations to apply for one page. If it is empty, all the redaction annotations on the specified page will be used.
+
+**Return value**
+
+A Promise object which indicates whether the operation is successful or not.
+
+**Exception**
+
+ Error Code  | Error Message                                        
+--------|-----------------------------------------------------                                     
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
+ -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.
+ -80105 | *XXX(API)*: The specified page(s) do not exist.   
+ -80324 | The specified annotation(s) contain annotations other than redaction annotations.
+ -80325 | The specified page does not contain redaction annotations.
+ -80327 | The specified annotation(s) are not on the specified page or do not exist.
+
+
 ### createAnnotation()
 Create an annotation instance and add the created instance to the specified page.
 
@@ -70,7 +103,7 @@ createAnnotation<K extends keyof AnnotationsTypeMapOuter>(pageUid: string, type:
 
 `type`: Specify the type of annotation to create.
 ```typescript
-type AnnotationType = "rectangle" | "ellipse" | "polygon" | "polyline" | "line" | "ink" | "textBox" | "textTypewriter" | "stamp" | "highlight" | "underline"| "strikeout";
+type AnnotationType = "rectangle" | "redaction" | "ellipse" | "polygon" | "polyline" | "line" | "ink" | "textBox" | "textTypewriter" | "stamp" | "highlight" | "underline"| "strikeout";
 ```
 
 `annotationOptions`: The annotation options. Please refer to [the options list](/api/interface/annotationinterface/index.md#options).
@@ -95,6 +128,10 @@ The instance of annotation. Please refer to [Annotation](/api/class/annotation/i
     const ink = Dynamsoft.DDV.annotationManager.createAnnotation(pageUid, "ink");
     const textBox = Dynamsoft.DDV.annotationManager.createAnnotation(pageUid, "textBox");
     const textTypewriter = Dynamsoft.DDV.annotationManager.createAnnotation(pageUid, "textTypewriter");
+    const highlight = Dynamsoft.DDV.annotationManager.createAnnotation(pageUid, "highlight");
+    const underline = Dynamsoft.DDV.annotationManager.createAnnotation(pageUid, "underline");
+    const strikeout = Dynamsoft.DDV.annotationManager.createAnnotation(pageUid, "strikeout");
+    const redaction = Dynamsoft.DDV.annotationManager.createAnnotation(pageUid, "redaction");
     const stamp = await Dynamsoft.DDV.annotationManager.createAnnotation(pageUid, "stamp");
     ```
 

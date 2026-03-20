@@ -13,7 +13,7 @@ permalink: /api/class/annotation/index.html
 
 ## Annotation
 
-Annotation has fourteen main classes:
+Annotation has fifteen main classes:
 
 - [Rectangle](/api/class/annotation/rectangle.md)
 - [Ellipse](/api/class/annotation/ellipse.md)
@@ -27,6 +27,7 @@ Annotation has fourteen main classes:
 - [Highlight](/api/class/annotation/highlight.md)
 - [Underline](/api/class/annotation/underline.md)
 - [Strikeout](/api/class/annotation/strikeout.md)
+- [Redaction](/api/class/annotation/redaction.md)
 - [Incomplete](/api/class/annotation/incomplete.md)
 - [Unknown](/api/class/annotation/unknown.md)
 

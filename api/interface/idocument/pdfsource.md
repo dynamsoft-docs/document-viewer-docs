@@ -36,9 +36,11 @@ interface PdfSource extends Source {
 
 ### convertMode
 
-Specify PDF convert mode. Please refer to [`EnumConvertMode`]({{ site.api }}enumeration-type/enumconvertmode.html).
+Specify PDF convert mode. It affects whether PDF elements like text layers are loaded and the image for display and saving. Please refer to [`EnumConvertMode`](/api/enumeration-type/enumconvertmode.md).
 
 Default value: `Dynamsoft.DDV.EnumConvertMode.CM_AUTO`
+
+Related to the `renderOptions` attribute if the actual mode is rendering.
 
 ### password
 
@@ -58,7 +60,9 @@ Default value: `Dynamsoft.DDV.EnumAnnotationRenderMode.NO_ANNOTATIONS`
 
 #### resolution
 
-PDF DPI. Only affects rasterized text. Does not affect images which are extracted from the PDF file. 
+PDF DPI. Only effective when the actual `convertMode` is rendering.
+
+Since v4.0 has added high-fidelity rendering, it does not affect the image displayed and only affects the image saved using methods like [`saveToJpeg()`](/api/interface/idocument/index.md#savetojpeg).
 
 Default value: 200
 

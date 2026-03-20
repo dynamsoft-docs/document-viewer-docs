@@ -15,6 +15,7 @@ permalink: /api/interface/annotationinterface/index.html
 ## Options
 
 - [`RectAnnotationOptions`](/api/interface/annotationinterface/rectannotationoptions.md)
+- [`RedactionAnnotationOptions`](/api/interface/annotationinterface/redactionannotationoptions.md)
 - [`EllipseAnnotationOptions`](/api/interface/annotationinterface/ellipseannotationoptions.md)
 - [`PolygonAnnotationOptions`](/api/interface/annotationinterface/polygonannotationoptions.md)
 - [`PolylineAnnotationOptions`](/api/interface/annotationinterface/polylineannotationoptions.md)
@@ -30,6 +31,7 @@ permalink: /api/interface/annotationinterface/index.html
 ## Styles
 
 - [`RectangleStyle`](/api/interface/annotationinterface/rectanglestyle.md)
+- [`RedactionStyle`](/api/interface/annotationinterface/redactionstyle.md)
 - [`EllipseStyle`](/api/interface/annotationinterface/ellipsestyle.md)
 - [`PolygonStyle`](/api/interface/annotationinterface/polygonstyle.md)
 - [`PolylineStyle`](/api/interface/annotationinterface/polylinestyle.md)
