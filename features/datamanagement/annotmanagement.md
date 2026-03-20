@@ -283,10 +283,11 @@ A redaction annotation identifies content that is intended to be removed from th
 * Content identification. A user creates redact annotations that specify the pieces or regions of content that should be removed. Up until the next step is performed, the user can see, move and redefine these annotations.
 * Content removal. The user instructs the viewer application to apply the redact annotations, after which the content in the area specified by the redact annotations is removed. In the removed content's place, some marking appears to indicate the area has been redacted. Also, the redact annotations are removed from the PDF document.
 
-1. Create a redaction annotation by searching text.
+1. Create redaction annotations by searching text.
 
    ```js
-   const searcher = editViewer.currentDocument.createTextSearcher("content to redact",{caseSensitive:false})
+   const searcher = editViewer.currentDocument.createTextSearcher("content to redact",{caseSensitive:false});
+   const results = await searcher.getResults(0); //search the results on the first page
    for (const result of results) {
      Dynamsoft.DDV.annotationManager.createAnnotation(
        editViewer.getCurrentPageUid(),
