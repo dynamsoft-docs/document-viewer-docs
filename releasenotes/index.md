@@ -16,7 +16,7 @@ permalink: /releasenotes/index.html
 
 ### New Features
 
-* Added support for redaction annotation.
+* Added support for [redaction annotation](/features/datamanagement/annotmanagement.md#redaction).
 * New high-fidelity PDF rendering mode.
 
 ### API Changes
