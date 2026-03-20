@@ -16,20 +16,20 @@ description: Dynamsoft Document Viewer Documentation API Reference Interface Red
 ```typescript
 interface RedactionAnnotationOptions { 
     redactionType?: "rectangle" | "text";
-    rects?: RectXY[];
-    background?: string;
-    borderColor?: string;
-    overlayBackground?: string;
-    overlayText?: {
-        text: string; 
-        color?: string;
-        textAlign?: "left" | "center" | "right";
-        fontSize?: number;
-        fontFamily?: string;
-        repeatText?: boolean;
-        autoFontSize?: boolean;
-    };
-    flags?: Flags;
+    rects?: RectXY[];
+    background?: string;
+    borderColor?: string;
+    overlayBackground?: string;
+    overlayText?: {
+        text: string; 
+        color?: string;
+        textAlign?: "left" | "center" | "right";
+        fontSize?: number;
+        fontFamily?: string;
+        repeatText?: boolean;
+        autoFontSize?: boolean;
+    };
+    flags?: Flags;
 }
 ```
 
