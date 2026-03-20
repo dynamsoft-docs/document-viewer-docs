@@ -140,7 +140,7 @@ loadSource(sources: Source | PdfSource | (Source | PdfSource)[], index?: number)
 
 `fileData`: The blob of the file to be loaded.
 
-`sources`: The target files, it could be a file or a file array. Please refer to [`Source`]({{ site.api }}interface/idocument/source.html). `Source` can be extended to [`PdfSource`]({{ site.api }}interface/idocument/pdfsource.html).
+`sources`: The target files, it could be a file or a file array. Please refer to [`Source`](/api/interface/idocument/source.md). `Source` can be extended to [`PdfSource`](/api/interface/idocument/pdfsource.md).
 
 `index`: The position in the document where the file(s) will be loaded to. If not set or out of the maximum range, the loaded file(s) will be added from the end of the document.
 
