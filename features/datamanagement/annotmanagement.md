@@ -33,6 +33,7 @@ Up to now, the annotation types supported by DDV are as follows:
 - [Highlight]({{ site.api }}class/annotation/highlight.html)
 - [Underline]({{ site.api }}class/annotation/underline.html)
 - [Strikeout]({{ site.api }}class/annotation/strikeout.html)
+- [Redaction](/api/class/annotation/redaction.md)
 
 ### Create a specified type annotation instance
 
@@ -274,3 +275,31 @@ In the same page, annotations maintain a hierarchical relationship with each oth
     ```typescript
     Dynamsoft.DDV.annotationManager.sendAnnotationToBack(rect.uid);
     ```
+
+## Redaction
+
+A redaction annotation identifies content that is intended to be removed from the document. Redaction involves two processes:
+
+* Content identification. A user creates redact annotations that specify the pieces or regions of content that should be removed. Up until the next step is performed, the user can see, move and redefine these annotations.
+* Content removal. The user instructs the viewer application to apply the redact annotations, after which the content in the area specified by the redact annotations is removed. In the removed content's place, some marking appears to indicate the area has been redacted. Also, the redact annotations are removed from the PDF document.
+
+1. Create a redaction annotation by searching text.
+
+   ```js
+   const searcher = editViewer.currentDocument.createTextSearcher("content to redact",{caseSensitive:false})
+   for (const result of results) {
+     Dynamsoft.DDV.annotationManager.createAnnotation(
+       editViewer.getCurrentPageUid(),
+       "redaction",
+       { "rects": result.rects }
+     );
+   }
+   ```
+   
+   In Dynamsoft Document Viewer, there are two types of redaction annotation: text and rectangle. Text-type redaction annotation can be created by selecting text and can have multiple rectangles in `rects`. Rectangle redaction can only have one rectangle in `rects` and can be adjusted freely.
+
+2. Apply the redaction annotation.
+
+   ```js
+   let success = await Dynamsoft.DDV.annotationManager.applyRedactions(editViewer.getCurrentPageUid());
+   ```
