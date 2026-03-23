@@ -390,6 +390,7 @@ Triggered for any of the following tasks:
 - `filter`
 - `perspective`
 - `loadWasm`
+- `printPreparation`
 
 See [`InfoObject`]({{ site.api }}interface/infoobject.html) for details.
 

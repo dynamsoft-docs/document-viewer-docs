@@ -19,14 +19,18 @@ interface LoadWasmInfo {}
 
 interface LoadSourceInfo {
     docUid: string;
+    /** Number of documents processed so far */
     current: number;
+    /** Total number of documents to process */
     total: number;
 }
 
 interface SaveSourceInfo {
     docUid: string;
     pageUids: [];
+    /** Number of pages processed so far */
     current: number;
+    /** Total number of pages to process */
     total: number;
 }
 
@@ -42,7 +46,9 @@ interface PerspectiveInfo {
 
 interface PrintPreparationInfo { 
     docUid: string; 
+    /** Number of pages processed so far */
     current: number; 
+    /** Total number of pages to process */
     total: number; 
 } 
 
@@ -103,3 +109,7 @@ Indicates the status of the task. Can only be one of the following:
 ### details
 
 Contains additional event type-specific info.
+
+## See Also
+
+[`DDV.on("info")`](/api/namespace/ddv.md#info)
