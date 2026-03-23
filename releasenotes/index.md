@@ -17,13 +17,13 @@ permalink: /releasenotes/index.html
 ### New Features
 
 * Added support for [redaction annotation](/features/datamanagement/annotmanagement.md#redaction).
-* New high-fidelity PDF rendering mode.
+* Changed PDF rendering mode to high-fidelity rendering.
 
 ### API Changes
 
 * Added redaction-related interfaces: [`Redaction`](/api/class/annotation/redaction.md), [`RedactionAnnotationOptions`](/api/interface/annotationinterface/redactionannotationoptions.md), [`RedactionStyle`](/api/interface/annotationinterface/redactionstyle.md), [`applyRedactions()`](/api/class/annotationmanager.md#applyredactions).
 * Added redaction-related UI elements.
-* Added `printPreparation` to [`InfoObject`](/api/interface/infoobject.md).
+* Added `printPreparation` to progress info and renamed attribute `current` to `processed` for `LoadSourceInfo` and `SaveSourceInfo`. See [`InfoObject`](/api/interface/infoobject.md).
 
 ### Bug Fixes
 
