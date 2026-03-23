@@ -7,7 +7,6 @@ title: Dynamsoft Document Viewer API Reference - Interface InfoOjbect
 keywords: Documentation, Dynamsoft Document Viewer, API Reference, Interface InfoObject
 breadcrumbText: Interface InfoObject
 description: Dynamsoft Document Viewer Documentation API Reference Interface InfoObject Page
-permalink: /api/interface/infoobject.html
 ---
 
 # InfoObject
@@ -20,7 +19,7 @@ interface LoadWasmInfo {}
 interface LoadSourceInfo {
     docUid: string;
     /** Number of documents processed so far */
-    current: number;
+    processed: number;
     /** Total number of documents to process */
     total: number;
 }
@@ -29,7 +28,7 @@ interface SaveSourceInfo {
     docUid: string;
     pageUids: [];
     /** Number of pages processed so far */
-    current: number;
+    processed: number;
     /** Total number of pages to process */
     total: number;
 }
@@ -47,7 +46,7 @@ interface PerspectiveInfo {
 interface PrintPreparationInfo { 
     docUid: string; 
     /** Number of pages processed so far */
-    current: number; 
+    processed: number; 
     /** Total number of pages to process */
     total: number; 
 } 
