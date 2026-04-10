@@ -25,10 +25,16 @@ permalink: /releasenotes/index.html
 * Added redaction-related UI elements.
 * Added `printPreparation` to progress info and renamed attribute `current` to `processed` for `LoadSourceInfo` and `SaveSourceInfo`. See [`InfoObject`](/api/interface/infoobject.md).
 
+### Improvements
+
+Updated third-party libraries to enhance security.
+
 ### Bug Fixes
 
 * Fixed loading of interlaced PNGs.
 * Fixed loading of some non-standard PDFs with redundant trailing data.
+
+
 
 ## 3.2.1 (03/10/2026)
 
