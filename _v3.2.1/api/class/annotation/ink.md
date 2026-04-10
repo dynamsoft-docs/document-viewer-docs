@@ -7,6 +7,7 @@ title: Dynamsoft Document Viewer API Reference - Ink Class
 keywords: Documentation, Dynamsoft Document Viewer, API Reference, Ink Class
 breadcrumbText: Ink Class
 description: Dynamsoft Document Viewer Documentation API Reference Ink Class Page
+
 ---
 
 # Ink Class

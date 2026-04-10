@@ -7,6 +7,7 @@ title: Dynamsoft Document Viewer API Reference - Ellipse Class
 keywords: Documentation, Dynamsoft Document Viewer, API Reference, Ellipse Class
 breadcrumbText: Ellipse Class
 description: Dynamsoft Document Viewer Documentation API Reference Ellipse Class Page
+
 ---
 
 # Ellipse Class

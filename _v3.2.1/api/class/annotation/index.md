@@ -7,6 +7,7 @@ title: Dynamsoft Document Viewer Annotation API Reference - Class
 keywords: Documentation, Dynamsoft Document Viewer, API Reference, Class, Annotation
 breadcrumbText: EditViewer Class
 description: Dynamsoft Document Viewer Documentation Annotation API Reference Class Index Page
+
 ---
 
 

@@ -7,6 +7,7 @@ title: Dynamsoft Document Viewer API Reference - Polyline Class
 keywords: Documentation, Dynamsoft Document Viewer, API Reference, Polyline Class
 breadcrumbText: Polyline Class
 description: Dynamsoft Document Viewer Documentation API Reference Polyline Class Page
+
 ---
 
 # Polyline Class

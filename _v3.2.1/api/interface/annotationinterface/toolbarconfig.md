@@ -7,6 +7,7 @@ title: Dynamsoft Document Viewer API Reference - Interface ToolbarConfig
 keywords: Documentation, Dynamsoft Document Viewer, API Reference, Interface ToolbarConfig
 breadcrumbText: Interface ToolbarConfig
 description: Dynamsoft Document Viewer Documentation API Reference Interface ToolbarConfig Page
+
 ---
 
 # ToolbarConfig

@@ -7,6 +7,7 @@ title: Dynamsoft Document Viewer API Reference - Line Class
 keywords: Documentation, Dynamsoft Document Viewer, API Reference, Line Class
 breadcrumbText: Line Class
 description: Dynamsoft Document Viewer Documentation API Reference Line Class Page
+
 ---
 
 # Line Class
