@@ -78,4 +78,4 @@ The default drawing style of the strikeout annotation - see [`StrikeoutStyle`](/
 
 ### redaction
 
-The default drawing style of redaction annotation - see [`RedactionStyle`](/api/interface/annotationinterface/rectanglestyle.md) for more details. If not set, this uses the default values of `RedactionStyle`.
+The default drawing style of redaction annotation - see [`RedactionStyle`](/api/interface/annotationinterface/redactionstyle.md) for more details. If not set, this uses the default values of `RedactionStyle`.
