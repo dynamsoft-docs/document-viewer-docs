@@ -531,6 +531,8 @@ type ToolMode = "pan" | "crop" | "annotation" | "textSelection" | "redaction";
 
 `textSelection`: A mode that allows selecting text to be manipulated via the UI. 
 
+`redaction`: A mode that allows marking areas or pages for redaction.
+
 **Code Snippet**
 
 ```typescript
