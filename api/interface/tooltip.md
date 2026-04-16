@@ -86,6 +86,10 @@ interface Tooltip {
     SendToBack?: string;
     TextSearchPanelSwitch?: string;
     TextSelectionMode?: string;
+    RedactPages?: string;
+    RedactionApply?: string;
+    RedactionMode?: string;
+    RedactionSet?: string;
 }
 ```
 
