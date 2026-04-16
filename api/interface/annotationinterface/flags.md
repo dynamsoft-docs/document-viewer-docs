@@ -45,7 +45,7 @@ For the following annotations, it is not effective and the default value is `tru
 * [`Highlight`](/api/class/annotation/highlight.md)
 * [`Strikeout`](/api/class/annotation/strikeout.md)
 * [`Underline`](/api/class/annotation/underline.md)
-* [`Redaction`](/api/class/annotation/redaction.md)
+* [`Redaction`](/api/class/annotation/redaction.md) (text-type)
 
 ### noView
 
