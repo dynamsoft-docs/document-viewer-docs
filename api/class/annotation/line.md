@@ -205,3 +205,10 @@ line.updateOptions(lineOptions); // Update the line ending of the line to open.
 --------|-----------------------------------------------------|----------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   | `false`
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  | `false`
+
+**Exception**
+
+ Error Code  | Error Message                                        
+--------|-----------------------------------------------------                                     
+ -80326 | The annotation has already been deleted.  
+ 
