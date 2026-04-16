@@ -151,7 +151,7 @@ The instance of annotation. Please refer to [Annotation](/api/class/annotation/i
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.
  -80103 | *XXX(API)*: The value for *XXX(ParameterName)* is not supported.
  -80105 | *XXX(API)*: The specified page(s) do not exist.   
-
+ -80328 | Rectangle-type redaction requires exactly one rect.
 
 ### getAnnotationsByUids()
 

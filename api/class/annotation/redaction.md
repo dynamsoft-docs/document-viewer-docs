@@ -179,3 +179,10 @@ redaction.updateOptions(options); // Update the background of the redaction to r
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   | `false`
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  | `false`
  -80323 | The redaction annotation has already been applied.  | `false`
+
+**Exception**
+
+ Error Code  | Error Message                                        
+--------|-----------------------------------------------------                                     
+ -80326 | The annotation has already been deleted.  
+ -80328 | Rectangle-type redaction requires exactly one rect.
