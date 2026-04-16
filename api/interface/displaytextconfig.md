@@ -103,6 +103,13 @@ interface DisplayTextConfig {
     SendToBack?: string;
     TextSearchPanelSwitch?: string;
     TextSelectionMode?: string;
+    RedactionSet_RedactionMode?: string;
+    RedactionSet_RedactionApply?: string;
+    RedactionSet_RedactPages?: string;
+    RedactPages_Current?: string;
+    RedactPages_Specific?: string;
+    RedactPages_Ok?: string;
+    RedactPages_Cancel?: string;
 }
 ```
 
