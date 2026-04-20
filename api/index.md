@@ -33,7 +33,7 @@ permalink: /api/index.html
 
 - Annotation
     - [Rectangle]({{ site.api }}class/annotation/rectangle.html)
-    - [Redaction](/api/class/annotation/rectangle.md)
+    - [Redaction](/api/class/annotation/redaction.md)
     - [Ellipse]({{ site.api }}class/annotation/ellipse.html)
     - [Polygon]({{ site.api }}class/annotation/polygon.html)
     - [Polyline]({{ site.api }}class/annotation/polyline.html)

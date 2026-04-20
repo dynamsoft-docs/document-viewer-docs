@@ -32,6 +32,7 @@ Annotation has the following main classes:
 
 
 - [Rectangle](/api/class/annotation/rectangle.md)
+- [Redaction](/api/class/annotation/redaction.md)
 - [Ellipse](/api/class/annotation/ellipse.md)
 - [Polygon](/api/class/annotation/polygon.md)
 - [Polyline](/api/class/annotation/polyline.md)
