@@ -124,6 +124,12 @@ Flattened annotations move below all unflattened annotations on the page, and ar
 
 Flattened annotations become part of the page layer upon file export and cease to be annotations.
 
+**Exception**
+
+ Error Code  | Error Message                                        
+--------|-----------------------------------------------------                                     
+ -80326 | The annotation has already been deleted.  
+
 ## modificationDate
 
 Return the modification date of the annotation.
