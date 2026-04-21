@@ -104,9 +104,9 @@ interface DisplayTextConfig {
     TextSearchPanelSwitch?: string;
     TextSelectionMode?: string;
     RedactPages?: string;
-	RedactionApply?: string;
-	RedactionMode?: string;
-	RedactionSet?: string;
+    RedactionApply?: string;
+    RedactionMode?: string;
+    RedactionSet?: string;
     RedactionSet_RedactionMode?: string;
     RedactionSet_RedactionApply?: string;
     RedactionSet_RedactPages?: string;
