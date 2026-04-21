@@ -45,6 +45,7 @@ For the following annotations, it is not effective and the default value is `tru
 * [`Highlight`](/api/class/annotation/highlight.md)
 * [`Strikeout`](/api/class/annotation/strikeout.md)
 * [`Underline`](/api/class/annotation/underline.md)
+* [`Redaction`](/api/class/annotation/redaction.md) (text-type)
 
 ### noView
 
@@ -79,6 +80,7 @@ For the following annotations, it is not effective and the default value is `tru
 * [`Highlight`](/api/class/annotation/highlight.md)
 * [`Strikeout`](/api/class/annotation/strikeout.md)
 * [`Underline`](/api/class/annotation/underline.md)
+* [`Redaction`](/api/class/annotation/redaction.md)
 
 
 ### readOnly
@@ -99,3 +101,4 @@ Not to allow a user to interact with the annotation, default value: `false`.
 - [`HighlightAnnotationOptions`](/api/interface/annotationinterface/highlightannotationoptions.md)
 - [`UnderlineAnnotationOptions`](/api/interface/annotationinterface/underlineannotationoptions.md)
 - [`StrikeoutAnnotationOptions`](/api/interface/annotationinterface/strikeoutannotationoptions.md)
+- [`RedactionAnnotationOptions`](/api/interface/annotationinterface/redactionannotationoptions.md)

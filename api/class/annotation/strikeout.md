@@ -68,7 +68,7 @@ Return the type of the annotation: `strikeout`.
 All annotation types:
 
 ```ts
-"rectangle" | "ellipse" | "line" | "polygon" | "polyline" | "ink" | "textBox" | "textTypewriter" | "stamp" | "highlight" | "underline" | "strikeout" | "incomplete" | "unknown"
+"rectangle" | "redaction" | "ellipse" | "line" | "polygon" | "polyline" | "ink" | "textBox" | "textTypewriter" | "stamp" | "highlight" | "underline" | "strikeout" | "incomplete" | "unknown"
 ```
 
 ## creationDate
@@ -196,3 +196,10 @@ strikeout.updateOptions(newOptions); // Update the annotation.
 --------|-----------------------------------------------------|----------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   | `false`
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  | `false`
+
+**Exception**
+
+ Error Code  | Error Message                                        
+--------|-----------------------------------------------------                                     
+ -80326 | The annotation has already been deleted.  
+ 

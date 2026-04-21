@@ -12,6 +12,30 @@ permalink: /releasenotes/index.html
 
 # Release Notes
 
+## 4.0 (04/21/2026)
+
+### New Features
+
+* Added support for [redaction annotation](/features/datamanagement/annotmanagement.md#redaction).
+* Changed PDF rendering mode to high-fidelity rendering.
+
+### API Changes
+
+* Added redaction-related interfaces: [`Redaction`](/api/class/annotation/redaction.md), [`RedactionAnnotationOptions`](/api/interface/annotationinterface/redactionannotationoptions.md), [`RedactionStyle`](/api/interface/annotationinterface/redactionstyle.md), [`applyRedactions()`](/api/class/annotationmanager.md#applyredactions).
+* Added redaction-related UI elements.
+* Added `printPreparation` to progress info and renamed attribute `current` to `processed` for `LoadSourceInfo` and `SaveSourceInfo`. See [`InfoObject`](/api/interface/infoobject.md).
+
+### Improvements
+
+Updated third-party libraries to enhance security.
+
+### Bug Fixes
+
+* Fixed loading of interlaced PNGs.
+* Fixed loading of some non-standard PDFs with redundant trailing data.
+
+
+
 ## 3.2.1 (03/10/2026)
 
 Updated third-party libraries to enhance security. 

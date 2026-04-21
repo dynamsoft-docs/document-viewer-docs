@@ -520,7 +520,7 @@ toolMode: ToolMode;
 A `ToolMode` can be one of following types.
 
 ```typescript
-type ToolMode = "pan" | "crop" | "annotation" | "textSelection";
+type ToolMode = "pan" | "crop" | "annotation" | "textSelection" | "redaction";
 ```
 
 `pan`: The default tool mode.
@@ -530,6 +530,8 @@ type ToolMode = "pan" | "crop" | "annotation" | "textSelection";
 `annotation`: A mode that allows creating annotations to be manipulated via the UI.
 
 `textSelection`: A mode that allows selecting text to be manipulated via the UI. 
+
+`redaction`: A mode that allows marking areas or pages for redaction.
 
 **Code Snippet**
 

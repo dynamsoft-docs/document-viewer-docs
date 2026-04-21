@@ -83,6 +83,12 @@ permalink: /api/errorlist.html
  -80320     | Unknown annotation or incomplete annotation cannot be selected.
  -80321     | Flattened annotation cannot be selected.
  -80322     | No results found.
+ -80323     | The redaction annotation has already been applied.
+ -80324     | The specified annotation(s) contain annotations other than redaction annotations.
+ -80325     | The specified page does not contain redaction annotations.
+ -80326     | The annotation has already been deleted.
+ -80327     | The specified annotation(s) are not on the specified page or do not exist.
+ -80328     | Rectangle-type redaction requires exactly one rect.
 
 ## Camera Releated Errors
 

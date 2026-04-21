@@ -7,7 +7,6 @@ title: Dynamsoft Document Viewer API Reference - Interface InfoOjbect
 keywords: Documentation, Dynamsoft Document Viewer, API Reference, Interface InfoObject
 breadcrumbText: Interface InfoObject
 description: Dynamsoft Document Viewer Documentation API Reference Interface InfoObject Page
-permalink: /api/interface/infoobject.html
 ---
 
 # InfoObject
@@ -19,14 +18,18 @@ interface LoadWasmInfo {}
 
 interface LoadSourceInfo {
     docUid: string;
-    current: number;
+    /** Number of documents processed so far */
+    processed: number;
+    /** Total number of documents to process */
     total: number;
 }
 
 interface SaveSourceInfo {
     docUid: string;
     pageUids: [];
-    current: number;
+    /** Number of pages processed so far */
+    processed: number;
+    /** Total number of pages to process */
     total: number;
 }
 
@@ -40,6 +43,14 @@ interface PerspectiveInfo {
     perspectiveQuad: Quad;
 }
 
+interface PrintPreparationInfo { 
+    docUid: string; 
+    /** Number of pages processed so far */
+    processed: number; 
+    /** Total number of pages to process */
+    total: number; 
+} 
+
 interface InfoDetailsMap {
     init: InitInfo;
     loadSource: LoadSourceInfo;
@@ -47,6 +58,7 @@ interface InfoDetailsMap {
     filter: FilterInfo;
     perspective: PerspectiveInfo;
     loadWasm: LoadWasmInfo;
+    printPreparation: PrintPreparationInfo;
 }
 
 type InfoStatus =
@@ -82,6 +94,7 @@ Indicates the task type of the event. Must be one of the following events, in on
 | `filter`       | ✓         |              | ✓           | ✓        |
 | `perspective`  | ✓         |              | ✓           | ✓        |
 | `loadWasm`     | ✓         |              | ✓           | ✓        |
+| `printPreparation`     | ✓         |✓            | ✓           | ✓        |
 
 ### status
 
@@ -95,3 +108,7 @@ Indicates the status of the task. Can only be one of the following:
 ### details
 
 Contains additional event type-specific info.
+
+## See Also
+
+[`DDV.on("info")`](/api/namespace/ddv.md#info)

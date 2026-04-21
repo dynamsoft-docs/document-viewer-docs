@@ -103,6 +103,17 @@ interface DisplayTextConfig {
     SendToBack?: string;
     TextSearchPanelSwitch?: string;
     TextSelectionMode?: string;
+    RedactPages?: string;
+	RedactionApply?: string;
+	RedactionMode?: string;
+	RedactionSet?: string;
+    RedactionSet_RedactionMode?: string;
+    RedactionSet_RedactionApply?: string;
+    RedactionSet_RedactPages?: string;
+    RedactPages_Current?: string;
+    RedactPages_Specific?: string;
+    RedactPages_Ok?: string;
+    RedactPages_Cancel?: string;
 }
 ```
 
@@ -131,6 +142,13 @@ interface DisplayTextConfig {
     CameraResolution_1440P      | "1440P"
     CameraResolution_2160P      | "2160P"
     AnnotationSet               | "Annotation"
+    RedactionSet_RedactionMode  | "Mark Areas for Redaction"
+	RedactionSet_RedactPages    | "Mark Pages for Redaction"
+    RedactionSet_RedactionApply | "Apply Redactions"
+	RedactPages_Current         | "Mark current page for redaction"
+	RedactPages_Specific        | "Mark specific page range for redaction"
+	RedactPages_Ok              | "OK"
+	RedactPages_Cancel          | "Cancel"
 
 ## Related
 

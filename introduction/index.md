@@ -17,6 +17,8 @@ Dynamsoft Document Viewer is a browser-based JavaScript SDK designed for viewing
 
 Dynamsoft Document Viewer does not rely on any external third-party JavaScript library. All processing, such as rendering and editing, is securely performed within the browser. This architecture eliminates the need for a server-side backend, ensuring security compliance and scalability.
 
+The SDK's [redaction](/features/datamanagement/annotmanagement.md#redaction) feature goes beyond visual masking - it permanently removes the underlying data from the document. This ensures that sensitive information (PII, classified text, financial data) cannot be recovered or leaked, making it ideal for industries with strict compliance requirements like legal, healthcare, and government.
+
 ## Browser and Platform Compatibility
 
 Dynamsoft Document Viewer is designed to work seamlessly across different browsers and platforms. It is compatible with major browsers like Chrome, Firefox, Safari, and Edge, ensuring a consistent user experience. Additionally, it supports various operating systems, including Windows, macOS, Linux, iOS, and Android, allowing users to access documents from any device.
@@ -36,6 +38,7 @@ Dynamsoft Document Viewer supports a variety of annotation types to enhance docu
 - shape
 - stamp
 - freehand drawing
+- redaction
 
 ## Data Management Concepts
 
