@@ -3,7 +3,7 @@ layout: default-layout
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
-title: Dynamsoft Document Viewer API Reference - Interface IPointerEvent
+title: IPointerEvent Interface – Dynamsoft Document Viewer
 keywords: Documentation, Dynamsoft Document Viewer, API Reference, Interface IPointerEvent
 breadcrumbText: Interface IPointerEvent
 description: Dynamsoft Document Viewer Documentation API Reference Interface IPointerEvent Page
