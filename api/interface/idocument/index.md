@@ -732,9 +732,9 @@ saveToPdf(savePdfSettings?: SavePdfSettings): Promise<Blob>;
 
 **Parameters**
 
-`indices`: The array of page indices which will be saved. 
+`indices`: The array of page indices which will be saved. If not set, will save all pages to a PDF file by default.
 
-`savePdfSettings`: Specify the save settings. Please refer to [`SavePdfSettings`]({{ site.api }}interface/idocument/savepdfsettings.html). If not set, will save all pages to a PDF file by default.
+`savePdfSettings`: Specify the save settings. Please refer to [`SavePdfSettings`]({{ site.api }}interface/idocument/savepdfsettings.html).
 
 **Return Values**
 
