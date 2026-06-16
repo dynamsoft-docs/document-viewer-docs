@@ -25,7 +25,7 @@ interface CustomViewerConstructorOptions {
 
 ### container
 
-The container which is used to show the viewer. Its `id` or `HTMLElement` is acceppted.
+The container which is used to show the viewer. Its `id` or `HTMLElement` is accepted.
 
 ### uiConfig
 
