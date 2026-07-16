@@ -14,6 +14,8 @@ permalink: /ui/default_ui.html
 
 It can be seen from Viewers part, DDV provides the default UI design for the edit viewer, capture viewer and perspective viewer. They basically contain the main features of each type of viewer. 
 
+The default UI varies depending on the screen size (desktop or mobile). You can get the default UI by using [`getDefaultUiConfig()`](/api/namespace/ddv.md#static-getdefaultuiconfig).
+
 <div class="multi-panel-switching-prefix"></div>
 
 - [Edit viewer](#edit-viewer)
