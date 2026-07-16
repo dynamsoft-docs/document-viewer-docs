@@ -41,7 +41,7 @@ Default UiConfig:
             type: Dynamsoft.DDV.Elements.Layout,
             className: "ddv-edit-viewer-header-mobile",
             children: [
-                Dynamsoft.DDV.Elements.Blank,
+                Dynamsoft.DDV.Elements.RedactionSet,
                 Dynamsoft.DDV.Elements.AnnotationSet,
                 Dynamsoft.DDV.Elements.Pagination,
                 Dynamsoft.DDV.Elements.Download,
@@ -109,6 +109,7 @@ Default UiConfig:
                         Dynamsoft.DDV.Elements.TextSelectionMode,
                         Dynamsoft.DDV.Elements.SeparatorLine,
                         Dynamsoft.DDV.Elements.AnnotationSet,
+                        Dynamsoft.DDV.Elements.RedactionSet
                     ]
                 },
                 {
