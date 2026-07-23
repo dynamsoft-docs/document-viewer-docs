@@ -27,7 +27,7 @@ The following table is a list of supported browsers based on the above requireme
   | :----------: | :------------------------------: |
   |    Chrome    |             v92+                 |
   |   Firefox    |             v90+                 |
-  |    Safari    |             v14+                 |
+  |    Safari    |             v15+                 |
   |     Edge     |             v92+                 |
 
 Apart from the browsers, the operating systems may impose some limitations of their own that could restrict the use of the SDKs.
