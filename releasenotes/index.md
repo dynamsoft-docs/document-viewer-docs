@@ -12,6 +12,30 @@ permalink: /releasenotes/index.html
 
 # Release Notes
 
+## 5.0 (08/14/2026)
+
+### Highlights
+
+Dynamsoft Document Viewer 5.0 introduces a **pluggable architecture**, allowing you to load only the features you need — reducing bundle size and improving performance for your specific use cases.
+
+### Modular Feature Packages
+
+The following features are now packaged as standalone plugins that can be loaded on demand:
+
+* **Camera plugin** (`camera.js`): The Capture Viewer's camera-related JavaScript is now packaged independently. Only applications that need camera capture functionality need to load this module.
+* **Annotation plugin** (`annotation.js`): All annotation-related functionality is now packaged independently. If your application doesn't require annotation editing, you can omit this module to reduce the overall bundle size.
+* **Image PDF parser plugin** (`image-pdf.js`): A new lightweight PDF parsing plugin for loading pure image-based PDFs without the overhead of the full PDF rendering engine. Saving image-based PDFs is supported by the default JavaScript, so combined with this plugin, you can handle image PDF workflows end-to-end without the PDF WASM module. Note that if you need to process PDFs containing vector graphics or require annotation features, the full PDF WASM module will be automatically loaded when needed.
+
+### WASM Splitting & On-Demand Loading
+
+The default image processing WASM module has been split to improve load times and reduce memory usage:
+
+* **PDF** and **TIFF** modules are now separated from the core image processing WASM module.
+* These format-specific WASM modules are loaded **on demand** — only when your application actually needs to process TIFF files or vector-based PDFs.
+* For pure image-based PDFs, you can use the lightweight [Image PDF parser plugin](#modular-feature-packages) instead, eliminating the need to load the full PDF WASM module.
+* This significantly reduces the initial download size, especially for camera-based document scanning scenarios where TIFF/vector PDF processing may not be needed.
+
+
 ## 4.0 (04/21/2026)
 
 ### New Features
