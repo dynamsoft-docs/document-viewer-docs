@@ -103,6 +103,7 @@ type HandlerType = "documentBoundariesDetect"|"imageFilter";
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  
  -80103 | *XXX(API)*: The value for *XXX(ParameterName)* is not supported.
+ -80500 | The '<%param%>' plugin is not installed.  
 
 **Remark**
 
