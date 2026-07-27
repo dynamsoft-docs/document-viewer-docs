@@ -546,6 +546,12 @@ editViewer.toolMode = "crop";
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
  -80103 | *XXX(API)*: The value for *XXX(ParameterName)* is not supported.
 
+**Exception**
+ 
+ Error Code  | Error Message                                        
+--------|-----------------------------------------------------
+ -80500 | The '<%param%>' plugin is not installed. 
+ 
 **Remark**
 
 - If `toolMode` is set to `annotation`, can use [`annotationMode`](#annotationmode) to clarify the specific operation.
@@ -579,6 +585,13 @@ editViewer.annotationMode = "select";
 --------|-----------------------------------------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.
  -80103 | *XXX(API)*: The value for *XXX(ParameterName)* is not supported.
+
+**Exception**
+ 
+ Error Code  | Error Message                                        
+--------|-----------------------------------------------------
+ -80500 | The '<%param%>' plugin is not installed. 
+
 
 **Remark**
 
