@@ -16,6 +16,7 @@ To use the SDK, we need to include the package below.
 
 - `dynamsoft-document-viewer`: Required, it provides functions to create the viewers.
 
+It has several plugins that we can load on demand. Check [Plugins and On-Demand Loading](/features//plugins-and-on-demand-loading.md) to learn more.
 
 ## Use a CDN
 

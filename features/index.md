@@ -48,6 +48,10 @@ Viewers are used to display the data. According to the different uses of viewers
 - [Custom Viewer]({{ site.features }}viewers/others.html#custom-viewer)
 {% comment %}- [Data synchronisation between viewers]({{ site.features }}viewers/datasync.html){% endcomment %}
 
+## Plugins and On-Demand Loading
+
+[Plugins and on-demand loading](./plugins-and-on-demand-loading.md).
+
 ## Advanced
 
 - [How to configure image filter]({{ site.features }}advanced/imagefilter.html)
