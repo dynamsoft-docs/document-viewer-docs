@@ -116,5 +116,5 @@ or
   ```typescript
   import { CameraPlugin } from 'dynamsoft-document-viewer/camera';
   import { AnnotationPlugin } from 'dynamsoft-document-viewer/annotation';
-  import { ImagePdfParser } from 'dynamsoft-document-viewer/imagePdf';
+  import { ImagePdfParserPlugin } from 'dynamsoft-document-viewer/imagePdf';
   ```
