@@ -13,23 +13,23 @@ description: Upgrade guide for Dynamsoft Document Viewer
 
 Upgrading Dynamsoft Document Viewer from an old version to the latest version is straightforward. You need to pay attention to the following changes:
 
-* Changes of [`UIConfig`](/api/interface/uiconfig.md)
-* Changes of APIs
+* Changes to Default [`UIConfig`](/api/interface/uiconfig.md)
+* Changes to APIs
 
-## Changes of UIConfig
+## Changes to Default UIConfig
 
 The default UI elements may be different across different versions. Check out [this post](/ui/default_ui.md) to learn about the default configs.
 
 You can try to unify the UI across versions by specifying the [`UIConfig`](/api/interface/uiconfig.md). But pay attention to supported [elements](/ui/default_elements.md) of different versions.
 
 
-## Changes of APIs
+## Changes to APIs
 
 ### Breaking Changes in v5.0
 
 v5.0 adopts a plugin design. You need to load [plugins](/features/plugins-and-on-demand-loading.md) to make related features available.
 
-The following is a list of affected APIs. Methods will throw error and properties and enumeration will be undefined if the required plugin is not installed. 
+The following is a list of affected APIs. Methods will throw errors,  and properties and enumerations will be undefined if the required plugin is not installed. 
 
 Camera plugin:
 
@@ -49,7 +49,7 @@ Annotation plugin:
 
    - Enumeration:
 
-      * [`EnumAnnotationRenderMode`](/api/enumeration-type/enumannnotationrendermode.md)'s `loadAnnotations` option (`loadSource()` and `updateSource()` will throw error if it is enabled).
+      * [`EnumAnnotationRenderMode`](/api/enumeration-type/enumannnotationrendermode.md)'s `loadAnnotations` option (`loadSource()` and `updateSource()` will throw an error if it is enabled but the plugin is not installed).
       * [`EnumAnnotationRenderMode`](/api/enumeration-type/enumlineending.md)
       * [`EnumStampIcon`](/api/enumeration-type/enumstampicon.md)
 
