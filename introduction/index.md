@@ -65,5 +65,5 @@ Dynamsoft Document Viewer is built to support a wide range of document-centric w
 * **Edit Viewer**: Enables viewing and editing of documents with annotation support.
 * **Capture Viewer**: Integrates camera controls for streamlined, continuous capture workflows.
 * **Perspective Viewer**: Allows document cropping with perspective transformation.
-* **Browse Viewer**: Suitable for previewing multi-page documents or navigating document collections.
+* **Browse Viewer**: Suitable for previewing and reordering multi-page documents.
 
