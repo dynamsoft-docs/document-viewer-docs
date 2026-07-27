@@ -35,6 +35,16 @@ The default image processing WASM module has been split to improve load times an
 * For pure image-based PDFs, you can use the lightweight [Image PDF parser plugin](#modular-feature-packages) instead, eliminating the need to load the full PDF WASM module.
 * This significantly reduces the initial download size, especially for camera-based document scanning scenarios where TIFF/vector PDF processing may not be needed.
 
+### Removed
+
+`CustomViewer` has been removed.
+
+### Other Improvements
+
+* Improved the alignment setting of text and redaction annotations by remembering the applied alignment via UI.
+* Improved the speed of [`loadSource`](/api/interface/idocument/index.md#loadsource).
+* Improved the rendering of text annotations.
+
 
 ## 4.0 (04/21/2026)
 
