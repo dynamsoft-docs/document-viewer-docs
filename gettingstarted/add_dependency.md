@@ -28,11 +28,27 @@ The simplest way to include the SDK is to use either the [jsDelivr](https://jsde
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@latest/dist/ddv.css">
   ```
 
+  With plugins:
+
+  ```html
+  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@latest/dist/plugins/ddv-plugin-camera.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@latest/dist/plugins/ddv-plugin-annotation.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@latest/dist/plugins/ddv-plugin-image-pdf.js"></script>
+  ```
+
 - UNPKG
 
   ```html
   <script src="https://unpkg.com/dynamsoft-document-viewer@latest/dist/ddv.js"></script>
   <link rel="stylesheet" href="https://unpkg.com/dynamsoft-document-viewer@latest/dist/ddv.css">
+  ```
+
+  With plugins:
+
+  ```html
+  <script src="https://unpkg.com/dynamsoft-document-viewer@latest/dist/plugins/ddv-plugin-camera.js"></script>
+  <script src="https://unpkg.com/dynamsoft-document-viewer@latest/dist/plugins/ddv-plugin-annotation.js"></script>
+  <script src="https://unpkg.com/dynamsoft-document-viewer@latest/dist/plugins/ddv-plugin-image-pdf.js"></script>
   ```
 
 ## Host the SDK yourself
@@ -65,6 +81,14 @@ Depending on how you downloaded the SDK and where you put it, you can typically 
   <link rel="stylesheet" href="./Your-Folder/dist/ddv.css">
   ```
 
+  With plugins:
+
+  ```html
+  <script src="./Your-Folder/dist/plugins/ddv-plugin-camera.js"></script>
+  <script src="./Your-Folder/dist/plugins/ddv-plugin-annotation.js"></script>
+  <script src="./Your-Folder/dist/plugins/ddv-plugin-image-pdf.js"></script>
+  ```
+
 or
 
   ```html
@@ -72,9 +96,25 @@ or
   <link rel="stylesheet" href="./node_modules/dynamsoft-document-viewer/dist/ddv.css">
   ```
 
+  With plugins:
+
+  ```html
+  <script src="./node_modules/dynamsoft-document-viewer/dist/plugins/ddv-plugin-camera.js"></script>
+  <script src="../node_modules/dynamsoft-document-viewer/dist/plugins/ddv-plugin-annotation.js"></script>
+  <script src="./node_modules/dynamsoft-document-viewer/dist/plugins/ddv-plugin-image-pdf.js"></script>
+  ```
+
 or
 
   ```typescript
   import { DDV } from 'dynamsoft-document-viewer';
   import "dynamsoft-document-viewer/dist/ddv.css";
+  ```
+
+  With plugins:
+
+  ```typescript
+  import { CameraPlugin } from 'dynamsoft-document-viewer/camera';
+  import { AnnotationPlugin } from 'dynamsoft-document-viewer/annotation';
+  import { ImagePdfParser } from 'dynamsoft-document-viewer/imagePdf';
   ```
