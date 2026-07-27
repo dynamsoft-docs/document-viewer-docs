@@ -12,6 +12,8 @@ permalink: /api/enumeration-type/enumlineending.html
 
 # EnumLineEnding
 
+Enumeration for line annotation's ending. Check [LineAnnotationOptions](/api/interface/annotationinterface/lineannotationoptions.md). It is undefined if the annotation plugin is not installed.
+
 ```typescript
 enum EnumLineEnding {
     NONE = "none", 
