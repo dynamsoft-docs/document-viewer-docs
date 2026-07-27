@@ -1409,7 +1409,7 @@ editViewer.setCropRect(rect);
 
 ### undo()
 
-> *This method takes effect only for [crop](#crop), [rotate](#rotate) operations.*
+> *This method takes effect only for [crop](#crop), [rotate](#rotate) and annotation operations.*
 
 Undo the last editing operation.
 
@@ -1440,7 +1440,7 @@ editViewer.undo();
 
 ### redo()
 
-> *This method takes effect only for [crop](#crop), [rotate](#rotate) operations.*
+> *This method takes effect only for [crop](#crop), [rotate](#rotate) and annotation operations.*
 
 Redo the last undo operation.
 
