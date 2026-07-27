@@ -179,6 +179,7 @@ await firstDoc.loadSource([source]);
  -80202 | Failed to read the PDF file because it's encrypted and the correct password is not provided.
  -80203 | Failed to read some annotations because they are not supported by Dynamsoft Document Viewer so far.
  -80204 | PDFs containing XFA (XML Forms Architecture) forms are not supported.
+ -80500 | The '<%param%>' plugin is not installed.
 
 ### getPageData()
 
@@ -265,6 +266,7 @@ await firstDoc.updatePage(firstDoc.pages[0], source);
  -80202 | Failed to read the PDF file because it's encrypted and the correct password is not provided.
  -80203 | Failed to read some annotations because they are not supported by Dynamsoft Document Viewer so far.
  -80204 | PDFs containing XFA (XML Forms Architecture) forms are not supported.
+ -80500 | The '<%param%>' plugin is not installed.
 
 
 ### setPageCustomData()
