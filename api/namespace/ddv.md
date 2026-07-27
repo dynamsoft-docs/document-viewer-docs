@@ -131,7 +131,13 @@ const docManager = Dynamsoft.DDV.documentManager;
 
 ### `<static>` annotationManager
 
-[`AnnotationManager`]({{ site.api }}class/annotationmanager.html) instance.
+[`AnnotationManager`]({{ site.api }}class/annotationmanager.html) instance. It is `undefined` if the annotation plugin is not installed.
+
+**Syntax**
+
+```typescript
+annotationManager?: AnnotationManager;
+```
 
 **Code Snippet**
 
