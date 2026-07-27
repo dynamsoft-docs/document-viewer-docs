@@ -3,7 +3,7 @@ layout: default-layout
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
-title: Upgrade Guide Dynamsoft Document Viewer Documentation 
+title: Upgrade Guide - Dynamsoft Document Viewer Documentation 
 keywords: Documentation, Dynamsoft Document Viewer, Upgrade
 breadcrumbText: Upgrade Guide
 description: Upgrade guide for Dynamsoft Document Viewer
