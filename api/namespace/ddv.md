@@ -103,6 +103,7 @@ type HandlerType = "documentBoundariesDetect"|"imageFilter";
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  
  -80103 | *XXX(API)*: The value for *XXX(ParameterName)* is not supported.
+ -80500 | The '<%param%>' plugin is not installed.  
 
 **Remark**
 
@@ -130,7 +131,13 @@ const docManager = Dynamsoft.DDV.documentManager;
 
 ### `<static>` annotationManager
 
-[`AnnotationManager`]({{ site.api }}class/annotationmanager.html) instance.
+[`AnnotationManager`]({{ site.api }}class/annotationmanager.html) instance. It is `undefined` if the annotation plugin is not installed.
+
+**Syntax**
+
+```typescript
+annotationManager?: AnnotationManager;
+```
 
 **Code Snippet**
 
@@ -187,6 +194,8 @@ const defaultEditUi = Dynamsoft.DDV.getDefaultUiConfig("editViewer");
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.                      | `null`
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.                     | `null`
  -80103 | *XXX(API)*: The value for *XXX(ParameterName)* is not supported.| `null`
+ -80501 | Some elements are ignored because the required plugin is not installed.| `null` 
+
 
 ### `<static>` addFonts()
 

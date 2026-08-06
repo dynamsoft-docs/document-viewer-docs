@@ -43,7 +43,15 @@ We’ll build on this skeleton page:
 
 ## Adding the dependency
 
-Please refer to [Adding the dependency]({{ site.gettingstarted }}add_dependency.html).
+Add the dependency with the following code:
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@latest/dist/ddv.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@latest/dist/ddv.css">
+<script src="https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@latest/dist/plugins/ddv-plugin-annotation.js"></script>
+```
+
+You can refer to [Adding the dependency]({{ site.gettingstarted }}add_dependency.html).
 
 ## Define necessary HTML elements
 
@@ -82,8 +90,10 @@ For HelloWorld, we define below elements.
 // You can request a 30-day trial key from https://www.dynamsoft.com/customer/license/trialLicense/?product=ddv
 Dynamsoft.DDV.Core.license = "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9";
 Dynamsoft.DDV.Core.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@latest/dist/engine";
-// Preload DDV Resource
+// Load all wasm files including the full PDF wasm. Comment out this to load wasm files on-demand.
 Dynamsoft.DDV.Core.loadWasm();
+// Load the annotation plugin.
+Dynamsoft.DDV.use(Dynamsoft.DDV.AnnotationPlugin);
 await Dynamsoft.DDV.Core.init(); 
 ```
 
@@ -109,6 +119,7 @@ const editViewer = new Dynamsoft.DDV.EditViewer({
     <title>DDV - HelloWorld</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@latest/dist/ddv.css">
     <script src="https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@latest/dist/ddv.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@latest/dist/plugins/ddv-plugin-annotation.js"></script>
 </head>
 <style>
     html,body {
@@ -134,8 +145,10 @@ const editViewer = new Dynamsoft.DDV.EditViewer({
         // You can request a 30-day trial key from https://www.dynamsoft.com/customer/license/trialLicense/?product=ddv
         Dynamsoft.DDV.Core.license = "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9";
         Dynamsoft.DDV.Core.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@latest/dist/engine";
-        // Preload DDV Resource
+        // Load all wasm files including the full PDF wasm. Comment out this to load wasm files on-demand.
         Dynamsoft.DDV.Core.loadWasm();
+        // Load the annotation plugin.
+        Dynamsoft.DDV.use(Dynamsoft.DDV.AnnotationPlugin);
         await Dynamsoft.DDV.Core.init();
         const editViewer = new Dynamsoft.DDV.EditViewer({
             container: "container",

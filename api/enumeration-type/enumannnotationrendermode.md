@@ -16,6 +16,6 @@ permalink: /api/enumeration-type/enumannotationrendermode.html
 enum EnumAnnotationRenderMode {
     NO_ANNOTATIONS = "noAnnotations", // default, means that the annotations in the PDF file will not be loaded
     RENDER_ANNOTATIONS = "renderAnnotations", // means that the annotations in the PDF file will be rendered
-    LOAD_ANNOTATIONS = "loadAnnotations", // means that the annotations in the PDF file will be loaded normally, a valid PDF Annotation license is requested
+    LOAD_ANNOTATIONS = "loadAnnotations", // means that the annotations in the PDF file will be loaded normally, a valid PDF Annotation license is requested and the annotation plugin has to be installed
 }
 ```

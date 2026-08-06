@@ -317,6 +317,12 @@ const pageStyle = editViewer.getStyle("pageStyle");
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.                      | `null`
  -80103 | *XXX(API)*: The value for *XXX(ParameterName)* is not supported. | `null`
 
+**Exception**
+ 
+ Error Code  | Error Message                                        
+--------|-----------------------------------------------------
+ -80500 | The '<%param%>' plugin is not installed. 
+
 ### getVisiblePagesInfo()
 
 Get the visible pages info.
@@ -391,6 +397,11 @@ type EditViewerStyleName = "canvasStyle" | "pageStyle" | "currentPageStyle" | "q
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.                      | `false`
  -80103 | *XXX(API)*: The value for *XXX(ParameterName)* is not supported. | `false`
 
+**Exception**
+ 
+ Error Code  | Error Message                                        
+--------|-----------------------------------------------------
+ -80500 | The '<%param%>' plugin is not installed. 
 
 **Remark**
 
@@ -546,6 +557,12 @@ editViewer.toolMode = "crop";
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
  -80103 | *XXX(API)*: The value for *XXX(ParameterName)* is not supported.
 
+**Exception**
+ 
+ Error Code  | Error Message                                        
+--------|-----------------------------------------------------
+ -80500 | The '<%param%>' plugin is not installed. 
+
 **Remark**
 
 - If `toolMode` is set to `annotation`, can use [`annotationMode`](#annotationmode) to clarify the specific operation.
@@ -579,6 +596,13 @@ editViewer.annotationMode = "select";
 --------|-----------------------------------------------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.
  -80103 | *XXX(API)*: The value for *XXX(ParameterName)* is not supported.
+
+**Exception**
+ 
+ Error Code  | Error Message                                        
+--------|-----------------------------------------------------
+ -80500 | The '<%param%>' plugin is not installed. 
+
 
 **Remark**
 
@@ -890,6 +914,12 @@ setAnnotationDrawingStyle(config: AnnotationDrawingStyleConfig): boolean;
  | ---------- | -------------------------------------------- | ---------------- |
  | -80100     | *XXX(API)*: *XXX(ParameterName)* is invalid. | `false`          |
  | -80102     | *XXX(API)*: *XXX(ParameterName)* is missing. | `false`          |
+ 
+**Exception**
+ 
+ Error Code  | Error Message                                        
+--------|-----------------------------------------------------
+ -80500 | The '<%param%>' plugin is not installed. 
 
 ### selectAnnotations()
 
@@ -926,6 +956,12 @@ selectAnnotations(annotationUids: string[]): boolean;
  | -80320     | Unknown annotation or incomplete annotation cannot be selected.           | `false`          |
  | -80321     | Flattened annotation cannot be selected.                                  | `false`          |
 
+**Exception**
+ 
+ Error Code  | Error Message                                        
+--------|-----------------------------------------------------
+ -80500 | The '<%param%>' plugin is not installed. 
+
 ### getSelectedAnnotations()
 
 Get selected annotation(s).
@@ -953,6 +989,12 @@ const selectAnnots = editViewer.getSelectAnnotations();
  -80304     | No document opened.                                         | `[]`
  -80305     | There is no image in the current document.                  | `[]`
 
+**Exception**
+ 
+ Error Code  | Error Message                                        
+--------|-----------------------------------------------------
+ -80500 | The '<%param%>' plugin is not installed. 
+
 ### getAnnotationDrawingStyle()
 
 Get the annotation drawing style.
@@ -967,6 +1009,11 @@ getAnnotationDrawingStyle(): AnnotationDrawingStyleConfig;
 
 An [`AnnotationDrawingStyleConfig`](/api/interface/styleinterface/annotationdrawingstyleconfig.md) object.
 
+**Exception**
+ 
+ Error Code  | Error Message                                        
+--------|-----------------------------------------------------
+ -80500 | The '<%param%>' plugin is not installed. 
 
 ## Display Control
 

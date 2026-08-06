@@ -7,7 +7,6 @@ title: Dynamsoft Document Viewer API Reference - CustomViewer Class
 keywords: Documentation, Dynamsoft Document Viewer, API Reference, CustomViewer Class
 breadcrumbText: CustomViewer Class
 description: Dynamsoft Document Viewer Documentation API Reference CustomViewer Class Page
-permalink: /api/class/customviewer.html
 ---
 
 # CustomViewer Class

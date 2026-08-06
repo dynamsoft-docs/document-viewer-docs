@@ -24,7 +24,6 @@ Under the namespace Dynamsoft.DDV, Dynamsoft Document Viewer JavaScript library 
 - [CaptureViewer](/api/class/captureviewer.md)
 - [PerspectiveViewer](/api/class/perspectiveviewer.md)
 - [BrowseViewer](/api/class/browseviewer.md)
-- [CustomViewer](/api/class/customviewer.md)
 
 ## Annotation
 

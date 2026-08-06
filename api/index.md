@@ -26,7 +26,6 @@ permalink: /api/index.html
     - [CaptureViewer]({{ site.api }}class/captureviewer.html)
     - [PerspectiveViewer]({{ site.api }}class/perspectiveviewer.html)
     - [BrowseViewer]({{ site.api }}class/browseviewer.html)
-    - [CustomViewer]({{ site.api }}class/customviewer.html)
     - Advanced
         - [ImageFilter]({{ site.api }}class/advanced/imagefilter.html)
         - [DocumentDetect]({{ site.api }}class/advanced/documentdetect.html)

@@ -58,7 +58,7 @@ permalink: /api/errorlist.html
  -80205     | The pageData has been destroyed.
  -80206     | The DocTextSearcher has been destroyed.
 
-## Viewer Releated Errors
+## Viewer Related Errors
 
  Error Code | Error Message                                                
  ---------- | ------------------------------------------------------------ 
@@ -90,7 +90,7 @@ permalink: /api/errorlist.html
  -80327     | The specified annotation(s) are not on the specified page or do not exist.
  -80328     | Rectangle-type redaction requires exactly one rect.
 
-## Camera Releated Errors
+## Camera Related Errors
 
  Error Code | Error Message                               
  ---------- | ------------------------------------------- 
@@ -102,6 +102,13 @@ permalink: /api/errorlist.html
  -80405     | No camera available.                        
  -80406     | The selected camera is denied by browser.   
  -80407     | No bound container.                         
+
+## Plugin Related Errors
+
+ Error Code | Error Message  
+------------|----------------
+ -80500     | The '<%param%>' plugin is not installed. 
+ -80501     | Some elements are ignored because the required plugin is not installed. 
 
 
 ## Wasm Error

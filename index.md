@@ -30,6 +30,7 @@ description: Dynamsoft Document Viewer Documentation Homepage
         - [Browse Viewer]({{ site.features }}viewers/others.html#browse-viewer)
         - [Custom Viewer]({{ site.features }}viewers/others.html#custom-viewer)
         {% comment %} - [Data synchronisation between viewers]({{ site.features }}viewers/datasync.html){% endcomment %}
+    - [Plugins and On-Demand Loading](/features/plugins-and-on-demand-loading.md)
     - Advanced
         - [Image Filter]({{ site.features }}advanced/imagefilter.html)
         - [Document Detection]({{ site.features }}advanced/documentdetect.html)
