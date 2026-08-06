@@ -20,21 +20,15 @@ The following feature modules are provided as standalone plugins:
 
 ### Camera Plugin
 
-File: `ddv-plugin-camera.js` | Import: `dynamsoft-document-viewer/camera`
-
 Provides the Capture Viewer's camera functionality, including video stream playback and image capture. Load this plugin only if your application requires camera capture.
 
 ### Annotation Plugin
-
-File: `ddv-plugin-annotation.js` | Import: `dynamsoft-document-viewer/annotation`
 
 Provides all annotation-related functionality, including creating, editing, and managing annotations. If your application doesn't require annotation editing, you can omit this module to reduce the overall bundle size.
 
 When the annotation plugin is not loaded, annotation-related UI elements in the viewer configuration are automatically ignored.
 
 ### Image PDF Parser Plugin
-
-File: `ddv-plugin-image-pdf.js` | Import: `dynamsoft-document-viewer/imagePdf`
 
 Provides lightweight PDF parsing for pure image-based PDFs (JPEG and JBIG2). Combined with the built-in support for saving image-based PDFs, this plugin enables image PDF workflows without the full PDF WASM module.
 
