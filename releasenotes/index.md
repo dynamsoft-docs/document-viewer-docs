@@ -12,7 +12,7 @@ permalink: /releasenotes/index.html
 
 # Release Notes
 
-## 5.0 (08/14/2026)
+## 5.0 (08/13/2026)
 
 ### Highlights
 
@@ -28,9 +28,9 @@ The following features are now packaged as standalone plugins that can be loaded
 
 ### WASM Splitting & On-Demand Loading
 
-The default image processing WASM module has been split to improve load times and reduce memory usage:
+The default image IO WASM module has been split to improve load times and reduce memory usage:
 
-* **PDF** and **TIFF** modules are now separated from the core image processing WASM module.
+* **PDF** and **TIFF** modules are now separated from the core image IO WASM module, leaving the core module with only common image format support and licensing functions.
 * These format-specific WASM modules are loaded **on demand** — only when your application actually needs to process TIFF files or vector-based PDFs.
 * For pure image-based PDFs, you can use the lightweight [Image PDF parser plugin](#modular-feature-packages) instead, eliminating the need to load the full PDF WASM module.
 * This significantly reduces the initial download size, especially for camera-based document scanning scenarios where TIFF/vector PDF processing may not be needed.
