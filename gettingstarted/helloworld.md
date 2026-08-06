@@ -90,8 +90,8 @@ For HelloWorld, we define below elements.
 // You can request a 30-day trial key from https://www.dynamsoft.com/customer/license/trialLicense/?product=ddv
 Dynamsoft.DDV.Core.license = "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9";
 Dynamsoft.DDV.Core.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@latest/dist/engine";
-// Load all wasm files including the full PDF wasm. Comment out this to load wasm files on-demand.
-Dynamsoft.DDV.Core.loadWasm();
+// Wasm files are loaded on demand by default. Uncomment to preload all.
+// Dynamsoft.DDV.Core.loadWasm();
 // Load the annotation plugin.
 Dynamsoft.DDV.use(Dynamsoft.DDV.AnnotationPlugin);
 await Dynamsoft.DDV.Core.init(); 
