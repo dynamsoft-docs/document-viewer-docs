@@ -185,11 +185,13 @@ const thumbnailObj = editViewer.thumbnail;
  | -80051     | DDV.Core.init() has not been completed.                                                |
  | -80302     | minZoom value cannot be larger than maxZoom value.                                     |
 
+
 **Warning**
 
  | Error Code | Error Message                                                                                                |
  | ---------- | ------------------------------------------------------------------------------------------------------------ |
  | -80316     | ImageFilter needs to be configured by Dynamsoft.DDV.setProcessingHandler to enable the image filter feature. |
+   -80501     | Some elements are ignored because the required plugin is not installed. 
 
 **Remark**
 
@@ -463,7 +465,8 @@ editViewer.updateUiConfig(viewerUi);
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   | `false`
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  | `false`
  -80313 | The element *XXX(ElementName)* is not supported in *XXX(ClassName)* class.      | `false`
-
+  -80501     | Some elements are ignored because the required plugin is not installed. 
+  
 **Remark**
 
 - The updates are independent of whether the viewer is displayed and are updated in real time.
