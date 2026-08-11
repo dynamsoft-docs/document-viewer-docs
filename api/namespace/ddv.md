@@ -49,6 +49,8 @@ permalink: /api/namespace/ddv.html
 | [`<static> addFonts()`](#static-addfonts)                  | Add font to library.             |
 | [`<static> clearLastError()`](#static-clearlasterror)       | Clear the last error or warning.                  |
 | [`<static> unload()`](#static-unload)               | Unload all DDV resources.                         |
+| [`<static> use()`](#static-use)               | Load a plugin                         |
+
 
 **Properties**
 
@@ -247,6 +249,27 @@ Unload all DDV resources.
 ```typescript
 static unload(): void;
 ```
+
+
+### `<static>` use()
+
+Load a plugin.
+
+**Syntax**
+
+```typescript
+static use(plugin: DDVPlugin): boolean;
+```
+
+**Code Snippet**
+
+```typescript
+Dynamsoft.DDV.use(Dynamsoft.DDV.AnnotationPlugin);
+Dynamsoft.DDV.use(Dynamsoft.DDV.CameraPlugin);
+Dynamsoft.DDV.use(Dynamsoft.DDV.ImagePdfParserPlugin);
+```
+
+See [Plugins and On-Demand Loading](/features/plugins-and-on-demand-loading.md).
 
 ## Properties
 
