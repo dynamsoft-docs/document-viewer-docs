@@ -52,14 +52,6 @@ The simplest way to include the SDK is to use either the [jsDelivr](https://jsde
   <script src="https://unpkg.com/dynamsoft-document-viewer@latest/dist/plugins/ddv-plugin-image-pdf.js"></script>
   ```
 
-To use the plugins, you also need to run the following code:
-
-```js
-Dynamsoft.DDV.use(Dynamsoft.DDV.AnnotationPlugin);
-Dynamsoft.DDV.use(Dynamsoft.DDV.CameraPlugin);
-Dynamsoft.DDV.use(Dynamsoft.DDV.ImagePdfParserPlugin);
-```
-
 ## Host the SDK yourself
 
 Besides using the CDN, you can also download the Solution and host related files on your own website/server before including it in your application.
@@ -127,3 +119,13 @@ or
   import { AnnotationPlugin } from 'dynamsoft-document-viewer/annotation';
   import { ImagePdfParserPlugin } from 'dynamsoft-document-viewer/imagePdf';
   ```
+
+## Use Plugins
+
+To actually use the plugins, you also need to run the following JavaScript code:
+
+```js
+Dynamsoft.DDV.use(Dynamsoft.DDV.AnnotationPlugin);
+Dynamsoft.DDV.use(Dynamsoft.DDV.CameraPlugin);
+Dynamsoft.DDV.use(Dynamsoft.DDV.ImagePdfParserPlugin);
+```
