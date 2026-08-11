@@ -136,7 +136,7 @@ const docManager = Dynamsoft.DDV.documentManager;
 **Syntax**
 
 ```typescript
-annotationManager?: AnnotationManager;
+annotationManager: AnnotationManager | undefined;
 ```
 
 **Code Snippet**
