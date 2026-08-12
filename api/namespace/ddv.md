@@ -253,7 +253,7 @@ static unload(): void;
 
 ### `<static>` use()
 
-Load a plugin.
+Load a plugin. See [Plugins and On-Demand Loading](/features/plugins-and-on-demand-loading.md).
 
 **Syntax**
 
@@ -269,7 +269,13 @@ Dynamsoft.DDV.use(Dynamsoft.DDV.CameraPlugin);
 Dynamsoft.DDV.use(Dynamsoft.DDV.ImagePdfParserPlugin);
 ```
 
-See [Plugins and On-Demand Loading](/features/plugins-and-on-demand-loading.md).
+**Exception**
+
+ Error Code | Error Message                                               
+ ---------- | ------------------------------------------------------------ 
+ -80100     | *XXX(API)*: *XXX(ParameterName)* is invalid.                
+ -80102     | *XXX(API)*: *XXX(ParameterName)* is missing.                
+
 
 ## Properties
 
