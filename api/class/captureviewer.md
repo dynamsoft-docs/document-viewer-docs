@@ -14,6 +14,8 @@ permalink: /api/class/captureviewer.html
 
 Capture Viewer is used to control camera, play video stream, and capture the images from camera.
 
+Please note that you need to load the camera [plugin](/features/plugins-and-on-demand-loading.md) to use Capture Viewer.
+
 ## API Index
 
 **Create and Destroy Instances** 

@@ -14,7 +14,7 @@ permalink: /api/class/annotationmanager.html
 
 The `Dynamsoft.DDV.annotationManager` instance will be created automatically as soon as DDV is initialized. Please refer to [`annotationManager`]({{ site.api }}namespace/ddv.html#static-annotationmanager).
 
-Please note that it is `undefined` if the annotation plugin is not installed.
+Please note that it is `undefined` if the annotation [plugin](/features/plugins-and-on-demand-loading.md) is not installed.
 
 ## API Index
 
