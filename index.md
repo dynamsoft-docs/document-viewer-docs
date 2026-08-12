@@ -10,7 +10,7 @@ description: Dynamsoft Document Viewer Documentation Homepage
 
 - [Introduction]({{site.introduction}}index.html) 
 - Getting Started
-    - [System Requirements]({{ site.gettingstarted }}sys_requirement.html)
+    - [System Requirements]({{ site.gettingstarted }}sys_requirements.html)
     - [Adding the dependency]({{ site.gettingstarted }}add_dependency.html)
     - [SDK Initialization]({{ site.gettingstarted }}sdk_init.html) 
     - [Creating HelloWorld]({{ site.gettingstarted }}helloworld.html)

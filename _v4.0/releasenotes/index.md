@@ -354,7 +354,7 @@ Additionally, we've optimized performance and added several new features to enha
 
 ### Improved
 
-- Optimized compatibility with browsers. [>> Detail]({{ site.gettingstarted }}sys_requirement.html#supported-browsers)
+- Optimized compatibility with browsers. [>> Detail]({{ site.gettingstarted }}sys_requirements.html#supported-browsers)
 
 ### Added
 
