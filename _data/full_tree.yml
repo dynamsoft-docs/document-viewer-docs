@@ -2,6 +2,7 @@ tree_file_list:
   - sidelist-introduction.html
   - sidelist-gettingstarted.html
   - sidelist-features.html
+  - sidelist-features-v4.0.html
   - sidelist-dviewer.html
   - sidelist-ui.html
   - sidelist-apis.html
@@ -14,4 +15,5 @@ tree_file_list:
   - sidelist-apis-v2.1.html
   - sidelist-apis-v3.2.1.html
   - sidelist-apis-v4.0.html
+
 
