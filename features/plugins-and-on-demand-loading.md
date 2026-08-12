@@ -38,7 +38,7 @@ The WASM modules are split so that format-specific modules are loaded only when 
 
 - The core WASM module covers common image formats and licensing.
 - The **PDF and TIFF** WASM module (a single file covering both formats) is separated and loaded on demand — only when your application processes TIFF or PDF files.
-- For pure image-based PDFs, the [Image PDF parser plugin](#image-pdf-parser-plugin) can be used instead, eliminating the need to load the full PDF WASM module. (If the full PDF WASM is loaded, it will not use the plugin for PDF loading.). For PDFs with vector content, the full PDF WASM is still needed.
+- For pure image-based (JPEG and JBIG2) PDFs, the [Image PDF parser plugin](#image-pdf-parser-plugin) can be used instead, eliminating the need to load the full PDF WASM module. For PDFs with vector content or requiring annotation features, the full PDF WASM is still needed.
 - The image processing module is loaded upon performing operations like perspective transform and image filtering.
 - This reduces the initial download size and memory usage, especially for camera-based scanning scenarios where TIFF/vector PDF processing may not be needed.
 
