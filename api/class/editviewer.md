@@ -465,7 +465,7 @@ editViewer.updateUiConfig(viewerUi);
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   | `false`
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  | `false`
  -80313 | The element *XXX(ElementName)* is not supported in *XXX(ClassName)* class.      | `false`
-  -80501     | Some elements are ignored because the required plugin is not installed. 
+ -80501 | Some elements are ignored because the required plugin is not installed.  | `true`
   
 **Remark**
 
