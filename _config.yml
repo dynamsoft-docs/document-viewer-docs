@@ -47,6 +47,9 @@ collections:
   v3.2.1:
     output: true
     permalink: /:path-:collection:output_ext
+  v4.0:
+    output: true
+    permalink: /:path-:collection:output_ext
     
 defaults:
   - scope:
