@@ -37,7 +37,8 @@ The default image IO WASM module has been split to improve load times and reduce
 
 ### Removed
 
-`CustomViewer` has been removed.
+* Removed `CustomViewer`.
+* Removed the dependency of [dynamsoft-core](https://www.npmjs.com/package/dynamsoft-core).
 
 ### Other Improvements
 
