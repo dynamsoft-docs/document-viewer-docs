@@ -44,6 +44,7 @@ The default image IO WASM module has been split to improve load times and reduce
 * Improved the alignment setting of text and redaction annotations by remembering the applied alignment via UI.
 * Improved the speed of [`loadSource`](/api/interface/idocument/index.md#loadsource).
 * Improved the rendering of text annotations.
+* Updated third-party libraries to enhance security.
 
 
 ## 4.0 (04/21/2026)
