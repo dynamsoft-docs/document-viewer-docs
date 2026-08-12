@@ -196,7 +196,7 @@ const defaultEditUi = Dynamsoft.DDV.getDefaultUiConfig("editViewer");
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.                      | `null`
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.                     | `null`
  -80103 | *XXX(API)*: The value for *XXX(ParameterName)* is not supported.| `null`
- -80501 | Some elements are ignored because the required plugin is not installed.| `null` 
+ -80501 | Some elements are ignored because the required plugin is not installed.| `UiConfig` 
 
 
 ### `<static>` addFonts()
