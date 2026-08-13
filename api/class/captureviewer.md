@@ -14,6 +14,8 @@ permalink: /api/class/captureviewer.html
 
 Capture Viewer is used to control camera, play video stream, and capture the images from camera.
 
+Please note that you need to load the camera [plugin](/features/plugins-and-on-demand-loading.md) to use Capture Viewer.
+
 ## API Index
 
 **Create and Destroy Instances** 
@@ -123,6 +125,7 @@ const captureViewer = new Dynamsoft.DDV.CaptureViewer({
  -80005 | Domain does not match the domain bound to the *XXX(LicenseModuleName)* module license.  
  -80050 | DDV.Core.init() has not been set up yet.   
  -80051 | DDV.Core.init() has not been completed.   
+ -80500 | The '<%param%>' plugin is not installed.  
 
 **Warning**
 

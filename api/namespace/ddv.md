@@ -49,6 +49,8 @@ permalink: /api/namespace/ddv.html
 | [`<static> addFonts()`](#static-addfonts)                  | Add font to library.             |
 | [`<static> clearLastError()`](#static-clearlasterror)       | Clear the last error or warning.                  |
 | [`<static> unload()`](#static-unload)               | Unload all DDV resources.                         |
+| [`<static> use()`](#static-use)               | Load a plugin                         |
+
 
 **Properties**
 
@@ -103,6 +105,7 @@ type HandlerType = "documentBoundariesDetect"|"imageFilter";
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.   
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.  
  -80103 | *XXX(API)*: The value for *XXX(ParameterName)* is not supported.
+ -80500 | The '<%param%>' plugin is not installed.  
 
 **Remark**
 
@@ -130,7 +133,13 @@ const docManager = Dynamsoft.DDV.documentManager;
 
 ### `<static>` annotationManager
 
-[`AnnotationManager`]({{ site.api }}class/annotationmanager.html) instance.
+[`AnnotationManager`]({{ site.api }}class/annotationmanager.html) instance. It is `undefined` if the annotation plugin is not installed.
+
+**Syntax**
+
+```typescript
+annotationManager: AnnotationManager | undefined;
+```
 
 **Code Snippet**
 
@@ -187,6 +196,8 @@ const defaultEditUi = Dynamsoft.DDV.getDefaultUiConfig("editViewer");
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.                      | `null`
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.                     | `null`
  -80103 | *XXX(API)*: The value for *XXX(ParameterName)* is not supported.| `null`
+ -80501 | Some elements are ignored because the required plugin is not installed.| `UiConfig` 
+
 
 ### `<static>` addFonts()
 
@@ -238,6 +249,33 @@ Unload all DDV resources.
 ```typescript
 static unload(): void;
 ```
+
+
+### `<static>` use()
+
+Load a plugin. See [Plugins and On-Demand Loading](/features/plugins-and-on-demand-loading.md).
+
+**Syntax**
+
+```typescript
+static use(plugin: DDVPlugin): boolean;
+```
+
+**Code Snippet**
+
+```typescript
+Dynamsoft.DDV.use(Dynamsoft.DDV.AnnotationPlugin);
+Dynamsoft.DDV.use(Dynamsoft.DDV.CameraPlugin);
+Dynamsoft.DDV.use(Dynamsoft.DDV.ImagePdfParserPlugin);
+```
+
+**Exception**
+
+ Error Code | Error Message                                               
+ ---------- | ------------------------------------------------------------ 
+ -80100     | *XXX(API)*: *XXX(ParameterName)* is invalid.                
+ -80102     | *XXX(API)*: *XXX(ParameterName)* is missing.                
+
 
 ## Properties
 

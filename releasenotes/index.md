@@ -12,6 +12,42 @@ permalink: /releasenotes/index.html
 
 # Release Notes
 
+## 5.0 (08/13/2026)
+
+### Highlights
+
+Dynamsoft Document Viewer 5.0 introduces a **pluggable architecture**, allowing you to load only the features you need — reducing bundle size and improving performance for your specific use cases.
+
+### Modular Feature Packages
+
+The following features are now packaged as standalone plugins that can be loaded on demand:
+
+* **Camera plugin** (`camera.js`): The Capture Viewer's camera-related JavaScript is now packaged independently. Only applications that need camera capture functionality need to load this module.
+* **Annotation plugin** (`annotation.js`): All annotation-related functionality is now packaged independently. If your application doesn't require annotation editing, you can omit this module to reduce the overall bundle size. Note that if the annotation plugin is not loaded, annotation-related UI elements in the viewer configuration will be automatically ignored when creating the viewer.
+* **Image PDF parser plugin** (`image-pdf.js`): A new lightweight PDF parsing plugin for loading pure image-based (JPEG and JBIG2) PDFs without the overhead of the full PDF rendering engine. Combined with the newly added support for saving image-based PDFs in the default JavaScript, you can now handle image PDF workflows end-to-end without the PDF WASM module. Note that if you need to process PDFs containing vector graphics or require annotation features, the full PDF WASM module will be automatically loaded when needed.
+
+### WASM Splitting & On-Demand Loading
+
+The default image IO WASM module has been split to improve load times and reduce memory usage:
+
+* **PDF** and **TIFF** modules are now separated from the core image IO WASM module, leaving the core module with only common image format support and licensing functions.
+* These format-specific WASM modules are loaded **on demand** — only when your application actually needs to process TIFF or PDF files.
+* For pure image-based PDFs, you can use the lightweight [Image PDF parser plugin](#modular-feature-packages) instead, eliminating the need to load the full PDF WASM module.
+* This significantly reduces the initial download size, especially for camera-based document scanning scenarios where TIFF/vector PDF processing may not be needed.
+
+### Removed
+
+* Removed `CustomViewer`.
+* Removed the dependency of [dynamsoft-core](https://www.npmjs.com/package/dynamsoft-core).
+
+### Other Improvements
+
+* Improved the alignment setting of text and redaction annotations by remembering the applied alignment via UI.
+* Improved the speed of [`loadSource()`](/api/interface/idocument/index.md#loadsource).
+* Improved the rendering of text annotations.
+* Updated third-party libraries to enhance security.
+
+
 ## 4.0 (04/21/2026)
 
 ### New Features
@@ -355,7 +391,7 @@ Additionally, we've optimized performance and added several new features to enha
 
 ### Improved
 
-- Optimized compatibility with browsers. [>> Detail]({{ site.gettingstarted }}sys_requirement.html#supported-browsers)
+- Optimized compatibility with browsers. [>> Detail]({{ site.gettingstarted }}sys_requirements.html#supported-browsers)
 
 ### Added
 

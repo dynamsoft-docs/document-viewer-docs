@@ -12,6 +12,9 @@ permalink: /api/enumeration-type/enumstampicon.html
 
 # EnumStampIcon
 
+Enumeration for stamp annotation icon. It is undefined if the annotation plugin is not installed.
+
+
 ```typescript
 enum EnumStampIcon { 
     REJECTED = "rejected", 
