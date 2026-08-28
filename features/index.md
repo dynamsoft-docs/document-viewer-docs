@@ -33,9 +33,10 @@ So manage data is to manage documents and pages.
 
 Actually, if you are using the default UI of DDV, the data has been processed and managed internally.
 
-Starting from version 2.0, DDV supports annotation functionalities, which means that annotation data also needs to be managed.
+In addition, DDV supports annotation and PDF form filling functionalities.
 
 - [Annotation management]({{ site.features }}datamanagement/annotmanagement.html)
+- [Form management]({{ site.features }}datamanagement/form-management.html)
 
 ## Viewers
 
