@@ -4,7 +4,7 @@ This project is to store [Dynamsoft Document Viewer](https://www.dynamsoft.com/d
 
 ### Local Development
 
-1. Download the docs template repo and the Web TWAIN docs repo with [download.sh](https://github.com/dynamsoft-docs/document-viewer-docs/raw/refs/heads/master/scripts/download.sh).
+1. Download the docs template repo and the document viewer docs repo with [download.sh](https://github.com/dynamsoft-docs/document-viewer-docs/raw/refs/heads/master/scripts/download.sh).
 2. Install Ruby.
 3. Go to the docs' folder and install dependencies.
 
