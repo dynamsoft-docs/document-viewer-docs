@@ -32,6 +32,14 @@ When the annotation plugin is not loaded, annotation-related UI elements in the 
 
 Provides lightweight PDF parsing for pure image-based PDFs (JPEG and JBIG2). Combined with the built-in support for saving image-based PDFs, this plugin enables image PDF workflows without the full PDF WASM module.
 
+### Form Plugin
+
+Provides PDF form field management and form-filling functionality, including reading the raw data of form fields, updating their runtime properties (value, visibility, read-only, required, etc.), and locating the rendered form widgets in the viewer. Load this plugin only if your application needs to fill or manage PDF forms.
+
+The form plugin depends on the [annotation plugin](#annotation-plugin) and must be installed after it.
+
+When the form plugin is not loaded, the `Dynamsoft.DDV.formManager` instance is `undefined` and the form-related methods of the viewers are unavailable. Please refer to [`FormManager`](/api/class/formmanager.md) for the available APIs.
+
 ## WASM On-Demand Loading
 
 The WASM modules are split so that format-specific modules are loaded only when needed:
