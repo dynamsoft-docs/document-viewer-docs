@@ -26,11 +26,13 @@ permalink: /api/namespace/ddv.html
 | ------------------------------- | ------------------------------------------------- |
 | [`<static> documentManager`](#static-documentmanager)   | [`DocumentManager`]({{ site.api }}class/documentmanager.html) instance.   |
 | [`<static> annotationManager`](#static-annotationmanager)   | [`AnnotationManager`]({{ site.api }}class/annotationmanager.html) instance. |
+| [`<static> formManager`](#static-formmanager)   | [`FormManager`]({{ site.api }}class/formmanager.html) instance. It is `undefined` if the form plugin is not installed. |
 
 **Classes**
 
 - [DocumentManager]({{ site.api }}class/documentmanager.html)
 - [AnnotationManager]({{ site.api }}class/annotationmanager.html)
+- [FormManager]({{ site.api }}class/formmanager.html)
 - [EditViewer]({{ site.api }}class/editviewer.html)
 - [CaptureViewer]({{ site.api }}class/captureviewer.html)
 - [PerspectiveViewer]({{ site.api }}class/perspectiveviewer.html)
@@ -149,6 +151,29 @@ Dynamsoft.DDV.Core.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-
 await Dynamsoft.DDV.Core.init(); 
 
 const annotManager = Dynamsoft.DDV.annotationManager;
+```
+
+### `<static>` formManager
+
+[`FormManager`]({{ site.api }}class/formmanager.html) instance. It is `undefined` if the form [plugin](/features/plugins-and-on-demand-loading.md) is not installed.
+
+**Syntax**
+
+```typescript
+formManager: FormManager | undefined;
+```
+
+**Code Snippet**
+
+```typescript
+Dynamsoft.DDV.Core.license = "Your-License-String";
+Dynamsoft.DDV.Core.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@latest/dist/engine"; // lead to a folder containing the distributed WASM files
+await Dynamsoft.DDV.Core.init(); 
+
+Dynamsoft.DDV.use(Dynamsoft.DDV.AnnotationPlugin);
+Dynamsoft.DDV.use(Dynamsoft.DDV.FormPlugin);
+
+const formManager = Dynamsoft.DDV.formManager;
 ```
 
 
