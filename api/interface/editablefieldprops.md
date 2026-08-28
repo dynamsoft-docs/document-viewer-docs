@@ -18,13 +18,12 @@ The runtime properties of a form field that can be modified with [`FormManager.s
 
 ```typescript
 interface EditableFieldProps {
-  value?: PdfFieldValue;
+  value?: string | number | boolean | null | string[];
+  alternateName?: string;
   readonly?: boolean;
   required?: boolean;
   visible?: boolean;
-  display?: PdfFieldDisplay;
-  topIndex?: number;
-  isSignatureApplied?: boolean;
+  removeUponSaving?: boolean;
 }
 ```
 
@@ -32,7 +31,11 @@ interface EditableFieldProps {
 
 ### value
 
-The current value of the field. The type is [`PdfFieldValue`]({{ site.api }}enumeration-type/pdffieldvalue.html).
+The current value of the field. The concrete value type depends on the field type: a text field usually uses `string`, a check box usually uses `boolean`, and a list box may use `string[]`. `null` means the field currently has no value.
+
+### alternateName
+
+The alternate name of the field, which can be used for accessibility or tooltips.
 
 ### readonly
 
@@ -46,18 +49,11 @@ Whether the field is required to have a valid value.
 
 Whether the field and its associated controls are displayed.
 
-### display
+### removeUponSaving
 
-The display mode of the field. The type is [`PdfFieldDisplay`]({{ site.api }}enumeration-type/pdffielddisplay.html).
-
-### topIndex
-
-The index of the first option displayed in the current viewport of a list box.
-
-### isSignatureApplied
-
-Whether a signature has been applied. When set to `true`, the associated signature controls are also updated as signed.
+Indicates whether the field should be removed when the PDF is saved. If set to `true`, the field is removed upon saving. For example, a signature can be applied over the field, and the field can then be removed from the PDF.
 
 ## Related
 
 - [`FormManager.setFieldProps()`]({{ site.api }}class/formmanager.html#setfieldprops)
+- [`FormField`]({{ site.api }}interface/formfield.html)

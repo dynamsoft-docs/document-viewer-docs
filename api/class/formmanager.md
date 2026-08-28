@@ -35,20 +35,33 @@ const formManager = DDV.formManager;
 
 | API Name | Description |
 | --- | --- |
-| [`getFieldRaws()`](#getfieldraws) | Get the raw data snapshots of all the form fields in the specified document. |
-| [`getFieldRawByUid()`](#getfieldrawbyuid) | Get the raw data snapshot of a form field by the field uid. |
+| [`getFields()`](#getfields) | Get the raw data of all the form fields in the specified document. |
+| [`getFieldByUid()`](#getfieldbyuid) | Get the raw data of a form field by the field uid. |
 | [`setFieldProps()`](#setfieldprops) | Update the runtime properties of a form field. |
+
+**Events**
+
+| API Name | Description |
+| --- | --- |
+| [`on()`](#on) | Bind a listener to the specified event. |
+| [`off()`](#off) | Unbind event listener(s) from the specified event. |
+
+***Integrated Events***
+
+| Event Name | Description |
+| --- | --- |
+| [`formFieldModified`](#formfieldmodified) | Triggered when the runtime properties of a form field are modified. |
 
 ## Methods
 
-### getFieldRaws()
+### getFields()
 
-Get the raw data snapshots of all the form fields in the specified document. Each snapshot merges the field definition with the current Form Runtime state.
+Get the raw data of all the form fields in the specified document.
 
 **Syntax**
 
 ```typescript
-getFieldRaws(docUid: string): PdfFormFieldRaw[];
+getFields(docUid: string): FormField[];
 ```
 
 **Parameters**
@@ -57,18 +70,18 @@ getFieldRaws(docUid: string): PdfFormFieldRaw[];
 
 **Return value**
 
-An array of [`PdfFormFieldRaw`]({{ site.api }}interface/pdfformfieldraw.html) objects. It returns `[]` if the document does not exist, the form data has not been built yet, or there are no form fields.
+An array of [`FormField`]({{ site.api }}interface/formfield.html) objects. It returns `[]` if the document does not exist, the form data has not been built yet, or there are no form fields.
 
 **Code Snippet**
 
 ```typescript
-const raws = Dynamsoft.DDV.formManager.getFieldRaws(docUid);
-raws.forEach(raw => console.log(raw.uid, raw.type, raw.value));
+const fields = Dynamsoft.DDV.formManager.getFields(docUid);
+fields.forEach(field => console.log(field.uid, field.type, field.value));
 ```
 
 **Remark**
 
-- The returned array is a serializable snapshot and does not expose mutable references that can directly modify the internal Form Model.
+- The returned array is a serializable snapshot and does not expose mutable references that can directly modify the internal form model.
 
 **Warning**
 
@@ -77,14 +90,14 @@ raws.forEach(raw => console.log(raw.uid, raw.type, raw.value));
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid. | `[]`
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing. | `[]`
 
-### getFieldRawByUid()
+### getFieldByUid()
 
-Get the raw data snapshot of a form field by the field uid.
+Get the raw data of a form field by the field uid.
 
 **Syntax**
 
 ```typescript
-getFieldRawByUid(fieldUid: string): PdfFormFieldRaw | undefined;
+getFieldByUid(fieldUid: string): FormField;
 ```
 
 **Parameters**
@@ -93,12 +106,12 @@ getFieldRawByUid(fieldUid: string): PdfFormFieldRaw | undefined;
 
 **Return value**
 
-A [`PdfFormFieldRaw`]({{ site.api }}interface/pdfformfieldraw.html) object. It returns `undefined` if the field does not exist.
+A [`FormField`]({{ site.api }}interface/formfield.html) object.
 
 **Code Snippet**
 
 ```typescript
-const field = Dynamsoft.DDV.formManager.getFieldRawByUid(fieldUid);
+const field = Dynamsoft.DDV.formManager.getFieldByUid(fieldUid);
 if (field) {
   console.log("Current field value:", field.value);
 }
@@ -107,6 +120,7 @@ if (field) {
 **Remark**
 
 - The returned object is a serializable snapshot and does not expose a mutable reference to the internal field entity.
+- If the field does not exist, `undefined` is returned and a warning is reported.
 
 **Warning**
 
@@ -122,7 +136,7 @@ Update the runtime properties of a form field and trigger the associated form co
 **Syntax**
 
 ```typescript
-setFieldProps(fieldUid: string, props: EditableFieldProps): void;
+setFieldProps(fieldUid: string, props: EditableFieldProps): boolean;
 ```
 
 **Parameters**
@@ -130,6 +144,12 @@ setFieldProps(fieldUid: string, props: EditableFieldProps): void;
 `fieldUid`: The uid of the field to update.
 
 `props`: The runtime properties to update. Only the passed-in properties are updated; the properties that are not passed in stay unchanged. Please refer to [`EditableFieldProps`]({{ site.api }}interface/editablefieldprops.html).
+
+**Return value**
+
+`true`: Successfully.
+
+`false`: Failed.
 
 **Code Snippet**
 
@@ -139,20 +159,110 @@ Dynamsoft.DDV.formManager.setFieldProps(fieldUid, {
   readonly: true,
 });
 
-const updatedField = Dynamsoft.DDV.formManager.getFieldRawByUid(fieldUid);
+const updatedField = Dynamsoft.DDV.formManager.getFieldByUid(fieldUid);
 console.log(updatedField?.value, updatedField?.readonly);
 ```
 
 **Remark**
 
 - The operation updates the runtime state of the field and notifies the associated rendered controls in the document to refresh.
-- If `isSignatureApplied` is set to `true`, the field and its associated signature controls are marked as signed.
+- If `removeUponSaving` is set to `true`, the field is removed when the PDF is saved. For example, a signature can be applied over the field, and the field can then be removed from the PDF.
 - If the document or the field is not found, no other fields or documents are modified.
 
-**Exception**
+**Warning**
+
+ Error Code | Error Message | API return value
+----------- | ------------ | ----------------
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid. | `false`
+ -80102 | *XXX(API)*: *XXX(ParameterName)* is missing. | `false`
+ -80104 | *XXX(API)*: The specified document(s) do not exist. | `false`
+
+## Events
+
+### on()
+
+Bind a listener to the specified event.
+
+**Syntax**
+
+```typescript
+on<K extends keyof FormManagerEventMap>(eventName: K, listener:(event:FormManagerEventMap[K])=>any): void;
+```
+
+**Parameters**
+
+`eventName`: Specify the event name. It should be an integrated event name.
+
+`listener`: Specify the listener.
+
+**Code Snippet**
+
+```typescript
+const eventFunc = (e) => {
+  console.log(e.formUid);
+  console.log(e.newFieldProps);
+};
+
+Dynamsoft.DDV.formManager.on("formFieldModified", eventFunc);
+```
+
+**Warning**
 
  Error Code | Error Message
- ---------- | ------------
+----------- | ------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.
- -80104 | *XXX(API)*: The specified document(s) do not exist.
+ -80103 | *XXX(API)*: The value for *XXX(ParameterName)* is not supported.
+
+### off()
+
+Unbind event listener(s) from the specified event.
+
+**Syntax**
+
+```typescript
+off<K extends keyof FormManagerEventMap>(eventName: K, listener?:(event:FormManagerEventMap[K])=>any): void;
+```
+
+**Parameters**
+
+`eventName`: Specify the event name. It should be an integrated event name.
+
+`listener`: Specify the listener. If no listener is specified, unbind all event listeners from the specified event.
+
+**Code Snippet**
+
+```typescript
+const eventFunc = (e) => {
+  console.log(e.formUid);
+  console.log(e.newFieldProps);
+};
+
+Dynamsoft.DDV.formManager.on("formFieldModified", eventFunc);
+
+// Unbind the specified event listener.
+Dynamsoft.DDV.formManager.off("formFieldModified", eventFunc);
+```
+
+**Warning**
+
+ Error Code | Error Message
+----------- | ------------
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid.
+ -80102 | *XXX(API)*: *XXX(ParameterName)* is missing.
+ -80103 | *XXX(API)*: The value for *XXX(ParameterName)* is not supported.
+
+### Integrated Events
+
+#### formFieldModified
+
+Triggered when the runtime properties of a form field are modified.
+
+**Callback**
+
+[`FormFieldModifiedEvent`]({{ site.api }}interface/formfieldmodifiedevent.html): An EventObject.
+
+**Attributes**
+
+- `formUid`: The uid of the form where the field is modified.
+- `newFieldProps`: The new [`FormField`]({{ site.api }}interface/formfield.html) snapshot of the modified field.

@@ -12,7 +12,7 @@ permalink: /api/interface/widgetstyle.html
 
 # WidgetStyle
 
-The layout and display state information of a form widget in the PDF page. It is returned by the `style` attribute of [`IWidgetClickedEvent`]({{ site.api }}interface/iwidgetclickedevent.html).
+The layout information of a form widget in the PDF page. It is returned by the `style` attribute of [`IWidgetClickedEvent`]({{ site.api }}interface/iwidgetclickedevent.html).
 
 ## Syntax
 
@@ -22,9 +22,6 @@ interface WidgetStyle {
   y: number;
   width: number;
   height: number;
-  onStateName?: string;
-  alternateName?: string;
-  appearanceState?: string;
 }
 ```
 
@@ -46,21 +43,9 @@ The width of the widget.
 
 The height of the widget.
 
-### onStateName
-
-The state name used when the check box or the radio button is selected.
-
-### alternateName
-
-The alternate name of the widget, which can be used for accessibility or tooltips.
-
-### appearanceState
-
-The current appearance state of the widget.
-
 ## Remark
 
-- `WidgetStyle` only describes the layout and appearance-related data of the widget and is not equivalent to the DOM `CSSStyleDeclaration`. To modify the style of a widget, use the DOM element or the application-side style management, instead of writing back the `style` object of the event to the Form Model.
+- `WidgetStyle` only describes the layout data of the widget and is not equivalent to the DOM `CSSStyleDeclaration`. To modify the style of a widget, use the [`FieldElement`]({{ site.api }}interface/fieldelement.html) DOM elements or the application-side style management.
 
 ## Related
 

@@ -20,7 +20,7 @@ The event object of the `widgetClicked` event of [`EditViewer`]({{ site.api }}cl
 interface IWidgetClickedEvent {
   fieldUid: string;
   widgetUid: string;
-  el: HTMLElement;
+  el: FieldElement;
   style: WidgetStyle;
 }
 ```
@@ -37,13 +37,14 @@ The uid of the clicked widget.
 
 ### el
 
-The DOM element that is actually rendered and clicked in the current viewer.
+The [`FieldElement`]({{ site.api }}interface/fieldelement.html) of the widget that is actually rendered and clicked in the current viewer.
 
 ### style
 
-The layout and display state information of the widget in the PDF page. The type is [`WidgetStyle`]({{ site.api }}interface/widgetstyle.html).
+The layout information of the widget in the PDF page. The type is [`WidgetStyle`]({{ site.api }}interface/widgetstyle.html).
 
 ## Related
 
 - [`EditViewer.widgetClicked`]({{ site.api }}class/editviewer.html#widgetclicked)
+- [`FieldElement`]({{ site.api }}interface/fieldelement.html)
 - [`WidgetStyle`]({{ site.api }}interface/widgetstyle.html)

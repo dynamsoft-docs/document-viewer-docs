@@ -127,6 +127,9 @@ permalink: /api/index.html
 - [`EditViewerConfig`]({{ site.api }}interface/editviewerconfig.html)
 - [`EditViewerConstructorOptions`]({{ site.api }}interface/editviewerconstructoroptions.html)
 - [`EditableFieldProps`]({{ site.api }}interface/editablefieldprops.html)
+- [`FieldElement`]({{ site.api }}interface/fieldelement.html)
+- [`FormField`]({{ site.api }}interface/formfield.html)
+- [`FormFieldModifiedEvent`]({{ site.api }}interface/formfieldmodifiedevent.html)
 - [`IBrowseViewer`]({{ site.api }}interface/ibrowseviewer.html)
 - [`IImageFilter`]({{ site.api }}interface/iimagefilter.html)
 - [`IPointerEvent`](/api/interface/ipointerevent.md)
@@ -140,9 +143,6 @@ permalink: /api/index.html
 - [`MergeDocumentOptions`]({{ site.api }}interface/mergedocumentoptions.html)
 - [`PageImageInfo`](/api/interface/pageimageinfo.md)
 - [`PageVisualInfo`](/api/interface/pagevisualinfo.md)
-- [`PdfFormActionRaw`]({{ site.api }}interface/pdfformactionraw.html)
-- [`PdfFormFieldRaw`]({{ site.api }}interface/pdfformfieldraw.html)
-- [`PdfFormWidgetRaw`]({{ site.api }}interface/pdfformwidgetraw.html)
 - [`PerspectiveViewerConfig`]({{ site.api }}interface/perspectiveviewerconfig.html)
 - [`PerspectiveViewerConstructorOptions`]({{ site.api }}interface/perspectiveviewerconstructoroptions.html)
 - [`PlayCallbackInfo`]({{ site.api }}interface/playcallbackinfo.html)
@@ -175,8 +175,6 @@ permalink: /api/index.html
 - [`EnumDocumentDetectionStatus`]({{ site.api }}enumeration-type/enumdocumentdetectionstatus.html)
 - [`EnumStampIcon`]({{ site.api }}enumeration-type/enumstampicon.html)
 - [`EnumLineEnding`]({{ site.api }}enumeration-type/enumlineending.html)
-- [`type PdfFieldDisplay`]({{ site.api }}enumeration-type/pdffielddisplay.html)
-- [`type PdfFieldValue`]({{ site.api }}enumeration-type/pdffieldvalue.html)
 - [`type Quad`]({{ site.api }}enumeration-type/quad.html)
 
 ## Error

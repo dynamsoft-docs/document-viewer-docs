@@ -1617,7 +1617,7 @@ Get the rendered widget DOM elements of a form field in the current viewer.
 **Syntax**
 
 ```typescript
-getFieldElements(fieldUid: string): HTMLElement[];
+getFieldElements(fieldUid: string): FieldElement[];
 ```
 
 **Parameters**
@@ -1626,17 +1626,18 @@ getFieldElements(fieldUid: string): HTMLElement[];
 
 **Return value**
 
-An array of `HTMLElement` objects. It returns `[]` if there is no document opened, the form plugin is not installed, the field does not belong to the current document, or the field has no rendered control at the moment.
+An array of [`FieldElement`]({{ site.api }}interface/fieldelement.html) objects. It returns `[]` if there is no document opened, the form plugin is not installed, the field does not belong to the current document, or the field has no rendered control at the moment.
 
 **Code Snippet**
 
 ```typescript
 const elements = editViewer.getFieldElements(fieldUid);
-elements.forEach(el => el.focus());
+elements.forEach(el => el.content.classList.add("is-active"));
 ```
 
 **Remark**
 
+- A [`FieldElement`]({{ site.api }}interface/fieldelement.html) contains the `container` and the `content` DOM elements of a widget. The `content` element is usually the one to style or to attach event listeners to.
 - Only the controls already rendered in the current viewer are returned. The controls in virtual-rendered, invisible, or destroyed pages are not included in the result.
 - The returned elements belong to the current document opened in this viewer only. The elements of the same group in the thumbnail, other viewers, or other documents are not mixed in.
 
@@ -2000,8 +2001,8 @@ Triggered when a rendered form widget in the current viewer is clicked. It will 
 
 - `fieldUid`: The uid of the field the clicked widget belongs to.
 - `widgetUid`: The uid of the clicked widget.
-- `el`: The DOM element that is actually rendered and clicked in the current viewer.
-- `style`: The layout and display state information of the widget in the PDF page. The type is [`WidgetStyle`]({{ site.api }}interface/widgetstyle.html).
+- `el`: The [`FieldElement`]({{ site.api }}interface/fieldelement.html) of the widget that is actually rendered and clicked in the current viewer.
+- `style`: The layout information of the widget in the PDF page. The type is [`WidgetStyle`]({{ site.api }}interface/widgetstyle.html).
 
 **Remark**
 
