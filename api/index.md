@@ -134,6 +134,7 @@ permalink: /api/index.html
 - [`IQuadModifiedEvent`](/api/interface/iquadmodifiedevent.md)
 - [`ITextSearchedInfo`](/api/interface/itextsearchedinfo.md)
 - [`ITextSelectedInfo`](/api/interface/itextselectedinfo.md)
+- [`IWidgetClickedEvent`]({{ site.api }}interface/iwidgetclickedevent.html)
 - [`IDocumentDetect`]({{ site.api }}interface/idocumentdetect.html)
 - [`ImageFilterItem`]({{ site.api }}interface/imagefilteritem.html)
 - [`MergeDocumentOptions`]({{ site.api }}interface/mergedocumentoptions.html)
@@ -159,6 +160,7 @@ permalink: /api/index.html
 - [`VideoConfig`]({{ site.api }}interface/videoconfig.html)
 - [`VideoDeviceInfo`]({{ site.api }}interface/videodeviceinfo.html)
 - [`VImageData`]({{ site.api }}interface/vimagedata.html)
+- [`WidgetStyle`]({{ site.api }}interface/widgetstyle.html)
 - [`ZoomOrigin`]({{ site.api }}interface/zoomorigin.html)
 
 ## Enumeration & Type

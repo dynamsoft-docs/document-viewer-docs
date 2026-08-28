@@ -103,6 +103,13 @@ Edit Viewer is used to edit the pages in document, such as, rotating, cropping, 
 | [`searchPrevText()`](#searchprevtext) | Search the previous matched result. |
 | [`searchFullText()`](#searchfulltext) | Search the full text to get all the matched results. |
 
+**Form Control**
+
+| API Name | Description |
+| --- | --- |
+| [`getFieldElements()`](#getfieldelements) | Get the rendered widget DOM elements of a form field in the current viewer. |
+| [`goToField()`](#gotofield) | Navigate to the page containing a form field and scroll the control to the center of the viewport. |
+
 **Events**
 
 | API Name        | Description                                        |
@@ -143,6 +150,7 @@ Edit Viewer is used to edit the pages in document, such as, rotating, cropping, 
 | [`pageover`](#pageover)                   |
 | [`pageout`](#pageout)                   |
 | [`scroll`](#scroll) |
+| [`widgetClicked`](#widgetclicked) |
 
 ## Create and Destroy Instances
 
@@ -1598,6 +1606,87 @@ searchFullText(text: string, options?: SearchTextOptions): Promise<boolean>;
  -80305 | There is no image in the current document.
  -80322 | No results found.
 
+## Form Control
+
+> The methods in this section are available when the form [plugin](/features/plugins-and-on-demand-loading.md) is installed. They operate on the document currently opened in this `EditViewer`.
+
+### getFieldElements()
+
+Get the rendered widget DOM elements of a form field in the current viewer.
+
+**Syntax**
+
+```typescript
+getFieldElements(fieldUid: string): HTMLElement[];
+```
+
+**Parameters**
+
+`fieldUid`: The uid of the form field.
+
+**Return value**
+
+An array of `HTMLElement` objects. It returns `[]` if there is no document opened, the form plugin is not installed, the field does not belong to the current document, or the field has no rendered control at the moment.
+
+**Code Snippet**
+
+```typescript
+const elements = editViewer.getFieldElements(fieldUid);
+elements.forEach(el => el.focus());
+```
+
+**Remark**
+
+- Only the controls already rendered in the current viewer are returned. The controls in virtual-rendered, invisible, or destroyed pages are not included in the result.
+- The returned elements belong to the current document opened in this viewer only. The elements of the same group in the thumbnail, other viewers, or other documents are not mixed in.
+
+**Warning**
+
+ Error Code | Error Message | API return value
+ ---------- | ------------ | ----------------
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid. | `[]`
+ -80102 | *XXX(API)*: *XXX(ParameterName)* is missing. | `[]`
+
+### goToField()
+
+Navigate to the page containing the form field and try to scroll the first rendered control of the field to the center of the viewport.
+
+**Syntax**
+
+```typescript
+goToField(fieldUid: string): boolean;
+```
+
+**Parameters**
+
+`fieldUid`: The uid of the form field.
+
+**Return value**
+
+`true`: The field is located and the control is scrolled to the center successfully.
+
+`false`: The form plugin is not installed, no document is opened, the field does not exist, the field does not belong to the current document, or the target control is not rendered yet.
+
+**Code Snippet**
+
+```typescript
+const located = editViewer.goToField(fieldUid);
+if (!located) {
+  console.warn("The field does not exist or is not rendered yet.");
+}
+```
+
+**Remark**
+
+- If the field does not exist or no document is opened, the page and the scroll position do not change and `false` is returned.
+
+**Warning**
+
+ Error Code | Error Message | API return value
+ ---------- | ------------ | ----------------
+ -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid. | `false`
+ -80102 | *XXX(API)*: *XXX(ParameterName)* is missing. | `false`
+
 ## Events
 
 ### on()
@@ -1898,6 +1987,27 @@ Triggered when a pointer is moved out of the hit test boundaries of a page. It w
 #### scroll
 
 Triggered when the viewer is scrolled. It will return the native event object.
+
+#### widgetClicked
+
+Triggered when a rendered form widget in the current viewer is clicked. It will return an [`IWidgetClickedEvent`]({{ site.api }}interface/iwidgetclickedevent.html) object.
+
+**Callback**
+
+[`IWidgetClickedEvent`]({{ site.api }}interface/iwidgetclickedevent.html): An EventObject.
+
+**Attributes**
+
+- `fieldUid`: The uid of the field the clicked widget belongs to.
+- `widgetUid`: The uid of the clicked widget.
+- `el`: The DOM element that is actually rendered and clicked in the current viewer.
+- `style`: The layout and display state information of the widget in the PDF page. The type is [`WidgetStyle`]({{ site.api }}interface/widgetstyle.html).
+
+**Remark**
+
+- Only the form widget events actually clicked inside the current `EditViewer` are passed to the listener.
+- The `fieldUid` and `widgetUid` in the event always correspond to the field and the widget entity the clicked control belongs to.
+- Exceptions thrown by a listener do not break the document opening, rendering, or destroying flow of the viewer.
 
 #### Mouse Events
 
