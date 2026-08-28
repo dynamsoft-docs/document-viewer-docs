@@ -35,6 +35,7 @@ The simplest way to include the SDK is to use either the [jsDelivr](https://jsde
   <script src="https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@latest/dist/plugins/ddv-plugin-camera.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@latest/dist/plugins/ddv-plugin-annotation.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@latest/dist/plugins/ddv-plugin-image-pdf.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-document-viewer@latest/dist/plugins/ddv-plugin-form.js"></script>
   ```
 
 - UNPKG
@@ -50,6 +51,7 @@ The simplest way to include the SDK is to use either the [jsDelivr](https://jsde
   <script src="https://unpkg.com/dynamsoft-document-viewer@latest/dist/plugins/ddv-plugin-camera.js"></script>
   <script src="https://unpkg.com/dynamsoft-document-viewer@latest/dist/plugins/ddv-plugin-annotation.js"></script>
   <script src="https://unpkg.com/dynamsoft-document-viewer@latest/dist/plugins/ddv-plugin-image-pdf.js"></script>
+  <script src="https://unpkg.com/dynamsoft-document-viewer@latest/dist/plugins/ddv-plugin-form.js"></script>
   ```
 
 ## Host the SDK yourself
@@ -88,6 +90,7 @@ Depending on how you downloaded the SDK and where you put it, you can typically 
   <script src="./Your-Folder/dist/plugins/ddv-plugin-camera.js"></script>
   <script src="./Your-Folder/dist/plugins/ddv-plugin-annotation.js"></script>
   <script src="./Your-Folder/dist/plugins/ddv-plugin-image-pdf.js"></script>
+  <script src="./Your-Folder/dist/plugins/ddv-plugin-form.js"></script>
   ```
 
 or
@@ -103,6 +106,7 @@ or
   <script src="./node_modules/dynamsoft-document-viewer/dist/plugins/ddv-plugin-camera.js"></script>
   <script src="../node_modules/dynamsoft-document-viewer/dist/plugins/ddv-plugin-annotation.js"></script>
   <script src="./node_modules/dynamsoft-document-viewer/dist/plugins/ddv-plugin-image-pdf.js"></script>
+  <script src="./node_modules/dynamsoft-document-viewer/dist/plugins/ddv-plugin-form.js"></script>
   ```
 
 or
@@ -118,6 +122,7 @@ or
   import { CameraPlugin } from 'dynamsoft-document-viewer/camera';
   import { AnnotationPlugin } from 'dynamsoft-document-viewer/annotation';
   import { ImagePdfParserPlugin } from 'dynamsoft-document-viewer/imagePdf';
+  import { FormPlugin } from 'dynamsoft-document-viewer/form';
   ```
 
 ## Use Plugins
@@ -128,4 +133,7 @@ To actually use the plugins, you also need to run the following JavaScript code:
 Dynamsoft.DDV.use(Dynamsoft.DDV.AnnotationPlugin);
 Dynamsoft.DDV.use(Dynamsoft.DDV.CameraPlugin);
 Dynamsoft.DDV.use(Dynamsoft.DDV.ImagePdfParserPlugin);
+Dynamsoft.DDV.use(Dynamsoft.DDV.FormPlugin);
 ```
+
+> Note: The form plugin must be installed after the annotation plugin. Please refer to [Plugins and On-Demand Loading](/features/plugins-and-on-demand-loading.md) for more details.
