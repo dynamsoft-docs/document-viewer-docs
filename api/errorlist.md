@@ -42,6 +42,7 @@ permalink: /api/errorlist.html
  -80104     | *XXX(API)*: The specified document(s) do not exist.  
  -80105     | *XXX(API)*: The specified page(s) do not exist.      
  -80106     | *XXX(API)*: The specified annotation does not exist.
+ -80107     | *XXX(API)*: The specified form field does not exist.
  -80108     | *XXX(API)*: The document has been destroyed.
  -80109     | *XXX(API)*: The page has been destroyed.
 
