@@ -1648,6 +1648,12 @@ elements.forEach(el => el.content.classList.add("is-active"));
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid. | `[]`
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing. | `[]`
 
+**Exception**
+ 
+ Error Code  | Error Message                                        
+--------|-----------------------------------------------------
+ -80500 | The '<%param%>' plugin is not installed. 
+
 ### goToField()
 
 Navigate to the page containing the form field and try to scroll the first rendered control of the field to the center of the viewport.
@@ -1687,6 +1693,13 @@ if (!located) {
  ---------- | ------------ | ----------------
  -80100 | *XXX(API)*: *XXX(ParameterName)* is invalid. | `false`
  -80102 | *XXX(API)*: *XXX(ParameterName)* is missing. | `false`
+
+**Exception**
+ 
+ Error Code  | Error Message                                        
+--------|-----------------------------------------------------
+ -80500 | The '<%param%>' plugin is not installed. 
+
 
 ## Events
 
