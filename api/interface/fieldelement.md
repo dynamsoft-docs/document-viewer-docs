@@ -12,7 +12,7 @@ permalink: /api/interface/fieldelement.html
 
 # FieldElement
 
-The rendered DOM elements of a form widget. It is returned by [`EditViewer.getFieldElements()`]({{ site.api }}class/editviewer.html#getfieldelements) and is used as the `el` attribute of [`IWidgetClickedEvent`]({{ site.api }}interface/iwidgetclickedevent.html).
+The rendered DOM elements of a form widget.
 
 ## Syntax
 
