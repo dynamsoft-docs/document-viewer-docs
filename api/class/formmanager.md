@@ -12,22 +12,9 @@ permalink: /api/class/formmanager.html
 
 # FormManager Class
 
-The `Dynamsoft.DDV.formManager` instance is created as soon as the form plugin is installed. Please refer to [`formManager`]({{ site.api }}namespace/ddv.html#static-formmanager).
+The `Dynamsoft.DDV.formManager` instance manages PDF forms. It is mainly used for filling forms currently.
 
 Please note that it is `undefined` if the form [plugin](/features/plugins-and-on-demand-loading.md) is not installed.
-
-The form plugin is installed from the `dynamsoft-document-viewer/form` subpath and must be installed after the annotation plugin.
-
-```typescript
-import { DDV } from "dynamsoft-document-viewer";
-import { AnnotationPlugin } from "dynamsoft-document-viewer/annotation";
-import { FormPlugin } from "dynamsoft-document-viewer/form";
-
-DDV.use(AnnotationPlugin);
-DDV.use(FormPlugin);
-
-const formManager = DDV.formManager;
-```
 
 ## API Index
 
@@ -35,9 +22,9 @@ const formManager = DDV.formManager;
 
 | API Name | Description |
 | --- | --- |
-| [`getFields()`](#getfields) | Get the raw data of all the form fields in the specified document. |
-| [`getFieldByUid()`](#getfieldbyuid) | Get the raw data of a form field by the field uid. |
-| [`setFieldProps()`](#setfieldprops) | Update the runtime properties of a form field. |
+| [`getFields()`](#getfields) | Return an array of all field objects in the specified document. |
+| [`getFieldByUid()`](#getfieldbyuid) | Get a form field by the field uid. |
+| [`setFieldProps()`](#setfieldprops) | Update the properties of a form field. |
 
 **Events**
 
@@ -50,13 +37,13 @@ const formManager = DDV.formManager;
 
 | Event Name | Description |
 | --- | --- |
-| [`formFieldModified`](#formfieldmodified) | Triggered when the runtime properties of a form field are modified. |
+| [`formFieldModified`](#formfieldmodified) | Triggered when the properties of a form field are modified. |
 
 ## Methods
 
 ### getFields()
 
-Get the raw data of all the form fields in the specified document.
+Return an array of all field objects in the specified document.
 
 **Syntax**
 
@@ -92,7 +79,7 @@ fields.forEach(field => console.log(field.uid, field.type, field.value));
 
 ### getFieldByUid()
 
-Get the raw data of a form field by the field uid.
+Get a form field by the field uid.
 
 **Syntax**
 
@@ -131,7 +118,7 @@ if (field) {
 
 ### setFieldProps()
 
-Update the runtime properties of a form field and trigger the associated form controls to refresh.
+Update the properties of a form field and trigger the associated form controls to refresh.
 
 **Syntax**
 
@@ -143,7 +130,7 @@ setFieldProps(fieldUid: string, props: EditableFieldProps): boolean;
 
 `fieldUid`: The uid of the field to update.
 
-`props`: The runtime properties to update. Only the passed-in properties are updated; the properties that are not passed in stay unchanged. Please refer to [`EditableFieldProps`]({{ site.api }}interface/editablefieldprops.html).
+`props`: The properties to update. Only the passed-in properties are updated; the properties that are not passed in stay unchanged. Please refer to [`EditableFieldProps`]({{ site.api }}interface/editablefieldprops.html).
 
 **Return value**
 
@@ -256,7 +243,7 @@ Dynamsoft.DDV.formManager.off("formFieldModified", eventFunc);
 
 #### formFieldModified
 
-Triggered when the runtime properties of a form field are modified.
+Triggered when the properties of a form field are modified.
 
 **Callback**
 
