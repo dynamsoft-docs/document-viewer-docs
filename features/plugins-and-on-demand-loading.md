@@ -38,8 +38,6 @@ Provides PDF form field management and form-filling functionality, including rea
 
 The form plugin depends on the [annotation plugin](#annotation-plugin) and must be installed after it.
 
-When the form plugin is not loaded, the `Dynamsoft.DDV.formManager` instance is `undefined` and the form-related methods of the viewers are unavailable. Please refer to [`FormManager`](/api/class/formmanager.md) for the available APIs.
-
 ## WASM On-Demand Loading
 
 The WASM modules are split so that format-specific modules are loaded only when needed:
