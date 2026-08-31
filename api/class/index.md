@@ -20,6 +20,7 @@ Under the namespace Dynamsoft.DDV, Dynamsoft Document Viewer JavaScript library 
 
 - [DocumentManager](/api/class/documentmanager.md)
 - [AnnotationManager](/api/class/annotationmanager.md)
+- [FormManager](/api/class/formmanager.md)
 - [EditViewer](/api/class/editviewer.md)
 - [CaptureViewer](/api/class/captureviewer.md)
 - [PerspectiveViewer](/api/class/perspectiveviewer.md)
