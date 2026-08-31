@@ -19,6 +19,7 @@ The event object of the `formFieldModified` event of [`FormManager`]({{ site.api
 ```typescript
 interface FormFieldModifiedEvent {
   formUid: string;
+  oldFieldProps: FormField;
   newFieldProps: FormField;
 }
 ```
@@ -28,6 +29,10 @@ interface FormFieldModifiedEvent {
 ### formUid
 
 The uid of the form where the field is modified.
+
+### oldFieldProps
+
+The old [`FormField`]({{ site.api }}interface/formfield.html) snapshot of the modified field.
 
 ### newFieldProps
 
