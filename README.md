@@ -1,3 +1,27 @@
-# Dynamsoft Document Viewer
+## Dynamsoft Document Viewer Documentation
 
-This is the repository for maintaining the official documentation of Dynamsoft Document Viewer.
+This project is to store [Dynamsoft Document Viewer](https://www.dynamsoft.com/document-viewer/overview/)'s documentation. The main official documentation website is hosted at <https://www.dynamsoft.com/document-viewer/docs/introduction/index.html>.
+
+### Local Development
+
+1. Download the docs template repo and the document viewer docs repo with [download.sh](https://github.com/dynamsoft-docs/document-viewer-docs/raw/refs/heads/master/scripts/download.sh).
+2. Install Ruby.
+3. Go to the docs' folder and install dependencies.
+
+   ```bash
+   bundle install
+   ```
+
+4. Serve the site.
+
+   ```bash
+   bundle exec jekyll serve -P 5555 --trace --host=0.0.0.0
+   ```
+
+The recommended environment is Linux — for Windows users, WSL is recommended.
+
+### License
+
+All documentation is available under the terms of [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/).
+
+
