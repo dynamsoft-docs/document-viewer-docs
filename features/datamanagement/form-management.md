@@ -16,7 +16,7 @@ DDV provides PDF form field management and form-filling functionality through th
 
 The form functionality is provided by the standalone form [plugin](/features/plugins-and-on-demand-loading.md), which must be installed after the annotation plugin.
 
-## Get the raw data of form fields
+## Get the data of form fields
 
 ### Get all the fields in a document
 
