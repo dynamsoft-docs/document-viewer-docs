@@ -10,6 +10,9 @@ description: Dynamsoft Document Viewer Documentation Features, Document Detectio
 permalink: /features/advanced/documentdetect.html
 ---
 
+{% include capture-viewer-warning.md %}
+
+
 # How to configure boundaries detection
 
 DDV provides [`setProcessingHandler()`]({{ site.api }}namespace/ddv.html#static-setprocessinghandler) method for developers to access the corresponding document boundaries detection and image filter algorithms. This article mainly introduces how to configure boundaries detection in the process of capturing documents.
