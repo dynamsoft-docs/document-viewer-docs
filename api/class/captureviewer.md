@@ -10,6 +10,8 @@ description: Dynamsoft Document Viewer Documentation API Reference CaptureViewer
 permalink: /api/class/captureviewer.html
 ---
 
+{% include capture-viewer-warning.md %}
+
 # CaptureViewer Class
 
 Capture Viewer is used to control camera, play video stream, and capture the images from camera.

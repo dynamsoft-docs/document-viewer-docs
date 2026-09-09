@@ -60,10 +60,10 @@ The SDK offers extensive customization options, enabling developers to tailor th
 
 ## Designed to Support Diverse Document Workflows
 
-Dynamsoft Document Viewer is built to support a wide range of document-centric workflows with its document viewing, editing, and scanning features. It has four built-in viewer types to suit different use cases:
+Dynamsoft Document Viewer is built to support a wide range of document-centric workflows with its document viewing, editing, and scanning features. It has several built-in viewer types to suit different use cases:
 
 * **Edit Viewer**: Enables viewing and editing of documents with annotation support.
-* **Capture Viewer**: Integrates camera controls for streamlined, continuous capture workflows.
 * **Perspective Viewer**: Allows document cropping with perspective transformation.
 * **Browse Viewer**: Suitable for previewing and reordering multi-page documents.
 
+It is a great companion for other document scanning SDKs like [Dynamic Web TWAIN](https://www.dynamsoft.com/web-twain/overview/) and [Dynamsoft Mobile document Scanner](https://www.dynamsoft.com/use-cases/mobile-document-scanner/).
