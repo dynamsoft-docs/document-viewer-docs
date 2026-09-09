@@ -10,6 +10,8 @@ description: Dynamsoft Document Viewer Documentation Features, Capture Viewer
 permalink: /features/viewers/captureviewer.html
 ---
 
+{% include capture-viewer-warning.md %}
+
 # Capture Viewer
 
 Capture Viewer is used to control camera, play video stream, and capture the images from camera.
