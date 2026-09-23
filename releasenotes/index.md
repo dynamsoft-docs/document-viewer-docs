@@ -12,6 +12,10 @@ permalink: /releasenotes/index.html
 
 # Release Notes
 
+## 5.0.1 (09/23/2026)
+
+Updated third-party libraries to enhance security. 
+
 ## 5.0 (08/13/2026)
 
 ### Highlights
