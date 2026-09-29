@@ -11,7 +11,7 @@ permalink: /api/class/annotation/index.html
 ---
 
 
-## Annotation
+# Annotation
 
 Annotation has fifteen main classes:
 
