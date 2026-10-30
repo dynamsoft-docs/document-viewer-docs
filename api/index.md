@@ -57,7 +57,7 @@ permalink: /api/index.html
     - [`SaveJpegSettings`]({{ site.api }}interface/idocument/savejpegsettings.html)
     - [`SaveTiffSettings`]({{ site.api }}interface/idocument/savetiffsettings.html)
     - [`SavePdfSettings`]({{ site.api }}interface/idocument/savepdfsettings.html)
-    - [`CustomTag`]({{ site.api }}interface/idocument/customtag.html)
+    - [`TiffCustomTag`]({{ site.api }}interface/idocument/tiffcustomtag.html)
     - [`PrintSettings`]({{ site.api }}interface/idocument/printsettings.html)
     - [`IDocTextSearcher`](/api/interface/idocument/idoctextsearcher.md)
 

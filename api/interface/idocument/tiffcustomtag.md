@@ -3,19 +3,19 @@ layout: default-layout
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
-title: Dynamsoft Document Viewer API Reference - Interface CustomTag
-keywords: Documentation, Dynamsoft Document Viewer, API Reference, Interface CustomTag
-breadcrumbText: Interface CustomTag
-description: Dynamsoft Document Viewer Documentation API Reference Interface CustomTag Page
-permalink: /api/interface/idocument/customtag.html
+title: Dynamsoft Document Viewer API Reference - Interface TiffCustomTag
+keywords: Documentation, Dynamsoft Document Viewer, API Reference, Interface TiffCustomTag
+breadcrumbText: Interface TiffCustomTag
+description: Dynamsoft Document Viewer Documentation API Reference Interface TiffCustomTag Page
+permalink: /api/interface/idocument/tiffcustomtag.html
 ---
 
-# CustomTag
+# TiffCustomTag
 
 ## Syntax
 
 ```typescript
-interface CustomTag {
+interface TiffCustomTag {
     id?: number;
     content?: string;
     contentIsBase64?: boolean;
