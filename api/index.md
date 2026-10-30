@@ -117,7 +117,6 @@ permalink: /api/index.html
 - [`CaptureViewerConstructorOptions`]({{ site.api }}interface/captureviewerconstructoroptions.html)
 - [`ConfigResult`]({{ site.api }}interface/configresult.html)
 - [`CreateDocumentOptions`]({{ site.api }}interface/createdocumentoptions.html)
-- [`CustomViewerConstructorOptions`]({{ site.api }}interface/customviewerconstructoroptions.html)
 - [`DDVError`]({{ site.api }}interface/ddverror.html)
 - [`DetectResult`]({{ site.api }}interface/detectresult.html)
 - [`DisplayTextConfig`]({{ site.api }}interface/displaytextconfig.html)
