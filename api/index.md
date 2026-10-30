@@ -133,7 +133,7 @@ permalink: /api/index.html
 - [`ITextSelectedInfo`](/api/interface/itextselectedinfo.md)
 - [`IDocumentDetect`]({{ site.api }}interface/idocumentdetect.html)
 - [`ImageFilterItem`]({{ site.api }}interface/imagefilteritem.html)
-- [`MergeDocumentOptions`]({{ site.api }}interface/mergedocumentoptions.html)
+- [`MergeDocumentsOptions`]({{ site.api }}interface/mergedocumentsoptions.html)
 - [`PageImageInfo`](/api/interface/pageimageinfo.md)
 - [`PageVisualInfo`](/api/interface/pagevisualinfo.md)
 - [`PerspectiveViewerConfig`]({{ site.api }}interface/perspectiveviewerconfig.html)

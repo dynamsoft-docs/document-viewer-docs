@@ -3,19 +3,19 @@ layout: default-layout
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
-title: Dynamsoft Document Viewer API Reference - Interface MergeDocumentOptions
-keywords: Documentation, Dynamsoft Document Viewer, API Reference, Interface MergeDocumentOptions
-breadcrumbText: Interface MergeDocumentOptions
-description: Dynamsoft Document Viewer Documentation API Reference Interface MergeDocumentOptions Page
-permalink: /api/interface/mergedocumentoptions.html
+title: Dynamsoft Document Viewer API Reference - Interface MergeDocumentsOptions
+keywords: Documentation, Dynamsoft Document Viewer, API Reference, Interface MergeDocumentsOptions
+breadcrumbText: Interface MergeDocumentsOptions
+description: Dynamsoft Document Viewer Documentation API Reference Interface MergeDocumentsOptions Page
+permalink: /api/interface/mergedocumentsoptions.html
 ---
 
-# MergeDocumentOptions
+# MergeDocumentsOptions
 
 ## Syntax
 
 ```typescript
-interface MergeDocumentOptions {
+interface MergeDocumentsOptions {
     name?: string; 
     author?: string; 
     creationDate?: string; 
