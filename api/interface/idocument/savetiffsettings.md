@@ -16,7 +16,7 @@ permalink: /api/interface/idocument/savetiffsettings.html
 
 ```typescript
 interface SaveTiffSettings {
-    customTag?: CustomTag[];
+    customTag?: TiffCustomTag[];
     compression?: EnumTIFFCompressionType;
     quality?: number;
     saveAnnotation?: boolean; 
@@ -27,7 +27,7 @@ interface SaveTiffSettings {
 
 ### customTag
 
-Custom tiff tag(s). Please refer to [CustomTag]({{ site.api }}interface/idocument/customtag.html)
+Custom tiff tag(s). Please refer to [TiffCustomTag]({{ site.api }}interface/idocument/tiffcustomtag.html)
 
 ### compression
 

@@ -200,14 +200,14 @@ Merge specified documents to a new document.
 **Syntax**
 
 ```typescript
-mergeDocuments(docUids: string[], mergeDocumentOptions?: MergeDocumentOptions): IDocument;
+mergeDocuments(docUids: string[], mergeDocumentOptions?: MergeDocumentsOptions): IDocument;
 ```
 
 **Parameters**
 
 `docUids`: The array of specified documents' uids.
 
-`mergeDocumentOptions`: The merge document options. Please refer to [`MergeDocumentOptions`]({{ site.api }}interface/mergedocumentoptions.html).
+`mergeDocumentOptions`: The merge document options. Please refer to [`MergeDocumentsOptions`]({{ site.api }}interface/mergedocumentsoptions.html).
 
 **Return Value**
 
